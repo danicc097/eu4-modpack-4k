@@ -1,0 +1,56 @@
+opinion_diplomatic_positions = {
+	opinion = 25
+	yearly_decay = 1
+	max = 50
+}
+opinion_diplomatic_positions_negative = {
+	opinion = -25
+	yearly_decay = 1
+	min = -50
+}
+opinion_order_of_the_swan = {
+	opinion = 50
+	yearly_decay = 1
+	max = 50
+}
+opinion_unrestricted_diplomacy = {
+	opinion = 25
+}
+opinion_papal_delegation = {
+	opinion = 25
+}
+opinion_lingua_franca = {
+	opinion = 20
+}
+opinion_opposite_ghuelpsghibbellines = {
+	opinion = -50
+}
+opinion_opposite_ghuelpsghibbellines_timed = {
+	opinion = -50
+	yearly_decay = 5
+}
+opinion_same_ghuelpsghibbellines = {
+	opinion = 25
+}
+opinion_same_ghuelpsghibbellines_timed = {
+	opinion = 25
+	yearly_decay = 2.5
+}
+GE_opinion_abuse_of_imperial_power = {
+	opinion = -50
+	yearly_decay = 5
+	min = -200
+	max = 0
+}
+GE_Cancel_Trade_Deal_Angry = {
+	opinion = -25
+	yearly_decay = 2.5
+}
+GE_peacefull_resolution = {
+	opinion = 50
+	yearly_decay = 2.5
+}
+GE_seized_unlawful_land = {
+	opinion = -50
+	yearly_decay = 2.5
+}

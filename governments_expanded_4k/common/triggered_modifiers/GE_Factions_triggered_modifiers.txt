@@ -1,0 +1,266 @@
+orthodox_influence_1 = {
+	potential = {
+		has_faction = GE_orthodox
+	}
+
+	trigger = {
+		religion = orthodox
+		faction_in_power = GE_orthodox
+	}
+
+	GE_orthodox_influence = 0.10
+}
+
+orthodox_influence_2 = {
+	potential = {
+		has_faction = GE_orthodox
+	}
+
+	trigger = {
+		num_of_religion = {
+			religion = orthodox
+			value = 0.75
+		}
+	}
+
+	GE_orthodox_influence = 0.10
+}
+
+orthodox_influence_3 = {
+	potential = {
+		has_faction = GE_orthodox
+	}
+
+	trigger = {
+		faction_in_power = GE_orthodox
+		religious_unity = 1
+	}
+
+	GE_orthodox_influence = 0.10
+}
+
+orthodox_influence_4 = {
+	potential = {
+		has_faction = GE_orthodox
+	}
+
+	trigger = {
+		faction_in_power = GE_orthodox
+		NOT = { 
+			num_of_religion = {
+				religion = orthodox
+				value = 0.40
+			}
+		}
+	}
+
+	GE_orthodox_influence = -0.25
+}
+
+orthodox_influence_5 = {
+	potential = {
+		has_faction = GE_orthodox
+	}
+
+	trigger = {
+		num_of_religion = {
+			religion = orthodox
+			value = 0.25
+		}
+	}
+
+	GE_orthodox_influence = 0.05
+}
+
+orthodox_influence_5 = {
+	potential = {
+		has_faction = GE_orthodox
+	}
+
+	trigger = {
+		num_of_religion = {
+			religion = orthodox
+			value = 0.25
+		}
+	}
+
+	GE_orthodox_influence = 0.05
+}
+
+coptic_influence_1 = {
+	potential = {
+		has_faction = GE_coptic
+	}
+
+	trigger = {
+		religion = coptic
+		faction_in_power = GE_coptic
+	}
+
+	GE_coptic_influence = 0.10
+}
+
+coptic_influence_2 = {
+	potential = {
+		has_faction = GE_coptic
+	}
+
+	trigger = {
+		num_of_religion = {
+			religion = coptic
+			value = 0.75
+		}
+	}
+
+	GE_coptic_influence = 0.10
+}
+
+coptic_influence_3 = {
+	potential = {
+		has_faction = GE_coptic
+	}
+
+	trigger = {
+		faction_in_power = GE_coptic
+		religious_unity = 1
+	}
+
+	GE_coptic_influence = 0.10
+}
+
+coptic_influence_4 = {
+	potential = {
+		has_faction = GE_coptic
+	}
+
+	trigger = {
+		faction_in_power = GE_coptic
+		NOT = { 
+			num_of_religion = {
+				religion = coptic
+				value = 0.40
+			}
+		}
+	}
+
+	GE_coptic_influence = -0.25
+}
+
+coptic_influence_5 = {
+	potential = {
+		has_faction = GE_coptic
+	}
+
+	trigger = {
+		num_of_religion = {
+			religion = coptic
+			value = 0.25
+		}
+	}
+
+	GE_coptic_influence = 0.05
+}
+
+coptic_influence_6 = {
+	potential = {
+		has_faction = GE_coptic
+	}
+
+	trigger = {
+		num_of_religion = {
+			religion = coptic
+			value = 0.25
+		}
+	}
+
+	GE_coptic_influence = 0.05
+}
+
+sunni_influence_1 = {
+	potential = {
+		has_faction = GE_sunni
+	}
+
+	trigger = {
+		religion = sunni
+		faction_in_power = GE_sunni
+	}
+
+	GE_sunni_influence = 0.10
+}
+
+sunni_influence_2 = {
+	potential = {
+		has_faction = GE_sunni
+	}
+
+	trigger = {
+		num_of_religion = {
+			religion = sunni
+			value = 0.75
+		}
+	}
+
+	GE_sunni_influence = 0.10
+}
+
+sunni_influence_3 = {
+	potential = {
+		has_faction = GE_sunni
+	}
+
+	trigger = {
+		faction_in_power = GE_sunni
+		religious_unity = 1
+	}
+
+	GE_sunni_influence = 0.10
+}
+
+sunni_influence_4 = {
+	potential = {
+		has_faction = GE_sunni
+	}
+
+	trigger = {
+		faction_in_power = GE_sunni
+		NOT = { 
+			num_of_religion = {
+				religion = sunni
+				value = 0.40
+			}
+		}
+	}
+
+	GE_sunni_influence = -0.25
+}
+
+sunni_influence_5 = {
+	potential = {
+		has_faction = GE_sunni
+	}
+
+	trigger = {
+		num_of_religion = {
+			religion = sunni
+			value = 0.25
+		}
+	}
+
+	GE_sunni_influence = 0.05
+}
+
+sunni_influence_6 = {
+	potential = {
+		has_faction = GE_sunni
+	}
+
+	trigger = {
+		num_of_religion = {
+			religion = sunni
+			value = 0.10
+		}
+	}
+
+	GE_sunni_influence = 0.05
+}

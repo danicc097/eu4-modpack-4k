@@ -1,0 +1,29 @@
+namespace = GE_incidents
+
+#county investment
+country_event = {
+	id = GE_incidents.2
+	title = GE_incidents.2.t
+	desc = GE_incidents.2.d
+	picture = TRADEGOODS_eventPicture
+
+	is_triggered_only = yes
+
+	immediate = {
+	}
+
+	option = {
+		name = GE_incidents.2.a
+		add_years_of_income = -1
+		set_country_flag = GE_incidents_2_invested_big
+	}
+	option = {
+		name = GE_incidents.2.b
+		add_years_of_income = -0.5
+		set_country_flag = GE_incidents_2_invested_small
+	}
+	option = {
+		name = GE_incidents.2.c
+		set_country_flag = GE_incidents_2_invested_not
+	}
+}

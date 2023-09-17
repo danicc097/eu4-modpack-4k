@@ -1,0 +1,34 @@
+liberalism_mechanic = {
+	available = {
+		always = yes
+	}
+
+	powers = {
+		liberalism = {
+			gui = liberalism_mechanic_power
+			min = 0
+			max = 100
+			default = 0
+			scaled_modifier = {
+				modifier = {
+					development_cost = -0.10
+					idea_cost = -0.1
+					tolerance_heathen = 1
+					tolerance_of_heathens_capacity = 1
+					tolerance_heretic = 1
+					tolerance_of_heretics_capacity = 1
+					max_absolutism = -25
+					monthly_liberalism = -1
+				}
+			}
+			scaled_modifier = {
+				trigger = {
+					has_government_attribute = enables_capitalism
+				}
+				modifier = {
+					global_trade_goods_size_modifier = 0.25
+				}
+			}
+		}
+	}
+}

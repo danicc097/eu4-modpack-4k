@@ -1,0 +1,182 @@
+GE_trade_deal_imports_1 = {
+	trade_efficiency = 0.05
+}
+GE_trade_deal_imports_2 = {
+	trade_efficiency = 0.10
+}
+GE_trade_deal_imports_3 = {
+	trade_efficiency = 0.15
+}
+GE_trade_deal_imports_4 = {
+	trade_efficiency = 0.20
+}
+GE_trade_deal_imports_5 = {
+	trade_efficiency = 0.25
+}
+GE_trade_deal_imports_6 = {
+	trade_efficiency = 0.30
+}
+GE_trade_deal_imports_7 = {
+	trade_efficiency = 0.35
+}
+GE_trade_deal_imports_8 = {
+	trade_efficiency = 0.40
+}
+GE_trade_deal_imports_9 = {
+	trade_efficiency = 0.45
+}
+GE_trade_deal_imports_10 = {
+	trade_efficiency = 0.50
+}
+
+GE_rural_trade_deal_exports_1 = {
+	rural_goods_produced_modifier = 0.10
+}
+GE_rural_trade_deal_exports_2 = {
+	rural_goods_produced_modifier = 0.20
+}
+GE_rural_trade_deal_exports_3 = {
+	rural_goods_produced_modifier = 0.30
+}
+GE_rural_trade_deal_exports_4 = {
+	rural_goods_produced_modifier = 0.40
+}
+GE_rural_trade_deal_exports_5 = {
+	rural_goods_produced_modifier = 0.50
+}
+GE_rural_trade_deal_exports_6 = {
+	rural_goods_produced_modifier = 0.60
+}
+
+GE_urban_trade_deal_exports_1 = {
+	urban_goods_produced_modifier = 0.10
+}
+GE_urban_trade_deal_exports_2 = {
+	urban_goods_produced_modifier = 0.20
+}
+GE_urban_trade_deal_exports_3 = {
+	urban_goods_produced_modifier = 0.30
+}
+GE_urban_trade_deal_exports_4 = {
+	urban_goods_produced_modifier = 0.40
+}
+GE_urban_trade_deal_exports_5 = {
+	urban_goods_produced_modifier = 0.50
+}
+GE_urban_trade_deal_exports_6 = {
+	urban_goods_produced_modifier = 0.60
+}
+
+GE_mining_trade_deal_exports_1 = {
+	mining_goods_produced_modifier = 0.10
+}
+GE_mining_trade_deal_exports_2 = {
+	mining_goods_produced_modifier = 0.20
+}
+GE_mining_trade_deal_exports_3 = {
+	mining_goods_produced_modifier = 0.30
+}
+GE_mining_trade_deal_exports_4 = {
+	mining_goods_produced_modifier = 0.40
+}
+GE_mining_trade_deal_exports_5 = {
+	mining_goods_produced_modifier = 0.50
+}
+GE_mining_trade_deal_exports_6 = {
+	mining_goods_produced_modifier = 0.60
+}
+
+GE_plantation_trade_deal_exports_1 = {
+	plantage_goods_produced_modifier = 0.10
+}
+GE_plantation_trade_deal_exports_2 = {
+	plantage_goods_produced_modifier = 0.20
+}
+GE_plantation_trade_deal_exports_3 = {
+	plantage_goods_produced_modifier = 0.30
+}
+GE_plantation_trade_deal_exports_4 = {
+	plantage_goods_produced_modifier = 0.40
+}
+GE_plantation_trade_deal_exports_5 = {
+	plantage_goods_produced_modifier = 0.50
+}
+GE_plantation_trade_deal_exports_6 = {
+	plantage_goods_produced_modifier = 0.60
+}
+
+GE_rural_trade_deal_imports_1 = {
+	development_cost = -0.05
+}
+GE_rural_trade_deal_imports_2 = {
+	development_cost = -0.10
+}
+GE_rural_trade_deal_imports_3 = {
+	development_cost = -0.15
+}
+GE_rural_trade_deal_imports_4 = {
+	development_cost = -0.20
+}
+GE_rural_trade_deal_imports_5 = {
+	development_cost = -0.25
+}
+GE_rural_trade_deal_imports_6 = {
+	development_cost = -0.3
+}
+
+GE_urban_trade_deal_imports_1 = {
+	technology_cost = -0.02
+}
+GE_urban_trade_deal_imports_2 = {
+	technology_cost = -0.04
+}
+GE_urban_trade_deal_imports_3 = {
+	technology_cost = -0.06
+}
+GE_urban_trade_deal_imports_4 = {
+	technology_cost = -0.08
+}
+GE_urban_trade_deal_imports_5 = {
+	technology_cost = -0.10
+}
+GE_urban_trade_deal_imports_6 = {
+	technology_cost = -0.12
+}
+
+GE_mining_trade_deal_imports_1 = {
+	inflation_reduction = 0.05
+}
+GE_mining_trade_deal_imports_2 = {
+	inflation_reduction = 0.10
+}
+GE_mining_trade_deal_imports_3 = {
+	inflation_reduction = 0.15
+}
+GE_mining_trade_deal_imports_4 = {
+	inflation_reduction = 0.20
+}
+GE_mining_trade_deal_imports_5 = {
+	inflation_reduction = 0.25
+}
+GE_mining_trade_deal_imports_6 = {
+	inflation_reduction = 0.3
+}
+
+GE_plantation_trade_deal_imports_1 = {
+	trade_efficiency = 0.05
+}
+GE_plantation_trade_deal_imports_2 = {
+	trade_efficiency = 0.10
+}
+GE_plantation_trade_deal_imports_3 = {
+	trade_efficiency = 0.15
+}
+GE_plantation_trade_deal_imports_4 = {
+	trade_efficiency = 0.20
+}
+GE_plantation_trade_deal_imports_5 = {
+	trade_efficiency = 0.25
+}
+GE_plantation_trade_deal_imports_6 = {
+	trade_efficiency = 0.3
+}

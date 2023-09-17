@@ -1,0 +1,36 @@
+german_kaiserreich = {
+	icon = "german_kaiserreich"
+	allow_normal_conversion = no
+	potential = {
+		OR = {
+			tag = GER
+			has_reform = german_kaiserreich
+			have_had_reform = german_kaiserreich
+		}
+	}
+	trigger = {
+		OR = {
+			tag = GER
+			has_reform = german_kaiserreich
+			have_had_reform = german_kaiserreich
+		}
+	}
+	valid_for_nation_designer = no
+
+	modifiers = {
+		war_exhaustion = -0.02
+		possible_mil_policy = 1
+		monarch_military_power = 1
+		reform_progress_growth = 0.15
+		global_tax_modifier = 0.15
+	}
+
+	conditional = {
+		allow = { has_dlc = "Common Sense" }
+		has_parliament = yes
+	}
+
+	government_abilities = {
+		bureaucracy_vs_military_mechanic
+	}
+}

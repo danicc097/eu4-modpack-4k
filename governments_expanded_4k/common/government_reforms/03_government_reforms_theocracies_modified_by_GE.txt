@@ -1,0 +1,13 @@
+pious_merchants_reform = {
+	icon = "merchant"
+	allow_normal_conversion = yes
+	modifiers = {
+		global_trade_power = 0.05
+		placed_merchant_power = 5
+		trade_deals_slots = 1
+		burghers_influence_modifier = 0.1
+		burghers_loyalty_modifier = 0.05
+		vaisyas_loyalty_modifier = 0.05
+		vaisyas_influence_modifier = 0.1
+	}
+}

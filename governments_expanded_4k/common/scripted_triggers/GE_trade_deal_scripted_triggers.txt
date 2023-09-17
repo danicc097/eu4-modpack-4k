@@ -1,0 +1,134 @@
+
+Trade_Deals_Allowed = {
+	custom_trigger_tooltip = {
+		tooltip = GE_not_enough_trade_deals_slots_tooltip
+		OR = {
+			AND = {
+				has_global_modifier_value = {
+					which = trade_deals_slots
+					value = 1
+				}
+				NOT = {
+					check_variable = {
+						which = GE_num_of_total_trade
+						value = 1
+					}
+				}
+			}
+			AND = {
+				has_global_modifier_value = {
+					which = trade_deals_slots
+					value = 2
+				}
+				NOT = {
+					check_variable = {
+						which = GE_num_of_total_trade
+						value = 2
+					}
+				}
+			}
+			AND = {
+				has_global_modifier_value = {
+					which = trade_deals_slots
+					value = 3
+				}
+				NOT = {
+					check_variable = {
+						which = GE_num_of_total_trade
+						value = 3
+					}
+				}
+			}
+			AND = {
+				has_global_modifier_value = {
+					which = trade_deals_slots
+					value = 4
+				}
+				NOT = {
+					check_variable = {
+						which = GE_num_of_total_trade
+						value = 4
+					}
+				}
+			}
+			AND = {
+				has_global_modifier_value = {
+					which = trade_deals_slots
+					value = 5
+				}
+				NOT = {
+					check_variable = {
+						which = GE_num_of_total_trade
+						value = 5
+					}
+				}
+			}
+			AND = {
+				has_global_modifier_value = {
+					which = trade_deals_slots
+					value = 6
+				}
+				NOT = {
+					check_variable = {
+						which = GE_num_of_total_trade
+						value = 6
+					}
+				}
+			}
+			AND = {
+				has_global_modifier_value = {
+					which = trade_deals_slots
+					value = 7
+				}
+				NOT = {
+					check_variable = {
+						which = GE_num_of_total_trade
+						value = 7
+					}
+				}
+			}
+			AND = {
+				has_global_modifier_value = {
+					which = trade_deals_slots
+					value = 8
+				}
+				NOT = {
+					check_variable = {
+						which = GE_num_of_total_trade
+						value = 8
+					}
+				}
+			}
+			AND = {
+				has_global_modifier_value = {
+					which = trade_deals_slots
+					value = 9
+				}
+				NOT = {
+					check_variable = {
+						which = GE_num_of_total_trade
+						value = 9
+					}
+				}
+			}
+			AND = {
+				has_global_modifier_value = {
+					which = trade_deals_slots
+					value = 10
+				}
+				NOT = {
+					check_variable = {
+						which = GE_num_of_total_trade
+						value = 10
+					}
+				}
+			}
+		}
+	}
+}
+
+
+
+
+
+

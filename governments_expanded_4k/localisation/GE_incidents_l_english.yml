@@ -1,0 +1,11 @@
+﻿l_english:
+
+ GE_incidents.2.t: "Local Investments"
+ GE_incidents.2.d: "The burghers of [agenda_province.GetName] have requested we invest in their city and promise to make good use of the funds."
+ GE_incidents.2.a: "Invest big."
+ GE_incidents.2.b: "Minor Investment."
+ GE_incidents.2.c: "Begone THOT."
+
+ estate_burghers_workshops_investments: "Delegation from [agenda_province.GetName]"
+ estate_burghers_workshops_investments_desc: "The burghers of [agenda_province.GetName] have requested we invest in their city and promise to make good use of the funds."
+ GE_incidents.2.TT:0 "Depending on your choice you may gain a development, development or sadness."

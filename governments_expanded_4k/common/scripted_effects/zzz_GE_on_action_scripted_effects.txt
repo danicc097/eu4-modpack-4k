@@ -1,0 +1,90 @@
+ge_on_bi_yearly_pulse_3_effect = {
+	GE_calculate_goods_produced_effect = yes
+}
+
+ge_on_main_war_won_effect = {
+	if = {
+		limit = {
+			has_government_mechanic = crusade_power_mechanic
+		}
+		if = {
+			limit = {
+				religion = catholic
+				FROM = {
+					is_crusade_target = yes
+				}
+			}
+			add_government_power = {
+				mechanic_type = crusade_power_mechanic
+				power_type = crusade_power
+				value = 35
+			}
+		}
+		else_if = {
+			limit = {
+				NOT = { religion_group = FROM }
+			}
+			add_government_power = {
+				mechanic_type = crusade_power_mechanic
+				power_type = crusade_power
+				value = 25
+			}
+		}
+		else_if = {
+			limit = {
+				NOT = { religion = FROM }
+			}
+			add_government_power = {
+				mechanic_type = crusade_power_mechanic
+				power_type = crusade_power
+				value = 20
+			}
+		}
+	}
+	if = {
+		limit = {
+			FROM = {
+				has_government_mechanic = crusade_power_mechanic
+			}
+		}
+		if = {
+			limit = {
+				FROM = {
+					religion = catholic
+				}
+				is_crusade_target = yes
+			}
+			FROM = {
+				add_government_power = {
+					mechanic_type = crusade_power_mechanic
+					power_type = crusade_power
+					value = -50
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				NOT = { religion_group = FROM }
+			}
+			FROM = {
+				add_government_power = {
+					mechanic_type = crusade_power_mechanic
+					power_type = crusade_power
+					value = -35
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				NOT = { religion = FROM }
+			}
+			FROM = {
+				add_government_power = {
+					mechanic_type = crusade_power_mechanic
+					power_type = crusade_power
+					value = -25
+				}
+			}
+		}
+	}
+}

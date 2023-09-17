@@ -1,0 +1,19 @@
+estate_nobles = {
+	privileges = {
+		### GE ###
+		estate_nobles_diplomatic_privilege
+		estate_nobles_magnate_law_privilege
+		estate_nobles_timariot_privilege
+		estate_nobles_noble_officer_privilege
+		estate_nobles_grand_captain_privilege
+		estate_nobles_call_cortez
+		estate_nobles_white_knights
+		estate_nobles_kreditwerk_appointment
+		estate_nobles_blood_tax
+		estate_nobles_establish_serfdom
+		estate_nobles_berber_guides
+		estate_nobles_elite_guards
+		estate_nobles_imperial_court
+		estate_nobles_imperial_marshall
+	}
+}

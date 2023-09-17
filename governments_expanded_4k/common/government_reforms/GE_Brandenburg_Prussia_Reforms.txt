@@ -1,0 +1,327 @@
+order_of_the_swan_reform = {
+	icon = order_of_swan
+	allow_normal_conversion = yes
+	effect = {
+		change_variable = {
+			which = Noble_Influence
+			value = 1
+		}
+	}
+	removed_effect = {
+		change_variable = {
+			which = Noble_Influence
+			value = -1
+		}
+	}
+	potential = {
+		OR = {
+			tag = BRA
+			primary_culture = prussian
+			has_reform = order_of_the_swan_reform
+		}
+		religion = catholic
+	}
+	trigger = {
+		OR = {
+			tag = BRA
+			primary_culture = prussian
+			has_reform = order_of_the_swan_reform
+		}
+		religion = catholic
+	}
+	modifiers = {
+		papal_influence = 1
+		prestige = 0.5
+	}
+	ai = {
+		factor = 100
+	}
+}
+
+junker_class_reform = {
+	icon = szlachta_noble_2
+	allow_normal_conversion = yes
+	effect = {
+		change_variable = {
+			which = Noble_Influence
+			value = 1
+		}
+	}
+	removed_effect = {
+		change_variable = {
+			which = Noble_Influence
+			value = -1
+		}
+	}
+	potential = {
+		OR = {
+			tag = BRA
+			tag = PRU
+			primary_culture = prussian
+			has_reform = junker_class_reform
+			AND = {
+				accepted_culture = prussian
+				num_of_owned_provinces_with = {
+					value = 1
+					culture = prussian
+				}
+			}
+		}
+		NOT = { religion = catholic }
+	}
+	trigger = {
+		OR = {
+			tag = BRA
+			tag = PRU
+			primary_culture = prussian
+			has_reform = junker_class_reform
+			AND = {
+				accepted_culture = prussian
+				num_of_owned_provinces_with = {
+					value = 5
+					culture = prussian
+				}
+			}
+		}
+		NOT = { religion = catholic }
+	}
+	modifiers = {
+		leader_cost = -0.10
+		nobles_influence_modifier = 0.10
+	}
+	# custom_attributes = {
+		# enables_junker_estate = yes
+		# enables_disable_noble_estate = yes
+	# }
+	ai = {
+		factor = 100
+	}
+}
+
+constitutio_joachimica_reform = {
+	icon = constitutio_joachimica
+	allow_normal_conversion = yes
+	effect = {
+		change_variable = {
+			which = Royal_Influence
+			value = 1
+		}
+	}
+	removed_effect = {
+		change_variable = {
+			which = Royal_Influence
+			value = -1
+		}
+	}
+	potential = {
+		OR = {
+			tag = BRA
+			primary_culture = prussian
+			has_reform = constitutio_joachimica_reform
+		}
+	}
+	trigger = {
+		OR = {
+			tag = BRA
+			primary_culture = prussian
+			has_reform = constitutio_joachimica_reform
+		}
+	}
+	modifiers = {
+		#global_autonomy = -0.025
+		yearly_corruption = -0.05
+		nobles_influence_modifier = -0.10
+	}
+	custom_attributes = {
+		enables_codified_law = yes #-2 Unrest in provinces with less then 50% Autonomy.
+	}
+	ai = {
+		factor = 100
+	}
+	#-10 influence nobles
+}
+
+fredrickan_reforms_reform = {
+	icon = frederick
+	allow_normal_conversion = yes
+	potential = {
+		OR = {
+			tag = BRA
+			has_reform = fredrickan_reforms_reform
+			primary_culture = prussian
+		}
+	}
+	trigger = {
+		OR = {
+			tag = BRA
+			has_reform = fredrickan_reforms_reform
+			primary_culture = prussian
+		}
+	}
+	modifiers = {
+		build_cost = -0.10
+		build_time = -0.10
+		rural_goods_produced_modifier = 0.20
+	}
+	custom_attributes = {
+		enables_immigrant_settlements = yes
+	}
+	ai = {
+		factor = 100
+	}
+}
+
+kreditwerk_reform = {
+	icon = paper_money_map
+	allow_normal_conversion = yes
+	effect = {
+		change_variable = {
+			which = Burgher_Influence
+			value = 1
+		}
+	}
+	removed_effect = {
+		change_variable = {
+			which = Burgher_Influence
+			value = -1
+		}
+	}
+	potential = {
+		OR = {
+			tag = BRA
+			has_reform = kreditwerk_reform
+			primary_culture = prussian
+		}
+	}
+	trigger = {
+		OR = {
+			tag = BRA
+			has_reform = kreditwerk_reform
+			primary_culture = prussian
+		}
+	}
+	modifiers = {
+		#governing_capacity = 100
+		nobles_loyalty_modifier = 0.05
+		nobles_influence_modifier = 0.10
+		church_influence_modifier = 0.05
+		burghers_influence_modifier = 0.05
+	}
+	custom_attributes = {
+		enables_kreditwerk_appointments = yes
+		enables_kreditwerk_appointment_deals = yes
+	}
+	ai = {
+		factor = 100
+	}
+}
+
+general_war_commissariat_reform = {
+	icon = "king"
+	allow_normal_conversion = yes
+	effect = {
+		change_variable = {
+			which = Royal_Influence
+			value = 1
+		}
+	}
+	removed_effect = {
+		change_variable = {
+			which = Royal_Influence
+			value = -1
+		}
+	}
+	potential = {
+		OR = {
+			primary_culture = prussian
+			primary_culture = saxon
+			has_reform = general_war_commissariat_reform
+		}
+	}
+	trigger = {
+		OR = {
+			primary_culture = prussian
+			primary_culture = saxon
+			has_reform = general_war_commissariat_reform
+		}
+	}
+	modifiers = {
+		global_tax_modifier = 0.10
+		global_regiment_cost = -0.05
+		monthly_militarized_society = 0.03
+	}
+	custom_attributes = {
+		enables_expansion_of_junker_privileges = yes
+	}
+	ai = {
+		factor = 100
+	}
+}
+
+professional_army_reform = {
+	icon = "soldiers"
+	allow_normal_conversion = yes
+	effect = {
+		if = {
+			limit = { uses_republican_tradition = yes }
+			change_variable = {
+				which = Oliarch_Influence
+				value = 1
+			}
+		}
+		else = {
+			change_variable = {
+				which = Royal_Influence
+				value = 1
+			}
+		}
+		if = {
+			limit = {
+				ai = yes
+			}
+			set_estate_privilege = estate_nobles_elite_guards
+		}
+	}
+	removed_effect = {
+		if = {
+			limit = { uses_republican_tradition = yes }
+			change_variable = {
+				which = Oliarch_Influence
+				value = -1
+			}
+		}
+		else = {
+			change_variable = {
+				which = Royal_Influence
+				value = -1
+			}
+		}
+	}
+	potential = { }
+	modifiers = {
+		drill_gain_modifier = 0.25
+		yearly_army_professionalism = 0.001
+	}
+	custom_attributes = {
+		#enables_general_guards = yes #+1.25 AP per General
+		enables_elite_regiments = yes #Elite Regiments, +50% Drill gain, -50% reinforcement speed, +10% ICA
+	}
+	ai = {
+		factor = 1
+		modifier = {
+			factor = 1
+			NOT = { has_idea_group = quantity_ideas }
+		}
+		modifier = {
+			factor = 10
+			has_idea_group = quantity_ideas
+		}
+		modifier = {
+			factor = 1
+			OR = {
+				tag = PRU
+				tag = BRA
+			}
+		}
+	}
+}
