@@ -1,7 +1,22 @@
 # eu4-modpack-4k
 
-Europa Universalis IV opinionated modpack with 4k compatibility patches. All
-original mod credits go to their respective owners.
+Europa Universalis IV opinionated modpack with adhoc 4k compatibility patches. All
+original mod credits go to their respective owners:
+
+- [Advisor Types Expanded](https://steamcommunity.com/sharedfiles/filedetails/?id=2737385499)
+- [Extended Timeline](https://steamcommunity.com/sharedfiles/filedetails/?id=217416366)
+  (only map and some features used to ensure other mods' compatibility)
+- [Theatrum Orbis Terrarum (Addon: Extended Timeline Patch)](https://steamcommunity.com/sharedfiles/filedetails/?id=2520382130)
+- [Theatrum Orbis Terrarum for 1.30+](https://steamcommunity.com/sharedfiles/filedetails/?id=1867433999)
+- [Flavour and Events Expanded](https://steamcommunity.com/sharedfiles/filedetails/?id=2185445645)
+- [Governments Expanded](https://steamcommunity.com/sharedfiles/filedetails/?id=1596815683)
+- [Great Monuments Expanded](https://steamcommunity.com/workshop/filedetails/?id=2469419235)
+- [Historic Colonization](https://steamcommunity.com/sharedfiles/filedetails/?id=2252832069)
+- [Subjects Expanded](https://steamcommunity.com/sharedfiles/filedetails/?id=1834079712)
+- [Proper 4K UI Project](https://steamcommunity.com/sharedfiles/filedetails/?id=2860690691)
+- [Peace Treaties Expanded](https://steamcommunity.com/sharedfiles/filedetails/?id=2615504872)
+- [Xorme - AI](https://steamcommunity.com/sharedfiles/filedetails/?id=2451296932)
+
 
 ## Useful links
 
