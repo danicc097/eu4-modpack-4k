@@ -1,4 +1,4 @@
-$modDir = "D:\mod"
+$modDir = "D:\Documents\Paradox Interactive\Europa Universalis IV\mod"
 $modBackupDir = "${modDir}_backup"
 
 if (Test-Path -Path $modBackupDir) {
