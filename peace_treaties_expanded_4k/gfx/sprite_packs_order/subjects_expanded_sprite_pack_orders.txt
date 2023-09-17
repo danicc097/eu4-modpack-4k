@@ -1,0 +1,6 @@
+base_dominion_sprite_pack = 45
+british_dominion_sprite_pack = 55
+germanic_dominion_sprite_pack = 55
+iberian_dominion_sprite_pack = 55
+french_dominion_sprite_pack = 55
+dutch_dominion_sprite_pack = 55

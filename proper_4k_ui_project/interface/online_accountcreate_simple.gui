@@ -1,0 +1,411 @@
+guiTypes = 
+{	
+	windowType = {
+		name = "online_accountcreate_simple_window"
+		backGround = "background"
+		position = { x=54 y=0 }
+		size = { x=360 y=360 }
+		fullscreen=yes
+		moveable = 0
+
+		guiButtonType =	{
+			name = "background"
+			spriteType = "GFX_pdxo_transparent_black"
+			position = { x= -540 y = -540 }
+			Orientation = "UPPER_LEFT"
+		}
+
+		windowType = {
+			name = "content_window"
+			backGround = ""
+			position = { x=-720 y=-540 }
+			size = { x=1260 y=1080 }
+			moveable = 0
+			orientation = center
+
+			guiButtonType =	{
+				name = "background"
+				quadTextureSprite = "online_accountcreate_background"
+				position = { x= 0 y = 0 }
+				Orientation = "UPPER_LEFT"
+				alwaysTransparent = yes
+			}		
+			
+			# Title
+			instantTextBoxType={
+				name = "online_accountcreate_title"
+				position = { x= 463 y = 85 }
+				text = "CREATE_PARADOX_ACCOUNT"
+				font = "vic_29s"
+				maxWidth = 900
+				maxHeight = 58	
+				format = left
+				fixedsize = no
+				truncate = no
+			}
+
+			instantTextBoxType={
+				name = "create_account_description"
+				position = { x= 198 y = 189 }
+				text = "CREATE_PARADOX_ACCOUNT_DESCRIPTION"
+				font =  "vic_18"
+				maxWidth = 990
+				maxHeight = 58	
+				format = left
+				fixedsize = no
+				truncate = no
+			}		
+			
+			###########
+			# Fields
+			###########
+			
+			# Email
+			instantTextBoxType={
+				name = "online_accountcreate_email"
+				position = { x= 99 y = 279 }
+				text = "EMAIL_REQUIRED"
+				font =  "vic_18"
+				maxWidth = 270
+				maxHeight = 58	
+				format = left
+				fixedsize = no
+				truncate = no
+			}
+			
+			instantTextBoxType={
+				name = "online_accountcreate_suggestemail"
+				position = { x= 288 y = 279 }
+				text = "EMAIL_HINT"
+				font =  "vic_18"
+				format = left
+				fixedsize = no
+				truncate = no
+			}
+			
+			editBoxType={
+				name = "online_accountcreate_editemail"
+				position = { x= 288 y = 279 }
+				text = ""
+				font =  "vic_18"
+				size = { x=518 y=50 }
+				use_special_chars = no
+				textureFile = "pdx_online_assets/gfx/interface/online_accountcreate_line.dds"
+			}
+			
+			guiButtonType =	{
+				name = "online_accountcreate_validemail"
+				quadTextureSprite = "online_accountcreate_valid"
+				position = { x=1080 y = 270 }
+				size = { x=178 y=178 }
+				Orientation = "UPPER_LEFT"
+				buttonText = " "
+			}
+			
+			guiButtonType =	{
+				name = "online_accountcreate_invalidemail"
+				quadTextureSprite = "online_accountcreate_invalid"
+				position = { x=1080 y = 270 }
+				size = { x=178 y=178 }
+				Orientation = "UPPER_LEFT"
+				buttonText = " "
+				alwaysTransparent = yes
+			}
+			
+			# Password
+			instantTextBoxType={
+				name = "online_accountcreate_password"
+				position = { x= 99 y = 351 }
+				text = "PASSWORD_REQUIRED"
+				font =  "vic_18"
+				maxWidth = 900
+				maxHeight = 58	
+				format = left
+				fixedsize = no
+				truncate = no
+			}
+			
+			instantTextBoxType={
+				name = "online_accountcreate_suggestpassword"
+				position = { x= 288 y = 351 }
+				text = "PASSWORD_HINT"
+				font =  "vic_18"
+				format = left
+				fixedsize = no
+				truncate = no
+			}
+
+			editBoxType={
+				name = "online_accountcreate_editpassword"
+				position = { x= 288 y = 351 }
+				text = ""
+				font =  "vic_18"
+				size = { x=518 y=50 }
+				use_special_chars = no
+				textureFile = "pdx_online_assets/gfx/interface/online_accountcreate_line.dds"
+			}
+
+			checkboxType = {
+				name = "online_accountlogin_peekpassword"
+				quadTextureSprite = "GFX_peekpassword"
+				position = { x= 999 y = 351 }			
+			}
+			
+			guiButtonType =	{
+				name = "online_accountcreate_validpassword"
+				quadTextureSprite = "online_accountcreate_valid"
+				position = { x=1080 y = 342 }
+				size = { x=178 y=178 }
+				Orientation = "UPPER_LEFT"
+				buttonText = " "
+			}
+			
+			guiButtonType =	{
+				name = "online_accountcreate_invalidpassword"
+				quadTextureSprite = "online_accountcreate_invalid"
+				position = { x=1080 y = 342 }
+				size = { x=178 y=178 }
+				Orientation = "UPPER_LEFT"
+				buttonText = " "
+				alwaysTransparent = yes
+			}
+
+			# Country
+			instantTextBoxType={
+				name = "online_accountcreate_country"
+				position = { x= 99 y = 418 }
+				text = "COUNTRY_REQUIRED"
+				font =  "vic_18"
+				maxWidth = 900
+				maxHeight = 58	
+				format = left
+				fixedsize = no
+				truncate = no
+			}
+
+			instantTextBoxType={
+				name = "online_accountcreate_suggestcountry"
+				position = { x= 288 y = 418 }
+				text = "COUNTRY_HINT"
+				font =  "vic_18"
+				format = left
+				fixedsize = no
+				truncate = no
+			}
+			
+			editBoxType={
+				name = "online_accountcreate_editcountry"
+				position = { x= 288 y = 418 }
+				text = ""
+				font =  "vic_18"
+				size = { x=518 y=50 }
+				use_special_chars = no
+				textureFile = "pdx_online_assets/gfx/interface/online_accountcreate_line.dds"
+			}
+			
+			guiButtonType =	{
+				name = "online_accountcreate_validcountry"
+				quadTextureSprite = "online_accountcreate_valid"
+				position = { x=1080 y = 409 }
+				size = { x=178 y=178 }
+				Orientation = "UPPER_LEFT"
+				buttonText = " "
+			}
+			
+			guiButtonType =	{
+				name = "online_accountcreate_invalidcountry"
+				quadTextureSprite = "online_accountcreate_invalid"
+				position = { x=1080 y = 409 }
+				size = { x=178 y=178 }
+				Orientation = "UPPER_LEFT"
+				buttonText = " "
+				alwaysTransparent = yes
+			}
+			
+			# Birthday
+			instantTextBoxType={
+				name = "online_accountcreate_birthday"
+				position = { x= 99 y = 490 }
+				text = "DATE_OF_BIRTH_REQUIRED"
+				font =  "vic_18"
+				maxWidth = 900
+				maxHeight = 58	
+				format = left
+				fixedsize = no
+				truncate = no
+			}
+			
+			instantTextBoxType={
+				name = "online_accountcreate_suggestbirthday"
+				position = { x= 288 y = 490 }
+				text = "DATE_OF_BIRTH_HINT"
+				font =  "vic_18"
+				maxWidth = 900
+				maxHeight = 58	
+				format = left
+				fixedsize = no
+				truncate = no
+			}
+			
+			editBoxType={
+				name = "online_accountcreate_editbirthday"
+				position = { x= 288 y = 490 }
+				text = ""
+				font =  "vic_18"
+				size = { x=518 y=50 }
+				use_special_chars = no
+				textureFile = "pdx_online_assets/gfx/interface/online_accountcreate_line.dds"
+			}
+
+			guiButtonType =	{
+				name = "online_accountcreate_validbirthday"
+				quadTextureSprite = "online_accountcreate_valid"
+				position = { x=540 y = 481 }
+				size = { x=178 y=178 }
+				Orientation = "UPPER_LEFT"
+				buttonText = " "
+			}
+			
+			guiButtonType =	{
+				name = "online_accountcreate_invalidbirthday"
+				quadTextureSprite = "online_accountcreate_invalid"
+				position = { x=540 y = 481 }
+				size = { x=178 y=178 }
+				Orientation = "UPPER_LEFT"
+				buttonText = " "
+				alwaysTransparent = yes
+			}
+			
+
+			###########
+			# End of Fields
+			###########		
+
+
+			
+			guiButtonType = {
+				name = "online_form_submitbutton"
+				quadTextureSprite = "GFX_button_straight_148_46"
+				position = { x= -724 y = -288 }
+				Orientation = "LOWER_RIGHT"		
+				buttonText = "ACCEPT_AND_SUBMIT"
+				buttonFont =  "vic_18"
+				tooltip = ""
+				tooltipText =""
+				delayedTooltipText = ""
+			}
+			
+			guiButtonType = {
+				name = "online_form_cancelbutton"
+				quadTextureSprite = "GFX_button_close"
+				position = { x= 1260 y = -1013 }
+				Orientation = "LOWER_LEFT"	
+				#buttonText = "PDXO_CANCEL"
+				tooltip = ""
+				tooltipText =""
+				delayedTooltipText = ""
+			}
+			
+			# Terms of use and privacy policy
+			instantTextBoxType={
+				name = "online_accountcreate_openbrowser"
+				position = { x= -279 y = 558 }
+				Orientation = "UPPER_RIGHT"				
+				text = "CLICK_TO_OPEN_IN_BROWSER"
+				font =  "vic_18"
+				maxWidth = 900
+				maxHeight = 58	
+				format = left
+				fixedsize = no
+				truncate = no
+			}
+
+			instantTextBoxType={
+				name = "online_accountcreate_conditions_text"
+				position = { x= 99 y = 558 }
+				Orientation = "UPPER_LEFT"	
+				text = "CREATEACCOUNT_CONDITIONS_TEXT"
+				font =  "vic_18"
+				maxWidth = 792
+				maxHeight = 58	
+				format = left
+				fixedsize = no
+				truncate = no
+			}
+			
+			instantTextBoxType={
+				name = "online_accountcreate_newsletter_label"
+				position = { x= 153 y = 666 }
+				Orientation = "UPPER_LEFT"	
+				text = "NEWSLETTER_DESCRIPTION"
+				font =  "vic_18"
+				maxWidth = 792
+				maxHeight = 58	
+				format = left
+				fixedsize = no
+				truncate = no
+			}
+
+			checkboxType = {
+				name = "online_accountcreate_newsletter_check"
+				Orientation = "UPPER_LEFT"	
+				quadTextureSprite = "GFX_checkbox"
+				position = { x= 90 y = 652 }			
+			}
+			
+			guiButtonType = {
+				name = "online_accountcreate_tos"
+				quadTextureSprite = "GFX_forgot_password"
+				position = { x= -234 y = 594 }
+				Orientation = "UPPER_RIGHT"				
+				buttonText = "TERMS_OF_USE"
+				web_link = "http://www.paradoxplaza.com/terms-use"
+				buttonFont =  "vic_18"
+				tooltip = ""
+				tooltipText =""
+				delayedTooltipText = ""
+			}
+			
+			guiButtonType = {
+				name = "online_accountcreate_privacy"
+				quadTextureSprite = "GFX_forgot_password"
+				position = { x= -234 y = 648 }
+				Orientation = "UPPER_RIGHT"				
+				buttonText = "PRIVACY_POLICY"
+				web_link = "https://www.paradoxplaza.com/privacy"
+				buttonFont =  "vic_18"
+				tooltip = ""
+				tooltipText =""
+				delayedTooltipText = ""
+			}
+
+			# Success
+			instantTextBoxType={
+				name = "online_accountcreate_success"
+				position = { x= 99 y = -360 }
+				text = ""
+				Orientation = "LOWER_LEFT"
+				font =  "vic_18"
+				maxWidth = 270
+				maxHeight = 58
+				format = left
+				fixedsize = no
+				truncate = no
+			}
+			
+			# Errors
+			instantTextBoxType={
+				name = "online_accountcreate_error"
+				position = { x= 99 y = -360 }
+				Orientation = "LOWER_LEFT"	
+				text = ""
+				font =  "vic_18"
+				maxWidth = 495
+				maxHeight = 58
+				format = left
+				fixedsize = no
+				truncate = no
+			}
+		}
+	}
+}

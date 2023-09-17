@@ -1,0 +1,1121 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_advisor_ate_advisor_loyal_friend_adm"
+		texturefile = "gfx/interface/advisors/advisor_types_expanded/ate_advisor_loyal_friend_adm.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_advisor_ate_advisor_loyal_friend_adm_female"
+		texturefile = "gfx/interface/advisors/advisor_types_expanded/ate_advisor_loyal_friend_adm_female.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+		norefcount = yes
+	}
+
+	spriteType = {
+		name = "GFX_advisor_ate_advisor_court_physician"
+		texturefile = "gfx/interface/advisors/advisor_types_expanded/ate_advisor_court_physician.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_advisor_ate_advisor_court_physician_female"
+		texturefile = "gfx/interface/advisors/advisor_types_expanded/ate_advisor_court_physician_female.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+		norefcount = yes
+	}
+
+	spriteType = {
+		name = "GFX_advisor_ate_advisor_cardinal"
+		texturefile = "gfx/interface/advisors/advisor_types_expanded/ate_advisor_cardinal.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_advisor_ate_advisor_cardinal_female"
+		texturefile = "gfx/interface/advisors/advisor_types_expanded/ate_advisor_cardinal.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+		norefcount = yes
+	}
+
+	spriteType = {
+		name = "GFX_advisor_ate_advisor_arch_bishop_catholic"
+		texturefile = "gfx/interface/advisors/advisor_types_expanded/ate_advisor_arch_bishop.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_advisor_ate_advisor_arch_bishop_catholic_female"
+		texturefile = "gfx/interface/advisors/advisor_types_expanded/ate_advisor_arch_bishop.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+		norefcount = yes
+	}
+
+	spriteType = {
+		name = "GFX_advisor_ate_advisor_arch_bishop_protestant"
+		texturefile = "gfx/interface/advisors/advisor_types_expanded/ate_advisor_arch_bishop.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_advisor_ate_advisor_arch_bishop_protestant_female"
+		texturefile = "gfx/interface/advisors/advisor_types_expanded/ate_advisor_arch_bishop.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+		norefcount = yes
+	}
+
+	spriteType = {
+		name = "GFX_advisor_ate_advisor_arch_bishop_reformed"
+		texturefile = "gfx/interface/advisors/advisor_types_expanded/ate_advisor_arch_bishop.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_advisor_ate_advisor_arch_bishop_reformed_female"
+		texturefile = "gfx/interface/advisors/advisor_types_expanded/ate_advisor_arch_bishop.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+		norefcount = yes
+	}
+
+	spriteType = {
+		name = "GFX_advisor_ate_advisor_feudal_tax_collector"
+		texturefile = "gfx/interface/advisors/advisor_types_expanded/ate_advisor_feudal_tax_collector.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_advisor_ate_advisor_feudal_tax_collector_female"
+		texturefile = "gfx/interface/advisors/advisor_types_expanded/ate_advisor_feudal_tax_collector.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+		norefcount = yes
+	}
+
+	spriteType = {
+		name = "GFX_advisor_ate_advisor_architect"
+		texturefile = "gfx/interface/advisors/advisor_types_expanded/ate_advisor_architect.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_advisor_ate_advisor_architect_female"
+		texturefile = "gfx/interface/advisors/advisor_types_expanded/ate_advisor_architect_female.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+		norefcount = yes
+	}
+
+	spriteType = {
+		name = "GFX_advisor_ate_advisor_great_administrator"
+		texturefile = "gfx/interface/advisors/advisor_types_expanded/ate_advisor_great_administrator.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_advisor_ate_advisor_great_administrator_female"
+		texturefile = "gfx/interface/advisors/advisor_types_expanded/ate_advisor_great_administrator_female.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+		norefcount = yes
+	}
+
+	spriteType = {
+		name = "GFX_advisor_ate_advisor_steward"
+		texturefile = "gfx/interface/advisors/advisor_types_expanded/ate_advisor_steward.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_advisor_ate_advisor_steward_female"
+		texturefile = "gfx/interface/advisors/advisor_types_expanded/ate_advisor_steward_female.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+		norefcount = yes
+	}
+
+	spriteType = {
+		name = "GFX_advisor_ate_advisor_administrative_genius"
+		texturefile = "gfx/interface/advisors/advisor_types_expanded/ate_advisor_administrative_genius.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_advisor_ate_advisor_administrative_genius_female"
+		texturefile = "gfx/interface/advisors/advisor_types_expanded/ate_advisor_administrative_genius_female.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+		norefcount = yes
+	}
+
+	spriteType = {
+		name = "GFX_advisor_ate_advisor_anti_corruption_officer"
+		texturefile = "gfx/interface/advisors/advisor_types_expanded/ate_advisor_anti_corruption_officer.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_advisor_ate_advisor_anti_corruption_officer_female"
+		texturefile = "gfx/interface/advisors/advisor_types_expanded/ate_advisor_anti_corruption_officer_female.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+		norefcount = yes
+	}
+
+	spriteType = {
+		name = "GFX_advisor_ate_advisor_first_minister_monarchy"
+		texturefile = "gfx/interface/advisors/advisor_types_expanded/ate_advisor_first_minister.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_advisor_ate_advisor_first_minister_monarchy_female"
+		texturefile = "gfx/interface/advisors/advisor_types_expanded/ate_advisor_first_minister_female.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+		norefcount = yes
+	}
+
+	spriteType = {
+		name = "GFX_advisor_ate_advisor_first_minister_theocracy"
+		texturefile = "gfx/interface/advisors/advisor_types_expanded/ate_advisor_first_minister.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_advisor_ate_advisor_first_minister_theocracy_female"
+		texturefile = "gfx/interface/advisors/advisor_types_expanded/ate_advisor_first_minister_female.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+		norefcount = yes
+	}
+
+	spriteType = {
+		name = "GFX_advisor_ate_advisor_first_minister_republic"
+		texturefile = "gfx/interface/advisors/advisor_types_expanded/ate_advisor_first_minister.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_advisor_ate_advisor_first_minister_republic_female"
+		texturefile = "gfx/interface/advisors/advisor_types_expanded/ate_advisor_first_minister_female.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+		norefcount = yes
+	}
+
+	spriteType = {
+		name = "GFX_advisor_ate_advisor_state_administrator"
+		texturefile = "gfx/interface/advisors/advisor_types_expanded/ate_advisor_state_administrator.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_advisor_ate_advisor_state_administrator_female"
+		texturefile = "gfx/interface/advisors/advisor_types_expanded/ate_advisor_state_administrator_female.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+		norefcount = yes
+	}
+
+	spriteType = {
+		name = "GFX_advisor_ate_advisor_gold_digger"
+		texturefile = "gfx/interface/advisors/advisor_types_expanded/ate_advisor_gold_digger.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_advisor_ate_advisor_gold_digger_female"
+		texturefile = "gfx/interface/advisors/advisor_types_expanded/ate_advisor_gold_digger_female.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+		norefcount = yes
+	}
+
+	spriteType = {
+		name = "GFX_advisor_ate_advisor_free_thinker"
+		texturefile = "gfx/interface/advisors/advisor_types_expanded/ate_advisor_free_thinker.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_advisor_ate_advisor_free_thinker_female"
+		texturefile = "gfx/interface/advisors/advisor_types_expanded/ate_advisor_free_thinker_female.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+		norefcount = yes
+	}
+
+	spriteType = {
+		name = "GFX_advisor_ate_advisor_revolutionist"
+		texturefile = "gfx/interface/advisors/advisor_types_expanded/ate_advisor_revolutionist.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_advisor_ate_advisor_revolutionist_female"
+		texturefile = "gfx/interface/advisors/advisor_types_expanded/ate_advisor_revolutionist_female.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+		norefcount = yes
+	}
+
+	spriteType = {
+		name = "GFX_advisor_ate_advisor_reformist"
+		texturefile = "gfx/interface/advisors/advisor_types_expanded/ate_advisor_reformist.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_advisor_ate_advisor_reformist_female"
+		texturefile = "gfx/interface/advisors/advisor_types_expanded/ate_advisor_reformist_female.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+		norefcount = yes
+	}
+
+	spriteType = {
+		name = "GFX_advisor_ate_advisor_state_theorist"
+		texturefile = "gfx/interface/advisors/advisor_types_expanded/ate_advisor_state_theorist.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_advisor_ate_advisor_state_theorist_female"
+		texturefile = "gfx/interface/advisors/advisor_types_expanded/ate_advisor_state_theorist_female.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+		norefcount = yes
+	}
+
+	spriteType = {
+		name = "GFX_advisor_ate_advisor_visionary"
+		texturefile = "gfx/interface/advisors/advisor_types_expanded/ate_advisor_visionary.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_advisor_ate_advisor_visionary_female"
+		texturefile = "gfx/interface/advisors/advisor_types_expanded/ate_advisor_visionary_female.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+		norefcount = yes
+	}
+
+	spriteType = {
+		name = "GFX_advisor_ate_advisor_great_philosopher"
+		texturefile = "gfx/interface/advisors/advisor_types_expanded/ate_advisor_great_philosopher.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_advisor_ate_advisor_great_philosopher_female"
+		texturefile = "gfx/interface/advisors/advisor_types_expanded/ate_advisor_great_philosopher_female.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+		norefcount = yes
+	}
+
+	spriteType = {
+		name = "GFX_advisor_ate_advisor_arch_chamberlain"
+		texturefile = "gfx/interface/advisors/advisor_types_expanded/ate_advisor_arch_chamberlain.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_advisor_ate_advisor_arch_chamberlain_female"
+		texturefile = "gfx/interface/advisors/advisor_types_expanded/ate_advisor_arch_chamberlain.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+		norefcount = yes
+	}
+
+	spriteType = {
+		name = "GFX_advisor_ate_advisor_loyal_friend_dip"
+		texturefile = "gfx/interface/advisors/advisor_types_expanded/ate_advisor_loyal_friend_dip.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_advisor_ate_advisor_loyal_friend_dip_female"
+		texturefile = "gfx/interface/advisors/advisor_types_expanded/ate_advisor_loyal_friend_dip_female.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+		norefcount = yes
+	}
+
+	spriteType = {
+		name = "GFX_advisor_ate_advisor_concubine_female"
+		texturefile = "gfx/interface/advisors/advisor_types_expanded/ate_advisor_concubine_male.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_advisor_ate_advisor_concubine_female_female"
+		texturefile = "gfx/interface/advisors/advisor_types_expanded/ate_advisor_concubine_female.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+		norefcount = yes
+	}
+
+	spriteType = {
+		name = "GFX_advisor_ate_advisor_concubine_male"
+		texturefile = "gfx/interface/advisors/advisor_types_expanded/ate_advisor_concubine_male.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_advisor_ate_advisor_concubine_male_female"
+		texturefile = "gfx/interface/advisors/advisor_types_expanded/ate_advisor_concubine_female.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+		norefcount = yes
+	}
+
+	spriteType = {
+		name = "GFX_advisor_ate_advisor_sailors_recruitmaster"
+		texturefile = "gfx/interface/advisors/advisor_types_expanded/ate_advisor_sailors_recruitmaster.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_advisor_ate_advisor_sailors_recruitmaster_female"
+		texturefile = "gfx/interface/advisors/advisor_types_expanded/ate_advisor_sailors_recruitmaster_female.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+		norefcount = yes
+	}
+
+	spriteType = {
+		name = "GFX_advisor_ate_advisor_blockade_specialist"
+		texturefile = "gfx/interface/advisors/advisor_types_expanded/ate_advisor_blockade_specialist.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_advisor_ate_advisor_blockade_specialist_female"
+		texturefile = "gfx/interface/advisors/advisor_types_expanded/ate_advisor_blockade_specialist_female.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+		norefcount = yes
+	}
+
+	spriteType = {
+		name = "GFX_advisor_ate_advisor_pirate_captain"
+		texturefile = "gfx/interface/advisors/advisor_types_expanded/ate_advisor_pirate_captain.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_advisor_ate_advisor_pirate_captain_female"
+		texturefile = "gfx/interface/advisors/advisor_types_expanded/ate_advisor_pirate_captain_female.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+		norefcount = yes
+	}
+
+	spriteType = {
+		name = "GFX_advisor_ate_advisor_great_negotiator"
+		texturefile = "gfx/interface/advisors/advisor_types_expanded/ate_advisor_great_negotiator.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_advisor_ate_advisor_great_negotiator_female"
+		texturefile = "gfx/interface/advisors/advisor_types_expanded/ate_advisor_great_negotiator_female.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+		norefcount = yes
+	}
+
+	spriteType = {
+		name = "GFX_advisor_ate_advisor_vicegerent"
+		texturefile = "gfx/interface/advisors/advisor_types_expanded/ate_advisor_vicegerent.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_advisor_ate_advisor_vicegerent_female"
+		texturefile = "gfx/interface/advisors/advisor_types_expanded/ate_advisor_vicegerent_female.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+		norefcount = yes
+	}
+
+	spriteType = {
+		name = "GFX_advisor_ate_advisor_traveling_salesman"
+		texturefile = "gfx/interface/advisors/advisor_types_expanded/ate_advisor_traveling_salesman.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_advisor_ate_advisor_traveling_salesman_female"
+		texturefile = "gfx/interface/advisors/advisor_types_expanded/ate_advisor_traveling_salesman_female.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+		norefcount = yes
+	}
+
+	spriteType = {
+		name = "GFX_advisor_ate_advisor_naval_traditional_tactician"
+		texturefile = "gfx/interface/advisors/advisor_types_expanded/ate_advisor_naval_traditional_tactician.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_advisor_ate_advisor_naval_traditional_tactician_female"
+		texturefile = "gfx/interface/advisors/advisor_types_expanded/ate_advisor_naval_traditional_tactician_female.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+		norefcount = yes
+	}
+
+	spriteType = {
+		name = "GFX_advisor_ate_advisor_diplomatic_genius"
+		texturefile = "gfx/interface/advisors/advisor_types_expanded/ate_advisor_diplomatic_genius.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_advisor_ate_advisor_diplomatic_genius_female"
+		texturefile = "gfx/interface/advisors/advisor_types_expanded/ate_advisor_diplomatic_genius_female.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+		norefcount = yes
+	}
+
+	spriteType = {
+		name = "GFX_advisor_ate_advisor_cultural_commissioner"
+		texturefile = "gfx/interface/advisors/advisor_types_expanded/ate_advisor_cultural_commissioner.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_advisor_ate_advisor_cultural_commissioner_female"
+		texturefile = "gfx/interface/advisors/advisor_types_expanded/ate_advisor_cultural_commissioner_female.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+		norefcount = yes
+	}
+
+	spriteType = {
+		name = "GFX_advisor_ate_advisor_herald"
+		texturefile = "gfx/interface/advisors/advisor_types_expanded/ate_advisor_herald.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_advisor_ate_advisor_herald_female"
+		texturefile = "gfx/interface/advisors/advisor_types_expanded/ate_advisor_herald_female.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+		norefcount = yes
+	}
+
+	spriteType = {
+		name = "GFX_advisor_ate_advisor_arch_chancellor"
+		texturefile = "gfx/interface/advisors/advisor_types_expanded/ate_advisor_arch_chancellor.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_advisor_ate_advisor_arch_chancellor_female"
+		texturefile = "gfx/interface/advisors/advisor_types_expanded/ate_advisor_arch_chancellor.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+		norefcount = yes
+	}
+
+	spriteType = {
+		name = "GFX_advisor_ate_advisor_envoy"
+		texturefile = "gfx/interface/advisors/advisor_types_expanded/ate_advisor_envoy.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_advisor_ate_advisor_envoy_female"
+		texturefile = "gfx/interface/advisors/advisor_types_expanded/ate_advisor_envoy_female.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+		norefcount = yes
+	}
+
+	spriteType = {
+		name = "GFX_advisor_ate_advisor_loyal_friend_mil"
+		texturefile = "gfx/interface/advisors/advisor_types_expanded/ate_advisor_loyal_friend_mil.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_advisor_ate_advisor_loyal_friend_mil_female"
+		texturefile = "gfx/interface/advisors/advisor_types_expanded/ate_advisor_loyal_friend_mil_female.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+		norefcount = yes
+	}
+
+	spriteType = {
+		name = "GFX_advisor_ate_advisor_feudal_lord"
+		texturefile = "gfx/interface/advisors/advisor_types_expanded/ate_advisor_feudal_lord.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_advisor_ate_advisor_feudal_lord_female"
+		texturefile = "gfx/interface/advisors/advisor_types_expanded/ate_advisor_feudal_lord.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+		norefcount = yes
+	}
+
+	spriteType = {
+		name = "GFX_advisor_ate_advisor_knight"
+		texturefile = "gfx/interface/advisors/advisor_types_expanded/ate_advisor_knight.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_advisor_ate_advisor_knight_female"
+		texturefile = "gfx/interface/advisors/advisor_types_expanded/ate_advisor_knight.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+		norefcount = yes
+	}
+
+	spriteType = {
+		name = "GFX_advisor_ate_advisor_traditional_tactician"
+		texturefile = "gfx/interface/advisors/advisor_types_expanded/ate_advisor_traditional_tactician.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_advisor_ate_advisor_traditional_tactician_female"
+		texturefile = "gfx/interface/advisors/advisor_types_expanded/ate_advisor_traditional_tactician_female.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+		norefcount = yes
+	}
+
+	spriteType = {
+		name = "GFX_advisor_ate_advisor_landsknecht"
+		texturefile = "gfx/interface/advisors/advisor_types_expanded/ate_advisor_landsknecht.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_advisor_ate_advisor_landsknecht_female"
+		texturefile = "gfx/interface/advisors/advisor_types_expanded/ate_advisor_landsknecht.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+		norefcount = yes
+	}
+
+	spriteType = {
+		name = "GFX_advisor_ate_advisor_mercenary_leader"
+		texturefile = "gfx/interface/advisors/advisor_types_expanded/ate_advisor_mercenary_leader.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_advisor_ate_advisor_mercenary_leader_female"
+		texturefile = "gfx/interface/advisors/advisor_types_expanded/ate_advisor_mercenary_leader.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+		norefcount = yes
+	}
+
+	spriteType = {
+		name = "GFX_advisor_ate_advisor_lord_of_a_castle"
+		texturefile = "gfx/interface/advisors/advisor_types_expanded/ate_advisor_lord_of_a_castle.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_advisor_ate_advisor_lord_of_a_castle_female"
+		texturefile = "gfx/interface/advisors/advisor_types_expanded/ate_advisor_lord_of_a_castle.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+		norefcount = yes
+	}
+
+	spriteType = {
+		name = "GFX_advisor_ate_advisor_noble_man"
+		texturefile = "gfx/interface/advisors/advisor_types_expanded/ate_advisor_noble_man.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_advisor_ate_advisor_noble_man_female"
+		texturefile = "gfx/interface/advisors/advisor_types_expanded/ate_advisor_noble_man.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+		norefcount = yes
+	}
+
+	spriteType = {
+		name = "GFX_advisor_ate_advisor_military_genius"
+		texturefile = "gfx/interface/advisors/advisor_types_expanded/ate_advisor_military_genius.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_advisor_ate_advisor_military_genius_female"
+		texturefile = "gfx/interface/advisors/advisor_types_expanded/ate_advisor_military_genius_female.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+		norefcount = yes
+	}
+
+	spriteType = {
+		name = "GFX_advisor_ate_advisor_siege_expert"
+		texturefile = "gfx/interface/advisors/advisor_types_expanded/ate_advisor_siege_expert.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_advisor_ate_advisor_siege_expert_female"
+		texturefile = "gfx/interface/advisors/advisor_types_expanded/ate_advisor_siege_expert_female.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+		norefcount = yes
+	}
+
+	spriteType = {
+		name = "GFX_advisor_ate_advisor_master_of_artillery"
+		texturefile = "gfx/interface/advisors/advisor_types_expanded/ate_advisor_master_of_artillery.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_advisor_ate_advisor_master_of_artillery_female"
+		texturefile = "gfx/interface/advisors/advisor_types_expanded/ate_advisor_master_of_artillery_female.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+		norefcount = yes
+	}
+
+	spriteType = {
+		name = "GFX_advisor_ate_advisor_looting_expert"
+		texturefile = "gfx/interface/advisors/advisor_types_expanded/ate_advisor_looting_expert.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_advisor_ate_advisor_looting_expert_female"
+		texturefile = "gfx/interface/advisors/advisor_types_expanded/ate_advisor_looting_expert_female.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+		norefcount = yes
+	}
+	spriteType = {
+		name = "GFX_advisor_asiangfx_ate_advisor_looting_expert"
+		texturefile = "gfx/interface/advisors/asian_recruitmaster.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+		norefcount = yes
+	}
+	spriteType = {
+		name = "GFX_advisor_asiangfx_ate_advisor_looting_expert_female"
+		texturefile = "gfx/interface/advisors/asian_recruitmaster_female.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+		norefcount = yes
+	}
+
+	spriteType = {
+		name = "GFX_advisor_ate_advisor_marshal"
+		texturefile = "gfx/interface/advisors/advisor_types_expanded/ate_advisor_marshal.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_advisor_ate_advisor_marshal_female"
+		texturefile = "gfx/interface/advisors/advisor_types_expanded/ate_advisor_marshal_female.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+		norefcount = yes
+	}
+
+	spriteType = {
+		name = "GFX_advisor_ate_advisor_arch_marshal"
+		texturefile = "gfx/interface/advisors/advisor_types_expanded/ate_advisor_arch_marshal.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_advisor_ate_advisor_arch_marshal_female"
+		texturefile = "gfx/interface/advisors/advisor_types_expanded/ate_advisor_arch_marshal.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+		norefcount = yes
+	}
+
+	spriteType = {
+		name = "GFX_advisor_ate_advisor_supply_expert"
+		texturefile = "gfx/interface/advisors/advisor_types_expanded/ate_advisor_supply_expert.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_advisor_ate_advisor_supply_expert_female"
+		texturefile = "gfx/interface/advisors/advisor_types_expanded/ate_advisor_supply_expert_female.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+		norefcount = yes
+	}
+
+	spriteType = {
+		name = "GFX_advisor_ate_advisor_sergeant"
+		texturefile = "gfx/interface/advisors/advisor_types_expanded/ate_advisor_sergeant.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_advisor_ate_advisor_sergeant_female"
+		texturefile = "gfx/interface/advisors/advisor_types_expanded/ate_advisor_sergeant_female.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+		norefcount = yes
+	}
+
+	spriteType = {
+		name = "GFX_advisor_ate_advisor_monk"
+		texturefile = "gfx/interface/advisors/advisor_types_expanded/ate_advisor_monk.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_advisor_ate_advisor_monk_female"
+		texturefile = "gfx/interface/advisors/advisor_types_expanded/ate_advisor_monk.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+		norefcount = yes
+	}
+
+	spriteType = {
+		name = "GFX_advisor_ate_advisor_brahmins_preacher"
+		texturefile = "gfx/interface/advisors/advisor_types_expanded/ate_advisor_brahmins_preacher.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_advisor_ate_advisor_brahmins_preacher_female"
+		texturefile = "gfx/interface/advisors/advisor_types_expanded/ate_advisor_brahmins_preacher.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+		norefcount = yes
+	}
+
+	spriteType = {
+		name = "GFX_advisor_ate_advisor_dhimmi_scholar"
+		texturefile = "gfx/interface/advisors/advisor_types_expanded/ate_advisor_dhimmi_scholar.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_advisor_ate_advisor_dhimmi_scholar_female"
+		texturefile = "gfx/interface/advisors/advisor_types_expanded/ate_advisor_dhimmi_scholar_female.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+		norefcount = yes
+	}
+
+	spriteType = {
+		name = "GFX_advisor_ate_advisor_jains_bureaucrat"
+		texturefile = "gfx/interface/advisors/advisor_types_expanded/ate_advisor_jains_bureaucrat.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_advisor_ate_advisor_jains_bureaucrat_female"
+		texturefile = "gfx/interface/advisors/advisor_types_expanded/ate_advisor_jains_bureaucrat_female.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+		norefcount = yes
+	}
+
+	spriteType = {
+		name = "GFX_advisor_ate_advisor_vaisyas_peasant"
+		texturefile = "gfx/interface/advisors/advisor_types_expanded/ate_advisor_vaisyas_peasant.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_advisor_ate_advisor_vaisyas_peasant_female"
+		texturefile = "gfx/interface/advisors/advisor_types_expanded/ate_advisor_vaisyas_peasant_female.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+		norefcount = yes
+	}
+
+	spriteType = {
+		name = "GFX_advisor_ate_advisor_guild_trader"
+		texturefile = "gfx/interface/advisors/advisor_types_expanded/ate_advisor_guild_trader.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_advisor_ate_advisor_guild_trader_female"
+		texturefile = "gfx/interface/advisors/advisor_types_expanded/ate_advisor_guild_trader_female.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+		norefcount = yes
+	}
+
+	spriteType = {
+		name = "GFX_advisor_ate_advisor_maratha_warrior"
+		texturefile = "gfx/interface/advisors/advisor_types_expanded/ate_advisor_maratha_warrior.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_advisor_ate_advisor_maratha_warrior_female"
+		texturefile = "gfx/interface/advisors/advisor_types_expanded/ate_advisor_maratha_warrior.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+		norefcount = yes
+	}
+
+	spriteType = {
+		name = "GFX_advisor_ate_advisor_gentleman"
+		texturefile = "gfx/interface/advisors/advisor_types_expanded/ate_advisor_gentleman.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_advisor_ate_advisor_gentleman_female"
+		texturefile = "gfx/interface/advisors/advisor_types_expanded/ate_advisor_gentleman.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+		norefcount = yes
+	}
+
+	spriteType = {
+		name = "GFX_advisor_ate_advisor_cossack"
+		texturefile = "gfx/interface/advisors/advisor_types_expanded/ate_advisor_cossack.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_advisor_ate_advisor_cossack_female"
+		texturefile = "gfx/interface/advisors/advisor_types_expanded/ate_advisor_cossack.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+		norefcount = yes
+	}
+
+	spriteType = {
+		name = "GFX_advisor_ate_advisor_tribal_chieftain"
+		texturefile = "gfx/interface/advisors/advisor_types_expanded/ate_advisor_tribal_chieftain.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_advisor_ate_advisor_tribal_chieftain_female"
+		texturefile = "gfx/interface/advisors/advisor_types_expanded/ate_advisor_tribal_chieftain.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+		norefcount = yes
+	}
+
+	spriteType = {
+		name = "GFX_advisor_ate_advisor_rajputs_warrior"
+		texturefile = "gfx/interface/advisors/advisor_types_expanded/ate_advisor_rajputs_warrior.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_advisor_ate_advisor_rajputs_warrior_female"
+		texturefile = "gfx/interface/advisors/advisor_types_expanded/ate_advisor_rajputs_warrior.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+		norefcount = yes
+	}
+
+	spriteType = {
+		name = "GFX_advisor_ate_advisor_missionary"
+		texturefile = "gfx/interface/advisors/advisor_types_expanded/ate_advisor_missionary.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_advisor_ate_advisor_missionary_female"
+		texturefile = "gfx/interface/advisors/advisor_types_expanded/ate_advisor_missionary_female.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+		norefcount = yes
+	}
+
+	spriteType = {
+		name = "GFX_advisor_ate_advisor_imperial_bureaucrat"
+		texturefile = "gfx/interface/advisors/advisor_types_expanded/ate_advisor_imperial_bureaucrat.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_advisor_ate_advisor_imperial_bureaucrat_female"
+		texturefile = "gfx/interface/advisors/advisor_types_expanded/ate_advisor_imperial_bureaucrat_female.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+		norefcount = yes
+	}
+
+	spriteType = {
+		name = "GFX_advisor_ate_advisor_historian"
+		texturefile = "gfx/interface/advisors/advisor_types_expanded/ate_advisor_historian.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_advisor_ate_advisor_historian_female"
+		texturefile = "gfx/interface/advisors/advisor_types_expanded/ate_advisor_historian_female.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+		norefcount = yes
+	}
+
+	spriteType = {
+		name = "GFX_advisor_ate_advisor_banneret"
+		texturefile = "gfx/interface/advisors/advisor_types_expanded/ate_advisor_banneret.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_advisor_ate_advisor_banneret_female"
+		texturefile = "gfx/interface/advisors/advisor_types_expanded/ate_advisor_banneret_female.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+		norefcount = yes
+	}
+
+	spriteType = {
+		name = "GFX_advisor_ate_advisor_plantation_owner"
+		texturefile = "gfx/interface/advisors/advisor_types_expanded/ate_advisor_plantation_owner.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_advisor_ate_advisor_plantation_owner_female"
+		texturefile = "gfx/interface/advisors/advisor_types_expanded/ate_advisor_plantation_owner_female.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+		norefcount = yes
+	}
+
+	spriteType = {
+		name = "GFX_advisor_ate_advisor_imam"
+		texturefile = "gfx/interface/advisors/advisor_types_expanded/ate_advisor_imam.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_advisor_ate_advisor_imam_female"
+		texturefile = "gfx/interface/advisors/advisor_types_expanded/ate_advisor_imam.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+		norefcount = yes
+	}
+
+	spriteType = {
+		name = "GFX_advisor_ate_advisor_galley_captain"
+		texturefile = "gfx/interface/advisors/advisor_types_expanded/ate_advisor_galley_captain.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_advisor_ate_advisor_galley_captain_female"
+		texturefile = "gfx/interface/advisors/advisor_types_expanded/ate_advisor_galley_captain_female.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+		norefcount = yes
+	}
+
+	spriteType = {
+		name = "GFX_advisor_ate_advisor_galleon_captain"
+		texturefile = "gfx/interface/advisors/advisor_types_expanded/ate_advisor_galleon_captain.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_advisor_ate_advisor_galleon_captain_female"
+		texturefile = "gfx/interface/advisors/advisor_types_expanded/ate_advisor_galleon_captain_female.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+		norefcount = yes
+	}
+
+	spriteType = {
+		name = "GFX_advisor_ate_advisor_scholar"
+		texturefile = "gfx/interface/advisors/advisor_types_expanded/ate_advisor_scholar.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_advisor_ate_advisor_scholar_female"
+		texturefile = "gfx/interface/advisors/advisor_types_expanded/ate_advisor_scholar_female.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+		norefcount = yes
+	}
+
+	spriteType = {
+		name = "GFX_advisor_ate_advisor_inventor"
+		texturefile = "gfx/interface/advisors/advisor_types_expanded/ate_advisor_inventor.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_advisor_ate_advisor_inventor_female"
+		texturefile = "gfx/interface/advisors/advisor_types_expanded/ate_advisor_inventor_female.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+		norefcount = yes
+	}
+
+	spriteType = {
+		name = "GFX_advisor_ate_advisor_colonial_administrator"
+		texturefile = "gfx/interface/advisors/advisor_types_expanded/ate_advisor_colonial_administrator.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_advisor_ate_advisor_colonial_administrator_female"
+		texturefile = "gfx/interface/advisors/advisor_types_expanded/ate_advisor_colonial_administrator_female.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+		norefcount = yes
+	}
+
+	spriteType = {
+		name = "GFX_advisor_ate_advisor_treasure_fleet_captain"
+		texturefile = "gfx/interface/advisors/advisor_types_expanded/ate_advisor_treasure_fleet_captain.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_advisor_ate_advisor_treasure_fleet_captain_female"
+		texturefile = "gfx/interface/advisors/advisor_types_expanded/ate_advisor_treasure_fleet_captain_female.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+		norefcount = yes
+	}
+
+	spriteType = {
+		name = "GFX_advisor_ate_advisor_witch_hunter"
+		texturefile = "gfx/interface/advisors/advisor_types_expanded/ate_advisor_witch_hunter.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_advisor_ate_advisor_witch_hunter_female"
+		texturefile = "gfx/interface/advisors/advisor_types_expanded/ate_advisor_witch_hunter_female.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+		norefcount = yes
+	}
+}

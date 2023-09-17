@@ -1,0 +1,149 @@
+dominion_upgrade_fleet_size = {
+	can_upgrade_trigger = {
+		is_dominion_or_similar_subject = yes
+		FROM = {
+			dip_power = 25
+		}
+	}
+
+	cost = 100
+
+	effect = {
+		add_liberty_desire = 10
+		FROM = {
+			add_dip_power = -25
+		}
+	}
+
+	modifier_overlord = {
+		naval_forcelimit = 5
+	}
+
+	modifier_subject = {
+		naval_forcelimit = -5
+	}
+}
+
+dominion_upgrade_taxes = {
+	can_upgrade_trigger = {
+		is_dominion_or_similar_subject = yes
+		is_in_deficit = no
+		FROM = {
+			adm_power = 25
+		}
+	}
+
+	cost = 100
+
+	effect = {
+		add_liberty_desire = 10
+		FROM = {
+			add_adm_power = -25
+		}
+	}
+
+	modifier_overlord = {
+		global_tax_income = 2
+	}
+
+	modifier_subject = {
+		global_tax_modifier = 0.1
+	}
+}
+
+dominion_upgrade_army = {
+	can_upgrade_trigger = {
+		is_dominion_or_similar_subject = yes
+		FROM = {
+			mil_power = 25
+		}
+	}
+
+	cost = 100
+
+	effect = {
+		FROM = {
+			add_mil_power = -25
+		}
+	}
+
+	modifier_overlord = {
+		land_maintenance_modifier = 0.05
+	}
+
+	modifier_subject = {
+		land_morale = 0.05
+	}
+}
+
+dominion_upgrade_navy = {
+	can_upgrade_trigger = {
+		is_dominion_or_similar_subject = yes
+		FROM = {
+			dip_power = 25
+		}
+	}
+
+	cost = 100
+
+	effect = {
+		FROM = {
+			add_dip_power = -25
+		}
+	}
+
+	modifier_overlord = {
+		naval_maintenance_modifier = 0.05
+	}
+
+	modifier_subject = {
+		naval_morale = 0.05
+	}
+}
+
+dominion_upgrade_trade = {
+	can_upgrade_trigger = {
+		is_dominion_or_similar_subject = yes
+		FROM = {
+			adm_power = 25
+		}
+	}
+
+	cost = 100
+
+	effect = {
+		FROM = {
+			add_adm_power = -25
+		}
+	}
+
+	modifier_overlord = {
+		global_foreign_trade_power = 0.05
+	}
+
+	modifier_subject = {
+		global_own_trade_power = 0.05
+	}
+}
+
+dominion_upgrade_construction = {
+	can_upgrade_trigger = {
+		is_dominion_or_similar_subject = yes
+		FROM = {
+			adm_power = 25
+		}
+	}
+
+	cost = 500
+
+	effect = {
+		add_liberty_desire = -10
+		FROM = {
+			add_adm_power = 25
+		}
+	}
+
+	modifier_subject = {
+		build_cost = -0.1
+	}
+}

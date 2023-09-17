@@ -1,0 +1,6152 @@
+namespace = ate_general_events
+
+country_event = {
+	id = ate_general_events.1
+	title = ate_general_events.EVTNAME1
+	desc = ate_general_events.EVTDESC1
+	picture = ADVISOR_eventPicture
+
+	trigger = {
+		ate_advisor_loyal_friend_adm = 3
+		NOT = { has_country_flag = ate_advisor_loyal_friend_adm }
+	}
+
+	mean_time_to_happen = {
+		months = 300
+
+		modifier = {
+			factor = 0.9
+			innovativeness_ideas = 4
+		}
+		modifier = {
+			factor = 0.9
+			innovativeness_ideas = 6
+		}
+		modifier = {
+			factor = 1.1
+			NOT = { innovativeness_ideas = 4 }
+		}
+		modifier = {
+			factor = 1.1
+			NOT = { innovativeness_ideas = 2 }
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			set_country_flag = ate_advisor_loyal_friend_adm
+		}
+	}
+
+	option = {
+		name = ate_general_events1.EVTOPT1
+
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				stability = 2
+			}
+		}
+
+		add_meritocracy_effect = yes
+		add_stability_or_adm_power = yes
+		add_country_modifier = {
+			name = ate_advisor_loyal_friend_adm_modifier
+			duration = 3650
+		}
+	}
+
+	option = {
+		name = ate_general_events1.EVTOPT2
+
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				NOT = { stability = 1 }
+			}
+		}
+
+		add_meritocracy_effect = yes
+		add_prestige = 50
+		add_country_modifier = {
+			name = ate_advisor_loyal_friend_adm_modifier
+			duration = 3650
+		}
+	}
+}
+
+country_event = {
+	id = ate_general_events.2
+	title = ate_general_events.EVTNAME2
+	desc = ate_general_events.EVTDESC2
+	picture = ADVISOR_eventPicture
+
+	trigger = {
+		ate_advisor_court_physician = 3
+		NOT = { has_country_flag = ate_advisor_court_physician }
+	}
+
+	mean_time_to_happen = {
+		months = 300
+
+		modifier = {
+			factor = 0.9
+			innovativeness_ideas = 4
+		}
+		modifier = {
+			factor = 0.9
+			innovativeness_ideas = 6
+		}
+		modifier = {
+			factor = 1.1
+			NOT = { innovativeness_ideas = 4 }
+		}
+		modifier = {
+			factor = 1.1
+			NOT = { innovativeness_ideas = 2 }
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			set_country_flag = ate_advisor_court_physician
+		}
+	}
+
+	option = {
+		name = ate_general_events2.EVTOPT1
+
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				stability = 2
+			}
+		}
+
+		add_meritocracy_effect = yes
+		add_stability_or_adm_power = yes
+		add_country_modifier = {
+			name = ate_advisor_court_physician_modifier
+			duration = 3650
+		}
+	}
+
+	option = {
+		name = ate_general_events2.EVTOPT2
+
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				NOT = { stability = 1 }
+			}
+		}
+
+		add_meritocracy_effect = yes
+		add_prestige = 50
+		add_country_modifier = {
+			name = ate_advisor_court_physician_modifier
+			duration = 3650
+		}
+	}
+}
+
+country_event = {
+	id = ate_general_events.3
+	title = ate_general_events.EVTNAME3
+	desc = ate_general_events.EVTDESC3
+	picture = ADVISOR_eventPicture
+
+	trigger = {
+		ate_advisor_cardinal = 3
+		NOT = { has_country_flag = ate_advisor_cardinal }
+	}
+
+	mean_time_to_happen = {
+		months = 300
+
+		modifier = {
+			factor = 0.9
+			innovativeness_ideas = 4
+		}
+		modifier = {
+			factor = 0.9
+			innovativeness_ideas = 6
+		}
+		modifier = {
+			factor = 1.1
+			NOT = { innovativeness_ideas = 4 }
+		}
+		modifier = {
+			factor = 1.1
+			NOT = { innovativeness_ideas = 2 }
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			set_country_flag = ate_advisor_cardinal
+		}
+	}
+
+	option = {
+		name = ate_general_events3.EVTOPT1
+
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				stability = 2
+			}
+		}
+
+		add_meritocracy_effect = yes
+		add_stability_or_adm_power = yes
+		if = {
+			limit = {
+				NOT = { tag = PAP }
+				religion = catholic
+			}
+			add_papal_influence = 25
+		}
+	}
+
+	option = {
+		name = ate_general_events3.EVTOPT2
+
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				NOT = { stability = 1 }
+			}
+		}
+
+		add_meritocracy_effect = yes
+		add_prestige = 50
+		if = {
+			limit = {
+				NOT = { tag = PAP }
+				religion = catholic
+			}
+			add_papal_influence = 25
+		}
+	}
+}
+
+country_event = {
+	id = ate_general_events.4
+	title = ate_general_events.EVTNAME4
+	desc = ate_general_events.EVTDESC4
+	picture = ADVISOR_eventPicture
+
+	trigger = {
+		OR = {
+			ate_advisor_arch_bishop_catholic = 3
+			ate_advisor_arch_bishop_protestant = 3
+			ate_advisor_arch_bishop_reformed = 3
+		}
+		NOT = { has_country_flag = ate_advisor_arch_bishop }
+	}
+
+	mean_time_to_happen = {
+		months = 300
+
+		modifier = {
+			factor = 0.9
+			innovativeness_ideas = 4
+		}
+		modifier = {
+			factor = 0.9
+			innovativeness_ideas = 6
+		}
+		modifier = {
+			factor = 1.1
+			NOT = { innovativeness_ideas = 4 }
+		}
+		modifier = {
+			factor = 1.1
+			NOT = { innovativeness_ideas = 2 }
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			set_country_flag = ate_advisor_arch_bishop
+		}
+	}
+
+	option = {
+		name = ate_general_events4.EVTOPT1
+
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				stability = 2
+			}
+		}
+
+		add_meritocracy_effect = yes
+		add_stability_or_adm_power = yes
+		if = {
+			limit = {
+				NOT = { tag = PAP }
+				religion = catholic
+			}
+			add_papal_influence = 25
+		}
+		else_if = {
+			limit = {
+				OR = {
+					AND = {
+						has_dlc = "Common Sense"
+						religion = protestant
+					}
+					AND = {
+						has_dlc = "Emperor"
+						religion = hussite
+					}
+					AND = {
+						has_dlc = "Rule Britannia"
+						religion = anglican
+					}
+				}
+			}
+			add_church_power = 50
+		}
+		else_if = {
+			limit = {
+				has_dlc = "Wealth of Nations"
+				religion = reformed
+			}
+			add_fervor = 25
+		}
+	}
+
+	option = {
+		name = ate_general_events4.EVTOPT2
+
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				NOT = { stability = 1 }
+			}
+		}
+
+		add_meritocracy_effect = yes
+		add_prestige = 50
+		if = {
+			limit = {
+				NOT = { tag = PAP }
+				religion = catholic
+			}
+			add_papal_influence = 25
+		}
+		else_if = {
+			limit = {
+				OR = {
+					AND = {
+						has_dlc = "Common Sense"
+						religion = protestant
+					}
+					AND = {
+						has_dlc = "Emperor"
+						religion = hussite
+					}
+					AND = {
+						has_dlc = "Rule Britannia"
+						religion = anglican
+					}
+				}
+			}
+			add_church_power = 50
+		}
+		else_if = {
+			limit = {
+				has_dlc = "Wealth of Nations"
+				religion = reformed
+			}
+			add_fervor = 25
+		}
+	}
+}
+
+country_event = {
+	id = ate_general_events.5
+	title = ate_general_events.EVTNAME5
+	desc = ate_general_events.EVTDESC5
+	picture = ADVISOR_eventPicture
+
+	trigger = {
+		ate_advisor_tribal_chieftain = 3
+		NOT = { has_country_flag = ate_advisor_tribal_chieftain }
+	}
+
+	mean_time_to_happen = {
+		months = 300
+
+		modifier = {
+			factor = 0.9
+			innovativeness_ideas = 4
+		}
+		modifier = {
+			factor = 0.9
+			innovativeness_ideas = 6
+		}
+		modifier = {
+			factor = 1.1
+			NOT = { innovativeness_ideas = 4 }
+		}
+		modifier = {
+			factor = 1.1
+			NOT = { innovativeness_ideas = 2 }
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			set_country_flag = ate_advisor_tribal_chieftain
+		}
+	}
+
+	option = {
+		name = ate_general_events5.EVTOPT1
+
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				stability = 2
+			}
+		}
+
+		add_meritocracy_effect = yes
+		add_stability_or_adm_power = yes
+		add_estate_loyalty = {
+			estate = estate_nomadic_tribes
+			loyalty = 10
+		}
+	}
+
+	option = {
+		name = ate_general_events5.EVTOPT2
+
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				NOT = { stability = 1 }
+			}
+		}
+
+		add_meritocracy_effect = yes
+		add_prestige = 50
+		add_estate_loyalty = {
+			estate = estate_nomadic_tribes
+			loyalty = 10
+		}
+	}
+}
+
+country_event = {
+	id = ate_general_events.6
+	title = ate_general_events.EVTNAME6
+	desc = ate_general_events.EVTDESC6
+	picture = ADVISOR_eventPicture
+
+	trigger = {
+		ate_advisor_rajputs_warrior = 3
+		NOT = { has_country_flag = ate_advisor_rajputs_warrior }
+	}
+
+	mean_time_to_happen = {
+		months = 300
+
+		modifier = {
+			factor = 0.9
+			innovativeness_ideas = 4
+		}
+		modifier = {
+			factor = 0.9
+			innovativeness_ideas = 6
+		}
+		modifier = {
+			factor = 1.1
+			NOT = { innovativeness_ideas = 4 }
+		}
+		modifier = {
+			factor = 1.1
+			NOT = { innovativeness_ideas = 2 }
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			set_country_flag = ate_advisor_rajputs_warrior
+		}
+	}
+
+	option = {
+		name = ate_general_events6.EVTOPT1
+
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				stability = 2
+			}
+		}
+
+		add_meritocracy_effect = yes
+		add_stability_or_adm_power = yes
+		add_estate_loyalty = {
+			estate = estate_rajput
+			loyalty = 10
+		}
+	}
+
+	option = {
+		name = ate_general_events6.EVTOPT2
+
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				NOT = { stability = 1 }
+			}
+		}
+
+		add_meritocracy_effect = yes
+		add_prestige = 50
+		add_estate_loyalty = {
+			estate = estate_rajput
+			loyalty = 10
+		}
+	}
+}
+
+country_event = {
+	id = ate_general_events.7
+	title = ate_general_events.EVTNAME7
+	desc = ate_general_events.EVTDESC7
+	picture = ADVISOR_eventPicture
+
+	trigger = {
+		ate_advisor_feudal_tax_collector = 3
+		NOT = { has_country_flag = ate_advisor_feudal_tax_collector }
+	}
+
+	mean_time_to_happen = {
+		months = 300
+
+		modifier = {
+			factor = 0.9
+			innovativeness_ideas = 4
+		}
+		modifier = {
+			factor = 0.9
+			innovativeness_ideas = 6
+		}
+		modifier = {
+			factor = 1.1
+			NOT = { innovativeness_ideas = 4 }
+		}
+		modifier = {
+			factor = 1.1
+			NOT = { innovativeness_ideas = 2 }
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			set_country_flag = ate_advisor_feudal_tax_collector
+		}
+	}
+
+	option = {
+		name = ate_general_events7.EVTOPT1
+
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				stability = 2
+			}
+		}
+
+		add_meritocracy_effect = yes
+		add_stability_or_adm_power = yes
+		add_years_of_income = 0.5
+	}
+
+	option = {
+		name = ate_general_events7.EVTOPT2
+
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				NOT = { stability = 1 }
+			}
+		}
+
+		add_meritocracy_effect = yes
+		add_prestige = 50
+		add_years_of_income = 0.5
+	}
+}
+
+country_event = {
+	id = ate_general_events.8
+	title = ate_general_events.EVTNAME8
+	desc = ate_general_events.EVTDESC8
+	picture = ADVISOR_eventPicture
+
+	trigger = {
+		ate_advisor_architect = 3
+		NOT = { has_country_flag = ate_advisor_architect }
+	}
+
+	mean_time_to_happen = {
+		months = 300
+
+		modifier = {
+			factor = 0.9
+			innovativeness_ideas = 4
+		}
+		modifier = {
+			factor = 0.9
+			innovativeness_ideas = 6
+		}
+		modifier = {
+			factor = 1.1
+			NOT = { innovativeness_ideas = 4 }
+		}
+		modifier = {
+			factor = 1.1
+			NOT = { innovativeness_ideas = 2 }
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			set_country_flag = ate_advisor_architect
+		}
+	}
+
+	option = {
+		name = ate_general_events8.EVTOPT1
+
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				stability = 2
+			}
+		}
+
+		add_meritocracy_effect = yes
+		add_stability_or_adm_power = yes
+		add_country_modifier = {
+			name = ate_advisor_architect_modifier
+			duration = 3650
+		}
+	}
+
+	option = {
+		name = ate_general_events8.EVTOPT2
+
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				NOT = { stability = 1 }
+			}
+		}
+
+		add_meritocracy_effect = yes
+		add_prestige = 50
+		add_country_modifier = {
+			name = ate_advisor_architect_modifier
+			duration = 3650
+		}
+	}
+}
+
+country_event = {
+	id = ate_general_events.9
+	title = ate_general_events.EVTNAME9
+	desc = ate_general_events.EVTDESC9
+	picture = ADVISOR_eventPicture
+
+	trigger = {
+		ate_advisor_great_administrator = 3
+		NOT = { has_country_flag = ate_advisor_great_administrator }
+	}
+
+	mean_time_to_happen = {
+		months = 300
+
+		modifier = {
+			factor = 0.9
+			innovativeness_ideas = 4
+		}
+		modifier = {
+			factor = 0.9
+			innovativeness_ideas = 6
+		}
+		modifier = {
+			factor = 1.1
+			NOT = { innovativeness_ideas = 4 }
+		}
+		modifier = {
+			factor = 1.1
+			NOT = { innovativeness_ideas = 2 }
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			set_country_flag = ate_advisor_great_administrator
+		}
+	}
+
+	option = {
+		name = ate_general_events9.EVTOPT1
+
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				stability = 2
+			}
+		}
+
+		add_meritocracy_effect = yes
+		if = {
+			limit = {
+				stability = 3
+			}
+			add_adm_power = 100
+		}
+		else = {
+			add_adm_power = 50
+			add_stability = 1
+		}
+	}
+
+	option = {
+		name = ate_general_events9.EVTOPT2
+
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				NOT = { stability = 1 }
+			}
+		}
+
+		add_meritocracy_effect = yes
+		add_prestige = 50
+		add_adm_power = 50
+	}
+}
+
+country_event = {
+	id = ate_general_events.10
+	title = ate_general_events.EVTNAME10
+	desc = ate_general_events.EVTDESC10
+	picture = ADVISOR_eventPicture
+
+	trigger = {
+		ate_advisor_steward = 3
+		NOT = { has_country_flag = ate_advisor_steward }
+	}
+
+	mean_time_to_happen = {
+		months = 300
+
+		modifier = {
+			factor = 0.9
+			innovativeness_ideas = 4
+		}
+		modifier = {
+			factor = 0.9
+			innovativeness_ideas = 6
+		}
+		modifier = {
+			factor = 1.1
+			NOT = { innovativeness_ideas = 4 }
+		}
+		modifier = {
+			factor = 1.1
+			NOT = { innovativeness_ideas = 2 }
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			set_country_flag = ate_advisor_steward
+		}
+	}
+
+	option = {
+		name = ate_general_events10.EVTOPT1
+
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				stability = 2
+			}
+		}
+
+		add_meritocracy_effect = yes
+		add_stability_or_adm_power = yes
+	}
+
+	option = {
+		name = ate_general_events10.EVTOPT2
+
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				NOT = { stability = 1 }
+			}
+		}
+
+		add_meritocracy_effect = yes
+		add_prestige = 50
+	}
+}
+
+country_event = {
+	id = ate_general_events.11
+	title = ate_general_events.EVTNAME11
+	desc = ate_general_events.EVTDESC11
+	picture = ADVISOR_eventPicture
+
+	trigger = {
+		ate_advisor_administrative_genius = 3
+		NOT = { has_country_flag = ate_advisor_administrative_genius }
+	}
+
+	mean_time_to_happen = {
+		months = 300
+
+		modifier = {
+			factor = 0.9
+			innovativeness_ideas = 4
+		}
+		modifier = {
+			factor = 0.9
+			innovativeness_ideas = 6
+		}
+		modifier = {
+			factor = 1.1
+			NOT = { innovativeness_ideas = 4 }
+		}
+		modifier = {
+			factor = 1.1
+			NOT = { innovativeness_ideas = 2 }
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			set_country_flag = ate_advisor_administrative_genius
+		}
+	}
+
+	option = {
+		name = ate_general_events11.EVTOPT1
+
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				stability = 2
+			}
+		}
+
+		add_meritocracy_effect = yes
+		add_stability_or_adm_power = yes
+		add_country_modifier = {
+			name = ate_advisor_administrative_genius_modifier
+			duration = 3650
+		}
+	}
+
+	option = {
+		name = ate_general_events11.EVTOPT2
+
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				NOT = { stability = 1 }
+			}
+		}
+
+		add_meritocracy_effect = yes
+		add_prestige = 50
+		add_country_modifier = {
+			name = ate_advisor_administrative_genius_modifier
+			duration = 3650
+		}
+	}
+}
+
+country_event = {
+	id = ate_general_events.12
+	title = ate_general_events.EVTNAME12
+	desc = ate_general_events.EVTDESC12
+	picture = ADVISOR_eventPicture
+
+	trigger = {
+		ate_advisor_anti_corruption_officer = 3
+		NOT = { has_country_flag = ate_advisor_anti_corruption_officer }
+	}
+
+	mean_time_to_happen = {
+		months = 300
+
+		modifier = {
+			factor = 0.9
+			innovativeness_ideas = 4
+		}
+		modifier = {
+			factor = 0.9
+			innovativeness_ideas = 6
+		}
+		modifier = {
+			factor = 1.1
+			NOT = { innovativeness_ideas = 4 }
+		}
+		modifier = {
+			factor = 1.1
+			NOT = { innovativeness_ideas = 2 }
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			set_country_flag = ate_advisor_anti_corruption_officer
+		}
+	}
+
+	option = {
+		name = ate_general_events12.EVTOPT1
+
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				stability = 2
+			}
+		}
+
+		add_meritocracy_effect = yes
+		add_stability_or_adm_power = yes
+		add_corruption = -2
+	}
+
+	option = {
+		name = ate_general_events12.EVTOPT2
+
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				NOT = { stability = 1 }
+			}
+		}
+
+		add_meritocracy_effect = yes
+		add_prestige = 50
+		add_corruption = -2
+	}
+}
+
+country_event = {
+	id = ate_general_events.13
+	title = ate_general_events.EVTNAME13
+	desc = ate_general_events.EVTDESC13
+	picture = ADVISOR_eventPicture
+
+	trigger = {
+		OR = {
+			ate_advisor_first_minister_monarchy = 3
+			ate_advisor_first_minister_theocracy = 3
+			ate_advisor_first_minister_republic = 3
+		}
+		NOT = { has_country_flag = ate_advisor_first_minister }
+	}
+
+	mean_time_to_happen = {
+		months = 300
+
+		modifier = {
+			factor = 0.9
+			innovativeness_ideas = 4
+		}
+		modifier = {
+			factor = 0.9
+			innovativeness_ideas = 6
+		}
+		modifier = {
+			factor = 1.1
+			NOT = { innovativeness_ideas = 4 }
+		}
+		modifier = {
+			factor = 1.1
+			NOT = { innovativeness_ideas = 2 }
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			set_country_flag = ate_advisor_first_minister
+		}
+	}
+
+	option = {
+		name = ate_general_events13.EVTOPT1
+
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				stability = 2
+			}
+		}
+
+		add_meritocracy_effect = yes
+		add_stability_or_adm_power = yes
+		add_legitimacy_equivalent = { amount = 20 republican_tradition = 10 }
+	}
+
+	option = {
+		name = ate_general_events13.EVTOPT2
+
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				NOT = { stability = 1 }
+			}
+		}
+
+		add_meritocracy_effect = yes
+		add_prestige = 50
+		add_legitimacy_equivalent = { amount = 20 republican_tradition = 10 }
+	}
+}
+
+country_event = {
+	id = ate_general_events.14
+	title = ate_general_events.EVTNAME14
+	desc = ate_general_events.EVTDESC14
+	picture = ADVISOR_eventPicture
+
+	trigger = {
+		ate_advisor_gentleman = 3
+		NOT = { has_country_flag = ate_advisor_gentleman }
+	}
+
+	mean_time_to_happen = {
+		months = 300
+
+		modifier = {
+			factor = 0.9
+			innovativeness_ideas = 4
+		}
+		modifier = {
+			factor = 0.9
+			innovativeness_ideas = 6
+		}
+		modifier = {
+			factor = 1.1
+			NOT = { innovativeness_ideas = 4 }
+		}
+		modifier = {
+			factor = 1.1
+			NOT = { innovativeness_ideas = 2 }
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			set_country_flag = ate_advisor_gentleman
+		}
+	}
+
+	option = {
+		name = ate_general_events14.EVTOPT1
+
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				stability = 2
+			}
+		}
+
+		add_meritocracy_effect = yes
+		add_stability_or_adm_power = yes
+		add_estate_loyalty = {
+			estate = estate_nobles
+			loyalty = 10
+		}
+	}
+
+	option = {
+		name = ate_general_events14.EVTOPT2
+
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				NOT = { stability = 1 }
+			}
+		}
+
+		add_meritocracy_effect = yes
+		add_prestige = 50
+		add_estate_loyalty = {
+			estate = estate_nobles
+			loyalty = 10
+		}
+	}
+}
+
+country_event = {
+	id = ate_general_events.15
+	title = ate_general_events.EVTNAME15
+	desc = ate_general_events.EVTDESC15
+	picture = ADVISOR_eventPicture
+
+	trigger = {
+		ate_advisor_cossack = 3
+		NOT = { has_country_flag = ate_advisor_cossack }
+	}
+
+	mean_time_to_happen = {
+		months = 300
+
+		modifier = {
+			factor = 0.9
+			innovativeness_ideas = 4
+		}
+		modifier = {
+			factor = 0.9
+			innovativeness_ideas = 6
+		}
+		modifier = {
+			factor = 1.1
+			NOT = { innovativeness_ideas = 4 }
+		}
+		modifier = {
+			factor = 1.1
+			NOT = { innovativeness_ideas = 2 }
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			set_country_flag = ate_advisor_cossack
+		}
+	}
+
+	option = {
+		name = ate_general_events15.EVTOPT1
+
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				stability = 2
+			}
+		}
+
+		add_meritocracy_effect = yes
+		add_stability_or_adm_power = yes
+		add_estate_loyalty = {
+			estate = estate_cossacks
+			loyalty = 10
+		}
+	}
+
+	option = {
+		name = ate_general_events15.EVTOPT2
+
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				NOT = { stability = 1 }
+			}
+		}
+
+		add_meritocracy_effect = yes
+		add_prestige = 50
+		add_estate_loyalty = {
+			estate = estate_cossacks
+			loyalty = 10
+		}
+	}
+}
+
+country_event = {
+	id = ate_general_events.16
+	title = ate_general_events.EVTNAME16
+	desc = ate_general_events.EVTDESC16
+	picture = ADVISOR_eventPicture
+
+	trigger = {
+		ate_advisor_state_administrator = 3
+		NOT = { has_country_flag = ate_advisor_state_administrator }
+	}
+
+	mean_time_to_happen = {
+		months = 300
+
+		modifier = {
+			factor = 0.9
+			innovativeness_ideas = 4
+		}
+		modifier = {
+			factor = 0.9
+			innovativeness_ideas = 6
+		}
+		modifier = {
+			factor = 1.1
+			NOT = { innovativeness_ideas = 4 }
+		}
+		modifier = {
+			factor = 1.1
+			NOT = { innovativeness_ideas = 2 }
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			set_country_flag = ate_advisor_state_administrator
+		}
+	}
+
+	option = {
+		name = ate_general_events16.EVTOPT1
+
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				stability = 2
+			}
+		}
+
+		add_meritocracy_effect = yes
+		add_stability_or_adm_power = yes
+	}
+
+	option = {
+		name = ate_general_events16.EVTOPT2
+
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				NOT = { stability = 1 }
+			}
+		}
+
+		add_meritocracy_effect = yes
+		add_prestige = 50
+	}
+}
+
+country_event = {
+	id = ate_general_events.17
+	title = ate_general_events.EVTNAME17
+	desc = ate_general_events.EVTDESC17
+	picture = ADVISOR_eventPicture
+
+	trigger = {
+		ate_advisor_gold_digger = 3
+		NOT = { has_country_flag = ate_advisor_gold_digger }
+	}
+
+	mean_time_to_happen = {
+		months = 300
+
+		modifier = {
+			factor = 0.9
+			innovativeness_ideas = 4
+		}
+		modifier = {
+			factor = 0.9
+			innovativeness_ideas = 6
+		}
+		modifier = {
+			factor = 1.1
+			NOT = { innovativeness_ideas = 4 }
+		}
+		modifier = {
+			factor = 1.1
+			NOT = { innovativeness_ideas = 2 }
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			set_country_flag = ate_advisor_gold_digger
+		}
+	}
+
+	option = {
+		name = ate_general_events17.EVTOPT1
+
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				stability = 2
+			}
+		}
+
+		add_meritocracy_effect = yes
+		add_stability_or_adm_power = yes
+		add_country_modifier = {
+			name = ate_advisor_gold_digger_modifier
+			duration = 3650
+		}
+	}
+
+	option = {
+		name = ate_general_events17.EVTOPT2
+
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				NOT = { stability = 1 }
+			}
+		}
+
+		add_meritocracy_effect = yes
+		add_prestige = 50
+		add_country_modifier = {
+			name = ate_advisor_gold_digger_modifier
+			duration = 3650
+		}
+	}
+}
+
+country_event = {
+	id = ate_general_events.18
+	title = ate_general_events.EVTNAME18
+	desc = ate_general_events.EVTDESC18
+	picture = ADVISOR_eventPicture
+
+	trigger = {
+		ate_advisor_free_thinker = 3
+		NOT = { has_country_flag = ate_advisor_free_thinker }
+	}
+
+	mean_time_to_happen = {
+		months = 300
+
+		modifier = {
+			factor = 0.9
+			innovativeness_ideas = 4
+		}
+		modifier = {
+			factor = 0.9
+			innovativeness_ideas = 6
+		}
+		modifier = {
+			factor = 1.1
+			NOT = { innovativeness_ideas = 4 }
+		}
+		modifier = {
+			factor = 1.1
+			NOT = { innovativeness_ideas = 2 }
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			set_country_flag = ate_advisor_free_thinker
+		}
+	}
+
+	option = {
+		name = ate_general_events18.EVTOPT1
+
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				stability = 2
+			}
+		}
+
+		add_meritocracy_effect = yes
+		add_stability_or_adm_power = yes
+		add_country_modifier = {
+			name = ate_advisor_free_thinker_modifier
+			duration = 3650
+		}
+	}
+
+	option = {
+		name = ate_general_events18.EVTOPT2
+
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				NOT = { stability = 1 }
+			}
+		}
+
+		add_meritocracy_effect = yes
+		add_prestige = 50
+		add_country_modifier = {
+			name = ate_advisor_free_thinker_modifier
+			duration = 3650
+		}
+	}
+}
+
+country_event = {
+	id = ate_general_events.19
+	title = ate_general_events.EVTNAME19
+	desc = ate_general_events.EVTDESC19
+	picture = ADVISOR_eventPicture
+
+	trigger = {
+		ate_advisor_revolutionist = 3
+		NOT = { has_country_flag = ate_advisor_revolutionist }
+	}
+
+	mean_time_to_happen = {
+		months = 300
+
+		modifier = {
+			factor = 0.9
+			innovativeness_ideas = 4
+		}
+		modifier = {
+			factor = 0.9
+			innovativeness_ideas = 6
+		}
+		modifier = {
+			factor = 1.1
+			NOT = { innovativeness_ideas = 4 }
+		}
+		modifier = {
+			factor = 1.1
+			NOT = { innovativeness_ideas = 2 }
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			set_country_flag = ate_advisor_revolutionist
+		}
+	}
+
+	option = {
+		name = ate_general_events19.EVTOPT1
+
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				stability = 2
+			}
+		}
+
+		add_meritocracy_effect = yes
+		add_stability_or_adm_power = yes
+		add_revolutionary_zeal = 20
+	}
+
+	option = {
+		name = ate_general_events19.EVTOPT2
+
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				NOT = { stability = 1 }
+			}
+		}
+
+		add_meritocracy_effect = yes
+		add_prestige = 50
+		add_revolutionary_zeal = 20
+	}
+}
+
+country_event = {
+	id = ate_general_events.20
+	title = ate_general_events.EVTNAME20
+	desc = ate_general_events.EVTDESC20
+	picture = ADVISOR_eventPicture
+
+	trigger = {
+		ate_advisor_reformist = 3
+		NOT = { has_country_flag = ate_advisor_reformist }
+	}
+
+	mean_time_to_happen = {
+		months = 300
+
+		modifier = {
+			factor = 0.9
+			innovativeness_ideas = 4
+		}
+		modifier = {
+			factor = 0.9
+			innovativeness_ideas = 6
+		}
+		modifier = {
+			factor = 1.1
+			NOT = { innovativeness_ideas = 4 }
+		}
+		modifier = {
+			factor = 1.1
+			NOT = { innovativeness_ideas = 2 }
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			set_country_flag = ate_advisor_reformist
+		}
+	}
+
+	option = {
+		name = ate_general_events20.EVTOPT1
+
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				stability = 2
+			}
+		}
+
+		add_meritocracy_effect = yes
+		add_stability_or_adm_power = yes
+		change_government_reform_progress = 50
+	}
+
+	option = {
+		name = ate_general_events20.EVTOPT2
+
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				NOT = { stability = 1 }
+			}
+		}
+
+		add_meritocracy_effect = yes
+		add_prestige = 50
+		change_government_reform_progress = 50
+	}
+}
+
+country_event = {
+	id = ate_general_events.21
+	title = ate_general_events.EVTNAME21
+	desc = ate_general_events.EVTDESC21
+	picture = ADVISOR_eventPicture
+
+	trigger = {
+		ate_advisor_state_theorist = 3
+		NOT = { has_country_flag = ate_advisor_state_theorist }
+	}
+
+	mean_time_to_happen = {
+		months = 300
+
+		modifier = {
+			factor = 0.9
+			innovativeness_ideas = 4
+		}
+		modifier = {
+			factor = 0.9
+			innovativeness_ideas = 6
+		}
+		modifier = {
+			factor = 1.1
+			NOT = { innovativeness_ideas = 4 }
+		}
+		modifier = {
+			factor = 1.1
+			NOT = { innovativeness_ideas = 2 }
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			set_country_flag = ate_advisor_state_theorist
+		}
+	}
+
+	option = {
+		name = ate_general_events21.EVTOPT1
+
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				stability = 2
+			}
+		}
+
+		add_meritocracy_effect = yes
+		add_stability_or_adm_power = yes
+		add_absolutism = 15
+	}
+
+	option = {
+		name = ate_general_events21.EVTOPT2
+
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				NOT = { stability = 1 }
+			}
+		}
+
+		add_meritocracy_effect = yes
+		add_prestige = 50
+		add_absolutism = 15
+	}
+}
+
+country_event = {
+	id = ate_general_events.22
+	title = ate_general_events.EVTNAME22
+	desc = ate_general_events.EVTDESC22
+	picture = ADVISOR_eventPicture
+
+	trigger = {
+		ate_advisor_visionary = 3
+		NOT = { has_country_flag = ate_advisor_visionary }
+	}
+
+	mean_time_to_happen = {
+		months = 300
+
+		modifier = {
+			factor = 0.9
+			innovativeness_ideas = 4
+		}
+		modifier = {
+			factor = 0.9
+			innovativeness_ideas = 6
+		}
+		modifier = {
+			factor = 1.1
+			NOT = { innovativeness_ideas = 4 }
+		}
+		modifier = {
+			factor = 1.1
+			NOT = { innovativeness_ideas = 2 }
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			set_country_flag = ate_advisor_visionary
+		}
+	}
+
+	option = {
+		name = ate_general_events22.EVTOPT1
+
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				stability = 2
+			}
+		}
+
+		add_meritocracy_effect = yes
+		add_stability_or_adm_power = yes
+	}
+
+	option = {
+		name = ate_general_events22.EVTOPT2
+
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				NOT = { stability = 1 }
+			}
+		}
+
+		add_meritocracy_effect = yes
+		add_prestige = 50
+	}
+}
+
+country_event = {
+	id = ate_general_events.23
+	title = ate_general_events.EVTNAME23
+	desc = ate_general_events.EVTDESC23
+	picture = ADVISOR_eventPicture
+
+	trigger = {
+		ate_advisor_great_philosopher = 3
+		NOT = { has_country_flag = ate_advisor_great_philosopher }
+	}
+
+	mean_time_to_happen = {
+		months = 300
+
+		modifier = {
+			factor = 0.9
+			innovativeness_ideas = 4
+		}
+		modifier = {
+			factor = 0.9
+			innovativeness_ideas = 6
+		}
+		modifier = {
+			factor = 1.1
+			NOT = { innovativeness_ideas = 4 }
+		}
+		modifier = {
+			factor = 1.1
+			NOT = { innovativeness_ideas = 2 }
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			set_country_flag = ate_advisor_great_philosopher
+		}
+	}
+
+	option = {
+		name = ate_general_events23.EVTOPT1
+
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				stability = 2
+			}
+		}
+
+		add_meritocracy_effect = yes
+		add_stability_or_adm_power = yes
+		if = {
+			limit = {
+				harmonization_progress = 1
+			}
+			add_harmonization_progress = 15
+		}
+		else = {
+			add_harmony = 10
+		}
+	}
+
+	option = {
+		name = ate_general_events23.EVTOPT2
+
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				NOT = { stability = 1 }
+			}
+		}
+
+		add_meritocracy_effect = yes
+		add_prestige = 50
+		if = {
+			limit = {
+				harmonization_progress = 1
+			}
+			add_harmonization_progress = 15
+		}
+		else = {
+			add_harmony = 10
+		}
+	}
+}
+
+country_event = {
+	id = ate_general_events.24
+	title = ate_general_events.EVTNAME24
+	desc = ate_general_events.EVTDESC24
+	picture = ADVISOR_eventPicture
+
+	trigger = {
+		ate_advisor_arch_chamberlain = 3
+		NOT = { has_country_flag = ate_advisor_arch_chamberlain }
+	}
+
+	mean_time_to_happen = {
+		months = 300
+
+		modifier = {
+			factor = 0.9
+			innovativeness_ideas = 4
+		}
+		modifier = {
+			factor = 0.9
+			innovativeness_ideas = 6
+		}
+		modifier = {
+			factor = 1.1
+			NOT = { innovativeness_ideas = 4 }
+		}
+		modifier = {
+			factor = 1.1
+			NOT = { innovativeness_ideas = 2 }
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			set_country_flag = ate_advisor_arch_chamberlain
+		}
+	}
+
+	option = {
+		name = ate_general_events24.EVTOPT1
+
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				stability = 2
+			}
+		}
+
+		add_meritocracy_effect = yes
+		add_stability_or_adm_power = yes
+		add_imperial_influence = 5
+	}
+
+	option = {
+		name = ate_general_events24.EVTOPT2
+
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				NOT = { stability = 1 }
+			}
+		}
+
+		add_meritocracy_effect = yes
+		add_prestige = 50
+		add_imperial_influence = 5
+	}
+}
+
+country_event = {
+	id = ate_general_events.25
+	title = ate_general_events.EVTNAME25
+	desc = ate_general_events.EVTDESC25
+	picture = ADVISOR_eventPicture
+
+	trigger = {
+		ate_advisor_monk = 3
+		NOT = { has_country_flag = ate_advisor_monk }
+	}
+
+	mean_time_to_happen = {
+		months = 300
+
+		modifier = {
+			factor = 0.9
+			innovativeness_ideas = 4
+		}
+		modifier = {
+			factor = 0.9
+			innovativeness_ideas = 6
+		}
+		modifier = {
+			factor = 1.1
+			NOT = { innovativeness_ideas = 4 }
+		}
+		modifier = {
+			factor = 1.1
+			NOT = { innovativeness_ideas = 2 }
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			set_country_flag = ate_advisor_monk
+		}
+	}
+
+	option = {
+		name = ate_general_events25.EVTOPT1
+
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				stability = 2
+			}
+		}
+
+		add_meritocracy_effect = yes
+		add_stability_or_adm_power = yes
+		add_estate_loyalty = {
+			estate = estate_church
+			loyalty = 10
+		}
+	}
+
+	option = {
+		name = ate_general_events25.EVTOPT2
+
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				NOT = { stability = 1 }
+			}
+		}
+
+		add_meritocracy_effect = yes
+		add_prestige = 50
+		add_estate_loyalty = {
+			estate = estate_church
+			loyalty = 10
+		}
+	}
+}
+
+country_event = {
+	id = ate_general_events.26
+	title = ate_general_events.EVTNAME26
+	desc = ate_general_events.EVTDESC26
+	picture = ADVISOR_eventPicture
+
+	trigger = {
+		ate_advisor_brahmins_preacher = 3
+		NOT = { has_country_flag = ate_advisor_brahmins_preacher }
+	}
+
+	mean_time_to_happen = {
+		months = 300
+
+		modifier = {
+			factor = 0.9
+			innovativeness_ideas = 4
+		}
+		modifier = {
+			factor = 0.9
+			innovativeness_ideas = 6
+		}
+		modifier = {
+			factor = 1.1
+			NOT = { innovativeness_ideas = 4 }
+		}
+		modifier = {
+			factor = 1.1
+			NOT = { innovativeness_ideas = 2 }
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			set_country_flag = ate_advisor_brahmins_preacher
+		}
+	}
+
+	option = {
+		name = ate_general_events26.EVTOPT1
+
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				stability = 2
+			}
+		}
+
+		add_meritocracy_effect = yes
+		add_stability_or_adm_power = yes
+		add_estate_loyalty = {
+			estate = estate_brahmins
+			loyalty = 10
+		}
+	}
+
+	option = {
+		name = ate_general_events26.EVTOPT2
+
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				NOT = { stability = 1 }
+			}
+		}
+
+		add_meritocracy_effect = yes
+		add_prestige = 50
+		add_estate_loyalty = {
+			estate = estate_brahmins
+			loyalty = 10
+		}
+	}
+}
+
+country_event = {
+	id = ate_general_events.27
+	title = ate_general_events.EVTNAME27
+	desc = ate_general_events.EVTDESC27
+	picture = ADVISOR_eventPicture
+
+	trigger = {
+		ate_advisor_dhimmi_scholar = 3
+		NOT = { has_country_flag = ate_advisor_dhimmi_scholar }
+	}
+
+	mean_time_to_happen = {
+		months = 300
+
+		modifier = {
+			factor = 0.9
+			innovativeness_ideas = 4
+		}
+		modifier = {
+			factor = 0.9
+			innovativeness_ideas = 6
+		}
+		modifier = {
+			factor = 1.1
+			NOT = { innovativeness_ideas = 4 }
+		}
+		modifier = {
+			factor = 1.1
+			NOT = { innovativeness_ideas = 2 }
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			set_country_flag = ate_advisor_dhimmi_scholar
+		}
+	}
+
+	option = {
+		name = ate_general_events27.EVTOPT1
+
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				stability = 2
+			}
+		}
+
+		add_meritocracy_effect = yes
+		add_stability_or_adm_power = yes
+		add_estate_loyalty = {
+			estate = estate_dhimmi
+			loyalty = 10
+		}
+	}
+
+	option = {
+		name = ate_general_events27.EVTOPT2
+
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				NOT = { stability = 1 }
+			}
+		}
+
+		add_meritocracy_effect = yes
+		add_prestige = 50
+		add_estate_loyalty = {
+			estate = estate_dhimmi
+			loyalty = 10
+		}
+	}
+}
+
+country_event = {
+	id = ate_general_events.28
+	title = ate_general_events.EVTNAME28
+	desc = ate_general_events.EVTDESC28
+	picture = ADVISOR_eventPicture
+
+	trigger = {
+		ate_advisor_jains_bureaucrat = 3
+		NOT = { has_country_flag = ate_advisor_jains_bureaucrat }
+	}
+
+	mean_time_to_happen = {
+		months = 300
+
+		modifier = {
+			factor = 0.9
+			innovativeness_ideas = 4
+		}
+		modifier = {
+			factor = 0.9
+			innovativeness_ideas = 6
+		}
+		modifier = {
+			factor = 1.1
+			NOT = { innovativeness_ideas = 4 }
+		}
+		modifier = {
+			factor = 1.1
+			NOT = { innovativeness_ideas = 2 }
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			set_country_flag = ate_advisor_jains_bureaucrat
+		}
+	}
+
+	option = {
+		name = ate_general_events28.EVTOPT1
+
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				stability = 2
+			}
+		}
+
+		add_meritocracy_effect = yes
+		add_stability_or_adm_power = yes
+		add_estate_loyalty = {
+			estate = estate_jains
+			loyalty = 10
+		}
+	}
+
+	option = {
+		name = ate_general_events28.EVTOPT2
+
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				NOT = { stability = 1 }
+			}
+		}
+
+		add_meritocracy_effect = yes
+		add_prestige = 50
+		add_estate_loyalty = {
+			estate = estate_jains
+			loyalty = 10
+		}
+	}
+}
+
+country_event = {
+	id = ate_general_events.29
+	title = ate_general_events.EVTNAME29
+	desc = ate_general_events.EVTDESC29
+	picture = ADVISOR_eventPicture
+
+	trigger = {
+		ate_advisor_missionary = 3
+		NOT = { has_country_flag = ate_advisor_missionary }
+	}
+
+	mean_time_to_happen = {
+		months = 300
+
+		modifier = {
+			factor = 0.9
+			innovativeness_ideas = 4
+		}
+		modifier = {
+			factor = 0.9
+			innovativeness_ideas = 6
+		}
+		modifier = {
+			factor = 1.1
+			NOT = { innovativeness_ideas = 4 }
+		}
+		modifier = {
+			factor = 1.1
+			NOT = { innovativeness_ideas = 2 }
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			set_country_flag = ate_advisor_missionary
+		}
+	}
+
+	option = {
+		name = ate_general_events29.EVTOPT1
+
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				stability = 2
+			}
+		}
+
+		add_meritocracy_effect = yes
+		add_stability_or_adm_power = yes
+		add_country_modifier = {
+			name = ate_advisor_missionary_modifier
+			duration = 3650
+		}
+	}
+
+	option = {
+		name = ate_general_events29.EVTOPT2
+
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				NOT = { stability = 1 }
+			}
+		}
+
+		add_meritocracy_effect = yes
+		add_prestige = 50
+		add_country_modifier = {
+			name = ate_advisor_missionary_modifier
+			duration = 3650
+		}
+	}
+}
+
+country_event = {
+	id = ate_general_events.30
+	title = ate_general_events.EVTNAME30
+	desc = ate_general_events.EVTDESC30
+	picture = ADVISOR_eventPicture
+
+	trigger = {
+		ate_advisor_imperial_bureaucrat = 3
+		NOT = { has_country_flag = ate_advisor_imperial_bureaucrat }
+	}
+
+	mean_time_to_happen = {
+		months = 300
+
+		modifier = {
+			factor = 0.9
+			innovativeness_ideas = 4
+		}
+		modifier = {
+			factor = 0.9
+			innovativeness_ideas = 6
+		}
+		modifier = {
+			factor = 1.1
+			NOT = { innovativeness_ideas = 4 }
+		}
+		modifier = {
+			factor = 1.1
+			NOT = { innovativeness_ideas = 2 }
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			set_country_flag = ate_advisor_imperial_bureaucrat
+		}
+	}
+
+	option = {
+		name = ate_general_events30.EVTOPT1
+
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				stability = 2
+			}
+		}
+
+		add_meritocracy_effect = yes
+		add_stability_or_adm_power = yes
+		add_mandate = 5
+	}
+
+	option = {
+		name = ate_general_events30.EVTOPT2
+
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				NOT = { stability = 1 }
+			}
+		}
+
+		add_meritocracy_effect = yes
+		add_prestige = 50
+		add_mandate = 5
+	}
+}
+
+country_event = {
+	id = ate_general_events.31
+	title = ate_general_events.EVTNAME31
+	desc = ate_general_events.EVTDESC31
+	picture = ADVISOR_eventPicture
+
+	trigger = {
+		ate_advisor_loyal_friend_dip = 3
+		NOT = { has_country_flag = ate_advisor_loyal_friend_dip }
+	}
+
+	mean_time_to_happen = {
+		months = 300
+
+		modifier = {
+			factor = 0.9
+			innovativeness_ideas = 4
+		}
+		modifier = {
+			factor = 0.9
+			innovativeness_ideas = 6
+		}
+		modifier = {
+			factor = 1.1
+			NOT = { innovativeness_ideas = 4 }
+		}
+		modifier = {
+			factor = 1.1
+			NOT = { innovativeness_ideas = 2 }
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			set_country_flag = ate_advisor_loyal_friend_dip
+		}
+	}
+
+	option = {
+		name = ate_general_events31.EVTOPT1
+
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				stability = 2
+			}
+		}
+
+		add_meritocracy_effect = yes
+		add_stability_or_adm_power = yes
+		add_country_modifier = {
+			name = ate_advisor_loyal_friend_dip_modifier
+			duration = 3650
+		}
+	}
+
+	option = {
+		name = ate_general_events31.EVTOPT2
+
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				NOT = { stability = 1 }
+			}
+		}
+
+		add_meritocracy_effect = yes
+		add_prestige = 50
+		add_country_modifier = {
+			name = ate_advisor_loyal_friend_dip_modifier
+			duration = 3650
+		}
+	}
+}
+
+country_event = {
+	id = ate_general_events.32
+	title = ate_general_events.EVTNAME32
+	desc = ate_general_events.EVTDESC32
+	picture = ADVISOR_eventPicture
+
+	trigger = {
+		OR = {
+			ate_advisor_concubine_female = 3
+			ate_advisor_concubine_male = 3
+		}
+		NOT = { has_country_flag = ate_advisor_concubine }
+	}
+
+	mean_time_to_happen = {
+		months = 300
+
+		modifier = {
+			factor = 0.9
+			innovativeness_ideas = 4
+		}
+		modifier = {
+			factor = 0.9
+			innovativeness_ideas = 6
+		}
+		modifier = {
+			factor = 1.1
+			NOT = { innovativeness_ideas = 4 }
+		}
+		modifier = {
+			factor = 1.1
+			NOT = { innovativeness_ideas = 2 }
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			set_country_flag = ate_advisor_concubine
+		}
+	}
+
+	option = {
+		name = ate_general_events32.EVTOPT1
+
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				stability = 2
+			}
+		}
+
+		add_meritocracy_effect = yes
+		add_stability_or_adm_power = yes
+		if = {
+			limit = {
+				has_heir = no
+			}
+			define_heir = {
+				dynasty = ROOT
+				religion = ROOT
+				culture = ROOT
+				claim = 100
+				age = 0
+				change_adm = 1
+				change_dip = 1
+				change_mil = 1
+			}
+		}
+	}
+
+	option = {
+		name = ate_general_events32.EVTOPT2
+
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				NOT = { stability = 1 }
+			}
+		}
+
+		add_meritocracy_effect = yes
+		add_prestige = 50
+		if = {
+			limit = {
+				has_heir = no
+			}
+			define_heir = {
+				dynasty = ROOT
+				religion = ROOT
+				culture = ROOT
+				claim = 100
+				age = 0
+				change_adm = 1
+				change_dip = 1
+				change_mil = 1
+			}
+		}
+	}
+}
+
+country_event = {
+	id = ate_general_events.33
+	title = ate_general_events.EVTNAME33
+	desc = ate_general_events.EVTDESC33
+	picture = ADVISOR_eventPicture
+
+	trigger = {
+		ate_advisor_maratha_warrior = 3
+		NOT = { has_country_flag = ate_advisor_maratha_warrior }
+	}
+
+	mean_time_to_happen = {
+		months = 300
+
+		modifier = {
+			factor = 0.9
+			innovativeness_ideas = 4
+		}
+		modifier = {
+			factor = 0.9
+			innovativeness_ideas = 6
+		}
+		modifier = {
+			factor = 1.1
+			NOT = { innovativeness_ideas = 4 }
+		}
+		modifier = {
+			factor = 1.1
+			NOT = { innovativeness_ideas = 2 }
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			set_country_flag = ate_advisor_maratha_warrior
+		}
+	}
+
+	option = {
+		name = ate_general_events33.EVTOPT1
+
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				stability = 2
+			}
+		}
+
+		add_meritocracy_effect = yes
+		add_stability_or_adm_power = yes
+		add_estate_loyalty = {
+			estate = estate_maratha
+			loyalty = 10
+		}
+	}
+
+	option = {
+		name = ate_general_events33.EVTOPT2
+
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				NOT = { stability = 1 }
+			}
+		}
+
+		add_meritocracy_effect = yes
+		add_prestige = 50
+		add_estate_loyalty = {
+			estate = estate_maratha
+			loyalty = 10
+		}
+	}
+}
+
+country_event = {
+	id = ate_general_events.34
+	title = ate_general_events.EVTNAME34
+	desc = ate_general_events.EVTDESC34
+	picture = ADVISOR_eventPicture
+
+	trigger = {
+		ate_advisor_sailors_recruitmaster = 3
+		NOT = { has_country_flag = ate_advisor_sailors_recruitmaster }
+	}
+
+	mean_time_to_happen = {
+		months = 300
+
+		modifier = {
+			factor = 0.9
+			innovativeness_ideas = 4
+		}
+		modifier = {
+			factor = 0.9
+			innovativeness_ideas = 6
+		}
+		modifier = {
+			factor = 1.1
+			NOT = { innovativeness_ideas = 4 }
+		}
+		modifier = {
+			factor = 1.1
+			NOT = { innovativeness_ideas = 2 }
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			set_country_flag = ate_advisor_sailors_recruitmaster
+		}
+	}
+
+	option = {
+		name = ate_general_events34.EVTOPT1
+
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				stability = 2
+			}
+		}
+
+		add_meritocracy_effect = yes
+		add_stability_or_adm_power = yes
+		add_yearly_sailors = 1
+	}
+
+	option = {
+		name = ate_general_events34.EVTOPT2
+
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				NOT = { stability = 1 }
+			}
+		}
+
+		add_meritocracy_effect = yes
+		add_prestige = 50
+		add_yearly_sailors = 1
+	}
+}
+
+country_event = {
+	id = ate_general_events.35
+	title = ate_general_events.EVTNAME35
+	desc = ate_general_events.EVTDESC35
+	picture = ADVISOR_eventPicture
+
+	trigger = {
+		ate_advisor_blockade_specialist = 3
+		NOT = { has_country_flag = ate_advisor_blockade_specialist }
+	}
+
+	mean_time_to_happen = {
+		months = 300
+
+		modifier = {
+			factor = 0.9
+			innovativeness_ideas = 4
+		}
+		modifier = {
+			factor = 0.9
+			innovativeness_ideas = 6
+		}
+		modifier = {
+			factor = 1.1
+			NOT = { innovativeness_ideas = 4 }
+		}
+		modifier = {
+			factor = 1.1
+			NOT = { innovativeness_ideas = 2 }
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			set_country_flag = ate_advisor_blockade_specialist
+		}
+	}
+
+	option = {
+		name = ate_general_events35.EVTOPT1
+
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				stability = 2
+			}
+		}
+
+		add_meritocracy_effect = yes
+		add_stability_or_adm_power = yes
+	}
+
+	option = {
+		name = ate_general_events35.EVTOPT2
+
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				NOT = { stability = 1 }
+			}
+		}
+
+		add_meritocracy_effect = yes
+		add_prestige = 50
+	}
+}
+
+country_event = {
+	id = ate_general_events.36
+	title = ate_general_events.EVTNAME36
+	desc = ate_general_events.EVTDESC36
+	picture = ADVISOR_eventPicture
+
+	trigger = {
+		ate_advisor_pirate_captain = 3
+		NOT = { has_country_flag = ate_advisor_pirate_captain }
+	}
+
+	mean_time_to_happen = {
+		months = 300
+
+		modifier = {
+			factor = 0.9
+			innovativeness_ideas = 4
+		}
+		modifier = {
+			factor = 0.9
+			innovativeness_ideas = 6
+		}
+		modifier = {
+			factor = 1.1
+			NOT = { innovativeness_ideas = 4 }
+		}
+		modifier = {
+			factor = 1.1
+			NOT = { innovativeness_ideas = 2 }
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			set_country_flag = ate_advisor_pirate_captain
+		}
+	}
+
+	option = {
+		name = ate_general_events36.EVTOPT1
+
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				stability = 2
+			}
+		}
+
+		add_meritocracy_effect = yes
+		add_stability_or_adm_power = yes
+	}
+
+	option = {
+		name = ate_general_events36.EVTOPT2
+
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				NOT = { stability = 1 }
+			}
+		}
+
+		add_meritocracy_effect = yes
+		add_prestige = 50
+	}
+}
+
+country_event = {
+	id = ate_general_events.37
+	title = ate_general_events.EVTNAME37
+	desc = ate_general_events.EVTDESC37
+	picture = ADVISOR_eventPicture
+
+	trigger = {
+		ate_advisor_great_negotiator = 3
+		NOT = { has_country_flag = ate_advisor_great_negotiator }
+	}
+
+	mean_time_to_happen = {
+		months = 300
+
+		modifier = {
+			factor = 0.9
+			innovativeness_ideas = 4
+		}
+		modifier = {
+			factor = 0.9
+			innovativeness_ideas = 6
+		}
+		modifier = {
+			factor = 1.1
+			NOT = { innovativeness_ideas = 4 }
+		}
+		modifier = {
+			factor = 1.1
+			NOT = { innovativeness_ideas = 2 }
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			set_country_flag = ate_advisor_great_negotiator
+		}
+	}
+
+	option = {
+		name = ate_general_events37.EVTOPT1
+
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				stability = 2
+			}
+		}
+
+		add_meritocracy_effect = yes
+		add_stability_or_adm_power = yes
+	}
+
+	option = {
+		name = ate_general_events37.EVTOPT2
+
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				NOT = { stability = 1 }
+			}
+		}
+
+		add_meritocracy_effect = yes
+		add_prestige = 50
+	}
+}
+
+country_event = {
+	id = ate_general_events.38
+	title = ate_general_events.EVTNAME38
+	desc = ate_general_events.EVTDESC38
+	picture = ADVISOR_eventPicture
+
+	trigger = {
+		ate_advisor_vicegerent = 3
+		NOT = { has_country_flag = ate_advisor_vicegerent }
+	}
+
+	mean_time_to_happen = {
+		months = 300
+
+		modifier = {
+			factor = 0.9
+			innovativeness_ideas = 4
+		}
+		modifier = {
+			factor = 0.9
+			innovativeness_ideas = 6
+		}
+		modifier = {
+			factor = 1.1
+			NOT = { innovativeness_ideas = 4 }
+		}
+		modifier = {
+			factor = 1.1
+			NOT = { innovativeness_ideas = 2 }
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			set_country_flag = ate_advisor_vicegerent
+		}
+	}
+
+	option = {
+		name = ate_general_events38.EVTOPT1
+
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				stability = 2
+			}
+		}
+
+		add_meritocracy_effect = yes
+		add_stability_or_adm_power = yes
+		add_country_modifier = {
+			name = ate_advisor_vicegerent_modifier
+			duration = 3650
+		}
+	}
+
+	option = {
+		name = ate_general_events38.EVTOPT2
+
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				NOT = { stability = 1 }
+			}
+		}
+
+		add_meritocracy_effect = yes
+		add_prestige = 50
+		add_country_modifier = {
+			name = ate_advisor_vicegerent_modifier
+			duration = 3650
+		}
+	}
+}
+
+country_event = {
+	id = ate_general_events.39
+	title = ate_general_events.EVTNAME39
+	desc = ate_general_events.EVTDESC39
+	picture = ADVISOR_eventPicture
+
+	trigger = {
+		ate_advisor_traveling_salesman = 3
+		NOT = { has_country_flag = ate_advisor_traveling_salesman }
+	}
+
+	mean_time_to_happen = {
+		months = 300
+
+		modifier = {
+			factor = 0.9
+			innovativeness_ideas = 4
+		}
+		modifier = {
+			factor = 0.9
+			innovativeness_ideas = 6
+		}
+		modifier = {
+			factor = 1.1
+			NOT = { innovativeness_ideas = 4 }
+		}
+		modifier = {
+			factor = 1.1
+			NOT = { innovativeness_ideas = 2 }
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			set_country_flag = ate_advisor_traveling_salesman
+		}
+	}
+
+	option = {
+		name = ate_general_events39.EVTOPT1
+
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				stability = 2
+			}
+		}
+
+		add_meritocracy_effect = yes
+		add_stability_or_adm_power = yes
+		add_mercantilism = 5
+	}
+
+	option = {
+		name = ate_general_events39.EVTOPT2
+
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				NOT = { stability = 1 }
+			}
+		}
+
+		add_meritocracy_effect = yes
+		add_prestige = 50
+		add_mercantilism = 5
+	}
+}
+
+country_event = {
+	id = ate_general_events.40
+	title = ate_general_events.EVTNAME40
+	desc = ate_general_events.EVTDESC40
+	picture = ADVISOR_eventPicture
+
+	trigger = {
+		ate_advisor_naval_traditional_tactician = 3
+		NOT = { has_country_flag = ate_advisor_naval_traditional_tactician }
+	}
+
+	mean_time_to_happen = {
+		months = 300
+
+		modifier = {
+			factor = 0.9
+			innovativeness_ideas = 4
+		}
+		modifier = {
+			factor = 0.9
+			innovativeness_ideas = 6
+		}
+		modifier = {
+			factor = 1.1
+			NOT = { innovativeness_ideas = 4 }
+		}
+		modifier = {
+			factor = 1.1
+			NOT = { innovativeness_ideas = 2 }
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			set_country_flag = ate_advisor_naval_traditional_tactician
+		}
+	}
+
+	option = {
+		name = ate_general_events40.EVTOPT1
+
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				stability = 2
+			}
+		}
+
+		add_meritocracy_effect = yes
+		add_stability_or_adm_power = yes
+		add_navy_tradition = 20
+	}
+
+	option = {
+		name = ate_general_events40.EVTOPT2
+
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				NOT = { stability = 1 }
+			}
+		}
+
+		add_meritocracy_effect = yes
+		add_prestige = 50
+		add_navy_tradition = 20
+	}
+}
+
+country_event = {
+	id = ate_general_events.41
+	title = ate_general_events.EVTNAME41
+	desc = ate_general_events.EVTDESC41
+	picture = ADVISOR_eventPicture
+
+	trigger = {
+		ate_advisor_diplomatic_genius = 3
+		NOT = { has_country_flag = ate_advisor_diplomatic_genius }
+	}
+
+	mean_time_to_happen = {
+		months = 300
+
+		modifier = {
+			factor = 0.9
+			innovativeness_ideas = 4
+		}
+		modifier = {
+			factor = 0.9
+			innovativeness_ideas = 6
+		}
+		modifier = {
+			factor = 1.1
+			NOT = { innovativeness_ideas = 4 }
+		}
+		modifier = {
+			factor = 1.1
+			NOT = { innovativeness_ideas = 2 }
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			set_country_flag = ate_advisor_diplomatic_genius
+		}
+	}
+
+	option = {
+		name = ate_general_events41.EVTOPT1
+
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				stability = 2
+			}
+		}
+
+		add_meritocracy_effect = yes
+		add_stability_or_adm_power = yes
+		add_country_modifier = {
+			name = ate_advisor_diplomatic_genius_modifier
+			duration = 3650
+		}
+	}
+
+	option = {
+		name = ate_general_events41.EVTOPT2
+
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				NOT = { stability = 1 }
+			}
+		}
+
+		add_meritocracy_effect = yes
+		add_prestige = 50
+		add_country_modifier = {
+			name = ate_advisor_diplomatic_genius_modifier
+			duration = 3650
+		}
+	}
+}
+
+country_event = {
+	id = ate_general_events.42
+	title = ate_general_events.EVTNAME42
+	desc = ate_general_events.EVTDESC42
+	picture = ADVISOR_eventPicture
+
+	trigger = {
+		ate_advisor_cultural_commissioner = 3
+		NOT = { has_country_flag = ate_advisor_cultural_commissioner }
+	}
+
+	mean_time_to_happen = {
+		months = 300
+
+		modifier = {
+			factor = 0.9
+			innovativeness_ideas = 4
+		}
+		modifier = {
+			factor = 0.9
+			innovativeness_ideas = 6
+		}
+		modifier = {
+			factor = 1.1
+			NOT = { innovativeness_ideas = 4 }
+		}
+		modifier = {
+			factor = 1.1
+			NOT = { innovativeness_ideas = 2 }
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			set_country_flag = ate_advisor_cultural_commissioner
+		}
+	}
+
+	option = {
+		name = ate_general_events42.EVTOPT1
+
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				stability = 2
+			}
+		}
+
+		add_meritocracy_effect = yes
+		add_stability_or_adm_power = yes
+		add_country_modifier = {
+			name = ate_advisor_cultural_commissioner_modifier
+			duration = 3650
+		}
+	}
+
+	option = {
+		name = ate_general_events42.EVTOPT2
+
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				NOT = { stability = 1 }
+			}
+		}
+
+		add_meritocracy_effect = yes
+		add_prestige = 50
+		add_country_modifier = {
+			name = ate_advisor_cultural_commissioner_modifier
+			duration = 3650
+		}
+	}
+}
+
+country_event = {
+	id = ate_general_events.43
+	title = ate_general_events.EVTNAME43
+	desc = ate_general_events.EVTDESC43
+	picture = ADVISOR_eventPicture
+
+	trigger = {
+		ate_advisor_herald = 3
+		NOT = { has_country_flag = ate_advisor_herald }
+	}
+
+	mean_time_to_happen = {
+		months = 300
+
+		modifier = {
+			factor = 0.9
+			innovativeness_ideas = 4
+		}
+		modifier = {
+			factor = 0.9
+			innovativeness_ideas = 6
+		}
+		modifier = {
+			factor = 1.1
+			NOT = { innovativeness_ideas = 4 }
+		}
+		modifier = {
+			factor = 1.1
+			NOT = { innovativeness_ideas = 2 }
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			set_country_flag = ate_advisor_herald
+		}
+	}
+
+	option = {
+		name = ate_general_events43.EVTOPT1
+
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				stability = 2
+			}
+		}
+
+		add_meritocracy_effect = yes
+		add_stability_or_adm_power = yes
+		add_war_exhaustion = -3
+	}
+
+	option = {
+		name = ate_general_events43.EVTOPT2
+
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				NOT = { stability = 1 }
+			}
+		}
+
+		add_meritocracy_effect = yes
+		add_prestige = 50
+		add_war_exhaustion = -3
+	}
+}
+
+country_event = {
+	id = ate_general_events.44
+	title = ate_general_events.EVTNAME44
+	desc = ate_general_events.EVTDESC44
+	picture = ADVISOR_eventPicture
+
+	trigger = {
+		ate_advisor_arch_chancellor = 3
+		NOT = { has_country_flag = ate_advisor_arch_chancellor }
+	}
+
+	mean_time_to_happen = {
+		months = 300
+
+		modifier = {
+			factor = 0.9
+			innovativeness_ideas = 4
+		}
+		modifier = {
+			factor = 0.9
+			innovativeness_ideas = 6
+		}
+		modifier = {
+			factor = 1.1
+			NOT = { innovativeness_ideas = 4 }
+		}
+		modifier = {
+			factor = 1.1
+			NOT = { innovativeness_ideas = 2 }
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			set_country_flag = ate_advisor_arch_chancellor
+		}
+	}
+
+	option = {
+		name = ate_general_events44.EVTOPT1
+
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				stability = 2
+			}
+		}
+
+		add_meritocracy_effect = yes
+		add_stability_or_adm_power = yes
+	}
+
+	option = {
+		name = ate_general_events44.EVTOPT2
+
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				NOT = { stability = 1 }
+			}
+		}
+
+		add_meritocracy_effect = yes
+		add_prestige = 50
+	}
+}
+
+country_event = {
+	id = ate_general_events.45
+	title = ate_general_events.EVTNAME45
+	desc = ate_general_events.EVTDESC45
+	picture = ADVISOR_eventPicture
+
+	trigger = {
+		ate_advisor_envoy = 3
+		NOT = { has_country_flag = ate_advisor_envoy }
+	}
+
+	mean_time_to_happen = {
+		months = 300
+
+		modifier = {
+			factor = 0.9
+			innovativeness_ideas = 4
+		}
+		modifier = {
+			factor = 0.9
+			innovativeness_ideas = 6
+		}
+		modifier = {
+			factor = 1.1
+			NOT = { innovativeness_ideas = 4 }
+		}
+		modifier = {
+			factor = 1.1
+			NOT = { innovativeness_ideas = 2 }
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			set_country_flag = ate_advisor_envoy
+		}
+	}
+
+	option = {
+		name = ate_general_events45.EVTOPT1
+
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				stability = 2
+			}
+		}
+
+		add_meritocracy_effect = yes
+		add_stability_or_adm_power = yes
+		add_dip_power = 50
+	}
+
+	option = {
+		name = ate_general_events45.EVTOPT2
+
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				NOT = { stability = 1 }
+			}
+		}
+
+		add_meritocracy_effect = yes
+		add_prestige = 50
+		add_dip_power = 50
+	}
+}
+
+country_event = {
+	id = ate_general_events.46
+	title = ate_general_events.EVTNAME46
+	desc = ate_general_events.EVTDESC46
+	picture = ADVISOR_eventPicture
+
+	trigger = {
+		ate_advisor_vaisyas_peasant = 3
+		NOT = { has_country_flag = ate_advisor_vaisyas_peasant }
+	}
+
+	mean_time_to_happen = {
+		months = 300
+
+		modifier = {
+			factor = 0.9
+			innovativeness_ideas = 4
+		}
+		modifier = {
+			factor = 0.9
+			innovativeness_ideas = 6
+		}
+		modifier = {
+			factor = 1.1
+			NOT = { innovativeness_ideas = 4 }
+		}
+		modifier = {
+			factor = 1.1
+			NOT = { innovativeness_ideas = 2 }
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			set_country_flag = ate_advisor_vaisyas_peasant
+		}
+	}
+
+	option = {
+		name = ate_general_events46.EVTOPT1
+
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				stability = 2
+			}
+		}
+
+		add_meritocracy_effect = yes
+		add_stability_or_adm_power = yes
+		add_estate_loyalty = {
+			estate = estate_vaisyas
+			loyalty = 10
+		}
+	}
+
+	option = {
+		name = ate_general_events46.EVTOPT2
+
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				NOT = { stability = 1 }
+			}
+		}
+
+		add_meritocracy_effect = yes
+		add_prestige = 50
+		add_estate_loyalty = {
+			estate = estate_vaisyas
+			loyalty = 10
+		}
+	}
+}
+
+country_event = {
+	id = ate_general_events.47
+	title = ate_general_events.EVTNAME47
+	desc = ate_general_events.EVTDESC47
+	picture = ADVISOR_eventPicture
+
+	trigger = {
+		ate_advisor_guild_trader = 3
+		NOT = { has_country_flag = ate_advisor_guild_trader }
+	}
+
+	mean_time_to_happen = {
+		months = 300
+
+		modifier = {
+			factor = 0.9
+			innovativeness_ideas = 4
+		}
+		modifier = {
+			factor = 0.9
+			innovativeness_ideas = 6
+		}
+		modifier = {
+			factor = 1.1
+			NOT = { innovativeness_ideas = 4 }
+		}
+		modifier = {
+			factor = 1.1
+			NOT = { innovativeness_ideas = 2 }
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			set_country_flag = ate_advisor_guild_trader
+		}
+	}
+
+	option = {
+		name = ate_general_events47.EVTOPT1
+
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				stability = 2
+			}
+		}
+
+		add_meritocracy_effect = yes
+		add_stability_or_adm_power = yes
+		add_estate_loyalty = {
+			estate = estate_burghers
+			loyalty = 10
+		}
+	}
+
+	option = {
+		name = ate_general_events47.EVTOPT2
+
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				NOT = { stability = 1 }
+			}
+		}
+
+		add_meritocracy_effect = yes
+		add_prestige = 50
+		add_estate_loyalty = {
+			estate = estate_burghers
+			loyalty = 10
+		}
+	}
+}
+
+country_event = {
+	id = ate_general_events.48
+	title = ate_general_events.EVTNAME48
+	desc = ate_general_events.EVTDESC48
+	picture = ADVISOR_eventPicture
+
+	trigger = {
+		ate_advisor_historian = 3
+		NOT = { has_country_flag = ate_advisor_historian }
+	}
+
+	mean_time_to_happen = {
+		months = 300
+
+		modifier = {
+			factor = 0.9
+			innovativeness_ideas = 4
+		}
+		modifier = {
+			factor = 0.9
+			innovativeness_ideas = 6
+		}
+		modifier = {
+			factor = 1.1
+			NOT = { innovativeness_ideas = 4 }
+		}
+		modifier = {
+			factor = 1.1
+			NOT = { innovativeness_ideas = 2 }
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			set_country_flag = ate_advisor_historian
+			if = {
+				limit = {
+					any_owned_province = {
+						any_neighbor_province = {
+							NOT = { country_or_non_sovereign_subject_holds = ROOT }
+							NOT = { is_claim = ROOT }
+							NOT = { is_core = ROOT }
+						}
+					}
+				}
+				random_owned_province = {
+					limit = {
+						any_neighbor_province = {
+							NOT = { country_or_non_sovereign_subject_holds = ROOT }
+							NOT = { is_claim = ROOT }
+							NOT = { is_core = ROOT }
+						}
+					}
+					random_neighbor_province = {
+						limit = {
+							NOT = { country_or_non_sovereign_subject_holds = ROOT }
+							NOT = { is_claim = ROOT }
+							NOT = { is_core = ROOT }
+						}
+						save_event_target_as = claim_province
+					}
+				}
+			}
+		}
+	}
+
+	option = {
+		name = ate_general_events48.EVTOPT1
+
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				stability = 2
+			}
+		}
+
+		add_meritocracy_effect = yes
+		add_stability_or_adm_power = yes
+		if = {
+			limit = {
+				has_saved_event_target = claim_province
+			}
+			event_target:claim_province = {
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+
+	option = {
+		name = ate_general_events48.EVTOPT2
+
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				NOT = { stability = 1 }
+			}
+		}
+
+		add_meritocracy_effect = yes
+		add_prestige = 50
+		if = {
+			limit = {
+				has_saved_event_target = claim_province
+			}
+			event_target:claim_province = {
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+}
+
+country_event = {
+	id = ate_general_events.49
+	title = ate_general_events.EVTNAME49
+	desc = ate_general_events.EVTDESC49
+	picture = ADVISOR_eventPicture
+
+	trigger = {
+		ate_advisor_loyal_friend_mil = 3
+		NOT = { has_country_flag = ate_advisor_loyal_friend_mil }
+	}
+
+	mean_time_to_happen = {
+		months = 300
+
+		modifier = {
+			factor = 0.9
+			innovativeness_ideas = 4
+		}
+		modifier = {
+			factor = 0.9
+			innovativeness_ideas = 6
+		}
+		modifier = {
+			factor = 1.1
+			NOT = { innovativeness_ideas = 4 }
+		}
+		modifier = {
+			factor = 1.1
+			NOT = { innovativeness_ideas = 2 }
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			set_country_flag = ate_advisor_loyal_friend_mil
+		}
+	}
+
+	option = {
+		name = ate_general_events49.EVTOPT1
+
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				stability = 2
+			}
+		}
+
+		add_meritocracy_effect = yes
+		add_stability_or_adm_power = yes
+		add_country_modifier = {
+			name = ate_advisor_loyal_friend_mil_modifier
+			duration = 3650
+		}
+	}
+
+	option = {
+		name = ate_general_events49.EVTOPT2
+
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				NOT = { stability = 1 }
+			}
+		}
+
+		add_meritocracy_effect = yes
+		add_prestige = 50
+		add_country_modifier = {
+			name = ate_advisor_loyal_friend_mil_modifier
+			duration = 3650
+		}
+	}
+}
+
+country_event = {
+	id = ate_general_events.50
+	title = ate_general_events.EVTNAME50
+	desc = ate_general_events.EVTDESC50
+	picture = ADVISOR_eventPicture
+
+	trigger = {
+		ate_advisor_feudal_lord = 3
+		NOT = { has_country_flag = ate_advisor_feudal_lord }
+	}
+
+	mean_time_to_happen = {
+		months = 300
+
+		modifier = {
+			factor = 0.9
+			innovativeness_ideas = 4
+		}
+		modifier = {
+			factor = 0.9
+			innovativeness_ideas = 6
+		}
+		modifier = {
+			factor = 1.1
+			NOT = { innovativeness_ideas = 4 }
+		}
+		modifier = {
+			factor = 1.1
+			NOT = { innovativeness_ideas = 2 }
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			set_country_flag = ate_advisor_feudal_lord
+		}
+	}
+
+	option = {
+		name = ate_general_events50.EVTOPT1
+
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				stability = 2
+			}
+		}
+
+		add_meritocracy_effect = yes
+		add_stability_or_adm_power = yes
+		add_mil_power = 50
+	}
+
+	option = {
+		name = ate_general_events50.EVTOPT2
+
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				NOT = { stability = 1 }
+			}
+		}
+
+		add_meritocracy_effect = yes
+		add_prestige = 50
+		add_mil_power = 50
+	}
+}
+
+country_event = {
+	id = ate_general_events.51
+	title = ate_general_events.EVTNAME51
+	desc = ate_general_events.EVTDESC51
+	picture = ADVISOR_eventPicture
+
+	trigger = {
+		ate_advisor_knight = 3
+		NOT = { has_country_flag = ate_advisor_knight }
+	}
+
+	mean_time_to_happen = {
+		months = 300
+
+		modifier = {
+			factor = 0.9
+			innovativeness_ideas = 4
+		}
+		modifier = {
+			factor = 0.9
+			innovativeness_ideas = 6
+		}
+		modifier = {
+			factor = 1.1
+			NOT = { innovativeness_ideas = 4 }
+		}
+		modifier = {
+			factor = 1.1
+			NOT = { innovativeness_ideas = 2 }
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			set_country_flag = ate_advisor_knight
+		}
+	}
+
+	option = {
+		name = ate_general_events51.EVTOPT1
+
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				stability = 2
+			}
+		}
+
+		add_meritocracy_effect = yes
+		add_stability_or_adm_power = yes
+		add_country_modifier = {
+			name = ate_advisor_knight_modifier
+			duration = 3650
+		}
+	}
+
+	option = {
+		name = ate_general_events51.EVTOPT2
+
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				NOT = { stability = 1 }
+			}
+		}
+
+		add_meritocracy_effect = yes
+		add_prestige = 50
+		add_country_modifier = {
+			name = ate_advisor_knight_modifier
+			duration = 3650
+		}
+	}
+}
+
+country_event = {
+	id = ate_general_events.52
+	title = ate_general_events.EVTNAME52
+	desc = ate_general_events.EVTDESC52
+	picture = ADVISOR_eventPicture
+
+	trigger = {
+		ate_advisor_traditional_tactician = 3
+		NOT = { has_country_flag = ate_advisor_traditional_tactician }
+	}
+
+	mean_time_to_happen = {
+		months = 300
+
+		modifier = {
+			factor = 0.9
+			innovativeness_ideas = 4
+		}
+		modifier = {
+			factor = 0.9
+			innovativeness_ideas = 6
+		}
+		modifier = {
+			factor = 1.1
+			NOT = { innovativeness_ideas = 4 }
+		}
+		modifier = {
+			factor = 1.1
+			NOT = { innovativeness_ideas = 2 }
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			set_country_flag = ate_advisor_traditional_tactician
+		}
+	}
+
+	option = {
+		name = ate_general_events52.EVTOPT1
+
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				stability = 2
+			}
+		}
+
+		add_meritocracy_effect = yes
+		add_stability_or_adm_power = yes
+		add_army_tradition = 20
+	}
+
+	option = {
+		name = ate_general_events52.EVTOPT2
+
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				NOT = { stability = 1 }
+			}
+		}
+
+		add_meritocracy_effect = yes
+		add_prestige = 50
+		add_army_tradition = 20
+	}
+}
+
+country_event = {
+	id = ate_general_events.53
+	title = ate_general_events.EVTNAME53
+	desc = ate_general_events.EVTDESC53
+	picture = ADVISOR_eventPicture
+
+	trigger = {
+		ate_advisor_landsknecht = 3
+		NOT = { has_country_flag = ate_advisor_landsknecht }
+	}
+
+	mean_time_to_happen = {
+		months = 300
+
+		modifier = {
+			factor = 0.9
+			innovativeness_ideas = 4
+		}
+		modifier = {
+			factor = 0.9
+			innovativeness_ideas = 6
+		}
+		modifier = {
+			factor = 1.1
+			NOT = { innovativeness_ideas = 4 }
+		}
+		modifier = {
+			factor = 1.1
+			NOT = { innovativeness_ideas = 2 }
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			set_country_flag = ate_advisor_landsknecht
+		}
+	}
+
+	option = {
+		name = ate_general_events53.EVTOPT1
+
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				stability = 2
+			}
+		}
+
+		add_meritocracy_effect = yes
+		add_stability_or_adm_power = yes
+	}
+
+	option = {
+		name = ate_general_events53.EVTOPT2
+
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				NOT = { stability = 1 }
+			}
+		}
+
+		add_meritocracy_effect = yes
+		add_prestige = 50
+	}
+}
+
+country_event = {
+	id = ate_general_events.54
+	title = ate_general_events.EVTNAME54
+	desc = ate_general_events.EVTDESC54
+	picture = ADVISOR_eventPicture
+
+	trigger = {
+		ate_advisor_mercenary_leader = 3
+		NOT = { has_country_flag = ate_advisor_mercenary_leader }
+	}
+
+	mean_time_to_happen = {
+		months = 300
+
+		modifier = {
+			factor = 0.9
+			innovativeness_ideas = 4
+		}
+		modifier = {
+			factor = 0.9
+			innovativeness_ideas = 6
+		}
+		modifier = {
+			factor = 1.1
+			NOT = { innovativeness_ideas = 4 }
+		}
+		modifier = {
+			factor = 1.1
+			NOT = { innovativeness_ideas = 2 }
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			set_country_flag = ate_advisor_mercenary_leader
+		}
+	}
+
+	option = {
+		name = ate_general_events54.EVTOPT1
+
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				stability = 2
+			}
+		}
+
+		add_meritocracy_effect = yes
+		add_stability_or_adm_power = yes
+		if = {
+			limit = {
+				has_dlc = "Cradle of Civilization"
+				num_of_hired_mercenary_companies = 1
+			}
+			add_army_professionalism = 0.05
+		}
+	}
+
+	option = {
+		name = ate_general_events54.EVTOPT2
+
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				NOT = { stability = 1 }
+			}
+		}
+
+		add_meritocracy_effect = yes
+		add_prestige = 50
+		if = {
+			limit = {
+				has_dlc = "Cradle of Civilization"
+				num_of_hired_mercenary_companies = 1
+			}
+			add_army_professionalism = 0.05
+		}
+	}
+}
+
+country_event = {
+	id = ate_general_events.55
+	title = ate_general_events.EVTNAME55
+	desc = ate_general_events.EVTDESC55
+	picture = ADVISOR_eventPicture
+
+	trigger = {
+		ate_advisor_lord_of_a_castle = 3
+		NOT = { has_country_flag = ate_advisor_lord_of_a_castle }
+	}
+
+	mean_time_to_happen = {
+		months = 300
+
+		modifier = {
+			factor = 0.9
+			innovativeness_ideas = 4
+		}
+		modifier = {
+			factor = 0.9
+			innovativeness_ideas = 6
+		}
+		modifier = {
+			factor = 1.1
+			NOT = { innovativeness_ideas = 4 }
+		}
+		modifier = {
+			factor = 1.1
+			NOT = { innovativeness_ideas = 2 }
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			set_country_flag = ate_advisor_lord_of_a_castle
+		}
+	}
+
+	option = {
+		name = ate_general_events55.EVTOPT1
+
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				stability = 2
+			}
+		}
+
+		add_meritocracy_effect = yes
+		add_stability_or_adm_power = yes
+		add_country_modifier = {
+			name = ate_advisor_lord_of_a_castle_modifier
+			duration = 3650
+		}
+	}
+
+	option = {
+		name = ate_general_events55.EVTOPT2
+
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				NOT = { stability = 1 }
+			}
+		}
+
+		add_meritocracy_effect = yes
+		add_prestige = 50
+		add_country_modifier = {
+			name = ate_advisor_lord_of_a_castle_modifier
+			duration = 3650
+		}
+	}
+}
+
+country_event = {
+	id = ate_general_events.56
+	title = ate_general_events.EVTNAME56
+	desc = ate_general_events.EVTDESC56
+	picture = ADVISOR_eventPicture
+
+	trigger = {
+		ate_advisor_noble_man = 3
+		NOT = { has_country_flag = ate_advisor_noble_man }
+	}
+
+	mean_time_to_happen = {
+		months = 300
+
+		modifier = {
+			factor = 0.9
+			innovativeness_ideas = 4
+		}
+		modifier = {
+			factor = 0.9
+			innovativeness_ideas = 6
+		}
+		modifier = {
+			factor = 1.1
+			NOT = { innovativeness_ideas = 4 }
+		}
+		modifier = {
+			factor = 1.1
+			NOT = { innovativeness_ideas = 2 }
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			set_country_flag = ate_advisor_noble_man
+		}
+	}
+
+	option = {
+		name = ate_general_events56.EVTOPT1
+
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				stability = 2
+			}
+		}
+
+		add_meritocracy_effect = yes
+		add_stability_or_adm_power = yes
+		create_general = { tradition = 50 }
+	}
+
+	option = {
+		name = ate_general_events56.EVTOPT2
+
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				NOT = { stability = 1 }
+			}
+		}
+
+		add_meritocracy_effect = yes
+		add_prestige = 50
+		create_general = { tradition = 50 }
+	}
+}
+
+country_event = {
+	id = ate_general_events.57
+	title = ate_general_events.EVTNAME57
+	desc = ate_general_events.EVTDESC57
+	picture = ADVISOR_eventPicture
+
+	trigger = {
+		ate_advisor_military_genius = 3
+		NOT = { has_country_flag = ate_advisor_military_genius }
+	}
+
+	mean_time_to_happen = {
+		months = 300
+
+		modifier = {
+			factor = 0.9
+			innovativeness_ideas = 4
+		}
+		modifier = {
+			factor = 0.9
+			innovativeness_ideas = 6
+		}
+		modifier = {
+			factor = 1.1
+			NOT = { innovativeness_ideas = 4 }
+		}
+		modifier = {
+			factor = 1.1
+			NOT = { innovativeness_ideas = 2 }
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			set_country_flag = ate_advisor_military_genius
+		}
+	}
+
+	option = {
+		name = ate_general_events57.EVTOPT1
+
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				stability = 2
+			}
+		}
+
+		add_meritocracy_effect = yes
+		add_stability_or_adm_power = yes
+		add_country_modifier = {
+			name = ate_advisor_military_genius_modifier
+			duration = 3650
+		}
+	}
+
+	option = {
+		name = ate_general_events57.EVTOPT2
+
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				NOT = { stability = 1 }
+			}
+		}
+
+		add_meritocracy_effect = yes
+		add_prestige = 50
+		add_country_modifier = {
+			name = ate_advisor_military_genius_modifier
+			duration = 3650
+		}
+	}
+}
+
+country_event = {
+	id = ate_general_events.58
+	title = ate_general_events.EVTNAME58
+	desc = ate_general_events.EVTDESC58
+	picture = ADVISOR_eventPicture
+
+	trigger = {
+		ate_advisor_siege_expert = 3
+		NOT = { has_country_flag = ate_advisor_siege_expert }
+	}
+
+	mean_time_to_happen = {
+		months = 300
+
+		modifier = {
+			factor = 0.9
+			innovativeness_ideas = 4
+		}
+		modifier = {
+			factor = 0.9
+			innovativeness_ideas = 6
+		}
+		modifier = {
+			factor = 1.1
+			NOT = { innovativeness_ideas = 4 }
+		}
+		modifier = {
+			factor = 1.1
+			NOT = { innovativeness_ideas = 2 }
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			set_country_flag = ate_advisor_siege_expert
+			if = {
+				limit = {
+					any_province = {
+						fort_level = 2
+						sieged_by = ROOT
+					}
+				}
+				random_province = {
+					limit = {
+						fort_level = 2
+						sieged_by = ROOT
+					}
+					save_event_target_as = siege_province
+				}
+			}
+		}
+	}
+
+	option = {
+		name = ate_general_events58.EVTOPT1
+
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				stability = 2
+			}
+		}
+
+		add_meritocracy_effect = yes
+		add_stability_or_adm_power = yes
+		if = {
+			limit = {
+				has_saved_event_target = siege_province
+			}
+			event_target:siege_province = {
+				change_siege = 1
+			}
+		}
+	}
+
+	option = {
+		name = ate_general_events58.EVTOPT2
+
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				NOT = { stability = 1 }
+			}
+		}
+
+		add_meritocracy_effect = yes
+		add_prestige = 50
+		if = {
+			limit = {
+				has_saved_event_target = siege_province
+			}
+			event_target:siege_province = {
+				change_siege = 1
+			}
+		}
+	}
+}
+
+country_event = {
+	id = ate_general_events.59
+	title = ate_general_events.EVTNAME59
+	desc = ate_general_events.EVTDESC59
+	picture = ADVISOR_eventPicture
+
+	trigger = {
+		ate_advisor_master_of_artillery = 3
+		NOT = { has_country_flag = ate_advisor_master_of_artillery }
+	}
+
+	mean_time_to_happen = {
+		months = 300
+
+		modifier = {
+			factor = 0.9
+			innovativeness_ideas = 4
+		}
+		modifier = {
+			factor = 0.9
+			innovativeness_ideas = 6
+		}
+		modifier = {
+			factor = 1.1
+			NOT = { innovativeness_ideas = 4 }
+		}
+		modifier = {
+			factor = 1.1
+			NOT = { innovativeness_ideas = 2 }
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			set_country_flag = ate_advisor_master_of_artillery
+		}
+	}
+
+	option = {
+		name = ate_general_events59.EVTOPT1
+
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				stability = 2
+			}
+		}
+
+		add_meritocracy_effect = yes
+		add_stability_or_adm_power = yes
+		add_country_modifier = {
+			name = ate_advisor_master_of_artillery_modifier
+			duration = 3650
+		}
+	}
+
+	option = {
+		name = ate_general_events59.EVTOPT2
+
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				NOT = { stability = 1 }
+			}
+		}
+
+		add_meritocracy_effect = yes
+		add_prestige = 50
+		add_country_modifier = {
+			name = ate_advisor_master_of_artillery_modifier
+			duration = 3650
+		}
+	}
+}
+
+country_event = {
+	id = ate_general_events.60
+	title = ate_general_events.EVTNAME60
+	desc = ate_general_events.EVTDESC60
+	picture = ADVISOR_eventPicture
+
+	trigger = {
+		ate_advisor_looting_expert = 3
+		NOT = { has_country_flag = ate_advisor_looting_expert }
+	}
+
+	mean_time_to_happen = {
+		months = 300
+
+		modifier = {
+			factor = 0.9
+			innovativeness_ideas = 4
+		}
+		modifier = {
+			factor = 0.9
+			innovativeness_ideas = 6
+		}
+		modifier = {
+			factor = 1.1
+			NOT = { innovativeness_ideas = 4 }
+		}
+		modifier = {
+			factor = 1.1
+			NOT = { innovativeness_ideas = 2 }
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			set_country_flag = ate_advisor_looting_expert
+			if = {
+				limit = {
+					is_at_war = yes
+					any_province = {
+						NOT = { owned_by = ROOT }
+						controlled_by = ROOT
+						is_looted = no
+					}
+				}
+				random_province = {
+					limit = {
+						NOT = { owned_by = ROOT }
+						controlled_by = ROOT
+						is_looted = no
+					}
+					save_event_target_as = loot_province_1
+				}
+				random_province = {
+					limit = {
+						NOT = { owned_by = ROOT }
+						controlled_by = ROOT
+						is_looted = no
+						NOT = { province_id = event_target:loot_province_1 }
+					}
+					save_event_target_as = loot_province_2
+				}
+				random_province = {
+					limit = {
+						NOT = { owned_by = ROOT }
+						controlled_by = ROOT
+						is_looted = no
+						NOT = { province_id = event_target:loot_province_1 }
+						NOT = { province_id = event_target:loot_province_2 }
+					}
+					save_event_target_as = loot_province_3
+				}
+				random_province = {
+					limit = {
+						NOT = { owned_by = ROOT }
+						controlled_by = ROOT
+						is_looted = no
+						NOT = { province_id = event_target:loot_province_1 }
+						NOT = { province_id = event_target:loot_province_2 }
+						NOT = { province_id = event_target:loot_province_3 }
+					}
+					save_event_target_as = loot_province_4
+				}
+				random_province = {
+					limit = {
+						NOT = { owned_by = ROOT }
+						controlled_by = ROOT
+						is_looted = no
+						NOT = { province_id = event_target:loot_province_1 }
+						NOT = { province_id = event_target:loot_province_2 }
+						NOT = { province_id = event_target:loot_province_3 }
+						NOT = { province_id = event_target:loot_province_4 }
+					}
+					save_event_target_as = loot_province_5
+				}
+			}
+		}
+	}
+
+	option = {
+		name = ate_general_events60.EVTOPT1
+
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				stability = 2
+			}
+		}
+
+		add_meritocracy_effect = yes
+		add_stability_or_adm_power = yes
+		if = {
+			limit = {
+				has_saved_event_target = loot_province_1
+			}
+			event_target:loot_province_1 = {
+				remove_loot = {
+					who = ROOT
+					amount = 100
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_saved_event_target = loot_province_2
+			}
+			event_target:loot_province_2 = {
+				remove_loot = {
+					who = ROOT
+					amount = 100
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_saved_event_target = loot_province_3
+			}
+			event_target:loot_province_3 = {
+				remove_loot = {
+					who = ROOT
+					amount = 100
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_saved_event_target = loot_province_4
+			}
+			event_target:loot_province_4 = {
+				remove_loot = {
+					who = ROOT
+					amount = 100
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_saved_event_target = loot_province_5
+			}
+			event_target:loot_province_5 = {
+				remove_loot = {
+					who = ROOT
+					amount = 100
+				}
+			}
+		}
+	}
+
+	option = {
+		name = ate_general_events60.EVTOPT2
+
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				NOT = { stability = 1 }
+			}
+		}
+
+		add_meritocracy_effect = yes
+		add_prestige = 50
+		if = {
+			limit = {
+				has_saved_event_target = loot_province_1
+			}
+			event_target:loot_province_1 = {
+				remove_loot = {
+					who = ROOT
+					amount = 100
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_saved_event_target = loot_province_2
+			}
+			event_target:loot_province_2 = {
+				remove_loot = {
+					who = ROOT
+					amount = 100
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_saved_event_target = loot_province_3
+			}
+			event_target:loot_province_3 = {
+				remove_loot = {
+					who = ROOT
+					amount = 100
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_saved_event_target = loot_province_4
+			}
+			event_target:loot_province_4 = {
+				remove_loot = {
+					who = ROOT
+					amount = 100
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_saved_event_target = loot_province_5
+			}
+			event_target:loot_province_5 = {
+				remove_loot = {
+					who = ROOT
+					amount = 100
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = ate_general_events.61
+	title = ate_general_events.EVTNAME61
+	desc = ate_general_events.EVTDESC61
+	picture = ADVISOR_eventPicture
+
+	trigger = {
+		ate_advisor_marshal = 3
+		NOT = { has_country_flag = ate_advisor_marshal }
+	}
+
+	mean_time_to_happen = {
+		months = 300
+
+		modifier = {
+			factor = 0.9
+			innovativeness_ideas = 4
+		}
+		modifier = {
+			factor = 0.9
+			innovativeness_ideas = 6
+		}
+		modifier = {
+			factor = 1.1
+			NOT = { innovativeness_ideas = 4 }
+		}
+		modifier = {
+			factor = 1.1
+			NOT = { innovativeness_ideas = 2 }
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			set_country_flag = ate_advisor_marshal
+		}
+	}
+
+	option = {
+		name = ate_general_events61.EVTOPT1
+
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				stability = 2
+			}
+		}
+
+		add_meritocracy_effect = yes
+		add_stability_or_adm_power = yes
+		create_general = { tradition = 75 }
+	}
+
+	option = {
+		name = ate_general_events61.EVTOPT2
+
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				NOT = { stability = 1 }
+			}
+		}
+
+		add_meritocracy_effect = yes
+		add_prestige = 50
+		create_general = { tradition = 75 }
+	}
+}
+
+country_event = {
+	id = ate_general_events.62
+	title = ate_general_events.EVTNAME62
+	desc = ate_general_events.EVTDESC62
+	picture = ADVISOR_eventPicture
+
+	trigger = {
+		ate_advisor_arch_marshal = 3
+		NOT = { has_country_flag = ate_advisor_arch_marshal }
+	}
+
+	mean_time_to_happen = {
+		months = 300
+
+		modifier = {
+			factor = 0.9
+			innovativeness_ideas = 4
+		}
+		modifier = {
+			factor = 0.9
+			innovativeness_ideas = 6
+		}
+		modifier = {
+			factor = 1.1
+			NOT = { innovativeness_ideas = 4 }
+		}
+		modifier = {
+			factor = 1.1
+			NOT = { innovativeness_ideas = 2 }
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			set_country_flag = ate_advisor_arch_marshal
+		}
+	}
+
+	option = {
+		name = ate_general_events62.EVTOPT1
+
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				stability = 2
+			}
+		}
+
+		add_meritocracy_effect = yes
+		add_stability_or_adm_power = yes
+		add_manpower = 5
+	}
+
+	option = {
+		name = ate_general_events62.EVTOPT2
+
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				NOT = { stability = 1 }
+			}
+		}
+
+		add_meritocracy_effect = yes
+		add_prestige = 50
+		add_manpower = 5
+	}
+}
+
+country_event = {
+	id = ate_general_events.63
+	title = ate_general_events.EVTNAME63
+	desc = ate_general_events.EVTDESC63
+	picture = ADVISOR_eventPicture
+
+	trigger = {
+		ate_advisor_supply_expert = 3
+		NOT = { has_country_flag = ate_advisor_supply_expert }
+	}
+
+	mean_time_to_happen = {
+		months = 300
+
+		modifier = {
+			factor = 0.9
+			innovativeness_ideas = 4
+		}
+		modifier = {
+			factor = 0.9
+			innovativeness_ideas = 6
+		}
+		modifier = {
+			factor = 1.1
+			NOT = { innovativeness_ideas = 4 }
+		}
+		modifier = {
+			factor = 1.1
+			NOT = { innovativeness_ideas = 2 }
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			set_country_flag = ate_advisor_supply_expert
+		}
+	}
+
+	option = {
+		name = ate_general_events63.EVTOPT1
+
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				stability = 2
+			}
+		}
+
+		add_meritocracy_effect = yes
+		add_stability_or_adm_power = yes
+	}
+
+	option = {
+		name = ate_general_events63.EVTOPT2
+
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				NOT = { stability = 1 }
+			}
+		}
+
+		add_meritocracy_effect = yes
+		add_prestige = 50
+	}
+}
+
+country_event = {
+	id = ate_general_events.64
+	title = ate_general_events.EVTNAME64
+	desc = ate_general_events.EVTDESC64
+	picture = ADVISOR_eventPicture
+
+	trigger = {
+		ate_advisor_sergeant = 3
+		NOT = { has_country_flag = ate_advisor_sergeant }
+	}
+
+	mean_time_to_happen = {
+		months = 300
+
+		modifier = {
+			factor = 0.9
+			innovativeness_ideas = 4
+		}
+		modifier = {
+			factor = 0.9
+			innovativeness_ideas = 6
+		}
+		modifier = {
+			factor = 1.1
+			NOT = { innovativeness_ideas = 4 }
+		}
+		modifier = {
+			factor = 1.1
+			NOT = { innovativeness_ideas = 2 }
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			set_country_flag = ate_advisor_sergeant
+		}
+	}
+
+	option = {
+		name = ate_general_events64.EVTOPT1
+
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				stability = 2
+			}
+		}
+
+		add_meritocracy_effect = yes
+		add_stability_or_adm_power = yes
+		add_country_modifier = {
+			name = ate_advisor_sergeant_modifier
+			duration = 3650
+		}
+	}
+
+	option = {
+		name = ate_general_events64.EVTOPT2
+
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				NOT = { stability = 1 }
+			}
+		}
+
+		add_meritocracy_effect = yes
+		add_prestige = 50
+		add_country_modifier = {
+			name = ate_advisor_sergeant_modifier
+			duration = 3650
+		}
+	}
+}
+
+country_event = {
+	id = ate_general_events.65
+	title = ate_general_events.EVTNAME65
+	desc = ate_general_events.EVTDESC65
+	picture = ADVISOR_eventPicture
+
+	trigger = {
+		ate_advisor_banneret = 3
+		NOT = { has_country_flag = ate_advisor_banneret }
+	}
+
+	mean_time_to_happen = {
+		months = 300
+
+		modifier = {
+			factor = 0.9
+			innovativeness_ideas = 4
+		}
+		modifier = {
+			factor = 0.9
+			innovativeness_ideas = 6
+		}
+		modifier = {
+			factor = 1.1
+			NOT = { innovativeness_ideas = 4 }
+		}
+		modifier = {
+			factor = 1.1
+			NOT = { innovativeness_ideas = 2 }
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			set_country_flag = ate_advisor_banneret
+		}
+	}
+
+	option = {
+		name = ate_general_events65.EVTOPT1
+
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				stability = 2
+			}
+		}
+
+		add_meritocracy_effect = yes
+		add_stability_or_adm_power = yes
+		add_manpower = 5
+	}
+
+	option = {
+		name = ate_general_events65.EVTOPT2
+
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				NOT = { stability = 1 }
+			}
+		}
+
+		add_meritocracy_effect = yes
+		add_prestige = 50
+		add_manpower = 5
+	}
+}
+
+country_event = {
+	id = ate_general_events.66
+	title = ate_general_events.EVTNAME66
+	desc = ate_general_events.EVTDESC66
+	picture = ADVISOR_eventPicture
+
+	trigger = {
+		has_ate_advisor = { adm = yes skill = 2 }
+	}
+
+	mean_time_to_happen = {
+		months = 500
+		modifier = {
+			factor = 0.5
+			NOT = { ADM = 1 }
+		}
+		modifier = {
+			factor = 2
+			luck = yes
+		}
+		modifier = {
+			factor = 1.5
+			ADM = 4
+		}
+	}
+
+	option = {
+		name = ate_general_events66.EVTOPT1
+
+		remove_advisor_by_category = ADM
+		reduce_meritocracy_effect = yes
+	}
+
+	option = {
+		name = ate_general_events66.EVTOPT2
+
+		add_prestige = -10
+	}
+}
+
+country_event = {
+	id = ate_general_events.67
+	title = ate_general_events.EVTNAME67
+	desc = ate_general_events.EVTDESC67
+	picture = ADVISOR_eventPicture
+
+	trigger = {
+		has_ate_advisor = { dip = yes skill = 2 }
+	}
+
+	mean_time_to_happen = {
+		months = 500
+		modifier = {
+			factor = 0.5
+			NOT = { ADM = 1 }
+		}
+		modifier = {
+			factor = 2
+			luck = yes
+		}
+		modifier = {
+			factor = 1.5
+			ADM = 4
+		}
+	}
+
+	option = {
+		name = ate_general_events67.EVTOPT1
+
+		remove_advisor_by_category = DIP
+		reduce_meritocracy_effect = yes
+	}
+
+	option = {
+		name = ate_general_events67.EVTOPT2
+
+		add_prestige = -10
+	}
+}
+
+country_event = {
+	id = ate_general_events.68
+	title = ate_general_events.EVTNAME68
+	desc = ate_general_events.EVTDESC68
+	picture = ADVISOR_eventPicture
+
+	trigger = {
+		has_ate_advisor = { mil = yes skill = 2 }
+	}
+
+	mean_time_to_happen = {
+		months = 500
+		modifier = {
+			factor = 0.5
+			NOT = { ADM = 1 }
+		}
+		modifier = {
+			factor = 2
+			luck = yes
+		}
+		modifier = {
+			factor = 1.5
+			ADM = 4
+		}
+	}
+
+	option = {
+		name = ate_general_events68.EVTOPT1
+
+		remove_advisor_by_category = MIL
+		reduce_meritocracy_effect = yes
+	}
+
+	option = {
+		name = ate_general_events68.EVTOPT2
+
+		add_prestige = -10
+	}
+}
+
+country_event = {
+	id = ate_general_events.69
+	title = ate_general_events.EVTNAME69
+	desc = ate_general_events.EVTDESC69
+	picture = ADVISOR_eventPicture
+
+	trigger = {
+		ate_advisor_plantation_owner = 3
+		NOT = { has_country_flag = ate_advisor_plantation_owner }
+	}
+
+	mean_time_to_happen = {
+		months = 300
+
+		modifier = {
+			factor = 0.9
+			innovativeness_ideas = 4
+		}
+		modifier = {
+			factor = 0.9
+			innovativeness_ideas = 6
+		}
+		modifier = {
+			factor = 1.1
+			NOT = { innovativeness_ideas = 4 }
+		}
+		modifier = {
+			factor = 1.1
+			NOT = { innovativeness_ideas = 2 }
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			set_country_flag = ate_advisor_plantation_owner
+		}
+	}
+
+	option = {
+		name = ate_general_events69.EVTOPT1
+
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				stability = 2
+			}
+		}
+
+		add_meritocracy_effect = yes
+		add_stability_or_adm_power = yes
+		add_country_modifier = {
+			name = ate_advisor_plantation_owner_modifier
+			duration = 3650
+		}
+	}
+
+	option = {
+		name = ate_general_events69.EVTOPT2
+
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				NOT = { stability = 1 }
+			}
+		}
+
+		add_meritocracy_effect = yes
+		add_prestige = 50
+		add_country_modifier = {
+			name = ate_advisor_plantation_owner_modifier
+			duration = 3650
+		}
+	}
+}
+
+country_event = {
+	id = ate_general_events.70
+	title = ate_general_events.EVTNAME70
+	desc = ate_general_events.EVTDESC70
+	picture = ADVISOR_eventPicture
+
+	trigger = {
+		ate_advisor_imam = 3
+		NOT = { has_country_flag = ate_advisor_imam }
+	}
+
+	mean_time_to_happen = {
+		months = 300
+
+		modifier = {
+			factor = 0.9
+			innovativeness_ideas = 4
+		}
+		modifier = {
+			factor = 0.9
+			innovativeness_ideas = 6
+		}
+		modifier = {
+			factor = 1.1
+			NOT = { innovativeness_ideas = 4 }
+		}
+		modifier = {
+			factor = 1.1
+			NOT = { innovativeness_ideas = 2 }
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			set_country_flag = ate_advisor_imam
+		}
+	}
+
+	option = {
+		name = ate_general_events70.EVTOPT1
+
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				stability = 2
+			}
+		}
+
+		add_meritocracy_effect = yes
+		add_stability_or_adm_power = yes
+		if = {
+			limit = {
+				piety = 0
+			}
+			add_piety = 0.2
+		}
+		else = {
+			add_piety = -0.2
+		}
+	}
+
+	option = {
+		name = ate_general_events70.EVTOPT2
+
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				NOT = { stability = 1 }
+			}
+		}
+
+		add_meritocracy_effect = yes
+		add_prestige = 50
+		if = {
+			limit = {
+				piety = 0
+			}
+			add_piety = 0.2
+		}
+		else = {
+			add_piety = -0.2
+		}
+	}
+}
+
+country_event = {
+	id = ate_general_events.71
+	title = ate_general_events.EVTNAME71
+	desc = ate_general_events.EVTDESC71
+	picture = ADVISOR_eventPicture
+
+	trigger = {
+		ate_advisor_galley_captain = 3
+		NOT = { has_country_flag = ate_advisor_galley_captain }
+	}
+
+	mean_time_to_happen = {
+		months = 300
+
+		modifier = {
+			factor = 0.9
+			innovativeness_ideas = 4
+		}
+		modifier = {
+			factor = 0.9
+			innovativeness_ideas = 6
+		}
+		modifier = {
+			factor = 1.1
+			NOT = { innovativeness_ideas = 4 }
+		}
+		modifier = {
+			factor = 1.1
+			NOT = { innovativeness_ideas = 2 }
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			set_country_flag = ate_advisor_galley_captain
+		}
+	}
+
+	option = {
+		name = ate_general_events71.EVTOPT1
+
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				stability = 2
+			}
+		}
+
+		add_meritocracy_effect = yes
+		add_stability_or_adm_power = yes
+		add_country_modifier = {
+			name = ate_advisor_galley_captain_modifier
+			duration = 3650
+		}
+	}
+
+	option = {
+		name = ate_general_events71.EVTOPT2
+
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				NOT = { stability = 1 }
+			}
+		}
+
+		add_meritocracy_effect = yes
+		add_prestige = 50
+		add_country_modifier = {
+			name = ate_advisor_galley_captain_modifier
+			duration = 3650
+		}
+	}
+}
+
+country_event = {
+	id = ate_general_events.72
+	title = ate_general_events.EVTNAME72
+	desc = ate_general_events.EVTDESC72
+	picture = ADVISOR_eventPicture
+
+	trigger = {
+		ate_advisor_galleon_captain = 3
+		NOT = { has_country_flag = ate_advisor_galleon_captain }
+	}
+
+	mean_time_to_happen = {
+		months = 300
+
+		modifier = {
+			factor = 0.9
+			innovativeness_ideas = 4
+		}
+		modifier = {
+			factor = 0.9
+			innovativeness_ideas = 6
+		}
+		modifier = {
+			factor = 1.1
+			NOT = { innovativeness_ideas = 4 }
+		}
+		modifier = {
+			factor = 1.1
+			NOT = { innovativeness_ideas = 2 }
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			set_country_flag = ate_advisor_galleon_captain
+		}
+	}
+
+	option = {
+		name = ate_general_events72.EVTOPT1
+
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				stability = 2
+			}
+		}
+
+		add_meritocracy_effect = yes
+		add_stability_or_adm_power = yes
+		add_country_modifier = {
+			name = ate_advisor_galleon_captain_modifier
+			duration = 3650
+		}
+	}
+
+	option = {
+		name = ate_general_events72.EVTOPT2
+
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				NOT = { stability = 1 }
+			}
+		}
+
+		add_meritocracy_effect = yes
+		add_prestige = 50
+		add_country_modifier = {
+			name = ate_advisor_galleon_captain_modifier
+			duration = 3650
+		}
+	}
+}
+
+country_event = {
+	id = ate_general_events.73
+	title = ate_general_events.EVTNAME73
+	desc = ate_general_events.EVTDESC73
+	picture = ADVISOR_eventPicture
+
+	trigger = {
+		ate_advisor_scholar = 3
+		NOT = { has_country_flag = ate_advisor_scholar }
+	}
+
+	mean_time_to_happen = {
+		months = 300
+
+		modifier = {
+			factor = 0.9
+			innovativeness_ideas = 4
+		}
+		modifier = {
+			factor = 0.9
+			innovativeness_ideas = 6
+		}
+		modifier = {
+			factor = 1.1
+			NOT = { innovativeness_ideas = 4 }
+		}
+		modifier = {
+			factor = 1.1
+			NOT = { innovativeness_ideas = 2 }
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			set_country_flag = ate_advisor_scholar
+		}
+	}
+
+	option = {
+		name = ate_general_events73.EVTOPT1
+
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				stability = 2
+			}
+		}
+
+		add_meritocracy_effect = yes
+		add_stability_or_adm_power = yes
+		add_country_modifier = {
+			name = ate_advisor_scholar_modifier
+			duration = 3650
+		}
+	}
+
+	option = {
+		name = ate_general_events73.EVTOPT2
+
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				NOT = { stability = 1 }
+			}
+		}
+
+		add_meritocracy_effect = yes
+		add_prestige = 50
+		add_country_modifier = {
+			name = ate_advisor_scholar_modifier
+			duration = 3650
+		}
+	}
+}
+
+country_event = {
+	id = ate_general_events.74
+	title = ate_general_events.EVTNAME74
+	desc = ate_general_events.EVTDESC74
+	picture = ADVISOR_eventPicture
+
+	trigger = {
+		ate_advisor_inventor = 3
+		NOT = { has_country_flag = ate_advisor_inventor }
+	}
+
+	mean_time_to_happen = {
+		months = 300
+
+		modifier = {
+			factor = 0.9
+			innovativeness_ideas = 4
+		}
+		modifier = {
+			factor = 0.9
+			innovativeness_ideas = 6
+		}
+		modifier = {
+			factor = 1.1
+			NOT = { innovativeness_ideas = 4 }
+		}
+		modifier = {
+			factor = 1.1
+			NOT = { innovativeness_ideas = 2 }
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			set_country_flag = ate_advisor_inventor
+		}
+	}
+
+	option = {
+		name = ate_general_events74.EVTOPT1
+
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				stability = 2
+			}
+		}
+
+		add_meritocracy_effect = yes
+		add_stability_or_adm_power = yes
+		add_innovativeness_big_effect = yes
+	}
+
+	option = {
+		name = ate_general_events74.EVTOPT2
+
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				NOT = { stability = 1 }
+			}
+		}
+
+		add_meritocracy_effect = yes
+		add_prestige = 50
+		add_innovativeness_big_effect = yes
+	}
+}
+
+country_event = {
+	id = ate_general_events.75
+	title = ate_general_events.EVTNAME75
+	desc = ate_general_events.EVTDESC75
+	picture = ADVISOR_eventPicture
+
+	trigger = {
+		ate_advisor_colonial_administrator = 3
+		NOT = { has_country_flag = ate_advisor_colonial_administrator }
+	}
+
+	mean_time_to_happen = {
+		months = 300
+
+		modifier = {
+			factor = 0.9
+			innovativeness_ideas = 4
+		}
+		modifier = {
+			factor = 0.9
+			innovativeness_ideas = 6
+		}
+		modifier = {
+			factor = 1.1
+			NOT = { innovativeness_ideas = 4 }
+		}
+		modifier = {
+			factor = 1.1
+			NOT = { innovativeness_ideas = 2 }
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			set_country_flag = ate_advisor_colonial_administrator
+		}
+	}
+
+	option = {
+		name = ate_general_events75.EVTOPT1
+
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				stability = 2
+			}
+		}
+
+		add_meritocracy_effect = yes
+		add_stability_or_adm_power = yes
+		add_country_modifier = {
+			name = ate_advisor_colonial_administrator_modifier
+			duration = 3650
+		}
+	}
+
+	option = {
+		name = ate_general_events75.EVTOPT2
+
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				NOT = { stability = 1 }
+			}
+		}
+
+		add_meritocracy_effect = yes
+		add_prestige = 50
+		add_country_modifier = {
+			name = ate_advisor_colonial_administrator_modifier
+			duration = 3650
+		}
+	}
+}
+
+country_event = {
+	id = ate_general_events.76
+	title = ate_general_events.EVTNAME76
+	desc = ate_general_events.EVTDESC76
+	picture = ADVISOR_eventPicture
+
+	trigger = {
+		ate_advisor_treasure_fleet_captain = 3
+		NOT = { has_country_flag = ate_advisor_treasure_fleet_captain }
+	}
+
+	mean_time_to_happen = {
+		months = 300
+
+		modifier = {
+			factor = 0.9
+			innovativeness_ideas = 4
+		}
+		modifier = {
+			factor = 0.9
+			innovativeness_ideas = 6
+		}
+		modifier = {
+			factor = 1.1
+			NOT = { innovativeness_ideas = 4 }
+		}
+		modifier = {
+			factor = 1.1
+			NOT = { innovativeness_ideas = 2 }
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			set_country_flag = ate_advisor_treasure_fleet_captain
+		}
+	}
+
+	option = {
+		name = ate_general_events76.EVTOPT1
+
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				stability = 2
+			}
+		}
+
+		add_meritocracy_effect = yes
+		add_stability_or_adm_power = yes
+		add_country_modifier = {
+			name = ate_advisor_treasure_fleet_captain_modifier
+			duration = 3650
+		}
+	}
+
+	option = {
+		name = ate_general_events76.EVTOPT2
+
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				NOT = { stability = 1 }
+			}
+		}
+
+		add_meritocracy_effect = yes
+		add_prestige = 50
+		add_country_modifier = {
+			name = ate_advisor_treasure_fleet_captain_modifier
+			duration = 3650
+		}
+	}
+}
+
+country_event = {
+	id = ate_general_events.77
+	title = ate_general_events.EVTNAME77
+	desc = ate_general_events.EVTDESC77
+	picture = COURT_eventPicture
+
+	trigger = {
+		has_regency = no
+		is_bankrupt = no
+		OR = {
+			NOT = { has_country_flag = ate_court_random_advisor_event_happened }
+			had_country_flag = { flag = ate_court_random_advisor_event_happened days = 3650 }
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 500
+		modifier = {
+			factor = 1.1
+			has_adm_advisor = yes
+		}
+		modifier = {
+			factor = 1.1
+			has_adm_advisor_2 = yes
+		}
+		modifier = {
+			factor = 1.1
+			has_adm_advisor_3 = yes
+		}
+		modifier = {
+			factor = 1.1
+			has_dip_advisor = yes
+		}
+		modifier = {
+			factor = 1.1
+			has_dip_advisor_2 = yes
+		}
+		modifier = {
+			factor = 1.1
+			has_dip_advisor_3 = yes
+		}
+		modifier = {
+			factor = 1.1
+			has_mil_advisor = yes
+		}
+		modifier = {
+			factor = 1.1
+			has_mil_advisor_2 = yes
+		}
+		modifier = {
+			factor = 1.1
+			has_mil_advisor_3 = yes
+		}
+		modifier = {
+			factor = 0.9
+			NOT = { government_rank = 2 }
+		}
+		modifier = {
+			factor = 0.9
+			OR = {
+				has_dlc = "Rights of Man"
+				has_dlc = "Emperor"
+			}
+			is_great_power = no
+		}
+		modifier = {
+			factor = 1.5
+			is_subject_other_than_tributary_trigger = yes
+		}
+		modifier = {
+			factor = 0.9
+			stability = 3
+		}
+		modifier = {
+			factor = 1.5
+			num_of_loans = 2
+		}
+		modifier = {
+			factor = 100
+			has_any_disaster = yes
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			clr_country_flag = ate_court_random_advisor_event_happened
+			set_country_flag = ate_court_random_advisor_event_happened
+			ate_clear_flags_for_possible_random_advisors = yes
+			ate_generate_possible_random_advisor = { adm = yes }
+			ate_generate_possible_random_advisor = { dip = yes }
+			ate_generate_possible_random_advisor = { mil = yes }
+		}
+	}
+
+	option = {
+		name = ate_general_events77.EVTOPT1
+
+		ai_chance = {
+			factor = 0.3
+			modifier = {
+				factor = 0.75
+				has_adm_advisor = yes
+			}
+			modifier = {
+				factor = 0.75
+				has_adm_advisor_2 = yes
+			}
+			modifier = {
+				factor = 0.75
+				has_adm_advisor_3 = yes
+			}
+		}
+
+		ate_give_possible_random_advisor = { adm = yes }
+	}
+
+	option = {
+		name = ate_general_events77.EVTOPT2
+
+		ai_chance = {
+			factor = 0.3
+			modifier = {
+				factor = 0.75
+				has_dip_advisor = yes
+			}
+			modifier = {
+				factor = 0.75
+				has_dip_advisor_2 = yes
+			}
+			modifier = {
+				factor = 0.75
+				has_dip_advisor_3 = yes
+			}
+		}
+
+		ate_give_possible_random_advisor = { dip = yes }
+	}
+
+	option = {
+		name = ate_general_events77.EVTOPT3
+
+		ai_chance = {
+			factor = 0.3
+			modifier = {
+				factor = 0.75
+				has_mil_advisor = yes
+			}
+			modifier = {
+				factor = 0.75
+				has_mil_advisor_2 = yes
+			}
+			modifier = {
+				factor = 0.75
+				has_mil_advisor_3 = yes
+			}
+		}
+
+		ate_give_possible_random_advisor = { mil = yes }
+	}
+
+	option = {
+		name = ate_general_events77.EVTOPT4
+
+		ai_chance = {
+			factor = 0.1
+			modifier = {
+				factor = 0.5
+				prestige = 100
+			}
+		}
+
+		add_prestige = 10
+	}
+
+	after = {
+		ate_clear_flags_for_possible_random_advisors = yes
+	}
+}
+
+country_event = {
+	id = ate_general_events.78
+	title = ate_general_events.EVTNAME78
+	desc = ate_general_events.EVTDESC78
+	picture = ADVISOR_eventPicture
+
+	trigger = {
+		ate_advisor_witch_hunter = 3
+		NOT = { has_country_flag = ate_advisor_witch_hunter }
+	}
+
+	mean_time_to_happen = {
+		months = 300
+
+		modifier = {
+			factor = 0.9
+			innovativeness_ideas = 4
+		}
+		modifier = {
+			factor = 0.9
+			innovativeness_ideas = 6
+		}
+		modifier = {
+			factor = 1.1
+			NOT = { innovativeness_ideas = 4 }
+		}
+		modifier = {
+			factor = 1.1
+			NOT = { innovativeness_ideas = 2 }
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			set_country_flag = ate_advisor_witch_hunter
+		}
+	}
+
+	option = {
+		name = ate_general_events76.EVTOPT1
+
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				stability = 2
+			}
+		}
+
+		add_meritocracy_effect = yes
+		add_stability_or_adm_power = yes
+		add_country_modifier = {
+			name = ate_advisor_witch_hunter_modifier
+			duration = 3650
+		}
+	}
+
+	option = {
+		name = ate_general_events76.EVTOPT2
+
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				NOT = { stability = 1 }
+			}
+		}
+
+		add_meritocracy_effect = yes
+		add_prestige = 50
+		add_country_modifier = {
+			name = ate_advisor_witch_hunter_modifier
+			duration = 3650
+		}
+	}
+}

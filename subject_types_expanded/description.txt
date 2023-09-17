@@ -1,0 +1,77 @@
+[h1][b]Welcome to Peace Treaties Expanded[/b][/h1]
+This mod adds new peace treaties and Casus Bellis to add more variety to peace offers.
+
+[h1]Currently Added[/h1]
+Currently [i]Peace Treaties Expanded[/i] adds the following peace options. Some require a special CB or have minor requirements to show up in the peace treaty window (e.g. require a specific army size).
+Additional information about each treaty as well as the added Casus Bellis can be found [url=https://steamcommunity.com/workshop/filedetails/discussion/2615504872/2961670721745264890/]here[/url].
+[list]
+[*] Abduct Administrative/Diplomatic/Military Advisor
+[*] Abduct Cardinal
+[*] Army Disarmament
+[*] Ban Slavery
+[*] Claim Cultural Hegemony
+[*] Claim Defender of Faith
+[*] Crush the Mandate
+[*] Demand Administrative/Diplomatic/Military Aides
+[*] Demand Slave Soldiers
+[*] Delegitimize Dynastic Branch
+[*] Demilitarize Borders
+[*] Destabilize Nation
+[*] Divorce of our Consort
+[*] Divorce of their Consort
+[*] Dynastic Legitimization
+[*] Economic Supremacy
+[*] Enforced Embargo
+[*] Enforced Marriage
+[*] Fleet Disarmament
+[*] Force Administrative/Diplomatic/Military Technology Sharing
+[*] Force Knowledge Sharing
+[*] Force Seppuku
+[*] Give up Cultural Hegemony
+[*] Host next Imperial Diet
+[*] Install Antipope
+[*] Lift Excommunication
+[*] Military Supremacy
+[*] Plunder Curia Coffers
+[*] Protect Religious Bretheren
+[*] Sacrifice Ruler
+[*] Seize Fleets
+[*] Seize Mercantilism
+[*] Share Maps of Africa/Asia/Europe/North America/Oceania/South America/The New World
+[*] Spread the True Faith
+[*] Strengthen the Mandate
+[*] Stop Slave Raids
+[*] Transfer Monument
+[*] Unequal Treaty
+[/list]
+
+[h1]Localisations[/h1]
+[list]
+[*] English localisation included
+[*] German localisation included
+[*] French localisation included ([u]English[/u] language)
+[*] Spanish localisation included ([u]English[/u] language)
+[/list]
+
+[h1]Compatibility[/h1]
+[list]
+[*] EU4 Version: [b]1.34[/b]
+[*] should be compatible with any DLC
+[*] should be compatible with most mods
+[list]
+[*] mods that change the on actions [i]on_new_monarch[/i] or [i]on_new_heir[/i] (in [i]common/on_actions[/i]) will either not work properly or affect the vague claim required for the [i]Fabricate Succession Claim[/i] diplomatic action (ET & EMF mods should work fine)
+[*] mods that change the on action [i]on_raid_coast[/i] (in [i]common/on_actions[/i]) will either not work properly or disable the [i]Stop Slave Raids[/i] casus belli
+[/list]
+[/list]
+
+[h1]Credits[/h1]
+Thanks to [i]Pascal[/i], [i]Chu[/i] and [i]Melvasul[/i] for ideas for some of the treaties.
+Thanks to [i]TqkeOut[/i] for the idea for the Cultural Hegemony mechanic.
+
+[h1]Other[/h1]
+[b]If you find any bugs or have any suggestions, please let us know in the comments or on our [url=https://discord.gg/tGskECCa9t]Discord[/url].[/b]
+
+Also check out other great mods on our partnered [url=https://discord.com/invite/TMP7yWA]Europa Universalis IV Discord[/url].
+
+[url=https://steamcommunity.com/workshop/filedetails/?id=1626860092][img]https://i.imgur.com/IWt15k9.png[/img][/url]
+[url=https://steamcommunity.com/sharedfiles/filedetails/?id=1626860092][img]https://i.imgur.com/cmmnMPc.png[/img][/url]

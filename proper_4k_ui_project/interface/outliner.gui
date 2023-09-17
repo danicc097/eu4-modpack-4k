@@ -1,0 +1,828 @@
+guiTypes = {
+
+	windowType = {
+		name = "outliner"
+		backGround=""
+		position = { x=18 y=185 }	
+		show_position = { x=-518 y=185 }
+		hide_position = { x=18 y=185 }	
+		animation_type = "decelerated"
+		animation_time = 250	
+		size = { x=540 y=180 }	#was x=461
+		moveable = 0
+		dontRender = ""
+		horizontalBorder= ""
+		verticalBorder= ""
+		fullScreen = no
+		orientation = "UPPER_RIGHT"	
+
+		iconType = {
+			name ="outliner_top"
+			spriteType = "GFX_outliner_top"
+			position = { x= 0 y = 0 }	#was y = 16
+		}
+
+		guiButtonType = {
+			name = "button_outliner_options"
+			quadTextureSprite ="GFX_button_plus"	#was GFX_button_plus
+			tooltip = ""
+			tooltipText =""
+			delayedTooltipText = ""
+			position = { x = -16 y = -13 }	#was x = 25 y = 16
+		}
+		
+		listboxType = {
+			name ="outliner_list"
+			position = { x = 0 y = 27 }
+			backGround=""
+			size = { x= 509 y = 29}
+			Orientation = "UPPER_LEFT"
+			horizontal = 0
+			spacing = 4
+			scrollbartype = "standardlistbox_slider"
+			offset = { x=-16 y=0 }
+			borderSize = {x = 0 y = 0}
+		}
+
+	}
+
+	iconType =
+	{
+	 	name ="outliner_bottom"
+		spriteType = "GFX_outliner_bottom"
+		position = { x= -149 y = 0 }
+	}
+	
+
+
+
+	windowType = {
+		name = "outliner_configuration"
+		backGround="Background"
+			position = { x=-869 y=200 }		#was x=-774 y= 164
+			size = { x=369 y=837 }
+			moveable = 0
+			dontRender = ""
+			horizontalBorder= ""
+			verticalBorder= ""
+			fullScreen = no
+			orientation = "UPPER_RIGHT"
+
+			guiButtonType = {
+				name = "Background"	
+				quadTextureSprite ="opaque_blue"
+				tooltip = ""	
+				tooltipText =""
+				delayedTooltipText = ""
+			}	
+
+
+
+			listboxType = 
+				{
+				name ="outliner_configuration_list"
+				position = { x = 50 y = 45 }
+				backGround=""
+				size = { x= 243 y = 693}
+				Orientation = "UPPER_LEFT"
+				horizontal = 0
+				spacing = 4
+				scrollbartype = "standardlistbox_slider"
+				offset = { x=0 y=0 }
+				borderSize = {x = 0 y = 0}
+			}
+
+
+			guiButtonType = {
+				name = "close_button"	
+				position = {x = 40 y = 745 }
+				quadTextureSprite ="button_type_7"
+				tooltip = ""	
+				tooltipText =""
+				delayedTooltipText = ""
+				buttonText = "CLOSE"
+				buttonFont = "vic_18"
+				clicksound = close_window
+			}
+
+
+
+
+		}
+
+
+
+	windowType = 
+	{
+		name = "outliner_configuration_entry"
+		backGround=""
+		position = { x=0 y=0 }	
+		size = { x=461 y=29 }
+		moveable = 0
+		dontRender = ""
+		horizontalBorder= ""
+		verticalBorder= ""
+		fullScreen = no	
+
+
+
+
+			checkboxType = {
+				name = "outliner_checkbox"
+				position = { x = -20  y = 0 }
+				quadTextureSprite ="GFX_checkbox_small"	
+				tooltip = ""
+				tooltipText =""
+				delayedTooltipText = ""
+				buttonFont = "vic_18"
+			}
+
+			#iconType =
+			#{
+			#	name ="outliner_icon"
+			#	spriteType = "GFX_outliner_icons"
+			#	position = { x= 36 y = 0 }
+			#}
+
+
+			instantTextBoxType={
+				position = {x = 18 y = 0 }
+				name = "outliner_list_text"
+				font = "vic_18"
+				borderSize = {x = 0 y = 0}	
+				maxWidth = 310
+				maxHeight = 32
+				text = ""	
+				orientation = "UPPER_LEFT"
+				format = left
+			}
+	}
+
+	windowType = 
+	{
+		name = "outliner_standard_entry"
+		backGround=""
+		position = { x=0 y=0 }
+		size = { x=504 y=32 }
+		moveable = 0
+		dontRender = ""
+		horizontalBorder= ""
+		verticalBorder= ""
+		fullScreen = no	
+
+		guiButtonType = {
+			name = "outliner_standard"
+			position = { x=0 y =0 }
+			quadTextureSprite ="GFX_outliner_standard"
+			tooltip = ""
+			tooltipText =""
+			delayedTooltipText = ""
+			buttonFont = "Main_14"
+		}
+
+		instantTextBoxType = {
+				name = "entry_text"
+				position = { x = 144 y = 0 }
+				textureFile = ""
+				font = "vic_18"
+				borderSize = {x = 7 y = 0}
+				text = ""	
+				maxWidth = 331
+				maxHeight = 25
+				alwaystransparent = yes
+				format = right
+				fixedsize = yes
+		}
+		
+		instantTextBoxType = {
+				name = "info_text"
+				position = { x = 47 y = 0 }
+				textureFile = ""
+				font = "vic_18"
+				borderSize = {x = 7 y = 0}
+				text = ""
+				maxWidth = 180
+				maxHeight = 18
+				alwaystransparent = yes
+				format = left
+				fixedsize = yes
+		}
+	}
+
+	windowType = 
+	{
+		name = "outliner_province_entry"
+		backGround=""
+		position = { x=0 y=0 }	
+		size = { x=504 y=32 }
+		moveable = 0
+		dontRender = ""
+		horizontalBorder= ""
+		verticalBorder= ""
+		fullScreen = no	
+		
+		
+
+		guiButtonType = {
+			name = "outliner_standard"
+			position = { x=0 y =0 }
+			quadTextureSprite ="GFX_outliner_standard"	
+			tooltip = ""
+			tooltipText =""
+			delayedTooltipText = ""
+			buttonFont = "vic_18"
+		}
+
+		instantTextBoxType = {
+				name = "entry_text"
+				position = { x = 144 y = 0 }
+				textureFile = ""
+				font = "vic_18"
+				borderSize = {x = 7 y = 0}
+				text = ""	
+				maxWidth = 331
+				maxHeight = 58
+				fixedsize = yes
+				alwaystransparent = yes
+				format = right
+		}
+
+		instantTextBoxType = {
+				name = "occupied"
+				position = { x = 47 y = 0 }	#was x = 65
+				textureFile = ""
+				font = "vic_18"
+				borderSize = {x = 7 y = 0}
+				text = ""	
+				maxWidth = 216	#was 94
+				maxHeight = 58
+				alwaystransparent = yes
+				format = left
+		}
+	##### CODER REMOVE
+		iconType =
+			{
+				name ="siege"
+				spriteType = "GFX_outliner_siege"
+				position = { x= 11 y = -27 }	#was x= 41
+				Orientation = "LOWER_LEFT"
+			}
+	}
+
+	windowType = 
+	{
+		name = "outliner_siege_entry"
+		backGround=""
+		position = { x=0 y=0 }	
+		size = { x=461 y=32 }
+		moveable = 0
+		dontRender = ""
+		horizontalBorder= ""
+		verticalBorder= ""
+		fullScreen = no	
+
+		guiButtonType = {
+			name = "outliner_standard"
+			position = { x=0 y =0 }
+			quadTextureSprite ="GFX_outliner_standard"	
+			tooltip = ""
+			tooltipText =""
+			delayedTooltipText = ""
+			buttonFont = "vic_18"
+		}
+
+		instantTextBoxType = {
+				name = "entry_text"
+				position = { x = 144 y = 0 }
+				textureFile = ""
+				font = "vic_18"
+				borderSize = {x = 7 y = 0}
+				text = ""	
+				maxWidth = 331
+				maxHeight = 58
+				alwaystransparent = yes
+				format = right
+				fixedsize = yes
+		}
+		
+		instantTextBoxType = {
+				name = "info_text"
+				position = { x = 47 y = 0 }
+				textureFile = ""
+				font = "vic_18"
+				borderSize = {x = 7 y = 0}
+				text = ""	
+				maxWidth = 216
+				maxHeight = 58
+				alwaystransparent = yes
+				format = left
+		}
+	}
+	
+	windowType = 
+	{
+		name = "outliner_combat_entry"
+		backGround=""
+		position = { x=0 y=0 }	
+		size = { x=461 y=32 }
+		moveable = 0
+		dontRender = ""
+		horizontalBorder= ""
+		verticalBorder= ""
+		fullScreen = no	
+
+		guiButtonType = {
+			name = "outliner_standard"
+			position = { x=0 y =0 }
+			quadTextureSprite ="GFX_outliner_standard"	
+			tooltip = ""
+			tooltipText =""
+			delayedTooltipText = ""
+			buttonFont = "Main_14"
+		}
+
+		instantTextBoxType = {
+				name = "info_text"
+				position = { x = 47 y = 0 }
+				textureFile = "" 
+				font = "vic_18"
+				borderSize = {x = 7 y = 0}
+				text = ""	
+				maxWidth = 216
+				maxHeight = 58
+				alwaystransparent = yes
+			 	format = left
+				fixedsize = yes
+		}
+		
+		instantTextBoxType = {
+				name = "entry_text"
+				position = { x = 144  y = 0 }
+				textureFile = ""
+				font = "vic_18"
+				borderSize = {x = 7 y = 0}
+				text = ""	
+				maxWidth = 331
+				maxHeight = 58
+				alwaystransparent = yes
+				format = right
+				fixedsize = yes
+		}
+
+	}
+	
+	windowType = 
+	{
+		name = "outliner_buildarmy_entry"
+		backGround=""
+		position = { x=0 y=0 }	
+		size = { x=461 y=32 } 
+		moveable = 0
+		dontRender = ""
+		horizontalBorder= ""
+		verticalBorder= ""
+		fullScreen = no	
+
+		guiButtonType = {
+			name = "outliner_standard"
+			position = { x=0 y =0 }
+			quadTextureSprite ="GFX_outliner_standard"	
+			tooltip = ""
+			tooltipText =""
+			delayedTooltipText = ""
+			buttonFont = "Main_14"
+		}
+		
+		iconType =
+		{
+			name ="unit_type"
+			spriteType = "GFX_unit_types_strip"
+			position = { x= 14  y = -9 }
+			Orientation = "UPPER_LEFT"
+			scale = 0.5
+		}
+		
+		instantTextBoxType = {
+				name = "info_text"
+				position = { x = 47 y = 0 }
+				textureFile = ""
+				font = "vic_18"
+				borderSize = {x = 7 y = 0}
+				text = ""	
+				maxWidth =184
+				maxHeight = 58
+				alwaystransparent = yes
+				format = left
+		}
+		
+		instantTextBoxType = {
+				name = "entry_text"
+				position = { x = 144 y = 0 }
+				textureFile = ""
+				font = "vic_18"
+				borderSize = {x = 7 y = 0}
+				text = ""	
+				maxWidth = 331
+				maxHeight = 58
+				alwaystransparent = yes
+				format = right
+				fixedsize = yes
+		}
+	}
+	
+	windowType = 
+	{
+		name = "outliner_buildnavy_entry"
+		backGround=""
+		position = { x=0 y=0 }	
+		size = { x=461 y=32 }
+		moveable = 0
+		dontRender = ""
+		horizontalBorder= ""
+		verticalBorder= ""
+		fullScreen = no	
+
+		guiButtonType = {
+			name = "outliner_standard"
+			position = { x=0 y =0 }
+			quadTextureSprite ="GFX_outliner_standard"	
+			tooltip = ""
+			tooltipText =""
+			delayedTooltipText = ""
+			buttonFont = "Main_14"
+		}
+
+		iconType =
+		{
+			name ="unit_type"
+			spriteType = "GFX_unit_types_strip"
+			position = { x= 14 y = -9 }
+			Orientation = "UPPER_LEFT"
+			scale = 0.5
+		}
+		
+		instantTextBoxType = {
+				name = "info_text"
+				position = { x = 47 y = 0 }
+				textureFile = ""
+				font = "vic_18"
+				borderSize = {x = 7 y = 0}
+				text = ""	
+				maxWidth = 180
+				maxHeight = 58
+				alwaystransparent = yes
+				format = left
+		}
+		
+		instantTextBoxType = {
+				name = "entry_text"
+				position = { x = 144 y = 0 }
+				textureFile = ""
+				font = "vic_18"
+				borderSize = {x = 7 y = 0}
+				text = ""	
+				maxWidth = 331
+				maxHeight = 58
+				alwaystransparent = yes
+				format = right
+				fixedsize = yes
+		}
+
+	}
+	
+	windowType = 
+	{
+		name = "outliner_buildcolony_entry"
+		backGround=""
+		position = { x=0 y=0 }	
+		size = { x=461 y=32 }
+		moveable = 0
+		dontRender = ""
+		horizontalBorder= ""
+		verticalBorder= ""
+		fullScreen = no	
+
+		guiButtonType = {
+			name = "outliner_standard"
+			position = { x=0 y =0 }
+			quadTextureSprite ="GFX_outliner_standard"	
+			tooltip = ""
+			tooltipText =""
+			delayedTooltipText = ""
+			buttonFont = "Main_14"
+		}
+
+		instantTextBoxType = {
+				name = "entry_text"
+				position = { x = 144 y = 0 }
+				textureFile = ""
+				font = "vic_18"
+				borderSize = {x = 7 y = 0}
+				text = ""	
+				maxWidth = 331
+				maxHeight = 58
+				alwaystransparent = yes
+				format = right
+				fixedsize = yes
+		}
+		
+		instantTextBoxType = {
+				name = "info_text"
+				position = { x = 47 y = 0 }
+				textureFile = ""
+				font = "vic_18"
+				borderSize = {x = 7 y = 0}
+				text = ""	
+				maxWidth = 180
+				maxHeight = 58
+				alwaystransparent = yes
+				format = left
+		}
+		iconType = {
+			name ="action"
+			spriteType = "GFX_minority_expulsion_outliner_icon"
+			position = { x= 14 y = -29 }
+			Orientation = "LOWER_LEFT"
+			alwaystransparent = yes
+			scale = 0.75
+		}
+	}
+
+	windowType = 
+	{
+		name = "outliner_merchant_entry"
+		backGround=""
+		position = { x=0 y=0 }	
+		size = { x=461 y=32 }
+		moveable = 0
+		dontRender = ""
+		horizontalBorder= ""
+		verticalBorder= ""
+		fullScreen = no	
+
+		guiButtonType = {
+			name = "outliner_standard"
+			position = { x=0 y =0 }
+			quadTextureSprite ="GFX_outliner_standard"	
+			tooltip = ""
+			tooltipText =""
+			delayedTooltipText = ""
+			buttonFont = "Main_14"
+		}
+
+		instantTextBoxType = {
+				name = "entry_text"
+				position = { x = 144 y = 0 }
+				textureFile = ""
+				font = "vic_18"
+				borderSize = {x = 7 y = 0}
+				text = ""	
+				maxWidth = 331
+				maxHeight = 29
+				alwaystransparent = yes
+				format = right
+				fixedsize = yes
+		}
+		
+		instantTextBoxType = {
+				name = "info_text"
+				position = { x = 47 y = 0 }
+				textureFile = ""
+				font = "vic_18"
+				borderSize = {x = 7 y = 0}
+				text = ""	
+				maxWidth = 144
+				maxHeight = 58
+				alwaystransparent = yes
+				format = left
+				fixedsize = yes
+		}
+		iconType = {
+			name ="action"
+			spriteType = "GFX_outliner_action"
+			position = { x= 29 y = -25 }
+			Orientation = "LOWER_LEFT"
+			frame = 1
+			alwaystransparent = yes
+		}
+	}
+	
+	windowType = 
+	{
+		name = "outliner_unit_entry"
+		backGround=""
+		position = { x=0 y=0 }
+		size = { x=461 y=32 }
+		moveable = 0
+		dontRender = ""
+		horizontalBorder= ""
+		verticalBorder= ""
+		fullScreen = no
+
+		guiButtonType = {
+			name = "outliner_standard"
+			position = { x=0 y =0 }
+			quadTextureSprite ="GFX_outliner_standard"
+			tooltip = ""
+			tooltipText =""
+			delayedTooltipText = ""
+			buttonFont = "Main_14"
+		}
+
+		instantTextBoxType = {
+				name = "entry_text"
+				position = { x = 144 y = 0 }
+				textureFile = ""
+				font = "vic_18"
+				borderSize = {x = 7 y = 0}
+				text = ""	
+				maxWidth = 331
+				maxHeight = 58
+				alwaystransparent = yes
+				format = right
+				fixedsize = yes
+		}
+		
+		instantTextBoxType = {
+				name = "info_text"
+				position = { x = 47 y = 0 }
+				textureFile = ""
+				font = "vic_18"
+				borderSize = {x = 7 y = 0}
+				text = ""	
+				maxWidth = 180
+				maxHeight = 58
+				alwaystransparent = yes
+				format = left
+		}
+		
+		iconType = {
+			name ="action"
+			spriteType = "GFX_outliner_action"
+			position = { x= 29 y = -25 }
+			Orientation = "LOWER_LEFT"
+			frame = 1
+			alwaystransparent = yes
+		}
+	}
+
+
+	windowType = 
+	{
+		name = "outliner_mp_playerlist_entry"
+		backGround=""
+		position = { x=0 y=0 }	
+		size = { x=461 y=32 }
+		moveable = 0
+		dontRender = ""
+		horizontalBorder= ""
+		verticalBorder= ""
+		fullScreen = no	
+
+		guiButtonType = {
+			name = "outliner_standard"
+			position = { x=0 y =0 }
+			quadTextureSprite ="GFX_outliner_standard"	
+			tooltip = ""
+			tooltipText =""
+			delayedTooltipText = ""
+			buttonFont = "Main_14"
+		}
+
+		iconType =
+		{
+			name ="action"
+			spriteType = "GFX_diplomacy_action_declarewar"
+			position = { x= 29 y = -29 }
+			Orientation = "LOWER_LEFT"
+			frame = 1
+			scale = 0.7
+		}
+			
+		iconType =
+		{
+			name ="is_primary_local"
+			spriteType = "GFX_coop_player"
+			position = { x= 45 y = -29 }
+			Orientation = "LOWER_LEFT"
+		}
+			
+		instantTextBoxType = {
+			name = "entry_text"
+			position = { x = 144 y = 0 }
+			textureFile = ""
+			font = "vic_18"
+			borderSize = {x = 7 y = 0}
+			text = ""	
+			maxWidth = 331
+			maxHeight = 47
+			format = right
+			fixedsize = yes
+			truncate = yes
+			alwaystransparent = yes
+		}
+		
+		instantTextBoxType = {
+			name = "info_text"
+			position = { x = 59 y = 0 }
+			textureFile = ""
+			font = "vic_18"
+			borderSize = {x = 7 y = 0}
+			text = ""	
+			maxWidth = 173
+			maxHeight = 47
+			format = left
+			fixedsize = yes
+			truncate = yes
+			alwaystransparent = yes
+		}
+
+	}
+	
+	windowType = 
+	{
+		name = "outliner_disabled_alert_entry"
+		backGround=""
+		position = { x=0 y=0 }	
+		size = { x=461 y=32 }
+		moveable = 0
+		dontRender = ""
+		horizontalBorder= ""
+		verticalBorder= ""
+		fullScreen = no	
+
+		guiButtonType = {
+			name = "outliner_standard"
+			position = { x=0 y =0 }
+			quadTextureSprite ="GFX_outliner_standard"	
+			tooltip = ""
+			tooltipText =""
+			delayedTooltipText = ""
+			buttonFont = "vic_18"
+		}
+
+		instantTextBoxType = {
+				name = "entry_text"
+				position = { x = 144 y = 0 }
+				textureFile = ""
+				font = "vic_18"
+				borderSize = {x = 7 y = 0}
+				text = ""	
+				maxWidth = 331
+				maxHeight = 58
+				alwaystransparent = yes
+				format = right
+				fixedsize = yes
+		}
+		
+		instantTextBoxType = {
+				name = "info_text"
+				position = { x = 47 y = 0 }
+				textureFile = ""
+				font = "vic_18"
+				borderSize = {x = 7 y = 0}
+				text = ""	
+				maxWidth = 461
+				maxHeight = 58
+				alwaystransparent = yes
+				format = left
+		}
+
+	}
+	
+	windowType = 
+	{
+		name = "outliner_header_entry"
+		backGround=""
+		position = { x=0 y=0 }	
+		size = { x=461 y=32 }
+		moveable = 0
+		dontRender = ""
+		horizontalBorder= ""
+		verticalBorder= ""
+		fullScreen = no	
+		
+		iconType =
+		{
+			name ="outliner_header"
+			spriteType = "GFX_outliner_header"
+			position = { x= 0 y = 0 }
+		}
+
+		instantTextBoxType = {
+				name = "entry_text"
+				position = { x = 50 y = 2 }
+				textureFile = ""
+				font = "vic_18"
+				borderSize = {x = 7 y = 0}
+				text = ""	
+				maxWidth = 324
+				maxHeight = 36
+				fixedsize = yes
+				alwaystransparent = yes
+				format = left
+		}
+
+	}
+
+}

@@ -1,0 +1,44 @@
+edict_protect_trade = {
+	potential = {
+		always = yes		#we support "potential" if modders want to have lots and just show some.
+	}
+	
+	allow = {
+		if = {
+			limit = { ai = yes }
+			is_at_war = no
+		}
+		else = {
+			always = yes
+		}
+	}
+	
+	modifier = {
+		province_trade_power_modifier = 0.50
+	}
+	
+	color = {  113 11 43 }
+	
+	
+	ai_will_do = {
+		factor = 9.0
+		modifier = {
+			factor = 0.4
+			any_province_in_state = {
+				is_capital = yes
+			}
+		}
+		modifier = {
+			factor = 1.2
+			all_province_in_state = {
+				island = yes
+			}
+		}
+		modifier = {
+			factor = 1.5
+			all_province_in_state = {
+				xorme_wealthy_region_trigger = yes
+			}
+		}
+	}
+}

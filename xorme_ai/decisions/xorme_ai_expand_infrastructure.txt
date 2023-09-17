@@ -1,0 +1,112 @@
+country_decisions = {
+	xorme_ai_expand_infrastructure_decision = {
+		potential = {
+			NOT = { is_year = 1725 }
+			has_global_flag = xorme_ai_expand_infrastructure_on
+			xorme_ai_valid_nation = yes
+			adm_power = 890
+			NOT = {
+				num_of_owned_provinces_with	= {
+					value = 10
+					OR = {
+						has_province_modifier = expand_infrastructure_1
+						has_province_modifier = expand_infrastructure_2
+						has_province_modifier = expand_infrastructure_3
+					}
+				}
+			}
+		}
+	
+		allow = {
+			any_owned_province = {
+				is_state_core = ROOT
+				OR = {
+					province_has_center_of_trade_of_level = 3
+					area_for_scope_province = {
+						is_capital_of = ROOT
+					}
+				}
+				OR = {
+					AND = {
+						development = 15
+						NOT = { has_province_modifier = expand_infrastructure_1 }
+						NOT = { has_province_modifier = expand_infrastructure_2 }
+						NOT = { has_province_modifier = expand_infrastructure_3 }
+					}
+					AND = {
+						development = 30
+						NOT = { has_province_modifier = expand_infrastructure_2 }
+						NOT = { has_province_modifier = expand_infrastructure_3 }
+					}
+					AND = {
+						development = 45
+						NOT = { has_province_modifier = expand_infrastructure_3 }
+					}
+				}
+			}
+		}
+	
+		effect = {
+			add_adm_power = -50
+			random_owned_province = {
+				limit = {
+					is_state_core = ROOT
+					OR = {
+						province_has_center_of_trade_of_level = 3
+						area_for_scope_province = {
+							is_capital_of = ROOT
+						}
+					}
+					OR = {
+						AND = {
+							development = 15
+							NOT = { has_province_modifier = expand_infrastructure_1 }
+							NOT = { has_province_modifier = expand_infrastructure_2 }
+							NOT = { has_province_modifier = expand_infrastructure_3 }
+						}
+						AND = {
+							development = 30
+							NOT = { has_province_modifier = expand_infrastructure_2 }
+							NOT = { has_province_modifier = expand_infrastructure_3 }
+						}
+						AND = {
+							development = 45
+							NOT = { has_province_modifier = expand_infrastructure_3 }
+						}
+					}
+				}
+				if = {
+					limit = {
+						NOT = { has_province_modifier = expand_infrastructure_1 }
+						NOT = { has_province_modifier = expand_infrastructure_2 }
+					}
+					add_province_modifier = {
+						name = expand_infrastructure_1
+						duration = -1
+					}
+				}
+				else_if = {
+					limit = {
+						NOT = { has_province_modifier = expand_infrastructure_2 }
+					}
+					add_province_modifier = {
+						name = expand_infrastructure_2
+						duration = -1
+					}
+					remove_province_modifier = expand_infrastructure_1
+				}
+				else = {
+					add_province_modifier = {
+						name = expand_infrastructure_3
+						duration = -1
+					}
+					remove_province_modifier = expand_infrastructure_2
+				}
+			}
+		}
+	
+		ai_will_do = {
+			factor = 100
+		}
+	}
+}

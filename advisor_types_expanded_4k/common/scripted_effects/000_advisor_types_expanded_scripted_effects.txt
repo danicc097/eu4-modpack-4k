@@ -1,0 +1,24 @@
+remove_advisor_adm_effect = {
+	remove_advisor_by_category = ADM
+}
+
+kill_advisor_by_category_effect = {
+	[[ADM]
+		custom_tooltip = ATE_KILL_ADVISOR_BY_CATEGORY_EFFECT_TT_ADM
+		hidden_effect = {
+			remove_advisor_by_category = ADM
+		}
+	]
+	[[DIP]
+		custom_tooltip = ATE_KILL_ADVISOR_BY_CATEGORY_EFFECT_TT_DIP
+		hidden_effect = {
+			remove_advisor_by_category = DIP
+		}
+	]
+	[[MIL]
+		custom_tooltip = ATE_KILL_ADVISOR_BY_CATEGORY_EFFECT_TT_MIL
+		hidden_effect = {
+			remove_advisor_by_category = MIL
+		}
+	]
+}

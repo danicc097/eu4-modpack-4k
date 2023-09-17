@@ -1,0 +1,41 @@
+#########################
+# Historic Colonization #
+#########################
+
+east_indies_col = {
+	areas = {
+		# Sumatra and Java
+		indonesian_islands_area
+		north_sumatra_area
+		batak_area
+		central_sumatra_area
+		minangkabau_area
+		south_sumatra_area
+		west_java_area
+		central_java_area
+		east_java_area
+		# Sundra Islands and Timor
+		lesser_sunda_islands_area
+		timor_area
+		# Brunei
+		brunei_area
+		kutai_area
+		kalimantan_area
+		# Others
+		indian_ocean_islands_area
+		sulawesi_area
+		south_sulawesi_area
+		molluca_area
+		spice_islands_area
+		ceram_area
+	}
+}
+philippines_col = {
+	areas = {
+		luzon_area
+		southern_luzon_area
+		palawan_area
+		visayas_area
+		mindanao_area
+		west_mindanao_area
+	}

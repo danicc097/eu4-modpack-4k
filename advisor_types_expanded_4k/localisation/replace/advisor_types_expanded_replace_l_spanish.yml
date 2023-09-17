@@ -1,0 +1,13 @@
+﻿l_spanish:
+ MODIFIER_IMPERIAL_REFORM_CATHOLIC_APPROVAL: "Aprobación de las reformas imperiales por los príncipes de la religión imperial"
+
+ has_adm_advisor_4_tooltip: "Emplea a un consejero §Yadministrativa§! con habilidad mínima §Y4§!"
+ has_adm_advisor_5_tooltip: "Emplea a un consejero §Yadministrativa§! con habilidad mínima §Y5§!"
+ has_dip_advisor_4_tooltip: "Emplea a un consejero §Ydiplomática§! on habilidad mínima §Y4§!"
+ has_dip_advisor_5_tooltip: "Emplea a un consejero §Ydiplomática§! on habilidad mínima §Y5§!"
+ has_mil_advisor_4_tooltip: "Emplea a un consejero §Ymilitar§! con habilidad mínima §Y4§!"
+ has_mil_advisor_5_tooltip: "Emplea a un consejero §Ymilitar§! con habilidad mínima §Y5§!"
+
+ ATE_KILL_ADVISOR_BY_CATEGORY_EFFECT_TT_ADM: "Muere el §Y[Root.Adm_Advisor.GetTitle]§! §Y[Root.Adm_Advisor.GetName]§!."
+ ATE_KILL_ADVISOR_BY_CATEGORY_EFFECT_TT_DIP: "Muere el §Y[Root.Dip_Advisor.GetTitle]§! §Y[Root.Dip_Advisor.GetName]§!."
+ ATE_KILL_ADVISOR_BY_CATEGORY_EFFECT_TT_MIL: "Muere el §Y[Root.Mil_Advisor.GetTitle]§! §Y[Root.Mil_Advisor.GetName]§!."

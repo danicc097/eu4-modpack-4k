@@ -1,0 +1,105 @@
+fee_trading_fair_province_modifier = {
+	trade_value_modifier = 0.10
+	trade_goods_size_modifier = 0.10
+	local_development_cost = -0.10
+}
+fee_trading_fair_origin = {
+	trade_value_modifier = 0.20
+	trade_goods_size_modifier = 0.20
+	local_development_cost = -0.20
+}
+
+fee_almighty_protection = {
+	global_missionary_strength = 0.01
+	stability_cost_modifier = -0.10
+	global_institution_spread = 0.10
+	monthly_splendor = 1
+	mercenary_cost = -0.20
+	embracement_cost = -0.20
+	advisor_cost = -0.20
+	interest = -1
+	missionary_maintenance_cost = -0.10
+	manpower_recovery_speed = 0.25
+	defensiveness = 0.10
+	siege_ability = 0.05
+	spy_offence = 0.10
+	improve_relation_modifier = 0.25
+	global_unrest = -1
+	republican_tradition = 0.5
+	legitimacy = 1
+	horde_unity = 1
+	meritocracy = 1
+	devotion = 1
+	ae_impact = -0.25
+	governing_capacity_modifier = 0.25
+}
+fee_solemn_hymn = {
+	global_missionary_strength = 0.01
+	global_institution_spread = 0.10
+	mercenary_cost = -0.20
+	advisor_cost = -0.20
+	missionary_maintenance_cost = -0.10
+	defensiveness = 0.10
+	spy_offence = 0.10
+	global_unrest = -1
+	ae_impact = -0.25
+}
+fee_angelic_blessing = {
+	global_missionary_strength = 0.01
+	mercenary_cost = -0.20
+	missionary_maintenance_cost = -0.10
+	spy_offence = 0.10
+	ae_impact = -0.25
+}
+fee_kiss_luck = {
+	global_missionary_strength = 0.01
+	missionary_maintenance_cost = -0.10
+	ae_impact = -0.25
+}
+fee_ruinous_powers = {
+	global_missionary_strength = -0.01
+	stability_cost_modifier = 0.10
+	global_institution_spread = -0.10
+	monthly_splendor = -1
+	mercenary_cost = 0.20
+	embracement_cost = 0.20
+	advisor_cost = 0.20
+	interest = 1
+	missionary_maintenance_cost = 0.10
+	manpower_recovery_speed = -0.25
+	defensiveness = -0.10
+	siege_ability = -0.05
+	spy_offence = -0.10
+	improve_relation_modifier = -0.25
+	global_unrest = 1
+	republican_tradition = -0.5
+	legitimacy = -1
+	horde_unity = -1
+	meritocracy = -1
+	devotion = -1
+	ae_impact = 0.25
+	governing_capacity_modifier = -0.25
+}
+fee_demonic_embrace = {
+	global_missionary_strength = -0.01
+	global_institution_spread = -0.10
+	mercenary_cost = 0.20
+	advisor_cost = 0.20
+	missionary_maintenance_cost = 0.10
+	defensiveness = -0.10
+	spy_offence = -0.10
+	global_unrest = 1
+	ae_impact = 0.25
+}
+fee_ancient_curse = {
+	global_missionary_strength = -0.01
+	mercenary_cost = 0.20
+	missionary_maintenance_cost = 0.10
+	spy_offence = -0.10
+	ae_impact = 0.25
+}
+fee_witch_eye = {
+	global_missionary_strength = -0.01
+	missionary_maintenance_cost = 0.10
+	ae_impact = 0.25
+}

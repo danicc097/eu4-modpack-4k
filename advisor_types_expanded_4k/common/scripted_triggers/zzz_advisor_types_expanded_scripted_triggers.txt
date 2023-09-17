@@ -1,0 +1,71 @@
+############################################
+### Compatibility with Advisors Expanded ###
+############################################
+# usage:
+## has_advisors_expanded_advisor = { adm = yes skill = 3 }
+### Advisors Expanded has this trigger as well, so if active it will overwrite this one. Otherwise it will return false by using the below.
+has_advisors_expanded_advisor = {
+	hidden_trigger = {
+		always = no
+		[[adm]
+			if = {
+				limit = {
+					always = $adm$
+				}
+				num_of_cities = $skill$
+			}
+		]
+		[[dip]
+			if = {
+				limit = {
+					always = $dip$
+				}
+				num_of_cities = $skill$
+			}
+		]
+		[[mil]
+			if = {
+				limit = {
+					always = $mil$
+				}
+				num_of_cities = $skill$
+			}
+		]
+	}
+}
+
+##############################################
+### Compatibility with Flavour Universalis ###
+##############################################
+# usage:
+## has_flavor_universalis_advisor  = { adm = yes skill = 3 }
+### Flavor Universalis has this trigger as well, so if active it will overwrite this one. Otherwise it will return false by using the below.
+has_flavor_universalis_advisor  = {
+	hidden_trigger = {
+		always = no
+		[[adm]
+			if = {
+				limit = {
+					always = $adm$
+				}
+				num_of_cities = $skill$
+			}
+		]
+		[[dip]
+			if = {
+				limit = {
+					always = $dip$
+				}
+				num_of_cities = $skill$
+			}
+		]
+		[[mil]
+			if = {
+				limit = {
+					always = $mil$
+				}
+				num_of_cities = $skill$
+			}
+		]
+	}
+}

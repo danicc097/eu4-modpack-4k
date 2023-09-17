@@ -1,0 +1,852 @@
+guiTypes = {
+
+	#x is minimum resolution height for this country view to increase to large size
+	#y is the size increase for lists and distance to move for buttons at the bottom of the country view
+	positionType =
+	{
+		name ="countrydecisionsview_scaling_large_min_inc"
+		position = { x= 1620 y = 259 }
+	}
+	
+	#x is minimum resolution height for this country view to increase to huge size
+	#y is the size increase for lists and distance to move for buttons at the bottom of the country view
+	positionType = {
+		name ="countrydecisionsview_scaling_huge_min_inc"
+		position = { x= 1944 y = 565 }
+	}
+
+	windowType = {
+		name = "countrydecisionsview"
+		position = { x=0 y=252 }
+		#position = { x=-1080 y=252 }	
+		show_position = { x=0 y =252 }
+		hide_position = { x=-1080 y =252 }	
+		animation_type = "decelerated"
+		animation_time = 10		
+		size = { x=1843 y=180 }
+		moveable = 0
+		Orientation = "UPPER_LEFT"
+		upsound = tab_decisions
+		
+		iconType =
+		{
+			name ="domesticpanel_bg"
+			if_resolution = {
+				max_height = 867
+				spriteType = "GFX_country_decision_view_bg"
+			}
+			if_resolution = {
+				min_height = 868
+				max_height = 1047
+				spriteType = "GFX_country_decision_view_bg_large"
+			}
+			if_resolution = {
+				min_height = 1048
+				spriteType = "GFX_country_decision_view_bg_huge"
+			}	
+			position = { x= -13 y = -18 }
+			Orientation = "UPPER_LEFT"
+
+		}
+		
+		guiButtonType = {
+			name = "close_button"
+			position = { x = 925 y = -2 }
+			quadTextureSprite ="GFX_closebutton2"	
+			shortcut = "ESCAPE"
+			Orientation = "UPPER_LEFT"
+			clicksound = close_window
+		}		
+		
+		instantTextBoxType = {
+			name = "window_title"
+			position = { x = 27 y =140 }
+			textureFile = ""
+			font = "vic_36"
+			borderSize = {x = 7 y = 7}	
+			text = "HEADER_DECISIONS"	
+			maxWidth = 922
+			maxHeight = 58
+			format = centre
+		}
+
+		windowType = {
+			name = "policies_window"
+			backGround=""
+			position = { x=0 y=207 }
+			size = { x=1843 y=180 }
+			moveable = 0
+			dontRender = ""
+			horizontalBorder= ""
+			verticalBorder= ""
+			fullScreen = no
+			
+			instantTextBoxType = {
+				name = "decisions_label"
+				position = { x = 313 y = 4 }
+				format = centre
+				textureFile = ""
+				font = "vic_22"
+				borderSize = {x = 7 y = 0}
+				text = "COUNTRY_POLICIES"	
+				maxWidth = 360
+				maxHeight = 29	
+				Orientation = "UPPER_LEFT"
+			}
+
+			iconType =
+			{
+				name ="adm_cost_icon"
+				spriteType = "GFX_icon_powers_administrative"
+				position = { x= 43 y = 83 }
+				Orientation = "UPPER_LEFT"
+			}
+
+			iconType =
+			{
+				name ="dip_cost_icon"
+				spriteType = "GFX_icon_powers_diplomatic"
+				position = { x= 43 y = 167 }
+				Orientation = "UPPER_LEFT"
+			}
+
+			iconType =
+			{
+				name ="mil_cost_icon"
+				spriteType = "GFX_icon_powers_military"
+				position = { x= 41 y = 248 }
+				Orientation = "UPPER_LEFT"
+			}
+
+			iconType =
+			{
+				name ="adm_capacity_icon"
+				spriteType = "GFX_policy_possible_adm"
+				position = { x= 34 y = 40 }
+				scale = 0.6
+				Orientation = "UPPER_LEFT"
+			}
+
+			iconType =
+			{
+				name ="dip_capacity_icon"
+				spriteType = "GFX_policy_possible_dip"
+				position = { x= 34 y = 124 }
+				scale = 0.6
+				Orientation = "UPPER_LEFT"
+			}
+
+			iconType =
+			{
+				name ="mil_capacity_icon"
+				spriteType = "GFX_policy_possible_mil"
+				position = { x= 34 y = 205 }
+				scale = 0.6
+				Orientation = "UPPER_LEFT"
+			}
+
+			instantTextBoxType = {
+				name = "adm_cost"
+				position = { x = 83 y = 94 }
+				format = centre
+				textureFile = ""
+				font = "vic_22"
+				borderSize = {x = 7 y = 0}
+				text = "-2"	
+				maxWidth = 54
+				maxHeight = 43
+				Orientation = "UPPER_LEFT"
+			}
+
+			instantTextBoxType = {
+				name = "dip_cost"
+				position = { x = 83 y = 175 }
+				format = centre
+				textureFile = ""
+				font = "vic_22"
+				borderSize = {x = 7 y = 0}
+				text = "-2"	
+				maxWidth = 54
+				maxHeight = 43
+				Orientation = "UPPER_LEFT"
+			}
+
+			instantTextBoxType = {
+				name = "mil_cost"
+				position = { x = 83 y = 259 }
+				format = centre
+				textureFile = ""
+				font = "vic_22"
+				borderSize = {x = 7 y = 0}
+				text = "-2"	
+				maxWidth = 54
+				maxHeight = 43
+				Orientation = "UPPER_LEFT"
+			}
+
+			instantTextBoxType = {
+				name = "adm_capacity"
+				position = { x = 83 y = 54 }
+				format = centre
+				textureFile = ""
+				font = "vic_22"
+				borderSize = {x = 7 y = 0}
+				text = "-2"	
+				maxWidth = 54
+				maxHeight = 43
+				Orientation = "UPPER_LEFT"
+			}
+
+			instantTextBoxType = {
+				name = "dip_capacity"
+				position = { x = 83 y = 135 }
+				format = centre
+				textureFile = ""
+				font = "vic_22"
+				borderSize = {x = 7 y = 0}
+				text = "-2"	
+				maxWidth = 54
+				maxHeight = 43
+				Orientation = "UPPER_LEFT"
+			}
+
+			instantTextBoxType = {
+				name = "mil_capacity"
+				position = { x = 83 y = 220 }
+				format = centre
+				textureFile = ""
+				font = "vic_22"
+				borderSize = {x = 7 y = 0}
+				text = "-2"	
+				maxWidth = 54
+				maxHeight = 43
+				Orientation = "UPPER_LEFT"
+			}
+			
+			OverlappingElementsBoxType = {
+				name = "adminstrative_policies"
+				position = { x = 139 y = 32 }
+				size = { x = 873 y = 115 }
+				format = center
+				spacing = 90
+			}
+			OverlappingElementsBoxType = {
+				name = "diplomacy_policies"
+				position = { x = 139 y = 115 }
+				size = { x = 873 y = 115 }
+				format = center
+				spacing = 90
+			}
+			OverlappingElementsBoxType = {
+				name = "military_policies"
+				position = { x = 139 y = 198 }
+				size = { x = 873 y = 115 }
+				format = center
+				spacing = 90
+			}
+
+			instantTextBoxType = {
+				name = "modifiers_title"
+				position = { x = 196 y = 310 }
+				format = centre
+				textureFile = ""
+				font = "vic_22"
+				borderSize = {x = 7 y = 0}
+				text = "-2"	
+				maxWidth = 600
+				maxHeight = 43
+				text = "COUNTRY_POLICIES_EFFECT"	
+				Orientation = "UPPER_LEFT"
+			}
+
+			listBoxType = {
+				name ="modifiers_description_list"
+				position = { x = 45 y = 337 }
+				size = { x = 882 y = 144 }
+				backGround=""
+				Orientation = "UPPER_LEFT"
+				horizontal = 0
+				spacing = 4
+				borderSize = {x = 9 y = 9}
+				scrollbartype = "standardlistbox_slider"
+			}
+		}	
+
+
+		windowType = {
+			name = "decisions_window"
+			backGround=""
+			position = { x=22 y=684 }
+			size = { x=1843 y=180 }
+			moveable = 0
+			dontRender = ""
+			horizontalBorder= ""
+			verticalBorder= ""
+			fullScreen = no
+			
+			instantTextBoxType = {
+				name = "decisions_label"
+				position = { x = 286 y = 50 }
+				format = centre
+				textureFile = ""
+				font = "vic_22"
+				borderSize = {x = 7 y = 0}
+				text = "COUNTRY_DECISIONS"	
+				maxWidth = 360
+				maxHeight = 29	
+				Orientation = "UPPER_LEFT"
+			}
+			
+			listboxType = 
+			{
+				name ="decisions_listbox"
+				position = { x=67 y =101}
+				backGround=""
+				
+				if_resolution = {
+				max_height = 867
+				size = { x=810 y =216}
+				}
+				if_resolution = {
+				min_height = 868
+				max_height = 1047
+				size = { x=810 y =477}
+				}
+				if_resolution = {
+				min_height = 1048
+				size = { x=810 y =781}
+				}					
+				
+				Orientation = "UPPER_LEFT"
+				horizontal = 0
+				spacing = 2
+				scrollbartype = "standardlistbox_slider"
+				borderSize = {x = 18 y = 18}
+			}	
+		}	
+
+		### Select new policy window.
+		windowType = {
+			name = "new_policy_window"
+			position = { x=0 y=-16 }	
+			size = { x=540 y=720 }
+			moveable = 0
+			Orientation = "UPPER_LEFT"
+		
+			iconType =
+			{
+				name ="bg"
+				spriteType = "GFX_choose_idea_bg"
+				position = { x= 0 y = 0 }
+				Orientation = "UPPER_LEFT"
+			}
+
+			instantTextBoxType= {
+				position = { x=616 y =81}
+				name = "policy_title"
+				font = "vic_29"
+				borderSize = {x = 0 y = 0}	
+				maxWidth = 612
+				maxHeight = 36
+				text = "POLICYVIEW_TITLE"	
+				orientation = "UPPER_LEFT"
+				format = center
+			}			
+			
+			instantTextBoxType= {
+				position = { x=50 y =158}
+				name = "adm_title"
+				font = "vic_18"
+				borderSize = {x = 0 y = 0}	
+				maxWidth = 540
+				maxHeight = 36
+				text = "POLICYVIEW_ADMINISTRATIVE"	
+				orientation = "UPPER_LEFT"
+				format = center
+			}	
+
+			instantTextBoxType= {
+				position = { x=515 y =158}
+				name = "adm_count"
+				font = "vic_18"
+				borderSize = {x = 0 y = 0}	
+				maxWidth = 108
+				maxHeight = 36
+				text = ""	
+				orientation = "UPPER_LEFT"
+				format = left
+			}				
+
+			instantTextBoxType= {
+				position = { x=634 y =158}
+				name = "dip_title"
+				font = "vic_18"
+				borderSize = {x = 0 y = 0}	
+				maxWidth = 540
+				maxHeight = 36
+				text = "POLICYVIEW_DIPLOMATIC"	
+				orientation = "UPPER_LEFT"
+				format = center
+			}
+			
+			instantTextBoxType= {
+				position = { x=1100 y =158}
+				name = "dip_count"
+				font = "vic_18"
+				borderSize = {x = 0 y = 0}	
+				maxWidth = 108
+				maxHeight = 36
+				text = ""	
+				orientation = "UPPER_LEFT"
+				format = left
+			}		
+
+			instantTextBoxType= {
+				position = { x=1215 y =158}
+				name = "mil_title"
+				font = "vic_18"
+				borderSize = {x = 0 y = 0}	
+				maxWidth = 540
+				maxHeight = 36
+				text = "POLICYVIEW_MILITARY"	
+				orientation = "UPPER_LEFT"
+				format = center
+			}
+			
+			instantTextBoxType= {
+				position = { x=1676 y =158}
+				name = "mil_count"
+				font = "vic_18"
+				borderSize = {x = 0 y = 0}	
+				maxWidth = 108
+				maxHeight = 36
+				text = ""	
+				orientation = "UPPER_LEFT"
+				format = left
+			}		
+			
+			iconType =
+			{
+				name ="adm_cost"
+				spriteType = "GFX_icon_powers_administrative"
+				position = { x= 65 y = 144}
+				Orientation = "UPPER_LEFT"
+			}	
+			iconType =
+			{
+				name ="dip_cost"
+				spriteType = "GFX_icon_powers_diplomatic"
+				position = { x= 648 y = 144 }
+				Orientation = "UPPER_LEFT"
+			}
+			iconType =
+			{
+				name ="mil_cost"
+				spriteType = "GFX_icon_powers_military"
+				position = { x= 1229 y = 144 }
+				Orientation = "UPPER_LEFT"
+			}
+
+					
+			listboxType = 
+			{
+				name ="adm_list"
+				position = { x = 32 y = 207 }
+				backGround=""
+				if_resolution = {
+					max_height = 899
+					size = { x=558 y=900 }
+				}
+				if_resolution = {
+					max_height = 1079
+					min_height = 900
+					size = { x=558 y=900 }
+				}
+				if_resolution = {
+					min_height = 1080
+					size = { x=558 y=1404 }
+				}
+				Orientation = "UPPER_LEFT"
+				horizontal = 0
+				spacing = 0
+				scrollbartype = "standardlistbox_slider"
+				borderSize = {x = 0 y = 0}
+			}
+			listboxType = 
+			{
+				name ="dip_list"
+				position = { x = 616 y = 207 }
+				backGround=""
+				if_resolution = {
+					max_height = 899
+					size = { x=558 y=900 }
+				}
+				if_resolution = {
+					max_height = 1079
+					min_height = 900
+					size = { x=558 y=900 }
+				}
+				if_resolution = {
+					min_height = 1080
+					size = { x=558 y=1404 }
+				}
+				Orientation = "UPPER_LEFT"
+				horizontal = 0
+				spacing = 0
+				scrollbartype = "standardlistbox_slider"
+				borderSize = {x = 0 y = 0}
+			}
+			listboxType = 
+			{
+				name ="mil_list"
+				position = { x = 1197 y = 207 }
+				backGround=""
+				if_resolution = {
+					max_height = 899
+					size = { x=558 y=900 }
+				}
+				if_resolution = {
+					max_height = 1079
+					min_height = 900
+					size = { x=558 y=900 }
+				}
+				if_resolution = {
+					min_height = 1080
+					size = { x=558 y=1404 }
+				}
+				Orientation = "UPPER_LEFT"
+				horizontal = 0
+				spacing = 0
+				scrollbartype = "standardlistbox_slider"
+				borderSize = {x = 0 y = 0}
+			}
+
+			instantTextBoxType={
+				position = { x = 32 y = 207 }
+				name = "no_policy_explanation"
+				borderSize = {x = 0 y = 0 }	
+				maxWidth = 1260
+				maxHeight = 36
+				orientation = "CENTER"
+				format = center
+				font = "vic_18"
+			}
+			
+			guiButtonType = {
+				name = "back"
+				if_resolution = {
+					max_height = 899
+					position = { x= 810 y = 1080 }
+				}
+				if_resolution = {
+					max_height = 1079
+					min_height = 900
+					position = { x= 810 y = 1080 }
+				}
+				if_resolution = {
+					min_height = 1080
+				position = { x= 810 y = 1589 }
+				}
+				quadTextureSprite ="GFX_button_straight_87_32"	
+				buttonText = "BACK"
+				buttonFont = "vic_18"
+				shortcut = "z"			
+				extra_shortcut = "ESCAPE"
+				clicksound = back_click
+			}
+		}
+			
+	}
+
+	windowType = {
+		name = "countrydecisionsview_decision_entry"
+		backGround=""
+		position = { x=0 y=0 }	
+		size = { x=540 y= 50 }
+		moveable = 0
+		dontRender = ""
+		horizontalBorder= ""
+		verticalBorder= ""
+		fullScreen = no
+		
+		iconType = {
+			name = "decisions_banner"
+			spriteType ="GFX_nation_decisions_banner"	
+			position = { x= -27 y = -31 }
+			orientation = "UPPER_LEFT"
+		}
+		
+		iconType = {
+			name = "decision_icon"
+			spriteType ="GFX_info_decision"	
+			position = { x=0 y = -31}
+			orientation = "UPPER_LEFT"
+		}
+		
+		instantTextBoxType= {
+			position = { x=43 y = -11}
+			name = "title"
+			font = "vic_18"
+			borderSize = {x = 0 y = 0}	
+			maxWidth = 504
+			maxHeight = 36
+			text = ""	
+			orientation = "UPPER_LEFT"
+			format = left
+		}
+		guiButtonType = {
+			name = "decision_checkbox"
+			position = { x = 594  y = -9 }
+			quadTextureSprite ="GFX_checkbox_small"	
+			tooltip = ""
+			tooltipText =""
+			delayedTooltipText = ""
+			buttonFont = ""
+		}		
+		iconType = {
+			name = "info_icon"
+			spriteType ="GFX_info_decision"	
+			position = { x=626 y = -20}
+			orientation = "UPPER_LEFT"
+		}
+		guiButtonType = {
+			name = "select_button"
+			position = { x=675 y = -22}
+			quadTextureSprite ="GFX_execute_decision"	
+			tooltip = ""
+			tooltipText =""
+			delayedTooltipText = ""
+			buttonFont = ""
+			clicksound = decision
+		}
+	}	
+	
+	windowType = {
+		name = "countrydecisionsview_major_decision_entry"
+		backGround=""
+		position = { x=0 y= 38 }	
+		size = { x=540 y= 50 }
+		moveable = 0
+		dontRender = ""
+		horizontalBorder= ""
+		verticalBorder= ""
+		fullScreen = no
+		
+		iconType = {
+			name = "decisions_banner"
+			spriteType ="GFX_nation_major_decisions_banner"	
+			position = { x= -27 y = -31 }
+			orientation = "UPPER_LEFT"
+		}
+		
+		iconType = {
+			name = "decision_icon"
+			spriteType ="GFX_info_decision"	
+			position = { x=0 y = -31 }
+			orientation = "UPPER_LEFT"
+		}
+		
+		instantTextBoxType= {
+			position = { x=43 y = -11}
+			name = "title"
+			font = "vic_18"
+			borderSize = {x = 0 y = 0}	
+			maxWidth = 504
+			maxHeight = 36
+			text = ""	
+			orientation = "UPPER_LEFT"
+			format = left
+		}
+		guiButtonType = {
+			name = "decision_checkbox"
+			position = { x = 594  y = -9 }
+			quadTextureSprite ="GFX_checkbox_small"	
+			tooltip = ""
+			tooltipText =""
+			delayedTooltipText = ""
+			buttonFont = ""
+		}			
+		iconType = {
+			name = "info_icon"
+			spriteType ="GFX_info_decision"	
+			position = { x=626 y =-20}
+			orientation = "UPPER_LEFT"
+		}		
+		guiButtonType = {
+			name = "select_button"
+			position = { x=675 y =-22}
+			quadTextureSprite ="GFX_execute_decision"	
+			tooltip = ""
+			tooltipText =""
+			delayedTooltipText = ""
+			buttonFont = ""
+			clicksound = decision
+		}
+	}	
+
+	###
+	
+	windowType = {
+		name = "countrydecisionsview_activepolicy"
+		backGround =""
+		position = { x=0 y=0 }	
+		size = { x=180  y=58 }
+		moveable = 0
+		dontRender = ""
+		horizontalBorder = ""
+
+		guiButtonType =
+		{
+			name ="button1"
+			quadTextureSprite = "GFX_idea_economic_ideas"
+			position = { x= -45 y = 0 }
+			Orientation = "UPPER_LEFT"
+			clicksound = close_window
+		}
+
+		guiButtonType =
+		{
+			name ="button2"
+			quadTextureSprite = "GFX_idea_economic_ideas"
+			position = { x= 38 y = 0 }
+			Orientation = "UPPER_LEFT"
+			clicksound = close_window
+		}
+		
+		iconType = {
+			name ="policy_icon_frame"
+			spriteType = "GFX_policy_icon_frame"
+			position = { x= -34 y = 14 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		
+		
+	}
+
+	windowType = {
+		name = "countrydecisionsview_possiblepolicy"
+		backGround =""
+		position = { x=0 y=0 }	
+		size = { x=180  y=58 }
+		moveable = 0
+		dontRender = ""
+		horizontalBorder = ""
+
+		
+		guiButtonType = {
+			name ="button"
+			quadTextureSprite = "GFX_policy_icon_frame_empty"
+			position = { x= -34 y = 14 }
+			Orientation = "UPPER_LEFT"
+			clicksound = close_window
+		}
+		
+	
+	}
+
+	windowType = {
+		name = "countrydecisionsview_policymodifier_row"
+		backGround =""
+		position = { x = 45 y = 337 }
+		size = { x=900 y=43 }
+		moveable = 0
+		horizontalBorder = ""
+		fullScreen = no
+		dontRender = ""
+
+		listBoxType = {
+			name ="list"
+			position = { x = 0 y = 0 }
+			size = { x = 900 y = 180 }
+			backGround=""
+			Orientation = "UPPER_LEFT"
+			horizontal = 1
+			spacing = 0
+			borderSize = {x = 0 y = 0}
+		}
+	}
+
+	windowType = {
+		name = "countrydecisionsview_policymodifier"
+		backGround =""
+		position = { x=0 y=0 }	
+		size = { x=180  y=36 }
+		moveable = 0
+		dontRender = ""
+		horizontalBorder = ""
+		fullScreen = no
+
+		iconType = {
+			name ="modifier_icon"
+			spriteType = "GFX_idea_empty"
+			position = { x= 0 y = 0 }
+			Orientation = "UPPER_LEFT"
+			scale = 0.5
+		}
+
+		instantTextBoxType= {
+			position = { x=63 y =18}
+			name = "modifier_value"
+			font = "vic_18"
+			borderSize = {x = 0 y = 0}	
+			maxWidth = 117
+			maxHeight = 36
+			text = "HELLO"
+			orientation = "UPPER_LEFT"
+			format = left
+		}	
+	}
+	
+	windowType = {
+		name = "countrydecisionsview_pickpolicy"
+		backGround =""
+		position = { x=0 y=0 }	
+		size = { x=43 y=126 }
+		moveable = 0
+		dontRender = ""
+		horizontalBorder = ""
+
+		guiButtonType =
+		{
+			name ="select"
+			spriteType = "GFX_policy_entry_bg"
+			position = { x= 11 y = -7 }
+			Orientation = "UPPER_LEFT"
+		}		
+		
+		iconType =
+		{
+			name ="policy_icon"
+			spriteType = "GFX_idea_empty"
+			position = { x= 448 y = 2 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes		
+		}
+		
+		instantTextBoxType= {
+			position = { x=23 y =4}
+			name = "title"
+			font = "vic_18"
+			borderSize = {x = 0 y = 0}	
+			maxWidth = 612
+			maxHeight = 36
+			text = ""	
+			orientation = "UPPER_LEFT"
+			format = left
+			alwaystransparent = yes
+		}	
+		instantTextBoxType= {
+			position = { x=29 y =43}
+			name = "effect"
+			font = "vic_18"
+			borderSize = {x = 0 y = 0}	
+			maxWidth = 441
+			maxHeight = 68
+			text = ""	
+			orientation = "UPPER_LEFT"
+			format = left
+			fixedsize = yes
+		}
+	}
+}

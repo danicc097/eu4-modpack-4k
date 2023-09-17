@@ -1,0 +1,253 @@
+country_decisions = {
+	ate_advisor_missionary_spread_christianity_decision = {
+		potential = {
+			religion_group = christian
+			NOT = { has_country_modifier = ate_advisor_missionary_spread_christianity_modifier }
+		}
+		allow = {
+			ADM = 3
+			ate_advisor_missionary = 2
+		}
+		effect = {
+			add_country_modifier = {
+				name = ate_advisor_missionary_spread_christianity_modifier
+				duration = -1
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	ate_advisor_court_physician_alcohol_therapy_decision = {
+		potential = {
+			has_dlc = "Rights of Man"
+			has_regency = no
+			ruler_has_personality = drunkard_personality
+			NOT = { has_ruler_flag = ate_advisor_court_physician_alcohol_therapy }
+		}
+		allow = {
+			ruler_has_personality = drunkard_personality
+			adm_power = 50
+			advisor = ate_advisor_court_physician
+		}
+		effect = {
+			set_ruler_flag = ate_advisor_court_physician_alcohol_therapy
+			add_adm_power = -50
+			custom_tooltip = ATE_ADVISOR_COURT_PHYSICIAN_ALCOHOL_THERAPY_DECISION_TT
+			hidden_effect = {
+				capital_scope = {
+					add_province_triggered_modifier = ate_advisor_court_physician_alcohol_therapy_modifier
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 0.5
+			modifier = {
+				factor = 0
+				ruler_age = 40
+			}
+			modifier = {
+				factor = 0
+				any_country = {
+					tech_difference = 1
+				}
+			}
+		}
+	}
+
+	ate_advisor_steward_centralization_act_decision = {
+		potential = {
+			NOT = { has_country_modifier = ate_advisor_steward_centralization_act_modifier }
+		}
+		allow = {
+			OR = {
+				absolutism = 30
+				crown_land_share = 60
+			}
+			advisor = ate_advisor_steward
+		}
+		effect = {
+			add_country_modifier = {
+				name = ate_advisor_steward_centralization_act_modifier
+				duration = -1
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	ate_advisor_blockade_specialist_naval_siege_tactics_decision = {
+		potential = {
+			num_of_total_ports = 1
+			NOT = { has_country_modifier = ate_advisor_blockade_specialist_naval_siege_tactics_modifier }
+		}
+		allow = {
+			has_regency = no
+			ate_advisor_blockade_specialist = 3
+			dip_power = 50
+			DIP = 3
+			navy_size = 75
+			OR = {
+				num_of_heavy_ship = 30
+				num_of_galley = 50
+			}
+		}
+		effect = {
+			add_dip_power = -50
+			add_country_modifier = {
+				name = ate_advisor_blockade_specialist_naval_siege_tactics_modifier
+				duration = -1
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	ate_advisor_spymaster_support_rebels_decision = {
+		potential = {
+			OR = {
+				AND = {
+					NOT = { has_global_flag = extended_timeline_mod }
+					adm_tech = 3
+				}
+				AND = {
+					has_global_flag = extended_timeline_mod
+					adm_tech = 48
+				}
+			}
+			NOT = { has_country_modifier = ate_advisor_spymaster_support_rebels_decision_modifier }
+		}
+		allow = {
+			advisor = spymaster
+			OR = {
+				AND = {
+					full_idea_group = spy_ideas
+					custom_trigger_tooltip = {
+						tooltip = ATE_ADVISOR_SPYMASTER_SUPPORT_REBELS_DECISION_TT_SPY_IDEAS
+						any_known_country = {
+							has_spy_network_from = {
+								who = ROOT
+								value = 30
+							}
+						}
+					}
+				}
+				AND = {
+					spymaster = 3
+					custom_trigger_tooltip = {
+						tooltip = ATE_ADVISOR_SPYMASTER_SUPPORT_REBELS_DECISION_TT
+						any_known_country = {
+							has_spy_network_from = {
+								who = ROOT
+								value = 75
+							}
+						}
+					}
+				}
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = ate_advisor_spymaster_support_rebels_decision_modifier
+				duration = -1
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	ate_advisor_state_theorist_machiavellianism_decision = {
+		potential = {
+			is_absolutism_active = yes
+			is_tribal = no
+			NOT = { government = native }
+			primitives = no
+			NOT = { has_country_modifier = ate_advisor_state_theorist_machiavellianism_decision_modifier }
+		}
+		allow = {
+			if = {
+				limit = {
+					OR = {
+						has_dlc = "Common Sense"
+						uses_devotion = no
+					}
+				}
+				legitimacy_equivalent = 80
+			}
+			if = {
+				limit = {
+					has_dlc = "Emperor"
+				}
+				OR = {
+					AND = {
+						absolutism = 30
+						advisor = ate_advisor_state_theorist
+					}
+					AND = {
+						is_revolutionary = yes
+						revolutionary_zeal = 30
+						advisor = ate_advisor_revolutionist
+					}
+				}
+			}
+			else = {
+				absolutism = 30
+				advisor = ate_advisor_state_theorist
+			}
+		}
+		effect = {
+			add_legitimacy_equivalent = { amount = -25 republican_tradition = -15 }
+			add_country_modifier = {
+				name = ate_advisor_state_theorist_machiavellianism_decision_modifier
+				duration = -1
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				OR = {
+					unrest = -3
+					has_global_modifier_value = {
+						which = max_absolutism
+						value = 75
+					}
+				}
+			}
+		}
+	}
+
+	ate_advisor_witch_hunter_hexenhammer_decision = {
+		potential = {
+			religion_group = christian
+			NOT = { has_country_modifier = ate_advisor_witch_hunter_hexenhammer_decision_modifier }
+		}
+		allow = {
+			ADM = 3
+			if = {
+				limit = {
+					has_dlc = "Rights of Man"
+				}
+				OR = {
+					ruler_has_personality = zealot_personality
+					ruler_has_personality = pious_personality
+					is_defender_of_faith = yes
+				}
+			}
+			ate_advisor_witch_hunter = 2
+		}
+		effect = {
+			add_country_modifier = {
+				name = ate_advisor_witch_hunter_hexenhammer_decision_modifier
+				duration = -1
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}

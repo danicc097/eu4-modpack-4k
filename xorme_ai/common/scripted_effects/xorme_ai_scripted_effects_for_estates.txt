@@ -1,0 +1,6 @@
+select_xorme_ai_estate = {
+	set_country_flag = xorme_ai_estate_$flag$
+	[[estate_action]
+	$estate_action$ = xorme_ai_estate
+	]
+}

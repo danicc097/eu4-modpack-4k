@@ -1,0 +1,19 @@
+# eu4-modpack-4k
+
+Europa Universalis IV opinionated modpack, with custom patches for 4k compatibility. All credits for original mods belong to their respective owners.
+
+## Epic games alternative downloads
+
+https://catalogue.smods.ru/
+
+## 4k settings
+
+`Paradox Interactive/Europa Universalis IV/settings.txt`: game_ui_scale=1.100
+
+Fixing `PROPER 4K UI` on new patches: 
+
+Delete all alerticon*.dds files from the mod and change alerts.gui (copy paste vanilla alerts.gui and double "alerticon_startposition").
+Icons will be tiny but usable... no known way to fix broken alerts.
+Use .9 font size from mod to fix some overlapping (goes to gfx/fonts).
+
+

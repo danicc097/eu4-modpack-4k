@@ -1,0 +1,3415 @@
+guiTypes = {
+
+	windowType = {
+		name = "fervor_power_entry"
+		backGround=""
+		position = { x= 0 y=0 }
+		size = { x = 72 y = 36 }
+		moveable = 0
+		dontRender = ""
+		horizontalBorder= ""
+		verticalBorder= ""
+		fullScreen = no
+
+
+		guiButtonType = {
+			name = "power"
+			position = { x=0 y = 0 }
+			quadTextureSprite ="GFX_fervor_empty"
+			buttonFont = "vic_18"
+		}
+
+		iconType =
+		{
+			name ="power_enabled"
+			spriteType = "GFX_fervor_power_enabled"
+			position = { x = 0 y = 0 }
+		}
+	}
+
+	windowType = {
+		name = "countryreligionview_provincelistitem"
+		backGround =""
+		position = { x=0 y=0 }
+		size = { x=540 y=54 }
+		moveable = 0
+		dontRender = ""
+		horizontalBorder = ""
+
+		instantTextBoxType = {
+			name = "name"
+			position = { x = 36 y =-14 }
+			textureFile = ""
+			font = "vic_18"
+			borderSize = {x = 7 y = 7}
+			text = "Province name"
+			maxWidth = 243
+			maxHeight = 58
+			format = left
+		}
+
+		instantTextBoxType = {
+			name = "religion"
+			position = { x = 292 y =-14 }
+			textureFile = ""
+			font = "vic_18"
+			borderSize = {x = 7 y = 7}
+			text = "Province religion"
+			maxWidth = 180
+			maxHeight = 58
+			format = left
+		}
+
+		instantTextBoxType = {
+			name = "unity"
+			position = { x = 522 y =-14 }
+			textureFile = ""
+			font = "vic_18"
+			borderSize = {x = 7 y = 7}
+			text = "4.2%"
+			maxWidth = 144
+			maxHeight = 58
+			format = centre
+		}
+
+		instantTextBoxType = {
+			name = "time"
+			position = { x = 670 y =-14 }
+			textureFile = ""
+			font = "vic_18"
+			borderSize = {x = 0 y = 7}
+			text = "4.2%"
+			maxWidth = 108
+			maxHeight = 58
+			format = centre
+		}
+
+		iconType =
+		{
+			name ="missionary_progress"
+			spriteType = "GFX_convert_progressbar"
+			position = { x = 693 y =4 }
+		}
+
+		iconType =
+		{
+			name ="province_religion"
+			spriteType = "GFX_icon_religion_small"
+			position = { x = 464 y =-16}
+			frame = 1
+			scale = 0.9
+		}
+
+		iconType =
+		{
+			name ="missionary_progress_frame"
+			spriteType = "GFX_provinceView_morale_frame"
+			position = { x = 677  y =-4 }
+		}
+
+		guiButtonType = {
+			name = "send_missionary"
+			position = { x=776 y = -20}
+			quadTextureSprite ="GFX_button_straight_87_32_notext"
+		}
+
+		instantTextBoxType = {
+			name = "send_missionary_text"
+			position = { x = 776 y =-5 }
+			textureFile = ""
+			font = "vic_18"
+			borderSize = {x = 0 y = 0}
+			text = "SEND"
+			maxWidth = 157
+			maxHeight = 58
+			format = centre
+			alwaystransparent = yes
+			fixedsize = yes
+		}
+
+	}
+
+	windowType = {
+		name = "religionlistitem"
+		backGround =""
+		position = { x=0 y=18 }
+		size = { x=540 y= 198 }
+		moveable = 0
+		dontRender = ""
+		horizontalBorder = ""
+
+		iconType =
+		{
+			name ="religion_background"
+			spriteType = "GFX_banner_yellow_160"
+			position = { x= 126 y = -4 }
+			Orientation = "UPPER_LEFT"
+		}
+
+		iconType =
+		{
+			name ="religion_frame"
+			spriteType = "GFX_religion_frame"
+			position = { x = 65 y = -14 }
+			Orientation = "UPPER_LEFT"
+		}
+
+		iconType =
+		{
+			name ="religion_icon"
+			spriteType = "GFX_icon_religion"
+			position = { x = 72 y = 7 }
+			Orientation = "UPPER_LEFT"
+		}
+
+		instantTextBoxType = {
+			name = "religion_name"
+			position = { x = 198 y =0 }
+			textureFile = ""
+			font = "vic_18"
+			borderSize = {x = 7 y = 7}
+			text = "Province name"
+			maxWidth = 414
+			maxHeight = 58
+			format = left
+		}
+
+		iconType =
+		{
+			name ="reformation_center_icon"
+			spriteType = "GFX_heretics_tolerance_icon"
+			position = { x = 193 y = 43 }
+			Orientation = "UPPER_LEFT"
+		}
+
+		instantTextBoxType = {
+			name = "reformation_center_desc"
+			position = { x = 238 y =50 }
+			textureFile = ""
+			font = "vic_18"
+			borderSize = {x = 7 y = 7}
+			text = "Reformation center desc"
+			maxWidth = 720
+			maxHeight = 58
+			format = left
+		}
+
+		listboxType =
+		{
+			name ="religion_modifiers_listbox_convert"
+			position = { x=162 y = 83}
+			backGround=""
+			size = { x=540 y =180}
+			Orientation = "UPPER_LEFT"
+			horizontal = 0
+			spacing = -7
+			scrollbartype = "standardlistbox_slider"
+			borderSize = {x = 2 y = 2}
+		}
+
+		guiButtonType = {
+			name = "religion_convert_now"
+			position = { x=904 y = -7}
+			quadTextureSprite ="GFX_change_religion_button"
+		}
+
+	}
+
+
+
+
+
+	windowType = {
+		name = "religion_modifier_item"
+		backGround =""
+		position = { x=0 y=0 }
+		size = { x=180 y= 54 }
+		moveable = 0
+		dontRender = ""
+		horizontalBorder = ""
+
+		iconType =
+		{
+			name ="modifier_icon"
+			spriteType = "GFX_heretics_tolerance_icon"
+			position = { x= 23 y = 9 }
+			Orientation = "UPPER_LEFT"
+			scale = 0.5
+		}
+
+		instantTextBoxType = {
+			name = "modifier_bonus"
+			position = { x = 72 y = 18 }
+			textureFile = ""
+			font = "vic_18"
+			borderSize = {x = 7 y = 7}
+			text = "Province name"
+			maxWidth = 526
+			maxHeight = 58
+			format = left
+		}
+	}
+
+	windowType = {
+		name = "religion_sub_modifier_item"
+		backGround =""
+		position = { x=0 y=0 }
+		size = { x=54 y= 54 }
+		moveable = 0
+		dontRender = ""
+		horizontalBorder = ""
+
+		iconType =
+		{
+			name ="modifier_icon"
+			spriteType = "GFX_heretics_tolerance_icon"
+			position = { x= 23 y = 9 }
+			Orientation = "UPPER_LEFT"
+			scale = 0.5
+		}
+	}
+
+	windowType = {
+		name = "countryreligionview"
+		position = { x=0 y=252 }
+		#position = { x=-1080 y=252 }
+		show_position = { x=0 y =252 }
+		hide_position = { x=-1080 y =252 }
+		animation_type = "decelerated"
+		animation_time = 10
+		size = { x=1843 y=1080 }
+		moveable = 0
+		Orientation = "UPPER_LEFT"
+
+		iconType =
+		{
+			# This background will be hidden beneath religionpanel_bg_bottom
+			# in the smallest resolution in most cases (but not harmonization view for example)
+			name ="religionpanel_bg_top"
+			spriteType = "GFX_country_religion_view_bg"
+			position = { x= -13 y = -18 }
+			Orientation = "UPPER_LEFT"
+		}
+
+		iconType =
+		{
+			name ="religionpanel_bg_bottom"
+			if_resolution = {
+				max_height = 899
+				spriteType = "GFX_country_religion_view_bg"
+			}
+			if_resolution = {
+				max_height = 1079
+				min_height = 900
+				spriteType = "GFX_country_religion_view_bg_large"
+			}
+			if_resolution = {
+				min_height = 1080
+				spriteType = "GFX_country_religion_view_bg_huge"
+			}
+			position = { x= -13 y = -18 }
+			Orientation = "UPPER_LEFT"
+		}
+
+		guiButtonType = {
+				name = "close_button"
+				position = { x = 925 y = -2 }
+				quadTextureSprite ="GFX_closebutton2"
+				shortcut = "ESCAPE"
+				Orientation = "UPPER_LEFT"
+				clicksound = close_window
+			}
+
+
+
+		instantTextBoxType = {
+			name = "window_title"
+			position = { x = 27 y =140 }
+			textureFile = ""
+			font = "vic_36"
+			borderSize = {x = 7 y = 7}
+			text = "HEADER_RELIGION"
+			maxWidth = 922
+			maxHeight = 58
+			format = centre
+		}
+
+		###Current religion
+		instantTextBoxType = {
+			name = "current_religion_name"
+			position = { x = 151 y =227 }
+			textureFile = ""
+			font = "vic_18"
+			borderSize = {x = 7 y = 7}
+			text = ""
+			maxWidth = 223
+			maxHeight = 58
+			format = left
+			fixedsize = yes
+		}
+
+		iconType = {
+			name ="secondary_religion_banner"
+			spriteType = "GFX_secondary_religion_banner"
+			position = { x = 144 y = 274 }
+		}
+
+		instantTextBoxType = {
+			name = "secondary_religion_name"
+			position = { x = 90 y = 281 }
+			textureFile = ""
+			font = "vic_18"
+			borderSize = {x = 7 y = 7}
+			text = ""
+			maxWidth = 180
+			maxHeight = 58
+			format = right
+			fixedsize = yes
+		}
+
+
+		windowType = {
+			name = "religious_school_window"
+
+			iconType = {
+				name ="religious_school_banner"
+				spriteType = "GFX_secondary_religion_banner"
+				position = { x = 144 y = 274 }
+			}
+
+			instantTextBoxType = {
+				name = "religious_school_name"
+				position = { x = 90 y = 281 }
+				textureFile = ""
+				font = "vic_18"
+				borderSize = {x = 7 y = 7}
+				text = ""
+				maxWidth = 180
+				maxHeight = 58
+				format = right
+				fixedsize = yes
+			}
+
+			guiButtonType =
+			{
+				name ="invite_scholar_button"
+				quadTextureSprite = "GFX_muslim_school_button"
+				position = { x= 324 y = 266 }
+				tooltip = ""
+				tooltipText =""
+				delayedTooltipText = ""
+				buttonFont = "Main_14"
+				Orientation = "UPPER_LEFT"
+				hint_tag = "hint_changereligion"
+			}
+		}
+
+		listboxType =
+		{
+			name ="religion_sub_modifiers_listbox"
+			position = { x=144 y = 338 }
+			backGround=""
+			size = { x=180 y =144}
+			Orientation = "UPPER_LEFT"
+			horizontal = 1
+			spacing = 2
+			scrollbartype = "standardlistbox_slider"
+			borderSize = {x = 2 y = 2}
+		}
+
+		listboxType =
+		{
+			name ="religion_modifiers_listbox"
+			position = { x=360 y = 194}
+			backGround=""
+			size = { x=540 y =144}
+			Orientation = "UPPER_LEFT"
+			horizontal = 0
+			spacing = 2
+			scrollbartype = "standardlistbox_slider"
+			borderSize = {x = 18 y = 18}
+			alwaystransparent=yes
+		}
+
+		guiButtonType =
+		{
+			name ="convert_button"
+			quadTextureSprite = "GFX_religion_convert_button"
+			position = { x= 18 y = 185 }
+			tooltip = ""
+			tooltipText =""
+			delayedTooltipText = ""
+			buttonFont = "Main_14"
+			Orientation = "UPPER_LEFT"
+			hint_tag = "hint_changereligion"
+		}
+
+		iconType =
+		{
+			name ="current_religion_icon"
+			spriteType = "GFX_icon_religion"
+			position = { x = 50 y = 283 }
+			Orientation = "UPPER_LEFT"
+			hint_tag = "hint_religion"
+		}
+
+		iconType =
+		{
+			name ="secondary_religion_icon"
+			spriteType = "GFX_icon_religion"
+			position = { x = 166 y = 324 }
+			Orientation = "UPPER_LEFT"
+			hint_tag = "hint_religion"
+			scale = 0.65
+		}
+
+		guiButtonType =
+		{
+			name ="convert_secondary_button"
+			quadTextureSprite = "GFX_religion_secondary_convert_button"
+			position = { x= 324 y = 266 }
+			tooltip = ""
+			tooltipText =""
+			delayedTooltipText = ""
+			buttonFont = "Main_14"
+			Orientation = "UPPER_LEFT"
+			hint_tag = "hint_changereligion"
+		}
+
+		###Tolerance
+		instantTextBoxType = {
+			name = "label_tolerance"
+			position = { x = 392 y = 346 }
+			textureFile = ""
+			font = "vic_18"
+			borderSize = {x = 7 y = 7}
+			text = "TOLERANCE"
+			maxWidth = 144
+			maxHeight = 58
+			format = left
+		}
+
+		iconType =
+		{
+			name ="icon_tolerance_own"
+			spriteType = "GFX_icon_religion_small"
+			position = { x = 518 y = 338 }
+			Orientation = "UPPER_LEFT"
+			hint_tag = "hint_tolerancetrue"
+		}
+		instantTextBoxType = {
+			name = "val_tolerance_own"
+			position = { x = 590 y = 355 }
+			font = "vic_18"
+			borderSize = {x = 0 y = 0}
+			text = "5"
+			maxWidth = 63
+			maxHeight = 43
+			Orientation = "UPPER_LEFT"
+			format = centre
+		}
+		iconType =
+		{
+			name ="icon_tolerance_heretic"
+			spriteType = "GFX_icon_religion_small"
+			position = { x = 662 y = 338 }
+			Orientation = "UPPER_LEFT"
+			hint_tag = "hint_toleranceheretic"
+		}
+		instantTextBoxType = {
+			name = "val_tolerance_heretic"
+			position = { x = 725 y = 355 }
+			font = "vic_18"
+			borderSize = {x = 0 y = 0}
+			text = "5"
+			maxWidth = 63
+			maxHeight = 43
+			Orientation = "UPPER_LEFT"
+			format = centre
+		}
+		iconType =
+		{
+			name ="icon_tolerance_heathen"
+			spriteType = "GFX_icon_religion_small"
+			position = { x = 801 y = 338 }
+			Orientation = "UPPER_LEFT"
+			hint_tag = "hint_toleranceheathen"
+		}
+		instantTextBoxType = {
+			name = "val_tolerance_heathen"
+			position = { x = 864 y = 355 }
+			font = "vic_18"
+			borderSize = {x = 0 y = 0}
+			text = "5"
+			maxWidth = 63
+			maxHeight = 43
+			Orientation = "UPPER_LEFT"
+			format = centre
+		}
+
+############## ORTHODOX PATRIARCH AUTHORITY	######
+
+		windowType = {
+			name = "orthodox_specific_window"
+			backGround =""
+			position = { x=-43 y=0 }
+			size = { x=504 y=90 }
+			moveable = 0
+			dontRender = ""
+			horizontalBorder = ""
+			Orientation = "UPPER_LEFT"
+
+			iconType =
+			{
+				name ="religion_overlay_orthodox_bg"
+				spriteType = "GFX_religion_overlay_big_bg"
+				position = { x= 90 y = 416 }
+			}
+
+			iconType =
+			{
+				name ="current_patriarch_authority_progress_bg"
+				spriteType = "GFX_piety_bar_bg"
+				position = { x= 164 y = 522 }
+			}
+
+			iconType =
+			{
+				name ="current_patriarch_authority_progress_frame"
+				spriteType = "GFX_ideaView_progress_frame_long"
+				position = { x= 151 y = 515 }
+			}
+
+			iconType =
+			{
+				name ="low_patriarch_authority"
+				spriteType = "GFX_icon_low_patriarch_authority"
+				position = { x= 97 y = 491 }
+			}
+
+			iconType =
+			{
+				name ="high_patriarch_authority"
+				spriteType = "GFX_icon_high_patriarch_authority"
+				position = { x= 490 y = 491 }
+			}
+
+			iconType =
+			{
+				name ="current_patriarch_authority"
+				spriteType = "GFX_war_overview_indicator"
+				position = { x= 279 y = 513 }
+			}
+
+			instantTextBoxType = {
+				name = "current_patriarch_authority_value"
+				position = { x= 306 y = 502 }
+				font = "vic_18"
+				borderSize = {x = 0 y = 0}
+				text = ""
+				maxWidth = 58
+				maxHeight = 43
+				Orientation = "UPPER_LEFT"
+				format = centre
+			}
+
+			instantTextBoxType = {
+				name = "current_patriarch_authority_text"
+				position = { x = 90 y = 459 }
+				font = "vic_18"
+				borderSize = {x = 0 y = 0}
+				text = "CURRENT_PATRIARCH_AUTHORITY"
+				maxWidth = 461
+				maxHeight = 43
+				Orientation = "UPPER_LEFT"
+				format = centre
+			}
+
+
+			iconType =
+			{
+				name ="no_current_icon"
+				spriteType = "GFX_icon_none"
+				position = { x = 565 y = 432 }
+				Orientation = "UPPER_LEFT"
+			}
+
+			iconType =
+			{
+				name ="current_icon"
+				spriteType = "GFX_russian_icons_strip"
+				position = { x = 565 y = 432 }
+			}
+
+
+			guiButtonType = {
+				name = "pick_icon_button"
+				position = { x=547 y = 540}
+				quadTextureSprite ="GFX_standard_button_71"
+				buttonText = "SELECT"
+				buttonFont = "vic_18"
+				Orientation = "LEFT"
+			}
+
+
+		}
+
+		############## SHINTO ISOLATIONISM ######
+
+		windowType = {
+			name = "shinto_specific_window"
+			backGround =""
+			position = { x=0 y=0 }
+			size = { x=504 y=90 }
+			moveable = 0
+			dontRender = ""
+			horizontalBorder = ""
+			Orientation = "UPPER_LEFT"
+
+			iconType =
+			{
+				name ="religion_overlay_shinto_bg"
+				spriteType = "GFX_religion_overlay_shinto_bg"
+				position = { x= 9 y = 410 }
+			}
+
+			iconType =
+			{
+				name ="isolationism_icon"
+				spriteType = "GFX_isolationism_icons"
+				position = { x= 311 y = 425 }
+			}
+
+			instantTextBoxType = {
+				name = "isolationism_label"
+				position = { x = 68 y = 421 }
+				font = "vic_22"
+				borderSize = {x = 0 y = 0}
+				text = "ISOLATIONISM"
+				maxWidth = 238
+				maxHeight = 43
+				Orientation = "UPPER_LEFT"
+				format = left
+			}
+
+			instantTextBoxType = {
+				name = "isolationism_value"
+				position = { x= 358 y = 430 }
+				font = "vic_18"
+				borderSize = {x = 0 y = 0}
+				text = "0"
+				maxWidth = 259
+				maxHeight = 43
+				Orientation = "UPPER_LEFT"
+				format = left
+			}
+
+			instantTextBoxType = {
+				name = "possible_incidents_label"
+				position = { x = 54 y = 466 }
+				font = "vic_22"
+				borderSize = {x = 0 y = 0}
+				text = "POSSIBLE_INCIDENTS"
+				maxWidth = 248
+				maxHeight = 43
+				Orientation = "UPPER_LEFT"
+				format = left
+			}
+
+			OverlappingElementsBoxType = {
+				name = "possible_incidents_box"
+				position = { x = 310 y = 466 }
+				size = { x = 360 y = 58 }
+				Orientation = "UPPER_LEFT"
+				format = left
+				spacing = 0
+			}
+
+			instantTextBoxType = {
+				name = "active_incidents_label"
+				position = { x = 54 y = 508 }
+				font = "vic_22"
+				borderSize = {x = 0 y = 0}
+				text = "ACTIVE_INCIDENTS"
+				maxWidth = 248
+				maxHeight = 43
+				Orientation = "UPPER_LEFT"
+				format = left
+			}
+
+			OverlappingElementsBoxType = {
+				name = "active_incidents_box"
+				position = { x = 310 y = 508 }
+				size = { x = 230 y = 58 }
+				Orientation = "UPPER_LEFT"
+				format = left
+				spacing = 0
+			}
+
+			instantTextBoxType = {
+				name = "past_incidents_label"
+				position = { x = 54 y = 549 }
+				font = "vic_22"
+				borderSize = {x = 0 y = 0}
+				text = "PAST_INCIDENTS"
+				maxWidth = 248
+				maxHeight = 43
+				Orientation = "UPPER_LEFT"
+				format = left
+			}
+
+			OverlappingElementsBoxType = {
+				name = "past_incidents_box"
+				position = { x = 310 y = 549 }
+				size = { x = 230 y = 58 }
+				Orientation = "UPPER_LEFT"
+				format = left
+				spacing = 0
+			}
+		}
+
+		############## CONFUCIANISM HARMONY ##############
+		windowType = {
+			name = "confucianism_specific_window"
+			backGround =""
+			position = { x=0 y=0 }
+			size = { x=504 y=90 }
+			moveable = 0
+			dontRender = ""
+			horizontalBorder = ""
+			Orientation = "UPPER_LEFT"
+
+			iconType =
+			{
+				name ="religion_overlay_confucianism_bg"
+				spriteType = "GFX_religion_overlay_big_bg"
+				position = { x= 47 y = 416 }
+			}
+
+			instantTextBoxType = {
+				name = "harmony_label"
+				position = { x = 72 y = 441 }
+				font = "vic_18"
+				borderSize = {x = 0 y = 0}
+				text = "CURRENT_HARMONY"
+				maxWidth = 414
+				maxHeight = 43
+				Orientation = "UPPER_LEFT"
+				format = centre
+			}
+
+			iconType =
+			{
+				name ="current_harmony_progress_bg"
+				spriteType = "GFX_piety_bar_bg"
+				position = { x= 112 y = 497 }
+			}
+
+			iconType =
+			{
+				name ="current_harmony_progress_frame"
+				spriteType = "GFX_ideaView_progress_frame_long"
+				position = { x= 99 y = 491 }
+			}
+
+			iconType =
+			{
+				name ="low_harmony"
+				spriteType = "GFX_low_harmony"
+				position = { x= 68 y = 477 }
+			}
+
+			iconType =
+			{
+				name ="high_harmony"
+				spriteType = "GFX_high_harmony"
+				position = { x= 428 y = 477 }
+			}
+
+			iconType =
+			{
+				name ="current_harmony"
+				spriteType = "GFX_war_overview_indicator"
+				position = { x= 234 y = 491 }
+			}
+
+			instantTextBoxType = {
+				name = "current_harmony_value"
+				position = { x= 270 y = 502 }
+				font = "vic_18"
+				borderSize = {x = 0 y = 0}
+				text = "0"
+				maxWidth = 58
+				maxHeight = 43
+				Orientation = "UPPER_LEFT"
+				format = centre
+			}
+
+			guiButtonType = {
+				name = "harmonizing_with_button"
+				position = { x = 495 y = 470 }
+				quadTextureSprite ="GFX_province_religion_button"
+				buttonFont = "vic_18"
+				Orientation = "LEFT"
+			}
+
+			iconType = {
+				name ="harmonizing_with_icon"
+				spriteType = "GFX_icon_religion_small"
+				position = { x= 504 y = 477 }
+				alwaystransparent = yes
+			}
+
+			iconType = {
+				name ="harmonization_progress"
+				spriteType = "GFX_treasure_fleet_progressbar2"
+				position = { x= 580 y = 524 }
+				rotation = 1.5708
+			}
+
+			iconType = {
+				name ="harmonization_progress_frame"
+				spriteType = "GFX_treasure_fleet_progress_frame2"
+				position = { x= 567 y = 473 }
+			}
+
+			listboxType =
+			{
+				name ="harmonized_listbox"
+				position = { x = 63 y = 540 }
+				backGround=""
+				size = { x=612 y = 540 }
+				Orientation = "UPPER_LEFT"
+				horizontal = 1
+				spacing = 0
+				scrollbartype = "standardlistbox_slider"
+				borderSize = {x = 0 y = 0}
+			}
+
+			windowType = {
+				name = "select_harmonize_religion_window"
+				backGround =""
+				position = { x=0 y=234 }
+				size = { x=504 y=270 }
+				moveable = 0
+				dontRender = ""
+				dontRender = ""
+				horizontalBorder = ""
+				Orientation = "UPPER_LEFT"
+
+				iconType = {
+					name ="harmonize_religion_window_bg"
+					spriteType = "GFX_country_religion_harmony_bg_standard"
+					position = { x= 23 y = 677 }
+				}
+
+				listboxType = {
+					name = "religion_select_listbox"
+					backGround = ""
+					position = { x=13 y = 680 }
+					backGround=""
+					size = { x=929 y =277}
+					Orientation = "UPPER_LEFT"
+					horizontal = 0
+					spacing = 0
+					scrollbartype = "standardlistbox_slider"
+					borderSize = {x = 18 y = 18}
+				}
+
+				guiButtonType = {
+					name = "back_button"
+					position = {  x=432 y =963}
+					quadTextureSprite ="GFX_standard_button_71"
+					tooltip = ""
+					tooltipText =""
+					delayedTooltipText = ""
+					buttonText = "BACK"
+					buttonFont = "vic_18"
+					clicksound = back_click
+				}
+			}
+		}
+
+############## COPTIC HOLY SITES	######
+
+		windowType = {
+			name = "coptic_specific_window"
+			backGround =""
+			position = { x=0 y=0 }
+			size = { x=504 y=90 }
+			moveable = 0
+			dontRender = ""
+			horizontalBorder = ""
+			Orientation = "UPPER_LEFT"
+
+			iconType =
+			{
+				name ="religion_overlay_orthodox_bg"
+				spriteType = "GFX_religion_blank_overlay_big_bg"
+				position = { x= 47 y = 416 }
+			}
+
+			OverlappingElementsBoxType = {
+					name = "blessings"
+					position = { x = 54 y = 421 }
+					size = { x = 288 y = 58 }
+					Orientation = "UPPER_LEFT"
+					format = center
+					spacing = 13
+			}
+
+			iconType =
+			{
+				name ="holy_site_icon_1"
+				spriteType = "GFX_icon_religion_small"
+				position = { x = 63 y = 479 }
+				#				scale = 0.75
+			}
+
+			instantTextBoxType = {
+				name = "holy_site_name_1"
+				position = { x = 117 y = 488 }
+				font = "vic_22"
+				borderSize = {x = 0 y = 0}
+				text = "Alexanderia"
+				maxWidth = 230
+				maxHeight = 43
+				Orientation = "UPPER_LEFT"
+				format = left
+			}
+
+			iconType =
+			{
+				name ="holy_site_icon_2"
+				spriteType = "GFX_icon_religion_small"
+				position = { x = 63 y = 533 }
+				frame = 14
+				#scale = 0.75
+			}
+
+			instantTextBoxType = {
+				name = "holy_site_name_2"
+				position = { x = 117 y = 542 }
+				font = "vic_22"
+				borderSize = {x = 0 y = 0}
+				text = "Alexanderia"
+				maxWidth = 230
+				maxHeight = 43
+				Orientation = "UPPER_LEFT"
+				format = left
+			}
+
+			iconType =
+			{
+				name ="holy_site_icon_3"
+				spriteType = "GFX_icon_religion_small"
+				position = { x = 351 y = 425 }
+				frame = 14
+				#scale = 0.75
+			}
+
+			instantTextBoxType = {
+				name = "holy_site_name_3"
+				position = { x = 405 y = 434 }
+				font = "vic_22"
+				borderSize = {x = 0 y = 0}
+				text = "Alexanderia"
+				maxWidth = 230
+				maxHeight = 43
+				Orientation = "UPPER_LEFT"
+				format = left
+			}
+
+			iconType =
+			{
+				name ="holy_site_icon_4"
+				spriteType = "GFX_icon_religion_small"
+				position = { x = 351 y = 479 }
+				frame = 14
+				#scale = 0.75
+			}
+
+			instantTextBoxType = {
+				name = "holy_site_name_4"
+				position = { x = 405 y = 488 }
+				font = "vic_22"
+				borderSize = {x = 0 y = 0}
+				text = "Alexanderia"
+				maxWidth = 230
+				maxHeight = 43
+				Orientation = "UPPER_LEFT"
+				format = left
+			}
+
+			iconType =
+			{
+				name ="holy_site_icon_5"
+				spriteType = "GFX_icon_religion_small"
+				position = { x = 351 y = 533 }
+				frame = 14
+				#scale = 0.75
+			}
+
+			instantTextBoxType = {
+				name = "holy_site_name_5"
+				position = { x = 405 y = 542 }
+				font = "vic_22"
+				borderSize = {x = 0 y = 0}
+				text = "Alexanderia"
+				maxWidth = 230
+				maxHeight = 43
+				Orientation = "UPPER_LEFT"
+				format = left
+			}
+		}
+
+
+################# MUSLIM PIETY
+		windowType = {
+			name = "muslim_specific_window"
+			backGround =""
+			position = { x=58 y=540 }
+			size = { x=504 y=90 }
+			moveable = 0
+			dontRender = ""
+			horizontalBorder = ""
+			Orientation = "UPPER_LEFT"
+
+			iconType =
+			{
+				name ="religion_overlay_muslim_bg"
+				spriteType = "GFX_religion_overlay_big_bg"
+				position = { x= 0 y = -126 }
+			}
+
+			iconType ={
+				name ="current_piety_progress_bg"
+				spriteType = "GFX_piety_bar_bg"
+				position = { x= 122 y = -54 }
+			}
+
+			iconType ={
+				name ="current_piety_progress_frame"
+				spriteType = "GFX_piety_bar_frame"
+				position = { x= 94 y = -122 }
+			}
+
+			iconType =
+			{
+				name ="low_piety"
+				spriteType = "GFX_piety_icon_low"
+				position = { x= -14 y = -119 }
+				Orientation = "UPPER_LEFT"
+			}
+
+			iconType =
+			{
+				name ="high_piety"
+				spriteType = "GFX_piety_icon_high"
+				position = { x= 436 y = -119 }
+				Orientation = "UPPER_LEFT"
+			}
+
+			iconType =
+			{
+				name ="current_piety"
+				spriteType = "GFX_war_overview_indicator"
+				position = { x= 243 y = -9 }
+			}
+
+			instantTextBoxType = {
+				name = "current_piety_value"
+				position = { x= 274 y = -38 }
+				font = "vic_18"
+				borderSize = {x = 0 y = 0}
+				text = ""
+				maxWidth = 58
+				maxHeight = 43
+				Orientation = "UPPER_LEFT"
+				format = centre
+			}
+
+			instantTextBoxType = {
+				name = "current_piety_text"
+				position = { x = 140 y = -108 }
+				font = "vic_18"
+				borderSize = {x = 0 y = 0}
+				text = "CURRENT_PIETY"
+				maxWidth = 288
+				maxHeight = 43
+				Orientation = "UPPER_LEFT"
+				format = centre
+			}
+
+
+			guiButtonType = {
+				name = "low_piety_action"
+				position = { x=128 y = -20}
+				quadTextureSprite ="GFX_low_piety_action"
+				Orientation = "LEFT"
+			}
+
+			guiButtonType = {
+				name = "high_piety_action"
+				position = { x=360 y = -20}
+				quadTextureSprite ="GFX_high_piety_action"
+				Orientation = "LEFT"
+			}
+
+
+
+		}
+################# BUDDHIST KARMA
+		windowType = {
+			name = "buddhist_specific_window"
+			backGround =""
+			position = { x=58 y=540 }
+			size = { x=504 y=90 }
+			moveable = 0
+			dontRender = ""
+			horizontalBorder = ""
+			Orientation = "UPPER_LEFT"
+
+			iconType =
+			{
+				name ="religion_overlay_muslim_bg"
+				spriteType = "GFX_religion_overlay_big_bg"
+				position = { x= 0 y = -126 }
+			}
+
+			iconType =
+			{
+				name ="current_karma_progress_bg"
+				spriteType = "GFX_piety_bar_bg"
+				position = { x= 119 y = -45 }
+			}
+
+			iconType =
+			{
+				name ="current_karma_progress_frame"
+				spriteType = "GFX_ideaView_progress_frame_long"
+				position = { x= 113 y = -52 }
+			}
+
+			iconType =
+			{
+				name ="low_karma"
+				spriteType = "GFX_low_karma"
+				position = { x= 77 y = -65 }
+			}
+
+			iconType =
+			{
+				name ="high_karma"
+				spriteType = "GFX_high_karma"
+				position = { x= 437 y = -65 }
+			}
+
+			iconType =
+			{
+				name ="current_karma"
+				spriteType = "GFX_war_overview_indicator"
+				position = { x= 239 y = -54 }
+			}
+
+			instantTextBoxType = {
+				name = "current_karma_value"
+				position = { x= 266 y = -65 }
+				font = "vic_18"
+				borderSize = {x = 0 y = 0}
+				text = ""
+				maxWidth = 58
+				maxHeight = 43
+				Orientation = "UPPER_LEFT"
+				format = centre
+			}
+
+			instantTextBoxType = {
+				name = "current_karma_text"
+				position = { x = 72 y = -108 }
+				font = "vic_18"
+				borderSize = {x = 0 y = 0}
+				text = "CURRENT_KARMA"
+				maxWidth = 432
+				maxHeight = 43
+				Orientation = "UPPER_LEFT"
+				format = centre
+			}
+
+			instantTextBoxType = {
+				name = "karma_effects"
+				position = { x = 72 y = -4 }
+				font = "vic_18"
+				borderSize = {x = 0 y = 0}
+				text = "No effects"
+				maxWidth = 461
+				maxHeight = 43
+				Orientation = "UPPER_LEFT"
+				format = centre
+			}
+		}
+
+		################# personal deity
+		windowType = {
+			name = "personal_deity"
+			backGround =""
+			position = { x=58 y=540 }
+			size = { x=504 y=90 }
+			moveable = 0
+			dontRender = ""
+			horizontalBorder = ""
+			Orientation = "UPPER_LEFT"
+
+			iconType =
+			{
+				name ="religion_overlay_hindu_bg"
+				spriteType = "GFX_religion_overlay_big_bg"
+				position = { x= 0 y = -126 }
+			}
+
+			iconType =
+			{
+				name ="no_deity_icon"
+				spriteType = "GFX_icon_religion"
+				position = { x = 23 y = -92 }
+				Orientation = "UPPER_LEFT"
+			}
+
+			iconType =
+			{
+				name ="deity_icon"
+				spriteType = "GFX_hindu_deities_strip"
+				position = { x= 45 y = -74 }
+			}
+
+			instantTextBoxType = {
+				name = "deity_name"
+				position = { x= 187 y = -83 }
+				font = "vic_18"
+				borderSize = {x = 0 y = 0}
+				text = "RV_NO_DEITY"
+				maxWidth = 360
+				maxHeight = 43
+				Orientation = "UPPER_LEFT"
+				format = left
+			}
+
+			instantTextBoxType = {
+				name = "deity_effect"
+				position = { x = 140 y = -45 }
+				font = "vic_18"
+				borderSize = {x = 0 y = 0}
+				text = ""
+				maxWidth = 461
+				maxHeight = 43
+				Orientation = "UPPER_LEFT"
+				format = left
+			}
+
+			guiButtonType = {
+				name = "pick_deity"
+				position = { x=203 y = -31}
+				quadTextureSprite ="GFX_standard_button_71"
+				buttonText = "SELECT"
+				buttonFont = "vic_18"
+				Orientation = "LEFT"
+			}
+		}
+
+		################# Fetishist cults
+		windowType = {
+			name = "fetishist_cult"
+			backGround =""
+			position = { x=58 y=540 }
+			size = { x=504 y=90 }
+			moveable = 0
+			dontRender = ""
+			horizontalBorder = ""
+			Orientation = "UPPER_LEFT"
+
+			iconType =
+			{
+				name ="religion_overlay_fetishist_bg"
+				spriteType = "GFX_religion_overlay_big_bg"
+				position = { x= 0 y = -126 }
+			}
+
+			iconType =
+			{
+				name ="no_cult_icon"
+				spriteType = "GFX_icon_religion"
+				position = { x = 23 y = -92 }
+				Orientation = "UPPER_LEFT"
+			}
+
+			iconType =
+			{
+				name ="cult_icon"
+				spriteType = "GFX_fetishists_strip"
+				position = { x= 45 y = -74 }
+			}
+
+			instantTextBoxType = {
+				name = "cult_name"
+				position = { x= 187 y = -83 }
+				font = "vic_18"
+				borderSize = {x = 0 y = 0}
+				text = "RV_NO_CULT"
+				maxWidth = 360
+				maxHeight = 43
+				Orientation = "UPPER_LEFT"
+				format = left
+			}
+
+			instantTextBoxType = {
+				name = "cult_effect"
+				position = { x = 140 y = -45 }
+				font = "vic_18"
+				borderSize = {x = 0 y = 0}
+				text = ""
+				maxWidth = 461
+				maxHeight = 43
+				Orientation = "UPPER_LEFT"
+				format = left
+			}
+
+			guiButtonType = {
+				name = "pick_cult"
+				position = { x=203 y = -31}
+				quadTextureSprite ="GFX_standard_button_71"
+				buttonText = "SELECT"
+				buttonFont = "vic_18"
+				Orientation = "LEFT"
+			}
+		}
+
+		################# Sikh Gurus	
+		windowType = {
+			name = "sikh_guru_window"
+			backGround =""
+			position = { x=58 y=468 }	
+			size = { x=504 y=90 }
+			moveable = 0
+			dontRender = ""
+			horizontalBorder = ""
+			Orientation = "UPPER_LEFT"
+
+		    iconType ={
+			    name ="sikh_bg"
+			    spriteType = "GFX_sikh_bg"
+			    position = { x= 9 y = -50 }
+			    Orientation = "UPPER_LEFT"
+		    }
+
+			windowType = {
+				name = "current_guru"
+				backGround =""
+				position = { x=25 y=-43 }	
+				size = { x=504 y=90 }
+				moveable = 0
+				dontRender = ""
+				horizontalBorder = ""
+				Orientation = "UPPER_LEFT"
+
+				instantTextBoxType = {
+					name = "name"
+					position = { x= 0 y = 0 }
+					font = "vic_18"
+					borderSize = {x = 0 y = 0}
+					text = "NO_GURU_TITLE"	
+					maxWidth = 360
+					maxHeight = 32
+					Orientation = "UPPER_LEFT"
+					format = left
+				}
+				
+				instantTextBoxType = {
+					name = "effect"
+					position = { x = 0 y = 45 }
+					font = "vic_18"
+					borderSize = {x = 0 y = 0}
+					text = "NO_EFFECT"	
+					maxWidth = 461
+					maxHeight = 32
+					Orientation = "UPPER_LEFT"
+					format = left
+				}
+			}
+
+			windowType = {
+				name = "next_guru"
+				backGround =""
+				position = { x=25 y=43 }	
+				size = { x=504 y=90 }
+				moveable = 0
+				dontRender = ""
+				horizontalBorder = ""
+				Orientation = "UPPER_LEFT"
+
+				instantTextBoxType = {
+					name = "name"
+					position = { x= 0 y = 0 }
+					font = "vic_18"
+					borderSize = {x = 0 y = 0}
+					text = "NO_GURU_TITLE"	
+					maxWidth = 360
+					maxHeight = 43
+					Orientation = "UPPER_LEFT"
+					format = left
+				}
+				
+				instantTextBoxType = {
+					name = "effect"
+					position = { x = 0 y = 45 }
+					font = "vic_18"
+					borderSize = {x = 0 y = 0}
+					text = "NO_EFFECT"	
+					maxWidth = 461
+					maxHeight = 43
+					Orientation = "UPPER_LEFT"
+					format = left
+				}
+			}
+			windowType = {
+				name = "teachings"
+				backGround =""
+				position = { x=450 y=-40 }	
+				size = { x=504 y=90 }
+				moveable = 0
+				dontRender = ""
+				horizontalBorder = ""
+				Orientation = "UPPER_LEFT"
+
+				gridBoxType = {
+					name = "gridbox"
+					position = { x = 0 y = 0 }
+					size = { width = 101 height = 252 }
+					slotsize = { width = 50 height = 50 }
+					max_slots_horizontal = 2
+					max_slots_vertical = 3
+					format = "UPPER_LEFT"
+				}
+			}
+		}
+
+		
+		
+		
+
+
+
+		###Religion specific datafield
+		windowType = {
+			name = "catholic_specific_window"
+			backGround =""
+			position = { x=58 y=540 }
+			size = { x=504 y=90 }
+			moveable = 0
+			dontRender = ""
+			horizontalBorder = ""
+			Orientation = "UPPER_LEFT"
+
+			iconType =
+			{
+				name = "catholic_bg"
+				spriteType = "GFX_country_religion_view_catholic_bg"
+				position = { x = 11 y = -113 }
+				Orientation = "UPPER_LEFT"
+			}
+
+			guiButtonType =
+			{
+				name ="papacy_controller"
+				quadTextureSprite = "GFX_shield_small"
+				position = { x= 416 y = -101 }
+				tooltip = ""
+				tooltipText =""
+				delayedTooltipText = ""
+				buttonFont = "Main_14_black"
+				Orientation = "LEFT"
+				clicksound = click
+			}
+
+			guiButtonType =
+			{
+				name ="papacy_icon"
+				quadTextureSprite = "GFX_menubar_floating_strip"
+				position = { x= -4009 y = -36 }
+				tooltip = ""
+				tooltipText =""
+				delayedTooltipText = ""
+				buttonFont = "Main_14_black"
+				Orientation = "LEFT"
+			}
+
+			instantTextBoxType = {
+				name = "no_active_cardinals"
+				position = { x = 20 y = -90 }
+				font = "vic_22"
+				borderSize = {x = 0 y = 0}
+				text = "NO_ACTVIVE_CARDINALS"
+				maxWidth = 360
+				maxHeight = 58
+				Orientation = "UPPER_LEFT"
+				format = centre
+			}
+
+			OverlappingElementsBoxType = {
+					name = "active_cardinals"
+					position = { x= 27 y = -58 }
+					size = { x = 324 y = 58 }
+					Orientation = "UPPER_LEFT"
+					format = left
+					spacing = 2
+			}
+
+			iconType =
+			{
+				name = "papal_influence_icon"
+				spriteType = "GFX_papal_influence"
+				position = { x = 16 y = -25 }
+				Orientation = "UPPER_LEFT"
+				hint_tag = "hint_papalinfluence"
+			}
+
+			instantTextBoxType = {
+				name = "papal_influence_value"
+				position = { x = 81 y = -9 }
+				font = "vic_18"
+				borderSize = {x = 0 y = 0}
+				text = "3,1"
+				maxWidth = 72
+				maxHeight = 81
+				Orientation = "UPPER_LEFT"
+				format = centre
+			}
+
+
+
+			iconType =
+			{
+				name = "reform_resistance_icon"
+				spriteType = "GFX_icon_catholic_religious_resistance"
+				position = { x = 356 y = -41 }
+				scale = 0.75
+				Orientation = "UPPER_LEFT"
+			}
+
+			instantTextBoxType = {
+				name = "reform_resistance_value"
+				position = { x = 441 y = -9 }
+				font = "vic_18"
+				borderSize = {x = 0 y = 0}
+				text = "3,1"
+				maxWidth = 99
+				maxHeight = 45
+				Orientation = "UPPER_LEFT"
+				format = centre
+			}
+
+
+			iconType =
+			{
+				name = "reform_desire_icon"
+				spriteType = "GFX_icon_catholic_reform_desire"
+				position = { x = 198 y = -22 }
+				Orientation = "UPPER_LEFT"
+				hint_tag = "hint_reformdesire"
+			}
+
+			instantTextBoxType = {
+				name = "reform_desire_value"
+				position = { x = 243 y = -9 }
+				font = "vic_18"
+				borderSize = {x = 0 y = 0}
+				text = "3,1"
+				maxWidth = 99
+				maxHeight = 45
+				Orientation = "UPPER_LEFT"
+				format = centre
+			}
+		}
+
+		###Religion specific datafield
+		windowType = {
+			name = "protestant_specific_window"
+			backGround =""
+			position = { x=58 y=540 }
+			size = { x=504 y=90 }
+			moveable = 0
+			dontRender = ""
+			horizontalBorder = ""
+			Orientation = "UPPER_LEFT"
+
+			instantTextBoxType = {
+				name = "church_name"
+				position = { x = 18 y = -117 }
+				font = "vic_18"
+				borderSize = {x = 0 y = 0}
+				text = "Church of Nothingland"
+				maxWidth = 360
+				maxHeight = 45
+				Orientation = "UPPER_LEFT"
+				format = left
+			}
+
+			iconType =
+			{
+				name ="protestant_aspects_frame_bg"
+				spriteType = "GFX_country_religion_view_protestant_bg"
+				position = { x= 5 y = -79 }
+			}
+
+			instantTextBoxType = {
+				name = "church_power_label"
+				position = { x = 18 y = -67 }
+				font = "vic_18"
+				borderSize = {x = 0 y = 0}
+				maxWidth = 270
+				maxHeight = 45
+				Orientation = "UPPER_LEFT"
+				format = left
+			}
+
+			OverlappingElementsBoxType = {
+				name = "unlocked_aspects"
+				position = { x = 90 y = -54 }
+				size = { x = 468 y = 144 }
+				Orientation = "UPPER_LEFT"
+				format = left
+				spacing = 25
+			}
+
+			guiButtonType = {
+				name = "view_aspects"
+				position = { x=14 y = -40}
+				quadTextureSprite ="GFX_protestant_aspects_icon"
+				Orientation = "LEFT"
+			}
+		}
+
+		windowType = {
+			name = "jewish_specific_window"
+			backGround =""
+			position = { x=72 y=423 }	
+			size = { x=504 y=90 }
+			moveable = 0
+			dontRender = ""
+			horizontalBorder = ""
+			Orientation = "UPPER_LEFT"
+
+			iconType =
+			{
+				name ="protestant_aspects_frame_bg"
+				spriteType = "GFX_country_religion_view_protestant_bg"
+				position = { x= 0 y = 29 }
+			}
+
+			instantTextBoxType = {
+				name = "church_name"
+				position = { x = 18 y = 0 }
+				font = "vic_18"
+				borderSize = {x = 0 y = 0}
+				text = "Church of Nothingland"
+				maxWidth = 360
+				maxHeight = 45
+				Orientation = "UPPER_LEFT"
+				format = left
+			}
+
+			instantTextBoxType = {
+				name = "church_power_label"
+				position = { x = 18 y = 36 }
+				font = "vic_18"
+				borderSize = {x = 0 y = 0}
+				maxWidth = 270
+				maxHeight = 45
+				Orientation = "UPPER_LEFT"
+				format = left
+			}
+
+			guiButtonType = {
+				name = "adm_aspect"
+				position = { x=14 y = 68 }
+				quadTextureSprite ="GFX_jewish_aspects_icon"
+				Orientation = "UPPER_LEFT"
+			}
+
+			guiButtonType = {
+				name = "dip_aspect"
+				position = { x=104 y = 68 }
+				quadTextureSprite ="GFX_jewish_aspects_icon"
+				Orientation = "UPPER_LEFT"
+			}
+
+			guiButtonType = {
+				name = "mil_aspect"
+				position = { x=194 y = 68 }
+				quadTextureSprite ="GFX_jewish_aspects_icon"
+				Orientation = "UPPER_LEFT"
+			}
+
+			instantTextBoxType = {
+				name = "celebrate_label"
+				position = { x = 410 y = 36 }
+				font = "vic_18"
+				text = "CELEBRATE"
+				borderSize = {x = 0 y = 0}
+				maxWidth = 270
+				maxHeight = 45
+				Orientation = "UPPER_LEFT"
+				format = left
+			}
+
+			guiButtonType = {
+				name = "celebrate"
+				position = { x=410 y = 68 }
+				quadTextureSprite ="GFX_jewish_aspects_icon"
+				Orientation = "UPPER_LEFT"
+			}
+		}
+
+		windowType = { # Used when religion cant unlock aspects, only one-time fire them
+			name = "anglican_specific_window"
+			backGround =""
+			position = { x=58 y=540 }
+			size = { x=504 y=90 }
+			moveable = 0
+			dontRender = ""
+			horizontalBorder = ""
+			Orientation = "UPPER_LEFT"
+
+			instantTextBoxType = {
+				name = "church_name"
+				position = { x = 130 y = -72 }
+				font = "vic_18"
+				borderSize = {x = 0 y = 0}
+				text = "Church of Nothingland"
+				maxWidth = 360
+				maxHeight = 45
+				Orientation = "UPPER_LEFT"
+				format = left
+			}
+
+			#	iconType =
+			#	{
+			#		name ="protestant_aspects_frame_bg"
+			#		spriteType = "GFX_country_religion_view_protestant_bg"
+			#		position = { x= 5 y = -79 }
+			#	}
+
+			instantTextBoxType = {
+				name = "church_power_label"
+				position = { x = 130 y = -34 }
+				font = "vic_18"
+				borderSize = {x = 0 y = 0}
+				maxWidth = 270
+				maxHeight = 45
+				Orientation = "UPPER_LEFT"
+				format = left
+			}
+
+			guiButtonType = {
+				name = "view_aspects"
+				position = { x=18 y = -77}
+				quadTextureSprite ="GFX_anglican_aspects_icon"
+				Orientation = "LEFT"
+			}
+		}
+
+		windowType = {
+			name = "fervor_specific_window"
+			backGround =""
+			position = { x=58 y=540 }
+			size = { x=504 y=90 }
+			moveable = 0
+			dontRender = ""
+			horizontalBorder = ""
+			Orientation = "UPPER_LEFT"
+
+			# iconType =
+			# {
+			# 	name = "fervor_bg"
+			# 	spriteType = "GFX_country_religion_view_fervor_bg"
+			# 	position = { x = 11 y = -113 }
+			# 	Orientation = "UPPER_LEFT"
+			# }
+
+			iconType =
+			{
+				name = "fervor_container_bg"
+				spriteType = "GFX_fervor_container_bg"
+				position = { x = -31 y = -22 }
+				Orientation = "UPPER_LEFT"
+			}
+
+			iconType =
+			{
+				name = "fervor_container_bg_s1"
+				spriteType = "GFX_fervor_container_bg_s"
+				position = { x = 14 y = -122 }
+				Orientation = "UPPER_LEFT"
+			}
+
+			iconType =
+			{
+				name = "fervor_container_bg_s2"
+				spriteType = "GFX_fervor_container_bg_s"
+				position = { x = 14 y = -72 }
+				Orientation = "UPPER_LEFT"
+			}
+
+			OverlappingElementsBoxType = {
+				name = "powers"
+				position = { x = -36  y = -11 }
+				size = { x=630 y= 45 }
+				format = center
+				spacing = 108
+			}
+
+			instantTextBoxType = {
+				name = "fervor_monthly_change"
+				position = { x = 40 y = -110 }
+				font = "vic_18"
+				borderSize = {x = 0 y = 0}
+				text = "FERVOR_CHANGE"
+				maxWidth = 230
+				maxHeight = 45
+				Orientation = "UPPER_LEFT"
+				format = left
+			}
+
+			instantTextBoxType = {
+				name = "fervor_current_change"
+				position = { x = 270 y = -110 }
+				font = "vic_18"
+				borderSize = {x = 0 y = 0}
+				text = "123"
+				maxWidth = 94
+				maxHeight = 45
+				Orientation = "UPPER_LEFT"
+				format = center
+			}
+
+			instantTextBoxType = {
+				name = "fervor_value"
+				position = { x = 40 y = -58 }
+				font = "vic_18"
+				borderSize = {x = 0 y = 0}
+				text = "FERVOR_VALUE2"
+				maxWidth = 230
+				maxHeight = 45
+				Orientation = "UPPER_LEFT"
+				format = left
+			}
+
+			instantTextBoxType = {
+				name = "fervor_current_value"
+				position = { x = 270 y = -58 }
+				font = "vic_18"
+				borderSize = {x = 0 y = 0}
+				text = "3,1"
+				maxWidth = 94
+				maxHeight = 45
+				Orientation = "UPPER_LEFT"
+				format = center
+			}
+
+		}
+
+
+
+		###Religious unity
+
+		iconType =	{
+			name ="religious_unity_icon_with_frame"
+			spriteType = "GFX_religious_unity_icon_with_frame"
+			scale=0.7
+			position = { x= 31 y = 598 }
+			Orientation = "UPPER_LEFT"
+		}
+
+		instantTextBoxType = {
+			name = "religiousunity_value"
+			position = { x = 90 y = 607 }
+			font = "vic_18"
+			borderSize = {x = 0 y = 0}
+			text = "%%%"
+			maxWidth = 72
+			maxHeight = 54
+			Orientation = "UPPER_LEFT"
+			format = centre
+		}
+
+
+
+
+		###Missionary Strength
+		iconType =	{
+			name ="missionary_strength_icon"
+			spriteType = "GFX_icon_missionary"
+			position = { x= 184 y = 594 }
+			Orientation = "UPPER_LEFT"
+		}
+
+		instantTextBoxType = {
+			name = "missionary_strength_value"
+			position = { x = 230 y = 607 }
+			font = "vic_18"
+			borderSize = {x = 0 y = 0}
+			text = "TEMP"
+			maxWidth = 108
+			maxHeight = 54
+			Orientation = "UPPER_LEFT"
+			format = centre
+		}
+
+
+		instantTextBoxType = {
+			name = "conversion"
+			position = { x = 378 y = 605 }
+			font = "vic_22"
+			borderSize = {x = 0 y = 0}
+			text = "CONVERT"
+			maxWidth = 230
+			maxHeight = 90
+			Orientation = "UPPER_LEFT"
+			format = centre
+			fixedsize = yes
+		}
+
+		guiButtonType = {
+			name = "sort_name"
+			position = { x = 31 y =673 }
+			tooltip = ""
+			tooltipText =""
+			delayedTooltipText = ""
+			buttonText = "NAME"
+			buttonFont = "vic_18"
+			quadTextureSprite ="GFX_sort_144"
+			Orientation = "UPPER_LEFT"
+		}
+
+		guiButtonType = {
+			name = "sort_religion"
+			position = { x = 290 y =670 }
+			tooltip = ""
+			tooltipText =""
+			delayedTooltipText = ""
+			buttonText = "RELIGION"
+			buttonFont = "vic_18"
+			quadTextureSprite ="GFX_sort_126"
+			Orientation = "UPPER_LEFT"
+		}
+
+		guiButtonType = {
+			name = "sort_unity"
+			position = { x = 515 y =673 }
+			tooltip = ""
+			tooltipText =""
+			delayedTooltipText = ""
+			buttonText = "UNITY"
+			buttonFont = "vic_18"
+			quadTextureSprite ="GFX_sort_84"
+			Orientation = "UPPER_LEFT"
+		}
+
+		guiButtonType = {
+			name = "sort_time"
+			position = { x = 666 y =673 }
+			tooltip = ""
+			tooltipText =""
+			delayedTooltipText = ""
+#			buttonText = "TIME"
+#			buttonFont = "vic_18"
+			quadTextureSprite ="GFX_sort_time"
+			Orientation = "UPPER_LEFT"
+		}
+
+# Needs location linking and button linking
+		guiButtonType = {
+			name = "sort_mission"
+			position = { x = 774 y =673 }
+			tooltip = ""
+			tooltipText =""
+			delayedTooltipText = ""
+			buttonText = "MONTHLY_COST"
+			buttonFont = "vic_18"
+			quadTextureSprite ="GFX_sort_84"
+			Orientation = "UPPER_LEFT"
+		}
+
+
+		listboxType =
+		{
+			name ="province_listbox"
+			position = { x=-22 y = 724}
+			backGround=""
+			if_resolution = {
+				max_height = 899
+				size = { x=954 y =216}
+			}
+			if_resolution = {
+				max_height = 1079
+				min_height = 900
+				size = { x=954 y =486}
+			}
+			if_resolution = {
+				min_height = 1080
+				size = { x=954 y =810}
+			}
+			Orientation = "UPPER_LEFT"
+			horizontal = 0
+			spacing = 2
+			scrollbartype = "standardlistbox_slider"
+			borderSize = {x = 18 y = 18}
+		}
+		checkboxType = {
+			name = "show_subjects"
+			if_resolution = {
+				max_height = 899
+				position = { x=72 y=952 }
+			}
+			if_resolution = {
+				max_height = 1079
+				min_height = 900
+				position = { x=72 y=1222 }
+			}
+			if_resolution = {
+				min_height = 1080
+				position = { x=72 y=1546 }
+			}
+			quadTextureSprite ="GFX_checkbox_gold_32"
+		}
+		instantTextBoxType={
+			name = "show_subjects_title"
+			if_resolution = {
+				max_height = 899
+				position = {x = 133 y = 961 }
+			}
+			if_resolution = {
+				max_height = 1079
+				min_height = 900
+				position = {x = 133 y = 1231 }
+			}
+			if_resolution = {
+				min_height = 1080
+				position = {x = 133 y = 1555 }
+			}
+			font = "vic_22"
+			borderSize = {x = 0 y = 0}
+			maxWidth = 288
+			maxHeight = 32
+			text = "MACRO_BUILDR_INCL_SUBJ"
+			format = left
+		}
+
+		iconType =
+		{
+			name ="full_unity_bg"
+			if_resolution = {
+				max_height = 899
+				spriteType = "GFX_country_religion_view_allreligion_bg"
+			}
+			if_resolution = {
+				max_height = 1079
+				min_height = 900
+				spriteType = "GFX_country_religion_view_allreligion_bg_large"
+			}
+			if_resolution = {
+				min_height = 1080
+				spriteType = "GFX_country_religion_view_allreligion_bg_huge"
+			}
+			position = { x= 22 y = 657 }
+			Orientation = "UPPER_LEFT"
+
+		}
+
+		instantTextBoxType = {
+			name = "full_unity"
+			position = { x = 76 y =704 }
+			textureFile = ""
+			font = "vic_18"
+			borderSize = {x = 7 y = 7}
+			text = "FULL_UNITY"
+			maxWidth = 882
+			maxHeight = 189
+			format = left
+
+		}
+
+
+		###Defender of the Faith
+
+        iconType = {
+			name ="defender_of_the_faith_tier"
+			spriteType = "GFX_defender_of_the_faith_tier"
+			position = { x=639 y=468 }
+			Orientation = "UPPER_LEFT"
+        }
+
+        guiButtonType =
+		{
+			name ="become_Defender_of_the_Faith"
+			quadTextureSprite = "GFX_become_Defender_of_the_Faith"
+			position = { x = 178907 y = 468 }
+			tooltip = ""
+			tooltipText =""
+			delayedTooltipText = ""
+			Orientation = "UPPER_LEFT"
+		}
+
+		guiButtonType =
+		{
+			name ="defender_of_the_faith_emperor_button"
+			quadTextureSprite = "GFX_become_Defender_of_the_Faith"
+			position = { x = 734 y = 477 }
+			tooltip = ""
+			tooltipText =""
+			delayedTooltipText = ""
+			buttonFont = "vic_18"
+			Orientation = "UPPER_LEFT"
+			scale = 0.6
+		}
+
+		guiButtonType =
+		{
+			name ="defender_of_the_faith_button"
+			quadTextureSprite = "GFX_become_Defender_of_the_Faith"
+			position = { x = 716 y = 477 }
+			tooltip = ""
+			tooltipText =""
+			delayedTooltipText = ""
+			buttonFont = "vic_18"
+			Orientation = "UPPER_LEFT"
+		}
+		guiButtonType =
+		{
+			name ="defender_of_the_faith_shield"
+			quadTextureSprite = "GFX_shield_thin"
+			position = { x = 707 y = 468 }
+			tooltip = ""
+			tooltipText =""
+			delayedTooltipText = ""
+			buttonFont = "vic_18"
+			Orientation = "UPPER_LEFT"
+	#		scale = 0.75
+		}
+		guiButtonType =
+		{
+			name ="defender_of_the_faith_emperor_shield"
+			quadTextureSprite = "GFX_shield_medium"
+			position = { x = 725 y = 468 }
+			tooltip = ""
+			tooltipText =""
+			delayedTooltipText = ""
+			buttonFont = "vic_18"
+			Orientation = "UPPER_LEFT"
+	#		scale = 0.75
+		}
+
+# Needs txt linking
+		instantTextBoxType = {
+				name = "defender_title"
+				position = { x = 648 y = 423 } #was 630
+				textureFile = ""
+				font = "vic_18"
+				borderSize = {x = 7 y = 7}
+				text = "LEDGER_DEFENDER_OF_FAITH"
+				maxWidth = 306
+				maxHeight = 58
+				format = center
+			}
+
+
+
+		windowType = {
+			name = "countryreligionview_convert"
+			backGround =""
+			position = { x=0 y=0 }
+			size = { x=1843 y=180 }
+			moveable = 0
+			dontRender = ""
+			horizontalBorder = ""
+			verticalBorder= ""
+			fullScreen = yes
+
+			iconType =
+			{
+				name ="domesticpanel_overlay"
+				spriteType = "GFX_court_view_select_advisor_bg"
+				position = { x= -13 y = -18 }
+				Orientation = "UPPER_LEFT"
+			}
+
+
+
+			instantTextBoxType = {
+				name = "title"
+				position = { x = 126 y =248 }
+				format = centre
+				font = "vic_22"
+				maxWidth = 756
+				maxHeight = 58
+				Orientation = "UPPER_LEFT"
+				text = "CONVERT"
+
+			}
+
+			instantTextBoxType = {
+				name = "religion_messagetext"
+				position = { x = 238 y =511 }
+				textureFile = ""
+				font = "vic_22"
+				borderSize = {x = 0 y = 0}
+				text = "NO_POTENTIAL_RELIGION"
+				maxWidth = 540
+				maxHeight = 58
+				format = center
+			}
+
+			listboxType = {
+				name = "religions_listbox"
+				backGround = ""
+				position = { x=-54 y =324 }
+				size = { x=999 y =1201 } #was 999 612
+				Orientation = "UPPER_LEFT"
+				horizontal = 0
+				spacing = 4
+				scrollbartype = "standardlistbox_slider"
+				borderSize = {x = 18 y = 18}
+			}
+
+			guiButtonType = {
+				name = "back_button"
+				position = {  x=432 y =1544} #was 432 956
+				quadTextureSprite ="GFX_standard_button_71"
+				tooltip = ""
+				tooltipText =""
+				delayedTooltipText = ""
+				buttonText = "BACK"
+				buttonFont = "vic_18"
+				clicksound = back_click
+			}
+		}
+
+		############## TOTEMISM ANCESTORS ##############
+		windowType = {
+			name = "totemism_ancestor_window"
+			backGround =""
+			position = { x=58 y=468 }
+			size = { x=504 y=90 }
+			moveable = 0
+			dontRender = ""
+			horizontalBorder = ""
+			Orientation = "UPPER_LEFT"
+
+			iconType =
+			{
+				name = "no_dotf"
+				spriteType = "GFX_no_dotf"
+				position = { x = -41 y = -68 }
+				Orientation = "UPPER_LEFT"
+			}
+			iconType =
+			{
+				name = "title_scroll"
+				spriteType = "GFX_totemism_ancestors_pick_header_2"
+				position = { x = -27 y = -59 }
+				Orientation = "UPPER_LEFT"
+			}
+			
+
+			instantTextBoxType = {
+				name = "title"
+				position = { x= 54 y = -38 }
+				font = "vic_18"
+				borderSize = {x = 0 y = 0}
+				text = "ANCESTORS"	
+				maxWidth = 180
+				maxHeight = 58
+				Orientation = "UPPER_LEFT"
+				format = centre
+			}
+
+			gridBoxType = {
+				name = "gridbox"
+				position = { x = 36 y = 18 }
+				size = { width = 252 height = 252 }
+				slotsize = { width = 50 height = 50 }
+				max_slots_horizontal = 15
+				max_slots_vertical = 2
+				format = "UPPER_LEFT"
+			}
+		
+			iconType =
+			{
+				name = "whitebg"
+				spriteType = "GFX_totemism_ancestors_icon_white_bg"
+				position = { x = 0 y = 4 }
+				Orientation = "UPPER_LEFT"
+				alwaystransparent = yes
+			}
+			iconType =
+			{
+				name = "whitebg2"
+				spriteType = "GFX_totemism_ancestors_icon_white_bg"
+				position = { x = 252 y = 4 }
+				Orientation = "UPPER_LEFT"
+				alwaystransparent = yes
+			}
+			iconType =
+			{
+				name = "whitebg4"
+				spriteType = "GFX_totemism_ancestors_icon_white_bg"
+				position = { x = 504 y = 4 }
+				Orientation = "UPPER_LEFT"
+				alwaystransparent = yes
+			}
+		
+		}
+		################# deity SELECTION
+		windowType = {
+			name = "deity_selection_screen"
+			backGround =""
+			position = { x=58 y=540 }
+			size = { x=504 y=90 }
+			moveable = 0
+			dontRender = ""
+			horizontalBorder = ""
+			Orientation = "UPPER_LEFT"
+
+			iconType =
+			{
+				name ="religion_overlay_hindu_bg"
+				spriteType = "GFX_hindu_deities_overlay_bg"
+				position = { x= -49 y = -130 }
+				#position = { x= -70 y = -558 }
+			}
+
+			listboxType =
+			{
+				name ="deity_listbox"
+				position = { x=101 y = -99}
+				backGround=""
+				size = { x=574 y =994} #was x=574 y =540
+				Orientation = "UPPER_LEFT"
+				horizontal = 0
+				spacing = 2
+				scrollbartype = "standardlistbox_slider"
+				borderSize = {x = 18 y = 18}
+			}
+
+			guiButtonType = {
+				name = "cancel"
+				position = { x=342 y = 1004 } #was x=342 y = 414
+				quadTextureSprite ="GFX_standard_button_71"
+				buttonText = "BACK"
+				buttonFont = "vic_18"
+			}
+		}
+
+		################# icon SELECTION
+		windowType = {
+			name = "icon_selection_screen"
+			backGround =""
+			position = { x=58 y=540 }
+			size = { x=504 y=90 }
+			moveable = 0
+			dontRender = ""
+			horizontalBorder = ""
+			Orientation = "UPPER_LEFT"
+
+			iconType =
+			{
+				name ="religion_overlay_bg"
+				spriteType = "GFX_icon_selection_overlay_bg"
+				position = { x= -49 y = -130 }
+				#position = { x= -70 y = -558 }
+			}
+
+			listboxType =
+			{
+				name ="icon_listbox"
+				position = { x=101 y = -115}
+				backGround=""
+				size = { x=716 y =1102} #was y =540
+				Orientation = "UPPER_LEFT"
+				horizontal = 0
+				spacing = 2
+				scrollbartype = "standardlistbox_slider"
+				borderSize = {x = 18 y = 18}
+			}
+
+			guiButtonType = {
+				name = "cancel"
+				position = { x=342 y = 1012 } #was y=421
+				quadTextureSprite ="GFX_standard_button_71"
+				buttonText = "BACK"
+				buttonFont = "vic_18"
+			}
+		}
+
+		################# scholar SELECTION
+		windowType = {
+			name =  "invite_scholar_selection_screen"
+			backGround =""
+			position = { x=58 y=540 }
+			size = { x=504 y=90 }
+			moveable = 0
+			dontRender = ""
+			horizontalBorder = ""
+			Orientation = "UPPER_LEFT"
+
+			iconType =
+			{
+				name ="religion_overlay_bg"
+				spriteType = "GFX_icon_selection_overlay_bg"
+				position = { x= -49 y = -130 }
+				#position = { x= -70 y = -558 }
+			}
+
+			listboxType =
+			{
+				name ="listbox"
+				position = { x=101 y = -108}
+				backGround=""
+				size = { x=716 y =994} #was y = 522
+				Orientation = "UPPER_LEFT"
+				horizontal = 0
+				spacing = 2
+				scrollbartype = "standardlistbox_slider"
+				borderSize = {x = 18 y = 18}
+			}
+
+			guiButtonType = {
+				name = "cancel"
+				position = { x=342 y = 1012 } #was y = 421
+				quadTextureSprite ="GFX_standard_button_71"
+				buttonText = "BACK"
+				buttonFont = "vic_18"
+			}
+		}
+
+		################# Cult SELECTION
+		windowType = {
+			name = "cult_selection_screen"
+			backGround =""
+			position = { x=58 y=540 }
+			size = { x=504 y=90 }
+			moveable = 0
+			dontRender = ""
+			horizontalBorder = ""
+			Orientation = "UPPER_LEFT"
+
+			iconType =
+			{
+				name ="religion_overlay_fetishist_bg"
+				spriteType = "GFX_hindu_deities_overlay_bg"
+				position = { x= -49 y = -130 }
+			}
+
+			listboxType =
+			{
+				name ="cult_listbox"
+				position = { x=101 y = -95}
+				backGround=""
+				size = { x=716 y =1008} #was y=504
+				Orientation = "UPPER_LEFT"
+				horizontal = 0
+				spacing = 2
+				scrollbartype = "standardlistbox_slider"
+				borderSize = {x = 18 y = 18}
+			}
+
+			guiButtonType = {
+				name = "cancel"
+				position = { x=342 y = 1004 } #was x=342 y = 414
+				quadTextureSprite ="GFX_standard_button_71"
+				buttonText = "BACK"
+				buttonFont = "vic_18"
+			}
+		}
+
+		################# Church aspect SELECTION for Protestant
+		windowType = {
+			name = "aspect_selection_screen"
+			backGround =""
+			position = { x=58 y=540 }
+			size = { x=504 y=90 }
+			moveable = 0
+			dontRender = ""
+			horizontalBorder = ""
+			Orientation = "UPPER_LEFT"
+
+			iconType =
+			{
+				name ="aspects_bg"
+				spriteType = "GFX_hindu_deities_overlay_bg"
+				position = { x= -49 y = -130 }
+			}
+
+			iconType =
+			{
+				name ="protestant_aspects_bg"
+				spriteType = "GFX_hindu_deities_overlay_bg"
+				position = { x= -49 y = -130 }
+			}
+
+			iconType =
+			{
+				name ="anglican_aspects_bg"
+				spriteType = "GFX_anglican_overlay_bg"
+				position = { x= -49 y = -130 }
+			}
+
+			listboxType =
+			{
+				name ="aspect_listbox"
+				position = { x=101 y = -95}
+				backGround=""
+				size = { x=716 y =1008} #was y=504
+				Orientation = "UPPER_LEFT"
+				horizontal = 0
+				spacing = 2
+				scrollbartype = "standardlistbox_slider"
+				borderSize = {x = 18 y = 18}
+			}
+
+			guiButtonType = {
+				name = "cancel"
+				position = { x=342 y = 1004 } #was x=342 y = 414
+				quadTextureSprite ="GFX_standard_button_71"
+				buttonText = "BACK"
+				buttonFont = "vic_18"
+			}
+		}
+	}
+
+	################# personal deity
+	windowType = {
+		name = "personal_deity_item"
+		backGround =""
+		position = { x=18 y=-36 }
+		size = { x=90 y=83 }
+		moveable = 0
+		dontRender = ""
+		horizontalBorder = ""
+		Orientation = "UPPER_LEFT"
+
+		iconType =
+		{
+			name ="deity_item_icon"
+			spriteType = "GFX_hindu_deities_strip"
+			position = { x= 9 y = -7 }
+		}
+
+		instantTextBoxType = {
+			name = "deity_item_name"
+			position = { x= -76 y = 13 }
+			font = "vic_18"
+			borderSize = {x = 0 y = 0}
+			text = "DeityName"
+			maxWidth = 58
+			maxHeight = 43
+			Orientation = "UPPER_LEFT"
+			format = left
+		}
+
+		instantTextBoxType = {
+			name = "deity_item_effect"
+			position = { x = 104 y = -4 }
+			font = "vic_18"
+			borderSize = {x = 0 y = 0}
+			text = "DeityEffect"
+			maxWidth = 461
+			maxHeight = 72
+			Orientation = "UPPER_LEFT"
+			format = left
+		}
+
+		guiButtonType = {
+			name = "pick_deity"
+			position = { x=576 y = 2}
+			quadTextureSprite ="GFX_standard_button_71"
+			buttonText = "SELECT"
+			buttonFont = "vic_18"
+			Orientation = "LEFT"
+		}
+	}
+
+
+	################# icon orthodoxy
+	windowType = {
+		name = "orthodox_icon_item"
+		backGround =""
+		position = { x=18 y=-36 }
+		size = { x=90 y=104 }
+		moveable = 0
+		dontRender = ""
+		horizontalBorder = ""
+		Orientation = "UPPER_LEFT"
+
+		iconType =
+		{
+			name ="item_icon"
+			spriteType = "GFX_russian_icons_strip"
+			position = { x= -90 y = -9 }
+		}
+
+		instantTextBoxType = {
+			name = "icon_name"
+			position = { x= 13 y = -4 }
+			font = "vic_18"
+			borderSize = {x = 0 y = 0}
+			text = "DeityName"
+			maxWidth = 522
+			maxHeight = 43
+			Orientation = "UPPER_LEFT"
+			format = left
+		}
+
+		instantTextBoxType = {
+			name = "icon_effect"
+			position = { x = 13 y = 29 }
+			font = "vic_18"
+			borderSize = {x = 0 y = 0}
+			text = "DeityEffect"
+			maxWidth = 522
+			maxHeight = 72
+			Orientation = "UPPER_LEFT"
+			format = left
+		}
+
+		guiButtonType = {
+			name = "pick_icon"
+			position = { x=558 y = 18}
+			quadTextureSprite ="GFX_standard_button_71"
+			buttonText = "SELECT"
+			buttonFont = "vic_18"
+			Orientation = "LEFT"
+		}
+	}
+
+	################# religious school
+	windowType = {
+		name = "religious_school_item"
+		backGround =""
+		position = { x=18 y=-36 }
+		size = { x=90 y=104 }
+		moveable = 0
+		dontRender = ""
+		horizontalBorder = ""
+		Orientation = "UPPER_LEFT"
+
+		iconType =
+		{
+			name ="school_icon"
+			spriteType = "GFX_heretics_tolerance_icon"
+			position = { x= -86 y = -13 }
+		}
+
+		# Delete school_relation Please
+		instantTextBoxType = {
+			name = "school_relation"
+			position = { x= -8280 y = 50 }
+			font = "Arial12"
+			borderSize = {x = 0 y = 0}
+			text = ""
+			maxWidth = 90
+			maxHeight = 43
+			Orientation = "UPPER_LEFT"
+			format = center
+		}
+
+		iconType = {
+			name ="muslim_school_banner"
+			spriteType = "GFX_muslim_school_banner"
+			position = { x= 2 y = -18 }
+			alwaystransparent = yes
+		}
+
+		instantTextBoxType = {
+			name = "school_name"
+			position = { x= 32 y = -4 }
+			font = "vic_18"
+			borderSize = {x = 0 y = 0}
+			text = "DeityName"
+			maxWidth = 504
+			maxHeight = 43
+			Orientation = "UPPER_LEFT"
+			format = left
+		}
+
+		instantTextBoxType = {
+			name = "school_effect"
+			position = { x = 32 y = 25 }
+			font = "vic_18"
+			borderSize = {x = 0 y = 0}
+			text = "DeityEffect"
+			maxWidth = 504
+			maxHeight = 72
+			Orientation = "UPPER_LEFT"
+			format = left
+		}
+
+		guiButtonType = {
+			name = "pick_school"
+			position = { x=551 y = 11}
+			quadTextureSprite ="GFX_standard_button_71"
+			buttonText = "SELECT"
+			buttonFont = "vic_18"
+			Orientation = "LEFT"
+		}
+	}
+
+	################# Cult item
+	windowType = {
+		name = "fetishist_cult_item"
+		backGround =""
+		position = { x=18 y=-36 }
+		size = { x=90 y=83 }
+		moveable = 0
+		dontRender = ""
+		horizontalBorder = ""
+		Orientation = "UPPER_LEFT"
+
+		instantTextBoxType = {
+			name = "cult_description_helper"
+			position = { x= -76 y = -5 }
+			font = "vic_18"
+			borderSize = {x = 0 y = 0}
+			text = "CULT_HELP_DESC"
+			maxWidth = 778
+			maxHeight = 76
+			Orientation = "UPPER_LEFT"
+			format = left
+		}
+
+		iconType =
+		{
+			name ="cult_item_icon"
+			spriteType = "GFX_fetishists_strip"
+			position = { x= 81 y = -5 }
+		}
+
+		instantTextBoxType = {
+			name = "cult_item_name"
+			position = { x= -76 y = -4}
+			font = "vic_18"
+			borderSize = {x = 0 y = 0}
+			text = "AspectName"
+			maxWidth = 184
+			maxHeight = 43
+			Orientation = "UPPER_LEFT"
+			format = left
+		}
+
+		instantTextBoxType = {
+			name = "cult_item_effect"
+			position = { x = 176 y = -4 }
+			font = "vic_18"
+			borderSize = {x = 0 y = 0}
+			text = "AspectEffect"
+			maxWidth = 371
+			maxHeight = 43
+			Orientation = "UPPER_LEFT"
+			format = left
+		}
+
+		guiButtonType = {
+			name = "pick_cult"
+			position = { x=542 y = 2}
+			quadTextureSprite ="GFX_standard_button_71"
+			buttonText = "SELECT"
+			buttonFont = "vic_18"
+			Orientation = "LEFT"
+		}
+
+		
+	}
+
+	################################################################################################
+	### --- Unlocked church aspect item
+
+	windowType = {
+		name = "countryreligionview_unlockedaspectitem"
+		backGround =""
+		position = { x=0 y=0 }
+		size = { x=65 y=65 }
+		moveable = 0
+		dontRender = ""
+		horizontalBorder = ""
+
+		iconType =
+		{
+			name ="aspect_icon"
+			spriteType = "GFX_idea_empty"
+			position = { x= 0 y = 0 }
+			Orientation = "UPPER_LEFT"
+			scale = 1
+		}
+	}
+
+	################################################################################################
+	################# Church aspect item (for selection) For Protestants
+	windowType = {
+		name = "countryreligionview_aspectitem_protestant"
+		backGround =""
+		position = { x=18 y=-36 }
+		size = { x=90 y=83 }
+		moveable = 0
+		dontRender = ""
+		horizontalBorder = ""
+		Orientation = "UPPER_LEFT"
+
+		iconType =
+		{
+			name ="aspect_icon"
+			spriteType = "GFX_hindu_deities_strip"
+			position = { x= 81 y = -25 }
+		}
+
+		instantTextBoxType = {
+			name = "aspect_name"
+			position = { x= -76 y = 11 }
+			font = "vic_18"
+			borderSize = {x = 0 y = 0}
+			text = "AspectName"
+			maxWidth = 184
+			maxHeight = 43
+			Orientation = "UPPER_LEFT"
+			format = left
+		}
+
+		instantTextBoxType = {
+			name = "aspect_effect"
+			position = { x = 176 y = -4 }
+			font = "vic_18"
+			borderSize = {x = 0 y = 0}
+			text = "AspectEffect"
+			maxWidth = 371
+			maxHeight = 43
+			Orientation = "UPPER_LEFT"
+			format = left
+		}
+
+		guiButtonType = {
+			name = "pick_aspect"
+			position = { x=542 y = 2}
+			quadTextureSprite ="GFX_standard_button_71"
+			buttonText = "SELECT"
+			buttonFont = "vic_18"
+			Orientation = "LEFT"
+		}
+	}
+
+	################################################################################################
+	################# Church aspect item (for selection) For Protestants
+	windowType = {
+		name = "countryreligionview_aspectitem_hussite"
+		backGround =""
+		position = { x=18 y=-36 }
+		size = { x=90 y=83 }
+		moveable = 0
+		dontRender = ""
+		horizontalBorder = ""
+		Orientation = "UPPER_LEFT"
+
+		iconType =
+		{
+			name ="aspect_icon"
+			spriteType = "GFX_hindu_deities_strip"
+			position = { x= 81 y = -25 }
+		}
+
+		instantTextBoxType = {
+			name = "aspect_name"
+			position = { x= -76 y = 11 }
+			font = "vic_18"
+			borderSize = {x = 0 y = 0}
+			text = "AspectName"
+			maxWidth = 184
+			maxHeight = 43
+			Orientation = "UPPER_LEFT"
+			format = left
+		}
+
+		instantTextBoxType = {
+			name = "aspect_effect"
+			position = { x = 176 y = -4 }
+			font = "vic_18"
+			borderSize = {x = 0 y = 0}
+			text = "AspectEffect"
+			maxWidth = 371
+			maxHeight = 43
+			Orientation = "UPPER_LEFT"
+			format = left
+		}
+
+		guiButtonType = {
+			name = "pick_aspect"
+			position = { x=542 y = 2}
+			quadTextureSprite ="GFX_standard_button_71"
+			buttonText = "SELECT"
+			buttonFont = "vic_18"
+			Orientation = "LEFT"
+		}
+	}
+
+	################################################################################################
+	################# Church aspect item (for selection) For Jewish
+	windowType = {
+		name = "countryreligionview_aspectitem_jewish"
+		backGround =""
+		position = { x=18 y=-36 }	
+		size = { x=90 y=83 }
+		moveable = 0
+		dontRender = ""
+		horizontalBorder = ""
+		Orientation = "UPPER_LEFT"
+		
+		iconType = {
+			name = "aspect_icon"
+			spriteType = "GFX_hindu_deities_strip"
+			position = { x= 81 y = -25 }
+		}
+		
+		instantTextBoxType = {
+			name = "aspect_name"
+			position = { x= -76 y = 11 }
+			font = "vic_18"
+			borderSize = {x = 0 y = 0}
+			text = "AspectName"	
+			maxWidth = 184
+			maxHeight = 43
+			Orientation = "UPPER_LEFT"
+			format = left
+		}
+		
+		instantTextBoxType = {
+			name = "aspect_effect"
+			position = { x = 176 y = -4 }
+			font = "vic_18"
+			borderSize = {x = 0 y = 0}
+			text = "AspectEffect"	
+			maxWidth = 371
+			maxHeight = 43
+			Orientation = "UPPER_LEFT"
+			format = left
+		}
+		
+		guiButtonType = {
+			name = "pick_aspect"
+			position = { x=542 y = 2}
+			quadTextureSprite ="GFX_standard_button_71"
+			buttonText = "SELECT"
+			buttonFont = "vic_18"
+			Orientation = "LEFT"
+		}
+	}
+
+	################################################################################################
+	################# Church aspect item (for selection) For Anglican
+	windowType = {
+		name = "countryreligionview_aspectitem_anglican"
+		backGround =""
+		position = { x=18 y=-54 }
+		size = { x=90 y=99 }
+		moveable = 0
+		dontRender = ""
+		horizontalBorder = ""
+		Orientation = "UPPER_LEFT"
+
+		iconType =
+		{
+			name ="aspect_icon"
+			spriteType = "GFX_hindu_deities_strip"
+			position = { x= -92 y = -18 }
+		}
+
+		instantTextBoxType = {
+			name = "aspect_name"
+			position = { x=20 y = -13 }
+			font = "vic_18"
+			borderSize = {x = 0 y = 0}
+			text = "AspectName"
+			maxWidth = 540
+			maxHeight = 43
+			Orientation = "UPPER_LEFT"
+			format = left
+		}
+
+		instantTextBoxType = {
+			name = "aspect_effect"
+			position = { x = 20 y = 20 }
+			font = "vic_18"
+			borderSize = {x = 0 y = 0}
+			text = "AspectEffect"
+			maxWidth = 540
+			maxHeight = 43
+			Orientation = "UPPER_LEFT"
+			format = left
+		}
+
+		guiButtonType = {
+			name = "pick_aspect"
+			position = { x=569 y = 11}
+			quadTextureSprite ="GFX_standard_button_71"
+			buttonText = "SELECT"
+			buttonFont = "vic_18"
+			Orientation = "LEFT"
+		}
+	}
+
+	################################################################################################
+	### --- Cardinal item
+
+	windowType = {
+		name = "countryreligionview_cardinalitem"
+		backGround =""
+		position = { x=0 y=0 }
+		size = { x=58 y=58 }
+		moveable = 0
+		dontRender = ""
+		horizontalBorder = ""
+
+		iconType =
+		{
+			name ="cardinal"
+			spriteType = "GFX_cardinal_icon"
+			position = { x= -11 y = -49 }
+			Orientation = "UPPER_LEFT"
+			hint_tag = "hint_cardinal"
+		}
+	}
+
+	################################################################################################
+	### --- Blessing item
+
+	windowType = {
+		name = "countryreligionview_blessingitem"
+		backGround =""
+		position = { x=0 y=0 }
+		size = { x=43 y=43 }
+		moveable = 0
+		dontRender = ""
+		horizontalBorder = ""
+		Orientation = "CENTER"
+
+		iconType =
+		{
+			name = "blessing_icon"
+			scale = 0.60
+			spriteType = "GFX_idea_unknown"
+			position = { x= 0 y = 0 }
+			Orientation = "UPPER_LEFT"
+		}
+	}
+
+	windowType = {
+		name = "religionview_incident_entry"
+		backGround=""
+		position = { x=0 y=0 }
+		size = { x=40 y= 40 }
+		moveable = 0
+		dontRender = ""
+		horizontalBorder= ""
+		verticalBorder= ""
+		fullScreen = no
+
+		iconType = {
+			name = "incident_icon"
+			spriteType ="GFX_incident_icons"
+			position = { x= 0 y = 0 }
+		}
+	}
+
+	############## CONFUCIANISM RELIGION SELECT ##############
+	windowType = {
+		name = "religion_select_item"
+		backGround =""
+		position = { x=0 y=0 }
+		size = { x=180 y= 54 }
+		moveable = 0
+		dontRender = ""
+		horizontalBorder = ""
+
+		iconType =
+		{
+			name ="icon"
+			spriteType = "GFX_icon_religion_small"
+			position = { x= 0 y = -16 }
+			Orientation = "LEFT"
+		}
+
+		instantTextBoxType = {
+			name = "religion_name"
+			position = { x= 72 y = -4 }
+			font = "vic_18"
+			borderSize = {x = 0 y = 0}
+			text = ""
+			maxWidth = 540
+			maxHeight = 43
+			Orientation = "UPPER_LEFT"
+			format = left
+		}
+
+		guiButtonType = {
+			name = "button"
+			position = { x=752 y = -16} #{ x = 207 y = 9 }
+			quadTextureSprite ="GFX_button_straight_87_32_notext"
+			buttonText = "SELECT"
+			buttonFont = "vic_18"
+			Orientation = "LEFT"
+		}
+	}
+	############## CONFUCIANISM HARMONIZED RELIGIONS ##############
+	windowType = {
+		name = "harmonized_listbox_item"
+		backGround =""
+		position = { x=0 y=0 }
+		size = { x=54 y= 54 }
+		moveable = 0
+		dontRender = ""
+		horizontalBorder = ""
+
+		iconType =
+		{
+			name ="icon"
+			spriteType = "GFX_icon_religion_small"
+			position = { x= 0 y = -4 }
+			Orientation = "LEFT"
+			#alwaystransparent = yes
+			#scale = 0.5
+		}
+	}
+
+	############## SIKHISM GURU TEACHINGS ##############
+	windowType = {
+		name = "guru_teaching_entry"
+		position = { x = -11 y = 4 }
+		show_position = { x = 0 y = 0 }
+		size = { x = 50 y = 50 }
+		moveable = 0
+
+		guiButtonType = {
+			name = "frame_button"
+			position = { x = 0 y = 0 }
+			quadTextureSprite ="GFX_teaching_button"	
+			Orientation = "UPPER_LEFT"
+		}
+
+		guiButtonType = {
+			name = "add_button"
+			position = { x = 0 y = 0 }
+			quadTextureSprite ="GFX_teaching_add_button"	
+			Orientation = "UPPER_LEFT"
+		}
+
+		guiButtonType = {
+			name = "button"
+			position = { x = -9 y = -9 }
+			quadTextureSprite ="GFX_potential_teaching_entry_bg"	
+			Orientation = "UPPER_LEFT"
+			scale = 0.6
+		}
+	}
+
+	windowType = {
+		name = "potential_guru_teaching_entry"
+		position = { x = 0 y = 0 }
+		size = { x = 270 y = 99 }
+		moveable = 0
+
+		guiButtonType = {
+			name = "button"
+			position = { x = 0 y = 0 }
+			quadTextureSprite ="GFX_potential_teaching_entry_bg"	
+		}
+
+		instantTextBoxType = {
+			name = "name"
+			position = { x= 32 y = 29 }
+			font = "vic_18"
+			borderSize = {x = 0 y = 0}
+			text = "TEST"
+			maxWidth = 540
+			maxHeight = 43
+			Orientation = "UPPER_LEFT"
+			format = left
+			alwaystransparent = yes
+		}
+
+		instantTextBoxType = {
+			name = "effect"
+			position = { x= 32 y = 65 }
+			font = "vic_18"
+			borderSize = {x = 0 y = 0}
+			text = ""
+			maxWidth = 540
+			maxHeight = 43
+			Orientation = "UPPER_LEFT"
+			format = left
+			alwaystransparent = yes
+		}
+	}
+
+	windowType = {
+		name = "guru_new_teachings_list"
+		position = { x = 0 y = 0 }
+		size = { x = 270 y = 396 }
+		moveable = 0
+
+		iconType = {
+			name = "pick_header_bg"
+			spriteType ="GFX_totemism_ancestors_pick_header"
+			position = { x = -45 y = -18 }	
+			Orientation = "UPPER_LEFT"
+		}
+
+		instantTextBoxType = {
+			name = "title"
+			position = { x= 5 y = 7 }
+			font = "vic_18"
+			borderSize = {x = 0 y = 0}
+			text = "PICK_TEACHING"	
+			maxWidth = 360
+			maxHeight = 43
+			Orientation = "UPPER_LEFT"
+			format = left
+		}
+
+		guiButtonType = {
+			name = "close_button"
+			position = { x = 468 y = -9 }
+			quadTextureSprite ="GFX_button_close"	
+			Orientation = "UPPER_LEFT"
+		}
+
+		listboxType = {
+			name ="list"
+			position = { x=-27 y = 38}
+			backGround=""
+			size = { x=529 y =423}
+			Orientation = "UPPER_LEFT"
+			horizontal = 0
+			spacing = 0
+			scrollbartype = "standardlistbox_slider"
+			borderSize = {x = 2 y = 2}
+		}
+	}
+
+	############## TOTEMISM ANCESTORS ##############
+	windowType = {
+		name = "ancestor_entry"
+		position = { x = -25 y = -5 }
+		show_position = { x = 0 y = 0 }
+		size = { x = 50 y = 50 }
+		moveable = 0
+
+		guiButtonType = {
+			name = "frame_button"
+			position = { x = 0 y = 0 }
+			quadTextureSprite ="GFX_totemism_ancestors_icon_bg"	
+			Orientation = "UPPER_LEFT"
+		}
+
+		guiButtonType = {
+			name = "add_button"
+			position = { x = 0 y = 0 }
+			quadTextureSprite ="GFX_totemism_ancestors_icon_add"	
+			Orientation = "UPPER_LEFT"
+		}
+
+		iconType = {
+			name = "ancestor"
+			position = { x = 0 y = 0 }
+			spriteType ="GFX_ancestor_nothing"
+		}
+	}
+
+	windowType = {
+		name = "potential_ancestor_entry"
+		position = { x = 0 y = 0 }
+		size = { x = 270 y = 99 }
+		moveable = 0
+
+		guiButtonType = {
+			name = "button"
+			position = { x = 0 y = 0 }
+			quadTextureSprite ="GFX_totemism_ancestors_pick_bg"	
+		}
+
+		instantTextBoxType = {
+			name = "name"
+			position = { x= 32 y = 29 }
+			font = "vic_18"
+			borderSize = {x = 0 y = 0}
+			text = ""
+			maxWidth = 540
+			maxHeight = 43
+			Orientation = "UPPER_LEFT"
+			format = left
+			alwaystransparent = yes
+		}
+
+		instantTextBoxType = {
+			name = "effect"
+			position = { x= 32 y = 65 }
+			font = "vic_18"
+			borderSize = {x = 0 y = 0}
+			text = "EFFECT"
+			maxWidth = 540
+			maxHeight = 43
+			Orientation = "UPPER_LEFT"
+			format = left
+			alwaystransparent = yes
+		}
+	}
+
+	windowType = {
+		name = "potential_ancestors_list"
+		position = { x = 0 y = 0 }
+		size = { x = 270 y = 396 }
+		moveable = 0
+		
+		iconType = {
+			name = "pick_header_bg"
+			spriteType ="GFX_totemism_ancestors_pick_header"
+			position = { x = -45 y = -18 }	
+			Orientation = "UPPER_LEFT"
+		}
+
+		instantTextBoxType = {
+			name = "title"
+			position = { x= 5 y = 7 }
+			font = "vic_18"
+			borderSize = {x = 0 y = 0}
+			text = "PICK_ANCESTOR"	
+			maxWidth = 360
+			maxHeight = 43
+			Orientation = "UPPER_LEFT"
+			format = left
+		}
+
+		guiButtonType = {
+			name = "close_button"
+			position = { x = 468 y = -9 }
+			quadTextureSprite ="GFX_button_close"	
+			Orientation = "UPPER_LEFT"
+		}
+
+		listboxType = {
+			name ="list"
+			position = { x=-27 y = 38}
+			backGround=""
+			size = { x=1069 y =963} #was 529 423
+			Orientation = "UPPER_LEFT"
+			horizontal = 0
+			spacing = 0
+			scrollbartype = "standardlistbox_slider"
+			borderSize = {x = 2 y = 2}
+		}
+	}
+}

@@ -1,0 +1,258 @@
+guiTypes = {
+	windowType = 
+	{
+		name = "secede_province_entry"
+		backGround=""
+		position = { x=0 y=36 }	
+		size = { x=396 y=52 }
+		moveable = 0
+		dontRender = ""
+		horizontalBorder= ""
+		verticalBorder= ""
+		fullScreen = no	
+		
+		checkboxType = {
+			name = "select"
+			position = { x=29 y =0 }
+			quadTextureSprite ="GFX_list_check_button"	
+			tooltip = ""
+			tooltipText =""
+			delayedTooltipText = ""
+			buttonFont = "vic_18"
+		}
+		instantTextBoxType = {
+			name = "score"
+			position = { x = -14 y = 14 }
+			textureFile = ""
+			font = "Main_14_bold"
+			borderSize = {x = 0 y = 0}
+			text = ""	
+			maxWidth = 360
+			maxHeight = 58	
+		}	
+		textBoxType = {
+			name = "text"
+			position = { x = 29 y = 7 }
+			textureFile = ""
+			font = "vic_18"
+			borderSize = {x = 0 y = 0}
+			text = "xxxx"
+			format = centre	
+			maxWidth = 346
+			maxHeight = 29	
+		}		
+	}	
+	windowType = 
+	{
+		name = "renounce_core_entry"
+		backGround=""
+		position = { x=0 y=36 }	
+		size = { x=396 y=52 }
+		moveable = 0
+		dontRender = ""
+		horizontalBorder= ""
+		verticalBorder= ""
+		fullScreen = no	
+		
+		checkboxType = {
+			name = "select"
+			position = { x=29 y =0 }
+			quadTextureSprite ="GFX_list_check_button"	
+			tooltip = ""
+			tooltipText =""
+			delayedTooltipText = ""
+			buttonFont = "vic_18"
+		}
+		instantTextBoxType = {
+			name = "score"
+			position = { x = -14 y = 14 }
+			textureFile = ""
+			font = "Main_14"
+			borderSize = {x = 0 y = 0}
+			text = ""	
+			maxWidth = 360
+			maxHeight = 58	
+		}	
+		textBoxType = {
+			name = "text"
+			position = { x = 29 y = 7 }
+			textureFile = ""
+			font = "vic_18"
+			borderSize = {x = 0 y = 0}
+			text = "xxxx"
+			format = centre	
+			maxWidth = 346
+			maxHeight = 29	
+		}	
+	}
+	
+	windowType = 
+	{
+		name = "cancel_vassal_entry"
+		backGround=""
+		position = { x=0 y=36 }	
+		size = { x=396 y=108 }
+		moveable = 0
+		dontRender = ""
+		horizontalBorder= ""
+		verticalBorder= ""
+		fullScreen = no	
+
+		iconType =
+		{
+			name ="shield"
+			spriteType = "GFX_shield_small"
+			position = { x= -29 y = -4 }
+			Orientation = "UPPER_LEFT"
+		
+		}
+		
+		checkboxType = {
+			name = "select"
+			position = { x=29 y =0 }
+			quadTextureSprite ="GFX_list_check_button"	
+			tooltip = ""
+			tooltipText =""
+			delayedTooltipText = ""
+			buttonFont = "vic_18"
+		}
+
+		textBoxType = {
+			name = "text"
+			position = { x = 29 y = 7 }
+			textureFile = ""
+			font = "vic_18"
+			borderSize = {x = 0 y = 0}
+			text = "xxxx"
+			format = centre	
+			maxWidth = 346
+			maxHeight = 29	
+		}
+		instantTextBoxType = {
+			name = "desc"
+			position = { x = 0 y = 47 }
+			textureFile = ""
+			font = "Main_14"
+			borderSize = {x = 0 y = 0}
+			text = ""	
+			maxWidth = 382
+			maxHeight = 58	
+		}
+	}
+	
+
+	
+	windowType = 
+	{
+		name = "annul_treaty_entry"
+		backGround=""
+		position = { x=0 y=36 }	
+		size = { x=396 y=108 }
+		moveable = 0
+		dontRender = ""
+		horizontalBorder= ""
+		verticalBorder= ""
+		fullScreen = no	
+
+		iconType =
+		{
+			name ="shield"
+			spriteType = "GFX_shield_small"
+			position = { x= -29 y = -4 }
+			Orientation = "UPPER_LEFT"
+		
+		}
+		
+		checkboxType = {
+			name = "select"
+			position = { x=29 y =0 }
+			quadTextureSprite ="GFX_list_check_button"	
+			tooltip = ""
+			tooltipText =""
+			delayedTooltipText = ""
+			buttonFont = "vic_18"
+		}
+
+		textBoxType = {
+			name = "text"
+			position = { x = 29 y = 7 }
+			textureFile = ""
+			font = "vic_18"
+			borderSize = {x = 0 y = 0}
+			text = "xxxx"
+			format = centre	
+			maxWidth = 346
+			maxHeight = 29	
+		}
+		instantTextBoxType = {
+			name = "desc"
+			position = { x = 0 y = 47 }
+			textureFile = ""
+			font = "Main_14"
+			borderSize = {x = 0 y = 0}
+			text = ""	
+			maxWidth = 382
+			maxHeight = 58	
+		}
+	}
+	
+	
+	windowType = 
+	{
+		name = "release_country_entry"
+		backGround=""
+		position = { x=0 y=36 }	
+		size = { x=396 y=108 }
+		moveable = 0
+		dontRender = ""
+		horizontalBorder= ""
+		verticalBorder= ""
+		fullScreen = no	
+
+		
+		
+		checkboxType = {
+			name = "select"
+			position = { x=29 y =0 }
+			quadTextureSprite ="GFX_list_check_button"	
+			tooltip = ""
+			tooltipText =""
+			delayedTooltipText = ""
+			buttonFont = "vic_18"
+		}
+
+		iconType =
+		{
+			name ="shield"
+			spriteType = "GFX_shield_small"
+			position = { x= -29 y = -4 }
+			Orientation = "UPPER_LEFT"
+		
+		}
+
+			
+		textBoxType = {
+			name = "text"
+			position = { x = 29 y = 7 }
+			textureFile = ""
+			font = "vic_18"
+			borderSize = {x = 0 y = 0}
+			text = "xxxx"
+			format = centre	
+			maxWidth = 346
+			maxHeight = 29	
+		}
+
+		instantTextBoxType = {
+			name = "desc"
+			position = { x = 0 y = 47 }
+			textureFile = ""
+			font = "Main_14"
+			borderSize = {x = 0 y = 0}
+			text = ""	
+			maxWidth = 382
+			maxHeight = 58	
+		}		
+	}	
+		
+}

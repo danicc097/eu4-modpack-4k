@@ -1,0 +1,238 @@
+# Concubine Events
+namespace = ate_advisor_concubine_events
+
+country_event = {
+	id = ate_advisor_concubine_events.1
+	title = ate_advisor_concubine_events.EVTNAME1
+	desc = {
+		trigger = {
+			is_female = no
+		}
+		desc = ate_advisor_concubine_events.EVTDESC1.1
+	}
+	desc = {
+		trigger = {
+			is_female = yes
+		}
+		desc = ate_advisor_concubine_events.EVTDESC1.2
+	}
+	picture = NEW_HEIR_eventPicture
+
+	trigger = {
+		has_dlc = "Rights of Man"
+		government = monarchy
+		has_government_attribute = queen
+		has_government_attribute = heir
+		has_consort = no
+		has_heir = no
+		has_regency = no
+		is_lesser_in_union = no
+		OR = {
+			AND = {
+				is_female = no
+				advisor = ate_advisor_concubine_female
+			}
+			AND = {
+				is_female = yes
+				advisor = ate_advisor_concubine_male
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 240
+	}
+
+	immediate = {
+		hidden_effect = {
+			if = {
+				limit = {
+					advisor = ate_advisor_concubine_female
+				}
+				set_saved_name = {
+					key = concubine_name
+					type = advisor
+					female = yes
+				}
+			}
+			else = {
+				set_saved_name = {
+					key = concubine_name
+					type = advisor
+				}
+			}
+		}
+	}
+
+	option = {
+		name = ate_advisor_concubine_events1.EVTOPT1
+
+		ai_chance = {
+			factor = 0.25
+		}
+
+		add_legitimacy = -5
+		custom_tooltip = ATE_CONCUBINE_BECOMES_CONSORT_TT
+		hidden_effect = {
+			if = {
+				limit = {
+					is_female = no
+				}
+				define_consort = {
+					name = concubine_name
+					country_of_origin = ROOT
+					female = yes
+				}
+			}
+			else = {
+				define_consort = {
+					name = concubine_name
+					country_of_origin = ROOT
+					male = yes
+				}
+			}
+			if = {
+				limit = {
+					has_advisor = ate_advisor_concubine_female
+				}
+				remove_advisor = ate_advisor_concubine_female
+			}
+			else_if = {
+				limit = {
+					has_advisor = ate_advisor_concubine_male
+				}
+				remove_advisor = ate_advisor_concubine_male
+			}
+			clear_saved_name = concubine_name
+		}
+		define_heir = {
+			dynasty = ROOT
+			change_adm = -1
+			change_dip = -1
+			change_mil = -1
+			claim = 30
+			male = yes
+		}
+	}
+
+	option = {
+		name = ate_advisor_concubine_events1.EVTOPT2
+
+		ai_chance = {
+			factor = 0.75
+		}
+
+		add_legitimacy = 5
+		if = {
+			limit = {
+				has_advisor = ate_advisor_concubine_female
+			}
+			remove_advisor = ate_advisor_concubine_female
+		}
+		else_if = {
+			limit = {
+				has_advisor = ate_advisor_concubine_male
+			}
+			remove_advisor = ate_advisor_concubine_male
+		}
+	}
+
+	after = {
+		clear_saved_name = concubine_name
+	}
+}
+
+country_event = {
+	id = ate_advisor_concubine_events.2
+	title = ate_advisor_concubine_events.EVTNAME2
+	desc = {
+		trigger = {
+			is_female = no
+		}
+		desc = ate_advisor_concubine_events.EVTDESC2.1
+	}
+	desc = {
+		trigger = {
+			is_female = yes
+		}
+		desc = ate_advisor_concubine_events.EVTDESC2.2
+	}
+	picture = COURT_eventPicture
+
+	trigger = {
+		government = monarchy
+		has_government_attribute = heir
+		has_government_attribute = queen
+		has_regency = no
+		has_heir = no
+		is_lesser_in_union = no
+		NOT = { advisor = ate_advisor_concubine_female }
+		NOT = { advisor = ate_advisor_concubine_male }
+	}
+
+	mean_time_to_happen = {
+		months = 500
+		modifier = {
+			factor = 0.5
+			ruler_age = 50
+		}
+	}
+
+	option = {
+		name = ate_advisor_concubine_events2.EVTOPT1
+
+		trigger = {
+			is_female = no
+		}
+
+		if = {
+			limit = {
+				ruler_has_personality_ancestor = { key = well_connected }
+			}
+			define_advisor = {
+				type = ate_advisor_concubine_female
+				skill = 3
+				female = yes
+			}
+		}
+		else = {
+			define_advisor = {
+				type = ate_advisor_concubine_female
+				skill = 2
+				female = yes
+			}
+		}
+	}
+
+	option = {
+		name = ate_advisor_concubine_events2.EVTOPT2
+
+		trigger = {
+			is_female = yes
+		}
+
+		if = {
+			limit = {
+				ruler_has_personality_ancestor = { key = well_connected }
+			}
+			define_advisor = {
+				type = ate_advisor_concubine_male
+				skill = 3
+				female = no
+			}
+		}
+		else = {
+			define_advisor = {
+				type = ate_advisor_concubine_male
+				skill = 2
+				female = no
+			}
+		}
+	}
+
+	option = {
+		name = ate_advisor_concubine_events2.EVTOPT3
+
+		add_legitimacy = 10
+	}
+}

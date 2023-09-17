@@ -1,0 +1,380 @@
+guiTypes = {
+	
+	windowType = {
+		name = "natives_window"
+		position = { x=-499 y=-522}	
+		size = { x=1350 y=1350 }
+		moveable = 1
+		dontRender = ""
+		horizontalBorder= ""
+		verticalBorder= ""
+		fullScreen = no
+		Orientation = "CENTER"
+		
+		iconType =
+		{
+			name ="background"
+			spriteType = "GFX_natives_view_bg"
+			position = { x= -7 y = 70 }
+			Orientation = "UPPER_LEFT"
+
+		}
+
+		guiButtonType = {
+			name = "close_button"
+			position = { x = 905 y = 110 }
+			quadTextureSprite ="GFX_closebutton2"	
+			shortcut = "ESCAPE"
+			Orientation = "UPPER_LEFT"
+			clicksound = close_window
+		}		
+
+		instantTextBoxType = {
+			name = "window_title"
+			position = { x = 27 y = 144 }
+			textureFile = ""
+			font = "vic_36"
+			borderSize = {x = 7 y = 7}	
+			text = "HEADER_NATIVES"	
+			maxWidth = 922
+			maxHeight = 58
+			format = centre
+		}
+	
+###
+### FEDERATION ADVANCEMENT
+###
+		windowType = {
+			name = "federation_advancement"
+			position = { x=50 y=328 }
+			size = { x=1843 y=180 }
+			moveable = 0
+			Orientation = "UPPER_LEFT"
+			
+			instantTextBoxType = {
+				name = "advancements"
+				position = { x = 18 y = -77 }
+				textureFile = ""
+				font = "vic_22"
+				borderSize = {x = 7 y = 7}
+				text = "FEDERATION_ADVANCEMENTS_HEADER"
+				#maxWidth = 382
+				maxHeight = 58
+				#format = centre
+			}
+			
+			instantTextBoxType = {
+				name = "1_adv"
+				position = { x = 144 y = 74 }
+				textureFile = ""
+				font = "vic_18"
+				borderSize = {x = 7 y = 7}
+				text = "1_native_advancement_desc"
+				#maxWidth = 382
+				maxHeight = 58
+				#format = centre
+			}
+
+			instantTextBoxType = {
+				name = "2_adv"
+				position = { x = 144 y = 178 }
+				textureFile = ""
+				font = "vic_18"
+				borderSize = {x = 7 y = 7}
+				text = "2_native_advancement_desc"
+				#maxWidth = 382
+				maxHeight = 58
+				#format = centre
+			}
+
+			instantTextBoxType = {
+				name = "3_adv"
+				position = { x = 144 y = 283 }
+				textureFile = ""
+				font = "vic_18"
+				borderSize = {x = 7 y = 7}
+				text = "3_native_advancement_desc"
+				#maxWidth = 382
+				maxHeight = 58
+				#format = centre
+			}
+			instantTextBoxType = {
+				name = "4_adv"
+				position = { x = 144 y = 387 }
+				textureFile = ""
+				font = "vic_18"
+				borderSize = {x = 7 y = 7}
+				text = "4_native_advancement_desc"
+				#maxWidth = 382
+				maxHeight = 58
+				#format = centre
+			}
+			instantTextBoxType = {
+				name = "5_adv"
+				position = { x = 144 y = 491 }
+				textureFile = ""
+				font = "vic_18"
+				borderSize = {x = 7 y = 7}
+				text = "5_native_advancement_desc"
+				#maxWidth = 382
+				maxHeight = 58
+				#format = centre
+			}
+			instantTextBoxType = {
+				name = "6_adv"
+				position = { x = 144 y = 596 }
+				textureFile = ""
+				font = "vic_18"
+				borderSize = {x = 7 y = 7}
+				text = "6_native_advancement_desc"
+				#maxWidth = 382
+				maxHeight = 58
+				#format = centre
+			}
+			instantTextBoxType = {
+				name = "7_adv"
+				position = { x = 144 y = 700 }
+				textureFile = ""
+				font = "vic_18"
+				borderSize = {x = 7 y = 7}
+				text = "7_native_advancement_desc"
+				#maxWidth = 382
+				maxHeight = 58
+				#format = centre
+			}
+			instantTextBoxType = {
+				name = "8_adv"
+				position = { x = 144 y = 805 }
+				textureFile = ""
+				font = "vic_18"
+				borderSize = {x = 7 y = 7}
+				text = "8_native_advancement_desc"
+				#maxWidth = 382
+				maxHeight = 58
+				#format = centre¸
+				alwaystransparent = yes
+			}
+
+			iconType = {
+				name ="advancement_icon"
+				spriteType = "GFX_native_advancement_icon"
+				position = { x= 36 y = 0}
+				Orientation = "UPPER_LEFT"
+			}
+		
+			gridBoxType = {
+				name = "gridbox"
+				position = { x=29 y=41 }
+				size = { width=529 height=639 }
+				slotsize = { width = 529 height = 104 }
+				max_slots_horizontal = 1
+				max_slots_vertical = 10
+			}	
+			
+			instantTextBoxType = {
+				name = "unified_federation_text"
+				position = { x = 18 y = -77 }
+				textureFile = ""
+				font = "vic_22"
+				borderSize = {x = 7 y = 7}
+				text = "UNIFIED_FEDERATION_TITLE"
+				maxWidth = 382
+				maxHeight = 58
+				format = centre
+			}
+			iconType={
+			name = "unified_federation_icon"
+			spriteType = "GFX_natives_unified_federation"
+			position = { x= 61 y = -14 }
+			Orientation = "LEFT"
+			scale = 0.9
+			alwaystransparent = yes
+			}
+		}
+
+###
+### FEDERATIONS
+###
+		windowType = {
+			name = "federation"
+			position = { x= 0 y = 90 }
+			size = { x=1843 y=450 }
+			moveable = 0
+			Orientation = "UPPER_LEFT"
+			
+			instantTextBoxType = {
+				name = "federation"
+				position = { x = 81 y = 0 }
+				textureFile = ""
+				font = "vic_22"
+				borderSize = {x = 7 y = 7}
+				text = "FEDERATION_HEADER"
+				#maxWidth = 382
+				#maxHeight = 58
+				#format = centre
+			}
+
+			instantTextBoxType = {
+				name = "federation_name"
+				position = { x = 81 y = 0 }
+				textureFile = ""
+				font = "vic_22"
+				borderSize = {x = 7 y = 7}
+				text = ""
+				#maxWidth = 382
+				#maxHeight = 58
+				#format = centre
+			}
+		
+			iconType =
+			{
+				name ="federation_icon"
+				spriteType = "GFX_diplomacy_federation"
+				position = { x= 36 y = 2}
+				Orientation = "UPPER_LEFT"
+			}	
+			
+			instantTextBoxType = {
+				name = "unified_federation_text"
+				position = { x = 18 y = 0 }
+				textureFile = ""
+				font = "vic_22"
+				borderSize = {x = 7 y = 7}
+				text = "UNIFIED_FEDERATION_TEXT"
+				maxWidth = 288
+				maxHeight = 162
+				format = centre
+			}	
+			
+			instantTextBoxType = {
+				name = "no_federation_text"
+				position = { x = 126 y = 72 }
+				textureFile = ""
+				font = "vic_22"
+				borderSize = {x = 7 y = 7}
+				text = "NO_FEDERATION_TEXT"
+				maxWidth = 288
+				maxHeight = 162
+				format = centre
+			}
+
+			guiButtonType =
+			{
+				name ="federation_leader"
+				quadTextureSprite = "GFX_federation_leader_frame"
+				position = { x= 171 y = 90 }
+				Orientation = "UPPER_LEFT"
+				clicksound = click
+			}
+			
+			OverlappingElementsBoxType = 
+			{
+				name = "federation_members_box"
+				position = { x = 135 y = 243 }
+				size = { x = 288 y = 58 }
+				Orientation = "UPPER_LEFT"
+				#format = center
+				spacing = 2
+			}
+
+			iconType={
+				name ="cohesion_progress"
+				spriteType = "GFX_default_progressbar"
+				#position = { x= 52 y = 239 }
+				position = { x= 144 y = 315 }
+				Orientation = "UPPER_LEFT"
+			}
+
+			iconType={
+				name ="cohesion_progress_frame"
+				spriteType = "GFX_progress_bar_frame"
+				#position = { x= 32 y = 234 }
+				position = { x= 128 y = 310 }
+				Orientation = "UPPER_LEFT"
+			}		
+		}
+		
+###
+### MIGRATION
+###
+		windowType = {
+			name = "migration"
+			position = { x= 0 y = 459}
+			size = { x=1843 y=180 }
+			moveable = 0
+			Orientation = "UPPER_LEFT"
+			
+			instantTextBoxType = {
+				name = "development_label"
+				#position = { x = -27 y = 77 }
+				position = { x = 81 y = 0 }
+				textureFile = ""
+				font = "vic_22"
+				borderSize = {x = 7 y = 7}
+				text = "TRIBAL_DEVELOPMENT_TITLE"
+				#maxWidth = 382
+				maxHeight = 58
+				#format = centre
+			}
+
+			instantTextBoxType = {
+				name = "adm_dev"
+				position = { x = 99 y = 63 }
+				textureFile = ""
+				font = "vic_22"
+				borderSize = {x = 7 y = 7}
+				maxWidth = 115
+				maxHeight = 58
+				#format = centre
+			}
+			instantTextBoxType = {
+				name = "dip_dev"
+				position = { x = 214 y = 63 }
+				textureFile = ""
+				font = "vic_22"
+				borderSize = {x = 7 y = 7}
+				maxWidth = 115
+				maxHeight = 58
+				#format = centre
+			}
+			instantTextBoxType = {
+				name = "mil_dev"
+				position = { x = 329 y = 63 }
+				textureFile = ""
+				font = "vic_22"
+				borderSize = {x = 7 y = 7}
+				maxWidth = 115
+				maxHeight = 58
+				#format = centre
+			}
+		}
+	}
+
+	windowType = {
+		name = "federation_advancement_entry"
+		backGround =""
+		position = { x=0 y=23 }	
+		size = { x=450 y= 104 }
+		moveable = 0
+		dontRender = ""
+		horizontalBorder = ""
+
+		guiButtonType =
+		{
+			name ="button"
+			spriteType = "GFX_idea_unknown"
+			position = { x= 0 y = 0 }
+			Orientation = "LEFT"
+			#scale = 0.5
+		}
+
+		iconType={
+			name ="icon"
+			spriteType = "GFX_idea_unknown"
+			position = { x= 0 y = 0 }
+			Orientation = "LEFT"
+			#scale = 0.5
+			alwaystransparent = yes
+		}		
+	}	
+}

@@ -1,0 +1,428 @@
+establish_defensive_march = {
+	category = influence
+
+	require_acceptance = no
+
+	is_visible = {
+		is_subject = no
+		can_create_subject_type = {
+			subject = FROM
+			subject_type = defensive_march
+		}
+	}
+
+	is_allowed = {
+		is_subject = no
+		can_create_subject_type = {
+			subject = FROM
+			subject_type = defensive_march
+		}
+		is_at_war = no
+		FROM = { is_at_war = no }
+	}
+
+	on_accept = {
+		if = {
+			limit = {
+				is_subject = no
+				can_create_subject_type = {
+					subject = FROM
+					subject_type = defensive_march
+				}
+				is_at_war = no
+				FROM = { is_at_war = no }
+			}
+			create_subject = {
+				subject = FROM
+				subject_type = defensive_march
+			}
+		}
+	}
+
+	ai_will_do = {
+		is_great_power = no
+		NOT = { total_development = 500 }
+		FROM = {
+			NOT = { liberty_desire = 50 }
+			NOT = { is_different_march_subject = yes }
+			NOT = { development_of_overlord_fraction = 0.25 }
+			NOT = {
+				years_in_vassalage_under = {
+					who = ROOT
+					years = 10
+					all_subject_country = yes
+				}
+			}
+			num_of_owned_provinces_with = {
+				value = 5
+				fort_level = 2
+			}
+			any_neighbor_country = {
+				OR = {
+					is_rival = ROOT
+					is_enemy = ROOT
+				}
+				army_strength = { who = ROOT value = 2.5 }
+			}
+			NOT = {
+				num_of_owned_provinces_with = {
+					value = 10
+					is_permanent_claim = ROOT
+				}
+			}
+		}
+	}
+}
+
+ask_to_become_defensive_march = {
+	category = influence
+
+	alert_index = 6
+	alert_tooltip = ask_to_become_defensive_march_alert_tooltip
+
+	require_acceptance = yes
+
+	is_visible = {
+		FROM = {
+			is_subject = no
+			can_create_subject_type = {
+				subject = ROOT
+				subject_type = defensive_march
+			}
+		}
+	}
+
+	is_allowed = {
+		FROM = {
+			is_subject = no
+			can_create_subject_type = {
+				subject = ROOT
+				subject_type = defensive_march
+			}
+		}
+		is_at_war = no
+		FROM = { is_at_war = no }
+	}
+
+	on_accept = {
+		if = {
+			limit = {
+				FROM = {
+					is_subject = no
+					can_create_subject_type = {
+						subject = ROOT
+						subject_type = defensive_march
+					}
+				}
+				is_at_war = no
+				FROM = { is_at_war = no }
+			}
+			FROM = {
+				create_subject = {
+					subject = ROOT
+					subject_type = defensive_march
+				}
+			}
+		}
+	}
+
+	on_decline = {
+		if = {
+			limit = {
+				FROM = {
+					is_subject = no
+					can_create_subject_type = {
+						subject = ROOT
+						subject_type = defensive_march
+					}
+				}
+				is_at_war = no
+				FROM = { is_at_war = no }
+			}
+			FROM = {
+				clr_country_flag = declined_become_defensive_march_@ROOT
+				set_country_flag = declined_become_defensive_march_@ROOT
+			}
+			add_opinion = {
+				who = FROM
+				modifier = declined_ask_to_become_defensive_march
+			}
+		}
+	}
+
+	ai_acceptance = {
+		add_entry = {
+			name = OPINION
+			export_to_variable = {
+				which = ai_value
+				value = opinion
+				who = FROM
+				with = ROOT
+			}
+			divide_variable = { which = ai_value value = 4 }
+		}
+		add_entry = {
+			name = MODIFIER_DIPLO_SKILL
+			export_to_variable = {
+				which = ai_value
+				value = modifier:diplomatic_reputation
+			}
+			multiply_variable = { which = ai_value value = 5 }
+		}
+		add_entry = {
+			name = ROOT_HAS_TOO_FEW_FORTS
+			limit = {
+				NOT = {
+					num_of_owned_provinces_with = {
+						value = 5
+						fort_level = 2
+					}
+				}
+			}
+			export_to_variable = {
+				which = ai_value
+				value = 1000
+			}
+			multiply_variable = { which = ai_value value = -1 }
+		}
+		add_entry = {
+			name = ROOT_IS_VASSAL_FOR_AT_LEAST_10_YEARS
+			limit = {
+				years_in_vassalage_under = {
+					who = FROM
+					years = 10
+					all_subject_country = yes
+				}
+			}
+			export_to_variable = {
+				which = ai_value
+				value = 1000
+			}
+			multiply_variable = { which = ai_value value = -1 }
+		}
+		add_entry = {
+			name = ROOT_IS_NOT_A_NEIGHBOR_OF_FROMS_RIVALS
+			limit = {
+				NOT = {
+					any_neighbor_country = {
+						OR = {
+							is_rival = FROM
+							is_enemy = FROM
+						}
+					}
+				}
+			}
+			export_to_variable = {
+				which = ai_value
+				value = 1000
+			}
+			multiply_variable = { which = ai_value value = -1 }
+		}
+		add_entry = {
+			name = ROOT_IS_NOT_A_NEIGHBOR_OF_FROMS_STRONG_RIVALS
+			limit = {
+				any_neighbor_country = {
+					OR = {
+						is_rival = FROM
+						is_enemy = FROM
+					}
+				}
+				NOT = {
+					any_neighbor_country = {
+						OR = {
+							is_rival = FROM
+							is_enemy = FROM
+						}
+						army_strength = { who = FROM value = 2.5 }
+					}
+				}
+			}
+			export_to_variable = {
+				which = ai_value
+				value = 1000
+			}
+			multiply_variable = { which = ai_value value = -1 }
+		}
+		add_entry = {
+			name = ROOT_HAS_MORE_THAN_25_PERCENT_OF_OVERLORD_DEVELOPMENT
+			limit = {
+				development_of_overlord_fraction = 0.25
+			}
+			export_to_variable = {
+				which = ai_value
+				value = 1000
+			}
+			multiply_variable = { which = ai_value value = -1 }
+		}
+		add_entry = {
+			name = FROM_IS_TOO_POWERFUL
+			limit = {
+				OR = {
+					is_great_power = yes
+					total_development = 500
+				}
+			}
+			export_to_variable = {
+				which = ai_value
+				value = 1000
+			}
+			multiply_variable = { which = ai_value value = -1 }
+		}
+	}
+
+	ai_will_do = {
+		NOT = { liberty_desire = 50 }
+		NOT = { is_different_march_subject = yes }
+		army_size = 20
+		num_of_owned_provinces_with = {
+			value = 10
+			fort_level = 2
+		}
+		any_neighbor_country = {
+			OR = {
+				is_rival = FROM
+				is_enemy = FROM
+			}
+		}
+		FROM = {
+			is_great_power = no
+			NOT = { total_development = 500 }
+			OR = {
+				NOT = { has_country_flag = declined_become_defensive_march_@ROOT }
+				had_country_flag = { flag = declined_become_defensive_march_@ROOT days = 1825 }
+			}
+		}
+		NOT = {
+			num_of_owned_provinces_with = {
+				value = 10
+				is_permanent_claim = FROM
+			}
+		}
+	}
+}
+
+enable_offensive_wars_for_defensive_march = {
+	category = subject_interactions
+
+	require_acceptance = no
+
+	is_visible = {
+		FROM = {
+			is_subject_of = ROOT
+			is_subject_of_type = defensive_march
+			NOT = { has_country_flag = call_defensive_march_to_offensive_war }
+		}
+	}
+
+	is_allowed = {
+		hidden_trigger = {
+			FROM = {
+				is_subject_of = ROOT
+				is_subject_of_type = defensive_march
+				NOT = { has_country_flag = call_defensive_march_to_offensive_war }
+			}
+		}
+		is_at_war = no
+		FROM = { is_at_war = no }
+		FROM = { NOT = { liberty_desire = 50 } }
+		FROM = {
+			custom_trigger_tooltip = {
+				tooltip = HAS_NOT_DISABLED_OFFENSIVE_WARS_FOR_DEFENSIVE_MARCH_LAST_10_YEARS
+				NOT = { has_country_modifier = switched_defensive_march_to_or_from_offensive_wars }
+			}
+		}
+	}
+
+	on_accept = {
+		if = {
+			limit = {
+				FROM = {
+					is_subject_of = ROOT
+					is_subject_of_type = defensive_march
+					NOT = { has_country_flag = call_defensive_march_to_offensive_war }
+				}
+				is_at_war = no
+				FROM = { is_at_war = no }
+				FROM = { NOT = { liberty_desire = 50 } }
+				FROM = {
+					NOT = { has_country_modifier = switched_defensive_march_to_or_from_offensive_wars }
+				}
+			}
+			FROM = {
+				set_country_flag = call_defensive_march_to_offensive_war
+				country_event = { id = subjects_expanded_defensive_march_events.1 }
+				add_country_modifier = {
+					name = switched_defensive_march_to_or_from_offensive_wars
+					duration = 3650
+					hidden = yes
+				}
+			}
+		}
+	}
+
+	ai_will_do = {
+		always = no
+	}
+}
+
+disable_offensive_wars_for_defensive_march = {
+	category = subject_interactions
+
+	require_acceptance = no
+
+	is_visible = {
+		FROM = {
+			is_subject_of = ROOT
+			is_subject_of_type = defensive_march
+			has_country_flag = call_defensive_march_to_offensive_war
+		}
+	}
+
+	is_allowed = {
+		hidden_trigger = {
+			FROM = {
+				is_subject_of = ROOT
+				is_subject_of_type = defensive_march
+				has_country_flag = call_defensive_march_to_offensive_war
+			}
+		}
+		is_at_war = no
+		FROM = { is_at_war = no }
+		FROM = {
+			custom_trigger_tooltip = {
+				tooltip = HAS_NOT_ENABLED_OFFENSIVE_WARS_FOR_DEFENSIVE_MARCH_LAST_10_YEARS
+				NOT = { has_country_modifier = switched_defensive_march_to_or_from_offensive_wars }
+			}
+		}
+	}
+
+	on_accept = {
+		if = {
+			limit = {
+				FROM = {
+					is_subject_of = ROOT
+					is_subject_of_type = defensive_march
+					has_country_flag = call_defensive_march_to_offensive_war
+				}
+				is_at_war = no
+				FROM = { is_at_war = no }
+				FROM = {
+					NOT = { has_country_modifier = switched_defensive_march_to_or_from_offensive_wars }
+				}
+			}
+			FROM = {
+				clr_country_flag = call_defensive_march_to_offensive_war
+				country_event = { id = subjects_expanded_defensive_march_events.2 }
+				add_country_modifier = {
+					name = switched_defensive_march_to_or_from_offensive_wars
+					duration = 3650
+					hidden = yes
+				}
+			}
+		}
+	}
+
+	ai_will_do = {
+		always = yes
+	}
+}

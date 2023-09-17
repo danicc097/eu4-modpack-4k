@@ -1,0 +1,189 @@
+# Events:
+ate_all_geniuses_event_modifier = {
+	technology_cost = -0.05
+	advisor_cost = 0.25
+}
+
+ate_advisor_combination_feudal_tax_collector_feudal_lord_modifier = {
+	vassal_forcelimit_bonus = 0.1
+	vassal_income = 0.1
+	reduced_liberty_desire = -5
+}
+
+ate_advisor_combination_inventor_siege_expert_modifier = {
+	siege_ability = 0.1
+}
+
+ate_advisor_combination_inventor_army_reformer_modifier = {
+	military_tactics = 0.05
+}
+
+ate_advisor_loyal_friend_adm_modifier = {
+	adm_advisor_cost = -0.1
+}
+
+ate_advisor_court_physician_modifier = {
+	monarch_lifespan = 0.1
+}
+
+ate_advisor_architect_modifier = {
+	build_cost = -0.1
+	build_time = -0.1
+}
+
+ate_advisor_administrative_genius_modifier = {
+	adm_tech_cost_modifier = -0.05
+}
+
+ate_advisor_gold_digger_modifier = {
+	monthly_gold_inflation_modifier = -0.1
+	gold_depletion_chance_modifier = -0.1
+}
+
+ate_advisor_free_thinker_modifier = {
+	idea_cost = -0.05
+}
+
+ate_advisor_free_thinker_province_modifier = {
+	local_development_cost = -0.05
+}
+
+ate_advisor_missionary_modifier = {
+	global_missionary_strength = 0.01
+}
+
+ate_advisor_loyal_friend_dip_modifier = {
+	dip_advisor_cost = -0.1
+}
+
+ate_advisor_vicegerent_modifier = {
+	reduced_liberty_desire = 10
+}
+
+ate_advisor_diplomatic_genius_modifier = {
+	dip_tech_cost_modifier = -0.05
+}
+
+ate_advisor_cultural_commissioner_modifier = {
+	culture_conversion_cost = -0.1
+}
+
+ate_advisor_loyal_friend_mil_modifier = {
+	mil_advisor_cost = -0.1
+}
+
+ate_advisor_knight_modifier = {
+	cavalry_shock = 0.5
+}
+
+ate_advisor_lord_of_a_castle_modifier = {
+	fort_maintenance_modifier = -0.1
+}
+
+ate_advisor_lord_of_a_castle_province_modifier = {
+	local_fort_maintenance_modifier = -0.15
+}
+
+ate_advisor_military_genius_modifier = {
+	mil_tech_cost_modifier = -0.05
+}
+
+ate_advisor_master_of_artillery_modifier = {
+	artillery_levels_available_vs_fort = 1
+}
+
+ate_advisor_sergeant_modifier = {
+	drill_gain_modifier = 0.2
+}
+
+ate_advisor_missionary_province_modifier = {
+	local_missionary_strength = 0.015
+}
+
+ate_advisor_plantation_owner_modifier = {
+	global_trade_goods_size_modifier = 0.1
+}
+
+ate_advisor_plantation_owner_province_modifier = {
+	trade_goods_size = 0.5
+}
+
+ate_advisor_galley_captain_modifier = {
+	galley_power = 0.1
+}
+
+ate_advisor_galleon_captain_modifier = {
+	heavy_ship_power = 0.1
+}
+
+ate_advisor_scholar_modifier = {
+	global_institution_spread = 0.1
+	embracement_cost = -0.1
+}
+
+ate_advisor_scholar_province_modifier = {
+	local_institution_spread = 0.1
+}
+
+ate_advisor_colonial_administrator_modifier = {
+	colonist_placement_chance = 0.05
+	global_colonial_growth = 10
+}
+
+ate_advisor_treasure_fleet_captain_modifier = {
+	treasure_fleet_income = 0.2
+	reduced_liberty_desire = 10
+}
+
+ate_advisor_witch_hunter_modifier = {
+	global_heretic_missionary_strength = 0.025
+	global_religious_conversion_resistance = 0.1
+}
+
+ate_advisor_witch_hunter_province_modifier = {
+	local_missionary_strength = 0.01
+	religion = yes
+}
+
+# Decisions:
+ate_advisor_missionary_spread_christianity_modifier = {
+	stability_cost_modifier = 0.15
+	relation_with_heretics = -10
+	relation_with_heathens = -25
+	warscore_cost_vs_other_religion = -0.05
+	enforce_religion_cost = -0.05
+	religion = yes
+}
+
+ate_advisor_steward_centralization_act_modifier = {
+	governing_capacity = 50
+	state_maintenance_modifier = 0.1
+}
+
+ate_advisor_blockade_specialist_naval_siege_tactics_modifier = {
+	naval_maintenance_modifier = 0.1
+	siege_blockade_progress = 1
+}
+
+ate_advisor_spymaster_support_rebels_decision_modifier = {
+	global_spy_defence = -0.05
+	rebel_support_efficiency = 0.2
+}
+
+ate_advisor_state_theorist_machiavellianism_decision_modifier = {
+	max_absolutism = 15
+	max_revolutionary_zeal = 10
+	stability_cost_modifier = 0.2
+	global_unrest = 2
+}
+
+ate_advisor_witch_hunter_hexenhammer_decision_modifier = {
+	global_heretic_missionary_strength = 0.02
+	global_religious_conversion_resistance = 0.15
+	relation_with_heretics = -25
+	tolerance_heretic = -2
+	papal_influence = -0.5
+	church_power_modifier = -0.1
+	monthly_fervor_increase = -0.25
+	religion = yes
+}

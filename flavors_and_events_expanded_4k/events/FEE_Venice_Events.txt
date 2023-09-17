@@ -1,0 +1,6370 @@
+namespace = FEE_Venice_Events
+
+# The Venetian Fleet
+country_event = {
+	id = FEE_Venice_Events.1
+	title = FEE_Venice_Events.1.T
+	desc = FEE_Venice_Events.1.D
+	picture = NAVAL_MILITARY_eventPicture
+
+	fire_only_once = yes
+	trigger = {
+		OR = {
+			tag = VEN
+			was_tag = VEN
+		}
+		NOT = { is_year = 1571 }
+		OR = {
+			NOT = { exists = BYZ }
+			151 = {
+				NOT = { owned_by = ROOT }
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 6
+	}
+
+	option = {
+		name = FEE_Venice_Events.1.OPT1
+		ai_chance = {
+			factor = 33
+		}
+
+		add_dip_power = -50
+		add_country_modifier = {
+			name = fee_ven_mercantile_fleet
+			duration = 5475
+		}
+	}
+
+	option = {
+		name = FEE_Venice_Events.1.OPT2
+		ai_chance = {
+			factor = 33
+		}
+
+		add_mil_power = -50
+		add_country_modifier = {
+			name = fee_ven_galley_fleet
+			duration = 5475
+		}
+	}
+
+	option = {
+		name = FEE_Venice_Events.1.OPT3
+		ai_chance = {
+			factor = 33
+		}
+
+		add_prestige = -5
+	}
+}
+
+# Magistrato alla Milizia da Mar
+country_event = {
+	id = FEE_Venice_Events.2
+	title = FEE_Venice_Events.2.T
+	desc = FEE_Venice_Events.2.D
+	picture = CITY_DEVELOPMENT_eventPicture
+
+	fire_only_once = yes
+	trigger = {
+		OR = {
+			tag = VEN
+			was_tag = VEN
+		}
+		is_year = 1545
+		owns_core_province = 112
+		NOT = { is_year = 1687 }
+		112 = {
+			base_production = 10
+			base_manpower = 10
+		}
+	}
+
+	option = {
+		name = FEE_Venice_Events.2.OPT1
+
+		112 = {
+			add_permanent_province_modifier = {
+				name = fee_ven_magistrato_milizia_mar
+				duration = -1
+			}
+		}
+	}
+}
+
+# Naval Reforms #1
+country_event = {
+	id = FEE_Venice_Events.3
+	title = FEE_Venice_Events.3.T
+	desc = FEE_Venice_Events.3.D
+	picture = SHIP_SAILING_eventPicture
+
+	fire_only_once = yes
+	trigger = {
+		OR = {
+			tag = VEN
+			was_tag = VEN
+		}
+		is_year = 1453
+		NOT = { is_year = 1500 }
+		owns_core_province = 112
+		navy_size_percentage = 0.75
+	}
+
+	option = {
+		name = FEE_Venice_Events.3.OPT1
+		ai_chance = {
+			factor = 50
+		}
+
+		add_country_modifier = {
+			name = fee_ven_naval_reforms
+			duration = 5475
+		}
+		if = {
+			limit = {
+				has_dlc = "Golden Century"
+				has_flagship = no
+			}
+			112 = {
+				create_flagship = {
+					name = "Leone Alato"
+					type = galley
+				}
+			}
+		}
+		else = {
+			add_navy_tradition = 15
+			create_admiral = {
+				tradition = 75
+			}
+		}
+	}
+}
+
+# Governator de' Condannati
+country_event = {
+	id = FEE_Venice_Events.4
+	title = FEE_Venice_Events.4.T
+	desc = FEE_Venice_Events.4.D
+	picture = NAVAL_MILITARY_eventPicture
+
+	fire_only_once = yes
+	trigger = {
+		OR = {
+			tag = VEN
+			was_tag = VEN
+		}
+		is_year = 1542
+		NOT = { is_year = 1721 }
+		navy_tradition = 50
+	}
+
+	mean_time_to_happen = {
+		years = 10
+	}
+
+	option = {
+		name = FEE_Venice_Events.4.OPT1
+
+		add_country_modifier = {
+			name = fee_ven_commander_convicts
+			duration = -1
+		}
+	}
+}
+
+# Porta di Terra
+country_event = {
+	id = FEE_Venice_Events.5
+	title = FEE_Venice_Events.5.T
+	desc = FEE_Venice_Events.5.D
+	picture = CITY_DEVELOPMENT_eventPicture
+
+	fire_only_once = yes
+	trigger = {
+		OR = {
+			tag = VEN
+			was_tag = VEN
+		}
+		is_year = 1453
+		NOT = { is_year = 1523 }
+		owns_core_province = 112
+		112 = { development = 30 }
+	}
+
+	mean_time_to_happen = {
+		months = 12
+		modifier = {
+			factor = 0.5
+			naval_reformer = 2
+		}
+	}
+
+	option = {
+		name = FEE_Venice_Events.5.OPT1
+
+		add_dip_power = 25
+		if = {
+			limit = {
+				has_dlc = "Rule Britannia"
+			}
+			add_innovativeness_small_effect = yes
+		}
+		112 = {
+			add_institution_embracement = {
+				which = renaissance
+				value = 24
+			}
+			add_permanent_province_modifier = {
+				name = fee_ven_porta_magna
+				duration = -1
+			}
+		}
+	}
+}
+
+# Arsenal Expansion 1473
+country_event = {
+	id = FEE_Venice_Events.6
+	title = FEE_Venice_Events.6.T
+	desc = FEE_Venice_Events.6.D
+	picture = SHIP_SAILING_eventPicture
+
+	fire_only_once = yes
+	trigger = {
+		OR = {
+			tag = VEN
+			was_tag = VEN
+		}
+		is_year = 1473
+		NOT = { is_year = 1535 }
+		owns_core_province = 112
+		112 = {
+			OR = {
+				development = 30
+				AND = {
+					is_expanded_mod_active = { mod = great_monuments }
+					OR = {
+						has_great_project = {
+							type = gme_arsenale_veneziano
+							tier = 1
+						}
+						has_great_project = {
+							type = gme_arsenale_veneziano
+							tier = 2
+						}
+						has_great_project = {
+							type = gme_arsenale_veneziano
+							tier = 3
+						}
+					}
+				}
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		years = 5
+		modifier = {
+			factor = 0.5
+			naval_reformer = 2
+		}
+	}
+
+	option = {
+		name = FEE_Venice_Events.6.OPT1
+
+		112 = {
+			add_permanent_province_modifier = {
+				name = fee_ven_arsenal_expansion
+				duration = 36500
+			}
+		}
+	}
+}
+
+# Espansione dell'Arsenale del 1535
+country_event = {
+	id = FEE_Venice_Events.7
+	title = FEE_Venice_Events.7.T
+	desc = FEE_Venice_Events.7.D
+	picture = SHIP_SAILING_eventPicture
+
+	fire_only_once = yes
+	trigger = {
+		OR = {
+			tag = VEN
+			was_tag = VEN
+		}
+		is_year = 1535
+		owns_core_province = 112
+		NOT = { is_year = 1566 }
+		112 = {
+			OR = {
+				development = 40
+				AND = {
+					is_expanded_mod_active = { mod = great_monuments }
+					OR = {
+						has_great_project = {
+							type = gme_arsenale_veneziano
+							tier = 2
+						}
+						has_great_project = {
+							type = gme_arsenale_veneziano
+							tier = 3
+						}
+					}
+				}
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 12
+		modifier = {
+			factor = 0.5
+			naval_reformer = 2
+		}
+	}
+
+	option = {
+		name = FEE_Venice_Events.7.OPT1
+		ai_chance = {
+			factor = 50
+		}
+
+		112 = {
+			remove_province_modifier = fee_ven_arsenal_expansion
+			add_permanent_province_modifier = {
+				name = fee_ven_arsenal_expansion_1535
+				duration = -1
+			}
+		}
+	}
+}
+
+# Espansione finale dell'Arsenale
+country_event = {
+	id = FEE_Venice_Events.8
+	title = FEE_Venice_Events.8.T
+	desc = FEE_Venice_Events.8.D
+	picture = SHIP_SAILING_eventPicture
+
+	fire_only_once = yes
+	trigger = {
+		OR = {
+			tag = VEN
+			was_tag = VEN
+		}
+		is_year = 1566
+		owns_core_province = 112
+		NOT = { is_year = 1573 }
+		112 = {
+			OR = {
+				development = 50
+				AND = {
+					is_expanded_mod_active = { mod = great_monuments }
+					has_great_project = {
+						type = gme_arsenale_veneziano
+						tier = 3
+					}
+				}
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 12
+		modifier = {
+			factor = 0.5
+			naval_reformer = 2
+		}
+	}
+
+	option = {
+		name = FEE_Venice_Events.8.OPT1
+
+		112 = {
+			remove_province_modifier = fee_ven_arsenal_expansion
+			remove_province_modifier = fee_ven_arsenal_expansion_1535
+			add_permanent_province_modifier = {
+				name = fee_ven_arsenal_expansion_final
+				duration = -1
+			}
+		}
+	}
+}
+
+# Fanti di Mar
+country_event = {
+	id = FEE_Venice_Events.9
+	title = FEE_Venice_Events.9.T
+	desc = FEE_Venice_Events.9.D
+	picture = MILITARY_CAMP_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		OR = {
+			tag = VEN
+			was_tag = VEN
+		}
+		is_year = 1550
+		NOT = { is_year = 1687 }
+		any_owned_province = {
+			has_port = yes
+		}
+	}
+
+	mean_time_to_happen = {
+		years = 10
+		modifier = {
+			factor = 0.5
+			army_reformer = 2
+		}
+	}
+
+	option = {
+		name = FEE_Venice_Events.9.OPT1
+
+		add_mil_power = -100
+		add_years_of_income = -0.5
+		custom_tooltip = FEE_VEN_FANTI_MAR_TT
+		tooltip = {
+			random_owned_province = {
+				limit = {
+					has_port = yes
+				}
+				add_permanent_province_modifier = {
+					name = fee_ven_fanti_mar
+					duration = -1
+				}
+			}
+		}
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					has_port = yes
+				}
+				add_permanent_province_modifier = {
+					name = fee_ven_fanti_mar
+					duration = -1
+				}
+			}
+		}
+	}
+
+	option = {
+		name = FEE_Venice_Events.9.OPT2
+
+		add_prestige = -5
+	}
+}
+
+# Trade Expansion in Costantinople
+country_event = {
+	id = FEE_Venice_Events.10
+	title = FEE_Venice_Events.10.T
+	desc = FEE_Venice_Events.10.D
+	picture = TRADEGOODS_eventPicture
+
+	fire_only_once = yes
+	trigger = {
+		OR = {
+			tag = VEN
+			was_tag = VEN
+		}
+		151 = { owned_by = TUR }
+	}
+
+	mean_time_to_happen = {
+		months = 6
+	}
+
+	option = {
+		name = FEE_Venice_Events.10.OPT1
+
+		add_legitimacy_equivalent = { amount = 10 republican_tradition = 5 }
+		add_dip_power = 25
+		TUR = {
+			country_event = {
+				id = FEE_Venice_Events.11
+				days = 30
+			}
+		}
+	}
+
+	option = {
+		name = FEE_Venice_Events.10.OPT2
+
+		add_mil_power = 150
+		151 = {
+			if = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+					NOT = { is_empty = yes }
+					NOT = { is_wasteland = yes }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+}
+
+# Venetian Trade Deal
+country_event = {
+	id = FEE_Venice_Events.11
+	title = FEE_Venice_Events.11.T
+	desc = FEE_Venice_Events.11.D
+	picture = DIPLOMACY_eventPicture
+
+	is_triggered_only = yes
+
+	major = yes
+	major_trigger = {
+		OR = {
+			tag = VEN
+			was_tag = VEN
+		}
+	}
+
+	option = {
+		name = FEE_Venice_Events.11.OPT1
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 2
+				has_opinion = {
+					who = FROM
+					value = 50
+				}
+			}
+		}
+
+		FROM = {
+			1320 = {
+				add_trade_modifier = {
+					who = FROM
+					duration = 7300
+					power = 15
+					key = fee_ven_trade_deal_costantinople
+				}
+			}
+		}
+		add_years_of_income = 1
+	}
+
+	option = {
+		name = FEE_Venice_Events.11.OPT2
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 2
+				NOT = {
+					has_opinion = {
+						who = FROM
+						value = 0
+					}
+				}
+			}
+		}
+
+		add_stability_or_adm_power = yes
+	}
+}
+
+# The arrival of Michele Attendolo
+country_event = {
+	id = FEE_Venice_Events.12
+	title = FEE_Venice_Events.12.T
+	desc = FEE_Venice_Events.12.D
+	picture = GENERALS_DISCUSSING_eventPicture
+
+	fire_only_once = yes
+	trigger = {
+		OR = {
+			tag = VEN
+			was_tag = VEN
+		}
+		is_year = 1447
+		NOT = { is_year = 1463 }
+	}
+
+	option = {
+		name = FEE_Venice_Events.12.OPT1
+
+		add_mil_power = 25
+		define_general = {
+			name = "Michele Attendolo"
+			fire = 3
+			shock = 1
+			manuever = 2
+			siege = 2
+		}
+	}
+}
+
+# Jews of 1509
+country_event = {
+	id = FEE_Venice_Events.13
+	title = FEE_Venice_Events.13.T
+	desc = FEE_Venice_Events.13.D
+	picture = RELIGIOUS_MIGRANTS_eventPicture
+
+	fire_only_once = yes
+	trigger = {
+		is_year = 1509
+		NOT = { is_year = 1516 }
+		owns_core_province = 112
+	}
+
+	mean_time_to_happen = {
+		months = 6
+	}
+
+	option = {
+		name = FEE_Venice_Events.13.OPT1
+		ai_chance = {
+			factor = 50
+		}
+
+		change_religious_influence_equivalent_fee = { remove = 25 }
+		add_legitimacy_equivalent = { amount = 10 republican_tradition = 5 }
+		112 = {
+			add_base_production = 1
+			add_permanent_province_modifier = {
+				name = fee_ven_jew_ghetto
+				duration = -1
+			}
+		}
+	}
+
+	option = {
+		name = FEE_Venice_Events.13.OPT2
+
+		change_religious_influence_equivalent_fee = { add = 50 }
+		add_stability_or_adm_power = yes
+	}
+}
+
+# Ghetto Novo
+country_event = {
+	id = FEE_Venice_Events.14
+	title = FEE_Venice_Events.14.T
+	desc = FEE_Venice_Events.14.D
+	picture = RELIGIOUS_TURMOIL_eventPicture
+
+	fire_only_once = yes
+	trigger = {
+		is_year = 1516
+		NOT = { is_year = 1541 }
+		owns_core_province = 112
+		112 = { has_province_modifier = fee_ven_jew_ghetto }
+	}
+
+	mean_time_to_happen = {
+		months = 6
+	}
+
+	option = {
+		name = FEE_Venice_Events.14.OPT1
+		ai_chance = {
+			factor = 50
+		}
+
+		112 = {
+			add_base_production = 2
+			remove_province_modifier = fee_ven_jew_ghetto
+			add_permanent_province_modifier = {
+				name = fee_ven_jew_ghetto_novo
+				duration = -1
+			}
+		}
+		random_owned_province = {
+			limit = {
+				area = venetia_area
+			}
+			add_base_tax = 1
+			random = {
+				chance = 50
+				change_religion = jewish
+			}
+			add_province_modifier = {
+				name = birth_of_a_new_city_adm
+				duration = 3650
+			}
+		}
+	}
+
+	option = {
+		name = FEE_Venice_Events.14.OPT2
+		ai_chance = {
+			factor = 50
+
+		}
+
+		add_mil_power = 50
+		add_stability_or_adm_power = yes
+		change_religious_influence_equivalent_fee = { add = 50 }
+	}
+}
+
+# The Levantini Family
+country_event = {
+	id = FEE_Venice_Events.15
+	title = FEE_Venice_Events.15.T
+	desc = FEE_Venice_Events.15.D
+	picture = CITY_DEVELOPMENT_eventPicture
+
+	fire_only_once = yes
+	trigger = {
+		is_year = 1541
+		owns_core_province = 112
+		NOT = { is_year = 1589 }
+		112 = { has_province_modifier = fee_ven_jew_ghetto_novo }
+	}
+
+	mean_time_to_happen = {
+		months = 6
+	}
+
+	option = {
+		name = FEE_Venice_Events.15.OPT1
+		ai_chance = {
+			factor = 1
+		}
+
+		112 = {
+			add_base_production = 3
+		}
+	}
+}
+
+# Establishment of the casino in Venezia
+country_event = {
+	id = FEE_Venice_Events.16
+	title = FEE_Venice_Events.16.T
+	desc = FEE_Venice_Events.16.D
+	picture = GREAT_BUILDING_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		OR = {
+			tag = VEN
+			was_tag = VEN
+		}
+		owns_core_province = 112
+		is_year = 1630
+		NOT = { is_year = 1680 }
+		government = republic
+	}
+
+	mean_time_to_happen = {
+		months = 240
+	}
+
+	option = {
+		name = FEE_Venice_Events.16.OPT1
+
+		add_years_of_income = 0.5
+		add_prestige_or_monarch_power = { amount = 5 }
+		112 = {
+			add_base_tax = 2
+		}
+	}
+}
+
+#########	Life of Doge Francesco Foscari from 1444 to 1457	#########
+
+# Il Dogato di Francesco Foscari
+country_event = {
+	id = FEE_Venice_Events.17
+	title = FEE_Venice_Events.17.T
+	desc = FEE_Venice_Events.17.D
+	picture = GOOD_WITH_MONARCH_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		OR = {
+			tag = VEN
+			was_tag = VEN
+		}
+		is_year = 1423
+		NOT = { is_year = 1457 }
+		has_ruler = "Francesco Foscari"
+	}
+
+	mean_time_to_happen = {
+		months = 6
+	}
+
+	option = {
+		name = FEE_Venice_Events.17.OPT1
+
+		add_prestige_or_monarch_power = { amount = 5 }
+		add_legitimacy_equivalent = { amount = 5 republican_tradition = 3 }
+		add_ruler_modifier = {
+			name = fee_ven_doge_foscari
+			duration = -1
+		}
+	}
+}
+
+# Bartolomeo Marcello
+country_event = {
+	id = FEE_Venice_Events.18
+	title = FEE_Venice_Events.18.T
+	desc = FEE_Venice_Events.18.D
+	picture = ADVISOR_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		OR = {
+			tag = VEN
+			was_tag = VEN
+		}
+		is_year = 1438
+		NOT = { is_year = 1459 }
+	}
+
+	mean_time_to_happen = {
+		months = 6
+	}
+
+	option = {
+		name = FEE_Venice_Events.18.OPT1
+
+		add_dip_power = 25
+		define_advisor = {
+			type = diplomat
+			name = "Bartolomeo Marcello"
+			skill = 2
+			discount = yes
+			culture = venetian
+			religion = catholic
+		}
+	}
+}
+
+# Salvaguardare gli interessi nel Bosforo
+country_event = {
+	id = FEE_Venice_Events.19
+	title = FEE_Venice_Events.19.T
+	desc = FEE_Venice_Events.19.D
+	picture = ADVISOR_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		OR = {
+			tag = VEN
+			was_tag = VEN
+		}
+		diplomat = 1
+		151 = {
+			NOT = { owned_by = ROOT }
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 6
+	}
+
+	option = {
+		name = FEE_Venice_Events.19.OPT1
+
+		add_mercantilism = 3
+		1320 = {
+			add_trade_modifier = {
+				who = ROOT
+				duration = 7300
+				power = 15
+				key = fee_ven_bartolomeo_marcello
+			}
+		}
+	}
+}
+
+# Possedimenti della Terraferma
+country_event = {
+	id = FEE_Venice_Events.20
+	title = FEE_Venice_Events.20.T
+	desc = FEE_Venice_Events.20.D
+	picture = ADVISOR_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		OR = {
+			tag = VEN
+			was_tag = VEN
+		}
+		is_year = 1423
+		NOT = { is_year = 1457 }
+		has_ruler = "Francesco Foscari"
+		po_valley_area = {
+			owned_by = ROOT
+			is_in_capital_area = yes
+		}
+		venetia_area = {
+			owned_by = ROOT
+			NOT = { province_is_on_an_island = yes }
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 6
+	}
+
+	option = {
+		name = FEE_Venice_Events.20.OPT1
+		ai_chance = {
+			factor = 50
+		}
+
+		add_years_of_income = 0.5
+		add_yearly_manpower = 0.5
+		1298 = {
+			add_trade_modifier = {
+				who = ROOT
+				duration = 3650
+				power = 15
+				key = fee_ven_prosperity_po_valley
+			}
+		}
+		po_valley_area = {
+			limit = { owned_by = ROOT }
+			add_devastation = -25
+			add_prosperity = 25
+			add_province_modifier = {
+				name = fee_ven_prosperity_po_valley
+				duration = 3650
+			}
+		}
+	}
+}
+
+# Treachery of Jacopo
+country_event = {
+	id = FEE_Venice_Events.21
+	title = FEE_Venice_Events.21.T
+	desc = FEE_Venice_Events.21.D
+	picture = BAD_WITH_MONARCH_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		OR = {
+			tag = VEN
+			was_tag = VEN
+		}
+		is_year = 1456
+		NOT = { is_year = 1457 }
+		has_ruler = "Francesco Foscari"
+	}
+
+	mean_time_to_happen = {
+		months = 6
+	}
+
+	option = {
+		name = FEE_Venice_Events.21.OPT1
+
+		add_adm_power = -25
+		add_legitimacy_equivalent = { amount = -5 republican_tradition = -3 }
+		add_prestige = -5
+	}
+}
+
+# Death of Francesco Foscari
+country_event = {
+	id = FEE_Venice_Events.22
+	title = FEE_Venice_Events.22.T
+	desc = FEE_Venice_Events.22.D
+	picture = GOOD_WITH_MONARCH_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		OR = {
+			tag = VEN
+			was_tag = VEN
+		}
+		is_year = 1457
+		NOT = { has_ruler = "Francesco Foscari" }
+		NOT = { is_year = 1460 }
+	}
+
+	mean_time_to_happen = {
+		months = 6
+	}
+
+	option = {
+		name = FEE_Venice_Events.22.OPT1
+
+		add_treasury = -25
+		add_splendor = 100
+		change_religious_influence_equivalent_fee = { add = 15 }
+	}
+}
+
+#########	Life of Doge Pasquale Malipiero from 1444 to 1462	#########
+
+# Pasquale Malipiero Avagodore di Comun
+country_event = {
+	id = FEE_Venice_Events.23
+	title = FEE_Venice_Events.23.T
+	desc = FEE_Venice_Events.23.D
+	picture = ADVISOR_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		OR = {
+			tag = VEN
+			was_tag = VEN
+		}
+		is_year = 1445
+		NOT = { is_year = 1457 }
+		NOT = { has_ruler = "Pasquale Malipiero" }
+		has_estate = estate_nobles
+	}
+
+	mean_time_to_happen = {
+		months = 6
+	}
+
+	option = {
+		name = FEE_Venice_Events.23.OPT1
+
+		add_country_modifier = {
+			name = fee_ven_malipiero_avogadore_comun
+			duration = 5475
+		}
+	}
+}
+
+# Doge Pasquale Malipiero
+country_event = {
+	id = FEE_Venice_Events.24
+	title = FEE_Venice_Events.24.T
+	desc = FEE_Venice_Events.24.D
+	picture = ELECTION_REPUBLICAN_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		OR = {
+			tag = VEN
+			was_tag = VEN
+		}
+		is_year = 1445
+		has_ruler = "Francesco Foscari"
+		NOT = { is_year = 1457 }
+		has_country_modifier = fee_ven_malipiero_avogadore_comun
+	}
+
+	mean_time_to_happen = {
+		months = 6
+	}
+
+	option = {
+		name = FEE_Venice_Events.24.OPT1
+		ai_chance = {
+			factor = 1
+		}
+		highlight = yes
+
+		add_legitimacy_equivalent = { amount = -25 republican_tradition = -12 }
+		define_ruler = {
+			name = "Pasquale Malipiero"
+			age = 53
+			culture = venetian
+			religion = catholic
+		}
+		remove_country_modifier = fee_ven_malipiero_avogadore_comun
+		add_estate_loyalty = {
+			estate = estate_nobles
+			loyalty = 5
+		}
+		add_estate_influence_modifier = {
+			influence = 15
+			duration = 5475
+			desc = fee_ven_malipiero_avogadore_comun
+		}
+		add_ruler_modifier = {
+			name = fee_ven_malipiero_avogadore_comun
+			duration = -1
+		}
+	}
+
+	option = {
+		name = FEE_Venice_Events.24.OPT2
+		ai_chance = {
+			factor = 0
+		}
+
+		add_estate_loyalty = {
+			estate = estate_nobles
+			loyalty = -10
+		}
+		capital_scope = {
+			noble_rebels = 1
+		}
+		remove_country_modifier = fee_ven_malipiero_avogadore_comun
+	}
+}
+
+#########	Life of Doge Cristoforo Moro from 1445 to 1471	#########
+
+#Cristoforo Moro
+country_event = {
+	id = FEE_Venice_Events.25
+	title = FEE_Venice_Events.25.T
+	desc = FEE_Venice_Events.25.D
+	picture = ADVISOR_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		OR = {
+			tag = VEN
+			was_tag = VEN
+		}
+		is_year = 1445
+		OR = {
+			owns = 4729
+			owns = 1774
+		}
+		NOT = { is_year = 1462 }
+	}
+
+	mean_time_to_happen = {
+		months = 6
+	}
+
+	option = {
+		name = FEE_Venice_Events.25.OPT1
+
+		if = {
+			limit = {
+				is_expanded_mod_active = { mod = advisor_types }
+			}
+			define_advisor = {
+				name = "Cristoforo Moro"
+				type = ate_advisor_state_administrator
+				culture = venetian
+				religion = ROOT
+				skill = 2
+				discount = yes
+			}
+		}
+		else = {
+			define_advisor = {
+				name = "Cristoforo Moro"
+				type = treasurer
+				culture = venetian
+				religion = ROOT
+				skill = 2
+				discount = yes
+			}
+		}
+		4729 = {
+			if = {
+				limit = { owned_by = ROOT }
+				add_base_tax = 1
+				set_local_autonomy = 0
+				add_prosperity = 25
+			}
+		}
+		1774 = {
+			if = {
+				limit = { owned_by = ROOT }
+				add_base_tax = 1
+				set_local_autonomy = 0
+				add_prosperity = 25
+			}
+		}
+	}
+}
+
+#Default of Banco di Soranzo
+country_event = {
+	id = FEE_Venice_Events.26
+	title = FEE_Venice_Events.26.T
+	desc = FEE_Venice_Events.26.D
+	picture = OVEREXTENSION_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		OR = {
+			tag = VEN
+			was_tag = VEN
+		}
+		owns = 112
+		is_year = 1453
+		NOT = { is_year = 1454 }
+	}
+
+	mean_time_to_happen = {
+		months = 6
+	}
+
+	option = {
+		name = FEE_Venice_Events.26.OPT1
+		ai_chance = {
+			factor = 50
+		}
+
+		add_inflation = 2
+		add_treasury = -140
+		add_country_modifier = {
+			name = fee_ven_soranzo_default
+			duration = 5475
+		}
+	}
+
+	option = {
+		name = FEE_Venice_Events.26.OPT2
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 2
+				adm_power = 100
+			}
+		}
+
+		add_adm_power = -75
+		add_inflation = 1
+		add_treasury = -50
+		add_country_modifier = {
+			name = fee_ven_soranzo_default_minimal
+			duration = 3650
+		}
+	}
+}
+
+#Brankrupcy of Banco di Soranzo
+country_event = {
+	id = FEE_Venice_Events.27
+	title = FEE_Venice_Events.27.T
+	desc = FEE_Venice_Events.27.D
+	picture = BANKRUPTCY_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		OR = {
+			tag = VEN
+			was_tag = VEN
+		}
+		owns = 112
+		is_year = 1455
+		NOT = { is_year = 1456 }
+	}
+
+	mean_time_to_happen = {
+		months = 6
+	}
+
+	option = {
+		name = FEE_Venice_Events.27.OPT1
+		ai_chance = {
+			factor = 50
+		}
+
+		add_inflation = 1
+		add_treasury = -18
+		112 = { add_base_tax = -2 }
+	}
+}
+
+#Moro Provveditore delle Pubbliche Entrate
+country_event = {
+	id = FEE_Venice_Events.28
+	title = FEE_Venice_Events.28.T
+	desc = FEE_Venice_Events.28.D
+	picture = CITY_DEVELOPMENT_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		OR = {
+			tag = VEN
+			was_tag = VEN
+		}
+		owns = 112
+		is_year = 1455
+		NOT = { is_year = 1462 }
+	}
+
+	mean_time_to_happen = {
+		months = 6
+	}
+
+	option = {
+		name = FEE_Venice_Events.28.OPT1
+		ai_chance = {
+			factor = 50
+		}
+
+		add_years_of_income = 0.5
+		112 = {
+			add_base_production = 1
+			add_prosperity = 25
+			add_province_modifier = {
+				name = fee_ven_moro_provveditore_pubbliche_entrate
+				duration = 3650
+			}
+		}
+	}
+}
+
+# Doge Cristoforo Moro
+country_event = {
+	id = FEE_Venice_Events.29
+	title = FEE_Venice_Events.29.T
+	desc = FEE_Venice_Events.29.D
+	picture = ELECTION_REPUBLICAN_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		OR = {
+			tag = VEN
+			was_tag = VEN
+		}
+		is_year = 1461
+		NOT = { is_year = 1471 }
+	}
+
+	mean_time_to_happen = {
+		months = 6
+	}
+
+	option = {
+		name = FEE_Venice_Events.29.OPT1
+		ai_chance = {
+			factor = 1
+		}
+		highlight = yes
+
+		add_legitimacy_equivalent = { amount = -25 republican_tradition = -12 }
+		define_ruler = {
+			name = "Cristoforo Moro"
+			age = 71
+			culture = venetian
+			religion = catholic
+		}
+		remove_country_modifier = fee_ven_malipiero_avogadore_comun
+		add_estate_loyalty = {
+			estate = estate_church
+			loyalty = 5
+		}
+		morea_area = {
+			limit = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+				NOT = { is_empty = yes }
+				NOT = { is_wasteland = yes }
+			}
+			add_permanent_claim = ROOT
+		}
+		aegean_archipelago_area = {
+			limit = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+				NOT = { is_empty = yes }
+				NOT = { is_wasteland = yes }
+			}
+			add_permanent_claim = ROOT
+		}
+	}
+
+	option = {
+		name = FEE_Venice_Events.29.OPT2
+		ai_chance = {
+			factor = 0
+		}
+
+		add_legitimacy_equivalent = { amount = 5 republican_tradition = 3 }
+		add_estate_loyalty = {
+			estate = estate_church
+			loyalty = -15
+		}
+	}
+}
+
+#########	The Turko-Venetian Wars	#########
+
+# Turkish Dominion in Aegean sea
+country_event = {
+	id = FEE_Venice_Events.30
+	title = FEE_Venice_Events.30.T
+	desc = FEE_Venice_Events.30.D
+	picture = BATTLE_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		OR = {
+			tag = VEN
+			was_tag = VEN
+		}
+		is_year = 1463
+		NOT = { is_year = 1479 }
+		TUR = {
+			num_of_owned_provinces_with = {
+				value = 10
+				sea_zone = {
+					OR = {
+						province_id = 1310
+						province_id = 1311
+						province_id = 1312
+						province_id = 1319
+					}
+				}
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 6
+	}
+
+	option = {
+		name = FEE_Venice_Events.30.OPT1
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 20
+				ai = yes
+			}
+			modifier = {
+				factor = 20
+				151 = { owned_by = TUR }
+			}
+			modifier = {
+				factor = 20
+				NOT = {
+					army_strength = {
+						who = TUR
+						value = 1
+					}
+				}
+			}
+		}
+
+		add_yearly_manpower = 1
+		add_years_of_income = 1
+		add_yearly_sailors = 1
+		add_mil_power = 50
+		if = {
+			limit = { religion = catholic }
+			add_papal_influence = 25
+		}
+		declare_war_with_cb = {
+			casus_belli = cb_crusade
+			who = TUR
+		}
+		custom_tooltip = VEN_VENETIAN_WARS_BALKANS_CLAIMS_TT
+		hidden_effect = {
+			if = {
+				limit = {
+					PAP = { is_free_or_tributary_trigger = yes }
+				}
+				PAP = {
+					country_event = {
+						id = FEE_Venice_Events.31
+						days = 10
+						random = 5
+					}
+				}
+			}
+			if = {
+				limit = {
+					EPI = { is_free_or_tributary_trigger = yes }
+				}
+				EPI = {
+					country_event = {
+						id = FEE_Venice_Events.31
+						days = 10
+						random = 5
+					}
+				}
+			}
+			if = {
+				limit = {
+					MOE = { is_free_or_tributary_trigger = yes }
+				}
+				MOE = {
+					country_event = {
+						id = FEE_Venice_Events.31
+						days = 10
+						random = 5
+					}
+				}
+			}
+			if = {
+				limit = {
+					TRE = { is_free_or_tributary_trigger = yes }
+				}
+				TRE = {
+					country_event = {
+						id = FEE_Venice_Events.31
+						days = 10
+						random = 5
+					}
+				}
+			}
+			if = {
+				limit = {
+					ALB = { is_free_or_tributary_trigger = yes }
+				}
+				ALB = {
+					country_event = {
+						id = FEE_Venice_Events.31
+						days = 10
+						random = 5
+					}
+				}
+			}
+			every_ally = {
+				country_event = {
+					id = FEE_Venice_Events.31
+					days = 10
+					random = 5
+				}
+			}
+			morea_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+					NOT = { is_empty = yes }
+					NOT = { is_wasteland = yes }
+				}
+				add_core = ROOT
+			}
+			aegean_archipelago_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+					NOT = { is_empty = yes }
+					NOT = { is_wasteland = yes }
+				}
+				add_core = ROOT
+			}
+			balkan_region = {
+				limit = {
+					owned_by = TUR
+					sea_zone = {
+						OR = {
+							province_id = 1310
+							province_id = 1311
+							province_id = 1312
+							province_id = 1319
+						}
+					}
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+					NOT = { is_empty = yes }
+					NOT = { is_wasteland = yes }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+
+	option = {
+		name = FEE_Venice_Events.30.OPT2
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 2
+				war_exhaustion = 2
+			}
+			modifier = {
+				factor = 2
+				NOT = { manpower_percentage = 0.50 }
+			}
+			modifier = {
+				factor = 2
+				NOT = { sailors_percentage = 0.50 }
+			}
+			modifier = {
+				factor = 2
+				NOT = { navy_size_percentage = 0.50 }
+			}
+			modifier = {
+				factor = 200
+				NOT = {
+					army_strength = {
+						who = TUR
+						value = 0.66
+					}
+				}
+			}
+		}
+
+		add_stability_or_adm_power = yes
+		add_mercantilism = 5
+		add_dip_power = 50
+		add_opinion = {
+			who = TUR
+			modifier = opinion_eased_tension
+		}
+		reverse_add_opinion = {
+			who = TUR
+			modifier = opinion_eased_tension
+		}
+	}
+}
+
+# Crusade against the Turks
+country_event = {
+	id = FEE_Venice_Events.31
+	title = FEE_Venice_Events.31.T
+	desc = FEE_Venice_Events.31.D
+	picture = GENERALS_DISCUSSING_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = FEE_Venice_Events.31.OPT1
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 20
+				ai = yes
+			}
+		}
+
+		join_all_offensive_wars_of = FROM
+		add_yearly_manpower = 1
+		add_years_of_income = 1
+		add_yearly_sailors = 1
+		add_mil_power = 50
+	}
+
+	option = {
+		name = FEE_Venice_Events.31.OPT2
+		ai_chance = {
+			factor = 2
+			modifier = {
+				factor = 50
+				NOT = { manpower_percentage = 0.50 }
+			}
+			modifier = {
+				factor = 50
+				NOT = { army_size_percentage = 0.50 }
+			}
+			modifier = {
+				factor = 50
+				war_exhaustion = 3
+			}
+		}
+
+		add_stability = 2
+		add_prestige = -12
+	}
+}
+
+# Athleta Christi et Defensor Fidei
+country_event = {
+	id = FEE_Venice_Events.32
+	title = FEE_Venice_Events.32.T
+	desc = FEE_Venice_Events.32.D
+	picture = CONQUEST_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		OR = {
+			tag = VEN
+			was_tag = VEN
+		}
+		is_in_war = {
+			attacker_leader = ROOT
+			casus_belli = cb_crusade
+			defender_leader = TUR
+		}
+		has_country_modifier = fee_ven_turko_venetian_wars
+		NOT = { exists = ALB }
+		is_year = 1463
+		NOT = { is_year = 1468 }
+		any_owned_province = {
+			OR = {
+				area = albania_area
+				culture = albanian
+			}
+			controlled_by = TUR
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 12
+	}
+
+	option = {
+		name = FEE_Venice_Events.32.OPT1
+
+		random_owned_province = {
+			limit = {
+				OR = {
+					area = albania_area
+					culture = albanian
+				}
+				controlled_by = ROOT
+			}
+			infantry = ROOT
+			infantry = ROOT
+			infantry = ROOT
+			ROOT = {
+				create_general = {
+					tradition = 50
+					culture = albanian
+				}
+			}
+			change_controller = ROOT
+		}
+	}
+}
+
+# Albanian Rebellions
+country_event = {
+	id = FEE_Venice_Events.33
+	title = FEE_Venice_Events.33.T
+	desc = FEE_Venice_Events.33.D
+	picture = BORDER_TENSION_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		OR = {
+			tag = VEN
+			was_tag = VEN
+		}
+		is_in_war = {
+			attacker_leader = ROOT
+			casus_belli = cb_crusade
+			defender_leader = TUR
+		}
+		has_country_modifier = fee_ven_turko_venetian_wars
+		NOT = { exists = ALB }
+		is_year = 1463
+		NOT = { is_year = 1468 }
+		TUR = {
+			any_owned_province = {
+				OR = {
+					area = albania_area
+					culture = albanian
+				}
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 6
+	}
+
+	option = {
+		name = FEE_Venice_Events.33.OPT1
+		ai_chance = {
+			factor = 1
+		}
+
+		add_years_of_income = -0.5
+		TUR = {
+			random_owned_province = {
+				limit = {
+					OR = {
+						area = albania_area
+						culture = albanian
+					}
+					controlled_by = TUR
+				}
+				hidden_effect = {
+					if = {
+						limit = {
+							NOT = { is_core = ALB }
+						}
+						add_core = ALB
+						add_nationalism = 5
+					}
+				}
+				spawn_rebels = {
+					type = nationalist_rebels
+					size = 3
+					leader_dynasty = "Kastrioti"
+					friend = ROOT
+					separatists_target = ALB
+					win = yes
+				}
+			}
+		}
+	}
+
+	option = {
+		name = FEE_Venice_Events.33.OPT2
+		ai_chance = {
+			factor = 2
+		}
+
+		add_prestige = -5
+		if = {
+			limit = { religion = catholic }
+			add_papal_influence = -15
+		}
+	}
+}
+
+# Siege of Negroponte
+country_event = {
+	id = FEE_Venice_Events.34
+	title = FEE_Venice_Events.34.T
+	desc = FEE_Venice_Events.34.D
+	picture = SIEGE_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		OR = {
+			tag = VEN
+			was_tag = VEN
+		}
+		is_in_war = {
+			attacker_leader = ROOT
+			casus_belli = cb_crusade
+			defender_leader = TUR
+		}
+		has_country_modifier = fee_ven_turko_venetian_wars
+		is_year = 1463
+		NOT = { is_year = 1479 }
+		3003 = {
+			owned_by = ROOT
+			controlled_by = TUR
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 6
+	}
+
+	option = {
+		name = FEE_Venice_Events.34.OPT1
+		ai_chance = {
+			factor = 1
+		}
+
+		add_treasury = -60
+		add_sailors = -360
+		add_manpower = -1
+		TUR = {
+			add_treasury = 60
+			add_sailors = 360
+			add_manpower = 1
+		}
+		3003 = {
+			add_base_tax = -1
+			add_base_manpower = -1
+		}
+	}
+}
+
+# Nicolò Canale
+country_event = {
+	id = FEE_Venice_Events.35
+	title = FEE_Venice_Events.35.T
+	desc = FEE_Venice_Events.35.D
+	picture = ADVISOR_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		OR = {
+			tag = VEN
+			was_tag = VEN
+		}
+		is_in_war = {
+			attacker_leader = ROOT
+			casus_belli = cb_crusade
+			defender_leader = TUR
+		}
+		has_country_modifier = fee_ven_turko_venetian_wars
+		is_year = 1463
+		NOT = { is_year = 1479 }
+	}
+
+	mean_time_to_happen = {
+		months = 6
+	}
+
+	option = {
+		name = FEE_Venice_Events.35.OPT1
+		ai_chance = {
+			factor = 1
+		}
+
+		if = {
+			limit = {
+				is_expanded_mod_active = { mod = advisor_types }
+			}
+			define_advisor = {
+				name = "Nicolo Canale"
+				type = ate_advisor_galley_captain
+				culture = venetian
+				religion = ROOT
+				skill = 2
+				discount = yes
+			}
+		}
+		else = {
+			define_advisor = {
+				name = "Nicolo Canale"
+				type = naval_reformer
+				culture = venetian
+				religion = ROOT
+				skill = 2
+				discount = yes
+			}
+		}
+	}
+}
+
+# Giacomo Loredan
+country_event = {
+	id = FEE_Venice_Events.36
+	title = FEE_Venice_Events.36.T
+	desc = FEE_Venice_Events.36.D
+	picture = GENERALS_DISCUSSING_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		OR = {
+			tag = VEN
+			was_tag = VEN
+		}
+		is_in_war = {
+			attacker_leader = ROOT
+			casus_belli = cb_crusade
+			defender_leader = TUR
+		}
+		has_country_modifier = fee_ven_turko_venetian_wars
+		is_year = 1463
+		NOT = { is_year = 1479 }
+	}
+
+	mean_time_to_happen = {
+		months = 6
+	}
+
+	option = {
+		name = FEE_Venice_Events.36.OPT1
+		ai_chance = {
+			factor = 1
+		}
+
+		define_admiral = {
+			name = "Giacomo Loredan"
+			fire = 3
+			shock = 4
+			manuever = 4
+			siege = 0
+		}
+	}
+}
+
+# Turks in Friuli!
+country_event = {
+	id = FEE_Venice_Events.37
+	title = FEE_Venice_Events.37.T
+	desc = FEE_Venice_Events.37.D
+	picture = BAD_WITH_MONARCH_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		OR = {
+			tag = VEN
+			was_tag = VEN
+		}
+		is_in_war = {
+			attacker_leader = ROOT
+			casus_belli = cb_crusade
+			defender_leader = TUR
+		}
+		has_country_modifier = fee_ven_turko_venetian_wars
+		is_year = 1463
+		NOT = { is_year = 1479 }
+		111 = {
+			owned_by = ROOT
+			OR = {
+				controlled_by = TUR
+				units_in_province = TUR
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 12
+	}
+
+	option = {
+		name = FEE_Venice_Events.37.OPT1
+		ai_chance = {
+			factor = 1
+		}
+
+		set_country_flag = fee_ven_turko_venetian_wars_friuli_raided_flag
+		add_prestige = -5
+		add_legitimacy_equivalent = { amount = -5 republican_tradition = -3 }
+		111 = {
+			add_base_tax = -1
+			add_base_manpower = -1
+			add_base_production = -1
+		}
+	}
+}
+
+# Craine of the Venetian Dalmatia
+country_event = {
+	id = FEE_Venice_Events.38
+	title = FEE_Venice_Events.38.T
+	desc = FEE_Venice_Events.38.D
+	picture = MILITARY_CAMP_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		OR = {
+			tag = VEN
+			was_tag = VEN
+		}
+		is_at_war = no
+		has_country_flag = fee_ven_turko_venetian_wars_friuli_raided_flag
+		137 = {
+			any_trade_node_member_province = {
+				has_port = yes
+				OR = {
+					culture_group = south_slavic
+					area = east_adriatic_coast_area
+				}
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		years = 5
+	}
+
+	option = {
+		name = FEE_Venice_Events.38.OPT1
+		ai_chance = {
+			factor = 1
+		}
+
+		add_mil_power = -75
+		137 = {
+			add_trade_modifier = {
+				who = ROOT
+				duration = 7300
+				power = 20
+				key = fee_ven_craine
+			}
+		}
+		custom_tooltip = FEE_VEN_CRAINE_DALMATIA_TT
+		tooltip = {
+			137 = {
+				random_trade_node_member_province = {
+					limit = {
+						has_port = yes
+						OR = {
+							culture_group = south_slavic
+							area = east_adriatic_coast_area
+						}
+					}
+					add_base_manpower = 1
+					add_province_modifier = {
+						name = fee_ven_craine
+						duration = -1
+					}
+				}
+			}
+		}
+		hidden_effect = {
+			137 = {
+				every_trade_node_member_province = {
+					limit = {
+						has_port = yes
+						OR = {
+							culture_group = south_slavic
+							area = east_adriatic_coast_area
+						}
+					}
+					add_base_manpower = 1
+					add_province_modifier = {
+						name = fee_ven_craine
+						duration = -1
+					}
+				}
+			}
+		}
+	}
+}
+
+# Trattato di Constantinopoli
+country_event = {
+	id = FEE_Venice_Events.39
+	title = FEE_Venice_Events.39.T
+	desc = FEE_Venice_Events.39.D
+	picture = BAD_WITH_MONARCH_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		OR = {
+			tag = VEN
+			was_tag = VEN
+		}
+		is_year = 1463
+		NOT = { is_year = 1479 }
+		is_at_war = no
+		has_country_modifier = fee_ven_turko_venetian_wars
+		TUR = {
+			has_won_war_against = {
+				who = VEN
+				max_years_since = 5
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 6
+	}
+
+	option = {
+		name = FEE_Venice_Events.39.OPT1
+		ai_chance = {
+			factor = 1
+		}
+
+		add_prestige = -25
+		add_legitimacy_equivalent = { amount = -20 republican_tradition = -10 }
+		add_mercantilism = -15
+		add_splendor = -200
+		1320 = {
+			add_trade_modifier = {
+				who = ROOT
+				duration = 7300
+				power = -20
+				key = fee_ven_treaty_constantinople
+			}
+		}
+		add_country_modifier = {
+			name = fee_ven_treaty_constantinople
+			duration = 7300
+		}
+		if = {
+			limit = {
+				any_owned_province = {
+					sea_zone = {
+						area = eastern_mediterrenean_area
+					}
+				}
+			}
+			custom_tooltip = FEE_VEN_TREATY_CONSTANTINOPLE_TT
+			tooltip = {
+				random_owned_province = {
+					limit = {
+						sea_zone = {
+							area = eastern_mediterrenean_area
+						}
+					}
+					add_base_production = -1
+					add_province_modifier = {
+						name = fee_ven_treaty_constantinople_province
+						duration = 7300
+					}
+				}
+			}
+			hidden_effect = {
+				every_province = {
+					limit = {
+						country_or_non_sovereign_subject_holds = ROOT
+						sea_zone = {
+							area = eastern_mediterrenean_area
+						}
+					}
+					add_base_production = -1
+					add_province_modifier = {
+						name = fee_ven_treaty_constantinople_province
+						duration = 7300
+					}
+				}
+			}
+		}
+	}
+}
+
+# Il Leone Alato
+country_event = {
+	id = FEE_Venice_Events.40
+	title = FEE_Venice_Events.40.T
+	desc = FEE_Venice_Events.40.D
+	picture = GOOD_WITH_MONARCH_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		OR = {
+			tag = VEN
+			was_tag = VEN
+		}
+		is_year = 1463
+		NOT = { is_year = 1479 }
+		is_at_war = no
+		has_country_modifier = fee_ven_turko_venetian_wars
+		has_won_war_against = {
+			who = TUR
+			max_years_since = 5
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 6
+	}
+
+	option = {
+		name = FEE_Venice_Events.40.OPT1
+		ai_chance = {
+			factor = 1
+		}
+
+		add_mercantilism = 25
+		1320 = {
+			add_trade_modifier = {
+				who = ROOT
+				duration = 7300
+				power = 20
+				key = fee_ven_aegean_superiority
+			}
+			add_trade_modifier = {
+				who = TUR
+				duration = 7300
+				power = -20
+				key = fee_ven_aegean_superiority
+			}
+		}
+		add_country_modifier = {
+			name = fee_ven_aegean_superiority
+			duration = 7300
+		}
+		if = {
+			limit = {
+				any_owned_province = {
+					sea_zone = {
+					area = eastern_mediterrenean_area
+				}
+				}
+			}
+			custom_tooltip = FEE_VEN_TREATY_CONSTANTINOPLE_TT
+			tooltip = {
+				random_owned_province = {
+					limit = {
+						sea_zone = {
+						area = eastern_mediterrenean_area
+					}
+					}
+					add_base_production = 1
+					add_province_modifier = {
+						name = fee_ven_aegean_superiority_province
+						duration = 7300
+					}
+				}
+			}
+			hidden_effect = {
+				every_province = {
+					limit = {
+						country_or_non_sovereign_subject_holds = ROOT
+						sea_zone = {
+						area = eastern_mediterrenean_area
+					}
+					}
+					add_base_production = 1
+					add_province_modifier = {
+						name = fee_ven_aegean_superiority_province
+						duration = 7300
+					}
+				}
+			}
+		}
+	}
+}
+
+# Battaglia di Lepanto
+country_event = {
+	id = FEE_Venice_Events.41
+	title = FEE_Venice_Events.41.T
+	desc = FEE_Venice_Events.41.D
+	picture = FLAGSHIP_SUNK_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		OR = {
+			tag = VEN
+			was_tag = VEN
+		}
+		is_year = 1499
+		NOT = { is_year = 1571 }
+		war_with = TUR
+	}
+
+	mean_time_to_happen = {
+		months = 6
+	}
+
+	major = yes
+
+	major_trigger = {
+		OR = {
+			VEN = {
+				capital_scope = {
+					has_discovered = ROOT
+				}
+			}
+			TUR = {
+				capital_scope = {
+					has_discovered = ROOT
+				}
+			}
+		}
+	}
+
+	option = {
+		name = FEE_Venice_Events.41.OPT1
+		ai_chance = {
+			factor = 1
+		}
+
+		add_dip_power = 100
+		add_navy_tradition = 15
+		create_admiral = {
+			tradition = 100
+		}
+		TUR = {
+			add_dip_power = 100
+			add_navy_tradition = 15
+			create_admiral = {
+				tradition = 100
+			}
+		}
+	}
+}
+
+#########	Life of Doge Niccolò Tron 1399-1473	#########
+
+# Voyages of Niccolò Tron
+country_event = {
+	id = FEE_Venice_Events.42
+	title = FEE_Venice_Events.42.T
+	desc = FEE_Venice_Events.42.D
+	picture = SHIP_SAILING_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		OR = {
+			tag = VEN
+			was_tag = VEN
+		}
+		is_year = 1399
+		NOT = { is_year = 1466 }
+	}
+
+	mean_time_to_happen = {
+		years = 5
+	}
+
+	option = {
+		name = FEE_Venice_Events.42.OPT1
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 2
+				ai = yes
+			}
+		}
+
+		add_dip_power = -50
+		custom_tooltip = FEE_VEN_VOYAGES_NICCOLO_TRON_TT
+		set_country_flag = fee_ven_voyages_niccolo_tron
+	}
+
+	option = {
+		name = FEE_Venice_Events.42.OPT2
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 2
+				ai = yes
+			}
+		}
+
+		add_treasury = -25
+		custom_tooltip = FEE_VEN_VOYAGES_NICCOLO_TRON_TT
+		set_country_flag = fee_ven_voyages_niccolo_tron
+	}
+
+	option = {
+		name = FEE_Venice_Events.42.OPT3
+		ai_chance = {
+			factor = 0
+		}
+
+		add_mercantilism = -3
+		define_advisor = {
+			name = "Niccolò Tron"
+			type = trader
+			skill = 2
+			religion = ROOT
+			culture = venetian
+			cost_multiplier = 0.75
+		}
+	}
+}
+
+# Arrival at Cyprus
+country_event = {
+	id = FEE_Venice_Events.43
+	title = FEE_Venice_Events.43.T
+	desc = FEE_Venice_Events.43.D
+	picture = SHIP_SAILING_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		OR = {
+			tag = VEN
+			was_tag = VEN
+		}
+		is_year = 1399
+		has_country_flag = fee_ven_voyages_niccolo_tron
+		NOT = { is_year = 1466 }
+	}
+
+	mean_time_to_happen = {
+		years = 1
+	}
+
+	goto = 321
+
+	immediate = {
+		hidden_effect = {
+			set_country_flag = fee_ven_voyages_niccolo_tron_cyprus
+		}
+	}
+
+	option = {
+		name = FEE_Venice_Events.43.OPT1
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 2
+				ai = yes
+			}
+		}
+		trigger = {
+			321 = {
+				NOT = { owned_by = ROOT }
+			}
+		}
+
+		add_treasury = -25
+		321 = {
+			owner = {
+				country_event = {
+					id = FEE_Venice_Events.44
+					days = 60
+					random = 30
+				}
+			}
+		}
+	}
+
+	option = {
+		name = FEE_Venice_Events.43.OPT2
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 2
+				NOT = { treasury = 25 }
+			}
+		}
+
+		add_mercantilism = 5
+	}
+}
+
+# Trading in Cyprus
+country_event = {
+	id = FEE_Venice_Events.44
+	title = FEE_Venice_Events.44.T
+	desc = FEE_Venice_Events.44.D
+	picture = DIPLOMACY_eventPicture
+
+	is_triggered_only = yes
+
+	goto = 321
+
+	major = yes
+	major_trigger = {
+		OR = {
+			tag = VEN
+			was_tag = VEN
+		}
+	}
+
+	option = {
+		name = FEE_Venice_Events.44.OPT1
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 2
+				ai = yes
+			}
+		}
+
+		add_treasury = 25
+		add_dip_power = 15
+		add_opinion = {
+			who = FROM
+			modifier = opinion_export_good
+		}
+		reverse_add_opinion = {
+			who = FROM
+			modifier = opinion_export_good
+		}
+		FROM = {
+			add_mercantilism = 3
+			add_dip_power = 15
+		}
+		377 = {
+			add_trade_modifier = {
+				who = FROM
+				duration = 7300
+				power = 15
+				key = opinion_export_good
+			}
+		}
+	}
+
+	option = {
+		name = FEE_Venice_Events.44.OPT2
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				NOT = {
+					has_opinion = {
+						who = FROM
+						value = 25
+					}
+				}
+			}
+		}
+
+		add_mercantilism = 5
+		add_opinion = {
+			who = FROM
+			modifier = opinion_export_bad
+		}
+		reverse_add_opinion = {
+			who = FROM
+			modifier = opinion_export_bad
+		}
+		377 = {
+			add_trade_modifier = {
+				who = FROM
+				duration = 7300
+				power = -15
+				key = opinion_export_bad
+			}
+		}
+	}
+}
+
+# Stopping in the Holy Land?
+country_event = {
+	id = FEE_Venice_Events.45
+	title = FEE_Venice_Events.45.T
+	desc = FEE_Venice_Events.45.D
+	picture = RELIGION_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		OR = {
+			tag = VEN
+			was_tag = VEN
+		}
+		is_year = 1399
+		has_country_flag = fee_ven_voyages_niccolo_tron_cyprus
+		NOT = { is_year = 1466 }
+		religion_group = christian
+	}
+
+	mean_time_to_happen = {
+		years = 3
+	}
+
+	goto = 379
+
+	immediate = {
+		hidden_effect = {
+			set_country_flag = fee_ven_voyages_niccolo_tron_jerusalem
+		}
+	}
+
+	option = {
+		name = FEE_Venice_Events.45.OPT1
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 2
+				ai = yes
+			}
+		}
+		trigger = {
+			379 = {
+				NOT = { owned_by = ROOT }
+			}
+		}
+
+		add_treasury = -10
+		379 = {
+			owner = {
+				country_event = {
+					id = FEE_Venice_Events.46
+					days = 60
+					random = 30
+				}
+			}
+		}
+	}
+
+	option = {
+		name = FEE_Venice_Events.45.OPT2
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 2
+				NOT = { treasury = 25 }
+			}
+		}
+
+		add_prestige = -5
+	}
+}
+
+# Safe passage to Jerusalem
+country_event = {
+	id = FEE_Venice_Events.46
+	title = FEE_Venice_Events.46.T
+	desc = FEE_Venice_Events.46.D
+	picture = STREET_SPEECH_eventPicture
+
+	is_triggered_only = yes
+
+	goto = 321
+
+	major = yes
+	major_trigger = {
+		OR = {
+			tag = VEN
+			was_tag = VEN
+		}
+	}
+
+	option = {
+		name = FEE_Venice_Events.46.OPT1
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 2
+				ai = yes
+			}
+			modifier = {
+				factor = 2
+				religion_group = FROM
+			}
+		}
+
+		add_treasury = 10
+		add_dip_power = 15
+		add_opinion = {
+			who = FROM
+			modifier = che_conciliatory_views
+		}
+		reverse_add_opinion = {
+			who = FROM
+			modifier = che_conciliatory_views
+		}
+		FROM = {
+			change_religious_influence_equivalent_fee = { add = 25 }
+		}
+	}
+
+	option = {
+		name = FEE_Venice_Events.46.OPT2
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				NOT = {
+					has_opinion = {
+						who = FROM
+						value = 25
+					}
+				}
+			}
+			modifier = {
+				factor = 2
+				NOT = { religion_group = FROM }
+			}
+		}
+
+		add_mil_power = 15
+		change_religious_influence_equivalent_fee = { add = 25 }
+		add_opinion = {
+			who = FROM
+			modifier = opinion_betrayal
+		}
+		reverse_add_opinion = {
+			who = FROM
+			modifier = opinion_betrayal
+		}
+	}
+}
+
+# Arrival in Alexandria
+country_event = {
+	id = FEE_Venice_Events.47
+	title = FEE_Venice_Events.47.T
+	desc = FEE_Venice_Events.47.D
+	picture = SHIP_SAILING_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		OR = {
+			tag = VEN
+			was_tag = VEN
+		}
+		is_year = 1399
+		has_country_flag = fee_ven_voyages_niccolo_tron_jerusalem
+		NOT = { is_year = 1466 }
+		religion_group = christian
+	}
+
+	mean_time_to_happen = {
+		years = 3
+	}
+
+	goto = 358
+
+	immediate = {
+		hidden_effect = {
+			set_country_flag = fee_ven_voyages_niccolo_tron_egypt
+		}
+	}
+
+	option = {
+		name = FEE_Venice_Events.47.OPT1
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 2
+				ai = yes
+			}
+		}
+		trigger = {
+			379 = {
+				NOT = { owned_by = ROOT }
+			}
+		}
+
+		add_treasury = -50
+		358 = {
+			owner = {
+				country_event = {
+					id = FEE_Venice_Events.48
+					days = 60
+					random = 30
+				}
+			}
+		}
+	}
+
+	option = {
+		name = FEE_Venice_Events.47.OPT2
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 2
+				NOT = { treasury = 50 }
+			}
+		}
+
+		add_dip_power = 25
+		add_mercantilism = 2
+	}
+}
+
+# Veneto-Egyptian trade deal
+country_event = {
+	id = FEE_Venice_Events.48
+	title = FEE_Venice_Events.48.T
+	desc = FEE_Venice_Events.48.D
+	picture = PORTUGUESE_MERCHANTS_eventPicture
+
+	is_triggered_only = yes
+
+	goto = 358
+
+	major = yes
+	major_trigger = {
+		OR = {
+			tag = VEN
+			was_tag = VEN
+		}
+	}
+
+	option = {
+		name = FEE_Venice_Events.48.OPT1
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 2
+				ai = yes
+			}
+		}
+
+		add_treasury = 50
+		add_opinion = {
+			who = FROM
+			modifier = opinion_export_good
+		}
+		reverse_add_opinion = {
+			who = FROM
+			modifier = opinion_export_good
+		}
+		358 = {
+			add_base_production = 1
+			add_trade_modifier = {
+				who = FROM
+				duration = 7300
+				power = 25
+				key = opinion_export_good
+			}
+		}
+		FROM = {
+			add_mercantilism = 5
+		}
+	}
+
+	option = {
+		name = FEE_Venice_Events.48.OPT2
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				NOT = {
+					has_opinion = {
+						who = FROM
+						value = 25
+					}
+				}
+			}
+		}
+
+		add_mercantilism = 3
+		add_mil_power = 25
+		add_casus_belli = {
+			target = FROM
+			type = cb_trade_war
+		}
+		add_opinion = {
+			who = FROM
+			modifier = opinion_export_bad
+		}
+		reverse_add_opinion = {
+			who = FROM
+			modifier = opinion_export_bad
+		}
+		358 = {
+			add_trade_modifier = {
+				who = FROM
+				duration = 7300
+				power = -25
+				key = opinion_export_bad
+			}
+		}
+		FROM = {
+			add_mercantilism = -3
+		}
+	}
+}
+
+# Doge Niccolò Tron
+country_event = {
+	id = FEE_Venice_Events.49
+	title = FEE_Venice_Events.49.T
+	desc = FEE_Venice_Events.49.D
+	picture = ELECTION_REPUBLICAN_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		OR = {
+			tag = VEN
+			was_tag = VEN
+		}
+		is_year = 1471
+		has_country_flag = fee_ven_voyages_niccolo_tron_egypt
+		NOT = { is_year = 1473 }
+	}
+
+	mean_time_to_happen = {
+		months = 6
+	}
+
+	option = {
+		name = FEE_Venice_Events.49.OPT1
+		ai_chance = {
+			factor = 1
+		}
+		highlight = yes
+
+		add_legitimacy_equivalent = { amount = -25 republican_tradition = -12 }
+		define_ruler = {
+			name = "Nicolò Tron"
+			age = 72
+			culture = venetian
+			religion = catholic
+		}
+		add_treasury = 90
+		add_mercantilism = 5
+	}
+
+	option = {
+		name = FEE_Venice_Events.49.OPT2
+		ai_chance = {
+			factor = 0
+		}
+
+		add_legitimacy_equivalent = { amount = 5 republican_tradition = 3 }
+	}
+}
+
+#########	Life of Doge Nicolò Marcello 1397-1474	#########
+
+# Nicolò Marcello Bailo di Trebisonda
+country_event = {
+	id = FEE_Venice_Events.50
+	title = FEE_Venice_Events.50.T
+	desc = FEE_Venice_Events.50.D
+	picture = TRADEGOODS_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		OR = {
+			tag = VEN
+			was_tag = VEN
+		}
+		is_year = 1441
+		NOT = { is_year = 1450 }
+		exists = TRE
+	}
+
+	mean_time_to_happen = {
+		years = 1
+	}
+
+	option = {
+		name = FEE_Venice_Events.50.OPT1
+		ai_chance = {
+			factor = 1
+		}
+
+		TRE = {
+			country_event = {
+				id = FEE_Venice_Events.51
+				days = 180
+				random = 30
+			}
+		}
+	}
+}
+
+# Niccolò Marcello in Trebizond
+country_event = {
+	id = FEE_Venice_Events.51
+	title = FEE_Venice_Events.51.T
+	desc = FEE_Venice_Events.51.D
+	picture = DIPLOMACY_SIGNING_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		exists = VEN
+	}
+
+	major = yes
+	major_trigger = {
+		OR = {
+			tag = VEN
+			was_tag = VEN
+		}
+	}
+
+	option = {
+		name = FEE_Venice_Events.51.OPT1
+		ai_chance = {
+			factor = 50
+		}
+
+		add_opinion = {
+			who = FROM
+			modifier = opinion_export_good
+		}
+		reverse_add_opinion = {
+			who = FROM
+			modifier = opinion_export_good
+		}
+		capital_scope = {
+			add_province_modifier = {
+				name = fee_ven_latin_trebizond_ties
+				duration = 7300
+			}
+		}
+		1322 = {
+			add_trade_modifier = {
+				who = ROOT
+				duration = 7300
+				power = 15
+				key = opinion_export_good
+			}
+			add_trade_modifier = {
+				who = FROM
+				duration = 7300
+				power = 15
+				key = opinion_export_good
+			}
+		}
+	}
+
+	option = {
+		name = FEE_Venice_Events.51.OPT1
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 2
+				has_opinion = {
+					who = GEN
+					value = 25
+				}
+			}
+			modifier = {
+				factor = 2
+				reverse_has_opinion = {
+					who = GEN
+					value = 25
+				}
+			}
+		}
+		trigger = {
+			exists = GEN
+		}
+
+		add_opinion = {
+			who = GEN
+			modifier = opinion_export_good
+		}
+		reverse_add_opinion = {
+			who = GEN
+			modifier = opinion_export_good
+		}
+		capital_scope = {
+			add_province_modifier = {
+				name = fee_ven_latin_trebizond_ties
+				duration = 7300
+			}
+		}
+		1322 = {
+			add_trade_modifier = {
+				who = ROOT
+				duration = 7300
+				power = 15
+				key = opinion_export_good
+			}
+			add_trade_modifier = {
+				who = GEN
+				duration = 7300
+				power = 15
+				key = opinion_export_good
+			}
+		}
+	}
+}
+
+# Patria del Friuli
+country_event = {
+	id = FEE_Venice_Events.52
+	title = FEE_Venice_Events.52.T
+	desc = FEE_Venice_Events.52.D
+	picture = FORT_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		OR = {
+			tag = VEN
+			was_tag = VEN
+		}
+		is_year = 1464
+		NOT = { is_year = 1473 }
+		owns = 111
+	}
+
+	mean_time_to_happen = {
+		months = 12
+	}
+
+	goto = 111
+
+	option = {
+		name = FEE_Venice_Events.52.OPT1
+		ai_chance = {
+			factor = 50
+		}
+
+		111 = {
+			add_base_manpower = 2
+			add_province_modifier = {
+				name = local_fortress
+				duration = 7300
+			}
+		}
+	}
+}
+
+# Doge Nicolò Marcello
+country_event = {
+	id = FEE_Venice_Events.53
+	title = FEE_Venice_Events.53.T
+	desc = FEE_Venice_Events.53.D
+	picture = ELECTION_REPUBLICAN_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		OR = {
+			tag = VEN
+			was_tag = VEN
+		}
+		is_year = 1473
+		NOT = { is_year = 1474 }
+	}
+
+	mean_time_to_happen = {
+		months = 6
+	}
+
+	option = {
+		name = FEE_Venice_Events.53.OPT1
+		ai_chance = {
+			factor = 1
+		}
+		highlight = yes
+
+		add_legitimacy_equivalent = { amount = -25 republican_tradition = -12 }
+		define_ruler = {
+			name = "Nicolò Marcello"
+			age = 72
+			culture = venetian
+			religion = catholic
+		}
+		add_inflation = -2
+	}
+
+	option = {
+		name = FEE_Venice_Events.53.OPT2
+		ai_chance = {
+			factor = 0
+		}
+
+		add_legitimacy_equivalent = { amount = 5 republican_tradition = 3 }
+	}
+}
+
+#########	Life of Doge Pietro Mocenigo 1406-1476	#########
+
+# Pietro Mocenigo sopracomito Adriatic
+country_event = {
+	id = FEE_Venice_Events.54
+	title = FEE_Venice_Events.54.T
+	desc = FEE_Venice_Events.54.D
+	picture = NAVAL_MILITARY_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		OR = {
+			tag = VEN
+			was_tag = VEN
+		}
+		is_year = 1442
+		NOT = { is_year = 1449 }
+	}
+
+	mean_time_to_happen = {
+		months = 6
+	}
+
+	option = {
+		name = FEE_Venice_Events.54.OPT1
+		ai_chance = {
+			factor = 50
+		}
+
+		define_admiral = {
+			name = "Pietro Mocenigo"
+			fire = 1
+			shock = 2
+			manuever = 5
+			siege = 0
+			trait = extortioner_personality
+		}
+		137 = {
+			add_trade_modifier = {
+				who = ROOT
+				duration = 1825
+				power = 10
+				key = fee_ven_pietro_mocenigo
+			}
+		}
+	}
+}
+
+# Catalan Pirates?
+country_event = {
+	id = FEE_Venice_Events.55
+	title = FEE_Venice_Events.55.T
+	desc = FEE_Venice_Events.55.D
+	picture = BARBARY_PIRATES_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		OR = {
+			tag = VEN
+			was_tag = VEN
+		}
+		general_with_name = "Pietro Mocenigo"
+	}
+
+	mean_time_to_happen = {
+		months = 6
+	}
+
+	goto = 1933
+
+	option = {
+		name = FEE_Venice_Events.55.OPT1
+		ai_chance = {
+			factor = 50
+		}
+
+		add_dip_power = -50
+		122 = {
+			owner = {
+				country_event = {
+					id = FEE_Venice_Events.56
+					days = 30
+					random = 15
+				}
+			}
+		}
+	}
+
+	option = {
+		name = FEE_Venice_Events.55.OPT2
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+			}
+		}
+
+		kill_leader = { type = admiral }
+		137 = {
+			remove_trade_modifier = {
+				who = ROOT
+				key = fee_ven_pietro_mocenigo
+			}
+		}
+	}
+}
+
+# Mocenigo in Bari
+country_event = {
+	id = FEE_Venice_Events.56
+	title = FEE_Venice_Events.56.T
+	desc = FEE_Venice_Events.56.D
+	picture = DIPLOMACY_eventPicture
+
+	is_triggered_only = yes
+
+	major = yes
+	major_trigger = {
+		OR = {
+			tag = VEN
+			was_tag = VEN
+		}
+	}
+
+	option = {
+		name = FEE_Venice_Events.56.OPT1
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 2
+				ai = yes
+			}
+		}
+
+		add_dip_power = 50
+		add_opinion = {
+			who = FROM
+			modifier = opinion_eased_tension
+		}
+		reverse_add_opinion = {
+			who = FROM
+			modifier = opinion_eased_tension
+		}
+	}
+
+	option = {
+		name = FEE_Venice_Events.56.OPT2
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 2
+				NOT = {
+					has_opinion = {
+						who = ROOT
+						value = 0
+					}
+				}
+			}
+		}
+
+		define_admiral = {
+			name = "Pietro Mocenigo"
+			fire = 1
+			shock = 2
+			manuever = 5
+			siege = 0
+			trait = extortioner_personality
+		}
+		137 = {
+			add_trade_modifier = {
+				who = ROOT
+				duration = 3650
+				power = 10
+				key = fee_ven_pietro_mocenigo
+			}
+		}
+	}
+}
+
+# Captain of the Muda of Beirut
+country_event = {
+	id = FEE_Venice_Events.57
+	title = FEE_Venice_Events.57.T
+	desc = FEE_Venice_Events.57.D
+	picture = NAVAL_MILITARY_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		OR = {
+			tag = VEN
+			was_tag = VEN
+		}
+		general_with_name = "Pietro Mocenigo"
+		is_year = 1449
+		NOT = { is_year = 1470 }
+	}
+
+	mean_time_to_happen = {
+		years = 1
+	}
+
+	option = {
+		name = FEE_Venice_Events.57.OPT1
+		ai_chance = {
+			factor = 50
+		}
+
+		377 = {
+			add_trade_modifier = {
+				who = ROOT
+				duration = 7300
+				power = 10
+				key = fee_ven_pietro_mocenigo
+			}
+		}
+	}
+}
+
+# Admiral Pietro Mocenigo
+country_event = {
+	id = FEE_Venice_Events.58
+	title = FEE_Venice_Events.58.T
+	desc = FEE_Venice_Events.58.D
+	picture = NAVAL_MILITARY_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		OR = {
+			tag = VEN
+			was_tag = VEN
+		}
+		is_year = 1470
+		NOT = { is_year = 1474 }
+	}
+
+	mean_time_to_happen = {
+		years = 1
+		modifier = {
+			factor = 0.5
+			had_recent_war = 5
+		}
+		modifier = {
+			factor = 0.1
+			had_recent_war = 10
+		}
+	}
+
+	option = {
+		name = FEE_Venice_Events.58.OPT1
+		ai_chance = {
+			factor = 50
+		}
+
+		define_admiral = {
+			name = "Pietro Mocenigo"
+			fire = 5
+			shock = 4
+			manuever = 5
+			siege = 0
+			trait = ram_raider_personality
+		}
+		if = {
+			limit = {
+				capital_scope = {
+					has_port = yes
+				}
+			}
+			add_sailors = 730
+			capital_scope = {
+				galley = ROOT
+				galley = ROOT
+				galley = ROOT
+			}
+		}
+		else_if = {
+			limit = {
+				any_owned_province = {
+					has_port = yes
+				}
+			}
+			add_sailors = 730
+			random_owned_province = {
+				limit = {
+					has_port = yes
+				}
+				galley = ROOT
+				galley = ROOT
+				galley = ROOT
+			}
+		}
+	}
+}
+
+# Doge Pietro Mocenigo
+country_event = {
+	id = FEE_Venice_Events.59
+	title = FEE_Venice_Events.59.T
+	desc = FEE_Venice_Events.59.D
+	picture = ELECTION_REPUBLICAN_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		OR = {
+			tag = VEN
+			was_tag = VEN
+		}
+		is_year = 1474
+		NOT = { is_year = 1476 }
+	}
+
+	mean_time_to_happen = {
+		months = 6
+	}
+
+	option = {
+		name = FEE_Venice_Events.59.OPT1
+		ai_chance = {
+			factor = 1
+		}
+		highlight = yes
+
+		add_legitimacy_equivalent = { amount = -25 republican_tradition = -12 }
+		define_ruler = {
+			name = "Pietro Mocenigo"
+			age = 68
+			culture = venetian
+			religion = catholic
+		}
+		add_navy_tradition = 5
+		add_corruption = -1
+	}
+
+	option = {
+		name = FEE_Venice_Events.59.OPT2
+		ai_chance = {
+			factor = 0
+		}
+
+		add_legitimacy_equivalent = { amount = 5 republican_tradition = 3 }
+	}
+}
+
+# Malaria kills Pietro Mocenigo
+country_event = {
+	id = FEE_Venice_Events.60
+	title = FEE_Venice_Events.60.T
+	desc = FEE_Venice_Events.60.D
+	picture = PLAGUE_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		OR = {
+			tag = VEN
+			was_tag = VEN
+		}
+		is_year = 1476
+		has_ruler = "Pietro Mocenigo"
+		NOT = { is_year = 1477 }
+	}
+
+	mean_time_to_happen = {
+		months = 6
+	}
+
+	option = {
+		name = FEE_Venice_Events.60.OPT1
+		ai_chance = {
+			factor = 50
+		}
+
+		kill_ruler = yes
+	}
+}
+
+#########	The 3 burnings of the Palazzo Ducale	#########
+
+# The burning of the Doge's Palace of [GetDateText]
+country_event = {
+	id = FEE_Venice_Events.61
+	title = FEE_Venice_Events.61.T
+	desc = FEE_Venice_Events.61.D
+	picture = COUNTRY_COLLAPSE_eventPicture
+
+	trigger = {
+		owns = 112
+		OR = {
+			AND = {
+				is_year = 1483
+				NOT = { is_year = 1485 }
+				112 = {
+					NOT = { has_province_flag = fee_ven_first_burning }
+				}
+			}
+			AND = {
+				is_year = 1574
+				NOT = { is_year = 1575 }
+				112 = {
+					NOT = { has_province_flag = fee_ven_second_burning }
+				}
+			}
+			AND = {
+				is_year = 1577
+				NOT = { is_year = 1578 }
+				112 = {
+					NOT = { has_province_flag = fee_ven_third_burning }
+				}
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 12
+	}
+
+	immediate = {
+		hidden_effect = {
+			if = {
+				limit = {
+					is_year = 1483
+					NOT = { is_year = 1485 }
+				}
+				112 = {
+					set_province_flag = fee_ven_first_burning
+				}
+			}
+			else_if = {
+				limit = {
+					is_year = 1574
+					NOT = { is_year = 1575 }
+				}
+				112 = {
+					set_province_flag = fee_ven_second_burning
+				}
+			}
+			else = {
+				112 = {
+					set_province_flag = fee_ven_third_burning
+				}
+			}
+		}
+	}
+
+	goto = 112
+
+	option = {
+		name = FEE_Venice_Events.61.OPT1
+		ai_chance = {
+			factor = 50
+		}
+
+		add_prestige = -10
+		change_innovativeness = -5
+		kill_advisor_by_category_effect = { ADM = yes }
+		if = {
+			limit = {
+				has_dlc = "Leviathan"
+				112 = {
+					OR = {
+						has_great_project = {
+							type = doges_palace
+							tier = 1
+						}
+						has_great_project = {
+							type = doges_palace
+							tier = 2
+						}
+						has_great_project = {
+							type = doges_palace
+							tier = 3
+						}
+					}
+				}
+			}
+			add_years_of_income = -1
+		}
+		112 = {
+			add_base_tax = -3
+			add_devastation = 25
+		}
+	}
+
+	option = {
+		name = FEE_Venice_Events.61.OPT2
+		ai_chance = {
+			factor = 50
+		}
+		trigger = {
+			has_dlc = "Leviathan"
+			112 = {
+				OR = {
+					has_great_project = {
+						type = doges_palace
+						tier = 1
+					}
+					has_great_project = {
+						type = doges_palace
+						tier = 2
+					}
+					has_great_project = {
+						type = doges_palace
+						tier = 3
+					}
+				}
+			}
+		}
+
+		add_legitimacy_equivalent = { amount = -5 republican_tradition = -3 }
+		kill_advisor_by_category_effect = { ADM = yes }
+		change_innovativeness = -5
+		add_years_of_income = -0.5
+		112 = {
+			add_base_tax = -3
+			add_devastation = 25
+			add_great_project_tier = {
+				type = doges_palace
+				tier = -1
+			}
+		}
+	}
+}
+
+# Plague of 1485
+country_event = {
+	id = FEE_Venice_Events.62
+	title = FEE_Venice_Events.62.T
+	desc = FEE_Venice_Events.62.D
+	picture = PLAGUE_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		owns = 112
+		is_year = 1485
+		NOT = { is_year = 1489 }
+	}
+
+	mean_time_to_happen = {
+		years = 2
+		modifier = {
+			factor = 5
+			has_country_flag = has_competent_doctors
+		}
+	}
+
+	goto = 112
+
+	major = yes
+	major_trigger = {
+		112 = {
+			any_neighbor_province = {
+				owned_by = ROOT
+			}
+		}
+	}
+
+	option = {
+		name = FEE_Venice_Events.62.OPT1
+		ai_chance = {
+			factor = 50
+		}
+
+		if = {
+			limit = {
+				uses_republican_tradition = yes
+				culture_group = latin
+				112 = {
+					is_capital_of = ROOT
+				}
+			}
+			random = {
+				chance = 50
+				kill_ruler = yes
+			}
+			add_mercantilism = -3
+		}
+		add_yearly_sailors = -2
+		add_yearly_manpower = -1
+		112 = {
+			set_province_flag = fee_ven_plague_1485
+			add_base_tax = -1
+			add_base_production = -1
+			add_base_manpower = -1
+			add_devastation = 75
+			add_province_modifier = {
+				name = influenza
+				duration = 1825
+			}
+			every_neighbor_province = {
+				random = {
+					chance = 33
+					add_base_tax = -1
+					add_base_production = -1
+					add_base_manpower = -1
+					add_devastation = 25
+					add_province_modifier = {
+						name = influenza
+						duration = 365
+					}
+				}
+			}
+		}
+	}
+}
+
+#########	Life of Doge Antonio Grimani 1434-1523	#########
+
+# Voyages of Antonio Grimani
+country_event = {
+	id = FEE_Venice_Events.63
+	title = FEE_Venice_Events.63.T
+	desc = FEE_Venice_Events.63.D
+	picture = SHIP_SAILING_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		OR = {
+			tag = VEN
+			was_tag = VEN
+		}
+		is_year = 1458
+		NOT = { is_year = 1483 }
+	}
+
+	mean_time_to_happen = {
+		years = 5
+	}
+
+	option = {
+		name = FEE_Venice_Events.63.OPT1
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 2
+				ai = yes
+			}
+		}
+
+		add_dip_power = -50
+		custom_tooltip = FEE_VEN_VOYAGES_ANTONIO_GRIMANI_TT
+		set_country_flag = fee_ven_voyages_antonio_grimani
+	}
+
+	option = {
+		name = FEE_Venice_Events.63.OPT2
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 2
+				ai = yes
+			}
+		}
+
+		add_treasury = -25
+		custom_tooltip = FEE_VEN_VOYAGES_ANTONIO_GRIMANI_TT
+		set_country_flag = fee_ven_voyages_antonio_grimani
+	}
+
+	option = {
+		name = FEE_Venice_Events.63.OPT3
+		ai_chance = {
+			factor = 0
+		}
+
+		add_mercantilism = -3
+		define_advisor = {
+			name = "Antonio Grimani"
+			type = trader
+			skill = 2
+			religion = ROOT
+			culture = venetian
+			cost_multiplier = 0.75
+		}
+	}
+}
+
+# Arrival in Syria
+country_event = {
+	id = FEE_Venice_Events.64
+	title = FEE_Venice_Events.64.T
+	desc = FEE_Venice_Events.64.D
+	picture = SHIP_SAILING_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		OR = {
+			tag = VEN
+			was_tag = VEN
+		}
+		is_year = 1460
+		has_country_flag = fee_ven_voyages_antonio_grimani
+		NOT = { is_year = 1483 }
+	}
+
+	mean_time_to_happen = {
+		years = 1
+	}
+
+	goto = 321
+
+	immediate = {
+		hidden_effect = {
+			set_country_flag = fee_ven_voyages_antonio_grimani_syria
+		}
+	}
+
+	option = {
+		name = FEE_Venice_Events.64.OPT1
+		ai_chance = {
+			factor = 50
+		}
+
+		add_mercantilism = 3
+		377 = {
+			add_trade_modifier = {
+				who = ROOT
+				duration = 7300
+				power = 10
+				key = fee_ven_antonio_grimani
+			}
+			random_trade_node_member_province = {
+				limit = {
+					has_port = yes
+					sea_zone = {
+						area = eastern_mediterrenean_area
+					}
+				}
+				add_base_production = 1
+				owner = {
+					add_opinion = {
+						who = ROOT
+						modifier = opinion_improved_relations
+					}
+					reverse_add_opinion = {
+						who = ROOT
+						modifier = opinion_improved_relations
+					}
+				}
+			}
+		}
+	}
+}
+
+# Arrival in Egypt
+country_event = {
+	id = FEE_Venice_Events.65
+	title = FEE_Venice_Events.65.T
+	desc = FEE_Venice_Events.65.D
+	picture = SHIP_SAILING_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		OR = {
+			tag = VEN
+			was_tag = VEN
+		}
+		is_year = 1460
+		has_country_flag = fee_ven_voyages_antonio_grimani_syria
+		NOT = { is_year = 1483 }
+	}
+
+	mean_time_to_happen = {
+		years = 2
+	}
+
+	goto = 358
+
+	immediate = {
+		hidden_effect = {
+			set_country_flag = fee_ven_voyages_antonio_grimani_egypt
+		}
+	}
+
+	option = {
+		name = FEE_Venice_Events.65.OPT1
+		ai_chance = {
+			factor = 50
+		}
+
+		358 = {
+			add_base_production = 1
+			add_trade_modifier = {
+				who = ROOT
+				duration = 3650
+				power = 5
+				key = fee_ven_antonio_grimani
+			}
+		}
+	}
+}
+
+# Continuing the Voyages
+country_event = {
+	id = FEE_Venice_Events.66
+	title = FEE_Venice_Events.66.T
+	desc = FEE_Venice_Events.66.D
+	picture = SHIP_SAILING_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		OR = {
+			tag = VEN
+			was_tag = VEN
+		}
+		is_year = 1460
+		has_country_flag = fee_ven_voyages_antonio_grimani_egypt
+		NOT = { is_year = 1483 }
+	}
+
+	mean_time_to_happen = {
+		years = 1
+	}
+
+	immediate = {
+		hidden_effect = {
+			set_country_flag = fee_ven_voyages_antonio_grimani_egypt
+		}
+	}
+
+	option = {
+		name = FEE_Venice_Events.66.OPT1
+		ai_chance = {
+			factor = 50
+		}
+
+		custom_tooltip = FEE_VEN_VOYAGES_ANTONIO_GRIMANI_SEASIDE_TT
+		set_country_flag = fee_ven_voyages_antonio_grimani_seaside
+		arabia_region = {
+			discover_country = ROOT
+		}
+	}
+
+	option = {
+		name = FEE_Venice_Events.66.OPT2
+		ai_chance = {
+			factor = 50
+		}
+		highlight = yes
+
+		custom_tooltip = FEE_VEN_VOYAGES_ANTONIO_GRIMANI_INTRA_TT
+		set_country_flag = fee_ven_voyages_antonio_grimani_hearthland
+		horn_of_africa_region = {
+			discover_country = ROOT
+		}
+	}
+}
+
+# Arabian Coffee
+country_event = {
+	id = FEE_Venice_Events.67
+	title = FEE_Venice_Events.67.T
+	desc = FEE_Venice_Events.67.D
+	picture = TRADE_GOODS_PLANTATION_GOODS_IN_WAREHOUSE_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		OR = {
+			tag = VEN
+			was_tag = VEN
+		}
+		is_year = 1461
+		has_country_flag = fee_ven_voyages_antonio_grimani_seaside
+		NOT = { is_year = 1483 }
+	}
+
+	mean_time_to_happen = {
+		years = 3
+	}
+
+	option = {
+		name = FEE_Venice_Events.67.OPT1
+		ai_chance = {
+			factor = 50
+		}
+
+		add_dip_power = -25
+		custom_tooltip = FEE_VEN_ARABIAN_COFFEE_TT
+		hidden_effect = {
+			arabia_region = {
+				limit = {
+					trade_goods = coffee
+					has_port = yes
+				}
+				owner = {
+					country_event = {
+						id = FEE_Venice_Events.68
+						days = 180
+						random = 60
+					}
+				}
+			}
+		}
+	}
+}
+
+# Veneto-Arabian coffee
+country_event = {
+	id = FEE_Venice_Events.68
+	title = FEE_Venice_Events.68.T
+	desc = FEE_Venice_Events.68.D
+	picture = DIPLOMACY_SIGNING_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		NOT = { has_country_flag = fee_ven_arabo_venetian_coffee }
+	}
+
+	major = yes
+	major_trigger = {
+		has_country_flag = fee_ven_voyages_antonio_grimani_seaside
+	}
+
+	immediate = {
+		hidden_effect = {
+			set_country_flag = fee_ven_arabo_venetian_coffee
+		}
+	}
+
+	option = {
+		name = FEE_Venice_Events.68.OPT1
+		ai_chance = {
+			factor = 50
+		}
+
+		every_owned_province = {
+			limit = {
+				trade_goods = coffee
+			}
+			add_base_production = 1
+			add_province_modifier = {
+				name = fee_ven_arabo_venetian_coffee
+				duration = 18250
+			}
+		}
+		add_opinion = {
+			who = FROM
+			modifier = opinion_export_good
+		}
+		reverse_add_opinion = {
+			who = FROM
+			modifier = opinion_export_good
+		}
+		FROM = {
+			capital_scope = {
+				add_base_production = 2
+				add_province_modifier = {
+					name = fee_ven_arabo_venetian_coffee
+					duration = 18250
+				}
+			}
+		}
+	}
+
+	option = {
+		name = FEE_Venice_Events.68.OPT2
+		ai_chance = {
+			factor = 0
+		}
+
+		add_mil_power = 100
+		add_prestige_or_monarch_power = { amount = 15 }
+		add_opinion = {
+			who = FROM
+			modifier = border_friction_from_event
+		}
+		reverse_add_opinion = {
+			who = FROM
+			modifier = border_friction_from_event
+		}
+	}
+}
+
+# Arrival at [1224.GetName]
+country_event = {
+	id = FEE_Venice_Events.69
+	title = FEE_Venice_Events.69.T
+	desc = FEE_Venice_Events.69.D
+	picture = CARAVAN_EVENT_Picture
+
+	fire_only_once = yes
+
+	trigger = {
+		OR = {
+			tag = VEN
+			was_tag = VEN
+		}
+		is_year = 1461
+		has_country_flag = fee_ven_voyages_antonio_grimani_hearthland
+		NOT = { is_year = 1483 }
+	}
+
+	mean_time_to_happen = {
+		years = 3
+	}
+
+	goto = 1224
+
+	option = {
+		name = FEE_Venice_Events.69.OPT1
+		ai_chance = {
+			factor = 50
+		}
+		trigger = {
+			NOT = { owns = 1224 }
+		}
+
+		if = {
+			limit = { exists = ETH }
+			ETH = {
+				country_event = {
+					id = FEE_Venice_Events.70
+				}
+			}
+		}
+		else = {
+			1224 = {
+				owner = {
+					country_event = {
+						id = FEE_Venice_Events.70
+					}
+				}
+			}
+		}
+	}
+
+	option = {
+		name = FEE_Venice_Events.69.OPT2
+		ai_chance = {
+			factor = 0
+		}
+
+		add_dip_power = 50
+		2772 = {
+			add_trade_modifier = {
+				who = ROOT
+				duration = 7300
+				power = 10
+				key = fee_ven_antonio_grimani
+			}
+		}
+	}
+}
+
+# Venetian in Ethiopia!
+country_event = {
+	id = FEE_Venice_Events.70
+	title = FEE_Venice_Events.70.T
+	desc = FEE_Venice_Events.70.D
+	picture = DIPLOMACY_SIGNING_eventPicture
+
+	is_triggered_only = yes
+
+	major = yes
+	major_trigger = {
+		has_country_flag = fee_ven_voyages_antonio_grimani_hearthland
+	}
+
+	option = {
+		name = FEE_Venice_Events.70.OPT1
+		ai_chance = {
+			factor = 50
+		}
+
+		create_admiral = {
+			tradition = 50
+			culture = FROM
+		}
+		define_advisor = {
+			type = trader
+			skill = 2
+			discount = yes
+			culture = FROM
+			religion = FROM
+		}
+		add_opinion = {
+			who = FROM
+			modifier = opinion_eased_tension
+		}
+		reverse_add_opinion = {
+			who = FROM
+			modifier = opinion_eased_tension
+		}
+		FROM = {
+			create_general = {
+				tradition = 50
+				culture = ROOT
+			}
+			define_advisor = {
+				type = commandant
+				skill = 2
+				discount = yes
+				culture = ROOT
+				religion = ROOT
+			}
+		}
+	}
+
+	option = {
+		name = FEE_Venice_Events.70.OPT1
+		ai_chance = {
+			factor = 50
+		}
+
+		add_prestige_or_monarch_power = { amount = 15 }
+		add_legitimacy_equivalent = { amount = 15 republican_tradition = 7 }
+		add_opinion = {
+			who = FROM
+			modifier = border_friction_from_event
+		}
+		reverse_add_opinion = {
+			who = FROM
+			modifier = border_friction_from_event
+		}
+	}
+}
+
+# End of the Voyages
+country_event = {
+	id = FEE_Venice_Events.71
+	title = FEE_Venice_Events.71.T
+	desc = FEE_Venice_Events.71.D
+	picture = MERCHANTS_TALKING_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		is_year = 1483
+		NOT = { is_year = 1493 }
+		has_country_flag = fee_ven_voyages_antonio_grimani
+	}
+
+	mean_time_to_happen = {
+		years = 1
+	}
+
+	option = {
+		name = FEE_Venice_Events.71.OPT1
+		ai_chance = {
+			factor = 50
+		}
+
+		add_treasury = 100
+		add_mercantilism = 5
+		capital_scope = {
+			add_base_tax = 1
+			add_base_production = 1
+		}
+	}
+}
+
+# Oratore for the Hungarian King
+country_event = {
+	id = FEE_Venice_Events.72
+	title = FEE_Venice_Events.72.T
+	desc = FEE_Venice_Events.72.D
+	picture = DIPLOMACY_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		OR = {
+			tag = VEN
+			was_tag = VEN
+		}
+		exists = HUN
+		is_year = 1489
+		NOT = { is_year = 1493 }
+	}
+
+	mean_time_to_happen = {
+		months = 6
+	}
+
+	major = yes
+	major_trigger = {
+		tag = HUN
+	}
+
+	option = {
+		name = FEE_Venice_Events.72.OPT1
+		ai_chance = {
+			factor = 50
+		}
+		highlight = yes
+
+		add_opinion = {
+			who = HUN
+			modifier = opinion_improved_relations
+		}
+		reverse_add_opinion = {
+			who = HUN
+			modifier = opinion_improved_relations
+		}
+		HUN = {
+			define_advisor = {
+				type = diplomat
+				name = "Domenico Grimani"
+				skill = 2
+				discount = yes
+				religion = ROOT
+				culture = venetian
+			}
+		}
+	}
+
+	option = {
+		name = FEE_Venice_Events.72.OPT2
+		ai_chance = {
+			factor = 0
+		}
+
+		add_dip_power = -25
+		define_advisor = {
+			type = diplomat
+			name = "Domenico Grimani"
+			skill = 2
+			religion = ROOT
+			culture = venetian
+		}
+	}
+}
+
+# Grimani alla corte Ungherese
+country_event = {
+	id = FEE_Venice_Events.73
+	title = FEE_Venice_Events.73.T
+	desc = FEE_Venice_Events.73.D
+	picture = ADVISOR_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = HUN
+		exists =VEN
+		is_year = 1489
+		NOT = { is_year = 1493 }
+		diplomat = 2
+	}
+
+	major = yes
+	major_trigger = {
+		OR = {
+			tag = VEN
+			was_tag = VEN
+		}
+	}
+
+	mean_time_to_happen = {
+		years = 1
+	}
+
+	option = {
+		name = FEE_Venice_Events.73.OPT1
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 2
+				OR = {
+					has_opinion = {
+						who = VEN
+						value = 50
+					}
+					reverse_has_opinion = {
+						who = VEN
+						value = 50
+					}
+				}
+			}
+		}
+
+		add_adm_power = 25
+		if = {
+			limit = { religion = catholic }
+			add_papal_influence = 5
+		}
+		add_opinion = {
+			who = VEN
+			modifier = opinion_improved_relations
+		}
+		reverse_add_opinion = {
+			who = VEN
+			modifier = opinion_improved_relations
+		}
+	}
+
+	option = {
+		name = FEE_Venice_Events.73.OPT2
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 2
+				OR = {
+					NOT = {
+						has_opinion = {
+							who = VEN
+							value = 0
+						}
+					}
+					NOT = {
+						reverse_has_opinion = {
+							who = VEN
+							value = 0
+						}
+					}
+				}
+			}
+		}
+
+		add_adm_power = 50
+		add_opinion = {
+			who = VEN
+			modifier = opinion_disappointed
+		}
+		reverse_add_opinion = {
+			who = VEN
+			modifier = opinion_disappointed
+		}
+	}
+}
+
+# Elevazione alla porpora cardinalizia
+country_event = {
+	id = FEE_Venice_Events.74
+	title = FEE_Venice_Events.74.T
+	desc = FEE_Venice_Events.74.D
+	picture = POPE_PREACHING_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		OR = {
+			tag = VEN
+			was_tag = VEN
+		}
+		is_year = 1493
+		religion = catholic
+		NOT = { is_year = 1523 }
+	}
+
+	mean_time_to_happen = {
+		months = 6
+	}
+
+	option = {
+		name = FEE_Venice_Events.74.OPT1
+		ai_chance = {
+			factor = 50
+		}
+
+		add_treasury = -30
+		random_owned_province = {
+			limit = { has_cardinal = no }
+			add_cardinal = yes
+			add_province_modifier = {
+				name = fee_ven_cardinal_domenico_grimani
+				duration = 10950
+			}
+		}
+		if = {
+			limit = { exists = HUN }
+			add_opinion = {
+				who = HUN
+				modifier = opinion_disgruntled
+			}
+			reverse_add_opinion = {
+				who = HUN
+				modifier = opinion_disgruntled
+			}
+			reverse_add_casus_belli = {
+				type = cb_insult
+				target = HUN
+			}
+		}
+	}
+
+	option = {
+		name = FEE_Venice_Events.74.OPT2
+		ai_chance = {
+			factor = 50
+		}
+
+		add_papal_influence = -10
+		if = {
+			limit = { exists = HUN }
+			add_opinion = {
+				who = HUN
+				modifier = opinion_improved_relations
+			}
+			reverse_add_opinion = {
+				who = HUN
+				modifier = opinion_improved_relations
+			}
+		}
+	}
+}
+
+# Antonio Grmiani Capitano da Mar
+country_event = {
+	id = FEE_Venice_Events.75
+	title = FEE_Venice_Events.75.T
+	desc = FEE_Venice_Events.75.D
+	picture = GENERALS_DISCUSSING_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		OR = {
+			tag = VEN
+			was_tag = VEN
+		}
+		is_year = 1499
+		NOT = { is_year = 1523 }
+	}
+
+	mean_time_to_happen = {
+		months = 6
+	}
+
+	option = {
+		name = FEE_Venice_Events.75.OPT1
+		ai_chance = {
+			factor = 50
+		}
+
+		add_navy_tradition = 3
+		define_admiral = {
+			fire = 4
+			shock = 4
+			manuever = 4
+			siege = 0
+			name = "Antonio Grimani"
+			trait = naval_showman_personality
+		}
+	}
+}
+
+# Doge Antonio Grimani
+country_event = {
+	id = FEE_Venice_Events.76
+	title = FEE_Venice_Events.76.T
+	desc = FEE_Venice_Events.76.D
+	picture = ELECTION_REPUBLICAN_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		OR = {
+			tag = VEN
+			was_tag = VEN
+		}
+		is_year = 1521
+		NOT = { is_year = 1523 }
+	}
+
+	mean_time_to_happen = {
+		months = 6
+	}
+
+	option = {
+		name = FEE_Venice_Events.76.OPT1
+		ai_chance = {
+			factor = 1
+		}
+		highlight = yes
+
+		add_legitimacy_equivalent = { amount = -25 republican_tradition = -12 }
+		define_ruler = {
+			name = "Antonio Grimani"
+			age = 87
+			culture = venetian
+			religion = catholic
+		}
+		add_estate_loyalty = {
+			estate = estate_burghers
+			loyalty = 5
+		}
+		capital_scope = {
+			add_base_tax = 1
+		}
+	}
+
+	option = {
+		name = FEE_Venice_Events.76.OPT2
+		ai_chance = {
+			factor = 0
+		}
+
+		if = {
+			limit = { has_estate = estate_burghers }
+			add_estate_loyalty = {
+				estate = estate_burghers
+				loyalty = -10
+			}
+		}
+		else = {
+			add_dip_power = -50
+		}
+	}
+}
+
+#########	Life of Doge Andrea Gritti 1455-1538	#########
+
+# Gritti's arrival at [151.GetName]
+country_event = {
+	id = FEE_Venice_Events.77
+	title = FEE_Venice_Events.77.T
+	desc = FEE_Venice_Events.77.D
+	picture = FORTIFIED_CITY_WITH_CARAVAN_OUTSIDE_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		is_year = 1485
+		owns = 151
+		NOT = { is_year = 1492 }
+	}
+
+	mean_time_to_happen = {
+		months = 6
+	}
+
+	option = {
+		name = FEE_Venice_Events.77.OPT1
+		ai_chance = {
+			factor = 50
+		}
+
+		151 = {
+			add_base_production = 1
+			add_institution_embracement = {
+				which = renaissance
+				value = 15
+			}
+			add_permanent_province_modifier = {
+				name = fee_ven_andrea_gritti
+				duration = 7300
+			}
+		}
+		1320 = {
+			add_trade_modifier = {
+				who = VEN
+				duration = 7300
+				power = 15
+				key = fee_ven_andrea_gritti
+			}
+		}
+		add_opinion = {
+			who = VEN
+			modifier = opinion_export_good
+		}
+		reverse_add_opinion = {
+			who = VEN
+			modifier = opinion_export_good
+		}
+	}
+
+	option = {
+		name = FEE_Venice_Events.77.OPT2
+		ai_chance = {
+			factor = 0
+		}
+		trigger = {
+			151 = {
+				NOT = { owned_by = VEN }
+			}
+		}
+
+		add_mercantilism = 5
+		add_opinion = {
+			who = VEN
+			modifier = opinion_export_bad
+		}
+		reverse_add_opinion = {
+			who = VEN
+			modifier = opinion_export_bad
+		}
+	}
+}
+
+# Doni del Gritti
+country_event = {
+	id = FEE_Venice_Events.78
+	title = FEE_Venice_Events.78.T
+	desc = FEE_Venice_Events.78.D
+	picture = MERCHANTS_TALKING_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		is_year = 1485
+		151 = {
+			owned_by = ROOT
+			NOT = { owned_by = VEN }
+			has_province_modifier = fee_ven_andrea_gritti
+		}
+		NOT = { is_year = 1492 }
+	}
+
+	mean_time_to_happen = {
+		years = 2
+	}
+
+	option = {
+		name = FEE_Venice_Events.78.OPT1
+		ai_chance = {
+			factor = 50
+		}
+
+		add_treasury = 25
+		add_opinion = {
+			who = VEN
+			modifier = opinion_export_good
+		}
+		reverse_add_opinion = {
+			who = VEN
+			modifier = opinion_export_good
+		}
+	}
+}
+
+# Espulsione del Gritti
+country_event = {
+	id = FEE_Venice_Events.79
+	title = FEE_Venice_Events.79.T
+	desc = FEE_Venice_Events.79.D
+	picture = SPY_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		is_year = 1492
+		151 = {
+			owned_by = ROOT
+			NOT = { owned_by = VEN }
+			has_province_modifier = fee_ven_andrea_gritti
+		}
+		NOT = { is_year = 1500 }
+	}
+
+	mean_time_to_happen = {
+		months = 6
+	}
+
+	option = {
+		name = FEE_Venice_Events.79.OPT1
+		ai_chance = {
+			factor = 50
+		}
+
+		add_mil_power = 50
+		add_opinion = {
+			who = VEN
+			modifier = caught_spy
+		}
+		reverse_add_opinion = {
+			who = VEN
+			modifier = caught_spy
+		}
+		151 = {
+			remove_province_modifier = fee_ven_andrea_gritti
+		}
+		1320 = {
+			remove_trade_modifier = {
+				who = VEN
+				key = fee_ven_andrea_gritti
+			}
+		}
+	}
+
+	option = {
+		name = FEE_Venice_Events.79.OPT2
+		ai_chance = {
+			factor = 50
+		}
+
+		add_dip_power = 25
+		add_opinion = {
+			who = VEN
+			modifier = opinion_eased_tension
+		}
+		reverse_add_opinion = {
+			who = VEN
+			modifier = opinion_eased_tension
+		}
+	}
+}
+
+# Fortificazioni nel Trentino
+country_event = {
+	id = FEE_Venice_Events.80
+	title = FEE_Venice_Events.80.T
+	desc = FEE_Venice_Events.80.D
+	picture = FORT_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		OR = {
+			tag = VEN
+			was_tag = VEN
+		}
+		is_year = 1509
+		OR = {
+			owns = 110
+			110 = {
+				any_neighbor_province = {
+					owned_by = ROOT
+				}
+			}
+		}
+		NOT = { is_year = 1511 }
+	}
+
+	mean_time_to_happen = {
+		months = 6
+	}
+
+	goto = 110
+
+	option = {
+		name = FEE_Venice_Events.80.OPT1
+		ai_chance = {
+			factor = 50
+		}
+
+		add_treasury = -24
+		if = {
+			limit = { owns = 110 }
+			110 = {
+				add_base_manpower = 1
+				add_province_modifier = {
+					name = local_fortress
+					duration = 7300
+				}
+			}
+		}
+		110 = {
+			random_neighbor_province = {
+				limit = { owned_by = ROOT }
+				add_base_manpower = 1
+				add_province_modifier = {
+					name = local_fortress
+					duration = 7300
+				}
+			}
+		}
+	}
+}
+
+# Provveditore generale in campo Andrea Gritti
+country_event = {
+	id = FEE_Venice_Events.81
+	title = FEE_Venice_Events.81.T
+	desc = FEE_Venice_Events.81.D
+	picture = GENERALS_DISCUSSING_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		OR = {
+			tag = VEN
+			was_tag = VEN
+		}
+		is_year = 1511
+		NOT = { is_year = 1514 }
+	}
+
+	mean_time_to_happen = {
+		months = 6
+	}
+
+	option = {
+		name = FEE_Venice_Events.81.OPT1
+		ai_chance = {
+			factor = 50
+		}
+
+		add_army_tradition = 5
+		add_mil_power = 25
+		create_general = {
+			tradition = 50
+			name = "Andrea Gritti"
+			culture = venetian
+			add_manuever = 1
+		}
+	}
+}
+
+# Il Gritti presso il Sultano
+country_event = {
+	id = FEE_Venice_Events.82
+	title = FEE_Venice_Events.82.T
+	desc = FEE_Venice_Events.82.D
+	picture = DIPLOMACY_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		OR = {
+			tag = VEN
+			was_tag = VEN
+		}
+		is_year = 1520
+		NOT = { is_year = 1523 }
+		exists = TUR
+	}
+
+	mean_time_to_happen = {
+		months = 6
+	}
+
+	option = {
+		name = FEE_Venice_Events.82.OPT1
+		ai_chance = {
+			factor = 50
+		}
+
+		add_treasury = -50
+		add_opinion = {
+			who = TUR
+			modifier = opinion_eased_tension
+		}
+		reverse_add_opinion = {
+			who = TUR
+			modifier = opinion_eased_tension
+		}
+	}
+
+	option = {
+		name = FEE_Venice_Events.82.OPT2
+		ai_chance = {
+			factor = 0
+		}
+
+		add_dip_power = -25
+		1320 = {
+			add_trade_modifier = {
+				who = ROOT
+				duration = 3650
+				power = -10
+				key = opinion_export_bad
+			}
+		}
+	}
+}
+
+# Doge Andrea Gritti
+country_event = {
+	id = FEE_Venice_Events.83
+	title = FEE_Venice_Events.83.T
+	desc = FEE_Venice_Events.83.D
+	picture = ELECTION_REPUBLICAN_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		OR = {
+			tag = VEN
+			was_tag = VEN
+		}
+		is_year = 1523
+		NOT = { is_year = 1538 }
+	}
+
+	mean_time_to_happen = {
+		months = 6
+	}
+
+	option = {
+		name = FEE_Venice_Events.83.OPT1
+		ai_chance = {
+			factor = 1
+		}
+		highlight = yes
+
+		add_legitimacy_equivalent = { amount = -25 republican_tradition = -12 }
+		define_ruler = {
+			name = "Andrea Gritti"
+			age = 68
+			culture = venetian
+			religion = catholic
+		}
+		add_estate_loyalty = {
+			estate = estate_burghers
+			loyalty = 5
+		}
+		add_estate_loyalty = {
+			estate = estate_nobles
+			loyalty = 5
+		}
+	}
+
+	option = {
+		name = FEE_Venice_Events.83.OPT2
+		ai_chance = {
+			factor = 0
+		}
+
+		if = {
+			limit = { has_estate = estate_burghers }
+			add_estate_loyalty = {
+				estate = estate_burghers
+				loyalty = -10
+			}
+		}
+		else = {
+			add_dip_power = -50
+		}
+		if = {
+			limit = { has_estate = estate_nobles }
+			add_estate_loyalty = {
+				estate = estate_nobles
+				loyalty = -10
+			}
+		}
+		else = {
+			add_mil_power = -50
+		}
+	}
+}
+
+#########	Life of Doge Marcantonio Trevisan 1475-1554	#########
+
+# Venezia ed il Sultanato d'Egitto
+country_event = {
+	id = FEE_Venice_Events.84
+	title = FEE_Venice_Events.84.T
+	desc = FEE_Venice_Events.84.D
+	picture = DIPLOMACY_SIGNING_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		OR = {
+			tag = VEN
+			was_tag = VEN
+		}
+		is_year = 1512
+		exists = MAM
+		NOT = { is_year = 1524 }
+		egypt_region = {
+			NOT = { owned_by = ROOT }
+		}
+		MAM = {
+			OR = {
+				owns = 358
+				owns = 361
+			}
+			num_of_owned_provinces_with = {
+				value = 10
+				region = egypt_region
+			}
+		}
+		NOT = { alliance_with = MAM }
+	}
+
+	mean_time_to_happen = {
+		years = 1
+	}
+
+	option = {
+		name = FEE_Venice_Events.84.OPT1
+		ai_chance = {
+			factor = 50
+		}
+
+		add_treasury = -25
+		add_dip_power = -25
+		MAM = {
+			country_event = {
+				id = FEE_Venice_Events.85
+			}
+		}
+		tooltip = {
+			358 = {
+				add_trade_modifier = {
+					who = ROOT
+					duration = 3650
+					power = 15
+					key = opinion_export_good
+				}
+			}
+			377 = {
+				add_trade_modifier = {
+					who = ROOT
+					duration = 3650
+					power = 15
+					key = opinion_export_good
+				}
+			}
+			create_alliance = MAM
+			MAM = {
+				add_country_modifier = {
+					name = western_reforms
+					duration = 3650
+				}
+			}
+			add_opinion = {
+				who = MAM
+				modifier = opinion_money_sent
+			}
+			reverse_add_opinion = {
+				who = MAM
+				modifier = opinion_money_sent
+			}
+		}
+	}
+
+	option = {
+		name = FEE_Venice_Events.84.OPT2
+		ai_chance = {
+			factor = 0
+		}
+
+		add_prestige_or_monarch_power = { amount = 3 }
+	}
+}
+
+# Venetians in Egypt?
+country_event = {
+	id = FEE_Venice_Events.85
+	title = FEE_Venice_Events.85.T
+	desc = FEE_Venice_Events.85.D
+	picture = GOOD_WITH_MONARCH_eventPicture
+
+	is_triggered_only = yes
+
+	major = yes
+	major_trigger = {
+		OR = {
+			tag = VEN
+			was_tag = VEN
+		}
+	}
+
+	option = {
+		name = FEE_Venice_Events.85.OPT1
+		ai_chance = {
+			factor = 50
+		}
+
+		create_alliance = FROM
+		add_country_modifier = {
+			name = western_reforms
+			duration = 3650
+		}
+		add_opinion = {
+			who = FROM
+			modifier = opinion_money_sent
+		}
+		reverse_add_opinion = {
+			who = FROM
+			modifier = opinion_money_sent
+		}
+		358 = {
+			add_trade_modifier = {
+				who = FROM
+				duration = 3650
+				power = 15
+				key = opinion_export_good
+			}
+		}
+		377 = {
+			add_trade_modifier = {
+				who = FROM
+				duration = 3650
+				power = 15
+				key = opinion_export_good
+			}
+		}
+	}
+
+	option = {
+		name = FEE_Venice_Events.85.OPT2
+		ai_chance = {
+			factor = 50
+		}
+
+		add_mil_power = 25
+		add_prestige_or_monarch_power = { amount = 10 }
+		add_opinion = {
+			who = FROM
+			modifier = opinion_export_bad
+		}
+		reverse_add_opinion = {
+			who = FROM
+			modifier = opinion_export_bad
+		}
+	}
+}
+
+# Pellegrini Veneziani al Santo Sepolcro
+country_event = {
+	id = FEE_Venice_Events.86
+	title = FEE_Venice_Events.86.T
+	desc = FEE_Venice_Events.86.D
+	picture = JERUSALEM_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		OR = {
+			tag = VEN
+			was_tag = VEN
+		}
+		is_year = 1512
+		exists = MAM
+		alliance_with = MAM
+		religion_group = christian
+		397 = { owned_by = MAM }
+		NOT = { is_year = 1524 }
+	}
+
+	mean_time_to_happen = {
+		months = 6
+	}
+
+	option = {
+		name = FEE_Venice_Events.86.OPT1
+		ai_chance = {
+			factor = 50
+		}
+
+		add_treasury = -5
+		MAM = {
+			country_event = {
+				id = FEE_Venice_Events.87
+				days = 30
+			}
+		}
+	}
+}
+
+# Pius request from [FROM.GetName]
+country_event = {
+	id = FEE_Venice_Events.87
+	title = FEE_Venice_Events.87.T
+	desc = FEE_Venice_Events.87.D
+	picture = JERUSALEM_eventPicture
+
+	is_triggered_only = yes
+
+	major = yes
+	major_trigger = {
+		OR = {
+			tag = VEN
+			was_tag = VEN
+		}
+	}
+
+	option = {
+		name = FEE_Venice_Events.87.OPT1
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 2
+				alliance_with = FROM
+			}
+			modifier = {
+				factor = 2
+				religion_group = FROM
+			}
+			modifier = {
+				factor = 2
+				has_opinion = {
+					who = FROM
+					value = 75
+				}
+			}
+		}
+
+		add_treasury = 5
+		change_religious_influence_equivalent_fee = { add = 10 }
+		add_opinion = {
+			who = FROM
+			modifier = christian_brotherhood
+		}
+		reverse_add_opinion = {
+			who = FROM
+			modifier = christian_brotherhood
+		}
+		FROM = {
+			change_religious_influence_equivalent_fee = { add = 10 }
+		}
+	}
+
+	option = {
+		name = FEE_Venice_Events.87.OPT2
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 2
+				NOT = { alliance_with = FROM }
+			}
+			modifier = {
+				factor = 2
+				NOT = { religion_group = FROM }
+			}
+			modifier = {
+				factor = 2
+				NOT = {
+					has_opinion = {
+						who = FROM
+						value = -25
+					}
+				}
+			}
+		}
+
+		add_mil_power = 50
+		add_prestige_or_monarch_power = { amount = 10 }
+		add_legitimacy_equivalent = { amount = 10 republican_tradition = 5 }
+	}
+}
+
+# Island of Farmagosta
+country_event = {
+	id = FEE_Venice_Events.88
+	title = FEE_Venice_Events.88.T
+	desc = FEE_Venice_Events.88.D
+	picture = SHIP_SAILING_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		OR = {
+			tag = VEN
+			was_tag = VEN
+		}
+		owns = 321
+	}
+
+	mean_time_to_happen = {
+		years = 1
+	}
+
+	goto = 321
+
+	option = {
+		name = FEE_Venice_Events.88.OPT1
+		ai_chance = {
+			factor = 50
+		}
+
+		321 = {
+			add_base_production = 3
+			add_base_tax = -2
+			if = {
+				limit = {
+					has_building = grand_shipyard
+				}
+				add_base_manpower = 1
+			}
+			else_if = {
+				limit = {
+					has_building = shipyard
+				}
+				add_building = grand_shipyard
+			}
+			else = {
+				add_building = shipyard
+			}
+			if = {
+				limit = {
+					has_building = counting_house
+				}
+				add_base_production = 1
+			}
+			else_if = {
+				limit = {
+					has_building = workshop
+				}
+				add_building = counting_house
+			}
+			else = {
+				add_building = workshop
+			}
+		}
+	}
+}
+
+# Fortificazioni di Nicosia
+country_event = {
+	id = FEE_Venice_Events.89
+	title = FEE_Venice_Events.89.T
+	desc = FEE_Venice_Events.89.D
+	picture = FORT_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		OR = {
+			tag = VEN
+			was_tag = VEN
+		}
+		owns = 321
+		is_year = 1530
+		NOT = { is_year = 1554 }
+	}
+
+	mean_time_to_happen = {
+		years = 3
+	}
+
+	goto = 321
+
+	option = {
+		name = FEE_Venice_Events.89.OPT1
+		ai_chance = {
+			factor = 50
+		}
+
+		add_treasury = -100
+		321 = {
+			if = {
+				limit = { has_building = fort_18th }
+				add_base_manpower = 3
+			}
+			else_if = {
+				limit = { has_building = fort_17th }
+				add_building = fort_18th
+			}
+			else_if = {
+				limit = { has_building = fort_16th }
+				add_building = fort_17th
+			}
+			else_if = {
+				limit = { has_building = fort_15th }
+				add_building = fort_16th
+			}
+			else = {
+				add_building = fort_15th
+			}
+			add_province_modifier = {
+				name = local_fortress
+				duration = 18250
+			}
+		}
+	}
+}
+
+# Siccità del 1533
+country_event = {
+	id = FEE_Venice_Events.90
+	title = FEE_Venice_Events.90.T
+	desc = FEE_Venice_Events.90.D
+	picture = FAMINE_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		OR = {
+			tag = VEN
+			was_tag = VEN
+		}
+		is_year = 1533
+		NOT = { is_year = 1550 }
+	}
+
+	mean_time_to_happen = {
+		months = 6
+	}
+
+	option = {
+		name = FEE_Venice_Events.90.OPT1
+		ai_chance = {
+			factor = 50
+		}
+
+		add_country_modifier = {
+			name = fighting_famine
+			duration = 3650
+		}
+		add_country_modifier = {
+			name = contained_plague
+			duration = 1825
+		}
+	}
+}
+
+# Plague from Siria?
+country_event = {
+	id = FEE_Venice_Events.91
+	title = FEE_Venice_Events.91.T
+	desc = FEE_Venice_Events.91.D
+	picture = PLAGUE_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		OR = {
+			tag = VEN
+			was_tag = VEN
+		}
+		owns = 321
+		is_year = 1533
+		NOT = { is_year = 1550 }
+	}
+
+	mean_time_to_happen = {
+		years = 5
+	}
+
+	goto = 321
+
+	option = {
+		name = FEE_Venice_Events.91.OPT1
+		ai_chance = {
+			factor = 50
+		}
+
+		377 = {
+			add_trade_modifier = {
+				who = ROOT
+				duration = 1825
+				power = -10
+				key = plague
+			}
+		}
+		321 = {
+			add_base_tax = -1
+			add_base_production = -1
+			add_base_manpower = -1
+			add_province_modifier = {
+				name = severe_plague_local
+				duration = 1825
+			}
+		}
+	}
+}
+
+# Doge Marcantonio Trevisan
+country_event = {
+	id = FEE_Venice_Events.92
+	title = FEE_Venice_Events.92.T
+	desc = FEE_Venice_Events.92.D
+	picture = ELECTION_REPUBLICAN_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		OR = {
+			tag = VEN
+			was_tag = VEN
+		}
+		is_year = 1553
+		NOT = { is_year = 1554 }
+	}
+
+	mean_time_to_happen = {
+		months = 6
+	}
+
+	option = {
+		name = FEE_Venice_Events.92.OPT1
+		ai_chance = {
+			factor = 1
+		}
+		highlight = yes
+
+		add_legitimacy_equivalent = { amount = -25 republican_tradition = -12 }
+		define_ruler = {
+			name = "Marcantonio Trevisan"
+			age = 78
+			culture = venetian
+			religion = catholic
+		}
+		change_religious_influence_equivalent_fee = { add = 10 }
+		add_estate_loyalty = {
+			estate = estate_church
+			loyalty = 10
+		}
+		add_ruler_modifier = {
+			name = fee_ven_doge_marcantonio_trevisan
+			duration = -1
+		}
+	}
+
+	option = {
+		name = FEE_Venice_Events.92.OPT2
+		ai_chance = {
+			factor = 0
+		}
+
+		change_religious_influence_equivalent_fee = { remove = 10 }
+		if = {
+			limit = {
+				has_estate = estate_church
+			}
+			add_estate_loyalty = {
+				estate = estate_church
+				loyalty = -5
+			}
+		}
+		else = {
+			add_adm_power = -50
+		}
+	}
+}
+
+#########	Life of Doge Francesco Venier 1489-1556	#########
+
+# Francesco Venier?
+country_event = {
+	id = FEE_Venice_Events.93
+	title = FEE_Venice_Events.93.T
+	desc = FEE_Venice_Events.93.D
+	picture = MERCHANTS_TALKING_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		OR = {
+			tag = VEN
+			was_tag = VEN
+		}
+		is_year = 1508
+		NOT = { is_year = 1515 }
+	}
+
+	mean_time_to_happen = {
+		years = 1
+	}
+
+	option = {
+		name = FEE_Venice_Events.93.OPT1
+		ai_chance = {
+			factor = 50
+		}
+
+		set_country_flag = fee_ven_francesco_venier_merchant
+		if = {
+			limit = { has_estate = estate_burghers }
+			add_estate_loyalty = {
+				estate = estate_burghers
+				loyalty = 5
+			}
+		}
+		else = {
+			add_mercantilism = 3
+		}
+	}
+}
+
+# Francesco Venier in Savoy
+country_event = {
+	id = FEE_Venice_Events.94
+	title = FEE_Venice_Events.94.T
+	desc = FEE_Venice_Events.94.D
+	picture = MERCHANTS_TALKING_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		is_year = 1508
+		owns = 205
+		any_country = {
+			has_country_flag = fee_ven_francesco_venier_merchant
+		}
+		NOT = { is_year = 1515 }
+	}
+
+	mean_time_to_happen = {
+		years = 1
+	}
+
+	major = yes
+	major_trigger = {
+		has_country_flag = fee_ven_francesco_venier_merchant
+	}
+
+	goto = 205
+
+	immediate = {
+		hidden_effect = {
+			random_country = {
+				limit = { has_country_flag = fee_ven_francesco_venier_merchant }
+				set_country_flag = fee_ven_francesco_venier_merchant_savoy
+			}
+		}
+	}
+
+	option = {
+		name = FEE_Venice_Events.94.OPT1
+		ai_chance = {
+			factor = 50
+		}
+
+		add_treasury = -25
+		205 = {
+			add_base_production = 1
+			add_province_modifier = {
+				name = fee_ven_francesco_venier_merchant
+				duration = 5475
+			}
+			random_country = {
+				limit = { has_country_flag = fee_ven_francesco_venier_merchant }
+				PREV = {
+					add_trade_modifier = {
+						who = PREV
+						duration = 5475
+						power = 10
+						key = fee_ven_francesco_venier_merchant
+					}
+				}
+			}
+		}
+		random_country = {
+			limit = { has_country_flag = fee_ven_francesco_venier_merchant }
+			add_opinion = {
+				who = ROOT
+				modifier = opinion_export_good
+			}
+			reverse_add_opinion = {
+				who = ROOT
+				modifier = opinion_export_good
+			}
+		}
+	}
+
+	option = {
+		name = FEE_Venice_Events.94.OPT2
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 2
+				NOT = { treasury = 25 }
+			}
+			modifier = {
+				factor = 2
+				any_country = {
+					has_country_flag = fee_ven_francesco_venier_merchant
+					NOT = {
+						has_opinion = {
+							who = ROOT
+							value = 50
+						}
+					}
+				}
+			}
+		}
+
+		add_mil_power = 25
+		add_mercantilism = 3
+		random_country = {
+			limit = { has_country_flag = fee_ven_francesco_venier_merchant }
+			add_opinion = {
+				who = ROOT
+				modifier = opinion_export_bad
+			}
+			reverse_add_opinion = {
+				who = ROOT
+				modifier = opinion_export_bad
+			}
+		}
+	}
+}
+
+# Francesco Venier in France
+country_event = {
+	id = FEE_Venice_Events.95
+	title = FEE_Venice_Events.95.T
+	desc = FEE_Venice_Events.95.D
+	picture = MERCHANTS_TALKING_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		is_year = 1508
+		owns = 183
+		any_country = {
+			has_country_flag = fee_ven_francesco_venier_merchant_savoy
+		}
+		NOT = { is_year = 1515 }
+	}
+
+	mean_time_to_happen = {
+		years = 1
+	}
+
+	major = yes
+	major_trigger = {
+		has_country_flag = fee_ven_francesco_venier_merchant
+	}
+
+	goto = 183
+
+	immediate = {
+		hidden_effect = {
+			random_country = {
+				limit = { has_country_flag = fee_ven_francesco_venier_merchant_savoy }
+				set_country_flag = fee_ven_francesco_venier_merchant_france
+			}
+		}
+	}
+
+	option = {
+		name = FEE_Venice_Events.95.OPT1
+		ai_chance = {
+			factor = 50
+		}
+
+		add_treasury = -25
+		183 = {
+			add_base_production = 1
+			add_province_modifier = {
+				name = fee_ven_francesco_venier_merchant
+				duration = 5475
+			}
+			random_country = {
+				limit = { has_country_flag = fee_ven_francesco_venier_merchant }
+				PREV = {
+					add_trade_modifier = {
+						who = PREV
+						duration = 5475
+						power = 10
+						key = fee_ven_francesco_venier_merchant
+					}
+				}
+			}
+		}
+		random_country = {
+			limit = { has_country_flag = fee_ven_francesco_venier_merchant }
+			add_opinion = {
+				who = ROOT
+				modifier = opinion_export_good
+			}
+			reverse_add_opinion = {
+				who = ROOT
+				modifier = opinion_export_good
+			}
+		}
+	}
+
+	option = {
+		name = FEE_Venice_Events.95.OPT2
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 2
+				NOT = { treasury = 25 }
+			}
+			modifier = {
+				factor = 2
+				any_country = {
+					has_country_flag = fee_ven_francesco_venier_merchant
+					NOT = {
+						has_opinion = {
+							who = ROOT
+							value = 50
+						}
+					}
+				}
+			}
+		}
+
+		add_mil_power = 25
+		add_mercantilism = 3
+		random_country = {
+			limit = { has_country_flag = fee_ven_francesco_venier_merchant }
+			add_opinion = {
+				who = ROOT
+				modifier = opinion_export_bad
+			}
+			reverse_add_opinion = {
+				who = ROOT
+				modifier = opinion_export_bad
+			}
+		}
+	}
+}
+
+# Francesco Venier in London
+country_event = {
+	id = FEE_Venice_Events.96
+	title = FEE_Venice_Events.96.T
+	desc = FEE_Venice_Events.96.D
+	picture = MERCHANTS_TALKING_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		is_year = 1508
+		owns = 236
+		any_country = {
+			has_country_flag = fee_ven_francesco_venier_merchant_france
+		}
+		NOT = { is_year = 1515 }
+	}
+
+	mean_time_to_happen = {
+		years = 1
+	}
+
+	major = yes
+	major_trigger = {
+		has_country_flag = fee_ven_francesco_venier_merchant
+	}
+
+	goto = 236
+
+	immediate = {
+		hidden_effect = {
+			random_country = {
+				limit = { has_country_flag = fee_ven_francesco_venier_merchant_france }
+				set_country_flag = fee_ven_francesco_venier_merchant_london
+			}
+		}
+	}
+
+	option = {
+		name = FEE_Venice_Events.96.OPT1
+		ai_chance = {
+			factor = 50
+		}
+
+		add_treasury = -25
+		236 = {
+			add_base_production = 1
+			add_province_modifier = {
+				name = fee_ven_francesco_venier_merchant
+				duration = 5475
+			}
+			random_country = {
+				limit = { has_country_flag = fee_ven_francesco_venier_merchant }
+				PREV = {
+					add_trade_modifier = {
+						who = PREV
+						duration = 5475
+						power = 10
+						key = fee_ven_francesco_venier_merchant
+					}
+				}
+			}
+		}
+		random_country = {
+			limit = { has_country_flag = fee_ven_francesco_venier_merchant }
+			add_opinion = {
+				who = ROOT
+				modifier = opinion_export_good
+			}
+			reverse_add_opinion = {
+				who = ROOT
+				modifier = opinion_export_good
+			}
+		}
+	}
+
+	option = {
+		name = FEE_Venice_Events.96.OPT2
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 2
+				NOT = { treasury = 25 }
+			}
+			modifier = {
+				factor = 2
+				any_country = {
+					has_country_flag = fee_ven_francesco_venier_merchant
+					NOT = {
+						has_opinion = {
+							who = ROOT
+							value = 50
+						}
+					}
+				}
+			}
+		}
+
+		add_mil_power = 25
+		add_mercantilism = 3
+		random_country = {
+			limit = { has_country_flag = fee_ven_francesco_venier_merchant }
+			add_opinion = {
+				who = ROOT
+				modifier = opinion_export_bad
+			}
+			reverse_add_opinion = {
+				who = ROOT
+				modifier = opinion_export_bad
+			}
+		}
+	}
+}
+
+# Un prestito dal Venier
+country_event = {
+	id = FEE_Venice_Events.97
+	title = FEE_Venice_Events.97.T
+	desc = FEE_Venice_Events.97.D
+	picture = BANKRUPTCY_eventPicture
+
+	trigger = {
+		OR = {
+			tag = VEN
+			was_tag = VEN
+		}
+		is_year = 1515
+		NOT = { is_year = 1556 }
+		has_country_flag = fee_ven_francesco_venier_merchant_london
+	}
+
+	mean_time_to_happen = {
+		years = 10
+		modifier = {
+			factor = 0.5
+			had_recent_war = 5
+		}
+	}
+
+	option = {
+		name = FEE_Venice_Events.97.OPT1
+		ai_chance = {
+			factor = 50
+		}
+
+		add_treasury = 100
+	}
+}
+
+# Cavalleria Dalmata
+country_event = {
+	id = FEE_Venice_Events.98
+	title = FEE_Venice_Events.98.T
+	desc = FEE_Venice_Events.98.D
+	picture = TOURNAMENT_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		OR = {
+			tag = VEN
+			was_tag = VEN
+		}
+		is_year = 1528
+		NOT = { is_year = 1530 }
+		any_owned_province = {
+			OR = {
+				culture = dalmatian
+				area = east_adriatic_coast_area
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 6
+	}
+
+	option = {
+		name = FEE_Venice_Events.98.OPT1
+		ai_chance = {
+			factor = 50
+		}
+
+		add_treasury = -50
+		add_mil_power = -50
+		add_country_modifier = {
+			name = cavalry_companions
+			duration = -1
+		}
+		random_owned_province = {
+			limit = {
+				OR = {
+					culture = dalmatian
+					area = east_adriatic_coast_area
+				}
+			}
+			if = {
+				limit = { has_building = conscription_center }
+				add_base_manpower = 1
+			}
+			else_if = {
+				limit = { has_building = regimental_camp }
+				add_building = conscription_center
+			}
+			else = {
+				add_building = regimental_camp
+			}
+			if = {
+				limit = { has_building = training_fields }
+				add_base_manpower = 1
+			}
+			else_if = {
+				limit = { has_building = barracks }
+				add_building = training_fields
+			}
+			else = {
+				add_building = barracks
+			}
+			add_province_modifier = {
+				name = military_reinforcement
+				duration = -1
+			}
+		}
+	}
+
+	option = {
+		name = FEE_Venice_Events.98.OPT2
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 2
+				NOT = { treasury = 50 }
+			}
+		}
+
+		add_army_tradition = -5
+	}
+}
+
+# Johann Matthias von der Schulenburg
+country_event = {
+	id = FEE_Venice_Events.99
+	title = FEE_Venice_Events.99.T
+	desc = FEE_Venice_Events.99.D
+	picture = GENERALS_DISCUSSING_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		OR = {
+			tag = VEN
+			was_tag = VEN
+		}
+		is_year = 1716
+		NOT = { is_year = 1729 }
+	}
+
+	mean_time_to_happen = {
+		months = 6
+	}
+
+	option = {
+		name = FEE_Venice_Events.99.OPT1
+		ai_chance = {
+			factor = 50
+		}
+
+		define_advisor = {
+			name = "Johann Matthias von der Schulenburg"
+			culture = saxon
+			religion = SAX
+			type = commandant
+			skill = 3
+			cost_multiplier = 0.75
+		}
+	}
+}
+
+# Riforma Schulenburg
+country_event = {
+	id = FEE_Venice_Events.100
+	title = FEE_Venice_Events.100.T
+	desc = FEE_Venice_Events.100.D
+	picture = GENERALS_DISCUSSING_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		OR = {
+			tag = VEN
+			was_tag = VEN
+		}
+		is_year = 1729
+		NOT = { is_year = 1747 }
+	}
+
+	mean_time_to_happen = {
+		years = 1
+	}
+
+	option = {
+		name = FEE_Venice_Events.100.OPT1
+		ai_chance = {
+			factor = 50
+		}
+
+		add_mil_power = -100
+		add_yearly_manpower = -1
+		add_country_modifier = {
+			name = fee_ven_standing_army
+			duration = -1
+		}
+		add_country_modifier = {
+			name = mng_militry_incompetence
+			duration = 3650
+		}
+	}
+
+	option = {
+		name = FEE_Venice_Events.100.OPT2
+		ai_chance = {
+			factor = 25
+		}
+
+		add_army_professionalism = -0.10
+		add_army_tradition = -15
+		add_country_modifier = {
+			name = fee_ven_mercenary_army
+			duration = -1
+		}
+		add_country_modifier = {
+			name = mng_militry_incompetence
+			duration = 3650
+		}
+	}
+}
+
+#
+#country_event = {
+#	id = FEE_Venice_Events.
+#	title = FEE_Venice_Events..T
+#	desc = FEE_Venice_Events..D
+#	picture = GOOD_WITH_MONARCH_eventPicture
+#
+#	fire_only_once = yes
+#
+#	trigger = {
+#		OR = {
+#			tag = VEN
+#			was_tag = VEN
+#		}
+#	}
+#
+#	mean_time_to_happen = {
+#		months = 6
+#	}
+#
+#	option = {
+#		name = FEE_Venice_Events..OPT1
+#		ai_chance = {
+#			factor = 50
+#		}
+#
+#	}
+#}

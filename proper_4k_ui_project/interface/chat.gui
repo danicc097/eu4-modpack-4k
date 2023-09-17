@@ -1,0 +1,372 @@
+guiTypes = {
+
+	windowType = {
+		name = "chat_window"
+		backGround=""
+		position = { x=-13 y=-544 }	
+		size =   { x=677 y= 756 }
+		moveable = 0
+		dontRender = ""
+		horizontalBorder= ""
+		verticalBorder= ""
+		fullScreen = no
+		Orientation = "LOWER_LEFT"
+
+		
+		iconType =
+		{
+			name ="chatback"
+			spriteType = "GFX_chatback"
+			position = { x= 0 y = 0 }
+		}
+
+				guiButtonType =
+		{
+			name = "close"
+			quadTextureSprite = "GFX_button_close"
+			position = { x= 819 y = 20 }
+			Orientation = "UPPER_LEFT"
+			buttonFont = "standard_font"
+		}
+		
+		OverlappingElementsBoxType = {
+			name = "channels"	
+			position = { x = -41  y = -85  }
+			size = { x=720 y= 32 }
+			spacing = 1.0
+		}
+
+		listboxType = 
+		{
+			name ="chat"
+			position = { x = 27 y = 31 }
+			backGround=""
+			size = { x=484 y =452}
+			Orientation = "UPPER_LEFT"
+			spacing = 4
+			scrollbartype = "standardlistbox_slider"
+			borderSize = {x = 0 y = 0}
+		}
+
+		listboxType = 
+		{
+			name ="users"
+			position = { x = 666 y = 95 }
+			backGround=""
+			size = { x=180 y = 387 }
+			Orientation = "UPPER_LEFT"
+			spacing = 4
+			scrollbartype = "standardlistbox_slider"
+			borderSize = {x = 0 y = 0}
+		}
+
+		editBoxType = {
+			position = { x = 34 y = 497 }
+			name = "chat_input"
+			textureFile = ""
+			font = "Main_16"
+			size = { x=864 y=216 }
+			text = ""
+			orientation = "UPPER_LEFT"
+			ignore_tab_navigation = yes
+		}
+
+		editBoxType = {
+			position = { x = 34 y = 497 }
+			name = "largefonts_chat_input"
+			textureFile = ""
+			font = "chat_largefont"
+			size = { x=864 y=216 }
+			text = ""
+			orientation = "UPPER_LEFT"
+			ignore_tab_navigation = yes
+		}
+
+		editBoxType = {
+			position = { x = 34 y = 497 }
+			name = "speech_enabled_chat_input"
+			textureFile = ""
+			font = "Main_16"
+			size = { x=684 y=216 }
+			text = ""
+			orientation = "UPPER_LEFT"
+			ignore_tab_navigation = yes
+		}
+
+		editBoxType = {
+			position = { x = 34 y = 497 }
+			name = "speech_enabled_largefonts_chat_input"
+			textureFile = ""
+			font = "chat_largefont"
+			size = { x=684 y=216 }
+			text = ""
+			orientation = "UPPER_LEFT"
+			ignore_tab_navigation = yes
+		}
+
+		guiButtonType = {
+			name = "mic_button"
+			position = { x = 684 y = 486 }
+			quadTextureSprite ="GFX_mic_button_105"
+			buttonText = "CHAT_CVAA_MIC"
+			buttonFont = "vic_18"
+			Orientation = "UPPER_LEFT"
+		}
+	}
+
+	windowType = {
+		name = "chat_item"
+		backGround=""
+		position = { x=0 y=0 }	
+		size = { x=922 y= 32 }
+		moveable = 0
+		dontRender = ""
+		horizontalBorder= ""
+		verticalBorder= ""
+		fullScreen = no
+
+		instantTextBoxType={
+			position = {x = 9 y = 18 }
+			name = "text"
+			font = "standard_font"
+			borderSize = {x = 0 y = 0}	
+			maxWidth = 450
+			maxHeight = 32
+			text = ""	
+		}
+
+		guiButtonType =	{
+			name = "highlight"
+			position = { x = 0 y = 18 }
+			size = { x = 522 y = 32 }
+			no_clicksound = yes
+			spriteType = "gfx__message_selection_frame"
+		}
+
+		guiButtonType =	{
+			name = "select"
+			font="vic_18"
+			text="CHAT_CVAA_EMPTY_TEXT"
+			position = { x = 0 y = 18 }
+			size = { x = 522 y = 32 }
+			no_clicksound = yes
+		}
+	}
+
+	windowType = {
+		name = "largefonts_chat_item"
+		backGround=""
+		position = { x=0 y=0 }	
+		size = { x=922 y= 40 }
+		moveable = 0
+		dontRender = ""
+		horizontalBorder= ""
+		verticalBorder= ""
+		fullScreen = no
+
+		instantTextBoxType={
+			position = {x = 9 y = 18 }
+			name = "text"
+			font = "chat_largefont"
+			borderSize = {x = 0 y = 0}	
+			maxWidth = 450
+			maxHeight = 40
+			text = ""	
+		}
+
+		guiButtonType =	{
+			name = "highlight"
+			position = { x = 0 y = 18 }
+			size = { x = 522 y = 40 }
+			no_clicksound = yes
+			spriteType = "gfx__message_selection_frame"
+		}
+
+		guiButtonType =	{
+			name = "select"
+			font="vic_18"
+			text="CHAT_CVAA_EMPTY_TEXT"
+			position = { x = 0 y = 18 }
+			size = { x = 522 y = 40 }
+			no_clicksound = yes
+		}
+	}
+
+
+	windowType = {
+		name = "chat_inbox_window"
+		backGround=""
+		position = { x=0 y=-40 }	
+		size = { x=497 y= 32 }
+		moveable = 0
+		dontRender = ""
+		horizontalBorder= ""
+		verticalBorder= ""
+		fullScreen = no
+
+		Orientation = "LOWER_LEFT"
+
+		guiButtonType = {
+			name = "open"
+			quadTextureSprite = "GFX_chat_select"
+			position = { x=0 y =0}	
+		}
+		
+		instantTextBoxType = {
+			name = "chat_title"
+			position = { x = 40 y = 4 }
+			textureFile = ""
+			font = "vic_18"
+			borderSize = {x = 7 y = 7}
+			text = "Chat"	
+			maxWidth = 90
+			maxHeight = 58	
+			format = centre
+		}
+		
+		iconType =
+		{
+			name ="own_chat_indicator"
+			spriteType = "GFX_own_chat"
+			position = { x= 7 y = 7 }
+		}
+		
+		iconType =
+		{
+			name ="global_chat_indicator"
+			spriteType = "GFX_global_chat"
+			position = { x= 38 y = 7 }
+		}
+	}
+
+
+	windowType = {
+		name = "channel_window"
+		backGround=""
+		position = { x=0 y=0 }	
+		size = { x=180 y= 32 }
+		moveable = 0
+		dontRender = ""
+		horizontalBorder= ""
+		verticalBorder= ""
+		fullScreen = no
+
+		guiButtonType = {
+			name = "select"
+			quadTextureSprite = "GFX_channel_select"
+			position = { x=58 y =56}
+		}
+
+		guiButtonType =
+		{
+			name = "close"
+			quadTextureSprite = "GFX_remove_unit_button"
+			position = { x= 196 y = 61 }
+			Orientation = "UPPER_LEFT"
+			buttonFont = "standard_font"
+		}
+
+		instantTextBoxType={
+			position = {x = 70 y = 67 }
+			name = "name"
+			font = "standard_font"
+			borderSize = {x = 0 y = 0}	
+			maxWidth = 126
+			maxHeight = 32
+			fixedsize = yes
+			text = ""	
+		}
+	}
+
+	windowType = {
+		name = "user_item"
+		backGround=""
+		position = { x=0 y=0 }	
+		size = { x=180 y=63 }
+		moveable = 0
+		dontRender = ""
+		horizontalBorder= ""
+		verticalBorder= ""
+		fullScreen = no
+
+		guiButtonType = {
+			name = "whisper"
+			quadTextureSprite = "GFX_chat_whisper_player"
+			position = { x= -52 y = 0}	
+		}
+
+		guiButtonType =
+		{
+			name = "kick"
+			quadTextureSprite = "GFX_button_kick"
+			position = { x= 128 y = -5 }
+			Orientation = "UPPER_LEFT"
+			buttonFont = "standard_font"
+		}
+
+		guiButtonType = {
+			name ="country_icon"
+			quadTextureSprite = "GFX_shield_small"
+			position = { x= -112 y = -5}
+			Orientation = "UPPER_LEFT"
+		}
+
+		instantTextBoxType={
+			position = {x = -40 y = 9 }
+			name = "name"
+			font = "standard_font"
+			borderSize = {x = 0 y = 0}	
+			maxWidth = 162
+			maxHeight = 40
+			text = ""
+			fixedsize = yes
+			truncate = yes
+		}
+	}
+
+	windowType = {
+		name = "largefonts_user_item"
+		backGround=""
+		position = { x=0 y=0 }	
+		size = { x=180 y=63 }
+		moveable = 0
+		dontRender = ""
+		horizontalBorder= ""
+		verticalBorder= ""
+		fullScreen = no
+
+		guiButtonType = {
+			name = "whisper"
+			quadTextureSprite = "GFX_chat_whisper_player"
+			position = { x= -52 y = 0}	
+		}
+
+		guiButtonType =
+		{
+			name = "kick"
+			quadTextureSprite = "GFX_button_kick"
+			position = { x= 128 y = -5 }
+			Orientation = "UPPER_LEFT"
+			buttonFont = "standard_font"
+		}
+
+		guiButtonType = {
+			name ="country_icon"
+			quadTextureSprite = "GFX_shield_small"
+			position = { x= -112 y = -5}
+			Orientation = "UPPER_LEFT"
+		}
+
+		instantTextBoxType={
+			position = {x = -40 y = 7 }
+			name = "name"
+			font = "vic_22"
+			borderSize = {x = 0 y = 0}	
+			maxWidth = 162
+			maxHeight = 40
+			text = ""
+			fixedsize = yes
+			truncate = yes
+		}
+	}
+}

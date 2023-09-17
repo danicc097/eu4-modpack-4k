@@ -1,0 +1,282 @@
+# Audax Validator "!" Ignore_1006
+set_overlord_idea_groups = {
+	# Tech Group and Unit Type
+	if = {
+		limit = {
+			overlord = {
+				technology_group = western
+			}
+		}
+		change_technology_group = western
+		change_unit_type = western
+	}
+	else_if = {
+		limit = {
+			overlord = {
+				technology_group = high_american
+			}
+		}
+		change_technology_group = high_american
+		change_unit_type = high_american
+	}
+	else_if = {
+		limit = {
+			overlord = {
+				technology_group = andean
+			}
+		}
+		change_technology_group = andean
+		change_unit_type = south_american
+	}
+	else_if = {
+		limit = {
+			overlord = {
+				technology_group = south_american
+			}
+		}
+		change_technology_group = south_american
+		change_unit_type = south_american
+	}
+	else_if = {
+		limit = {
+			overlord = {
+				technology_group = mesoamerican
+			}
+		}
+		change_technology_group = mesoamerican
+		change_unit_type = mesoamerican
+	}
+	else_if = {
+		limit = {
+			overlord = {
+				technology_group = north_american
+			}
+		}
+		change_technology_group = north_american
+		change_unit_type = north_american
+	}
+	else_if = {
+		limit = {
+			overlord = {
+				technology_group = sub_saharan
+			}
+		}
+		change_technology_group = sub_saharan
+		change_unit_type = sub_saharan
+	}
+	else_if = {
+		limit = {
+			overlord = {
+				technology_group = nomad_group
+			}
+		}
+		change_technology_group = nomad_group
+		change_unit_type = nomad_group
+	}
+	else_if = {
+		limit = {
+			overlord = {
+				technology_group = chinese
+			}
+		}
+		change_technology_group = chinese
+		change_unit_type = chinese
+	}
+	else_if = {
+		limit = {
+			overlord = {
+				technology_group = central_african
+			}
+		}
+		change_technology_group = central_african
+		change_unit_type = sub_saharan
+	}
+	else_if = {
+		limit = {
+			overlord = {
+				technology_group = east_african
+			}
+		}
+		change_technology_group = east_african
+		change_unit_type = sub_saharan
+	}
+	else_if = {
+		limit = {
+			overlord = {
+				technology_group = indian
+			}
+		}
+		change_technology_group = indian
+		change_unit_type = indian
+	}
+	else_if = {
+		limit = {
+			overlord = {
+				technology_group = muslim
+			}
+		}
+		change_technology_group = muslim
+		change_unit_type = muslim
+	}
+	else_if = {
+		limit = {
+			overlord = {
+				technology_group = ottoman
+			}
+		}
+		change_technology_group = ottoman
+		change_unit_type = ottoman
+	}
+	else_if = {
+		limit = {
+			overlord = {
+				technology_group = eastern
+			}
+		}
+		change_technology_group = eastern
+		change_unit_type = eastern
+	}
+	else_if = {
+		limit = {
+			overlord = {
+				technology_group = aboriginal_tech
+			}
+		}
+		change_technology_group = aboriginal_tech
+		change_unit_type = aboriginal_tech
+	}
+	else_if = {
+		limit = {
+			overlord = {
+				technology_group = polynesian_tech
+			}
+		}
+		change_technology_group = polynesian_tech
+		change_unit_type = polynesian_tech
+	}
+	else_if = {
+		limit = {
+			has_global_flag = extended_timeline_mod
+			overlord = {
+				technology_group = roman_group
+			}
+		}
+		change_technology_group = roman_group
+		change_unit_type = roman_group
+	}
+	else_if = {
+		limit = {
+			overlord = {
+				technology_group = barbarian
+			}
+		}
+		change_technology_group = barbarian
+		change_unit_type = barbarian
+	}
+	else_if = {
+		limit = {
+			overlord = {
+				technology_group = middle_eastern
+			}
+		}
+		change_technology_group = middle_eastern
+		change_unit_type = middle_eastern
+	}
+	else_if = {
+		limit = {
+			overlord = {
+				technology_group = early_indian
+			}
+		}
+		change_technology_group = early_indian
+		change_unit_type = early_indian
+	}
+	else_if = {
+		limit = {
+			overlord = {
+				technology_group = early_chinese
+			}
+		}
+		change_technology_group = early_chinese
+		change_unit_type = early_chinese
+	}
+	else_if = {
+		limit = {
+			overlord = {
+				technology_group = western_nomad_group
+			}
+		}
+		change_technology_group = western_nomad_group
+		change_unit_type = western_nomad_group
+	}
+	else_if = {
+		limit = {
+			overlord = {
+				technology_group = eastern_nomad_group
+			}
+		}
+		change_technology_group = eastern_nomad_group
+		change_unit_type = eastern_nomad_group
+	}
+	else_if = {
+		limit = {
+			overlord = {
+				technology_group = asian
+			}
+		}
+		change_technology_group = asian
+		change_unit_type = chinese
+	}
+	else = {
+		change_technology_group = western
+		change_unit_type = western
+	}
+
+	# National Ideas
+	swap_free_idea_group = yes
+
+	# Power
+	add_adm_power = 999
+	add_dip_power = 999
+	add_mil_power = 999
+
+	# Ideas
+	if = {
+		limit = {
+			is_year = 1300
+			NOT = { has_global_flag = idea_variation_voting_started }
+			NOT = { has_global_flag = idea_changing_mod_active }
+			NOT = { is_expanded_mod_active = { mod = idea_groups } }
+		}
+		add_idea_group = expansion_ideas
+		remove_idea_group = expansion_ideas
+		add_idea_group = expansion_ideas
+		add_idea = additional_colonists
+		add_idea = additional_merchants
+		add_idea = faster_colonists
+		add_idea = factories
+		add_idea = additional_diplomats
+		add_idea = general_colonization_law
+		add_idea = competetive_merchants
+		add_idea_group = trade_ideas
+		remove_idea_group = trade_ideas
+		add_idea_group = trade_ideas
+		add_idea = shrewd_commerce_practise
+		add_idea = free_trade
+		add_idea = merchant_adventures
+		add_idea = national_trade_policy
+		add_idea = overseas_merchants
+		add_idea = trade_manipulation
+		add_idea = fast_negotiations
+		add_idea_group = quantity_ideas
+		remove_idea_group = quantity_ideas
+		add_idea_group = quantity_ideas
+		add_idea = mass_army
+		add_idea = the_young_can_serve
+		add_idea = enforced_service
+		add_idea = the_old_and_infirm
+		add_idea = camp_followers
+		add_idea = garrison_conscription
+		add_idea = expanded_supply_trains
+	}
+}

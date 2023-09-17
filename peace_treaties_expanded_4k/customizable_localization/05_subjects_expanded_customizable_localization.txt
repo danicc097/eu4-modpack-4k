@@ -1,0 +1,186 @@
+defined_text = {
+	name = india_superregion
+
+	text = {
+		trigger = {
+			always = yes
+		}
+		localisation_key = india_superregion
+	}
+}
+
+defined_text = {
+	name = trade_company_indonesia
+
+	text = {
+		trigger = {
+			always = yes
+		}
+		localisation_key = trade_company_indonesia
+	}
+}
+
+defined_text = {
+	name = trade_company_moluccas
+
+	text = {
+		trigger = {
+			always = yes
+		}
+		localisation_key = trade_company_moluccas
+	}
+}
+
+defined_text = {
+	name = trade_company_indochina
+
+	text = {
+		trigger = {
+			always = yes
+		}
+		localisation_key = trade_company_indochina
+	}
+}
+
+defined_text = {
+	name = trade_company_burma
+
+	text = {
+		trigger = {
+			always = yes
+		}
+		localisation_key = trade_company_burma
+	}
+}
+
+defined_text = {
+	name = trade_company_east_india
+
+	text = {
+		trigger = {
+			always = yes
+		}
+		localisation_key = trade_company_east_india
+	}
+}
+
+defined_text = {
+	name = trade_company_west_africa
+
+	text = {
+		trigger = {
+			always = yes
+		}
+		localisation_key = trade_company_west_africa
+	}
+}
+
+defined_text = {
+	name = trade_company_timbuktu
+
+	text = {
+		trigger = {
+			always = yes
+		}
+		localisation_key = trade_company_timbuktu
+	}
+}
+
+defined_text = {
+	name = trade_company_katsina
+
+	text = {
+		trigger = {
+			always = yes
+		}
+		localisation_key = trade_company_katsina
+	}
+}
+
+defined_text = {
+	name = trade_company_kongo
+
+	text = {
+		trigger = {
+			always = yes
+		}
+		localisation_key = trade_company_kongo
+	}
+}
+
+defined_text = {
+	name = trade_company_south_africa
+
+	text = {
+		trigger = {
+			always = yes
+		}
+		localisation_key = trade_company_south_africa
+	}
+}
+
+defined_text = {
+	name = trade_company_east_africa
+
+	text = {
+		trigger = {
+			always = yes
+		}
+		localisation_key = trade_company_east_africa
+	}
+}
+
+defined_text = {
+	name = trade_company_zambezi
+
+	text = {
+		trigger = {
+			always = yes
+		}
+		localisation_key = trade_company_zambezi
+	}
+}
+
+defined_text = {
+	name = trade_company_great_lakes
+
+	text = {
+		trigger = {
+			always = yes
+		}
+		localisation_key = trade_company_great_lakes
+	}
+}
+
+defined_text = {
+	name = trade_company_ethiopia
+
+	text = {
+		trigger = {
+			always = yes
+		}
+		localisation_key = trade_company_ethiopia
+	}
+}
+
+defined_text = {
+	name = trade_company_gulf_of_aden
+
+	text = {
+		trigger = {
+			always = yes
+		}
+		localisation_key = trade_company_gulf_of_aden
+	}
+}
+
+defined_text = {
+	name = trade_company_philippines
+
+	text = {
+		trigger = {
+			always = yes
+		}
+		localisation_key = trade_company_philippines
+	}
+}

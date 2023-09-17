@@ -1,0 +1,146 @@
+guiTypes = {
+	windowType = {
+		name = "achievements_window"
+		backGround=""
+		position = { x=-684 y=-522 }	
+		size = { x=1800 y=1800 }
+		moveable = 0
+		dontRender = ""
+		horizontalBorder= ""
+		verticalBorder= ""
+		fullScreen = no
+		Orientation = "CENTER"
+		
+		iconType =
+		{
+			name ="background"
+			spriteType = "GFX_achievements_bg"
+			position = { x= -9 y = 0 }
+			Orientation = "UPPER_LEFT"
+		}
+		
+		instantTextBoxType = {
+			name = "title_label"
+			position = { x = 252 y =27 }
+			font = "vic_29s"
+			borderSize = {x = 0 y = 0}
+			text = "ACHIEVEMENTS"	
+			maxWidth = 900
+			maxHeight = 58
+			format = centre			
+		}
+	
+		smoothListboxType = 	{		
+			name ="achievement_list"
+			position = { x = 36 y = 101 }
+			backGround=""
+			size = { x=1305  y =898}
+			Orientation = "UPPER_LEFT"
+			spacing = 4
+			scrollbartype = "standardlistbox_slider"
+			borderSize = {x = 0 y = 0}
+		}
+		
+		guiButtonType = {
+			name ="close_button"
+			quadTextureSprite ="button_type_4"
+			position = { x= 511 y = 1013 }
+			buttonText = "CLOSE"
+			buttonFont = "vic_18"
+			shortcut = "ESCAPE"
+		}
+		
+	}
+	
+	###### ACHIEVEMENT ENTRY
+	windowType = {
+		name = "achievement_entry"
+		backGround=""
+		position = { x=0 y=0 }	
+		size = { x=1080 y= 149 }
+		moveable = 0
+		dontRender = ""
+		horizontalBorder= ""
+		verticalBorder= ""
+		fullScreen = no
+		
+		#remove
+		iconType =
+		{
+			name ="achievement_entry_bg"
+			spriteType = "GFX_achievement_entry_bg"
+			position = { x=-4 y = -7 }
+			Orientation = "UPPER_LEFT"
+		}
+		
+		iconType =
+		{
+			name ="achievement_icon"
+			spriteType = "GFX_idea_unknown"
+			position = { x= 9 y = 14 }
+			Orientation = "UPPER_LEFT"
+		}
+
+		instantTextBoxType = {
+			name = "achievement_name"
+			position = { x = 144 y = 5 }
+			font = "vic_22"
+			borderSize = {x = 0 y = 0}
+			text = "name"	
+			maxWidth = 828
+			maxHeight = 58
+			fixedsize = yes
+			format = left			
+		}
+		
+		instantTextBoxType = {
+			name = "achievement_desc"
+			position = { x = 144 y = 45 }
+			font = "vic_18"
+			borderSize = {x = 0 y = 0}
+			text = "desc"	
+			maxWidth = 846
+			maxHeight = 180
+			format = left			
+		}
+		## stuff to the right
+		
+		iconType =
+		{
+			name ="achievement_progress"
+			spriteType = "achievement_progress"
+			position = { x= 1085 y = 90 }
+			Orientation = "UPPER_LEFT"
+			
+		}
+		
+		iconType =
+		{
+			name ="achievement_progress_overlay"
+			spriteType = "GFX_achievement_progress_frame"
+			position = { x= 1058 y = 81 }
+			Orientation = "UPPER_LEFT"
+		}
+		
+		iconType =
+		{
+			name ="achievement_progress_text_bg"
+			spriteType = "GFX_achievement_progress_text_bg"
+			position = { x= 1076 y = 11 }
+			Orientation = "UPPER_LEFT"
+		}
+		
+		
+		instantTextBoxType = {
+			name = "achievement_progress_text"
+			position = { x = 1085 y = 25 }
+			font = "vic_22"
+			borderSize = {x = 0 y = 0}
+			text = "7/14"	
+			maxWidth = 126
+			maxHeight = 58
+			format = centre	
+			alwaystransparent = yes
+		}
+	}
+}

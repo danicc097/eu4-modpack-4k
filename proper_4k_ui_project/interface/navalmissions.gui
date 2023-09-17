@@ -1,0 +1,152 @@
+guiTypes = {
+
+	windowType = {
+		name = "select_mission_entry"
+		position = { x=0 y=-2 }
+		size = { x=180 y=76 }
+		moveable = 0
+		Orientation = "UPPER_LEFT"
+
+		guiButtonType =
+		{
+			name ="select_button"
+			spriteType = "GFX_naval_missions_bg"
+			position = { x= 0 y = 0 }
+		}
+
+		iconType =
+		{
+			name ="icon"
+			spriteType = "GFX_naval_missions"
+			position = { x= 7 y = -7 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+
+		instantTextBoxType = {
+			name = "name"
+			position = { x = 97 y = 22 }
+			textureFile = ""
+			font = "vic_18"
+			text = "name"
+			maxWidth = 468
+			maxHeight = 27
+			format = left
+			fixedsize = yes
+			alwaystransparent = yes	
+		}
+	}
+
+
+	windowType = {
+		name = "navalmissions"
+		position = { x = 29 y = 261 }
+		size = { x= 886 y = 691 }
+		orientation = CENTER
+
+		# TODO: Move to unitpanel_main.gui
+		guiButtonType = {
+			name = "close"
+			position = { x= 680 y= 500}
+			quadTextureSprite ="GFX_select_mission_back_button"
+			buttonFont = "vic_18"
+		}
+
+		listboxType = {
+			name = "mission_listbox"
+			backGround = ""
+			position = { x = 34 y = 169 }
+			size = { x=587 y=725 }
+			Orientation = "UPPER_LEFT"
+			horizontal = 0
+			spacing = 1.5
+			scrollbartype = "standardlistbox_slider"
+			borderSize = {x = 0 y = 0}
+		}
+
+
+		windowType = {
+			name = "tradenodelists"
+			moveable = 0
+			position = { x = 0 y = -90 }
+
+			positionType =
+			{
+				name ="exploration_dialog_position"
+				position = { x= 29 y = 247 }
+			}
+
+			guiButtonType = {
+				name ="sort_shield"
+				quadTextureSprite = "GFX_sort_shield"
+				position = { x = 49 y = 268 }
+			}
+			guiButtonType = {
+				name ="sort_name"
+				quadTextureSprite = "GFX_sort_126"
+				position = { x = 97 y = 268 }
+				buttonFont = "vic_18"
+				buttonText = "TRADENODE"
+				pdx_tooltip = "TRADE_NAME_SORT_TOOLTIP"
+				pdx_tooltip_delayed = "TRADE_NAME_SORT_TOOLTIP_DELAYED"
+			}
+			guiButtonType = {
+				name ="sort_trader"
+				quadTextureSprite = "GFX_sort_trader02"
+				position = { x = 320 y = 272 }
+				pdx_tooltip = "TRADE_TRADER_SORT_TOOLTIP"
+				pdx_tooltip_delayed = "TRADE_TRADER_SORT_TOOLTIP_DELAYED"
+			}
+			guiButtonType = {
+				name ="sort_income_indicator"
+				quadTextureSprite = "GFX_sort_trade_target02"
+				position = { x = 382 y = 272 }
+				pdx_tooltip = "TRADE_MISSION_SORT"
+				pdx_tooltip_delayed = "TRADE_MISSION_SORT_DELAYED"
+			}
+			guiButtonType = {
+				name ="sort_current_power"
+				quadTextureSprite = "GFX_sort_trade_power2"
+				position = { x = 430 y = 268 }
+				pdx_tooltip = "TRADE_CURRENT_POWER_SORT"
+				pdx_tooltip_delayed = "TRADE_CURRENT_POWER_SORT_DELAYED"
+			}
+			iconType = {
+				name = "sort_nothing"
+				spriteType = "GFX_sort_62_icon"
+				position = { x = 499 y = 272 }
+			}
+
+			listboxType =
+			{
+				name ="tradenodelist"
+				position = { x = 43 y = 310 }
+				backGround=""
+				size = { x= 576  y = 1026}
+				Orientation = "UPPER_LEFT"
+				horizontal = 0
+				spacing = 4
+				scrollbartype = "standardlistbox_slider"
+				borderSize = {x = 0 y = 0}
+			}
+
+			listboxType =
+			{
+				name ="privateernodelist"
+				position = { x = 43 y = 310 }
+				backGround=""
+				size = { x= 576  y = 1026}
+				Orientation = "UPPER_LEFT"
+				horizontal = 0
+				spacing = 4
+				scrollbartype = "standardlistbox_slider"
+				borderSize = {x = 0 y = 0}
+			}
+
+		}
+
+	}
+
+
+}
+

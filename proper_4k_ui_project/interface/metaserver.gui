@@ -1,0 +1,1126 @@
+guiTypes = {
+
+#########################################################################################
+######################## MetaserverLogin ################################################
+#########################################################################################
+#########################################################################################
+######################## MetaserverLogin ################################################	
+#########################################################################################
+
+windowType = {
+	name = "MetaseverMainLoginWindow"
+	backGround=""
+	moveable = 0
+	dontRender = ""
+	horizontalBorder= ""
+	verticalBorder= ""
+	position = { x=0 y=0 }
+	size = { x=1440 y=1080 }	
+	fullscreen = yes
+
+	
+	iconType =
+		{
+			name ="metaLoginMenuBackground"
+			buttonMesh = "GFX_remove"
+			position = { x= -292 y =-403}
+			orientation = "CENTER"
+		}
+
+
+
+	iconType =
+		{
+			name ="metaLoginMenuDialog"
+			buttonMesh = "GFX_remove"
+			position = { x= -227 y =-331}
+			orientation = "CENTER"
+		}
+
+
+	textBoxType={
+		name = "MetaLoginTextBox"
+		
+		font = "Main_14_eu"
+		borderSize = { x=11 y=11 }
+		position = { x=-209 y=-335 }
+		orientation = "CENTER"
+		text = "MS_METASERVER_LOGIN"
+	}
+
+
+		guiButtonType = {
+			name = "BackButton"
+			position = { x=-146 y =259}
+			orientation = "CENTER"
+			quadTextureSprite ="GFX_remove2"
+			tooltip = ""
+			tooltipText =""
+			delayedTooltipText = ""
+
+			buttonText = "MS_BACK"
+			buttonFont = "Main_14_black"
+			clicksound = back_click
+		}
+
+
+	
+}
+
+windowType = {
+	fullScreen = yes
+	name = "MetaserverLoginWindow"
+	backGround = ""
+	moveable = 0
+	dontRender = ""
+	horizontalBorder= ""
+	verticalBorder= ""
+	position = { x=0 y=40 }
+	size = { x=1440 y=1080}
+	moveable = 0
+	dontRender = "border"
+	horizontalBorder= "border"
+	verticalBorder= "border"
+
+	iconType =
+			{
+				name ="frontend_paper_bg"
+				spriteType = "GFX_remove"
+				position = { x= -432 y = -313 }
+				Orientation = "CENTER"
+			}
+
+	guiButtonType = {
+		name = "LoginButton"
+		position = { x=-198 y =234}
+		orientation = "CENTER"
+		quadTextureSprite ="GFX_remove2"
+		tooltip = ""
+		tooltipText =""
+		delayedTooltipText = ""
+		buttonText = "MS_LOGIN"
+		buttonFont = "Main_14_black"
+		}
+
+	
+	textBoxType={
+			name = "LoginText"
+			font = "Main_14"
+			orientation = "CENTER"
+			position = { x=0 y=-108  }
+			borderSize = {x = 14 y =0}
+			text = "MS_USERNAME"
+			#size = { x=342 y=58 }	
+			maxWidth = 342
+			maxHeight = 90
+			
+			format = centre
+			
+		}
+		
+		
+	textBoxType={
+			name = "PasswordText"
+			font = "Main_14"
+			orientation = "CENTER"
+			borderSize = {x = 14 y = 0 }
+			position = { x=0 y= 0  }
+			text = "MS_PASSWORD"
+			#size = { x=342 y=58 }	
+			maxWidth = 342
+			maxHeight = 90			
+			format = centre
+		}
+	
+	editBoxType={
+		position = {x = -185 y = -72 }
+		name = "LoginNameEditbox"
+		textureFile = "gfx\\interface\\small_tiles_dialog.dds"
+		font = "Main_16"
+		borderSize = {x = 14 y = 0}	
+		size = { x=342 y=58 }
+		text = ""	
+		#maxWidth = 324
+		#maxHeight = 90
+		instantTextBoxType = no
+		orientation = "CENTER"
+	}
+	
+	editBoxType={
+		position = {x = -185 y = 36 }
+		name = "LoginPassEditbox"
+		textureFile = "gfx\\interface\\small_tiles_dialog.dds"
+		font = "Main_16"
+		borderSize = {x = 14 y = 0}	
+		size = { x=342 y=58 }
+		text = ""	
+		#maxWidth = 324
+		#maxHeight = 58
+		orientation = "CENTER"
+		instantTextBoxType = no
+	}
+	
+	textBoxType={
+		name = "LoginResultText"
+		font = "Main_16"
+		position = { x=-126 y=108  }
+		borderSize = {x = 18 y = 18}
+		text = ""	
+		maxWidth =360
+		maxHeight = 144		
+		orientation = "CENTER"
+	}
+	
+	guiButtonType = {
+		name = "BackButton"
+		position = { x=-115 y =371}
+		orientation = "CENTER"
+		quadTextureSprite ="GFX_remove2"
+		tooltip = ""
+		tooltipText =""
+		delayedTooltipText = ""
+
+		buttonText = "MS_BACK"
+		buttonFont = "Main_14_black"
+		clicksound = back_click
+	}
+	
+}	
+#########################################################################################
+
+
+##########################################################################################
+############################### Metaserver main interface ################################
+##########################################################################################
+windowType = {
+	name = "MetaseverMainWindow"
+	backGround=""
+	moveable = 0
+	dontRender = ""
+	horizontalBorder= ""
+	verticalBorder= ""
+	position = { x=0 y=0 }
+	size = { x=1440 y=1080 }
+	fullscreen = yes
+
+	iconType =
+		{
+			name ="metaLoginMenuDialog"
+			spriteType = "GFX_remove"
+			position = { x= -922 y =-691}
+			orientation = "CENTER"
+		}
+
+	guiButtonType = {
+			name = "CreateGame"
+			position = { x=439 y =504}
+			orientation = "CENTER"
+			quadTextureSprite ="GFX_remove2"
+			tooltip = ""
+			tooltipText =""
+			delayedTooltipText = ""
+
+			buttonText = "MS_CREATE_GAME"
+			buttonFont = "Main_14_black"
+		}
+
+
+	guiButtonType = {
+			name = "Backbutton"
+			position = { x=439 y =558}
+			orientation = "CENTER"
+			quadTextureSprite ="GFX_remove2"
+			tooltip = ""
+			tooltipText =""
+			delayedTooltipText = ""
+
+			buttonText = "MS_LOGOUT"
+			buttonFont = "Main_14_black"
+		}
+
+
+}
+
+######################################################################################################
+	############################# Create meta Game Window ################################################
+	######################################################################################################
+	
+	windowType = {
+		name = "CreateMetaGameWindow"
+		backGround=""
+		position = { x=0 y =0}	
+		size = { x=1440 y =1080}
+		moveable = 0
+		dontRender = ""
+		horizontalBorder= ""
+		verticalBorder= ""
+		fullscreen = yes
+		
+			
+	
+			textBoxType={
+				name = "CreateMPGameHeadingTextBox"
+				textureFile =""
+				font = "Main_16"
+				borderSize = {x = 11 y = 11}
+				position = { x=0 y=-155 }
+				text = "MS_CREATE_GAME"	
+				orientation = "CENTER"
+				maxWidth = 360
+				maxHeight = 58
+				format = centre
+		}
+	
+		editBoxType={
+				name = "HostEditBox"
+
+				position = {x = -185 y = -72 }
+				textureFile = "gfx\\interface\\small_tiles_dialog.dds"
+				font = "Main_16"
+				borderSize = {x = 14 y = 0}	
+				size = { x=342 y=58 }
+				text = ""	
+				#maxWidth = 324
+				#maxHeight = 58
+				orientation = "CENTER"
+				instantTextBoxType = no
+
+		}
+		
+		editBoxType={
+				name = "HostPassEditBox"
+				position = {x = -185 y = 36 }
+				textureFile = "gfx\\interface\\small_tiles_dialog.dds"
+				font = "Main_16"
+				borderSize = {x = 14 y = 0}	
+				size = { x=342 y=58 }
+				text = ""	
+				#maxWidth = 324
+				#maxHeight = 58
+				orientation = "CENTER"
+				instantTextBoxType = no
+		}
+
+
+		textBoxType={
+			name = "CreateGameTextBox"
+			textureFile =""
+			font = "Main_14"
+			orientation = "CENTER"
+			position = { x=0 y=-108  }
+			borderSize = {x = 14 y =14}
+			text = "MS_NAME"
+			#size = { x=342 y=58 }	
+			maxWidth = 342
+			maxHeight = 90
+			format = centre
+			
+		}
+		
+		
+		textBoxType={
+			name = "PasswordTextBox"
+			textureFile =""
+			font = "Main_14"
+			orientation = "CENTER"
+			borderSize = {x = 14 y = 14 }
+			position = { x=0 y= 0  }
+			text = "MS_PASSWORD"
+			#size = { x=342 y=58 }	
+			maxWidth = 342
+			maxHeight = 90			
+			format = centre
+		}
+
+		
+		
+		textBoxType={
+				name = "CreateMPGamePasswordTextBox"
+				textureFile =""
+				font = "Main_14"
+				borderSize = {x = 11 y = 11}
+				position = { x=-56 y =106}
+				text = "MS_USE_PASSWORD"	
+				orientation = "CENTER"
+		}
+		
+		checkboxType = {
+				name = "UsePasswordCheckBox"
+				position = { x=-106 y =103}
+				quadTextureSprite ="GFX_remove"
+				tooltip = ""
+				tooltipText =""
+				delayedTooltipText = ""
+				buttonFont = "Main_16"
+				orientation = "CENTER"
+		}
+	
+
+		guiButtonType = {
+			name = "StartGameButton"
+			position = { x=-198 y =234}
+			orientation = "CENTER"
+			quadTextureSprite ="GFX_remove2"
+			tooltip = ""
+			tooltipText =""
+			delayedTooltipText = ""
+			buttonText = "MS_CREATE"
+			buttonFont = "Main_14_black"
+		}
+
+		guiButtonType = {
+			name = "BackButton"
+			position = { x=-115 y =371}
+			orientation = "CENTER"
+			quadTextureSprite ="GFX_remove2"
+			tooltip = ""
+			tooltipText =""
+			delayedTooltipText = ""
+	
+			buttonText = "MS_BACK"
+			buttonFont = "Main_14_black"
+			clicksound = back_click
+		}
+	
+	
+	}
+
+
+	######################################################################################################
+	############################# Create MP Game Window###################################################
+	######################################################################################################
+	
+	windowType = {
+		name = "JoinGamePassword"
+		backGround="CreateMPGameDialog"
+		position = { x=-360 y =-180}	
+		size = { x=720 y =360}
+		moveable = 0
+		dontRender = ""
+		horizontalBorder= ""
+		verticalBorder= ""
+		fullscreen = no
+		orientation = "CENTER"
+		
+		#iconType = {
+		#	name = "CreateMPGameBG"	
+		#	buttonMesh = "SandboxFloaterBackground"
+		#	orientation = "CENTER"
+		#	position = {x=-322 y=-191}
+		#	tooltip = ""	
+		#	tooltipText =""
+		#	delayedTooltipText = ""
+		#}
+	
+	
+		guiButtonType = {
+			name = "CreateMPGameDialog"	
+			quadTextureSprite = "GFX_remove"
+			position = { x=-239 y=-115 }
+			tooltip = ""	
+			tooltipText =""
+			delayedTooltipText = ""
+			orientation = "CENTER"
+		}
+			
+	
+			textBoxType={
+				name = "CreateMPGameHeadingTextBox"
+				font = "Main_16"
+				borderSize = {x = 11 y = 11}
+				position = { x=297 y=-119 }
+				text = "MS_JOIN_GAME"	
+				orientation = "CENTER"
+				format = centre
+				maxWidth = 720
+		}
+	
+			editBoxType={
+				name = "HostEditBox"
+				textureFile ="gfx\\interface\\small_tiles_dialog.dds"
+				font = "Main_16"
+				borderSize = {x = 18 y = 0}	
+				size = { x=270 y=58}
+				position = { x=-135 y=-58 }
+				text = "MS_PASSWD"	
+				#maxWidth = 342
+				#maxHeight = 90
+				orientation = "CENTER"
+				instantTextBoxType = no
+		}
+	
+			guiButtonType = {
+				name = "JoinGameButton"
+				position = { x=-220 y =22}
+				quadTextureSprite ="GFX_remove2"
+				tooltip = ""
+				tooltipText =""
+				delayedTooltipText = ""
+				buttonText = "MS_JOIN"
+				buttonFont = "Main_14_black"
+				orientation = "CENTER"
+		}
+	
+			guiButtonType = {
+				name = "BackButton"
+				position = { x=2 y =22}
+				quadTextureSprite ="GFX_remove2"
+				tooltip = ""
+				tooltipText =""
+				delayedTooltipText = ""
+				buttonText = "MS_BACK"
+				buttonFont = "Main_14_black"
+				orientation = "CENTER"
+				clicksound = back_click
+		}
+	
+	
+	}
+	
+	#######################################################################################################################################
+######################################### Network Info Window#################################################################################
+########################################################################################################################################		
+
+	windowType = {	
+		name ="NetworkInfoWindow"
+		backGround=""
+		position = { x=0 y =0}	
+		size = { x=1440 y =1080}
+		moveable = 0
+		dontRender = ""
+		horizontalBorder= ""
+		verticalBorder= ""
+		fullscreen = yes
+		
+		iconType = {
+			name = "PopUpBg"	
+			buttonMesh  ="GFX_remove"
+			position = { x=-360 y=-227 }
+			tooltip = ""	
+			tooltipText =""
+			delayedTooltipText = ""
+			orientation = "CENTER"
+		}
+
+		guiButtonType = {
+			name = "PopUpDialog"	
+			quadTextureSprite ="GFX_remove"
+			position = { x=-295 y=-169 }
+			tooltip = ""	
+			tooltipText =""
+			delayedTooltipText = ""
+			orientation = "CENTER"
+		}
+		
+
+		textBoxType={
+			name = "PopUpHeadingTextBox"
+			font = "Main_14_eu"
+			borderSize = {x = 11 y = 11}
+			position = { x=-275 y=-173 }
+			text = "MS_ALERT"	
+			orientation = "CENTER"
+		}
+
+		textBoxType={
+			name = "Infotext"
+			font = "Main_14_eu"
+			borderSize = {x = 11 y = 11}
+			position = { x=18 y=-47 }
+			text = ""
+			maxWidth = 567
+			orientation = "CENTER"
+			format = centre
+		}
+
+		guiButtonType = {
+			name = "OK_Button"
+			position = { x=-108 y =76}
+			quadTextureSprite ="GFX_remove2"
+			tooltip = ""
+			tooltipText =""
+			delayedTooltipText = ""
+			buttonText = "OK"
+			buttonFont = "Main_14_black"
+			orientation = "CENTER"
+			clicksound = ok_click
+		}
+		
+
+		
+	}
+########################################################################################################################################
+	
+	########################################################################################################################################
+######################################### ConnectionFailedWindow #######################################################################
+########################################################################################################################################	
+
+	windowType = {	
+		name ="ConnectionFailedWindow"
+		backGround=""
+		position = { x=0 y =0}	
+		size = { x=1440 y =1080}
+		moveable = 0
+		dontRender = ""
+		horizontalBorder= ""
+		verticalBorder= ""
+		fullscreen = yes
+		
+		iconType = {
+			name = "PopUpBg"	
+			buttonMesh  ="GFX_remove"
+			position = { x=-360 y=-227 }
+			tooltip = ""	
+			tooltipText =""
+			delayedTooltipText = ""
+			orientation = "CENTER"
+		}
+
+		guiButtonType = {
+			name = "PopUpDialog"	
+			quadTextureSprite ="GFX_remove"
+			position = { x=-295 y=-169 }
+			tooltip = ""	
+			tooltipText =""
+			delayedTooltipText = ""
+			orientation = "CENTER"
+		}
+		
+
+		textBoxType={
+			name = "PopUpHeadingTextBox"
+			font = "FPS_Font"
+			borderSize = {x = 11 y = 11}
+			position = { x=-275 y=-173 }
+			text = "MS_ALERT"	
+			orientation = "CENTER"
+		}
+
+		textBoxType={
+			name = "defalutTextBox"
+			font = "Main_14_eu"
+			borderSize = {x = 11 y = 11}
+			position = { x=54 y=-47 }
+			text = "MS_CONNECTION_FAILED"	
+			maxWidth = 567
+			orientation = "CENTER"
+			format = centre
+		}
+
+		guiButtonType = {
+			name = "OK_Button"
+			position = { x=-108 y =76}
+			quadTextureSprite ="GFX_remove2"
+			tooltip = ""
+			tooltipText =""
+			delayedTooltipText = ""
+			buttonText = "OK"
+			buttonFont = "Main_14_black"
+			orientation = "CENTER"
+			clicksound = ok_click
+		}
+		
+	}
+
+
+
+################### Default Action window
+windowType = {
+	name = "DefaultActionWindow"
+	backGround=""
+	moveable = 0
+	dontRender = ""
+	horizontalBorder= ""
+	verticalBorder= ""
+	position = { x=0 y=0 }
+	size = { x=1440 y=1080 }
+	fullscreen = yes
+
+
+
+
+
+
+	
+}
+
+#################################################
+### Channellist interface #######################
+#################################################
+
+windowType = {
+	name = "ChannelListActionWindow"
+	backGround=""
+	moveable = 0
+	dontRender = ""
+	horizontalBorder= ""
+	verticalBorder= ""
+	position = { x=0 y=0 }
+	size = { x=1440 y=1080 }
+	fullscreen = yes
+
+
+
+
+
+
+	textBoxType={
+		name = "ChannelListActionHeadingTextBox"
+		
+		font = "Main_16"
+		borderSize = { x=11 y=18 }
+		position = { x=434 y=-612 }
+		orientation = "CENTER"
+		text = "MS_CHANNELS"
+	}
+	
+	listBoxType = 
+		{
+			name ="ChannelListing"
+			background = ""
+			position = { x=436 y=-553 }
+			orientation = "CENTER"
+			priority = 100
+			size = { x=378 y=180 }
+			borderSize = {x =0  y = 0}
+			scrollbartype = "standardlistbox_slider"
+			step = 0
+		}
+
+	listBoxType = 
+		{
+			name ="ChannelUserListing"
+			background = ""
+			position = { x=436 y=-265 }
+			orientation = "CENTER"
+			priority = 100
+			size = { x=378 y=180}
+			borderSize = {x =0 y = 0}
+			scrollbartype = "standardlistbox_slider"
+			step = 0
+		}	
+	
+
+	guiButtonType = {
+			name = "JoinButton"
+			position = { x=436 y =-369}
+			orientation = "CENTER"
+			quadTextureSprite ="GFX_remove2"
+			tooltip = ""
+			tooltipText =""
+			delayedTooltipText = ""
+
+			buttonText = "MS_JOIN_CHANNEL"
+			buttonFont = "Main_14_black"
+		}
+
+
+	guiButtonType = {
+			name = "RefreshButton"
+			position = { x=675 y =-369}
+			orientation = "CENTER"
+			quadTextureSprite ="GFX_remove2"
+			tooltip = ""
+			tooltipText =""
+			delayedTooltipText = ""
+
+			buttonText = "MS_REFRESH"
+			buttonFont = "Main_14_black"
+		}
+
+
+	
+}
+
+	
+
+
+windowType = {
+		name = "ChannelSelectionItem"
+		backGround=""
+		moveable = 0
+		dontRender = ""
+		horizontalBorder= ""
+		verticalBorder= ""
+		position = { x=-76 y=0 }
+		size = { x=230 y=29 }
+		fullscreen = no
+
+
+		checkboxType = {
+				name = "ChannelSelectionButton"
+				quadTextureSprite ="GFX_remove"
+				tooltip = ""
+				tooltipText = ""
+				delayedTooltipText = ""
+				buttonFont = "Main_14"
+				position = { x=-54 y=0 }
+		}
+
+		textBoxType={
+			name = "button_text"
+			
+			font = "Main_16"
+			borderSize = { x=11 y=0 }
+			position = { x=0 y=0 }
+			text = ""
+			format = left
+		}
+
+}
+
+
+windowType = {
+		name = "ChannelUserSelectionItem"
+		backGround=""
+		moveable = 0
+		dontRender = ""
+		horizontalBorder= ""
+		verticalBorder= ""
+		position = { x=-76 y=0 }
+		size = { x=230 y=29 }
+		fullscreen = no
+
+		
+		
+		guiButtonType = {
+				name = "ChannelUserSelectionButton"
+				quadTextureSprite ="GFX_remove"
+				tooltip = ""
+				tooltipText = ""
+				delayedTooltipText = ""
+				buttonFont = "Main_14"
+				position = { x=-54 y=0 }
+			}
+
+		textBoxType={
+			name = "button_text"
+			
+			font = "Main_16"
+			borderSize = { x=11 y=0 }
+			position = { x=0 y=0 }
+			text = ""
+			format = left
+		}
+
+		
+}
+
+#		scrollbarType = {
+#			name = "ChannelListScrollbar"	
+#			slider = "ChannellistSliderButton"
+#			track= "trackButton"
+#			leftbutton = "upButton"
+#			rightbutton = "downButton"
+#			size = {x =45 y =900 }
+#			position = {x= 0 y =-5}
+#			priority = 100			
+#			borderSize = {x =36 y = 36}	
+#			maxValue =1
+#			minValue =0
+#			stepSize =0.01
+#			startValue = 0
+#			horizontal = 0
+#
+#
+#			guiButtonType = {
+#				name = "ChannellistSliderButton"	
+#				quadTextureSprite = "MenuScrollbarSliderButton"
+#				tooltip = ""
+#				tooltipText =""	
+#				delayedTooltipText = ""
+#				position = { x=0 y =0}
+#			}
+#
+#			guiButtonType = {
+#				name = "trackButton"
+#				quadTextureSprite = "MenuChannelListSliderBg"
+#				position = { x=0 y =36}	
+#				tooltip = ""
+#				tooltipText =""
+#				delayedTooltipText = ""	
+#
+#			}	
+#
+#			guiButtonType = {
+#				parent = "ChannellistSliderButton"
+#				name = "upButton"
+#				quadTextureSprite = "arrowLeftType2"
+#				position = { x=0 y =0}	
+#			}
+#			
+#			guiButtonType = {
+#				parent = "ChannellistSliderButton"
+#				name = "downButton"
+#				quadTextureSprite = "arrowRightType2"
+#				position = { x=0 y =216}
+#				orientation = "CENTER"
+#			}
+#	}
+	
+	#############
+	
+	#################################################
+	###  Gamelist interface #########################
+	###  Same listbox as for channels is used #######
+	#################################################
+	
+	windowType = {
+		name = "GameListActionWindow"
+		backGround=""
+		moveable = 0
+		dontRender = ""
+		horizontalBorder= ""
+		verticalBorder= ""
+		position = { x=0 y=0 }
+		size = { x=1440 y=1080 }
+		fullscreen = yes
+	
+		textBoxType={
+			name = "ChannelListActionHeadingTextBox"
+			
+			font = "Main_16"
+			borderSize = { x=11 y=7 }
+			position = { x=434 y=-54 }
+			orientation = "CENTER"
+			text = "MS_GAMES"
+		}
+		
+		listBoxType = 
+		{
+			name ="ChannelListing"
+			background = ""
+			position = { x=436 y=0 }
+			orientation = "CENTER"
+			priority = 100
+			size = { x=378 y=317 }
+			borderSize = {x =0 y =0}
+			scrollbartype = "standardlistbox_slider"
+		}
+
+		guiButtonType = {
+			name = "JoinButton"
+			position = { x=436 y =295}
+			orientation = "CENTER"
+			quadTextureSprite ="GFX_remove2"
+			tooltip = ""
+			tooltipText =""
+			delayedTooltipText = ""
+
+			buttonText = "MS_JOINGAME"
+			buttonFont = "Main_14_black"
+		}
+
+
+		guiButtonType = {
+			name = "RefreshButton"
+			position = { x=675 y =295}
+			orientation = "CENTER"
+			quadTextureSprite ="GFX_remove2"
+			tooltip = ""
+			tooltipText =""
+			delayedTooltipText = ""
+
+			buttonText = "MS_REFRESH"
+			buttonFont = "Main_14_black"
+		}
+		
+	}
+	
+	### Metaserver gamesinfowindow
+	
+	windowType = {
+		name = "GamesInfowindow"
+		background = ""
+		position = { x=0 y=0 }
+		size = { x=1440 y=1080 }
+		moveable = 0
+		dontRender = ""
+		horizontalBorder= ""
+		verticalBorder= ""
+		fullscreen = yes
+
+	textBoxType={
+		name = "InfoHeaderTextBox"
+		
+		font = "Main_14"
+		borderSize = { x=11 y=11 }
+		position = { x=450 y=396 }
+		orientation = "CENTER"
+		text = "MS_INFORMATION"
+		format = left
+	}
+
+
+
+	textBoxType={
+		name = "GameInfoBox"
+		
+		font = "Main_14"
+		borderSize = { x=11 y=11 }
+		position = { x= 450 y =432}
+		orientation = "CENTER"
+		text = ""
+		format = left
+	}
+
+	}
+	
+	
+	
+	
+	### Metaserver infowindow
+	
+	windowType = {
+		name = "Infowindow"
+		background = ""
+		position = { x=0 y=0 }
+		size = { x=1440 y=1080 }
+		moveable = 0
+		dontRender = ""
+		horizontalBorder= ""
+		verticalBorder= ""
+		fullscreen = yes
+
+	
+
+	textBoxType={
+		name = "InfoHeaderTextBox"
+		
+		font = "Main_14_eu"
+		borderSize = { x=11 y=11 }
+		position = { x=36074 y=182 }
+		orientation = "CENTER"
+		text = "MS_INFORMATION"
+	}
+
+	}
+	
+	###Metaserver ChatWindow
+	
+	listBoxType = 
+	{
+		name ="ChannelUserListing"
+		background = "MenuMetaChatWindowDialog2"
+		position = { x=40 y=-553 }
+		orientation = "CENTER"
+		size = { x=302 y=1062 }
+		priority = 100
+		borderSize = {x =18 y = 18}	
+	}
+	
+	windowType = {
+		name = "MetaserverChatWindow"
+		backGround=""
+		position = { x=0 y=0 }	
+		size = { x=1440 y=1080 }
+		moveable = 0
+		dontRender = ""
+		horizontalBorder= ""
+		verticalBorder= ""
+		fullscreen = yes
+		
+
+		#iconType =
+		#	{
+		#	name ="metaMenuChatDialog2"
+		#	buttonMesh = "MenuMetaChatWindowDialog2"
+		#	
+		#	position = { x= -893 y =-608}
+		#	orientation = "CENTER"
+		#}
+
+		textBoxType={
+			name = "MetaChatWindowTextBox"
+			
+			font = "Main_24"
+			borderSize = { x=11 y=11 }
+			position = { x=-875 y=-612 }
+			orientation = "CENTER"
+			text = "MS_CHAT"
+		}
+
+		textBoxType={
+			name = "ChatListTextBox"
+			
+			font = "Main_16"
+			borderSize = { x=11 y=18 }
+			position = { x=434 y=-315 }
+			orientation = "CENTER"
+			text = "MS_CHANNEL_PLAYER"
+		}
+
+			
+		editBoxType={
+			position = {x = -875 y = 518 }
+			orientation = "CENTER"
+			name = "ChatWindowEditBox"
+			textureFile = "gfx\\interface\\small_tiles_dialog.dds"
+			font = "Main_14_eu"
+			borderSize = {x = 18 y = 18}	
+			size = { x=1105 y=72}
+			text = ""	
+			#maxWidth = 761
+			#maxHeight = 54
+			instantTextBoxType = no
+		}
+
+
+		guiButtonType = {
+			name = "ChatSendButton"
+			position = { x=214 y =533}
+			orientation = "CENTER"
+			quadTextureSprite ="GFX_remove2"
+			tooltip = ""
+			tooltipText =""
+			delayedTooltipText = ""
+			buttonText = "PW_SEND"
+			buttonFont = "Main_14_black"
+		}
+		
+		listBoxType = 
+		{
+			name ="MetaChat"
+			background = "MenuMetaChatWindowDialog2"
+			position = { x=-875 y=-553 }
+			orientation = "CENTER"
+			priority = 100
+			size = { x=1210 y=1008 }
+			borderSize = {x =18 y = 18}
+			scrollbartype = "standardlistbox_slider"
+		}
+
+	
+	}
+	
+	windowType = {
+		name = "chat_message"
+		backGround=""
+		position = { x=0 y=0 }	
+		size = { x=922 y=40 }
+		moveable = 0
+		dontRender = ""
+		horizontalBorder= ""
+		verticalBorder= ""
+		fullscreen = no
+		
+			instantTextBoxType = {
+				position = { x=2 y=2 }
+				name = "ChatMemberText"
+				
+				borderSize = {x = 18 y = 2}
+				font = "Main_14_eu"
+				text = ""
+				maxWidth = 922
+				maxHeight = 40
+			}
+		
+		}
+	
+	
+	
+	#####
+	
+	
+
+}

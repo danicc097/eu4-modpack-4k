@@ -1,0 +1,151 @@
+guiTypes = {
+	
+	windowType = {
+		name = "reforms_window"
+		position = { x=-499 y=-522}	
+		size = { x=1350 y=1350 }
+		moveable = 1
+		dontRender = ""
+		horizontalBorder= ""
+		verticalBorder= ""
+		fullScreen = no
+		Orientation = "CENTER"
+		
+		iconType =
+		{
+			name ="background"
+			spriteType = "GFX_reforms_view_bg"
+			position = { x= -7 y = 70 }
+			Orientation = "UPPER_LEFT"
+
+		}
+		
+		guiButtonType = {
+			name = "close_button"
+			position = { x = 905 y = 110 }
+			quadTextureSprite ="GFX_closebutton2"	
+			shortcut = "ESCAPE"
+			Orientation = "UPPER_LEFT"
+			clicksound = close_window
+		}		
+
+		instantTextBoxType = {
+			name = "window_title"
+			position = { x = 27 y = 144 }
+			textureFile = ""
+			font = "vic_29s"
+			borderSize = {x = 7 y = 7}	
+			text = "HEADER_REFORMS"	
+			maxWidth = 922
+			maxHeight = 58
+			format = centre
+		}
+		
+		instantTextBoxType = {
+			name = "reforms_label"
+			position = { x = 27 y = 547 }
+			textureFile = ""
+			font = "vic_18"
+			borderSize = {x = 7 y = 7}	
+			text = "RR_REFORMS"	
+			maxWidth = 922
+			maxHeight = 58
+			format = centre
+			fixedsize = yes
+		}
+		
+		OverlappingElementsBoxType = {
+				name = "reforms"
+				position = { x = 140 y = 614 }
+				size = { x = 720 y = 86 }
+				Orientation = "UPPER_LEFT"
+				format = centre
+				spacing = 2
+		}
+
+		guiButtonType = {
+			name ="reform_religion"
+			quadTextureSprite= "GFX_standard_button_224"
+			position = { x=297 y=837 }
+			buttonText = "REFORM_RELIGION"
+			buttonFont = "vic_18"
+		}	
+
+		instantTextBoxType = {
+			name = "doom_label"
+			position = { x = 355 y = 301 }
+			textureFile = ""
+			font = "vic_29s"
+			borderSize = {x = 7 y = 7}	
+			text = "doom"	
+			maxWidth = 274
+			maxHeight = 58
+			format = centre
+		}			
+		
+		instantTextBoxType = {
+			name = "doom_value"
+			position = { x = 463 y = 376 }
+			textureFile = ""
+			font = "vic_29s"
+			borderSize = {x = 7 y = 7}	
+			text = "50"	
+			maxWidth = 58
+			maxHeight = 58
+			format = centre
+		}
+
+		instantTextBoxType = {
+			name = "authority_label"
+			position = { x = 463 y = 301 }
+			textureFile = ""
+			font = "vic_29s"
+			borderSize = {x = 7 y = 7}	
+			text = "authority"	
+			maxWidth = 58
+			maxHeight = 58
+			format = centre
+		}			
+		
+		instantTextBoxType = {
+			name = "authority_value"
+			position = { x = 463 y = 376 }
+			textureFile = ""
+			font = "vic_29s"
+			borderSize = {x = 7 y = 7}	
+			text = "50"	
+			maxWidth = 58
+			maxHeight = 58
+			format = centre
+		}			
+	}
+
+	### entry
+	windowType = {
+		name = "religiousreformitem"
+		backGround =""
+		position = { x=0 y=0 }	
+		size = { x=113 y=113 }
+		moveable = 0
+		dontRender = ""
+		horizontalBorder = ""
+
+		iconType = {
+			name = "idea_icon_can_unlock"
+			spriteType = "GFX_reforms_view_can_unlock"
+			position = { x= 2 y = 4 }
+		}
+		iconType = {
+			name ="idea_icon"
+			spriteType = "GFX_idea_empty"
+			position = { x= 0 y = 0 }
+		}
+		guiButtonType = {
+			name ="idea_button"
+			spriteType = "GFX_idea_empty"
+			position = { x= 0 y = 0 }
+		}		
+
+				
+	}		
+}

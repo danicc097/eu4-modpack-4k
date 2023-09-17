@@ -1,0 +1,37 @@
+country_decisions = {
+    xorme_ai_investigate_heresy = {
+		potential = {
+			has_dlc = "Emperor"
+			tag = PAP
+			ai = yes
+			NOT = { is_year = 1600 }
+			NOT = { has_country_modifier = xorme_ai_pap_cooldown }
+			NOT = { reform_desire = 1.3 }
+		}
+
+		allow = {
+			is_papal_controller = yes
+			reform_desire = 0.5
+			curia_treasury_size = 2500
+		}
+
+		effect = {
+			ROOT = {
+				add_country_modifier = {
+					name = xorme_ai_pap_cooldown
+					duration = 300
+				}
+			}
+			add_curia_treasury = -500
+			add_reform_desire = -0.05
+			add_reform_desire_scale = 0.5
+		}
+		ai_will_do = {
+			factor = 100.0
+			modifier = {
+				factor = 0
+				NOT = { reform_desire = 0.7 }
+			}
+		}
+	}
+}

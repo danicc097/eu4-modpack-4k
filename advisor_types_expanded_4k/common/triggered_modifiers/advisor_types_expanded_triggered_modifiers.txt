@@ -1,0 +1,32 @@
+ate_base_advisor_pool_triggered_modifier = {
+	potential = {
+		always = yes
+	}
+	trigger = {
+		custom_trigger_tooltip = {
+			tooltip = ATE_BASE_ADVISOR_POOL_TRIGGERED_MODIFIER_TT
+			always = yes
+		}
+	}
+
+	advisor_pool = 3
+}
+
+ate_advisor_arch_chancellor_triggered_modifier = {
+	potential = {
+		ai = yes
+		is_part_of_hre = yes
+		is_emperor = no
+		emperor = {
+			religion = ROOT
+			advisor = ate_advisor_arch_chancellor
+		}
+	}
+	trigger = {
+		emperor = {
+			advisor = ate_advisor_arch_chancellor
+		}
+	}
+
+	imperial_reform_catholic_approval = 5
+}

@@ -1,0 +1,386 @@
+guiTypes = {
+	windowType = {
+		name = "console_wnd"
+		backGround =""
+		position = { x=9 y=270 }
+		size = { x=900 y=720 }
+		moveable = 0
+		orientation="UPPER_LEFT"
+		
+		# Console list of entries
+		listBoxType = 
+		{
+			name ="console_list"
+			background = "console_background_console"
+			position = { x=0 y=0 }
+			orientation = "UPPER_LEFT"
+			priority = 100
+			size = { x=1260 y=1197 }
+			borderSize = { x=0 y=0 }
+			scrollbartype = "standardlistbox_slider"
+			alwaystransparent = yes
+		}
+		
+		# Text edit box
+		editBoxType = {
+			position = { x = 0 y = 1188  }
+			name = "console_edit"
+			textureFile = "gfx\\interface\\small_tiles_dialog.dds"
+			font = "Arial12"
+			borderSize = { x=7 y=7 }
+			cursor = { x=0 y=6 }
+			size = { x=1260 y=72 }
+			text = " "
+			orientation = "UPPER_LEFT"
+			instantTextBoxType = no
+		}
+	}
+	
+	windowType = {
+		name = "console_entry_wnd"
+		backGround =""
+		position = { x=0 y=0 }
+		size = { x=1260 y=29 }
+		moveable = 0
+		orientation="UPPER_LEFT"
+		
+		# Console entry
+		instantTextBoxType={
+			position = { x=0 y=0 }
+			name = "console_text"
+			textureFile = "gfx\\interface\\transparency.tga"
+			font = "Arial12"
+			borderSize = { x=14 y=2 }
+			maxWidth = 1260
+			maxHeight = 29
+			fixedsize = yes
+			orientation = "UPPER_LEFT"
+		}
+	}
+	
+	textBoxType={
+		position = { x=2 y=2 }
+		name = "ChatMemberText"
+		textureFile = "gfx\\interface\\transparency.tga"
+		borderSize = {x = 2 y = 2}
+		font = "Main_14_eu"
+		text = "menutextbox1"
+		maxWidth = 540
+		maxHeight = 40
+	}
+
+	textBoxType={
+		name = "ToolTip"
+		#textureFile = "gfx\\interface\\transparency.tga"
+		textureFile = "gfx\\interface\\tiles_dialog.tga"
+		font = "Large_Font_Stellaris"
+		borderSize = { x=32 y=32 }
+		position = { x= 1008 y=18 }
+		maxWidth = 720 #320
+		maxHeight = 461
+	}
+
+
+	textBoxType={
+		name = "FPS_Counter"
+		#textureFile = "gfx\\interface\\transparency.tga"
+		textureFile = "gfx\\interface\\tiles_dialog.tga"
+		#textureFile = ""
+		font = "Main_14_eu"
+		borderSize = { x=58 y=58 }
+		position = { x=0 y=0 }
+		maxWidth = 230
+		maxHeight = 115
+	}
+
+	windowType = {
+		name = "status_message_window"
+		backGround =""
+		position = { x=-385 y=180 }
+		size = { x=770 y=49 }
+		moveable = 1
+		orientation="CENTER_UP"
+		
+		iconType =
+		{
+			name ="pause_bg"
+			spriteType = "GFX_status_message_window_bg"
+			position = { x= 0 y = 0 }
+		}		
+		
+		instantTextBoxType = {
+			name = "header"
+			position = { x = 20 y = 45 }
+			textureFile = ""
+			font = "vic_29"
+			borderSize = {x = 4 y = 4}	
+			text = "Header"	
+			maxWidth = 747
+			maxHeight = 58
+			format = centre
+			fixedsize = yes
+			truncate = yes
+		}
+
+		instantTextBoxType = {
+			name = "text"
+			position = { x = 20 y = 108 }
+			textureFile = ""
+			font = "vic_22"
+			borderSize = {x = 4 y = 4}	
+			text = ""	
+			maxWidth = 747
+			maxHeight = 115
+			format = centre
+		}		
+	}			
+	
+	iconType =
+	{
+		name ="testbaricon"
+		spriteType = "testbar"
+		position = { x= 540 y = 540 }
+		Orientation = "UPPER_LEFT"
+	}	
+	
+	#### DEFAULT SLIDER.
+	scrollbarType = {
+			name = "standardlistbox_slider"	
+			slider = "listboxSliderButton"
+			track= "listboxTrackButton"
+			leftbutton = "downButton"
+			rightbutton = "upButton"
+			size = {x =22 y =22 }
+			position = {x= 0 y =0}
+			priority = 100
+			borderSize = {x = 22 y = 22}
+			maxValue =1
+			minValue =0
+			stepSize =0.01
+			startValue = 0
+			horizontal = 0
+
+
+			guiButtonType = {
+				name = "listboxSliderButton"	
+				quadTextureSprite = "GFX_scroll_drager"
+				position = { x=0 y =0}
+			}
+
+			guiButtonType = {
+				name = "listboxTrackButton"
+				quadTextureSprite = "GFX_scroll_track"
+				position = { x=22 y =22}		
+
+			}	
+
+			guiButtonType = {
+				parent = "listboxSliderButton"
+				name = "upButton"
+				quadTextureSprite = "GFX_scroll_up"
+				position = { x=0 y =0}	
+			}
+			
+			guiButtonType = {
+				parent = "listboxSliderButton"
+				name = "downButton"
+				quadTextureSprite = "GFX_scroll_down"
+				position = { x=0 y =216}
+			}
+	}
+		
+	scrollbarType = {
+			name = "standardtext_slider"
+			slider = "listboxSliderButton"
+			track= "listboxTrackButton"
+			leftbutton = "downButton"
+			rightbutton = "upButton"
+			size = {x =22 y =22 }
+			position = {x= 0 y =0}
+			priority = 100
+			borderSize = {x = 22 y = 22}
+			maxValue = 1
+			minValue = 0
+			stepSize = 8
+			startValue = 0
+			horizontal = 0
+			scroll_speed = 1
+
+
+			guiButtonType = {
+				name = "listboxSliderButton"
+				quadTextureSprite = "GFX_scroll_drager"
+				position = { x=0 y =0}
+			}
+
+			guiButtonType = {
+				name = "listboxTrackButton"
+				quadTextureSprite = "GFX_scroll_track"
+				position = { x=22 y =22}
+			}
+
+			guiButtonType = {
+				parent = "listboxSliderButton"
+				name = "upButton"
+				quadTextureSprite = "GFX_scroll_up"
+				position = { x=0 y =0}
+			}
+			
+			guiButtonType = {
+				parent = "listboxSliderButton"
+				name = "downButton"
+				quadTextureSprite = "GFX_scroll_down"
+				position = { x=0 y =216}
+			}
+	}	
+	#####
+
+	scrollbarType = {
+		name = "standardlistbox_noslider"	
+		slider = "listboxSliderButton"
+		track= "listboxTrackButton"
+		leftbutton = "upButton"
+		rightbutton = "downButton"
+		size = {x =29 y =29 }
+		position = {x= 0 y =0}
+		priority = 100			
+		borderSize = {x = 43 y = 43}	
+		maxValue =1
+		minValue =0
+		stepSize =0.01
+		startValue = 0
+		horizontal = 0
+
+
+		guiButtonType = {
+			name = "listboxSliderButton"	
+			quadTextureSprite = "slider_noslider"
+			tooltip = ""
+			tooltipText =""	
+			delayedTooltipText = ""
+			position = { x=0 y =0}
+		}
+
+		guiButtonType = {
+			name = "listboxTrackButton"
+			quadTextureSprite = "slider_nobackground"
+			position = { x=43 y =43}	
+			tooltip = ""
+			tooltipText =""
+			delayedTooltipText = ""	
+
+		}	
+
+		guiButtonType = {
+			parent = "listboxSliderButton"
+			name = "upButton"
+			quadTextureSprite = "slider_downbutton"
+			position = { x=0 y =0}	
+		}
+		
+		guiButtonType = {
+			parent = "listboxSliderButton"
+			name = "downButton"
+			quadTextureSprite = "slider_upbutton"
+			position = { x=0 y =216}	
+		}
+	}
+
+
+	scrollbarType = {
+		name = "standardlistbox_invisible"	
+		slider = "listboxSliderButton"
+		track= "listboxTrackButton"
+		leftbutton = "upButton"
+		rightbutton = "downButton"
+		size = {x =29 y =29 }
+		position = {x= 0 y =0}
+		priority = 100			
+		borderSize = {x = 43 y = 43}	
+		maxValue =1
+		minValue =0
+		stepSize =0.01
+		startValue = 0
+		horizontal = 0
+
+
+		guiButtonType = {
+			name = "listboxSliderButton"	
+			quadTextureSprite = "slider_noslider"
+			tooltip = ""
+			tooltipText =""	
+			delayedTooltipText = ""
+			position = { x=0 y =0}
+		}
+
+		guiButtonType = {
+			name = "listboxTrackButton"
+			quadTextureSprite = "slider_nobackground"
+			position = { x=43 y =43}	
+			tooltip = ""
+			tooltipText =""
+			delayedTooltipText = ""	
+
+		}	
+
+		guiButtonType = {
+			parent = "listboxSliderButton"
+			name = "upButton"
+			#quadTextureSprite = "slider_downbutton"
+			position = { x=0 y =0}	
+		}
+		
+		guiButtonType = {
+			parent = "listboxSliderButton"
+			name = "downButton"
+			#quadTextureSprite = "slider_upbutton"
+			position = { x=0 y =216}	
+		}
+	}	
+
+	scrollbarType = {
+		name = "AGES_slider"	
+		slider = "SliderButton"
+		track= "TrackButton"
+		leftbutton = "upButton"
+		rightbutton = "downButton"
+		size = {x =1152 y =108 }
+		position = {x= -1051 y = 7}
+				
+		borderSize = {x =22 y = 22}	
+		maxValue = 1
+		minValue = 0
+		stepSize =2
+		startValue = 1
+		horizontal = 1
+		scroll_speed = 1
+
+		guiButtonType = {
+			name = "SliderButton"	
+			quadTextureSprite = "GFX_scroll_drager"
+			position = { x=0 y =234}
+		}
+
+		guiButtonType = {
+			name = "TrackButton"
+			quadTextureSprite = "GFX_ages_scroll_bg"
+			position = { x=0 y =0}
+
+		}	
+
+		guiButtonType = {
+			parent = "SliderButton"
+			name = "upButton"
+			quadTextureSprite = "GFX_scroll_left_ages"
+			position = { x=0 y =0}	
+		}
+		
+		guiButtonType = {
+			parent = "SliderButton"
+			name = "downButton"
+			quadTextureSprite = "GFX_scroll_right_ages"
+			position = { x=0 y =0}	
+		}
+	}
+		
+}

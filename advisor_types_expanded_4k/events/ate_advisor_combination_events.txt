@@ -1,0 +1,763 @@
+namespace = ate_advisor_combination_events
+
+country_event = {
+	id = ate_advisor_combination_events.1
+	title = ate_advisor_combination_events.EVTNAME1
+	desc = ate_advisor_combination_events.EVTDESC1
+	picture = CORRUPTION_eventPicture
+
+	trigger = {
+		advisor = ate_advisor_loyal_friend_adm
+		advisor = ate_advisor_loyal_friend_dip
+		advisor = ate_advisor_loyal_friend_mil
+	}
+
+	mean_time_to_happen = {
+		months = 360
+	}
+
+	option = {
+		name = ate_advisor_combination_events1.EVTOPT1
+
+		add_corruption = 2
+		add_adm_power = 50
+		add_dip_power = 50
+		add_mil_power = 50
+	}
+
+	option = {
+		name = ate_advisor_combination_events1.EVTOPT2
+
+		reduce_meritocracy_effect = yes
+		remove_advisor_by_category = ADM
+		add_corruption = -1
+	}
+
+	option = {
+		name = ate_advisor_combination_events1.EVTOPT3
+
+		reduce_meritocracy_effect = yes
+		remove_advisor_by_category = DIP
+		add_corruption = -1
+	}
+
+	option = {
+		name = ate_advisor_combination_events1.EVTOPT4
+
+		reduce_meritocracy_effect = yes
+		remove_advisor_by_category = MIL
+		add_corruption = -1
+	}
+
+	option = {
+		name = ate_advisor_combination_events1.EVTOPT5
+
+		reduce_meritocracy_effect = yes
+		remove_advisor_by_category = ADM
+		remove_advisor_by_category = DIP
+		remove_advisor_by_category = MIL
+		add_corruption = -4
+	}
+}
+
+country_event = {
+	id = ate_advisor_combination_events.2
+	title = ate_advisor_combination_events.EVTNAME2
+	desc = ate_advisor_combination_events.EVTDESC2
+	picture = DEBATE_REPUBLICAN_eventPicture
+
+	trigger = {
+		NOT = { has_country_flag = ate_all_geniuses_event }
+		advisor = ate_advisor_administrative_genius
+		advisor = ate_advisor_diplomatic_genius
+		advisor = ate_advisor_military_genius
+		any_known_country = {
+			ROOT = {
+				OR = {
+					NOT = { adm_tech = PREV }
+					NOT = { dip_tech = PREV }
+					NOT = { mil_tech = PREV }
+				}
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 120
+	}
+
+	immediate = {
+		hidden_effect = {
+			set_country_flag = ate_all_geniuses_event
+		}
+	}
+
+	option = {
+		name = ate_advisor_combination_events2.EVTOPT1
+
+		add_years_of_income = -0.5
+		add_ruler_modifier = {
+			name = ate_all_geniuses_event_modifier
+			duration = -1
+		}
+	}
+
+	option = {
+		name = ate_advisor_combination_events2.EVTOPT2
+
+		trigger = {
+			any_known_country = {
+				ROOT = {
+					NOT = { adm_tech = PREV }
+				}
+			}
+		}
+
+		random_list = {
+			80 = {
+				remove_advisor_by_category = ADM
+			}
+			20 = {
+				add_adm_tech = 1
+			}
+		}
+	}
+
+	option = {
+		name = ate_advisor_combination_events2.EVTOPT3
+
+		trigger = {
+			any_known_country = {
+				ROOT = {
+					NOT = { dip_tech = PREV }
+				}
+			}
+		}
+
+		random_list = {
+			80 = {
+				remove_advisor_by_category = DIP
+			}
+			20 = {
+				add_dip_tech = 1
+			}
+		}
+	}
+
+	option = {
+		name = ate_advisor_combination_events2.EVTOPT4
+
+		trigger = {
+			any_known_country = {
+				ROOT = {
+					NOT = { mil_tech = PREV }
+				}
+			}
+		}
+
+		random_list = {
+			80 = {
+				remove_advisor_by_category = MIL
+			}
+			20 = {
+				add_mil_tech = 1
+			}
+		}
+	}
+
+	option = {
+		name = ate_advisor_combination_events2.EVTOPT5
+
+		add_prestige = 10
+	}
+}
+
+country_event = {
+	id = ate_advisor_combination_events.3
+	title = ate_advisor_combination_events.EVTNAME3
+	desc = ate_advisor_combination_events.EVTDESC3
+	picture = BIG_BOOK_eventPicture
+
+	trigger = {
+		advisor = ate_advisor_free_thinker
+		advisor = ate_advisor_historian
+		any_owned_province = {
+			any_neighbor_province = {
+				NOT = { country_or_subject_holds = ROOT }
+				NOT = { is_claim = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 360
+	}
+
+	immediate = {
+		hidden_effect = {
+			random_owned_province = {
+				limit = {
+					any_neighbor_province = {
+						NOT = { country_or_subject_holds = ROOT }
+						NOT = { is_claim = ROOT }
+						NOT = { is_core = ROOT }
+					}
+				}
+				random_neighbor_province = {
+					limit = {
+						NOT = { country_or_subject_holds = ROOT }
+						NOT = { is_claim = ROOT }
+						NOT = { is_core = ROOT }
+					}
+					save_event_target_as = claim_province
+				}
+			}
+		}
+	}
+
+	option = {
+		name = ate_advisor_combination_events3.EVTOPT1
+
+		goto = claim_province
+
+		if = {
+			limit = {
+				monthly_income = 50
+			}
+			add_treasury = -100
+		}
+		else = {
+			add_treasury = -50
+		}
+		event_target:claim_province = {
+			area = {
+				limit = {
+					NOT = { country_or_subject_holds = ROOT }
+					NOT = { is_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+
+	option = {
+		name = ate_advisor_combination_events3.EVTOPT2
+
+		reduce_meritocracy_effect = yes
+		remove_advisor_by_category = ADM
+		add_adm_power = 50
+	}
+
+	option = {
+		name = ate_advisor_combination_events3.EVTOPT3
+
+		reduce_meritocracy_effect = yes
+		remove_advisor_by_category = DIP
+		add_dip_power = 50
+	}
+
+	option = {
+		name = ate_advisor_combination_events3.EVTOPT4
+
+		reduce_meritocracy_effect = yes
+		remove_advisor_by_category = ADM
+		remove_advisor_by_category = DIP
+		add_adm_power = 50
+		add_dip_power = 50
+	}
+}
+
+country_event = {
+	id = ate_advisor_combination_events.4
+	title = ate_advisor_combination_events.EVTNAME4
+	desc = ate_advisor_combination_events.EVTDESC4
+	picture = NEW_HEIR_eventPicture
+
+	trigger = {
+		advisor = ate_advisor_court_physician
+		OR = {
+			advisor = ate_advisor_concubine_female
+			advisor = ate_advisor_concubine_male
+		}
+		has_regency = no
+		has_government_attribute = heir
+		has_heir = no
+	}
+
+	mean_time_to_happen = {
+		months = 360
+	}
+
+	option = {
+		name = ate_advisor_combination_events4.EVTOPT1
+
+		ai_chance = { factor = 100 }
+
+		add_legitimacy = -20
+		define_heir = {
+			age = 0
+			dynasty = ROOT
+			culture = ROOT
+			religion = ROOT
+			change_adm = 1
+			change_dip = 1
+			change_mil = 1
+			claim = 50
+		}
+	}
+
+	option = {
+		name = ate_advisor_combination_events4.EVTOPT2
+
+		ai_chance = { factor = 0 }
+
+		reduce_meritocracy_effect = yes
+		add_legitimacy = 15
+		remove_advisor_by_category = ADM
+		remove_advisor_by_category = DIP
+		if = {
+			limit = {
+				has_dlc = "Rights of Man"
+				NOT = { ruler_has_personality = infertile_personality }
+				OR = {
+					ruler_has_personality = fertile_personality
+					ruler_has_personality = well_advised_personality
+				}
+				has_heir = no
+			}
+			random_list = {
+				50 = {
+					trigger = {
+						ruler_has_personality = fertile_personality
+					}
+					remove_ruler_personality = fertile_personality
+					add_ruler_personality = infertile_personality
+				}
+				50 = {
+					trigger = {
+						ruler_has_personality = well_advised_personality
+						NOT = { ruler_has_personality = fertile_personality }
+					}
+					remove_ruler_personality = well_advised_personality
+					add_ruler_personality = infertile_personality
+				}
+				25 = {
+					define_heir = {
+						age = 0
+						dynasty = ROOT
+						culture = ROOT
+						religion = ROOT
+						change_adm = -1
+						change_dip = -1
+						change_mil = -1
+						claim = 0
+					}
+				}
+				25 = {
+					# No Effect
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				has_heir = no
+			}
+			random_list = {
+				50 = {
+					define_heir = {
+						age = 0
+						dynasty = ROOT
+						culture = ROOT
+						religion = ROOT
+						change_adm = -1
+						change_dip = -1
+						change_mil = -1
+						claim = 0
+					}
+				}
+				50 = {
+					# No Effect
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = ate_advisor_combination_events.5
+	title = ate_advisor_combination_events.EVTNAME5
+	desc = ate_advisor_combination_events.EVTDESC5
+	picture = LAND_MILITARY_eventPicture
+
+	trigger = {
+		advisor = ate_advisor_court_physician
+		advisor = ate_advisor_banneret
+	}
+
+	mean_time_to_happen = {
+		months = 360
+	}
+
+	option = {
+		name = ate_advisor_combination_events5.EVTOPT1
+
+		add_years_of_income = -0.33
+		add_yearly_manpower = 1
+	}
+
+	option = {
+		name = ate_advisor_combination_events5.EVTOPT2
+
+		reduce_meritocracy_effect = yes
+		remove_advisor_by_category = ADM
+		add_adm_power = 50
+	}
+
+	option = {
+		name = ate_advisor_combination_events5.EVTOPT3
+
+		reduce_meritocracy_effect = yes
+		remove_advisor_by_category = MIL
+		add_mil_power = 50
+	}
+
+	option = {
+		name = ate_advisor_combination_events5.EVTOPT4
+
+		reduce_meritocracy_effect = yes
+		remove_advisor_by_category = ADM
+		remove_advisor_by_category = MIL
+		add_adm_power = 50
+		add_mil_power = 50
+	}
+}
+
+country_event = {
+	id = ate_advisor_combination_events.6
+	title = ate_advisor_combination_events.EVTNAME6
+	desc = ate_advisor_combination_events.EVTDESC6
+	picture = MERCHANTS_TALKING_eventPicture
+
+	trigger = {
+		NOT = { has_country_flag = ate_advisor_combination_feudal_tax_collector_feudal_lord }
+		advisor = ate_advisor_feudal_tax_collector
+		advisor = ate_advisor_feudal_lord
+	}
+
+	mean_time_to_happen = {
+		months = 120
+	}
+
+	immediate = {
+		hidden_effect = {
+			set_country_flag = ate_advisor_combination_feudal_tax_collector_feudal_lord
+		}
+	}
+
+	option = {
+		name = ate_advisor_combination_events6.EVTOPT1
+
+		add_country_modifier = {
+			name = ate_advisor_combination_feudal_tax_collector_feudal_lord_modifier
+			duration = -1
+		}
+		if = {
+			limit = {
+				num_of_subjects = 1
+			}
+			every_subject_country = {
+				add_liberty_desire = 10
+			}
+		}
+	}
+
+	option = {
+		name = ate_advisor_combination_events6.EVTOPT2
+
+		reduce_meritocracy_effect = yes
+		remove_advisor_by_category = ADM
+		add_adm_power = 100
+	}
+
+	option = {
+		name = ate_advisor_combination_events6.EVTOPT3
+
+		reduce_meritocracy_effect = yes
+		remove_advisor_by_category = MIL
+		add_mil_power = 100
+	}
+
+	option = {
+		name = ate_advisor_combination_events6.EVTOPT4
+
+		reduce_meritocracy_effect = yes
+		remove_advisor_by_category = ADM
+		remove_advisor_by_category = MIL
+		add_adm_power = 100
+		add_mil_power = 100
+	}
+}
+
+country_event = {
+	id = ate_advisor_combination_events.7
+	title = ate_advisor_combination_events.EVTNAME7
+	desc = ate_advisor_combination_events.EVTDESC7
+	picture = CITY_VIEW_eventPicture
+
+	trigger = {
+		NOT = { has_country_flag = ate_advisor_combination_architect_traveling_salesman }
+		advisor = ate_advisor_architect
+		advisor = ate_advisor_traveling_salesman
+	}
+
+	mean_time_to_happen = {
+		months = 120
+	}
+
+	immediate = {
+		hidden_effect = {
+			set_country_flag = ate_advisor_combination_architect_traveling_salesman
+		}
+	}
+
+	option = {
+		name = ate_advisor_combination_events7.EVTOPT1
+
+		goto = capital
+
+		add_adm_power = -50
+		add_dip_power = -50
+		add_mercantilism = 5
+		if = {
+			limit = {
+				has_global_flag = extended_timeline_mod
+			}
+			capital_scope = {
+				if = {
+					limit = {
+						has_building = stock_exchange
+					}
+					add_base_production = 2
+				}
+				else_if = {
+					limit = {
+						has_building = treasury_office
+					}
+					add_building = stock_exchange
+				}
+				else_if = {
+					limit = {
+						has_building = trade_depot
+					}
+					add_building = treasury_office
+				}
+				else_if = {
+					limit = {
+						has_building = trade_post
+					}
+					add_building = trade_depot
+				}
+				else_if = {
+					limit = {
+						has_building = marketplace
+					}
+					add_building = trade_post
+				}
+				else = {
+					add_building = marketplace
+				}
+			}
+		}
+		else = {
+			capital_scope = {
+				if = {
+					limit = {
+						has_building = stock_exchange
+					}
+					add_base_production = 2
+				}
+				else_if = {
+					limit = {
+						has_building = trade_depot
+					}
+					add_building = stock_exchange
+				}
+				else_if = {
+					limit = {
+						has_building = marketplace
+					}
+					add_building = trade_depot
+				}
+				else = {
+					add_building = marketplace
+				}
+			}
+		}
+	}
+
+	option = {
+		name = ate_advisor_combination_events7.EVTOPT2
+
+		reduce_meritocracy_effect = yes
+		remove_advisor_by_category = ADM
+		add_adm_power = 200
+	}
+
+	option = {
+		name = ate_advisor_combination_events7.EVTOPT3
+
+		reduce_meritocracy_effect = yes
+		remove_advisor_by_category = DIP
+		add_dip_power = 200
+	}
+
+	option = {
+		name = ate_advisor_combination_events7.EVTOPT4
+
+		reduce_meritocracy_effect = yes
+		remove_advisor_by_category = ADM
+		remove_advisor_by_category = DIP
+		add_adm_power = 200
+		add_dip_power = 200
+	}
+}
+
+country_event = {
+	id = ate_advisor_combination_events.8
+	title = ate_advisor_combination_events.EVTNAME8
+	desc = ate_advisor_combination_events.EVTDESC8
+	picture = FORT_eventPicture
+
+	trigger = {
+		NOT = { has_country_flag = ate_advisor_combination_inventor_siege_expert }
+		advisor = ate_advisor_inventor
+		advisor = ate_advisor_siege_expert
+	}
+
+	mean_time_to_happen = {
+		months = 120
+	}
+
+	immediate = {
+		hidden_effect = {
+			set_country_flag = ate_advisor_combination_inventor_siege_expert
+		}
+	}
+
+	option = {
+		name = ate_advisor_combination_events8.EVTOPT1
+
+		add_adm_power = -50
+		if = {
+			limit = {
+				has_dlc = "Cradle of Civilization"
+				army_professionalism = 0.025
+			}
+			add_army_professionalism = -0.025
+		}
+		else = {
+			add_army_tradition = -10
+		}
+		add_country_modifier = {
+			name = ate_advisor_combination_inventor_siege_expert_modifier
+			duration = -1
+		}
+	}
+
+	option = {
+		name = ate_advisor_combination_events8.EVTOPT2
+
+		reduce_meritocracy_effect = yes
+		remove_advisor_by_category = ADM
+		add_adm_power = 100
+	}
+
+	option = {
+		name = ate_advisor_combination_events8.EVTOPT3
+
+		reduce_meritocracy_effect = yes
+		remove_advisor_by_category = MIL
+		add_mil_power = 100
+	}
+
+	option = {
+		name = ate_advisor_combination_events8.EVTOPT4
+
+		reduce_meritocracy_effect = yes
+		remove_advisor_by_category = ADM
+		remove_advisor_by_category = MIL
+		add_adm_power = 100
+		add_mil_power = 100
+	}
+}
+
+country_event = {
+	id = ate_advisor_combination_events.9
+	title = ate_advisor_combination_events.EVTNAME9
+	desc = ate_advisor_combination_events.EVTDESC9
+	picture = MILITARY_CAMP_eventPicture
+
+	trigger = {
+		NOT = { has_country_flag = ate_advisor_combination_inventor_army_reformer }
+		ate_advisor_inventor = 3
+		army_reformer = 3
+	}
+
+	mean_time_to_happen = {
+		months = 120
+	}
+
+	immediate = {
+		hidden_effect = {
+			set_country_flag = ate_advisor_combination_inventor_army_reformer
+		}
+	}
+
+	option = {
+		name = ate_advisor_combination_events9.EVTOPT1
+
+		add_adm_power = -50
+		if = {
+			limit = {
+				has_dlc = "Cradle of Civilization"
+				army_professionalism = 0.05
+			}
+			add_army_professionalism = -0.05
+		}
+		else = {
+			add_army_tradition = -25
+		}
+		add_country_modifier = {
+			name = ate_advisor_combination_inventor_army_reformer_modifier
+			duration = -1
+		}
+	}
+
+	option = {
+		name = ate_advisor_combination_events9.EVTOPT2
+
+		reduce_meritocracy_effect = yes
+		remove_advisor_by_category = ADM
+		add_adm_power = 200
+	}
+
+	option = {
+		name = ate_advisor_combination_events9.EVTOPT3
+
+		reduce_meritocracy_effect = yes
+		remove_advisor_by_category = MIL
+		add_mil_power = 200
+	}
+
+	option = {
+		name = ate_advisor_combination_events9.EVTOPT4
+
+		reduce_meritocracy_effect = yes
+		remove_advisor_by_category = ADM
+		remove_advisor_by_category = MIL
+		add_adm_power = 200
+		add_mil_power = 200
+	}
+}

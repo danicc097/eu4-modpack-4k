@@ -1,0 +1,71 @@
+namespace = subjects_expanded_real_union_subject_events
+
+country_event = {
+	id = subjects_expanded_real_union_subject_events.1
+	title = subjects_expanded_real_union_subject_events.EVTNAME1
+	desc = subjects_expanded_real_union_subject_events.EVTDESC1
+	picture = DIPLOMACY_eventPicture
+
+	hidden = yes
+
+	trigger = {
+		OR = {
+			AND = {
+				has_country_flag = recolored_real_union_subject
+				NOT = { is_subject_of_type = real_union_subject }
+			}
+			AND = {
+				is_subject_of_type = real_union_subject
+				NOT = { has_country_flag = real_union_changed_color_back }
+				OR = {
+					NOT = { has_country_flag = recolored_real_union_subject }
+					overlord = {
+						ROOT = {
+							NOT = { has_country_flag = recolored_real_union_subject_@PREV }
+						}
+					}
+				}
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	immediate = {
+		hidden_effect = {
+			clr_country_flag = recolored_real_union_subject
+			restore_country_color = yes
+			every_country = {
+				limit = {
+					ROOT = {
+						has_country_flag = recolored_real_union_subject_@PREV
+					}
+				}
+				ROOT = {
+					clr_country_flag = recolored_real_union_subject_@PREV
+				}
+			}
+			if = {
+				limit = {
+					is_subject_of_type = real_union_subject
+					NOT = { has_country_flag = real_union_changed_color_back }
+				}
+				overlord = {
+					ROOT = {
+						set_country_flag = recolored_real_union_subject
+						set_country_flag = recolored_real_union_subject_@PREV
+						change_country_color = { country = PREV }
+					}
+				}
+			}
+		}
+	}
+
+	option = {
+		name = subjects_expanded_real_union_subject_events1.EVTOPT1
+
+		ai_chance = { factor = 100 }
+	}
+}

@@ -1,0 +1,922 @@
+[i]Here you can find a list of all advisors in the mod with additional information. Advisors should only spawn, if you can actually use their bonuses (e.g. an advisor giving Clergy loyalty should not spawn if you don't have the Clergy estate). Though there are some limitations (e.g. an advisor giving vassal tax may also spawn if you have vassal like subjects that do not pay taxes to you). However due to limitations of the interface, some advisors exist in multiple variants (e.g. Archbishop has 3 variants, one for each modifier). This means should you lose the ability to use the modifier (e.g. switch to a different religion than Catholic while having the Catholic variant of the Archbishop), you will not automatically get a replacement but keep the advisor without valid modifier. From that point on though, a new advisor spawning would be the correct one. A few of the advisors can only be male.[/i]
+
+
+[u][b][h1]Administrative Advisors[/h1][/b][/u]
+
+[h1]Loyal Friend (ADM)[/h1]
+
+[b]Modifier:[/b]
+[list]
+[*] Administrative Advisor Cost: -33%
+[/list]
+
+[b]Skill Scaled Modifiers:[/b]
+[list]
+[*] Yearly Meritocracy: +0.25
+[/list]
+
+[h1]Court Physician[/h1]
+
+[b]Modifier:[/b]
+[list]
+[*] Average Monarch Lifespan: +10%
+[/list]
+
+[b]Skill Scaled Modifiers:[/b]
+[list]
+[*] Yearly Meritocracy: +0.25
+[/list]
+
+[h1]Cardinal[/h1]
+
+[b]Modifier:[/b]
+[list]
+[*] Curia Power Cost: -20%
+[/list]
+
+[b]Skill Scaled Modifiers:[/b]
+[list]
+[*] Yearly Meritocracy: +0.25
+[*] Appoint Cardinal Cost: -10%
+[/list]
+
+[h1]Archbishop[/h1]
+
+[b]Modifier:[/b]
+[list]
+[*] Yearly Papal Influence: +1
+[*] Church Power: +50%
+[*] Monthly Fervor: +0.5
+[/list]
+
+[b]Skill Scaled Modifiers:[/b]
+[list]
+[*] Yearly Meritocracy: +0.25
+[/list]
+
+[h1]Feudal Tax Collector[/h1]
+
+[b]Modifier:[/b]
+[list]
+[*] Income from Vassals: +25%
+[/list]
+
+[b]Skill Scaled Modifiers:[/b]
+[list]
+[*] Yearly Meritocracy: +0.25
+[/list]
+
+[h1]Architect[/h1]
+
+[b]Modifier:[/b]
+[list]
+[*] Construction Cost: -10%
+[/list]
+
+[b]Skill Scaled Modifiers:[/b]
+[list]
+[*] Yearly Meritocracy: +0.25
+[*] Construction Time: -5%
+[/list]
+
+[h1]Great Administrator[/h1]
+
+[b]Modifier:[/b]
+[list]
+[*] Core Creation Cost: -5%
+[/list]
+
+[b]Skill Scaled Modifiers:[/b]
+[list]
+[*] Yearly Meritocracy: +0.25
+[/list]
+
+[h1]Steward[/h1]
+
+[b]Modifier:[/b]
+[list]
+[*] State Governing Cost: -7.5%
+[/list]
+
+[b]Skill Scaled Modifiers:[/b]
+[list]
+[*] Yearly Meritocracy: +0.25
+[/list]
+
+[h1]Administrative Genius[/h1]
+
+[b]Modifier:[/b]
+[list]
+[*] Administrative Technology Cost: -5%
+[/list]
+
+[b]Skill Scaled Modifiers:[/b]
+[list]
+[*] Yearly Meritocracy: +0.25
+[/list]
+
+[h1]Anti Corruption Officer[/h1]
+
+[b]Modifier:[/b]
+[list]
+[*] Yearly Corruption: -0.1
+[/list]
+
+[b]Skill Scaled Modifiers:[/b]
+[list]
+[*] Yearly Meritocracy: +0.25
+[/list]
+
+[h1]First Minister[/h1]
+
+[b]Modifier:[/b]
+[list]
+[*] Yearly Legitimacy: +0.5
+[*] Yearly Devotion: +0.5
+[*] Yearly Republican Tradition: +0.2
+[/list]
+
+[b]Skill Scaled Modifiers:[/b]
+[list]
+[*] Yearly Meritocracy: +0.25
+[/list]
+
+[h1]State Administrator[/h1]
+
+[b]Modifier:[/b]
+[list]
+[*] State Maintenance Cost: -15%
+[/list]
+
+[b]Skill Scaled Modifiers:[/b]
+[list]
+[*] Yearly Meritocracy: +0.25
+[/list]
+
+[h1]Gold Digger[/h1]
+
+[b]Modifier:[/b]
+[list]
+[*] Monthly Gold Inflation: -15%
+[/list]
+
+[b]Skill Scaled Modifiers:[/b]
+[list]
+[*] Yearly Meritocracy: +0.25
+[/list]
+
+[h1]Free Thinker[/h1]
+
+[b]Modifier:[/b]
+[list]
+[*] Idea Cost: -5%
+[/list]
+
+[b]Skill Scaled Modifiers:[/b]
+[list]
+[*] Yearly Meritocracy: +0.25
+[/list]
+
+[h1]Revolutionist[/h1]
+
+[b]Modifier:[/b]
+[list]
+[*] Yearly Revolutionary Zeal: +1
+[/list]
+
+[b]Skill Scaled Modifiers:[/b]
+[list]
+[*] Yearly Meritocracy: +0.25
+[/list]
+
+[h1]Reformist[/h1]
+
+[b]Modifier:[/b]
+[list]
+[*] Reform Progress Growth: +10%
+[/list]
+
+[b]Skill Scaled Modifiers:[/b]
+[list]
+[*] Yearly Meritocracy: +0.25
+[/list]
+
+[h1]State Theorist[/h1]
+
+[b]Modifier:[/b]
+[list]
+[*] Yearly Absolutism: +0.5
+[/list]
+
+[b]Skill Scaled Modifiers:[/b]
+[list]
+[*] Yearly Meritocracy: +0.25
+[/list]
+
+[h1]Visionary[/h1]
+
+[b]Modifier:[/b]
+[list]
+[*] Great Project Upgrade Cost: -15%
+[/list]
+
+[b]Skill Scaled Modifiers:[/b]
+[list]
+[*] Yearly Meritocracy: +0.25
+[/list]
+
+[h1]Great Philosopher[/h1]
+
+[b]Modifier:[/b]
+[list]
+[*] Harmonization Speed: +15%
+[/list]
+
+[b]Skill Scaled Modifiers:[/b]
+[list]
+[*] Yearly Meritocracy: +0.25
+[/list]
+
+[h1]Arch-Chamberlain[/h1]
+
+[b]Modifier:[/b]
+[list]
+[*] Imperial Authority Growth: +5%
+[/list]
+
+[b]Skill Scaled Modifiers:[/b]
+[list]
+[*] Yearly Meritocracy: +0.25
+[/list]
+
+[h1]Monk[/h1]
+
+[b]Modifier:[/b]
+[list]
+[*] Clergy Loyalty Equilibrium: +10%
+[/list]
+
+[b]Skill Scaled Modifiers:[/b]
+[list]
+[*] Yearly Meritocracy: +0.25
+[*] Clergy Influence: +2%
+[/list]
+
+[h1]Brahmin Preacher[/h1]
+
+[b]Modifier:[/b]
+[list]
+[*] Brahmin Loyalty Equilibrium: +10%
+[/list]
+
+[b]Skill Scaled Modifiers:[/b]
+[list]
+[*] Yearly Meritocracy: +0.25
+[*] Brahmin Influence: +2%
+[/list]
+
+[h1]Dhimmi Scholar[/h1]
+
+[b]Modifier:[/b]
+[list]
+[*] Dhimmi Loyalty Equilibrium: +10%
+[/list]
+
+[b]Skill Scaled Modifiers:[/b]
+[list]
+[*] Yearly Meritocracy: +0.25
+[*] Dhimmi Influence: +2%
+[/list]
+
+[h1]Jain Bureaucrat[/h1]
+
+[b]Modifier:[/b]
+[list]
+[*] Jain Loyalty Equilibrium: +10%
+[/list]
+
+[b]Skill Scaled Modifiers:[/b]
+[list]
+[*] Yearly Meritocracy: +0.25
+[*] Jain Influence: +2%
+[/list]
+
+[h1]Missionary[/h1]
+
+[b]Modifier:[/b]
+[list]
+[*] Missionaries: +1
+[/list]
+
+[b]Skill Scaled Modifiers:[/b]
+[list]
+[*] Yearly Meritocracy: +0.25
+[/list]
+
+[h1]Imperial Bureaucrat[/h1]
+
+[b]Modifier:[/b]
+[list]
+[*] Imperial Mandate Growth: +0.05
+[/list]
+
+[b]Skill Scaled Modifiers:[/b]
+[list]
+[*] Yearly Meritocracy: +0.1
+[/list]
+
+[h1]Imam[/h1]
+
+[b]Modifier:[/b]
+[list]
+[*] Monthly Piety Accelerator: +1%
+[/list]
+
+[b]Skill Scaled Modifiers:[/b]
+[list]
+[*] Yearly Meritocracy: +0.25
+[/list]
+
+[h1]Scholar[/h1]
+
+[b]Modifier:[/b]
+[list]
+[*] Institution Spread: +25%
+[/list]
+
+[b]Skill Scaled Modifiers:[/b]
+[list]
+[*] Yearly Meritocracy: +0.25
+[*] Institution Embracement Cost: -5%
+[/list]
+
+[h1]Inventor[/h1]
+
+[b]Modifier:[/b]
+[list]
+[*] Innovativeness Gain: +25%
+[/list]
+
+[b]Skill Scaled Modifiers:[/b]
+[list]
+[*] Yearly Meritocracy: +0.25
+[/list]
+
+[h1]Witch Hunter[/h1]
+
+[b]Modifier:[/b]
+[list]
+[*] Missionary Strength vs Heretics: +3.5%
+[/list]
+
+[b]Skill Scaled Modifiers:[/b]
+[list]
+[*] Yearly Meritocracy: +0.25
+[*] Resistance vs Reformation: +15%
+[/list]
+
+
+[u][b][h1]Diplomatic Advisors[/h1][/b][/u]
+
+[h1]Loyal Friend (DIP)[/h1]
+
+[b]Modifier:[/b]
+[list]
+[*] Diplomatic Advisor Cost: -33%
+[/list]
+
+[b]Skill Scaled Modifiers:[/b]
+[list]
+[*] Yearly Meritocracy: +0.25
+[/list]
+
+[h1]Concubine[/h1]
+
+[b]Modifier:[/b]
+[list]
+[*] Heir Chance: +50%
+[/list]
+
+[b]Skill Scaled Modifiers:[/b]
+[list]
+[*] Yearly Meritocracy: +0.25
+[/list]
+
+[h1]Sailor Master Recruiter[/h1]
+
+[b]Modifier:[/b]
+[list]
+[*] Global Sailors Modifier: +15%
+[/list]
+
+[b]Skill Scaled Modifiers:[/b]
+[list]
+[*] Yearly Meritocracy: +0.25
+[/list]
+
+[h1]Blockade Specialist[/h1]
+
+[b]Modifier:[/b]
+[list]
+[*] Blockade Efficiency: +25%
+[/list]
+
+[b]Skill Scaled Modifiers:[/b]
+[list]
+[*] Yearly Meritocracy: +0.25
+[/list]
+
+[h1]Pirate Captain[/h1]
+
+[b]Modifier:[/b]
+[list]
+[*] Capture Ship Chance: +25%
+[/list]
+
+[b]Skill Scaled Modifiers:[/b]
+[list]
+[*] Yearly Meritocracy: +0.25
+[*] Privateer Efficiency: +5%
+[/list]
+
+[h1]Great Negotiator[/h1]
+
+[b]Modifier:[/b]
+[list]
+[*] Accept Vassalization Reasons: +10
+[/list]
+
+[b]Skill Scaled Modifiers:[/b]
+[list]
+[*] Yearly Meritocracy: +0.25
+[/list]
+
+[h1]Vicegerent[/h1]
+
+[b]Modifier:[/b]
+[list]
+[*] Subject Liberty Desire from Development: -15%
+[/list]
+
+[b]Skill Scaled Modifiers:[/b]
+[list]
+[*] Yearly Meritocracy: +0.25
+[/list]
+
+[h1]Travelling Salesman[/h1]
+
+[b]Modifier:[/b]
+[list]
+[*] Caravan Power: +15%
+[/list]
+
+[b]Skill Scaled Modifiers:[/b]
+[list]
+[*] Yearly Meritocracy: +0.25
+[*] Mercantilism Cost: -10%
+[/list]
+
+[h1]Traditional Naval Tactician[/h1]
+
+[b]Modifier:[/b]
+[list]
+[*] Yearly Naval Tradition: +0.5
+[/list]
+
+[b]Skill Scaled Modifiers:[/b]
+[list]
+[*] Yearly Meritocracy: +0.25
+[/list]
+
+[h1]Diplomatic Genius[/h1]
+
+[b]Modifier:[/b]
+[list]
+[*] Diplomatic Technology Cost: -5%
+[/list]
+
+[b]Skill Scaled Modifiers:[/b]
+[list]
+[*] Yearly Meritocracy: +0.25
+[/list]
+
+[h1]Cultural Commissionar[/h1]
+
+[b]Modifier:[/b]
+[list]
+[*] Culture Conversion Cost: -10%
+[/list]
+
+[b]Skill Scaled Modifiers:[/b]
+[list]
+[*] Yearly Meritocracy: +0.25
+[/list]
+
+[h1]Herald[/h1]
+
+[b]Modifier:[/b]
+[list]
+[*] Monthly War Exhaustion: -0.03
+[/list]
+
+[b]Skill Scaled Modifiers:[/b]
+[list]
+[*] Yearly Meritocracy: +0.25
+[/list]
+
+[h1]Arch-Chancellor[/h1]
+
+[b]Modifier:[/b]
+[list]
+[*] Approval of Imperial Reforms of Princes with Emperor's Religion: +5
+[/list]
+
+[b]Skill Scaled Modifiers:[/b]
+[list]
+[*] Yearly Meritocracy: +0.25
+[/list]
+
+[h1]Envoy[/h1]
+
+[b]Modifier:[/b]
+[list]
+[*] Envoy Travel Time: -15%
+[/list]
+
+[b]Skill Scaled Modifiers:[/b]
+[list]
+[*] Yearly Meritocracy: +0.25
+[/list]
+
+[h1]Vaishya Peasant[/h1]
+
+[b]Modifier:[/b]
+[list]
+[*] Vaishya Loyalty Equilibrium: +10%
+[/list]
+
+[b]Skill Scaled Modifiers:[/b]
+[list]
+[*] Yearly Meritocracy: +0.25
+[*] Vaishya Influence: +2%
+[/list]
+
+[h1]Guild Trader[/h1]
+
+[b]Modifier:[/b]
+[list]
+[*] Burghers Loyalty Equilibrium: +10%
+[/list]
+
+[b]Skill Scaled Modifiers:[/b]
+[list]
+[*] Yearly Meritocracy: +0.25
+[*] Burghers Influence: +2%
+[/list]
+
+[h1]Historian[/h1]
+
+[b]Modifier:[/b]
+[list]
+[*] Unjustified Demands Cost: -25%
+[/list]
+
+[b]Skill Scaled Modifiers:[/b]
+[list]
+[*] Yearly Meritocracy: +0.25
+[*] Fabricate Claim Cost: -10%
+[/list]
+
+[h1]Plantation Owner[/h1]
+
+[b]Modifier:[/b]
+[list]
+[*] Goods Produced Modifier: +5%
+[/list]
+
+[b]Skill Scaled Modifiers:[/b]
+[list]
+[*] Yearly Meritocracy: +0.25
+[/list]
+
+[h1]Galley Captain[/h1]
+
+[b]Modifier:[/b]
+[list]
+[*] Galley Combat Ability: +10%
+[/list]
+
+[b]Skill Scaled Modifiers:[/b]
+[list]
+[*] Yearly Meritocracy: +0.25
+[/list]
+
+[h1]Galleon Captain[/h1]
+
+[b]Modifier:[/b]
+[list]
+[*] Heavy Ship Combat Ability: +10%
+[/list]
+
+[b]Skill Scaled Modifiers:[/b]
+[list]
+[*] Yearly Meritocracy: +0.25
+[/list]
+
+[h1]Colonial Administrator[/h1]
+
+[b]Modifier:[/b]
+[list]
+[*] Colonial Placement Chance: +5%
+[/list]
+
+[b]Skill Scaled Modifiers:[/b]
+[list]
+[*] Yearly Meritocracy: +0.25
+[/list]
+
+[h1]Treasure Fleet Captain[/h1]
+
+[b]Modifier:[/b]
+[list]
+[*] Treasure Fleet Income: +25%
+[/list]
+
+[b]Skill Scaled Modifiers:[/b]
+[list]
+[*] Yearly Meritocracy: +0.25
+[/list]
+
+
+[u][b][h1]Military Advisors[/h1][/b][/u]
+
+[h1]Loyal Friend (MIL)[/h1]
+
+[b]Modifier:[/b]
+[list]
+[*] Military Advisor Cost: -33%
+[/list]
+
+[b]Skill Scaled Modifiers:[/b]
+[list]
+[*] Yearly Meritocracy: +0.25
+[/list]
+
+[h1]Feudal Lord[/h1]
+
+[b]Modifier:[/b]
+[list]
+[*] Vassal Forcelimit Contribution: +33%
+[/list]
+
+[b]Skill Scaled Modifiers:[/b]
+[list]
+[*] Yearly Meritocracy: +0.25
+[/list]
+
+[h1]Knight[/h1]
+
+[b]Modifier:[/b]
+[list]
+[*] Cavalry Combat Ability: +10%
+[/list]
+
+[b]Skill Scaled Modifiers:[/b]
+[list]
+[*] Yearly Meritocracy: +0.25
+[/list]
+
+[h1]Traditional Tactician[/h1]
+
+[b]Modifier:[/b]
+[list]
+[*] Yearly Army Tradition: +0.5
+[/list]
+
+[b]Skill Scaled Modifiers:[/b]
+[list]
+[*] Yearly Meritocracy: +0.25
+[/list]
+
+[h1]Landsknecht[/h1]
+
+[b]Modifier:[/b]
+[list]
+[*] Infantry Combat Ability: +10%
+[/list]
+
+[b]Skill Scaled Modifiers:[/b]
+[list]
+[*] Yearly Meritocracy: +0.25
+[/list]
+
+[h1]Mercenary Leader[/h1]
+
+[b]Modifier:[/b]
+[list]
+[*] Mercenary Maintenance Cost: -15%
+[/list]
+
+[b]Skill Scaled Modifiers:[/b]
+[list]
+[*] Yearly Meritocracy: +0.25
+[*] Mercenary Cost: -5%
+[/list]
+
+[h1]Lord of a Castle[/h1]
+
+[b]Modifier:[/b]
+[list]
+[*] Fort Maintenance Cost: -15%
+[/list]
+
+[b]Skill Scaled Modifiers:[/b]
+[list]
+[*] Yearly Meritocracy: +0.25
+[/list]
+
+[h1]Noble Man[/h1]
+
+[b]Modifier:[/b]
+[list]
+[*] Leaders without Upkeep: +1
+[/list]
+
+[b]Skill Scaled Modifiers:[/b]
+[list]
+[*] Yearly Meritocracy: +0.25
+[/list]
+
+[h1]Military Genius[/h1]
+
+[b]Modifier:[/b]
+[list]
+[*] Military Technology Cost: -5%
+[/list]
+
+[b]Skill Scaled Modifiers:[/b]
+[list]
+[*] Yearly Meritocracy: +0.25
+[/list]
+
+[h1]Siege Expert[/h1]
+
+[b]Modifier:[/b]
+[list]
+[*] Siege Ability: +10%
+[/list]
+
+[b]Skill Scaled Modifiers:[/b]
+[list]
+[*] Yearly Meritocracy: +0.25
+[/list]
+
+[h1]Master of Artillery[/h1]
+
+[b]Modifier:[/b]
+[list]
+[*] Artillery Combat Ability: +10%
+[/list]
+
+[b]Skill Scaled Modifiers:[/b]
+[list]
+[*] Yearly Meritocracy: +0.25
+[/list]
+
+[h1]Looting Expert[/h1]
+
+[b]Modifier:[/b]
+[list]
+[*] Looting Speed: +33%
+[/list]
+
+[b]Skill Scaled Modifiers:[/b]
+[list]
+[*] Yearly Meritocracy: +0.25
+[*] Available Loot: +10%
+[/list]
+
+[h1]Marshal[/h1]
+
+[b]Modifier:[/b]
+[list]
+[*] General Cost: -10%
+[/list]
+
+[b]Skill Scaled Modifiers:[/b]
+[list]
+[*] Yearly Meritocracy: +0.25
+[/list]
+
+[h1]Arch-Marshal[/h1]
+
+[b]Modifier:[/b]
+[list]
+[*] Manpower while at war with a country that is not part of the HRE: +15000
+[/list]
+
+[b]Skill Scaled Modifiers:[/b]
+[list]
+[*] Yearly Meritocracy: +0.25
+[/list]
+
+[h1]Supply Expert[/h1]
+
+[b]Modifier:[/b]
+[list]
+[*] Global Supply Limit Modifier: +20%
+[/list]
+
+[b]Skill Scaled Modifiers:[/b]
+[list]
+[*] Yearly Meritocracy: +0.25
+[/list]
+
+[h1]Sergeant[/h1]
+
+[b]Modifier:[/b]
+[list]
+[*] Drill Decay Modifier: -20%
+[/list]
+
+[b]Skill Scaled Modifiers:[/b]
+[list]
+[*] Yearly Meritocracy: +0.25
+[/list]
+
+[h1]Maratha Warrior[/h1]
+
+[b]Modifier:[/b]
+[list]
+[*] Maratha Loyalty Equilibrium: +10%
+[/list]
+
+[b]Skill Scaled Modifiers:[/b]
+[list]
+[*] Yearly Meritocracy: +0.25
+[*] Maratha Influence: +2%
+[/list]
+
+[h1]Gentleman[/h1]
+
+[b]Modifier:[/b]
+[list]
+[*] Nobility Loyalty Equilibrium: +10%
+[/list]
+
+[b]Skill Scaled Modifiers:[/b]
+[list]
+[*] Yearly Meritocracy: +0.25
+[*] Nobility Influence: +2%
+[/list]
+
+[h1]Cossack[/h1]
+
+[b]Modifier:[/b]
+[list]
+[*] Cossacks Loyalty Equilibrium: +10%
+[/list]
+
+[b]Skill Scaled Modifiers:[/b]
+[list]
+[*] Yearly Meritocracy: +0.25
+[*] Cossacks Influence: +2%
+[/list]
+
+[h1]Tribal Chieftain[/h1]
+
+[b]Modifier:[/b]
+[list]
+[*] Nomadic Tribes Loyalty Equilibrium: +10%
+[/list]
+
+[b]Skill Scaled Modifiers:[/b]
+[list]
+[*] Yearly Meritocracy: +0.25
+[*] Nomadic Tribes Influence: +2%
+[/list]
+
+[h1]Rajput Warrior[/h1]
+
+[b]Modifier:[/b]
+[list]
+[*] Rajputs Loyalty Equilibrium: +10%
+[/list]
+
+[b]Skill Scaled Modifiers:[/b]
+[list]
+[*] Yearly Meritocracy: +0.25
+[*] Rajputs Influence: +2%
+[/list]
+
+[h1]Banneret[/h1]
+
+[b]Modifier:[/b]
+[list]
+[*] Manpower Recovery Speed: +10%
+[/list]
+
+[b]Skill Scaled Modifiers:[/b]
+[list]
+[*] Yearly Meritocracy: +0.25
+[/list]

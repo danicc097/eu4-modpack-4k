@@ -1,0 +1,1067 @@
+[u]Here you can find a list of all peace treaties, casus bellis, state edicts and diplomatic actions in the mod, with additional information.[/u]
+The conditions for peace treaties, state edicts and diplomatic actions listed here are purely the ones needed for them to show up in the UI, whether there are additional requirements to select them will be shown in-game.
+
+[h1][b][u]Peace Treaties[/u][/b][/h1]
+
+[h1]Demilitarize Borders[/h1]
+
+[b]Conditions for Visibility:[/b]
+[list]
+[*] any province of the loser has a fort and is in an area that borders a province of the winner
+[/list]
+
+[b]Effects:[/b]
+[list]
+[*] all provinces with a fort, which are owned by the loser and lie in an area that neighbors the winner's provinces, will lose the fort as well as 1 base manpower.
+[*] the effect is executed 1 day after the peace deal is signed, to make sure it uses the new borders (make sure to take your province changes in the peace deal into account tho, so that the target after the deal is made still owns matching provinces)
+[/list]
+
+[h1]Demand Administrative/Diplomatic/Military Aides[/h1]
+
+[b]Conditions for Visibility:[/b]
+[list]
+[*] loser's ruler has at least 3 ADM/DIP/MIL
+[*] winner's ruler has less than 6 ADM/DIP/MIL
+[*] winner's ruler has not yet received Administrative/Diplomatic/Military Aides (a ruler can get each once)
+[/list]
+
+[b]Effects:[/b]
+[list]
+[*] loser's ruler loses 1 ADM/DIP/MIL
+[*] winner's ruler gains 1 ADM/DIP/MIL
+[/list]
+
+[h1]Enforced Embargo[/h1]
+
+[b]Conditions for Visibility:[/b]
+[list]
+[*] loser is winner's rival
+[*] winner has less than 100% mercantilism
+[*] loser has at least 3% mercantilism
+[*] the used casus belli is not a trade war
+[/list]
+
+[b]Effects:[/b]
+[list]
+[*] loser loses 3% mercantilism
+[*] winner gains 3% mercantilism
+[/list]
+
+[h1]Enforced Marriage[/h1]
+
+[b]Conditions for Visibility:[/b]
+[list]
+[*] winner and loser are either a monarchy, tribe, signoria, dutch republic or use the commander king or admiral king reform
+[/list]
+
+[b]Effects:[/b]
+[list]
+[*] winner and loser enter a royal marriage
+[/list]
+
+[h1]Lift Excommunication[/h1]
+
+[b]Conditions for Visibility:[/b]
+[list]
+[*] winner declared war on the loser with the "Question Papal Authority" casus belli
+[*] winner is Catholic
+[*] winner is excommunicated
+[*] loser is Catholic
+[*] loser is Curia Controller
+[/list]
+
+[b]Effects:[/b]
+[list]
+[*] winner's excommunication is lifted
+[/list]
+
+[h1]Ban Slavery[/h1]
+
+[b]Conditions for Visibility:[/b]
+[list]
+[*] winner declared war on the loser with the "Ban Slavery" casus belli
+[*] winner has abolished slavery voluntarily
+[*] loser is free or a tributary style subject
+[*] loser has not yet abolished slavery
+[*] loser has at least 1 province producing slaves or at least one of their colonial subjects has at leats 1 province producing slaves and not yet abolished slavery
+[/list]
+
+[b]Effects:[/b]
+[list]
+[*] loser abolishes slavery (same effects as the decision)
+[*] winner gains 10 of each monarch power per slave producing province owned by the loser or the loser's colonial nations
+[/list]
+
+[h1]Sacrifice Ruler[/h1]
+
+[b]Conditions for Visibility:[/b]
+[list]
+[*] El Dorado DLC is active
+[*] winner uses Doom
+[*] loser has no regency
+[*] loser is not the unior partner in a personal union
+[*] loser's ruler has at least a skill of 1 in one category
+[/list]
+
+[b]Effects:[/b]
+[list]
+[*] loser's ruler dies
+[*] winner loses doom equal to the sum of the loser's ruler's skills (so at max 18, for a 6 6 6 ruler)
+[/list]
+
+[h1]Unequal Treaty[/h1]
+
+[b]Conditions for Visibility:[/b]
+[list]
+[*] winner and loser have their capital on different continents
+[*] loser owns a coastal province in their home trade node
+[/list]
+
+[b]Effects:[/b]
+[list]
+[*] winner gains 5 trade power for 10 years in the loser's home trade node for each coastal province in that trade node owned by the loser
+[/list]
+
+[h1]Protect Religious Bretheren[/h1]
+
+[b]Conditions for Visibility:[/b]
+[list]
+[*] winner declared war on the loser with the "Protect Our Religious Bretheren" casus belli
+[*] winner and loser are in the same religion group
+[*] winner has a different religion than the loser
+[*] loser owns at least 1 province of the winner's religion
+[/list]
+
+[b]Effects:[/b]
+[list]
+[*] loser gains -100% missionary strength vs heretics and +2 tolerance of heretics for 10 years
+[/list]
+
+[h1]Destabilize Nation[/h1]
+
+[b]Conditions for Visibility:[/b]
+[list]
+[*] loser is winner's rival
+[/list]
+
+[b]Effects:[/b]
+[list]
+[*] winner gains 15 power projection
+[*] loser loses 2 stability
+[*] loser loses 100 of each monarch power
+[/list]
+
+[h1]Force Knowledge Sharing[/h1]
+
+[b]Conditions for Visibility:[/b]
+[list]
+[*] winner is lacking institutions
+[*] loser has embraced at least one more institution than the winner
+[/list]
+
+[b]Effects:[/b]
+[list]
+[*] winner gains 25 support for the oldest still by them not yet embraced institution in their capital area
+[/list]
+
+[h1]Fleet Disarmament[/h1]
+
+[b]Conditions for Visibility:[/b]
+[list]
+[*] loser has at least 10 ships
+[/list]
+
+[b]Effects:[/b]
+[list]
+[*] loser gains 2.5 war exhaustion and gets naval force limit -50.0% and ship cost +10.0% for 10 years
+[/list]
+
+[h1]Spread the True Faith[/h1]
+
+[b]Conditions for Visibility:[/b]
+[list]
+[*] current age is Age of Reformation
+[*] winner's religion is either Protestant, Reformed, Hussite or Anglican
+[*] winner has a different religion than the loser
+[*] loser owns at least 2 provinces
+[*] loser's capital is in Europe, was not target of this peace treaty within the last 25 years, is not a Restricted Center of Reformation, is not a reformation center, is not Rome, is not an island, is not expelling minorities, has at least 10 development and is neither in the same area as nor borders a reformation center
+[*] there are less than 1 Restricted Centers of Reformation of the winner's religion in the world
+[/list]
+
+[b]Effects:[/b]
+[list]
+[*] the loser's capital is converted to the winner's religion and gains a Restricted Center of Reformation
+[list]
+[*] the province will not be manually convertible for that time
+[*] every 6 months a close province will be converted to the specific religion via event, prioritizing the provinces owned by the owner of the Restricted Center of Reformation
+[/list]
+[/list]
+
+[h1]Army Disarmament[/h1]
+
+[b]Conditions for Visibility:[/b]
+[list]
+[*] loser has at least 10 units
+[/list]
+
+[b]Effects:[/b]
+[list]
+[*] loser gains 2.5 war exhaustion and gets land force limit -33.0% and regiment cost +10.0% for 10 years
+[/list]
+
+[h1]Force Seppuku[/h1]
+
+[b]Conditions for Visibility:[/b]
+[list]
+[*] winner is in the Japanese culture group
+[*] loser is in the Japanese culture group
+[*] winner is defender in the war
+[/list]
+
+[b]Effects:[/b]
+[list]
+[*] the loser's ruler dies
+[*] the winner gains 3 times the loser's ruler's skill in monarch power (so a 6 6 6 ruler will give 18 ADM, 18 DIP and 18 MIL power)
+[/list]
+
+[h1]Demand Slave Soldiers[/h1]
+
+[b]Conditions for Visibility:[/b]
+[list]
+[*] winner has Ottoman or Mamluk government or is Rome or is revolutionary or native or a tribe or has the military dictatorship, battle pope or pirate republic reform
+[*] loser has at least a max manpower of 1,000
+[/list]
+
+[b]Effects:[/b]
+[list]
+[*] loser gives 10.0% of their maximal manpower to the winner
+[*] winner loses 5 army tradition
+[/list]
+
+[i]Countries with the Ottoman or Mamluk government get reduced war score cost.[/i]
+
+[h1]Abduct Cardinal[/h1]
+
+[b]Conditions for Visibility:[/b]
+[list]
+[*] winner is Catholic
+[*] winner has less than 7 cardinals
+[*] loser is Catholic
+[*] loser has at least 1 cardinal
+[*] winner owns at least 1 Catholic province that does not have a cardinal
+[/list]
+
+[b]Effects:[/b]
+[list]
+[*] loser loses 1 cardinal in a random owned province
+[*] winner gains 1 cardinal in a random owned province
+[/list]
+
+[h1]Abduct Administrative/Diplomatic/Military Advisor[/h1]
+
+[b]Conditions for Visibility:[/b]
+[list]
+[*] loser has employed any vanilla advisor
+[/list]
+
+[b]Effects:[/b]
+[list]
+[*] loser loses their administrative/diplomatic/military advisor
+[*] winner gains an advisor of the respective type and skill, following the loser's religion and culture, which is 33.0% cheaper to employ
+[/list]
+
+[h1]Seize Mercantilism[/h1]
+
+[b]Conditions for Visibility:[/b]
+[list]
+[*] winner has less than 100% mercantilism
+[*] loser has at least 5% mercantilism
+[*] used casus belli is a trade war
+[/list]
+
+[b]Effects:[/b]
+[list]
+[*] loser loses 5% mercantilism
+[*] winner gains 5% mercantilism
+[/list]
+
+[h1]Claim Cultural Hegemony[/h1]
+
+[b]Conditions for Visibility:[/b]
+[list]
+[*] winner declared war on the loser with the "Claim Cultural Hegemony" casus belli
+[*] winner is not a subject
+[*] winner has not claimed a Cultural Hegemony
+[*] loser has claimed a Cultural Hegemony
+[/list]
+
+[b]Effects:[/b]
+[list]
+[*] loser loses the Cultural Hegemony
+[*] winner gains the Cultural Hegemony
+[/list]
+
+[h1]Give up Cultural Hegemony[/h1]
+
+[b]Conditions for Visibility:[/b]
+[list]
+[*] loser has claimed a Cultural Hegemony
+[*] winner is not in the same culture group as the one the loser has claimed Cultural Hegemony for
+[/list]
+
+[b]Effects:[/b]
+[list]
+[*] loser loses the Cultural Hegemony and cannot reclaim it for 20 years
+[/list]
+
+[h1]Force Administrative/Diplomatic/Military Technology Sharing[/h1]
+
+[b]Conditions for Visibility:[/b]
+[list]
+[*] winner and loser are both war leaders in the war
+[*] winner is at least one Administrative/Diplomatic/Military Technology behind the loser
+[/list]
+
+[b]Effects:[/b]
+[list]
+[*] winner gains 1 Administrative/Diplomatic/Military Technology level
+[/list]
+
+[i]Natives gain a discount on the war score cost against non-natives.[/i]
+
+[h1]Share Maps of Africa/Asia/Europe/North America/Oceania/South America/The New World[/h1]
+
+[b]Conditions for Visibility:[/b]
+[list]
+[*] loser has discovered at least one province on the specific continent that the winner has not discovered
+[*] for North America, South America, Oceania and The New World:
+[list]
+[*] either:
+[list]
+[*] winner has its capital on the specific continent
+[*] loser does not have its capital on the specific continent
+[*] loser is a Colonial Nation
+[*] loser is a former Colonial Nation
+[/list]
+[/list]
+[/list]
+
+[b]Effects:[/b]
+[list]
+[*] winner discovers all provinces on the specific continent that the loser has discovered
+[/list]
+
+[h1]Divorce of our Consort[/h1]
+
+[b]Conditions for Visibility:[/b]
+[list]
+[*] Rights of Man DLC is active
+[*] winner has a consort
+[*] origin country of the winner's consort is the loser
+[/list]
+
+[b]Effects:[/b]
+[list]
+[*] winner's consort gets removed
+[*] if winner and loser have a royal marriage, the marriage is broken
+[/list]
+
+[h1]Divorce of their Consort[/h1]
+
+[b]Conditions for Visibility:[/b]
+[list]
+[*] Rights of Man DLC is active
+[*] loser has a consort
+[*] origin country of the loser's consort is the winner
+[/list]
+
+[b]Effects:[/b]
+[list]
+[*] loser's consort gets removed
+[*] if winner and loser have a royal marriage, the marriage is broken
+[/list]
+
+[h1]Economic Supremacy[/h1]
+
+[b]Conditions for Visibility:[/b]
+[list]
+[*] Emperor DLC is active
+[*] war was declared with the "Economic Hegemony" casus belli
+[/list]
+
+[b]Effects:[/b]
+[list]
+[*] winner gains 25 power projection
+[*] loser gains +3 interest per annum, +33% advisor cost, -50% national tax modifier, -25% production efficiency, -25% global trade power and -25% global goods produced for 10 years
+[/list]
+
+[h1]Seize Fleets[/h1]
+
+[b]Conditions for Visibility:[/b]
+[list]
+[*] Emperor DLC is active
+[*] war was declared with the "Naval Hegemony" casus belli
+[/list]
+
+[b]Effects:[/b]
+[list]
+[*] all heavy ships, light ships and galleys of the loser are transfered to the winner
+[/list]
+
+[h1]Military Supremacy[/h1]
+
+[b]Conditions for Visibility:[/b]
+[list]
+[*] Emperor DLC is active
+[*] war was declared with the "Military Hegemony" casus belli
+[/list]
+
+[b]Effects:[/b]
+[list]
+[*] winner gains 25 power projection
+[*] loser -25.0% gains manpower, -25.0% manpower recovery speed, -10.0% army morale, -0.50 yearly army tradition, +25.0% shock damage received, +25.0% fire damage received, +50.0% mercenary maintenance cost for 10 years
+[/list]
+
+[h1]Strengthen the Mandate[/h1]
+
+[b]Conditions for Visibility:[/b]
+[list]
+[*] Mandate of Heaven DLC is active
+[*] winner is the Emperor of China
+[*] winner has less than 100 Imperial Mandate
+[*] either:
+[list]
+[*] loser declared war on the winner with the "Take Mandate of Heaven" casus belli
+[*] winner declared war on the loser with the "Force Tributary State" casus belli
+[*] winner declared war on the loser with the "Unify China" casus belli
+[/list]
+[/list]
+
+[b]Effects:[/b]
+[list]
+[*] winner gains 5 Imperial Mandate
+[/list]
+
+[h1]Crush the Mandate[/h1]
+
+[b]Conditions for Visibility:[/b]
+[list]
+[*] Mandate of Heaven DLC is active
+[*] loser is the Emperor of China
+[*] loser has at least 1 Imperial Mandate
+[/list]
+
+[b]Effects:[/b]
+[list]
+[*] loser's Imperial Mandate is set to 0
+[/list]
+
+[i]The war score cost roughly scales with the amount of Imperial Mandate the loser has, in 10 stages of 10% each from 10% to 100%.[/i]
+
+[h1]Claim Defender of Faith[/h1]
+
+[b]Conditions for Visibility:[/b]
+[list]
+[*] winner is not a subject
+[*] winner has the same religion as the loser
+[*] winner is not the Defender of Faith
+[*] loser is the Defender of Faith
+[/list]
+
+[b]Effects:[/b]
+[list]
+[*] loser stops being the Defender of Faith
+[*] winner becomes the Defender of Faith
+[*] if winner is excommunicated, he stops being excommunicated
+[/list]
+
+[h1]Host next Imperial Diet[/h1]
+
+[b]Conditions for Visibility:[/b]
+[list]
+[*] Holy Roman Empire Expanded is active
+[*] winner is not Emperor of the HRE
+[*] winner is a member of the HRE
+[*] loser is the Emperor of the HRE
+[*] is not the guaranteed host of the next Imperial Diet
+[*] no other country is the guaranteed host of the next Imperial Diet
+[/list]
+
+[b]Effects:[/b]
+[list]
+[*] opinion of other HRE members of the winner is changed by -20
+[*] when the next imperial diet is held, the winner will be the host and thus can pick the topic
+[/list]
+
+[h1]Plunder Curia Coffers[/h1]
+
+[b]Conditions for Visibility:[/b]
+[list]
+[*] Emperor DLC is active
+[*] Papacy is active
+[*] loser is the Papal State
+[*] loser is Catholic
+[*] curia coffers have at least 300 ducats stored
+[/list]
+
+[b]Effects:[/b]
+[list]
+[*] if there are at least 5000 ducats in the curia coffers:
+[list]
+[*] winner gains 1500 ducats and 0.30 inflation
+[*] if winner is Catholic, not excommunicated and doesn't have selected the Papal State as rival, winner loses 50 Papal Influence
+[*] curia coffers lose 2000 ducats
+[/list]
+[*] if there are between 2000 and 5000 ducats in the curia coffers:
+[list]
+[*] winner gains 1000 ducats and 0.20 inflation
+[*] if winner is Catholic, not excommunicated and doesn't have selected the Papal State as rival, winner loses 35 Papal Influence
+[*] curia coffers lose 1500 ducats
+[/list]
+[*] if there are between 1000 and 2000 ducats in the curia coffers:
+[list]
+[*] winner gains 500 ducats and 0.10 inflation
+[*] if winner is Catholic, not excommunicated and doesn't have selected the Papal State as rival, winner loses 20 Papal Influence
+[*] curia coffers lose 750 ducats
+[/list]
+[*] if there are between 300 and 1000 ducats in the curia coffers:
+[list]
+[*] winner gains 200 ducats and 0.05 inflation
+[*] if winner is Catholic, not excommunicated and doesn't have selected the Papal State as rival, winner loses 10 Papal Influence
+[*] curia coffers lose 300 ducats
+[/list]
+[/list]
+
+[i]The war score cost differs from the money gained. The possible war score costs are 10, 20, 25 and 30 for non-Catholics or Catholics that are excommunicated or have selected the Papal State as rival. The war score cost for the other Catholics are 20, 30, 40 and 50. In that case the winner will also suffer AE from this treaty.[/i]
+
+[h1]Install Antipope[/h1]
+
+[b]Conditions for Visibility:[/b]
+[list]
+[*] winner is Catholic
+[*] winner is not Curia Controller
+[*] loser is Papal State
+[*] loser is Catholic
+[*] loser's ruler is not an Antipope installed by the winner
+[*] Papacy Mechanic is active
+[*] either:
+[list]
+[*] "Rights of Man" or "Emperor" DLC is active and winner is a Great Power
+[*] neither "Rights of Man" nor "Emperor" DLC is active and winner is among the 8 highest developed countries in the world
+[/list]
+[*] winner has at least 300 total development (including development of non-sovereign subjects)
+[*] either:
+[list]
+[*] Holy Roman Empire Expanded is not active
+[*] winner is not the Emperor of the HRE or Protestant is enabled
+[/list]
+[/list]
+
+[b]Effects:[/b]
+[list]
+[*] loser gains a new ruler of winner's culture with a weak claim, who is between 60 and 80 years old
+[*] mutual opinion of winner and loser change by +50
+[*] opinion of other Catholic countries with winner change by -25
+[*] loser gains yearly devotion -0.25 and average monarch lifespan -10% until the death of the new ruler
+[/list]
+
+[h1]Transfer Monument[/h1]
+
+[b]Conditions for Visibility:[/b]
+[list]
+[*] winner declared war on the loser with the "Acquire Monument" casus belli
+[*] one of the following monuments is owned by the loser or one of the loser's non-tributary subjects:
+[list]
+[*] Stonhenge
+[*] Buddha Statues (not available with Extended Timeline)
+[*] Gomateshwara Statue (not available with Extended Timeline)
+[*] Inukshuk
+[*] Moai (not available with Extended Timeline)
+[/list]
+[/list]
+
+[b]Effects:[/b]
+[list]
+[*] the specific monument is moved to one of the winner's provinces that fulfills the monument's requirements, the capital is prioritized if possible
+[/list]
+
+[h1]Dynastic Legitimization[/h1]
+
+[b]Conditions for Visibility:[/b]
+[list]
+[*] current age is Age of Discovery or Age of Reformation or a medieval age from Extended Timeline
+[*] winner and loser are monarchies and share the same dynasty
+[*] winner has less than 100 legitimacy
+[/list]
+[/list]
+
+[b]Effects:[/b]
+[list]
+[*] the winner gains 25 legitimacy
+[/list]
+
+[h1]Delegitimize Dynastic Branch[/h1]
+
+[b]Conditions for Visibility:[/b]
+[list]
+[*] current age is Age of Discovery or Age of Reformation or a medieval age from Extended Timeline
+[*] winner and loser are monarchies and share the same dynasty
+[*] loser has at least 1 legitimacy
+[/list]
+[/list]
+
+[b]Effects:[/b]
+[list]
+[*] the loser loses 50 legitimacy
+[*] if the loser has an heir, the heir claim is reduced by 33
+[/list]
+
+[h1]Stop Slave Raids[/h1]
+
+[b]Conditions for Visibility:[/b]
+[list]
+[*] winner declared war on the loser with the "Stop Slave Raids" casus belli
+[/list]
+[/list]
+
+[b]Effects:[/b]
+[list]
+[*] all coastal provinces of the winner that are in slave raid range of the loser gain a modifier for 30 years that makes it impossible to raid the province
+[/list]
+
+[h1][b][u]Casus Bellis[/u][/b][/h1]
+
+[h1]Question Papal Authority[/h1]
+
+[b]Conditions:[/b]
+[list]
+[*] only available for human players
+[*] is Catholic
+[*] is excommunicated
+[*] target is Catholic
+[*] target is Curia Controller
+[/list]
+
+[b]Effects:[/b]
+[list]
+[*] unlocks "Lift Excommunication" peace offer
+[/list]
+
+[h1]Ban Slavery[/h1]
+
+[b]Conditions:[/b]
+[list]
+[*] has voluntarily abolished slavery
+[*] target is free or a tributary style subject
+[*] target has not yet abolished slavery
+[*] target has at least 1 province producing slaves or at least one of their colonial subjects has at leats 1 province producing slaves and not yet abolished slavery
+[/list]
+
+[b]Effects:[/b]
+[list]
+[*] unlocks "Ban Slavery" peace offer
+[/list]
+
+[h1]Protect Our Religious Bretheren[/h1]
+
+[b]Conditions:[/b]
+[list]
+[*] is defender of faith
+[*] is in the same religion group as the target
+[*] has a different religion than the target
+[*] is a neighbor of the target or has a border distance of less than 500 and is a human player
+[*] target owns at least 1 province of our religion
+[/list]
+
+[b]Effects:[/b]
+[list]
+[*] unlocks "Spread the True Faith" peace offer
+[/list]
+
+[h1]Liberation[/h1]
+
+[b]Conditions:[/b]
+[list]
+[*] either:
+[list]
+[*] is a great power and target is a great power and either is a human player or neighbors the target, is a rival of the target, has the target as a rival or the target has at least 20 AE on us
+[*] has its capital in the same region as the target and target has more than 30 AE on us (meaning they have caused more than 30 AE to us)
+[/list]
+[/list]
+
+[b]Effects:[/b]
+[list]
+[*] disallows province annexation, but gives a discount on releasing nations, releasing vassals, returning cores and revoking cores
+[/list]
+
+[h1]Claim Cultural Hegemony[/h1]
+
+[b]Conditions:[/b]
+[list]
+[*] is not a subject
+[*] has no truce with the target
+[*] was not forced to give up Cultural Hegemony within the last 20 years
+[*] target has claimed a Cultural Hegemony
+[*] is in the same culture group that the target has claimed Cultural Hegemony for
+[*] owns at least 1 province with a culture in the primary culture's culture group
+[*] either:
+[list]
+[*] at least 50 total development
+[*] at least 25% of the target's total development
+[/list]
+[/list]
+
+[b]Effects:[/b]
+[list]
+[*] unlocks "Claim Cultural Hegemony" peace offer
+[*] gives a discount on annexing provinces of the primary culture's culture group
+[/list]
+
+[h1]Intervene in Independence War[/h1]
+
+[b]Conditions:[/b]
+[list]
+[*] is not a subject
+[*] has selected the target as rival
+[*] target is not a subject
+[*] any country is not at war with us and is the war leader in the attacking side in an independence war against the target
+[/list]
+
+[b]Effects:[/b]
+[list]
+[*] gives a discount on "Destabilize Nation", "Army Disarmament", "Humiliate", "Demand Slave Soldiers", "Demilitarize Borders" and war reparations
+[*] gives access to "Show Strength" peace offer
+[/list]
+
+[h1]Economic Hegemony[/h1]
+
+[b]Conditions:[/b]
+[list]
+[*] Emperor DLC is active
+[*] is the Economic Hegemon
+[*] has a Hegemon Strength of at least 25%
+[*] the target is a great power
+[*] the target has a monthly income of at least 300 ducats
+[*] the target is not bankrupt
+[/list]
+
+[b]Effects:[/b]
+[list]
+[*] unlocks the "Economic Supremacy" and "Show Strength" peace offers
+[*] gives a discount on "Unequal Treaty", "Demand Administrative Aides", "Transfer Tradepower", "Abduct Administrative Advisor" and war reparations
+[*] the unlocks and discounts apply to both war leaders in the war
+[/list]
+
+[h1]Naval Hegemony[/h1]
+
+[b]Conditions:[/b]
+[list]
+[*] Emperor DLC is active
+[*] is the Naval Hegemon
+[*] has a Hegemon Strength of at least 25%
+[*] the target is a great power
+[*] the target has at least 100 ships (without Transports)
+[/list]
+
+[b]Effects:[/b]
+[list]
+[*] unlocks the "Seize Fleets" and "Show Strength" peace offers
+[*] gives a discount on "Fleet Disarmament", "Demand Diplomatic Aides" and "Abduct Diplomatic Advisor"
+[*] the unlocks and discounts apply to both war leaders in the war
+[/list]
+
+[h1]Military Hegemony[/h1]
+
+[b]Conditions:[/b]
+[list]
+[*] Emperor DLC is active
+[*] is the Military Hegemon
+[*] has a Hegemon Strength of at least 25%
+[*] the target is a great power
+[*] the target has at least 300 land units
+[/list]
+
+[b]Effects:[/b]
+[list]
+[*] unlocks the "Show Strength" peace offer
+[*] gives a discount on "Army Disarmament", "Demand Slave Soldiers", "Demilitarize Borders", "Demand Military Aides", "Destabilize Nation" and "Abduct Military Advisor"
+[*] the unlocks and discounts apply to both war leaders in the war
+[/list]
+
+[h1]Crush the Coalition[/h1]
+
+[b]Conditions:[/b]
+[list]
+[*] is not in a coalition war
+[*] target is the leader of the coalition against us
+[*] target is in a coalition with at least 3 members
+[*] target is not revolutionary
+[/list]
+
+[b]Effects:[/b]
+[list]
+[*] unlocks the "Show Strength" peace offer
+[*] gives a discount on all provinces, "Army Disarmament", "Destabilize Nation", "Fleet Disarmament", releasing nations, releasing vassals, revoking cores, returning cores and concede defeat
+[*] for the defender the discounts are exactly the same as for a coalition war
+[*] the AI peace desire is lowered, just like for coalition wars
+[/list]
+
+[h1]Border Friction[/h1]
+
+[b]Conditions:[/b]
+[list]
+[*] the Casus Belli is only granted via the "Create Border Friction" diplomatic action
+[*] is a neighbor of the target
+[*] is independent or a tributary style subject
+[*] target is independent or a tributary style subject
+[*] is not the overlord of the target
+[*] is not a subject of the target
+[/list]
+
+[b]Effects:[/b]
+[list]
+[*] only allows to conquer border provinces
+[*] gives a small discount on war score cost and aggressive expansion for taking border provinces as well as the "Demilitarize Borders" peace offer
+[/list]
+
+[h1]Acquire Monument[/h1]
+
+[b]Conditions:[/b]
+[list]
+[*] Leviathan DLC is active
+[*] is independent or a tributary type subject
+[*] either:
+[list]
+[*] neighbors the target
+[*] has a border distance of less than 100
+[*] neighbors target's overlord and the target is a non-tributary type subject
+[*] has a border distance of less than 100 to the target's overlord and the target is a non-tributary type subject
+[/list]
+[*] the target owns one of the following monuments and we would fulfill the monument's requirements, if moved to any of our provinces:
+[list]
+[*] Stonhenge
+[*] Buddha Statues (not available with Extended Timeline)
+[*] Gomateshwara Statue (not available with Extended Timeline)
+[*] Inukshuk
+[*] Moai (not available with Extended Timeline)
+[/list]
+[/list]
+
+[b]Effects:[/b]
+[list]
+[*] unlocks the "Transfer Monument" peace offer
+[/list]
+
+[i]Should you have a mod active that makes these monuments unmoveable, the treaty will not work. If you have a mod active that makes other monuments moveable, those will not be available to be moved with this casus belli.[/i]
+
+[h1]Stop Slave Raids[/h1]
+
+[b]Conditions:[/b]
+[list]
+[*] the target has slave raided one of our provinces
+[/list]
+
+[b]Effects:[/b]
+[list]
+[*] unlocks the "Stop Slave Raids" peace offer
+[*] gives a discount on war score cost for the "Fleet Disarmament" peace offer
+[/list]
+
+[h1]Proselytize the Heathens[/h1]
+
+[b]Conditions:[/b]
+[list]
+[*] is independent or a tributary type subject
+[*] is either the Defender of Faith, the Curia Controller or is a theocracy and neither Christian nor Muslim
+[*] does not have the "The Global Crusade" reform
+[*] it's not the Classical Age, Late Classical Age or Age of Migrations (early ages of Extended Timeline)
+[*] is in a different religion group than the target
+[*] the target is independent or a tributary type subject
+[*] the target is not the Papal State
+[*] the cost to force convert the target is smaller than or equal to 100% War Score Cost
+[*] is either a human player or has its capital on the same continent as the target or is either Christian or Muslim and the target has its capital outside of the Americas
+[*] either has completed the Religious Ideas or has either the reform "Feudal Theocracy", "Crusader Order", "Crusading Empire", "Holy Horde", "Kingdom of God" or "Magister Militum Dei" or Extended Timeline is active and has completed Early Religious Ideas and has a worse ADM Technology than 50
+[*] neighbors the target or has a non-tributary type, non colonial subject following the overlord's religion neighboring the target
+[/list]
+
+[b]Effects:[/b]
+[list]
+[*] allows to force convert the target to your religion despite being a heathen
+[/list]
+
+[h1][b][u]State Edicts[/u][/b][/h1]
+
+[h1]Cultural Hegemony Edict[/h1]
+
+[b]Conditions:[/b]
+[list]
+[*] has claimed Cultural Hegemony
+[/list]
+
+[b]Modifiers:[/b]
+[list]
+[*] Local Prosperity Growth +0.5 (per province in the state)
+[*] Local Production Efficiency +10.0%
+[/list]
+
+[h1]Military Infrastructure Improvements[/h1]
+
+[b]Conditions:[/b]
+[list]
+[*] none
+[/list]
+
+[b]Modifiers:[/b]
+[list]
+[*] Local Friendly Movement Speed +15.0%
+[/list]
+
+[h1]Scorched Earth Edict[/h1]
+
+[b]Conditions:[/b]
+[list]
+[*] none
+[/list]
+
+[b]Modifiers:[/b]
+[list]
+[*] Local Hostile Movement Speed -15.0%
+[/list]
+
+[h1]Disrupting Supply Efforts[/h1]
+
+[b]Conditions:[/b]
+[list]
+[*] none
+[/list]
+
+[b]Modifiers:[/b]
+[list]
+[*] Local Hostile Attrition +2
+[*] Local Maximum Attrition +2
+[/list]
+
+[h1]Fast Enlistment[/h1]
+
+[b]Conditions:[/b]
+[list]
+[*] none
+[/list]
+
+[b]Modifiers:[/b]
+[list]
+[*] Local Recruitment Time -50%
+[/list]
+
+[h1]Soldier Housing Edict[/h1]
+
+[b]Conditions:[/b]
+[list]
+[*] none
+[/list]
+
+[b]Modifiers:[/b]
+[list]
+[*] Local Supply Limit +25%
+[/list]
+
+[h1]Shipbuilding Efforts[/h1]
+
+[b]Conditions:[/b]
+[list]
+[*] is not a primitive nation
+[*] at least one province in the state has a port
+[/list]
+
+[b]Modifiers:[/b]
+[list]
+[*] Local Ship Construction Speed +15%
+[*] Local Ship Repair Time -15%
+[/list]
+
+[h1]Increased Sailor Enlistment[/h1]
+
+[b]Conditions:[/b]
+[list]
+[*] is not a primitive nation
+[*] at least one province in the state has a port
+[/list]
+
+[b]Modifiers:[/b]
+[list]
+[*] if all provinces in the area have a port:
+[list]
+[*] Local Sailor Modifier +25%
+[/list]
+[*] else:
+[list]
+[*] Local Sailor Modifier +33%
+[/list]
+[/list]
+
+[h1]Banners Enlistment Edict[/h1]
+
+[b]Conditions:[/b]
+[list]
+[*] can have banners
+[*] any province of the state can have banners
+[/list]
+
+[b]Modifiers:[/b]
+[list]
+[*] Local Amount of Banners: +0.50 (per province in the state)
+[/list]
+
+[h1][b][u]Diplomatic Actions[/u][/b][/h1]
+
+[h1]Create Border Friction[/h1]
+
+[b]Category:[/b] Covert Actions
+
+[b]Conditions:[/b]
+[list]
+[*] is a neighbor of the target
+[*] is independent or a tributary style subject
+[*] target is independent or a tributary style subject
+[*] is not the overlord of the target
+[*] is not a subject of the target
+[/list]
+
+[b]Effects:[/b]
+[list]
+[*] grants the "Border Friction" casus belli against the target
+[*] reduces the spy network in the target by 60
+[/list]
+
+[h1]Fabricate Succession Claim[/h1]
+
+[b]Category:[/b] Covert Actions
+
+[b]Conditions:[/b]
+[list]
+[*] is not a subject nation
+[*] can have Personal Unions
+[*] target is a subject
+[*] target is not a subject of us
+[*] target is a Personal Union
+[*] is not at war with the target
+[*] target's overlord is not a subject nation
+[*] target's overlord can have Personal Unions
+[*] target's overlord is not at war with us
+[*] target is a Personal Union under their current overlord for less than 15 years
+[/list]
+
+[b]Effects:[/b]
+[list]
+[*] if target accepts:
+[list]
+[*] mutual opinion of us and the target change by +100
+[*] start a succession war over the target (we declare war against the target's overlord, target joins enemy side and their capital will be the war goal)
+[*] reduces the spy network in the target's overlord by 90
+[/list]
+[*] if target declines:
+[list]
+[*] mutual opinion of us and the target change by -50
+[*] lose 20 prestige
+[/list]
+[/list]

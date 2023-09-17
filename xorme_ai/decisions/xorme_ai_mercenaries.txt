@@ -1,0 +1,50 @@
+country_decisions = {
+#################
+##DISBAND MERCS##
+#################
+	xorme_ai_mercenaries_disband = {
+		potential = {
+			xorme_ai_valid_nation = yes
+			num_of_hired_mercenary_companies = 1
+			OR = {
+				is_at_war = no
+				AND = {
+					NOT = { war_score = 10 }
+					current_income_balance = -6
+					num_of_loans = 3
+				}
+			}
+		}
+
+		allow = {
+			manpower_percentage = 0.1
+			OR = {
+				NOT = { num_of_rebel_armies = 1 }
+			}
+			OR = {
+				num_of_loans = 1
+				is_in_deficit = yes
+			}
+		}
+
+		effect = {
+			ROOT = {
+				random_hired_mercenary_company = {
+					disband_mercenary_company = THIS
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 1.0
+			modifier = {
+				factor = 10.0
+				num_of_loans = 2
+			}
+			modifier = {
+				factor = 1000
+				num_of_loans = 3
+			}
+		}
+	}
+}

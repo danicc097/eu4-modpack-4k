@@ -1,0 +1,51 @@
+namespace = FEE_Bundelkhand_Events
+
+country_event = {
+	id = FEE_Bundelkhand_Events.1
+	title = FEE_Bundelkhand_Events.1.T
+	desc = FEE_Bundelkhand_Events.1.D
+	picture = CITY_VIEW_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = BND
+		capital = 559
+		is_year = 1525
+		NOT = { is_year = 1550 }
+	}
+
+	mean_time_to_happen = {
+		months = 60
+	}
+
+	option = {
+		name = FEE_Bundelkhand_Events.1.OPT1 #Splendid.
+
+		add_prestige_or_monarch_power = { amount = 10 }
+		559 = {
+			change_province_name = "Orchha"
+			rename_capital = "Orchha"
+			if = {
+				limit = {
+					NOT = {
+						OR = {
+							has_building = fort_15th
+							has_building = fort_16th
+							has_building = fort_17th
+							has_building = fort_18th
+						}
+					}
+				}
+				add_building_construction = {
+					building = fort_15th
+					speed = 0.75
+					cost = 0
+				}
+			}
+			else = {
+				add_base_manpower = 2
+			}
+		}
+	}
+}

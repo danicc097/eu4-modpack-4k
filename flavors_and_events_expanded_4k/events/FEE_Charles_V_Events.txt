@@ -1,0 +1,908 @@
+namespace = FEE_Charles_V_Events
+
+#Sets up CharlesV as the heir to Spain, as a Habsburg
+country_event = {
+	id = FEE_Charles_V_Events.1
+	title = FEE_Charles_V_Events.1.T #FEE_Charles_V_Events.T.1:0 "The Habsburg dynasty in Castille"
+	desc = FEE_Charles_V_Events.1.D #FEE_Charles_V_Events.D.1:0 "The son of Maximillian I of Habsburg and Mary of Burgundy, Phillip I would succeed in winning the crown of Castille for the Habsburg dynasty. Already the ruler of the Austrian lowlands through his mother, in 1506 Phillip organized a coup and overthrew the acting king of Spain, Ferdinand II. Though he died mere months later, Philip's legacy would live on through his son Charles, who would come to rule over one of the largest empires in history..."
+	picture = NEW_HEIR_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		OR = {		#Fires for Spain or Castille
+			tag = CAS
+			tag = SPA
+		}
+		is_year = 1500
+		NOT = { is_year = 1550 } #Fairly wide window, to give Spain time to realize she hates France
+		NOT = { has_country_flag = FEE_Charles_V_Events_born }
+		OR = {
+			has_global_flag = burgundian_succession_crisis
+		}
+		num_of_cities = 15
+		is_subject = no
+		government = monarchy
+
+		#Won't replace an existing heir if the monarch dies and leaves a regency.
+		NOT = { has_regency = yes }
+		capital_scope = {
+			continent = europe
+		}
+		HAB = {		#Austria must be Habsburg
+			dynasty = "von Habsburg"
+		}
+		#NOT = {	#The whole thing would be weird if there were both Spain and Castille existing.
+		#	exists = CAS
+		#	exists = SPA
+		#}
+		#Both Spain/Castille and Austria must have rivaled France...
+		if = {
+			limit = {
+				FRA = {
+					is_free_or_tributary_trigger = no
+					num_of_cities = 15
+					NOT = { dynasty = ROOT }
+				}
+			}
+			OR = {
+				CAS = {
+					is_rival = FRA
+				}
+				SPA = {
+					is_rival = FRA
+				}
+			}
+			HAB = {
+				is_rival = FRA
+			}
+		}
+		NOT = {
+			OR = {
+				is_rival = HAB
+				war_with = HAB
+				is_enemy = HAB
+			}
+		}
+	}
+
+	option = {
+		name = FEE_Charles_V_Events.1.OPT1 #FEE_Charles_V_Events.1.OPT1:0 "Interesting..."
+
+		define_heir = {
+			name = "Charles"
+			dynasty = "von Habsburg"
+		}
+		hidden_effect = {
+			set_country_flag = FEE_Charles_V_Events_born
+			HAB = {
+				country_event = { id = flavor_spa.14 }#Gives Austria the generic notification of Habsburg on a foreign throne
+			}
+		}
+	}
+
+	option = {
+		name = FEE_Charles_V_Events.1.OPT2 #Not allowing Charles as heir
+		ai_chance = {
+			factor = 0
+		}
+
+		add_stability_or_adm_power = yes
+	}
+}
+
+#Gives Spain PU on Austria, makes Spain the emperor
+country_event = {
+	id = FEE_Charles_V_Events.2
+	title = FEE_Charles_V_Events.2.T 	#FEE_Charles_V_Events.T.2:0 "Charles Ascends to the Throne"
+	desc = FEE_Charles_V_Events.2.D 		#FEE_Charles_V_Events.D.2:0 "With his father having died in 1506, when Charles came of age in 1515 he aquired the title of Duke of Burgundy, which brought with it rulership over the Netherlands. A year later,the death of his grandfather Maximillian I made him ruler of all the Habsburg posessions in Germany, including the Archduchy of Austria.That same year, the death of Ferdinand II left the crowns of Aragon, Castille, and Leon to his mother Joanna. With Joanna being unsound of mind, Charles was declared co-ruler of each kingdom, and assumed de facto rulership over his mother's posessions. Finally, Charles was crowned Holy Roman Empire in 1530. Taken altogether, Charles's dominion encompassed most of Iberia, large portions of Western and Central Europe, as well as the Spanish colonies in Asia and the Americas. This arrangement however, did not sit well with France, who felt cornered by their Habsburg enemies, and were eager to reverse their fortunes..."
+	fire_only_once = yes
+	picture = HRE_eventPicture
+
+	fire_only_once = yes		#triggered on new monarch
+
+	trigger = {
+		has_country_flag = FEE_Charles_V_Events_born
+		HAB = {		#Austria must be Habsburg
+			dynasty = "von Habsburg"
+		}
+		has_ruler = "Charles"
+		hre_size = 1
+		NOT = { junior_union_with = HAB }#Won't fire if already in a union with Austria.
+		NOT = { senior_union_with = HAB }
+		NOT = { has_country_flag = FEE_Charles_V_Events_dead } #Won't fire if Chalres died as an heir
+		NOT = { has_country_flag = FEE_Charles_V_Events_ruler }
+	}
+
+	major = yes
+	major_trigger = {
+		OR = {
+			capital_scope = {
+				superregion = europe_superregion
+			}
+			is_part_of_hre = yes
+		}
+	}
+
+	option = {
+		name = FEE_Charles_V_Events.2.OPT1	#FEE_Charles_V_Events.2.OPT1:0 "Long may he reign!"
+		#Add 20 AE
+		hidden_effect = {
+			set_country_flag = FEE_Charles_V_Events_ruler
+		}
+		#define_ruler = {
+		#	adm = 2
+		#	dip = 2
+		#	mil = 2
+		#	dynasty = "von Habsburg"
+		#	name = "Charles"
+		#	age = 15
+		#}
+		custom_tooltip = "Charles von Habsburg will become ruler."
+		define_heir = {
+			dynasty = "von Habsburg"
+			name = "Phillip II"
+			adm = 3
+			dip = 3
+			mil = 3
+			age = 0
+		}
+
+		#tooltip = fee_charles_v_union_under_austria
+		#Make Spain the Emperor:
+		ROOT = {
+			capital_scope = {	#Puts Spain in the Empire
+				set_in_empire = yes
+			}
+		}
+		if = {
+			limit = {
+				HAB = {
+					#Austria must be Habsburg
+					dynasty = "von Habsburg"
+					#AND must be emperor
+					is_emperor = yes
+				}
+			}
+			set_emperor = yes
+		}
+		HAB = {
+			if = {
+				limit = {
+					has_subject_of_type = personal_union
+				}
+				every_subject_country = {
+					limit = {
+						is_subject_of_type = personal_union
+					}
+					set_country_flag = fee_charles_v_pu_austria
+				}
+			}
+		}
+
+		create_union = HAB	#Once all that silliness is done, create the PU
+		custom_tooltip = "Charles von Habsburg will become the Holy Roman Emperor"
+		set_government_rank_force = 2 #Putting Spain in the HRE makes it a duke, this fixes that.
+
+		#Make all countries in Germany, France, Italy afraid of Spain (for 140 years)
+		custom_tooltip = fee_charles_v_fear_empire_tt
+		tooltip = {
+			random_country = {
+				limit = {
+					OR = {
+						is_part_of_hre = yes
+						capital_scope = {
+							superregion = europe_superregion
+						}
+					}
+					NOT = {
+						junior_union_with = ROOT
+					}
+				}
+				add_opinion = {
+					who = ROOT
+					modifier = fee_charles_v_fear_of_empire
+				}
+			}
+		}
+		hidden_effect = {
+			every_country = {
+				limit = {
+					OR = {
+						is_part_of_hre = yes
+						capital_scope = {
+							superregion = europe_superregion
+						}
+					}
+					NOT = {
+						junior_union_with = ROOT
+					}
+				}
+				add_opinion = {
+					who = ROOT
+					modifier = fee_charles_v_fear_of_empire
+				}
+			}
+		}
+	}
+}
+
+#Charles Abdicates
+country_event = {
+	id = FEE_Charles_V_Events.3
+	title = FEE_Charles_V_Events.3.T
+	desc = FEE_Charles_V_Events.3.D
+	picture = COURT_eventPicture
+
+	trigger = {
+		has_country_flag = FEE_Charles_V_Events_born		#Charles has been born (to prevent misfires)
+		has_country_flag = FEE_Charles_V_Events_ruler		#CharlesV is the ruler
+		NOT = { has_country_flag = fee_charles_v_abdicate_option }
+		HAB = {								 #Austria must still be in the PU
+			junior_union_with = ROOT
+		}
+	}
+
+	fire_only_once = yes
+
+	mean_time_to_happen = {
+		months = 600 #50 Years
+	}
+
+	major = yes
+	major_trigger = {
+		OR = {
+			capital_scope = {
+				superregion = europe_superregion
+			}
+			is_part_of_hre = yes
+		}
+	}
+
+	#Abdicate option
+	option = {
+		name = FEE_Charles_V_Events.3.OPT1
+		ai_chance = {
+			factor = 100	#AI has a 100 to 1 chance of choosing the abdicate option
+		}
+
+		set_government_rank = 2
+		set_country_flag = fee_charles_v_abdicate_option
+
+		break_union = HAB			#Breaks the PU with Austria
+		custom_tooltip = fee_charles_v_abdication_charles_tt
+		if = {
+			limit = {
+				has_ruler = "Charles"
+			}
+			kill_ruler = yes
+		}
+		hidden_effect = {
+			ROOT = {
+				if = {
+					limit = {
+						has_subject_of_type = personal_union
+					}
+					every_subject_country = {
+						limit = {
+							is_subject_of_type = personal_union
+							has_country_flag = fee_charles_v_pu_austria
+						}
+						HAB = {
+							create_union = PREV
+						}
+					}
+				}
+				create_alliance = HAB
+			}
+			HAB = {					#Cedes the Austian Netherlands to Spain/Castille
+				every_core_province = {
+					limit = {
+						OR = {
+							region = low_countries_region
+							region = france_region
+						}
+					}
+					cede_province = ROOT
+					add_core = ROOT
+					remove_core = HAB
+				}
+				define_ruler = {
+					dynasty = "von Habsburg"
+					name = "Ferdinand I"
+				}
+			}
+			if = {
+				limit = {
+					exists = HAB 		#If Austria still exists, she gets any non-lowcountry provinces Spain might have eaten in the HRE.
+				}
+				every_core_province = {
+					limit = {
+						OR = {
+							region = north_german_region
+							region = south_german_region
+						}
+						is_part_of_hre = yes
+					}
+					cede_province = HAB
+					add_core = HAB
+					remove_core = ROOT
+				}
+			}
+			every_core_province = {		#Any provinces outside of Germany owned by Spain will be removed from the Empire. This should take Spain out of the Empire for good.
+				limit = {
+					NOT = {
+						OR = {
+							region = north_german_region
+							region = south_german_region
+							region = low_countries_region
+							region = france_region
+						}
+					}
+					is_part_of_hre = yes
+				}
+				set_in_empire = no
+			}
+			if = {					#Castille/Spain gets France Compte too.
+				limit = {
+					193 = {		#France Compte
+						owned_by = HAB
+					}
+				}
+				193 = {
+					cede_province = ROOT
+					add_core = ROOT
+				}
+			}
+		}
+
+		# #Makes Austria the Emperor
+		# HAB = {
+		# 	set_emperor = yes
+		# }
+
+		#Europe is no longer afraid
+		custom_tooltip = fee_charles_v_europe_no_longer_afraid_tt
+		hidden_effect = {
+			every_country = {
+				limit = {
+					has_opinion_modifier = {
+						modifier = fee_charles_v_fear_of_empire
+						who = ROOT
+					}
+				}
+				remove_opinion = {
+					who = ROOT
+					modifier = fee_charles_v_fear_of_empire
+				}
+			}
+		}
+	}
+
+	#Don't Abdicate option (mostly just for the player). Will make things even harder for Charles.
+	option = {
+		name = FEE_Charles_V_Events.3.OPT2
+
+		ai_chance = {
+			factor = 1	#AI has a 100 to 1 chance of choosing the abdicate option
+		}
+
+		set_country_flag = fee_charles_v_abdicate_option
+		add_ruler_modifier = {
+			name = fee_charles_v_charles_is_weak
+		}
+		add_stability = -2				#The nation will get testy
+		low_countries_region = {			#The Lowcountries will be problematic
+			limit = {
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			add_unrest = 7
+		}
+
+		HAB = {
+			add_ruler_modifier = {
+				name = fee_charles_v_charles_is_weak_c
+			}
+			capital_scope = {
+				spawn_rebels = {
+					type = pretender_rebels
+					size = 3
+					leader = "Ferdinand von Habsburg"
+				}
+			}
+			random_core_province = {
+				limit = {
+					region = south_german_region
+				}
+				spawn_rebels = {
+					type = pretender_rebels
+					size = 3
+					leader = "Ferdinand von Habsburg"
+				}
+			}
+			random_core_province = {
+				limit = {
+					region = south_german_region
+				}
+				spawn_rebels = {
+					type = pretender_rebels
+					size = 1
+					leader = "Ferdinand von Habsburg"
+				}
+			}
+		}
+
+		if = {
+			limit = {
+				BOH = {
+					is_subject_of_type = personal_union
+					has_country_flag = fee_charles_v_pu_austria
+				}
+			}
+			BOH = {
+				capital_scope = {
+					spawn_rebels = {
+						type = pretender_rebels
+						size = 2
+						leader = "Ferdinand von Habsburg"
+					}
+				}
+			}
+		}
+
+		if = {
+			limit = {
+				HUN = {
+					is_subject_of_type = personal_union
+					has_country_flag = fee_charles_v_pu_austria
+				}
+			}
+			HUN = {
+				capital_scope = {
+					spawn_rebels = {
+						type = pretender_rebels
+						size = 2
+						leader = "Ferdinand von Habsburg"
+					}
+				}
+			}
+		}
+	}
+}
+
+#Hidden event that prevents chain from continuing if Charles dies before ruling.
+country_event = {
+	id = FEE_Charles_V_Events.4
+	title = FEE_Charles_V_Events.4.T
+	desc = FEE_Charles_V_Events.4.D #FEE_Charles_V_Events.D.1:0
+	picture = NEW_HEIR_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		has_country_flag = FEE_Charles_V_Events_born		#Charles has been born
+		NOT = {
+			has_country_flag = FEE_Charles_V_Events_ruler	#But he isn't King yet
+		}
+		NOT = { has_heir = "Charles" }
+		NOT = { has_ruler = "Charles" }
+	}
+
+	immediate = {
+		hidden_effect = {
+			set_country_flag = FEE_Charles_V_Events_dead	#Prevents chain from continuing
+		}
+	}
+
+	option = {
+		name = FEE_Charles_V_Events.4.OPT1
+
+		add_splendor = -100
+		add_prestige = -25
+		add_legitimacy_equivalent = { amount = -25 republican_tradition = -13 }
+	}
+}
+
+###################################################
+#Test events for Emperor-Making
+####################################################
+
+#country_event = {			#Remove Electors
+#	id = FEE_Charles_V_Events.5
+#	title = FEE_Charles_V_Events.5.T 	#FEE_Charles_V_Events.T.5:0 "Charles Ascends to the Throne"
+#	desc = FEE_Charles_V_Events.1.D 		#FEE_Charles_V_Events.D.5:0 "With his father having died in 1506, when Charles came of age in 1515 he aquired the title of Duke of Burgundy, which brought with it rulership over the Netherlands. A year later,the death of his grandfather Maximillian I made him ruler of all the Habsburg posessions in Germany, including the Archduchy of Austria.That same year, the death of Ferdinand II left the crowns of Aragon, Castille, and Leon to his mother Joanna. With Joanna being unsound of mind, Charles was declared co-ruler of each kingdom, and assumed de facto rulership over his mother's posessions. Finally, Charles was crowned Holy Roman Empire in 1530. Taken altogether, Charles's dominion encompassed most of Iberia, large portions of Western and Central Europe, as well as the Spanish colonies in Asia and the Americas. This arrangement however, did not sit well with France, who felt cornered by their Habsburg enemies, and were eager to reverse their fortunes..."
+#	fire_only_once = yes
+#	major = yes
+#	picture = HRE_eventPicture
+#	is_triggered_only = yes
+#
+#	trigger = {
+#
+#	}
+#	option = {
+#		name = FEE_Charles_V_Events.5.OPT1
+#		every_country = {
+#			limit = {
+#				is_elector = yes
+#			}
+#			set_country_flag = was_elector
+#			elector = no	#Briefly removes all the electors from the empire
+#		}
+#	}
+#}
+#country_event = {			#Puts ROOT in Empire, makes it an elector
+#	id = FEE_Charles_V_Events.6
+#	title = FEE_Charles_V_Events.6.T 	#FEE_Charles_V_Events.T.6:0 "Charles Ascends to the Throne"
+#	desc = FEE_Charles_V_Events.1.D 		#FEE_Charles_V_Events.D.6:0 "With his father having died in 1606, when Charles came of age in 1616 he aquired the title of Duke of Burgundy, which brought with it rulership over the Netherlands. A year later,the death of his grandfather Maximillian I made him ruler of all the Habsburg posessions in Germany, including the Archduchy of Austria.That same year, the death of Ferdinand II left the crowns of Aragon, Castille, and Leon to his mother Joanna. With Joanna being unsound of mind, Charles was declared co-ruler of each kingdom, and assumed de facto rulership over his mother's posessions. Finally, Charles was crowned Holy Roman Empire in 1630. Taken altogether, Charles's dominion encompassed most of Iberia, large portions of Western and Central Europe, as well as the Spanish colonies in Asia and the Americas. This arrangement however, did not sit well with France, who felt cornered by their Habsburg enemies, and were eager to reverse their fortunes..."
+#	fire_only_once = yes
+#	major = yes
+#	picture = HRE_eventPicture
+#	is_triggered_only = yes
+#
+#	trigger = {
+#
+#	}
+#	option = {
+#		name = FEE_Charles_V_Events.6.OPT1
+#		ROOT = {
+#			capital_scope = {	#Puts Spain in the Empire
+#				set_in_empire = yes
+#			}
+#			elector = yes #And makes it an elector
+#		}
+#	}
+#}
+#country_event = {			#Kills the elector, triggering an election.
+#	id = FEE_Charles_V_Events.7
+#	title = FEE_Charles_V_Events.7.T 	#FEE_Charles_V_Events.T.7:0 "Charles Ascends to the Throne"
+#	desc = FEE_Charles_V_Events.1.D 		#FEE_Charles_V_Events.D.7:0 "With his father having died in 1706, when Charles came of age in 1717 he aquired the title of Duke of Burgundy, which brought with it rulership over the Netherlands. A year later,the death of his grandfather Maximillian I made him ruler of all the Habsburg posessions in Germany, including the Archduchy of Austria.That same year, the death of Ferdinand II left the crowns of Aragon, Castille, and Leon to his mother Joanna. With Joanna being unsound of mind, Charles was declared co-ruler of each kingdom, and assumed de facto rulership over his mother's posessions. Finally, Charles was crowned Holy Roman Empire in 1730. Taken altogether, Charles's dominion encompassed most of Iberia, large portions of Western and Central Europe, as well as the Spanish colonies in Asia and the Americas. This arrangement however, did not sit well with France, who felt cornered by their Habsburg enemies, and were eager to reverse their fortunes..."
+#	fire_only_once = yes
+#	major = yes
+#	picture = HRE_eventPicture
+#	is_triggered_only = yes
+#
+#	trigger = {
+#
+#	}
+#		name = FEE_Charles_V_Events.7.OPT1
+#		every_country = {
+#			limit = {
+#				is_emperor = yes
+#			}
+#			kill_ruler = yes #Removes the current emperor, whoever it may be. This forces an election.
+#		}
+#	}
+#}
+#country_event = {			#Adds Electors back, makes them part of the empire again.
+#	id = FEE_Charles_V_Events.8
+#	title = FEE_Charles_V_Events.8.T 	#FEE_Charles_V_Events.T.8:0 "Charles Ascends to the Throne"
+#	desc = FEE_Charles_V_Events.1.D 		#FEE_Charles_V_Events.D.8:0 "With his father having died in 1806, when Charles came of age in 1818 he aquired the title of Duke of Burgundy, which brought with it rulership over the Netherlands. A year later,the death of his grandfather Maximillian I made him ruler of all the Habsburg posessions in Germany, including the Archduchy of Austria.That same year, the death of Ferdinand II left the crowns of Aragon, Castille, and Leon to his mother Joanna. With Joanna being unsound of mind, Charles was declared co-ruler of each kingdom, and assumed de facto rulership over his mother's posessions. Finally, Charles was crowned Holy Roman Empire in 1830. Taken altogether, Charles's dominion encompassed most of Iberia, large portions of Western and Central Europe, as well as the Spanish colonies in Asia and the Americas. This arrangement however, did not sit well with France, who felt cornered by their Habsburg enemies, and were eager to reverse their fortunes..."
+#	fire_only_once = yes
+#	major = yes
+#	picture = HRE_eventPicture
+#	is_triggered_only = yes
+#
+#	trigger = {
+#
+#	}
+#	option = {
+#		name = FEE_Charles_V_Events.8.OPT1
+#		every_country = {
+#			limit = {
+#				has_country_flag = was_elector
+#			}
+#			elector = yes
+#		}
+#	}
+#}
+#country_event = {			#Removes Spain's electorship
+#	id = FEE_Charles_V_Events.9
+#	title = FEE_Charles_V_Events.9.T 	#FEE_Charles_V_Events.T.9:0 "Charles Ascends to the Throne"
+#	desc = FEE_Charles_V_Events.1.D 		#FEE_Charles_V_Events.D.9:0 "With his father having died in 1906, when Charles came of age in 1919 he aquired the title of Duke of Burgundy, which brought with it rulership over the Netherlands. A year later,the death of his grandfather Maximillian I made him ruler of all the Habsburg posessions in Germany, including the Archduchy of Austria.That same year, the death of Ferdinand II left the crowns of Aragon, Castille, and Leon to his mother Joanna. With Joanna being unsound of mind, Charles was declared co-ruler of each kingdom, and assumed de facto rulership over his mother's posessions. Finally, Charles was crowned Holy Roman Empire in 1930. Taken altogether, Charles's dominion encompassed most of Iberia, large portions of Western and Central Europe, as well as the Spanish colonies in Asia and the Americas. This arrangement however, did not sit well with France, who felt cornered by their Habsburg enemies, and were eager to reverse their fortunes..."
+#	fire_only_once = yes
+#	major = yes
+#	picture = HRE_eventPicture
+#	is_triggered_only = yes
+#
+#	trigger = {
+#
+#	}
+#	option = {
+#		name = FEE_Charles_V_Events.9.OPT1
+#		elector = no
+#	}
+#}
+
+#Charles dies before Abdicating
+country_event = {
+	id = FEE_Charles_V_Events.10
+	title = FEE_Charles_V_Events.10.T
+	desc = FEE_Charles_V_Events.10.D
+	picture = COURT_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		has_country_flag = FEE_Charles_V_Events_born		#Charles has been born (to prevent misfires)
+		has_country_flag = FEE_Charles_V_Events_ruler		#CharlesV is the ruler
+		NOT = { has_country_flag = fee_charles_v_abdicate_option }
+		NOT = { has_ruler = "Charles" }
+		NOT = { has_heir = "Charles" }
+		HAB = {								 #Austria must still be in the PU
+			junior_union_with = ROOT
+		}
+	}
+
+	major = yes
+	major_trigger = {
+		OR = {
+			capital_scope = {
+				superregion = europe_superregion
+			}
+			is_part_of_hre = yes
+		}
+	}
+
+	#Abdicate option
+	option = {
+		name = FEE_Charles_V_Events.10.OPT1
+		ai_chance = {
+			factor = 100	#AI has a 100 to 1 chance of choosing the abdicate option
+		}
+
+		if = {
+			limit = {
+				has_ruler = "Charles"
+			}
+			kill_ruler = yes
+		}
+		break_union = HAB			#Breaks the PU with Austria
+		custom_tooltip = fee_charles_v_abdication_charles_tt
+
+		hidden_effect = {
+			ROOT = {
+				if = {
+					limit = {
+						has_subject_of_type = personal_union
+					}
+					every_subject_country = {
+						limit = {
+							is_subject_of_type = personal_union
+							has_country_flag = fee_charles_v_pu_austria
+						}
+						HAB = {
+							create_union = PREV
+						}
+					}
+				}
+			}
+			HAB = {					#Cedes the Austian Netherlands to Spain/Castille
+				every_core_province = {
+					limit = {
+						region = low_countries_region
+					}
+					cede_province = ROOT
+					add_core = ROOT
+					remove_core = HAB
+				}
+				define_ruler = {
+					dynasty = "von Habsburg"
+					name = "Ferdinand I"
+				}
+			}
+			if = {					#Castille/Spain gets France Compte too.
+				limit = {
+					193 = {		#France Compte
+						owned_by = HAB
+					}
+				}
+				193 = {
+					cede_province = ROOT
+					add_core = ROOT
+				}
+			}
+			if = {
+				limit = {
+					exists = HAB 		#If Austria still exists, she gets any non-lowcountry provinces Spain might have eaten in the HRE.
+				}
+				every_core_province = {
+					limit = {
+						OR = {
+							region = north_german_region
+							region = south_german_region
+						}
+						is_part_of_hre = yes
+					}
+					cede_province = HAB
+					add_core = HAB
+					remove_core = ROOT
+				}
+			}
+			#Any provinces outside of Germany owned by Spain will be removed from the Empire. This should take Spain out of the Empire for good.
+			north_german_region = {
+				limit = {
+					is_part_of_hre = yes
+					is_core = ROOT
+					owned_by = ROOT
+				}
+				set_in_empire = no
+			}
+			south_german_region = {
+				limit = {
+					is_part_of_hre = yes
+					is_core = ROOT
+					owned_by = ROOT
+				}
+				set_in_empire = no
+			}
+			low_countries_region = {
+				limit = {
+					is_part_of_hre = yes
+					is_core = ROOT
+					owned_by = ROOT
+				}
+				set_in_empire = no
+			}
+			france_region = {
+				limit = {
+					is_part_of_hre = yes
+					is_core = ROOT
+					owned_by = ROOT
+				}
+				set_in_empire = no
+			}
+		}
+
+		# #Makes Austria the Emperor
+		# HAB = {
+		# 	set_emperor = yes
+		# }
+
+		set_country_flag = fee_charles_v_abdicate_option
+
+		#Europe is no longer afraid
+		custom_tooltip = fee_charles_v_europe_no_longer_afraid_tt
+		hidden_effect = {
+			every_country = {
+				limit = {
+					has_opinion_modifier = {
+						modifier = fee_charles_v_fear_of_empire
+						who = ROOT
+					}
+				}
+				remove_opinion = {
+					who = ROOT
+					modifier = fee_charles_v_fear_of_empire
+				}
+			}
+		}
+	}
+
+	#Don't Abdicate option (mostly just for the player)
+	option = {
+		name = FEE_Charles_V_Events.10.OPT2
+		ai_chance = {
+			factor = 1	#AI has a 100 to 1 chance of choosing the abdicate option
+		}
+
+		set_country_flag = fee_charles_v_abdicate_option
+		HAB = {
+			capital_scope = {
+				spawn_rebels = {
+					type = pretender_rebels
+					size = 3
+					leader = "Ferdinand von Habsburg"
+				}
+			}
+			capital_scope = {
+				spawn_rebels = {
+					type = pretender_rebels
+					size = 1
+					leader = "Ferdinand von Habsburg"
+				}
+			}
+			random_core_province = {
+				limit = {
+					region = south_german_region
+				}
+				spawn_rebels = {
+					type = pretender_rebels
+					size = 1
+					leader = "Ferdinand von Habsburg"
+				}
+			}
+			random_core_province = {
+				limit = {
+					region = south_german_region
+				}
+				spawn_rebels = {
+					type = pretender_rebels
+					size = 3
+					leader = "Ferdinand von Habsburg"
+				}
+			}
+			random_core_province = {
+				limit = {
+					region = south_german_region
+				}
+				spawn_rebels = {
+					type = pretender_rebels
+					size = 1
+					leader = "Ferdinand von Habsburg"
+				}
+			}
+			random_core_province = {
+				limit = {
+					region = south_german_region
+				}
+				spawn_rebels = {
+					type = pretender_rebels
+					size = 1
+					leader = "Ferdinand von Habsburg"
+				}
+			}
+
+			if = {
+				limit = {
+					BOH = {
+						is_subject_of_type = personal_union
+						has_country_flag = fee_charles_v_pu_austria
+					}
+				}
+				BOH = {
+					capital_scope = {
+						spawn_rebels = {
+							type = pretender_rebels
+							size = 2
+							leader = "Ferdinand von Habsburg"
+						}
+					}
+				}
+			}
+
+			if = {
+				limit = {
+					HUN = {
+						is_subject_of_type = personal_union
+						has_country_flag = fee_charles_v_pu_austria
+					}
+				}
+				HUN = {
+					capital_scope = {
+						spawn_rebels = {
+							type = pretender_rebels
+							size = 2
+							leader = "Ferdinand von Habsburg"
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+#The Habsburg dynasty in Iberia
+country_event = {
+	id = FEE_Charles_V_Events.11
+	title = FEE_Charles_V_Events.11.T #FEE_Charles_V_Events.T.1:0 "The Habsburg dynasty in Iberia"
+	desc = FEE_Charles_V_Events.11.D #FEE_Charles_V_Events.D.1:0 "The son of Maximillian I of Habsburg and Mary of Burgundy, Phillip I would succeed in winning the crown of Castille for the Habsburg dynasty. Already the ruler of the Austrian lowlands through his mother, in 1506 Phillip organized a coup and overthrew the acting king of Spain, Ferdinand II. Though he died mere months later, Philip's legacy would live on through his son Charles, who would come to rule over one of the largest empires in history..."
+	picture = NEW_HEIR_eventPicture
+
+	trigger = {
+		has_global_flag = burgundian_succession_crisis
+	}
+
+	fire_only_once = yes
+	is_triggered_only = yes		#Triggered on monarch or heir death, whichever comes first.
+
+	option = {
+		name = FEE_Charles_V_Events.11.OPT1 #FEE_Charles_V_Events.1.OPT1:0 "Interesting..."
+
+		ROOT = {
+			capital_scope = {	#Puts Spain in the Empire
+				set_in_empire = yes
+			}
+		}
+	}
+}

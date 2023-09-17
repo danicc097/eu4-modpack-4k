@@ -1,0 +1,43 @@
+south_america_modifier = {
+	local_colonial_growth = 10
+}
+caribbean_modifier = {
+	local_colonial_growth = 3
+}
+central_america_modifier = {
+	local_colonial_growth = 0
+}
+north_america_eastern_modifier = {
+	local_colonial_growth = -10
+}
+north_america_middle_modifier = {
+	local_colonial_growth = -15
+}
+north_america_west_modifier = {
+	local_colonial_growth = -40
+}
+africa_modifier = {
+	local_colonial_growth = -45
+}
+north_africa_modifier = {
+	local_colonial_growth = -7
+}
+oceania_modifier = {
+	local_colonial_growth = -15
+}
+stable_europe = {
+	global_colonial_growth = -10
+}
+unstable_europe = {
+	global_colonial_growth = 5
+}
+religious_stability = {
+	global_colonial_growth = -5
+}
+religious_turmoil = {
+	global_colonial_growth = 5
+}
+brittany_question = {
+	stability_cost_modifier = 0.2
+	global_autonomy = 0.05
+}

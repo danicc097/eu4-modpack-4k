@@ -1,0 +1,162 @@
+namespace = xorme_ai_initialization
+#MAIN SETUP
+country_event = {
+	id = xorme_ai_initialization.1
+	title = "NONE"
+	picture = "NONE"
+	desc = "NONE"
+
+	hidden = yes
+	fire_only_once = yes
+
+	trigger = {
+		has_game_started = yes
+		has_global_flag = xorme_search_for_players_happened
+		NOT = {
+			has_global_flag = xorme_ai_initialization_happened
+		}
+	}
+
+	immediate = {
+		set_global_flag = xorme_ai_dynamic_cheats_active
+		set_global_flag = xorme_ai_building_scripts_on
+		set_global_flag = xorme_ai_expand_infrastructure_on
+		set_global_flag = xorme_ai_initialization_started
+		random_country = {
+			limit = {
+				ai = yes
+				NOT = { has_global_flag = xorme_moh_active }
+				OR = {
+					has_country_modifier = the_mandate_of_heaven
+					has_reform = celestial_empire
+				}
+			}
+			xorme_ai_add_main_3_land_rights = yes
+		}
+		every_country = {
+			limit = { ai = yes }
+			add_ruler_personality = xorme_ai_personality
+			xorme_ai_estates_initialization_effect = yes
+			xorme_ai_set_crown_land = yes
+			xorme_ai_build_to_force_limit = yes
+			xorme_ai_essentials = yes
+			change_national_focus = MIL
+			if = {
+				limit = { is_free_or_tributary_trigger = yes }
+				country_event = {
+					id = xorme_ai_initialization.2
+				}
+			}
+		}
+		#EASTEREGG - main dynasty for ck3 mod
+	}
+
+	after = {
+		xorme_for_ck3_nation = yes
+		every_country = {
+			limit = { ai = no }
+			add_ruler_personality = xorme_ai_personality
+			if = {
+				limit = { has_global_flag = xorme_ai_multiplayer }
+				country_event = {
+					id = xorme_ai_initialization.3 days = 1
+				}
+			}
+			else_if = {
+				limit = { has_global_flag = xorme_ai_singleplayer }
+				country_event = {
+					id = xorme_ai_mod_menu.1 days = 1
+				}
+			}
+			else = {
+				set_global_flag = xorme_ai_gamemode_error
+			}
+		}
+		every_country = {
+			limit = { ai = yes }
+			add_treasury = 25
+			if = {
+				limit = {
+					OR = {
+						religion = tengri_pagan_reformed
+						has_reform = steppe_horde
+					}
+				}
+				capital_scope = {
+					build_to_forcelimit = {
+						infantry = 0.5
+						cavalry = 0.5
+					}
+				}
+			}
+			else = {
+				capital_scope = {
+					build_to_forcelimit = {
+						infantry = 0.7
+						cavalry = 0.3
+					}
+				}
+			}
+		}
+		every_country = {
+			limit = {
+				ai = yes
+				total_development = 150
+			}
+			add_treasury = 50
+			add_adm_power = 50
+			add_dip_power = 50
+			add_mil_power = 50
+			random_owned_province = {
+				add_unit_construction = {
+					type = infantry
+					amount = 5
+					speed = 0
+					cost = 0
+				}
+				add_unit_construction = {
+					type = infantry
+					amount = 1
+					speed = 1
+					cost = 1
+				}
+			}
+		}
+		set_global_flag = xorme_ai_initialization_happened
+		clr_global_flag = xorme_ai_initialization_started
+	}
+	option = {}
+}
+#DIPLOMACY SETUP
+country_event = {
+	id = xorme_ai_initialization.2
+	title = "NONE"
+	picture = "NONE"
+	desc = "NONE"
+	hidden = yes
+	is_triggered_only = yes
+
+
+	immediate = {
+		xorme_ai_alliance_initialization_effect = yes
+	}
+
+	option = {}
+}
+
+#INITIALIZATION HAPPENED
+country_event = {
+	id = xorme_ai_initialization.3
+	title = "xorme_ai_initialization.3_title"
+	picture = "INVENTION_eventPicture"
+	desc = "xorme_ai_initialization.3_desc"
+	is_triggered_only = yes
+
+	immediate = {
+		#RUN PLAYER SETUP INFO
+	}
+
+	option = {
+		name = xorme_ai_initialization_happened.1
+	}
+}

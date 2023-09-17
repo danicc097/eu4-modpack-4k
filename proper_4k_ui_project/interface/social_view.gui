@@ -1,0 +1,811 @@
+guiTypes = {
+	containerWindowType = {
+		name = "social_friends_list_item"
+		position = { x=0 y=0 }	
+		size = { width=740 height=108 }
+		orientation = upper_left
+			
+		#iconType = {
+		#	name = "icon"
+		#	position = { x = 32 y = 32 }
+		#	spriteType = "GFX_ethics_xenophile"
+		#	alwaystransparent = yes
+		#}
+		
+		instantTextBoxType = {
+			name = "name"
+			position = { x = 18 y = 9 }
+			font = "vic_18"
+			text = "player name"
+			orientation = upper_left
+			truncate = yes
+			maxWidth = 522
+		}
+		
+		instantTextBoxType = {
+			name = "detailed_status"
+			position = { x = 180 y = 54 }
+			font =  "vic_18"
+			text = "Playing Stellaris"
+			truncate = yes
+			maxWidth = 405
+			orientation = upper_left
+		}
+		
+		iconType = {
+			name = "status"
+			position = { x = 16 y = 54			}
+			spriteType = "GFX_social_friend_icon"
+		}
+		
+		instantTextBoxType = {
+			name = "status_text"
+			position = { x = 49 y = 54 }
+			font =  "vic_18"
+			text = "-"
+			orientation = upper_left
+		}
+		
+		buttonType = {
+			name = "friend_button"
+			position = { x = -18 y = -14 }
+			#spriteType = "GFX_empty_green_frame"
+			spriteType = "GFX_social_friendlist_button"
+			#size = { x = 513 y = 115 }
+			orientation = upper_left
+		}
+		
+		iconType = {
+			name = "new_message"
+			position = { x = 450 y = 36 }
+			spriteType = "GFX_new_message_icon"
+			pdx_tooltip = "SOCIAL_NEW_MESSAGE"
+		}
+	}
+	
+	containerWindowType = {
+		name = "social_friendrequest_ingoing_list_item"
+		position = { x=0 y=0 }	
+		size = { width=740 height=108 }
+		orientation = upper_left
+		
+		instantTextBoxType = {
+			name = "name"
+			position = { x = 18 y = 32 }
+			font = "vic_18"
+			text = "player name"
+			orientation = upper_left
+			truncate = yes
+			maxWidth = 405
+		}
+		
+		buttonType = {
+			name = "accept"
+			position = { x = 414 y = 40 }
+			spriteType = "GFX_social_accept_button"
+			buttonText = ""
+			buttonFont =  "vic_18"
+		}
+		
+		buttonType = {
+			name = "deny"
+			position = { x = 464 y = 40 }
+			spriteType = "GFX_social_deny_button"
+			buttonText = ""
+			buttonFont =  "vic_18"
+		}
+	}
+	
+	containerWindowType = {
+		name = "social_addfriend_list_item"
+		position = { x=0 y=0 }	
+		size = { width=740 height=108 }
+		orientation = upper_left
+			
+		instantTextBoxType = {
+			name = "name"
+			position = { x = 9 y = 9 }
+			font = "vic_18"
+			text = "player name"
+			orientation = upper_left
+			truncate = yes
+			maxWidth = 455
+			alwaysTransparent = yes
+		}
+		
+		iconType = {
+			name = "friend"
+			position = { x = -257 y = 20 }
+			spriteType = "GFX_text_pops"
+			orientation = upper_right
+			alwaysTransparent = yes
+		}
+
+		buttonType = {
+			name = "profile_button"
+			position = { x = -18 y = -14 }
+			spriteType = "GFX_social_friend_button"
+			size = { x = 513 y = 115 }
+			orientation = upper_left
+		}
+	}
+	
+	containerWindowType = {
+		name = "social_chat_window_header_self"
+		position = { x = 0 y = 0 }
+		size = { width=536 height=58 }
+		orientation = upper_left
+	
+		background = {
+			name = "background"
+			spriteType = "GFX_social_chat_self"
+		}
+		
+		instantTextBoxType = {
+			name = "name"
+			position = { x = 14 y = 4 }
+			font = "vic_18"
+			text = "name"
+			text_color_code = "E"
+			orientation = upper_left
+			truncate = yes
+			maxWidth = 522
+		}
+	}
+	
+	containerWindowType = {
+		name = "social_chat_window_header_other"
+		position = { x = 0 y = 0 }
+		size = { width=536 height=58 }
+		orientation = upper_left
+	
+		background = {
+			name = "background"
+			spriteType = "GFX_social_chat_other"
+			alwaystransparent = yes
+		}
+		
+		instantTextBoxType = {
+			name = "name"
+			position = { x = 14 y = 4 }
+			font = "vic_18"
+			text = "name"
+			text_color_code = "E"
+			orientation = upper_left
+			alwaystransparent = yes
+			truncate = yes
+			maxWidth = 522
+		}
+	}
+	
+	containerWindowType = {
+		name = "social_chat_window_text_self"
+		position = { x = 29 y = 0 }
+		size = { width=536 height=36 }
+		orientation = upper_left
+	
+		background = {
+			name = "background"
+			spriteType = "GFX_social_chat_self"
+			alwaystransparent = yes
+		}
+		
+		iconType = {
+			name = "bullet"
+			position = { x = 29 y = 11 }
+			spriteType = "GFX_social_chat_bullet"
+			alwaystransparent = yes
+		}
+		
+		instantTextBoxType = {
+			name = "text"
+			position = { x = 50 y = 0 }
+			maxWidth = 468
+			maxHeight = 58
+			font =  "vic_18"
+			text = "some chat text here"
+			orientation = upper_left
+			alwaystransparent = yes
+		}
+	}
+	
+	containerWindowType = {
+		name = "social_chat_window_text_other"
+		position = { x = 58 y = 0 }
+		size = { width=536 height=36 }
+		orientation = upper_left
+	
+		background = {
+			name = "background"
+			spriteType = "GFX_social_chat_other"
+			alwaystransparent = yes
+		}
+		
+		iconType = {
+			name = "bullet"
+			position = { x = 29 y = 11 }
+			spriteType = "GFX_social_chat_bullet"
+			alwaystransparent = yes
+		}
+			
+		instantTextBoxType = {
+			name = "text"
+			position = { x = 50 y = 0 }
+			maxWidth = 468
+			maxHeight = 58
+			font =  "vic_18"
+			text = "some chat text here"
+			orientation = upper_left
+			alwaystransparent = yes
+		}
+	}
+	
+	containerWindowType = {
+		name = "social_chat_window_invite"
+		position = { x = 58 y = 0 }
+		size = { width=536 height=40 }
+		orientation = upper_left
+	
+		background = {
+			name = "background"
+			spriteType = "GFX_social_chat_other"
+			alwaystransparent = yes
+		}
+		
+		iconType = {
+			name = "bullet"
+			position = { x = 29 y = 11 }
+			spriteType = "GFX_social_chat_bullet"
+			alwaystransparent = yes
+		}
+			
+		instantTextBoxType = {
+			name = "text"
+			position = { x = 50 y = 0 }
+			maxWidth = 414
+			maxHeight = 58
+			font =  "vic_18"
+			text = "some chat text here"
+			orientation = upper_left
+			alwaystransparent = yes
+		}
+		
+		buttonType = {
+			name = "accept"
+			position = { x = 414 y = 0 }
+			spriteType = "GFX_social_accept_button"
+			buttonText = ""
+			buttonFont =  "vic_18"
+		}
+		
+		buttonType = {
+			name = "decline"
+			position = { x = 464 y = 0 }
+			spriteType = "GFX_social_deny_button"
+			buttonText = ""
+			buttonFont =  "vic_18"
+		}
+	}
+			
+	containerWindowType = {
+		name = "social_chat_window"
+		position = { x=1620 y=461 }	
+		size = { width=576 height=806 }
+		moveable = yes
+		
+		background = {
+			name = "background"
+			quadTextureSprite = "GFX_tile_outliner_bg"
+		}
+		
+		instantTextBoxType = {
+			name = "title"
+			position = { x = 137 y = 14 }
+			font = "vic_18"
+			text = "player"
+			orientation = upper_left
+			alwaystransparent = yes
+			text_color_code = "H"
+			truncate = yes
+			maxWidth = 405
+		}
+	
+		buttonType = {
+			name = "close"
+			quadTextureSprite = "GFX_close"
+			position = { x = -74 y = 23 }
+			Orientation = "UPPER_RIGHT"
+			shortCut = "ESCAPE"
+			pdx_tooltip = "CLOSE_TITLE"
+			clicksound = "close_window"
+		}
+		
+		iconType = {
+			name = "social_friends_list_icon"
+			position = { x = 14 y = 14 }
+			spriteType = "GFX_combat_stat_damage_explosive"
+			alwaystransparent = yes
+		}
+		
+		containerWindowType = {
+			name = "chat_history_frame"
+			position = { x=9 y=122 }	
+			size = { width=558 height=551 }
+			orientation = upper_left
+			
+			background = {
+				name = "picture_background"
+				spriteType = "GFX_empty_green_frame"
+				alwaystransparent = yes
+			}
+			
+			smoothListBoxType = {
+				name = "list"
+				position = { x = 11 y= 11 }
+				orientation = upper_left
+				#priority = 100
+				size = { x = 558 y = 529 }
+				borderSize = { x=0 y=0 }
+				scrollbartype = "standardlistbox_slider"
+				spacing = 0
+			}
+		}
+		
+		containerWindowType = {
+			name = "chat_text_frame"
+			size = { width = 540 height = 122 }
+			position = { x = 18 y = 673 }
+			
+			background = {
+				name = "black"
+				spriteType = "GFX_tiles_dark_area_cut_8"
+				alwaysTransparent = yes
+			}
+			
+			editBoxType = {
+				name = "chatbox"
+				position = { x = 7 y = 4 }
+				size = { x = 533 y = 119 }
+				font =  "vic_18"
+			}
+		}
+	}
+	
+	containerWindowType = {
+		name = "social_input_dialog"
+		position = { x=29 y=29 }	
+		#Orientation = "CENTER_MIDDLE"
+		size = { width=922 height=288 }
+		moveable = yes
+		
+		background = {
+			name = "background"
+			quadTextureSprite = "GFX_tile_outliner_bg"
+		}
+		
+		instantTextBoxType = {
+			name = "title"
+			position = { x = 29 y = 14 }
+			font = "vic_18"
+			text = ""
+			orientation = upper_left
+		}
+		
+		containerWindowType = {
+			name = "text_frame"
+			size = { width = 873 height = 58 }
+			position = { x = 25 y = 101 }
+			orientation = upper_left
+			
+			background = {
+				name = "black"
+				spriteType = "GFX_tiles_dark_area_cut_8"
+				alwaysTransparent = yes
+			}
+		}
+	
+		editBoxType = {
+			name = "editbox_input"
+			position = { x = 43 y = 115 }
+			size = { x = 855 y = 119 }
+			font =  "vic_18"
+			orientation = upper_left
+		}
+	
+		buttonType = {
+			name = "button_ok"
+			position = { x = -583 y = -108 }
+			spriteType = "GFX_standard_button_142_34_button"
+			buttonText = "SOCIAl_INPUT_WINDOW_OK"
+			orientation = lower_right
+			buttonFont =  "vic_18"
+		}
+		
+		buttonType = {
+			name = "button_cancel"
+			position = { x = -302 y = -108 }
+			spriteType = "GFX_standard_button_142_34_button"
+			buttonText = "SOCIAl_INPUT_WINDOW_CANCEL"
+			orientation = lower_right
+			buttonFont =  "vic_18"
+		}
+	}
+	
+	containerWindowType = {
+		name = "social_message_dialog"
+		position = { x=29 y=29 }	
+		#Orientation = "CENTER_MIDDLE"
+		size = { width=922 height=288 }
+		moveable = yes
+		
+		background = {
+			name = "background"
+			quadTextureSprite = "GFX_tile_outliner_bg"
+		}
+		
+		instantTextBoxType = {
+			name = "title"
+			position = { x = 29 y = 14 }
+			font = "vic_18"
+			text = ""
+			orientation = upper_left
+		}
+		
+		instantTextBoxType = {
+			name = "message"
+			position = { x = 29 y = 115 }
+			font =  "vic_18"
+			text = ""
+			orientation = upper_left
+		}
+	
+		buttonType = {
+			name = "button_ok"
+			position = { x = -583 y = -108 }
+			spriteType = "GFX_standard_button_142_34_button"
+			buttonText = "SOCIAl_INPUT_WINDOW_OK"
+			orientation = lower_right
+			buttonFont =  "vic_18"
+		}
+	}
+	
+	containerWindowType = {
+		name = "social_addfriend_window"
+		position = { x=958 y=461 }	
+		size = { width=576 height=722 }
+		moveable = yes
+		
+		background = {
+			name = "background"
+			quadTextureSprite = "GFX_tile_outliner_bg"
+		}
+	
+		buttonType = {
+			name = "close"
+			quadTextureSprite = "GFX_close"
+			position = { x = -74 y = 23 }
+			Orientation = "UPPER_RIGHT"
+			shortCut = "ESCAPE"
+			pdx_tooltip = "CLOSE_TITLE"
+			clicksound = "close_window"
+		}
+		
+		instantTextBoxType = {
+			name = "title"
+			position = { x = 29 y = 14 }
+			font = "vic_18"
+			text = "SOCIAL_ADDFRIEND_WINDOW"
+			orientation = upper_left
+			text_color_code = "E"
+		}
+		
+		containerWindowType = {
+			name = "frame_search"
+			size = { width = 540 height = 58 }
+			position = { x = 18 y = 94 }
+			
+			background = {
+				name = "black"
+				spriteType = "GFX_tiles_dark_area_cut_8"
+				alwaysTransparent = yes
+			}
+		}
+	
+		editBoxType = {
+			name = "editbox_search"
+			position = { x = 29 y = 101 }
+			size = { x = 533 y = 58 }
+			font =  "vic_18"
+		}
+		
+		containerWindowType = {
+			name = "list_frame"
+			position = { x=9 y=155 }	
+			size = { width=558 height=556 }
+			orientation = upper_left
+			
+			background = {
+				name = "picture_background"
+				spriteType = "GFX_empty_green_frame"
+			}
+			
+			smoothListBoxType = {
+				name = "list"
+				position = { x = 14 y= 11 }
+				orientation = upper_left
+				#priority = 100
+				size = { x = 531 y = 644 }
+				borderSize = { x=0 y=0 }
+				scrollbartype = "standardlistbox_slider"
+				spacing = 0
+			}
+		}
+		
+		buttonType = {
+			name = "button_search"
+			position = { x = 504 y = 103 }
+			spriteType = "GFX_social_search"
+			buttonText = "SOCIAL_ADDFRIEND_WINDOW_SEARCH"
+		}
+	}
+	
+	containerWindowType = {
+		name = "social_friends_window"
+		position = { x=58 y=461 }	
+		size = { width=576 height=922 }
+		moveable = yes
+		
+		background = {
+			name = "background"
+			quadTextureSprite = "GFX_tile_outliner_bg"
+		}
+		
+		instantTextBoxType = {
+			name = "title"
+			position = { x = 130 y = 0 }
+			font = "vic_18"
+			text = ""
+			text_color_code = "H"
+			truncate = yes
+			maxWidth = 405
+			orientation = upper_left
+		}
+		
+		instantTextBoxType = {
+			name = "detailed_status"
+			position = { x = 130 y = 43 }
+			font =  "vic_18"
+			text = "Playing Stellaris"
+			truncate = yes
+			maxWidth = 405
+			orientation = upper_left
+		}
+		
+		buttonType = {
+			name = "status_button"
+			position = { x = 108 y = 54 }
+			spriteType = "GFX_button_150_24"
+			buttonText = "SOCIAL_STATUS"
+			buttonFont =  "vic_18"
+		}
+
+		iconType = {
+			name = "status"
+			position = { x = 137 y = 83 }
+			spriteType = "GFX_social_friend_icon"
+			alwaysTransparent = yes
+		}
+	
+		buttonType = {
+			name = "close"
+			quadTextureSprite = "GFX_close"
+			position = { x = -74 y = 23 }
+			Orientation = "UPPER_RIGHT"
+			shortCut = "ESCAPE"
+			pdx_tooltip = "CLOSE_TITLE"
+			clicksound = "close_window"
+		}
+		
+		buttonType = {
+			name = "add_button"
+			position = { x = 279 y = 821 }
+			spriteType = "GFX_standard_button_142_34_button"
+			buttonText = "SOCIAL_ADDFRIEND_WINDOW_ADD"
+			buttonFont =  "vic_18"
+		}
+		
+		iconType = {
+			name = "social_friends_list_icon"
+			position = { x = 14 y = 14 }
+			spriteType = "GFX_combat_stat_damage_explosive"
+			alwaystransparent = yes
+		}
+		
+		iconType = {
+			name = "social_friends_line"
+			position = { x = 11 y = 115 }
+			spriteType = "GFX_line_short"
+		}
+		
+		containerWindowType = {
+			name = "list_frame"
+			position = { x=9 y=139 }	
+			size = { width=558 height=698 }
+			orientation = upper_left
+			
+			background = {
+				name = "picture_background"
+				spriteType = "GFX_empty_green_frame"
+				#alwaystransparent = yes
+			}
+			
+			smoothListBoxType = {
+				name = "list"
+				position = { x = 14 y= 11 }
+				orientation = upper_left
+				#priority = 100
+				size = { x = 531 y = 677 }
+				borderSize = { x=0 y=0 }
+				scrollbartype = "standardlistbox_slider"
+				spacing = -18
+			}
+		}
+	}
+	
+	containerWindowType = {
+		name = "social_message_popup_window"
+		position = { x=58 y=-205 }	
+		size = { width=576 height=101 }
+		moveable = no
+		orientation = lower_left
+		
+		background = {
+			name = "background"
+			quadTextureSprite = "GFX_social_popup_background"
+		}
+		
+		instantTextBoxType = {
+			name = "from"
+			position = { x = 14 y = 7 }
+			maxWidth = 558
+			font = "vic_18"
+			text = ""
+			orientation = upper_left
+			text_color_code = "E"
+			truncate = yes
+			maxWidth = 522
+		}
+		
+		instantTextBoxType = {
+			name = "message"
+			position = { x = 14 y = 58 }
+			maxWidth = 558
+			maxHeight = 2
+			font =  "vic_18"
+			text = ""
+			truncate = yes
+			orientation = upper_left
+		}
+		
+		buttonType = {
+			name = "close"
+			quadTextureSprite = "GFX_close"
+			position = { x = -74 y = 23 }
+			Orientation = "UPPER_RIGHT"
+		}
+	}
+		
+	containerWindowType = {
+		name = "social_view"
+		position = { x=0 y=0 }	
+		size = { width=100% height=100% }
+		
+		containerWindowType = {
+			name = "social_friends_context_menu"
+			position = { x=990 y=900 }	
+			size = { width=270 height=135 }
+			moveable = no
+			
+			background = {
+				name = "background"
+				spriteType = "GFX_social_chat_other"
+			}
+			
+			buttonType = {
+				name = "invite_friend"
+				position = { x = -14 y = -14 }
+				spriteType = "GFX_standard_button_142_34_button"
+				buttonText = "SOCIAL_SEND_INVITE"
+				buttonFont =  "vic_18"
+			}
+			
+			buttonType = {
+				name = "join_friend"
+				position = { x = -14 y = -14 }
+				spriteType = "GFX_standard_button_142_34_button"
+				buttonText = "SOCIAL_SEND_JOIN"
+				buttonFont =  "vic_18"
+			}
+			
+			buttonType = {
+				name = "send_button"
+				position = { x = -14 y = -14 }
+				spriteType = "GFX_standard_button_142_34_button"
+				buttonText = "SOCIAL_SEND_MESSAGE"
+				buttonFont =  "vic_18"
+			}
+			
+			buttonType = {
+				name = "remove_button"
+				position = { x = -14 y = 45 }
+				spriteType = "GFX_standard_button_142_34_button"
+				buttonText = "SOCIAL_REMOVE_FRIEND"
+				buttonFont =  "vic_18"
+			}
+		}
+		
+		containerWindowType = {
+			name = "social_addfriend_context_menu"
+			position = { x=990 y=900 }	
+			size = { width=270 height=76 }
+			moveable = no
+			
+			background = {
+				name = "background"
+				spriteType = "GFX_social_chat_other"
+			}
+			
+			buttonType = {
+				name = "request_button"
+				position = { x = -14 y = -14 }
+				spriteType = "GFX_standard_button_142_34_button"
+				buttonText = "SOCIAL_SEND_FRIENDREQUEST"
+				buttonFont =  "vic_18"
+			}
+		}
+		
+		containerWindowType = {
+			name = "social_status_context_menu"
+			position = { x=990 y=900 }	
+			size = { width=270 height=317 }
+			moveable = no
+			
+			background = {
+				name = "background"
+				spriteType = "GFX_social_chat_other"
+			}
+				
+			buttonType = {
+				name = "available_button"
+				position = { x = -14 y = -14 }
+				spriteType = "GFX_standard_button_142_34_button"
+				buttonText = "SOCIAL_STATUS_AVAILABLE"
+				buttonFont =  "vic_18"
+			}
+			
+			buttonType = {
+				name = "away_button"
+				position = { x = -14 y = 45 }
+				spriteType = "GFX_standard_button_142_34_button"
+				buttonText = "SOCIAL_STATUS_AWAY"
+				buttonFont =  "vic_18"
+			}
+			
+			buttonType = {
+				name = "unavailable_button"
+				position = { x = -14 y = 104 }
+				spriteType = "GFX_standard_button_142_34_button"
+				buttonText = "SOCIAL_STATUS_UNAVAILABLE"
+				buttonFont =  "vic_18"
+			}
+			
+			buttonType = {
+				name = "do_not_disturb_button"
+				position = { x = -14 y = 166 }
+				spriteType = "GFX_standard_button_142_34_button"
+				buttonText = "SOCIAL_STATUS_DO_NOT_DISTURB"
+				buttonFont =  "vic_18"
+			}
+		}
+	}
+}

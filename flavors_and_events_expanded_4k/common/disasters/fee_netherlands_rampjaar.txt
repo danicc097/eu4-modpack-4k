@@ -1,0 +1,150 @@
+fee_netherlands_rampjaar = {
+	potential = {
+		tag = NED
+		NOT = { has_country_flag = had_fee_netherlands_rampjaar }
+		is_free_or_tributary_trigger = yes
+	}
+	can_start = {
+		OR = {
+			current_age = age_of_absolutism
+			current_age = age_of_revolutions
+		}
+		is_at_war = yes
+		OR = {
+			war_exhaustion = 10
+			NOT = { war_score = -25 }
+			num_of_owned_provinces_with = {
+				value = 3
+				NOT = { controlled_by = ROOT }
+			}
+		}
+	}
+	can_stop = {
+		OR = {
+			has_any_disaster = yes
+			AND = {
+				is_at_war = no
+				stability = 1
+				NOT = { war_exhaustion = 0.01 }
+				NOT = { num_of_rebel_controlled_provinces = 1 }
+			}
+		}
+	}
+	progress = {
+		modifier = {
+			factor = 1
+			NOT = { stability = 0 }
+		}
+		modifier = {
+			factor = 1
+			NOT = { stability = -1 }
+		}
+		modifier = {
+			factor = 2
+			NOT = { stability = -2 }
+		}
+		modifier = {
+			factor = 0.5
+			war_exhaustion = 5
+		}
+		modifier = {
+			factor = 0.5
+			war_exhaustion = 10
+		}
+		modifier = {
+			factor = 1
+			war_exhaustion = 15
+		}
+		modifier = {
+			factor = 2
+			war_exhaustion = 20
+		}
+		modifier = {
+			factor = 0.5
+			NOT = { war_score = -10 }
+		}
+		modifier = {
+			factor = 0.5
+			NOT = { war_score = -25 }
+		}
+		modifier = {
+			factor = 1
+			NOT = { war_score = -35 }
+		}
+		modifier = {
+			factor = 2
+			NOT = { war_score = -50 }
+		}
+		modifier = {
+			factor = 2
+			NOT = { war_score = -75 }
+		}
+		modifier = {
+			factor = 0.5
+			num_of_owned_provinces_with = {
+				value = 1
+				NOT = { controlled_by = ROOT }
+			}
+		}
+		modifier = {
+			factor = 0.5
+			num_of_owned_provinces_with = {
+				value = 3
+				NOT = { controlled_by = ROOT }
+			}
+		}
+		modifier = {
+			factor = 1
+			num_of_owned_provinces_with = {
+				value = 5
+				NOT = { controlled_by = ROOT }
+			}
+		}
+		modifier = {
+			factor = 2
+			num_of_owned_provinces_with = {
+				value = 10
+				NOT = { controlled_by = ROOT }
+			}
+		}
+		modifier = {
+			factor = 8
+			has_ruler_modifier = hol_de_witt
+		}
+	}
+	can_end = {
+		NOT = { num_of_rebel_armies = 1 }
+		NOT = { num_of_rebel_controlled_provinces = 1 }
+		stability = 2
+		is_at_war = no
+		NOT = { war_exhaustion = 0.01 }
+		custom_trigger_tooltip = {
+			tooltip = HAD_FEE_NETHERLANDS_RAMPJAAR_FOR_1_YEAR_TT
+			had_country_flag = {
+				flag = had_fee_netherlands_rampjaar
+				days = 365
+			}
+		}
+	}
+	modifier = {
+		land_morale = -0.10
+		global_unrest = 10
+		stability_cost_modifier = 0.20
+	}
+
+	on_start = disaster_fee_netherlands_rampjaar.1
+	on_end = disaster_fee_netherlands_rampjaar.2
+
+	on_monthly = {
+		events = {
+		}
+		random_events = {
+			1000 = 0
+			200 = disaster_fee_netherlands_rampjaar.3
+			100 = disaster_fee_netherlands_rampjaar.4
+			100 = disaster_fee_netherlands_rampjaar.5
+			200 = disaster_fee_netherlands_rampjaar.6
+			100 = disaster_fee_netherlands_rampjaar.7
+		}
+	}
+}

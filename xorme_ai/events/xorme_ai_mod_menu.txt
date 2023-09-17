@@ -1,0 +1,217 @@
+namespace = xorme_ai_mod_menu
+
+#INITIALIZATION HAPPENED
+country_event = {
+	id = xorme_ai_mod_menu.1
+	title = "xorme_ai_mod_menu.1_title"
+	picture = "INVENTION_eventPicture"
+	desc = "xorme_ai_mod_menu.1_desc"
+	is_triggered_only = yes
+
+	immediate = {
+		#RUN PLAYER SETUP INFO
+	}
+
+	#SET DIFFICULTY
+	option = {
+		name = xorme_ai_mod_menu_option.1
+		trigger = {
+			NOT = { has_global_flag = menu_closed_once }
+		}
+		hidden_effect = {
+			country_event = {
+				id = xorme_ai_mod_menu.2
+			}
+		}
+	}
+	option = {
+		name = xorme_ai_mod_menu_option.2
+		hidden_effect = {
+			country_event = {
+				id = xorme_ai_mod_menu.3
+			}
+		}
+	}
+
+	#EXIT
+	option = {
+		name = xorme_ai_mod_menu_option.0
+		hidden_effect = {
+			if = {
+				limit = {
+					OR = {
+						NOT = { has_global_flag = xorme_ai_cheats_disabled }
+						NOT = { has_global_flag = xorme_ai_dynamic_cheats_active }
+						NOT = { has_global_flag = xorme_ai_make_me_cry_active }
+					}
+				}
+				set_global_flag = xorme_ai_dynamic_cheats_active
+			}
+			set_global_flag = menu_closed_once
+		}
+	}
+}
+
+country_event = {
+	id = xorme_ai_mod_menu.2
+	title = "xorme_ai_mod_menu.2_title"
+	picture = "INVENTION_eventPicture"
+	desc = "xorme_ai_mod_menu.2_desc"
+	is_triggered_only = yes
+
+	#SET DIFFICULTY
+	#NO CHEATS
+	option = {
+		name = xorme_ai_mod_menu_difficulty_option.1
+		custom_tooltip = xorme_ai_mod_menu_difficulty_option.1_disc
+		hidden_effect = {
+			if = {
+				limit = { NOT = { has_global_flag = xorme_ai_cheats_disabled } }
+				set_global_flag = xorme_ai_cheats_disabled
+				if = {
+					limit = {
+						has_global_flag = xorme_ai_dynamic_cheats_active
+					}
+					clr_global_flag = xorme_ai_dynamic_cheats_active
+				}
+				else_if = {
+					limit = {
+						has_global_flag = xorme_ai_make_me_cry_active
+					}
+					clr_global_flag = xorme_ai_make_me_cry_active
+				}
+				else = {}
+			}
+			country_event = {
+				id = xorme_ai_mod_menu.1
+			}
+		}
+	}
+	#DYNAMIC
+	option = {
+		name = xorme_ai_mod_menu_difficulty_option.2
+		custom_tooltip = xorme_ai_mod_menu_difficulty_option.2_disc
+		hidden_effect = {
+			if = {
+				limit = { NOT = { has_global_flag = xorme_ai_dynamic_cheats_active } }
+				set_global_flag = xorme_ai_dynamic_cheats_active
+				if = {
+					limit = {
+						has_global_flag = xorme_ai_cheats_disabled
+					}
+					clr_global_flag = xorme_ai_cheats_disabled
+				}
+				else_if = {
+					limit = {
+						has_global_flag = xorme_ai_make_me_cry_active
+					}
+					clr_global_flag = xorme_ai_make_me_cry_active
+				}
+				else = {}
+			}
+			country_event = {
+				id = xorme_ai_mod_menu.1
+			}
+		}
+	}
+	#MAKE ME CRY
+	option = {
+		name = xorme_ai_mod_menu_difficulty_option.3
+		custom_tooltip = xorme_ai_mod_menu_difficulty_option.3_disc
+		hidden_effect = {
+			if = {
+				limit = { NOT = { has_global_flag = xorme_ai_make_me_cry_active } }
+				set_global_flag = xorme_ai_make_me_cry_active
+				if = {
+					limit = {
+						has_global_flag = xorme_ai_cheats_disabled
+					}
+					clr_global_flag = xorme_ai_cheats_disabled
+				}
+				else_if = {
+					limit = {
+						has_global_flag = xorme_ai_dynamic_cheats_active
+					}
+					clr_global_flag = xorme_ai_dynamic_cheats_active
+				}
+				else = {}
+			}
+			country_event = {
+				id = xorme_ai_mod_menu.1
+			}
+		}
+	}
+
+	#BACK
+	option = {
+		name = xorme_ai_mod_menu_back_option
+		hidden_effect = {
+			country_event = {
+				id = xorme_ai_mod_menu.1
+			}
+		}
+	}
+}
+
+#SCRIPTS
+country_event = {
+	id = xorme_ai_mod_menu.3
+	title = "xorme_ai_mod_menu.3_title"
+	picture = "INVENTION_eventPicture"
+	desc = "xorme_ai_mod_menu.3_desc"
+	is_triggered_only = yes
+
+	#SET DIFFICULTY
+	#NO CHEATS
+	option = {
+		name = xorme_ai_mod_menu_scripts_option.1
+		custom_tooltip = xorme_ai_mod_menu_scripts_option.1_disc
+		hidden_effect = {
+			if = {
+				limit = { has_global_flag = xorme_ai_building_scripts_on }
+				clr_global_flag = xorme_ai_building_scripts_on
+				set_global_flag = xorme_ai_building_scripts_off
+			}
+			else_if = {
+				limit = { has_global_flag = xorme_ai_building_scripts_off }
+				clr_global_flag = xorme_ai_building_scripts_off
+				set_global_flag = xorme_ai_building_scripts_on
+			}
+			else = {}
+			country_event = {
+				id = xorme_ai_mod_menu.1
+			}
+		}
+	}
+
+	option = {
+		name = xorme_ai_mod_menu_scripts_option.2
+		custom_tooltip = xorme_ai_mod_menu_scripts_option.2_disc
+		hidden_effect = {
+			if = {
+				limit = { has_global_flag = xorme_ai_expand_infrastructure_on }
+				clr_global_flag = xorme_ai_expand_infrastructure_on
+				set_global_flag = xorme_ai_expand_infrastructure_off
+			}
+			else_if = {
+				limit = { has_global_flag = xorme_ai_expand_infrastructure_off }
+				clr_global_flag = xorme_ai_expand_infrastructure_off
+				set_global_flag = xorme_ai_expand_infrastructure_on
+			}
+			else = {}
+			country_event = {
+				id = xorme_ai_mod_menu.1
+			}
+		}
+	}
+
+	#BACK
+	option = {
+		name = xorme_ai_mod_menu_back_option
+		hidden_effect = {
+			country_event = {
+				id = xorme_ai_mod_menu.1
+			}
+		}
+	}
+}

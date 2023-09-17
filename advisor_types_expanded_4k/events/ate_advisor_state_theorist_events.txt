@@ -1,0 +1,138 @@
+namespace = ate_advisor_state_theorist_events
+
+country_event = {
+	id = ate_advisor_state_theorist_events.1
+	title = ate_advisor_state_theorist_events.EVTNAME1
+	desc = ate_advisor_state_theorist_events.EVTDESC1
+	picture = ADVISOR_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		OR = {
+			tag = GBR
+			AND = {
+				NOT = { exists = GBR }
+				tag = ENG
+			}
+			AND = {
+				NOT = { exists = GBR }
+				NOT = { exists = ENG }
+				primary_culture = english
+			}
+		}
+		is_year = 1588
+		NOT = { is_year = 1679 }
+		is_absolutism_active = yes
+		NOT = { advisor_exists = 259 }
+		OR = {
+			NOT = { has_dlc = "Emperor" }
+			AND = {
+				is_revolution_target = no
+				is_revolutionary = no
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 300
+	}
+
+	option = {
+		name = ate_advisor_state_theorist_events1.EVTOPT1
+
+		define_advisor = {
+			name = "Thomas Hobbes"
+			type = ate_advisor_state_theorist
+			skill = 3
+			discount = yes
+			female = no
+		}
+	}
+
+	option = {
+		name = ate_advisor_state_theorist_events1.EVTOPT2
+
+		add_absolutism = 5
+	}
+}
+
+country_event = {
+	id = ate_advisor_state_theorist_events.2
+	title = ate_advisor_state_theorist_events.EVTNAME2
+	desc = ate_advisor_state_theorist_events.EVTDESC2
+	picture = ADVISOR_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		OR = {
+			tag = FRA
+			AND = {
+				NOT = { exists = FRA }
+				tag = SWI
+			}
+			AND = {
+				NOT = { exists = FRA }
+				NOT = { exists = SWI }
+				primary_culture = cosmopolitan_french
+			}
+		}
+		is_year = 1712
+		NOT = { is_year = 1778 }
+		is_absolutism_active = yes
+		NOT = { advisor_exists = 468 }
+	}
+
+	mean_time_to_happen = {
+		months = 300
+	}
+
+	option = {
+		name = ate_advisor_state_theorist_events2.EVTOPT1
+
+		if = {
+			limit = {
+				has_dlc = "Emperor"
+				OR = {
+					is_revolution_target = yes
+					is_revolutionary = yes
+				}
+			}
+			define_advisor = {
+				name = "Jean-Jacques Rousseau"
+				type = ate_advisor_revolutionist
+				skill = 3
+				discount = yes
+				female = no
+			}
+		}
+		else = {
+			define_advisor = {
+				name = "Jean-Jacques Rousseau"
+				type = ate_advisor_state_theorist
+				skill = 3
+				discount = yes
+				female = no
+			}
+		}
+	}
+
+	option = {
+		name = ate_advisor_state_theorist_events2.EVTOPT2
+
+		if = {
+			limit = {
+				has_dlc = "Emperor"
+				OR = {
+					is_revolution_target = yes
+					is_revolutionary = yes
+				}
+			}
+			add_revolutionary_zeal = 5
+		}
+		else = {
+			add_absolutism = 5
+		}
+	}
+}

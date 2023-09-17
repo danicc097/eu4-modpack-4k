@@ -1,0 +1,39 @@
+namespace = xorme_search_for_players
+#MAIN SETUP
+country_event = {
+	id = xorme_search_for_players.1
+	title = "NONE"
+	picture = "NONE"
+	desc = "NONE"
+	
+	hidden = yes
+	fire_only_once = yes
+
+	trigger = {
+		has_game_started = yes
+	}
+
+	immediate = {
+		if = {
+			limit = { 
+				calc_true_if = {
+					all_countries_including_self = {
+						ai = no
+					}
+					amount = 2
+				}
+			}
+			set_global_flag = xorme_ai_multiplayer
+		}
+		else = {
+			set_global_flag = xorme_ai_singleplayer
+		}
+	}
+
+	after = {
+		set_global_flag = xorme_search_for_players_happened
+	}
+	option = {
+		
+	}
+}

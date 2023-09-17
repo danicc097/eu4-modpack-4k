@@ -1,0 +1,39 @@
+namespace = xorme_ai_colony_initialization
+
+country_event = {
+	id = xorme_ai_colony_initialization.1
+	title = "NONE"
+	desc = "NONE"
+	picture = "NONE"
+
+	hidden = yes
+
+	trigger = {
+		NOT = { is_year = 1800 }
+		NOT = { has_country_flag = xorme_ai_colony }
+		ai = yes
+		is_colonial_nation = yes
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	immediate = {
+		add_treasury = 325
+		add_stability = 1
+
+		capital_scope = {
+			build_to_forcelimit = {
+				infantry = 0.7
+				cavalry = 0.1
+				artillery = 0.2
+			}
+		}
+
+		set_country_flag = xorme_ai_colony
+	}
+
+	option = {
+	}
+}

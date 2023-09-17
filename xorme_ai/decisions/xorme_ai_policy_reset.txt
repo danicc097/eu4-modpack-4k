@@ -1,0 +1,44 @@
+country_decisions = {
+    xorme_ai_policy_reset = {
+        potential = {
+            xorme_ai_valid_nation = yes
+            NOT = { has_country_modifier = xorme_ai_policy_reset_cooldown }
+            OR = {
+                AND = {
+                    adm_tech = 18
+                    NOT = { adm_tech = 19 }
+                }
+                AND = {
+                    adm_tech = 24
+                    NOT = { adm_tech = 25 }
+                }
+                AND = {
+                    adm_tech = 26
+                    NOT = { adm_tech = 27 }
+                }
+                AND = {
+                    adm_tech = 29
+                    NOT = { adm_tech = 30 }
+                }
+            }
+        }
+
+        allow = {
+			is_at_war = no
+        }
+
+        effect = {
+			add_country_modifier = {
+				name = xorme_ai_policy_reset_modifier
+				duration = 31
+			}
+            add_country_modifier = {
+                name = xorme_ai_policy_reset_cooldown
+                duration = 3000
+            }
+        }
+        ai_will_do = {
+            factor = 100
+        }
+    }
+}

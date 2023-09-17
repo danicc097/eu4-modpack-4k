@@ -1,0 +1,793 @@
+guiTypes = {
+	
+	windowType = {
+		name = "building_improvements_mapicon"
+		position = { x=0 y=0 }
+		size = { x=144 y=108 }
+		horizontalBorder = "0"
+		fullScreen = no
+		
+		windowType = {
+			name = "big"
+			movable = 0
+
+			iconType = {
+				name ="bg"
+				spriteType = "GFX_onmap_building_bg2"
+				position = { x= -5 y = -5 }
+				
+				alwaystransparent = yes
+			}
+			
+			iconType = {
+				name ="bg_simple"
+				spriteType = "GFX_onmap_building_bg_simple"
+				position = { x= -5 y = -5 }
+				
+				alwaystransparent = yes
+			}
+			
+			iconType = {
+				name ="country_shield"
+				spriteType = "GFX_flag_smallest"
+				position = { x= -45 y = -4 }
+			}
+
+			iconType = {
+				name ="building icon"
+				spriteType = "GFX_tiny_building_icon"
+				position = { x= -2 y = 0 }
+				
+				alwaystransparent = yes
+			}		
+
+			instantTextBoxType={
+				position = {x = 14 y = 7 }
+				name = "building_slots"
+				font = "Arial12"
+				borderSize = {x = 22 y = 0}	
+				maxWidth = 72
+				maxHeight = 32
+				text = "99"
+				
+				format = left
+			}
+			
+			instantTextBoxType={
+				position = {x = 7 y = 47 }
+				name = "building_info"
+				font = "Arial12"
+				borderSize = {x = 0 y = 0}	
+				maxWidth = 162
+				maxHeight = 32
+				text = ""
+				
+				format = left
+			}
+			
+			instantTextBoxType={
+				position = {x = 65 y = 7 }
+				name = "building_cost"
+				font = "Arial12"
+				borderSize = {x = 22 y = 0}	
+				maxWidth = 108
+				maxHeight = 32
+				text = "99"
+				
+				format = left
+			}
+			
+			guiButtonType = {
+				name = "build_button"
+				position = { x = 144 y = 16 }
+				quadTextureSprite ="GFX_macrobuild_onmap_build"
+				tooltip = ""
+				tooltipText =""
+				delayedTooltipText = ""
+				buttonFont = "Main_14_black"
+			}
+
+			positionType = {
+				name = "simple_button_pos"
+				position = { x = 144 y = 0 }
+			}
+			
+			positionType = {
+				name = "detailed_button_pos"
+				position = { x = 144 y = 16 }
+			}
+		}
+		
+	}	
+	
+	windowType = {
+		name = "build_unit_mapicon"
+		position = { x=0 y=36 }
+		size = { x=230 y=50 }
+		moveable = 0
+		dontRender = ""
+		horizontalBorder = "0"
+		verticalBorder = ""
+		fullScreen = no
+		Orientation = "UPPER_LEFT"
+
+		windowType = {
+			name = "big"
+			moveable = 0
+
+			iconType = {
+				name ="bg"
+				spriteType = "onmap_builing_bg1"
+				position = { x= 0 y = 0 }
+				Orientation = "UPPER_LEFT"
+				alwaystransparent = yes
+			}
+			
+			instantTextBoxType={
+				position = {x = 22 y = 13 }
+				name = "unit_info"
+				font = "Arial12"
+				borderSize = {x = 0 y = 0}	
+				maxWidth = 216
+				maxHeight = 32
+				text = ""
+				orientation = "UPPER_LEFT"
+				format = left
+				alwaystransparent = yes
+			}
+			
+			guiButtonType = {
+				name = "build_button"
+				position = { x = 212 y = 2 }
+				quadTextureSprite ="GFX_macrobuild_onmap_build"
+				tooltip = ""
+				tooltipText =""
+				delayedTooltipText = ""
+				buttonFont = "Main_14_black"
+			}
+
+		}
+	}	
+
+	############### ESTATES ################################
+	windowType = {
+		name = "estates_mapicon"
+		position = { x=0 y=36 }
+		size = { x=230 y=50 }
+		moveable = 0
+		dontRender = ""
+		horizontalBorder = "0"
+		verticalBorder = ""
+		fullScreen = no
+		#Orientation = "UPPER_LEFT"
+
+		windowType = {
+			name = "big"
+			moveable = 0
+
+			windowType = {
+				name = "new_estate"
+				moveable = 0
+
+				#Note: The following is similar to development_entry in macrobuildinterface.gui
+				iconType = {
+					name ="bg"
+					spriteType = "onmap_builing_bg5"
+					position = { x= 0 y = 0 }
+					Orientation = "UPPER_LEFT"
+				}
+				
+				iconType = {
+					name ="estate_icon"
+					spriteType = "GFX_estates_icons"
+					position = { x = 7 y = 2 }
+					Orientation = "UPPER_LEFT"
+					scale = 0.5
+					alwaystransparent = yes
+				}
+				
+				instantTextBoxType={
+					position = {x = 81 y = 7 }
+					name = "influence"
+					font = "standard_18"
+					borderSize = {x = 0 y = 0}
+					maxWidth = 216
+					maxHeight = 32
+					text = ""
+					orientation = "UPPER_LEFT"
+					format = left
+					alwaystransparent = yes
+				}
+				
+				instantTextBoxType = {
+					name = "tax"
+					position = {x = 5 y = 41 }
+					font = "Arial12"
+					borderSize = {x = 0 y = 0}	
+					maxWidth = 43
+					maxHeight = 32
+					text = ""
+					orientation = "UPPER_LEFT"
+					format = center
+					alwaystransparent=yes
+				}
+				
+				iconType = {
+					name ="country_shield"
+					spriteType = "GFX_flag_smallest"
+					position = { x= -41 y = -4 }
+					alwaystransparent=yes
+				}
+
+				iconType = {
+					name = "tax_icon"
+					position = { x = 0 y = 63 }
+					spriteType ="GFX_icon_tax_base"
+					tooltip = ""
+					tooltipText =""
+					delayedTooltipText = ""
+					scale = 1
+					alwaystransparent=yes
+				}
+				
+				instantTextBoxType = {
+					name = "production"
+					position = {x = 50 y = 41 }
+					font = "Arial12"
+					borderSize = {x = 0 y = 0}	
+					maxWidth = 43
+					maxHeight = 32
+					text = ""
+					orientation = "UPPER_LEFT"
+					format = center
+					alwaystransparent=yes
+				}
+				
+				iconType = {
+					name = "production_icon"
+					position = { x = 49 y = 63 }
+					spriteType ="GFX_production_icon"
+					tooltip = ""
+					tooltipText =""
+					delayedTooltipText = ""
+					scale = 1
+					alwaystransparent=yes
+				}
+
+				instantTextBoxType = {
+					name = "manpower"
+					position = {x = 95 y = 41 }
+					font = "Arial12"
+					borderSize = {x = 0 y = 0}	
+					maxWidth = 43
+					maxHeight = 32
+					text = ""
+					orientation = "UPPER_LEFT"
+					format = center
+					alwaystransparent=yes
+				}
+				
+				iconType = {
+					name = "manpower_icon"
+					position = { x = 92 y = 63 }
+					spriteType ="GFX_icon_manpower"
+					tooltip = "" 
+					tooltipText =""
+					delayedTooltipText = ""
+					scale = 1
+					alwaystransparent=yes
+				}
+
+				iconType = {
+					name ="tradegood_icon"
+					spriteType = "GFX_resource_icon_small"
+					position = { x= 99 y = 110 }
+					Orientation = "UPPER_LEFT"
+					scale = 0.8
+				}		
+
+
+				iconType = {
+					name ="autonomy_icon"
+					spriteType = "gfx_autonomy_tiny_icon"
+					position = { x= 5 y = 117 }
+					Orientation = "UPPER_LEFT"
+					alwaystransparent=yes
+					scale = 0.8
+				}		
+				
+				instantTextBoxType = {
+					name = "autonomy"
+					position = {x = 34 y = 117 }
+					font = "Arial12"
+					borderSize = {x = 0 y = 0}	
+					maxWidth = 67
+					maxHeight = 22
+					text = ""
+					orientation = "UPPER_LEFT"
+					format = right
+					alwaystransparent = yes
+				}
+			}
+		}
+	}
+	########################################################
+	
+	windowType = {
+		name = "build_template_mapicon"
+		background = ""
+		#backGround =""
+		position = { x=0 y=36 }
+		size = { x=230 y=50 }
+		moveable = 0
+		dontRender = ""
+		horizontalBorder = "0"
+		verticalBorder = ""
+		fullScreen = no
+		
+
+		windowType = {
+			name = "big"
+			moveable = 0
+			iconType = {
+				name ="bg"
+				spriteType = "onmap_builing_bg1_extended"
+				position = { x= 0 y = 0 }
+				
+			}
+			
+			instantTextBoxType={
+				position = {x = 11 y = 13 }
+				name = "unit_info"
+				font = "Arial12"
+				borderSize = {x = 0 y = 0}	
+				maxWidth = 266
+				maxHeight = 32
+				text = ""
+				
+				format = left
+				#alwaystransparent = yes
+			}
+			
+			guiButtonType = {
+				name = "build_button"
+				position = { x = 247 y = 4 }
+				quadTextureSprite ="GFX_macrobuild_onmap_build"
+				buttonFont = "Main_14_black"
+			}
+
+		}
+	}
+	
+	windowType = {
+		name = "development_mapicon"
+		background = ""
+		#backGround =""
+		position = { x=0 y=36 }
+		size = { x=230 y=50 }
+		moveable = 0
+		dontRender = ""
+		horizontalBorder = "0"
+		verticalBorder = ""
+		fullScreen = no
+		Orientation = "UPPER_LEFT"
+
+		windowType = {
+			name = "big"
+			moveable = 0
+
+			#Note: The following is similar to development_entry in macrobuildinterface.gui
+			iconType = {
+				name ="bg"
+				spriteType = "onmap_builing_bg4"
+				position = { x= 0 y = 0 }
+				Orientation = "UPPER_LEFT"
+			}
+
+			iconType = {
+				name ="country_shield"
+				spriteType = "GFX_flag_smallest"
+				position = { x= -41 y = -4 }
+			}
+			
+			instantTextBoxType = {
+				name = "tax"
+				position = {x = 5 y = 7 }
+				font = "Arial12"
+				borderSize = {x = 0 y = 0}	
+				maxWidth = 43
+				maxHeight = 32
+				text = ""
+				orientation = "UPPER_LEFT"
+				format = center
+			}
+
+			guiButtonType = {
+				name = "tax_button"
+				position = { x = 0 y = 29 }
+				quadTextureSprite ="GFX_development_button_tax"
+				tooltip = ""
+				tooltipText =""
+				delayedTooltipText = ""
+				buttonFont = "Main_14_black"
+				scale = 0.85
+			}
+
+			instantTextBoxType = {
+				name = "production"
+				position = {x = 50 y = 7 }
+				font = "Arial12"
+				borderSize = {x = 0 y = 0}	
+				maxWidth = 43
+				maxHeight = 32
+				text = ""
+				orientation = "UPPER_LEFT"
+				format = center
+			}
+			
+			guiButtonType = {
+				name = "production_button"
+				position = { x = 45 y = 29 }
+				quadTextureSprite ="GFX_development_button_production"
+				tooltip = ""
+				tooltipText =""
+				delayedTooltipText = ""
+				buttonFont = "Main_14_black"
+				scale = 0.85
+			}
+
+			instantTextBoxType = {
+				name = "manpower"
+				position = {x = 95 y = 7 }
+				font = "Arial12"
+				borderSize = {x = 0 y = 0}	
+				maxWidth = 43
+				maxHeight = 32
+				text = ""
+				orientation = "UPPER_LEFT"
+				format = center
+			}
+			
+			guiButtonType = {
+				name = "manpower_button"
+				position = { x = 90 y = 29 }
+				quadTextureSprite ="GFX_development_button_manpower"
+				tooltip = "" 
+				tooltipText =""
+				delayedTooltipText = ""
+				buttonFont = "Main_14_black"
+				scale = 0.85
+			}
+
+			iconType = {
+				name ="building_dev_cost"
+				spriteType = "GFX_building_dev_cost"
+				position = { x= 7 y = 81 }
+				Orientation = "UPPER_LEFT"
+			}		
+			
+			instantTextBoxType = {
+				name = "cost"
+				position = {x = 23 y = 79 }
+				font = "Arial12"
+				borderSize = {x = 0 y = 0}	
+				maxWidth = 43
+				maxHeight = 32
+				text = ""
+				orientation = "UPPER_LEFT"
+				format = right
+			}
+
+			iconType = {
+				name = "onmap_tradegood_icon"
+				spriteType = "GFX_resource_icon_small"
+				position = { x = 103 y = 76 }
+				scale = 0.68
+				Orientation = "UPPER_LEFT"
+			}
+		}
+	}
+	
+	windowType = {
+		name = "exploit_mapicon"
+		background = ""
+		position = { x=0 y=36 }
+		size = { x=230 y=50 }
+		moveable = 0
+		dontRender = ""
+		horizontalBorder = "0"
+		verticalBorder = ""
+		fullScreen = no
+		Orientation = "UPPER_LEFT"
+
+		windowType = {
+			name = "big"
+			moveable = 0
+
+			#Note: The following is similar to exploit_entry in macrobuildinterface_override.gui
+			iconType = {
+				name ="bg"
+				spriteType = "onmap_builing_bg6"
+				position = { x= 0 y = 0 }
+				Orientation = "UPPER_LEFT"
+			}
+
+			iconType = {
+				name ="country_shield"
+				spriteType = "GFX_flag_smallest"
+				position = { x= -41 y = -4 }
+			}
+			
+			instantTextBoxType = {
+				name = "tax"
+				position = {x = 5 y = 7 }
+				font = "Arial12"
+				borderSize = {x = 0 y = 0}	
+				maxWidth = 43
+				maxHeight = 32
+				text = ""
+				orientation = "UPPER_LEFT"
+				format = center
+			}
+
+			guiButtonType = {
+				name = "tax_button"
+				position = { x = 0 y = 29 }
+				quadTextureSprite ="GFX_exploit_button_tax"
+				tooltip = ""
+				tooltipText =""
+				delayedTooltipText = ""
+				buttonFont = "Main_14_black"
+				scale = 0.85
+			}
+
+			instantTextBoxType = {
+				name = "sailor"
+				position = {x = 50 y = 7 }
+				font = "Arial12"
+				borderSize = {x = 0 y = 0}	
+				maxWidth = 43
+				maxHeight = 32
+				text = ""
+				orientation = "UPPER_LEFT"
+				format = center
+			}
+			
+			guiButtonType = {
+				name = "sailor_button"
+				position = { x = 45 y = 29 }
+				quadTextureSprite ="GFX_exploit_button_production"
+				tooltip = ""
+				tooltipText =""
+				delayedTooltipText = ""
+				buttonFont = "Main_14_black"
+				scale = 0.85
+			}
+
+			instantTextBoxType = {
+				name = "manpower"
+				position = {x = 95 y = 7 }
+				font = "Arial12"
+				borderSize = {x = 0 y = 0}	
+				maxWidth = 43
+				maxHeight = 32
+				text = ""
+				orientation = "UPPER_LEFT"
+				format = center
+			}
+			
+			guiButtonType = {
+				name = "manpower_button"
+				position = { x = 90 y = 29 }
+				quadTextureSprite ="GFX_exploit_button_manpower"
+				tooltip = "" 
+				tooltipText =""
+				delayedTooltipText = ""
+				buttonFont = "Main_14_black"
+				scale = 0.85
+			}
+		}
+	}
+	
+	windowType = {
+		name = "cancel_construction"
+		background = ""
+		#backGround =""
+		position = { x=0 y=0 }
+		size = { x=230 y=50 }
+		moveable = 0
+		dontRender = ""
+		horizontalBorder = "0"
+		verticalBorder = ""
+		fullScreen = no
+		Orientation = "UPPER_LEFT"
+
+		windowType = {
+			name = "big"
+			movable = 0
+			size = { x=0 y=50 } #y is how much to move this window to avoid overlapping a build window
+
+			iconType = {
+				name = "bg"
+				spriteType = "onmap_builing_bg2"
+				position = { x= 0 y = -4 }
+				Orientation = "UPPER_LEFT"
+				alwaystransparent = yes
+			}	
+	
+			iconType = {
+				name = "unit_type"
+				spriteType = "GFX_unit_types_strip"
+				position = { x= 0 y = -4 }
+				Orientation = "UPPER_LEFT"
+				scale = 0.5
+			}
+			iconType = {
+				name = "building_type"
+				spriteType = "GFX_text_building"
+				position = { x= 9 y = 0 }
+				Orientation = "UPPER_LEFT"
+			}
+			iconType = {
+				name = "core_type"
+				spriteType = "GFX_add_core_icon"
+				position = { x= 9 y = 0 }
+				Orientation = "UPPER_LEFT"
+				scale = 0.75
+			}
+			iconType = {
+				name = "missionary_type"
+				spriteType = "GFX_change_religion_icon"
+				position = { x= 9 y = 0 }
+				Orientation = "UPPER_LEFT"
+				scale = 0.75
+			}
+			iconType = {
+				name = "culture_type"
+				spriteType = "GFX_change_culture_icon"
+				position = { x= 9 y = 0 }
+				Orientation = "UPPER_LEFT"
+				scale = 0.75
+			}
+			
+			
+			instantTextBoxType={
+				position = {x = 40 y = 9 }
+				name = "construction_info"
+				font = "Arial12"
+				borderSize = {x = 14 y = 2}	
+				maxWidth = 162
+				maxHeight = 32
+				text = ""
+				orientation = "UPPER_LEFT"
+				format = left
+			}
+			
+			instantTextBoxType={
+				position = {x = 86 y = 9 }
+				name = "queue_info"
+				font = "Arial12"
+				borderSize = {x = 14 y = 2}	
+				maxWidth = 115
+				maxHeight = 32
+				text = ""
+				orientation = "UPPER_LEFT"
+				format = right
+			}
+			
+			guiButtonType = {
+				name = "cancel_button"	
+				quadTextureSprite ="GFX_macrobuild_onmap_cancel"
+				position = { x=212 y= 0 }
+				tooltip = ""	
+				tooltipText =""
+				delayedTooltipText = ""
+				orientation = "UPPER_LEFT"
+			}
+		}
+	}
+
+	windowType = {
+		name = "local_autonomy_mapicon"
+		position = { x=0 y=36 }
+		size = { x=230 y=50 }
+		moveable = 0
+
+		windowType = {
+			name = "big"
+			moveable = 0
+
+			iconType = {
+				name ="bg"
+				spriteType = "onmap_builing_bg1"
+			}
+			
+			instantTextBoxType={
+				name = "autonomy"
+				position = {x = -40 y = 11 }
+				font = "Arial12"
+				maxWidth = 115
+				maxHeight = 32
+				format = right
+				#alwaystransparent = yes
+			}
+			instantTextBoxType={
+				name = "unrest"
+				position = {x = 99 y = 11 }
+				font = "Arial12"
+				maxWidth = 216
+				maxHeight = 32
+				format = left
+				#alwaystransparent = yes
+			}
+			
+			guiButtonType = {
+				name = "decrease_button"
+				position = { x = 194 y = -2 }
+				quadTextureSprite ="GFX_dec_autonomy_button"
+				buttonFont = "Main_14_black"
+				scale = 0.85
+			}
+			
+			guiButtonType = {
+				name = "increase_button"
+				position = { x = 148 y = -2 }
+				quadTextureSprite ="GFX_inc_autonomy_button"
+				buttonFont = "Main_14_black"
+				scale = 0.85
+			}
+		}
+	}
+
+	windowType = {
+		name = "mutually_exclusive_mapicon"
+		#backGround =""
+		position = { x=0 y=36 }
+		size = { x=230 y=50 }
+		moveable = 0
+		horizontalBorder = "0"
+		fullScreen = no
+
+		windowType = {
+			name = "big"
+			moveable = 0
+
+			iconType = {
+				name ="bg"
+				spriteType = "onmap_builing_bg1"
+				position = { x= 0 y = 0 }
+			}
+			
+			instantTextBoxType={
+				name = "info_left"
+				position = {x = -40 y = 11 }
+				font = "Arial12"
+				borderSize = {x = 0 y = 0}	
+				maxWidth = 115
+				maxHeight = 32
+				format = right
+				#alwaystransparent = yes
+			}
+			instantTextBoxType={
+				name = "info_right"
+				position = {x = 99 y = 11 }
+				font = "Arial12"
+				borderSize = {x = 0 y = 0}	
+				maxWidth = 216
+				maxHeight = 32
+				format = left
+				#alwaystransparent = yes
+			}
+			
+			guiButtonType = {
+				name = "build_button"
+				position = { x = 212 y = 2 }
+				quadTextureSprite ="GFX_macrobuild_onmap_build"
+				buttonFont = "Main_14_black"
+			}
+
+		}
+		
+		
+	}	
+}

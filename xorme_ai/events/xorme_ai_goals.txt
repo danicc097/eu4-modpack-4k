@@ -1,0 +1,981 @@
+namespace = xorme_ai_goals
+
+#ENG - SCO - FRA
+country_event = {
+	id = xorme_ai_goals.1
+	title = "NONE"
+	desc = "NONE"
+	picture = "NONE"
+
+	hidden = yes
+	fire_only_once = yes
+
+	trigger = {
+		tag = ENG
+		ai = yes
+		is_at_war = no
+		NOT = { has_global_flag = france_eng_declared_hundred_years_war }
+		NOT = { has_disaster = war_of_the_roses }
+		mission_completed = eng_mighty_army
+		mission_completed = eng_war_france
+		SCO = {
+			ai = yes
+			NOT = { is_subject = yes }
+			NOT = { truce_with = ENG }
+			owns = 248
+		}
+		army_size_percentage = 0.9
+	}
+
+	immediate = {
+		declare_war_with_cb = {
+			who = SCO
+			casus_belli = cb_vassalize_mission
+			war_goal_province = 248
+		}
+		set_global_flag = eng_war_for_scots_started
+	}
+
+	option = {
+
+	}
+}
+
+country_event = {
+	id = xorme_ai_goals.2
+	title = "NONE"
+	desc = "NONE"
+	picture = "NONE"
+
+	hidden = yes
+	fire_only_once = yes
+
+	trigger = {
+		tag = ENG
+		has_global_flag = eng_war_for_scots_started
+		ai = yes
+		OR = {
+			248 = { controlled_by = ENG }
+			calc_true_if = {
+				all_owned_province = {
+					owned_by = SCO
+					is_core = SCO
+					controlled_by = ENG
+				}
+				amount = 4
+			}
+		}
+		if = {
+			limit = {
+				war_with = FRA
+				FRA = { ai = yes }
+			}
+			calc_true_if = {
+				all_province = {
+					region = france_region
+					owned_by = ENG
+					controlled_by = FRA
+				}
+				amount = 5
+			}
+		}
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				war_with = FRA
+				FRA = { ai = yes }
+			}
+			every_owned_province = {
+				limit = {
+					NOT = { province_id = 87 }
+					region = france_region
+					controlled_by = FRA
+				}
+				cede_province = FRA
+			}
+		}
+	}
+
+	after = {
+		if = {
+			limit = {
+				war_with = FRA
+				FRA = { ai = yes }
+			}
+			white_peace = FRA
+			set_global_flag = fra_got_land_from_eng
+		}
+		else = {
+			set_global_flag = eng_fight_scots_alone
+		}
+	}
+
+	option = {
+
+	}
+}
+
+country_event = {
+	id = xorme_ai_goals.3
+	title = "NONE"
+	desc = "NONE"
+	picture = "NONE"
+
+	hidden = yes
+	fire_only_once = yes
+
+	trigger = {
+		tag = ENG
+		has_global_flag = eng_war_for_scots_started
+		ai = yes
+		OR = {
+			has_global_flag = eng_fight_scots_alone
+			has_global_flag = fra_got_land_from_eng
+		}
+		SCO = {
+			ai = yes
+			OR = {
+				248 = { controlled_by = ENG }
+				calc_true_if = {
+					all_owned_province = {
+						owned_by = SCO
+						is_core = SCO
+						controlled_by = ENG
+					}
+					amount = 4
+				}
+			}
+		}
+	}
+
+	immediate = {
+		if = {
+			limit = { SCO = { owns = 4361 } 4361 = { controlled_by = ENG } }
+			4361 = { cede_province = ENG }
+		}
+		if = {
+			limit = { SCO = { owns = 4362 } 4362 = { controlled_by = ENG } }
+			4362 = { cede_province = ENG }
+		}
+		if = {
+			limit = { SCO = { owns = 249 } 249 = { controlled_by = ENG } }
+			249 = { cede_province = ENG }
+		}
+		vassalize = SCO
+	}
+
+	after = {
+		if = {
+			limit = { ENG = { war_with = LOI } }
+			white_peace = LOI
+		}
+		if = {
+			limit = { SCO = { is_at_war = yes } }
+			every_known_country = {
+				limit = {
+					war_with = SCO
+				}
+				white_peace = SCO
+			}
+		}
+		clr_global_flag = eng_war_for_scots_started
+	}
+
+	option = {
+
+	}
+}
+
+country_event = {
+	id = xorme_ai_goals.4
+	title = "NONE"
+	desc = "NONE"
+	picture = "NONE"
+
+	hidden = yes
+	fire_only_once = yes
+
+	trigger = {
+		tag = ENG
+		ai = yes
+		is_in_war = {
+			casus_belli = cb_hundred_years_war
+		}
+	}
+
+	immediate = {
+		set_global_flag = france_eng_declared_hundred_years_war
+	}
+
+	option = {
+
+	}
+}
+
+country_event = {
+	id = xorme_ai_goals.5
+	title = "NONE"
+	desc = "NONE"
+	picture = "NONE"
+
+	hidden = yes
+	fire_only_once = yes
+
+	trigger = {
+		tag = ENG
+		ai = yes
+		has_global_flag = france_eng_declared_hundred_years_war
+		is_in_war = {
+			casus_belli = cb_hundred_years_war
+		}
+		OR = {
+			248 = { controlled_by = ENG }
+			SCO = {
+				ai = yes
+				calc_true_if = {
+					all_owned_province = {
+						owned_by = SCO
+						is_core = SCO
+						controlled_by = ENG
+					}
+					amount = 4
+				}
+			}
+		}
+	}
+
+	immediate = {
+		if = {
+			limit = { SCO = { owns = 4361 } }
+			4361 = { cede_province = ENG }
+		}
+		if = {
+			limit = { SCO = { owns = 249 } }
+			249 = { cede_province = ENG }
+		}
+		if = {
+			limit = { SCO = { owns = 248 } }
+			248 = { cede_province = ENG }
+		}
+		if = {
+			limit = { SCO = { owns = 251 } }
+			251 = { cede_province = ENG }
+		}
+	}
+
+	after = {
+		white_peace = SCO
+	}
+
+	option = {
+
+	}
+}
+
+country_event = {
+	id = xorme_ai_goals.6
+	title = "NONE"
+	desc = "NONE"
+	picture = "NONE"
+
+	hidden = yes
+	fire_only_once = yes
+
+	trigger = {
+		tag = ENG
+		ai = yes
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	immediate = {
+		random_country = {
+			limit = {
+				NOT = { total_development = 25 }
+				is_subject = no
+				ai = yes
+				capital_scope = {
+					OR = {
+						area = connacht_area
+						area = munster_area
+						area = leinster_area
+						area = ulster_area
+					}
+				}
+			}
+			save_event_target_as = new_eng_subject
+		}
+	}
+
+	after = {
+		ENG = {
+			create_alliance = event_target:new_eng_subject
+			create_marriage = event_target:new_eng_subject
+			create_subject = {
+				subject_type = vassal
+				subject = event_target:new_eng_subject
+			}
+			remove_opinion = {
+				who = event_target:new_eng_subject
+				modifier = xorme_ai_conq_box
+			}
+			reverse_remove_opinion = {
+				who = event_target:new_eng_subject
+				modifier = xorme_ai_conq_box
+			}
+		}
+	}
+
+	option = {
+	}
+}
+
+#TIM -  The Timmy
+country_event = {
+	id = xorme_ai_goals.7
+	title = "NONE"
+	desc = "NONE"
+	picture = "NONE"
+
+	hidden = yes
+	fire_only_once = yes
+
+	trigger = {
+		tag = TIM
+		ai = yes
+		is_at_war = no
+		434 = {
+			NOT = { owned_by = TIM }
+			owner = {
+				ai = yes
+				NOT = { truce_with = TIM }
+				NOT = { alliance_with = TIM }
+				all_ally = {
+					is_great_power = no
+				}
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	immediate = {
+		TIM = {
+			add_claim = 434
+			add_claim = 2077
+		}
+		434 = {
+			owner = {
+				save_event_target_as = target_of_war
+			}
+		}
+		2077 = {
+			owner = {
+				save_event_target_as = target_of_war_2
+			}
+		}
+	}
+
+	after = {
+		declare_war_with_cb = {
+			who = event_target:target_of_war
+			casus_belli = cb_annex
+			war_goal_province = 434
+		}
+		declare_war_with_cb = {
+			who = event_target:target_of_war_2
+			casus_belli = cb_conquest
+			war_goal_province = 2077
+		}
+	}
+
+	option = {
+	}
+}
+
+country_event = {
+	id = xorme_ai_goals.8
+	title = "NONE"
+	desc = "NONE"
+	picture = "NONE"
+
+	hidden = yes
+	fire_only_once = yes
+
+	trigger = {
+		tag = TIM
+		ai = yes
+		is_at_war = no
+		owns = 434
+		owns = 2077
+		507 = {
+			OR = {
+				is_claim = TIM
+				is_permanent_claim = TIM
+			}
+			owner = {
+				ai = yes
+				OR = {
+					is_at_war = yes
+					is_bankrupt = yes
+					NOT = { army_size_percentage = 0.5 }
+				}
+				NOT = { truce_with = TIM }
+				NOT = { alliance_with = TIM }
+				NOT = { num_of_allies = 2 }
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	immediate = {
+		TIM = {
+			add_yearly_manpower = 0.2
+			add_prestige = 15
+			add_army_tradition = 5
+		}
+		507 = {
+			owner = {
+				save_event_target_as = target_of_war
+			}
+		}
+	}
+
+	after = {
+		declare_war_with_cb = {
+			who = event_target:target_of_war
+			casus_belli = cb_conquest
+			war_goal_province = 507
+		}
+	}
+
+	option = {
+	}
+}
+#TUR - TURK
+country_event = {
+	id = xorme_ai_goals.9
+	title = "NONE"
+	desc = "NONE"
+	picture = "NONE"
+
+	hidden = yes
+	fire_only_once = yes
+
+	trigger = {
+		tag = TUR
+		ai = yes
+		is_at_war = no
+		NOT = { owns = 151 }
+		is_year = 1445
+
+		151 = {
+			owner = {
+				ai = yes
+				NOT = { alliance_with = TUR }
+				NOT = { is_subject_of = TUR }
+				NOT = { truce_with = TUR }
+			}
+			any_neighbor_province = {
+				owned_by = TUR
+			}
+		}
+		ATH = {
+			ai = yes
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	immediate = {
+		TUR = { add_claim = 151 }
+		151 = {
+			owner = {
+				save_event_target_as = constantinople_owner
+			}
+		}
+	}
+	after = {
+		declare_war_with_cb = {
+			who = event_target:constantinople_owner
+			casus_belli = cb_conquest
+			war_goal_province = 151
+		}
+	}
+
+	option = {
+	}
+}
+
+country_event = {
+	id = xorme_ai_goals.10
+	title = "NONE"
+	desc = "NONE"
+	picture = "NONE"
+
+	hidden = yes
+	fire_only_once = yes
+
+	trigger = {
+		tag = TUR
+		ai = yes
+		owns = 151
+		NOT = { owns = 328 }
+		328 = {
+			owner = {
+				ai = yes
+				NOT = { alliance_with = TUR }
+				NOT = { is_subject_of = TUR }
+				NOT = { truce_with = TUR }
+				all_ally = {
+					is_great_power = no
+				}
+			}
+			OR = {
+				is_permanent_claim = TUR
+				is_claim = TUR
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	immediate = {
+		328 = {
+			owner = {
+				save_event_target_as = tur_conquest_target
+			}
+		}
+		if = {
+			limit = {
+				TUR = { alliance_with = RAM }
+			}
+			vassalize = RAM
+		}
+	}
+
+	after = {
+		declare_war_with_cb = {
+			who = event_target:tur_conquest_target
+			casus_belli = cb_conquest
+			war_goal_province = 328
+		}
+	}
+
+	option = {
+	}
+}
+
+country_event = {
+	id = xorme_ai_goals.11
+	title = "NONE"
+	desc = "NONE"
+	picture = "NONE"
+
+	hidden = yes
+	fire_only_once = yes
+
+	trigger = {
+		tag = TUR
+		ai = yes
+		owns = 151
+		NOT = { owns = 323 }
+		323 = {
+			owner = {
+				ai = yes
+				NOT = { alliance_with = TUR }
+				NOT = { is_subject_of = TUR }
+				NOT = { truce_with = TUR }
+				all_ally = {
+					is_great_power = no
+				}
+			}
+			OR = {
+				is_permanent_claim = TUR
+				is_claim = TUR
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	immediate = {
+		323 = {
+			owner = {
+				save_event_target_as = tur_conquest_target_2
+			}
+		}
+	}
+
+	after = {
+		declare_war_with_cb = {
+			who = event_target:tur_conquest_target_2
+			casus_belli = cb_conquest
+			war_goal_province = 323
+		}
+	}
+
+	option = {
+	}
+}
+
+#JIANZHOU
+country_event = {
+	id = xorme_ai_goals.12
+	title = "NONE"
+	desc = "NONE"
+	picture = "NONE"
+
+	hidden = yes
+	fire_only_once = yes
+
+	trigger = {
+		tag = MJZ
+		ai = yes
+		is_at_war = no
+		NOT = { owns = 4655 }
+		NOT = { num_of_rebel_armies = 1 }
+		4655 = {
+			owner = {
+				ai = yes
+				NOT = { truce_with = MJZ }
+				NOT = { alliance_with = MJZ }
+				NOT = { num_of_allies = 2 }
+				all_ally = {
+					is_great_power = no
+				}
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	immediate = {
+		4655 = {
+			owner = {
+				save_event_target_as = target_of_war
+			}
+		}
+		add_yearly_manpower = 0.5
+		every_known_country = {
+			limit = {
+				ai = yes
+				NOT = { is_subject_of = MJZ }
+				NOT = { is_great_power = yes }
+				NOT = {
+					border_distance = {
+						who = MJZ
+						distance = 60
+					}
+				}
+			}
+			add_opinion = {
+				who = MJZ
+				modifier = xorme_ai_conq_box
+			}
+			reverse_add_opinion = {
+				who = MJZ
+				modifier = xorme_ai_conq_box
+			}
+		}
+	}
+
+	after = {
+		declare_war_with_cb = {
+			who = event_target:target_of_war
+			casus_belli = cb_tribal_feud
+			war_goal_province = 4655
+		}
+		730 = {
+			add_core = MJZ
+		}
+	}
+
+
+	option = {
+	}
+}
+
+country_event = {
+	id = xorme_ai_goals.13
+	title = "NONE"
+	desc = "NONE"
+	picture = "NONE"
+
+	hidden = yes
+	fire_only_once = yes
+
+	trigger = {
+		tag = MJZ
+		ai = yes
+		is_at_war = no
+		owns = 4655
+		NOT = { owns = 730 }
+		NOT = { num_of_rebel_armies = 1 }
+		730 = {
+			owner = {
+				ai = yes
+				NOT = { truce_with = MJZ }
+				NOT = { alliance_with = MJZ }
+				NOT = { num_of_allies = 2 }
+				all_ally = {
+					is_great_power = no
+				}
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	immediate = {
+		730 = {
+			owner = {
+				save_event_target_as = target_of_war
+			}
+		}
+	}
+
+	after = {
+		declare_war_with_cb = {
+			who = event_target:target_of_war
+			casus_belli = cb_tribal_feud
+			war_goal_province = 730
+		}
+	}
+
+
+	option = {
+	}
+}
+
+country_event = {
+	id = xorme_ai_goals.14
+	title = "NONE"
+	desc = "NONE"
+	picture = "NONE"
+
+	hidden = yes
+	fire_only_once = yes
+
+	trigger = {
+		tag = MJZ
+		ai = yes
+		is_at_war = no
+		NOT = { num_of_rebel_armies = 1 }
+		NOT = { owns = 731 }
+		owns = 4655
+		owns = 730
+		731 = {
+			owner = {
+				ai = yes
+				NOT = { truce_with = MJZ }
+				NOT = { alliance_with = MJZ }
+				NOT = { num_of_allies = 2 }
+				all_ally = {
+					is_great_power = no
+				}
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	immediate = {
+		731 = {
+			owner = {
+				save_event_target_as = target_of_war
+			}
+		}
+	}
+
+	after = {
+		declare_war_with_cb = {
+			who = event_target:target_of_war
+			casus_belli = cb_tribal_feud
+			war_goal_province = 731
+		}
+	}
+
+
+	option = {
+	}
+}
+
+country_event = {
+	id = xorme_ai_goals.15
+	title = "NONE"
+	desc = "NONE"
+	picture = "NONE"
+
+	hidden = yes
+	fire_only_once = yes
+
+	trigger = {
+		tag = MJZ
+		ai = yes
+		is_at_war = no
+		NOT = { num_of_rebel_armies = 1 }
+		owns = 730
+		owns = 731
+		NOT = { owns = 4200 }
+		4200 = {
+			owner = {
+				ai = yes
+				NOT = { truce_with = MJZ }
+				NOT = { alliance_with = MJZ }
+				NOT = { num_of_allies = 2 }
+				all_ally = {
+					is_great_power = no
+				}
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	immediate = {
+		4200 = {
+			owner = {
+				save_event_target_as = target_of_war
+			}
+		}
+	}
+
+	after = {
+		declare_war_with_cb = {
+			who = event_target:target_of_war
+			casus_belli = cb_tribal_feud
+			war_goal_province = 4200
+		}
+	}
+
+
+	option = {
+	}
+}
+
+country_event = {
+	id = xorme_ai_goals.16
+	title = "NONE"
+	desc = "NONE"
+	picture = "NONE"
+
+	hidden = yes
+	fire_only_once = yes
+
+	trigger = {
+		tag = MCH
+		ai = yes
+		is_at_war = no
+		NOT = { num_of_rebel_armies = 1 }
+		owns = 730
+		owns = 731
+		owns = 4200
+		mil_tech = 5
+		army_size_percentage = 0.9
+		any_neighbor_country = {
+			is_emperor_of_china = yes
+			is_at_war = yes
+			ai = yes
+			NOT = { imperial_mandate = 30 }
+			NOT = { truce_with = MCH }
+			NOT = { army_size_percentage = 0.6 }
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	immediate = {
+		declare_war_with_cb = {
+			who = event_target:emperor_of_china
+			casus_belli = cb_take_mandate
+		}
+	}
+
+	after = {
+	}
+
+
+	option = {
+	}
+}
+
+#MAM
+country_event = {
+	id = xorme_ai_goals.17
+	title = "NONE"
+	desc = "NONE"
+	picture = "NONE"
+
+	hidden = yes
+	fire_only_once = yes
+
+	trigger = {
+		tag = MAM
+		ai = yes
+		is_at_war = no
+		MAM = {
+			NOT = { owns = 407 }
+		}
+		407 = {
+			owner = {
+				ai = yes
+				NOT = { truce_with = MAM }
+				NOT = { alliance_with = MAM }
+				all_ally = {
+					is_great_power = no
+				}
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	immediate = {
+		407 = {
+			add_claim = MAM
+			owner = {
+				save_event_target_as = mam_target_of_war
+			}
+		}
+	}
+
+	after = {
+		declare_war_with_cb = {
+			who = event_target:mam_target_of_war
+			casus_belli = cb_conquest
+			war_goal_province = 407
+		}
+	}
+
+
+	option = {
+	}
+}

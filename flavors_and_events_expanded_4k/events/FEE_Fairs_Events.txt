@@ -1,0 +1,2060 @@
+namespace = FEE_Fairs_Events
+
+#Event to talk about the Trading Fairs
+country_event = {
+	id = FEE_Fairs_Events.1
+	title = FEE_Fairs_Events.1.T
+	desc = FEE_Fairs_Events.1.D
+	picture = CARAVAN_EVENT_Picture
+
+	fire_only_once = yes
+
+	trigger = {
+		ai = no
+		NOT = { has_global_flag = fee_trading_fairs_enabled }
+		NOT = { is_institution_enabled = global_trade }
+		NOT = { is_year = 1446 }
+	}
+
+	major = yes
+	major_trigger = {
+		ai = no
+	}
+
+	option = {
+		name = FEE_Fairs_Events.1.OPT1
+
+		custom_tooltip = FEE_FAIRS_STARTING_TT
+		set_global_flag = fee_trading_fairs_enabled
+		hidden_effect = {
+			every_province = {
+				limit = { province_has_center_of_trade_of_level = 1 }
+				set_province_flag = fee_trading_fair_eligible
+			}
+		}
+	}
+
+	option = {
+		name = FEE_Fairs_Events.1.OPT2
+
+		custom_tooltip = FEE_FAIRS_DISABLE_TT
+		clr_global_flag = fee_trading_fairs_enabled
+	}
+}
+
+#Hidden Event to Select the Trading Fair
+country_event = {
+	id = FEE_Fairs_Events.2
+	title = FEE_Fairs_Events.2.T
+	desc = FEE_Fairs_Events.2.D
+	picture = CARAVAN_EVENT_Picture
+
+	hidden = yes
+
+	trigger = {
+		NOT = { is_institution_enabled = global_trade }
+		has_global_flag = fee_trading_fairs_enabled
+		OR = {
+			had_country_flag = {
+				flag = fee_trading_fair_started
+				days = 5475
+			}
+			NOT = { has_country_flag = fee_trading_fair_started }
+		}
+		any_owned_province = {
+			province_has_center_of_trade_of_level = 1
+			OR = {
+				NOT = { has_province_flag = fee_province_trading_fair_started }
+				had_province_flag = {
+					flag = fee_province_trading_fair_started
+					days = 7300
+				}
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		years = 1
+	}
+
+	immediate = {
+		hidden_effect = {
+			random_owned_province = {
+				limit = {
+					province_has_center_of_trade_of_level = 1
+					OR = {
+						NOT = { has_province_flag = fee_province_trading_fair_started }
+						had_province_flag = {
+							flag = fee_province_trading_fair_started
+							days = 5475
+						}
+					}
+				}
+				set_province_flag = fee_province_trading_fair_started
+				save_event_target_as = event_target_fee_fair_province
+				owner = {
+					country_event = {
+						id = FEE_Fairs_Events.3
+						days = 30
+					}
+				}
+			}
+			clr_country_flag = fee_trading_fair_started
+		}
+	}
+
+	option = {
+		name = FEE_Fairs_Events.2.OPT1
+	}
+
+	after = {
+		hidden_effect = {
+			set_country_flag = fee_trading_fair_started
+		}
+	}
+}
+
+#Trading Fair of [event_target_fee_fair_province.GetName]
+country_event = {
+	id = FEE_Fairs_Events.3
+	title = FEE_Fairs_Events.3.T
+	desc = FEE_Fairs_Events.3.D
+	picture = CARAVAN_EVENT_Picture
+
+	goto = event_target_fee_fair_province
+
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			event_target:event_target_fee_fair_province = {
+				clr_province_flag = fee_province_trading_fair_started
+			}
+		}
+	}
+
+	option = {
+		name = FEE_Fairs_Events.3.OPT1
+		ai_chance = {
+			factor = 50
+		}
+
+		custom_tooltip = FEE_FAIRS_CHOSE_PROVINCE_TT
+		country_event = {
+			id = FEE_Fairs_Events.7
+			days = 1825
+		}
+		hidden_effect = {
+			country_event = {
+				id = FEE_Fairs_Events.2000
+				days = 60
+				random = 15
+			}
+		}
+		event_target:event_target_fee_fair_province = {
+			add_province_modifier = {
+				name = fee_trading_fair_province_modifier
+				duration = 1825
+			}
+			hidden_effect = {
+				set_province_flag = fee_province_trading_fair_started
+				set_variable = {
+					which = feeTradingFairLevel
+					value = 0
+				}
+				if = {
+					limit = {
+						has_province_flag = fee_trading_fair_eligible
+						NOT = { has_province_flag = fee_first_trading_fair }
+						owner = {
+							NOT = { has_country_flag = fee_first_trading_fair_country }
+						}
+					}
+					set_province_flag = fee_first_trading_fair
+					owner = {
+						set_country_flag = fee_first_trading_fair_country
+					}
+				}
+			}
+		}
+	}
+}
+
+#Explaination Progress
+country_event = {
+	id = FEE_Fairs_Events.4
+	title = FEE_Fairs_Events.4.T
+	desc = FEE_Fairs_Events.4.D
+	picture = GOOD_WITH_MONARCH_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = FEE_Fairs_Events.4.OPT1
+		ai_chance = {
+			factor = 50
+		}
+
+		country_event = {
+			id = FEE_Fairs_Events.5
+		}
+	}
+
+	option = {
+		name = FEE_Fairs_Events.4.OPT2
+		ai_chance = {
+			factor = 50
+		}
+
+	}
+}
+
+#Explaination Result
+country_event = {
+	id = FEE_Fairs_Events.5
+	title = FEE_Fairs_Events.5.T
+	desc = FEE_Fairs_Events.5.D
+	picture = GOOD_WITH_MONARCH_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = FEE_Fairs_Events.5.OPT1
+		ai_chance = {
+			factor = 50
+		}
+
+		country_event = {
+			id = FEE_Fairs_Events.4
+		}
+	}
+
+	option = {
+		name = FEE_Fairs_Events.5.OPT2
+		ai_chance = {
+			factor = 50
+		}
+
+	}
+}
+
+#Original Trading Fairs
+country_event = {
+	id = FEE_Fairs_Events.6
+	title = FEE_Fairs_Events.6.T
+	desc = FEE_Fairs_Events.6.D
+	picture = CARAVAN_EVENT_Picture
+
+	fire_only_once = yes
+
+	trigger = {
+		is_institution_enabled = global_trade
+		has_global_flag = fee_trading_fairs_enabled
+	}
+
+	major = yes
+
+	mean_time_to_happen = {
+		years = 1
+	}
+
+	option = {
+		name = FEE_Fairs_Events.6.OPT1
+
+		custom_tooltip = FEE_ORIGIN_TRADING_FAIRS_TT
+		tooltip = {
+			random_province = {
+				limit = {
+					has_province_flag = fee_first_trading_fair
+					owner = { has_country_flag = fee_first_trading_fair_country }
+					NOT = { has_province_modifier = fee_trading_fair_origin }
+				}
+				add_permanent_province_modifier = {
+					name = fee_trading_fair_origin
+					duration = -1
+				}
+			}
+		}
+		hidden_effect = {
+			every_province = {
+				limit = {
+					has_province_flag = fee_first_trading_fair
+					owner = {
+						has_country_flag = fee_first_trading_fair_country
+						NOT = {
+							any_owned_province = {
+								has_province_modifier = fee_trading_fair_origin
+							}
+						}
+					}
+					NOT = { has_province_modifier = fee_trading_fair_origin }
+				}
+				add_permanent_province_modifier = {
+					name = fee_trading_fair_origin
+					duration = -1
+				}
+			}
+		}
+	}
+}
+
+#Fair Ended in [event_target_fee_fair_province.GetName]
+country_event = {
+	id = FEE_Fairs_Events.7
+	title = FEE_Fairs_Events.7.T
+	desc = FEE_Fairs_Events.7.D
+	picture = CARAVAN_EVENT_Picture
+
+	is_triggered_only = yes
+
+	goto = event_target_fee_fair_province
+
+	immediate = {
+		hidden_effect = {
+			event_target:event_target_fee_fair_province = {
+				if = {
+					limit = {
+						NOT = { has_province_modifier = fee_trading_fair_province_modifier }
+					}
+					set_variable = {
+						which = feeTradingFairLevel
+						value = -1000
+					}
+				}
+				if = {
+					limit = { province_has_center_of_trade_of_level = 2 }
+					change_variable = {
+						which = feeTradingFairLevel
+						value = 10
+					}
+				}
+				if = {
+					limit = {
+						owner = { full_idea_group = trade_ideas }
+					}
+					change_variable = {
+						which = feeTradingFairLevel
+						value = 20
+					}
+				}
+				else_if = {
+					limit = {
+						owner = { trade_ideas = 3 }
+					}
+					change_variable = {
+						which = feeTradingFairLevel
+						value = 10
+					}
+				}
+				else_if = {
+					limit = {
+						owner = { trade_ideas = 1 }
+					}
+					change_variable = {
+						which = feeTradingFairLevel
+						value = 5
+					}
+				}
+				if = {
+					limit = {
+						owner = { DIP = 5 }
+					}
+					change_variable = {
+						which = feeTradingFairLevel
+						value = 10
+					}
+				}
+				else_if = {
+					limit = {
+						owner = {
+							NOT = { DIP = 1 }
+						}
+					}
+					change_variable = {
+						which = feeTradingFairLevel
+						value = -10
+					}
+				}
+				if = {
+					limit = {
+						owner = { monthly_dip = 12 }
+					}
+					change_variable = {
+						which = feeTradingFairLevel
+						value = 15
+					}
+				}
+				else_if = {
+					limit = {
+						owner = {
+							NOT = { monthly_dip = 6 }
+						}
+					}
+					change_variable = {
+						which = feeTradingFairLevel
+						value = -15
+					}
+				}
+				if = {
+					limit = { prosperity = 50 }
+					change_variable = {
+						which = feeTradingFairLevel
+						value = 5
+					}
+				}
+				else_if = {
+					limit = { devastation = 25 }
+					change_variable = {
+						which = feeTradingFairLevel
+						value = -5
+					}
+				}
+				if = {
+					limit = {
+						owner = { trader = 3 }
+					}
+					change_variable = {
+						which = feeTradingFairLevel
+						value = 10
+					}
+				}
+				else_if = {
+					limit = {
+						owner = { trader = 2 }
+					}
+					change_variable = {
+						which = feeTradingFairLevel
+						value = 6
+					}
+				}
+				else_if = {
+					limit = {
+						owner = { trader = 1 }
+					}
+					change_variable = {
+						which = feeTradingFairLevel
+						value = 3
+					}
+				}
+				if = {
+					limit = {
+						owner = { is_trade_league_leader = yes }
+					}
+					change_variable = {
+						which = feeTradingFairLevel
+						value = 10
+					}
+				}
+				if = {
+					limit = {
+						owner = {
+							num_of_owned_provinces_with = {
+								value = 3
+								province_has_center_of_trade_of_level = 3
+							}
+						}
+					}
+					change_variable = {
+						which = feeTradingFairLevel
+						value = 8
+					}
+				}
+				else_if = {
+					limit = {
+						owner = {
+							num_of_owned_provinces_with = {
+								value = 3
+								province_has_center_of_trade_of_level = 2
+							}
+						}
+					}
+					change_variable = {
+						which = feeTradingFairLevel
+						value = 7
+					}
+				}
+				else_if = {
+					limit = {
+						owner = {
+							num_of_owned_provinces_with = {
+								value = 2
+								province_has_center_of_trade_of_level = 3
+							}
+						}
+					}
+					change_variable = {
+						which = feeTradingFairLevel
+						value = 8
+					}
+				}
+				else_if = {
+					limit = {
+						owner = {
+							num_of_owned_provinces_with = {
+								value = 2
+								province_has_center_of_trade_of_level = 2
+							}
+						}
+					}
+					change_variable = {
+						which = feeTradingFairLevel
+						value = 5
+					}
+				}
+			}
+		}
+	}
+
+	option = {
+		name = FEE_Fairs_Events.7.OPT1
+		ai_chance = {
+			factor = 50
+		}
+
+		event_target:event_target_fee_fair_province = {
+			if = {
+				limit = {
+					NOT = {
+						check_variable = {
+							which = feeTradingFairLevel
+							value = -900
+						}
+					}
+				}
+				custom_tooltip = FEE_FAIR_STARTED_CHANGED_OWNER_TT
+				owner = { add_splendor = 1 }
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						check_variable = {
+							which = feeTradingFairLevel
+							value = -95
+						}
+					}
+				}
+				if = {
+					limit = {
+						owner = {
+							NOT = { DIP = 1 }
+						}
+					}
+					add_base_production = -2
+				}
+				else = { add_base_production = -1 }
+			}
+			else_if = { #Devastation
+				limit = {
+					NOT = {
+						check_variable = {
+							which = feeTradingFairLevel
+							value = -65
+						}
+					}
+				}
+				add_devastation = 33
+			}
+			else_if = { #Loss Mercantilism
+				limit = {
+					NOT = {
+						check_variable = {
+							which = feeTradingFairLevel
+							value = -35
+						}
+					}
+				}
+				owner = {
+					if = {
+						limit = { mercantilism = 3 }
+						add_mercantilism = -3
+					}
+					else = {
+						add_dip_power = -25
+					}
+				}
+			}
+			else_if = { #Loss Income
+				limit = {
+					NOT = {
+						check_variable = {
+							which = feeTradingFairLevel
+							value = -15
+						}
+					}
+				}
+				owner = { add_years_of_income = -0.083 }
+			}
+			else_if = { #Loss Mana
+				limit = {
+					NOT = {
+						check_variable = {
+							which = feeTradingFairLevel
+							value = 0
+						}
+					}
+				}
+				if = {
+					limit = {
+						owner = { DIP = 1 }
+					}
+					owner = {
+						add_dip_power = -25
+					}
+				}
+				else = {
+					owner = {
+						add_dip_power = -50
+					}
+				}
+			}
+			else_if = { #Gain Mana
+				limit = {
+					NOT = {
+						check_variable = {
+							which = feeTradingFairLevel
+							value = 15
+						}
+					}
+				}
+				if = {
+					limit = {
+						owner = { DIP = 6 }
+					}
+					owner = {
+						add_dip_power = 50
+					}
+				}
+				else = {
+					owner = {
+						add_dip_power = 25
+					}
+				}
+			}
+			else_if = { #Gain Mercantilism
+				limit = {
+					NOT = {
+						check_variable = {
+							which = feeTradingFairLevel
+							value = 35
+						}
+					}
+				}
+				owner = {
+					add_mercantilism = 3
+				}
+			}
+			else_if = { #Gain Income
+				limit = {
+					NOT = {
+						check_variable = {
+							which = feeTradingFairLevel
+							value = 65
+						}
+					}
+				}
+				owner = {
+					add_years_of_income = 0.083
+				}
+			}
+			else_if = { #Gain Trader
+				limit = {
+					NOT = {
+						check_variable = {
+							which = feeTradingFairLevel
+							value = 95
+						}
+					}
+				}
+				owner = {
+					define_advisor = {
+						type = trader
+						skill = 2
+						cost_multiplier = 0.75
+						culture = ROOT
+					}
+				}
+			}
+			else = { #Gain Development
+				if = {
+					limit = {
+						owner = { DIP = 6 }
+					}
+					add_base_production = 2
+				}
+				else = { add_base_production = 1 }
+			}
+		}
+	}
+
+	after = {
+		hidden_effect = {
+			clr_country_flag = fee_trading_fair_banquet_invitation
+
+			event_target:event_target_fee_fair_province = {
+				clr_province_flag = fee_province_trading_fair_ruler_goes_to_fair
+				clr_province_flag = fee_province_trading_fair_ruler_does_not_go_to_fair
+				clr_province_flag = fee_province_trading_fair_famous_artist_accepted
+				clr_province_flag = fee_province_trading_fair_famous_artist_refused
+
+				clr_province_flag = fee_province_trading_fair_nomad_accepted
+				clr_province_flag = fee_province_trading_fair_nomad_repulsed
+				clr_province_flag = fee_province_trading_fair_nomad_fire
+				clr_province_flag = fee_province_trading_fair_furtune_teller
+				clr_province_flag = fee_province_trading_fair_dealed_nomad
+
+				clr_province_flag = fee_trading_fair_banquet_preparation
+				clr_province_flag = fee_trading_fair_banquet_personal
+				if = {
+					limit = {
+						has_province_modifier = fee_trading_fair_province_modifier
+					}
+					remove_province_modifier = fee_trading_fair_province_modifier
+				}
+				set_variable = {
+					which = feeTradingFairLevel
+					value = 0
+				}
+			}
+		}
+	}
+}
+
+#Hidden Event to Cycle through events
+country_event = {
+	id = FEE_Fairs_Events.2000
+	title = FEE_Fairs_Events.2000.T
+	desc = FEE_Fairs_Events.2000.D
+	picture = CARAVAN_EVENT_Picture
+
+	hidden = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		any_owned_province = {
+			has_province_modifier = fee_trading_fair_province_modifier
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			random_list = {
+				13 = {
+					trigger = {
+						event_target:event_target_fee_fair_province = {
+							has_province_modifier = fee_trading_fair_province_modifier
+							NOT = { has_province_flag = fee_province_trading_fair_ruler_goes_to_fair }
+							NOT = { has_province_flag = fee_province_trading_fair_ruler_does_not_go_to_fair }
+						}
+					}
+					country_event = {
+						id = FEE_Fairs_Events.3000
+						days = 365
+						random = 30
+					}
+				}
+				13 = {
+					trigger = {
+						event_target:event_target_fee_fair_province = {
+							has_province_modifier = fee_trading_fair_province_modifier
+							has_province_flag = fee_province_trading_fair_started
+							had_province_flag = {
+								flag = fee_province_trading_fair_started
+								days = 1095
+							}
+							NOT = { has_province_flag = fee_province_trading_fair_nomad_accepted }
+							NOT = { has_province_flag = fee_province_trading_fair_nomad_repulsed }
+						}
+					}
+					country_event = {
+						id = FEE_Fairs_Events.5000
+						days = 365
+						random = 30
+					}
+				}
+				13 = {
+					trigger = {
+						event_target:event_target_fee_fair_province = {
+							has_province_modifier = fee_trading_fair_province_modifier
+							had_province_flag = {
+								flag = fee_province_trading_fair_started
+								days = 90
+							}
+							has_province_flag = fee_province_trading_fair_nomad_accepted
+							NOT = { has_province_flag = fee_province_trading_fair_nomad_fire }
+						}
+					}
+					country_event = {
+						id = FEE_Fairs_Events.5001
+						days = 180
+						random = 30
+					}
+				}
+				13 = {
+					trigger = {
+						NOT = { has_ruler_modifier = fee_almighty_protection }
+						NOT = { has_ruler_modifier = fee_solemn_hymn }
+						NOT = { has_ruler_modifier = fee_angelic_blessing }
+						NOT = { has_ruler_modifier = fee_kiss_luck }
+						NOT = { has_ruler_modifier = fee_ruinous_powers }
+						NOT = { has_ruler_modifier = fee_demonic_embrace }
+						NOT = { has_ruler_modifier = fee_ancient_curse }
+						NOT = { has_ruler_modifier = fee_witch_eye }
+						event_target:event_target_fee_fair_province = {
+							has_province_modifier = fee_trading_fair_province_modifier
+							has_province_flag = fee_province_trading_fair_nomad_accepted
+							has_province_flag = fee_province_trading_fair_ruler_goes_to_fair
+							NOT = { has_province_flag = fee_province_trading_fair_furtune_teller }
+						}
+					}
+					country_event = {
+						id = FEE_Fairs_Events.5002
+						days = 180
+						random = 30
+					}
+				}
+				13 = {
+					trigger = {
+						event_target:event_target_fee_fair_province = {
+							has_province_modifier = fee_trading_fair_province_modifier
+							had_province_flag = {
+								flag = fee_province_trading_fair_nomad_accepted
+								days = 365
+							}
+							NOT = { has_province_flag = fee_province_trading_fair_dealed_nomad }
+						}
+					}
+					country_event = {
+						id = FEE_Fairs_Events.5020
+						days = 365
+						random = 30
+					}
+				}
+				13 = {
+					trigger = {
+						event_target:event_target_fee_fair_province = {
+							has_province_modifier = fee_trading_fair_province_modifier
+							NOT = { has_province_flag = fee_province_trading_fair_famous_artist_accepted }
+							NOT = { has_province_flag = fee_province_trading_fair_famous_artist_refused }
+						}
+					}
+					country_event = {
+						id = FEE_Fairs_Events.6000
+						days = 270
+						random = 30
+					}
+				}
+				13 = {
+					trigger = {
+						event_target:event_target_fee_fair_province = {
+							has_province_modifier = fee_trading_fair_province_modifier
+							NOT = { current_age = age_of_revolutions }
+							NOT = { current_age = age_of_absolutism }
+							NOT = { current_age = age_of_reformation }
+							had_province_flag = {
+								flag = fee_province_trading_fair_started
+								days = 1095
+							}
+							NOT = { has_province_flag = fee_trading_fair_banquet_preparation }
+						}
+					}
+					country_event = {
+						id = FEE_Fairs_Events.7000
+						days = 90
+						random = 15
+					}
+				}
+				13 = {
+					trigger = {
+						event_target:event_target_fee_fair_province = {
+							any_owned_province = {
+								has_province_flag = fee_trading_fair_banquet_preparation
+							}
+						}
+						NOT = { has_country_flag = fee_trading_fair_banquet_invitation }
+					}
+					country_event = {
+						id = FEE_Fairs_Events.7001
+						days = 270
+						random = 30
+					}
+				}
+			}
+		}
+	}
+
+	option = {
+		name = FEE_Fairs_Events.2000.OPT1
+	}
+}
+
+#Invitation to the trading Fair
+country_event = {
+	id = FEE_Fairs_Events.3000
+	title = FEE_Fairs_Events.3000.T
+	desc = FEE_Fairs_Events.3000.D
+	picture = CARAVAN_EVENT_Picture
+
+	is_triggered_only = yes
+
+	trigger = {
+		event_target:event_target_fee_fair_province = {
+			has_province_modifier = fee_trading_fair_province_modifier
+			NOT = { has_province_flag = fee_province_trading_fair_ruler_goes_to_fair }
+			NOT = { has_province_flag = fee_province_trading_fair_ruler_does_not_go_to_fair }
+		}
+	}
+
+	goto = event_target_fee_fair_province
+
+	option = {
+		name = FEE_Fairs_Events.3000.OPT1
+		ai_chance = {
+			factor = 50
+		}
+
+		event_target:event_target_fee_fair_province = {
+			set_province_flag = fee_province_trading_fair_ruler_goes_to_fair
+			change_variable = {
+				which = feeTradingFairLevel
+				value = 5
+			}
+		}
+	}
+
+	option = {
+		name = FEE_Fairs_Events.3000.OPT2
+		ai_chance = {
+			factor = 50
+		}
+
+		event_target:event_target_fee_fair_province = {
+			set_province_flag = fee_province_trading_fair_ruler_does_not_go_to_fair
+			change_variable = {
+				which = feeTradingFairLevel
+				value = -5
+			}
+		}
+	}
+
+	after = {
+		hidden_effect = {
+			country_event = {
+				id = FEE_Fairs_Events.2000
+				days = 90
+				random = 15
+			}
+		}
+	}
+}
+
+#Nomad Caravan
+country_event = {
+	id = FEE_Fairs_Events.5000
+	title = FEE_Fairs_Events.5000.T
+	desc = FEE_Fairs_Events.5000.D
+	picture = CARAVAN_EVENT_Picture
+
+	is_triggered_only = yes
+
+	trigger = {
+		event_target:event_target_fee_fair_province = {
+			has_province_modifier = fee_trading_fair_province_modifier
+			has_province_flag = fee_province_trading_fair_started
+			had_province_flag = {
+				flag = fee_province_trading_fair_started
+				days = 1095
+			}
+			NOT = { has_province_flag = fee_province_trading_fair_nomad_accepted }
+			NOT = { has_province_flag = fee_province_trading_fair_nomad_repulsed }
+		}
+	}
+
+	goto = event_target_fee_fair_province
+
+	option = {
+		name = FEE_Fairs_Events.5000.OPT1
+		ai_chance = {
+			factor = 50
+		}
+
+		add_dip_power = -25
+		event_target:event_target_fee_fair_province = {
+			set_province_flag = fee_province_trading_fair_nomad_accepted
+			change_variable = {
+				which = feeTradingFairLevel
+				value = 5
+			}
+		}
+	}
+
+	option = {
+		name = FEE_Fairs_Events.5000.OPT2
+		ai_chance = {
+			factor = 50
+		}
+
+		add_mil_power = 25
+		event_target:event_target_fee_fair_province = {
+			set_province_flag = fee_province_trading_fair_nomad_repulsed
+			change_variable = {
+				which = feeTradingFairLevel
+				value = -5
+			}
+		}
+	}
+
+	after = {
+		hidden_effect = {
+			country_event = {
+				id = FEE_Fairs_Events.2000
+				days = 90
+				random = 15
+			}
+		}
+	}
+}
+
+#Fire Eater
+country_event = {
+	id = FEE_Fairs_Events.5001
+	title = FEE_Fairs_Events.5001.T
+	desc = FEE_Fairs_Events.5001.D
+	picture = CARAVAN_EVENT_Picture
+
+	is_triggered_only = yes
+
+	trigger = {
+		event_target:event_target_fee_fair_province = {
+			has_province_modifier = fee_trading_fair_province_modifier
+			had_province_flag = {
+				flag = fee_province_trading_fair_started
+				days = 90
+			}
+			has_province_flag = fee_province_trading_fair_nomad_accepted
+			NOT = { has_province_flag = fee_province_trading_fair_nomad_fire }
+		}
+	}
+
+	goto = event_target_fee_fair_province
+
+	option = {
+		name = FEE_Fairs_Events.5001.OPT1
+		ai_chance = {
+			factor = 50
+		}
+
+		event_target:event_target_fee_fair_province = {
+			change_variable = {
+				which = feeTradingFairLevel
+				value = 5
+			}
+			random = {
+				chance = 33
+				add_devastation = 3
+			}
+			set_province_flag = fee_province_trading_fair_nomad_fire
+		}
+	}
+
+	option = {
+		name = FEE_Fairs_Events.5001.OPT2
+		ai_chance = {
+			factor = 50
+		}
+
+		event_target:event_target_fee_fair_province = {
+			set_province_flag = fee_province_trading_fair_nomad_fire
+			change_variable = {
+				which = feeTradingFairLevel
+				value = -5
+			}
+		}
+	}
+
+	after = {
+		hidden_effect = {
+			country_event = {
+				id = FEE_Fairs_Events.2000
+				days = 90
+				random = 15
+			}
+		}
+	}
+}
+
+#Furtune Teller
+country_event = {
+	id = FEE_Fairs_Events.5002
+	title = FEE_Fairs_Events.5002.T
+	desc = FEE_Fairs_Events.5002.D
+	picture = CARAVAN_EVENT_Picture
+
+	is_triggered_only = yes
+
+	trigger = {
+		NOT = { has_ruler_modifier = fee_almighty_protection }
+		NOT = { has_ruler_modifier = fee_solemn_hymn }
+		NOT = { has_ruler_modifier = fee_angelic_blessing }
+		NOT = { has_ruler_modifier = fee_kiss_luck }
+		NOT = { has_ruler_modifier = fee_ruinous_powers }
+		NOT = { has_ruler_modifier = fee_demonic_embrace }
+		NOT = { has_ruler_modifier = fee_ancient_curse }
+		NOT = { has_ruler_modifier = fee_witch_eye }
+		event_target:event_target_fee_fair_province = {
+			has_province_modifier = fee_trading_fair_province_modifier
+			has_province_flag = fee_province_trading_fair_nomad_accepted
+			has_province_flag = fee_province_trading_fair_ruler_goes_to_fair
+			NOT = { has_province_flag = fee_province_trading_fair_furtune_teller }
+		}
+	}
+
+	goto = event_target_fee_fair_province
+
+	option = {
+		name = FEE_Fairs_Events.5002.OPT1
+		ai_chance = {
+			factor = 50
+		}
+
+		50 = {
+			owner = {
+				country_event = {
+					id = FEE_Fairs_Events.5003
+					days = 30
+				}
+			}
+		}
+		50 = {
+			owner = {
+				country_event = {
+					id = FEE_Fairs_Events.5014
+					days = 30
+				}
+			}
+		}
+	}
+
+	option = {
+		name = FEE_Fairs_Events.5002.OPT2
+		ai_chance = {
+			factor = 50
+		}
+
+		event_target:event_target_fee_fair_province = {
+			set_province_flag = fee_province_trading_fair_nomad_fire
+			change_variable = {
+				which = feeTradingFairLevel
+				value = -5
+			}
+		}
+	}
+
+	after = {
+		hidden_effect = {
+			event_target:event_target_fee_fair_province = {
+				set_province_flag = fee_province_trading_fair_furtune_teller
+			}
+			country_event = {
+				id = FEE_Fairs_Events.2000
+				days = 90
+				random = 15
+			}
+		}
+	}
+}
+
+#Luck
+country_event = {
+	id = FEE_Fairs_Events.5003
+	title = FEE_Fairs_Events.5003.T
+	desc = FEE_Fairs_Events.5003.D
+	picture = GOOD_WITH_MONARCH_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = FEE_Fairs_Events.5003.OPT1
+		ai_chance = {
+			factor = 50
+		}
+
+		if = {
+			limit = { total_development = 300 }
+			add_mana_scaled_on_monarch_skill_fee = yes
+		}
+		else = {
+			random_list = {
+				10 = {
+					country_event = {
+						id = FEE_Fairs_Events.5004
+						days = 10
+					}
+				}
+				20 = {
+					country_event = {
+						id = FEE_Fairs_Events.5005
+						days = 10
+					}
+				}
+				30 = {
+					country_event = {
+						id = FEE_Fairs_Events.5006
+						days = 10
+					}
+				}
+				40 = {
+					country_event = {
+						id = FEE_Fairs_Events.5007
+						days = 10
+					}
+				}
+			}
+		}
+	}
+}
+
+#Almighty Protection
+country_event = {
+	id = FEE_Fairs_Events.5004
+	title = FEE_Fairs_Events.5004.T
+	desc = FEE_Fairs_Events.5004.D
+	picture = GOOD_WITH_MONARCH_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = FEE_Fairs_Events.5004.OPT1
+		ai_chance = {
+			factor = 50
+		}
+
+		if = {
+			limit = {
+				total_development = 300
+			}
+			add_mana_scaled_on_monarch_skill_fee = yes
+		}
+		else = {
+			add_ruler_modifier = {
+				name = fee_almighty_protection
+				duration = -1
+			}
+		}
+	}
+}
+
+#Solemn Hymn
+country_event = {
+	id = FEE_Fairs_Events.5005
+	title = FEE_Fairs_Events.5005.T
+	desc = FEE_Fairs_Events.5005.D
+	picture = GOOD_WITH_MONARCH_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = FEE_Fairs_Events.5005.OPT1
+		ai_chance = {
+			factor = 50
+		}
+
+		if = {
+			limit = {
+				total_development = 300
+			}
+			add_mana_scaled_on_monarch_skill_fee = yes
+		}
+		else = {
+			add_ruler_modifier = {
+				name = fee_solemn_hymn
+				duration = -1
+			}
+		}
+	}
+}
+
+#Angelic Blessing
+country_event = {
+	id = FEE_Fairs_Events.5006
+	title = FEE_Fairs_Events.5006.T
+	desc = FEE_Fairs_Events.5006.D
+	picture = GOOD_WITH_MONARCH_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = FEE_Fairs_Events.5006.OPT1
+		ai_chance = {
+			factor = 50
+		}
+
+		if = {
+			limit = {
+				total_development = 300
+			}
+			add_mana_scaled_on_monarch_skill_fee = yes
+		}
+		else = {
+			add_ruler_modifier = {
+				name = fee_angelic_blessing
+				duration = -1
+			}
+		}
+	}
+}
+
+#Kiss of Luck
+country_event = {
+	id = FEE_Fairs_Events.5007
+	title = FEE_Fairs_Events.5007.T
+	desc = FEE_Fairs_Events.5007.D
+	picture = GOOD_WITH_MONARCH_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = FEE_Fairs_Events.5007.OPT1
+		ai_chance = {
+			factor = 50
+		}
+
+		if = {
+			limit = {
+				total_development = 300
+			}
+			add_mana_scaled_on_monarch_skill_fee = yes
+		}
+		else = {
+			add_ruler_modifier = {
+				name = fee_angelic_blessing
+				duration = -1
+			}
+		}
+	}
+}
+
+#Misfortune
+country_event = {
+	id = FEE_Fairs_Events.5010
+	title = FEE_Fairs_Events.5010.T
+	desc = FEE_Fairs_Events.5010.D
+	picture = BAD_WITH_MONARCH_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = FEE_Fairs_Events.5010.OPT1
+		ai_chance = {
+			factor = 50
+		}
+
+		random_list = {
+			10 = {
+				country_event = {
+					id = FEE_Fairs_Events.5011
+					days = 10
+				}
+			}
+			20 = {
+				country_event = {
+					id = FEE_Fairs_Events.5012
+					days = 10
+				}
+			}
+			30 = {
+				country_event = {
+					id = FEE_Fairs_Events.5013
+					days = 10
+				}
+			}
+			40 = {
+				country_event = {
+					id = FEE_Fairs_Events.5014
+					days = 10
+				}
+			}
+		}
+	}
+}
+
+#Ruinous Powers
+country_event = {
+	id = FEE_Fairs_Events.5011
+	title = FEE_Fairs_Events.5011.T
+	desc = FEE_Fairs_Events.5011.D
+	picture = BAD_WITH_MONARCH_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = FEE_Fairs_Events.5011.OPT1
+		ai_chance = {
+			factor = 50
+		}
+
+		add_ruler_modifier = {
+			name = fee_ruinous_powers
+			duration = -1
+		}
+	}
+}
+
+#Demonic Embrace
+country_event = {
+	id = FEE_Fairs_Events.5012
+	title = FEE_Fairs_Events.5012.T
+	desc = FEE_Fairs_Events.5012.D
+	picture = BAD_WITH_MONARCH_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = FEE_Fairs_Events.5012.OPT1
+		ai_chance = {
+			factor = 50
+		}
+
+		add_ruler_modifier = {
+			name = fee_demonic_embrace
+			duration = -1
+		}
+	}
+}
+
+#Ancient Cursing
+country_event = {
+	id = FEE_Fairs_Events.5013
+	title = FEE_Fairs_Events.5013.T
+	desc = FEE_Fairs_Events.5013.D
+	picture = BAD_WITH_MONARCH_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = FEE_Fairs_Events.5013.OPT1
+		ai_chance = {
+			factor = 50
+		}
+
+		add_ruler_modifier = {
+			name = fee_ancient_curse
+			duration = -1
+		}
+	}
+}
+
+#Witch's Eyes
+country_event = {
+	id = FEE_Fairs_Events.5014
+	title = FEE_Fairs_Events.5014.T
+	desc = FEE_Fairs_Events.5014.D
+	picture = BAD_WITH_MONARCH_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = FEE_Fairs_Events.5014.OPT1
+		ai_chance = {
+			factor = 50
+		}
+
+		add_ruler_modifier = {
+			name = fee_witch_eye
+			duration = -1
+		}
+	}
+}
+
+#The end of the Nomad Caravan?
+country_event = {
+	id = FEE_Fairs_Events.5020
+	title = FEE_Fairs_Events.5020.T
+	desc = FEE_Fairs_Events.5020.D
+	picture = CARAVAN_EVENT_Picture
+
+	is_triggered_only = yes
+
+	trigger = {
+		event_target:event_target_fee_fair_province = {
+			has_province_modifier = fee_trading_fair_province_modifier
+			had_province_flag = {
+				flag = fee_province_trading_fair_nomad_accepted
+				days = 365
+			}
+			NOT = { has_province_flag = fee_province_trading_fair_dealed_nomad }
+		}
+	}
+
+	goto = event_target_fee_fair_province
+
+	option = {
+		name = FEE_Fairs_Events.5020.OPT1
+		ai_chance = {
+			factor = 50
+		}
+
+		add_years_of_income = -0.083
+		event_target:event_target_fee_fair_province = {
+			add_development_third_monarch_skill_fee = yes
+			change_variable = {
+				which = feeTradingFairLevel
+				value = 10
+			}
+			hidden_effect = {
+				change_variable = {
+					which = feeNomadCaravan
+					value = 10
+				}
+				country_event = {
+					id = FEE_Fairs_Events.5021
+					days = 365
+					random = 30
+				}
+				set_province_flag = fee_nomad_caravan_in
+				clr_province_flag = fee_nomad_fired_between_fairs
+			}
+		}
+	}
+
+	option = {
+		name = FEE_Fairs_Events.5020.OPT2
+		ai_chance = {
+			factor = 50
+		}
+
+		add_mil_power = 75
+		event_target:event_target_fee_fair_province = {
+			change_variable = {
+				which = feeTradingFairLevel
+				value = -15
+			}
+			set_province_flag = fee_nomad_restored
+		}
+	}
+
+	after = {
+		hidden_effect = {
+			event_target:event_target_fee_fair_province = {
+				set_province_flag = fee_province_trading_fair_dealed_nomad
+			}
+			country_event = {
+				id = FEE_Fairs_Events.2000
+				days = 90
+				random = 15
+			}
+		}
+	}
+}
+
+#Nomad Problem
+country_event = {
+	id = FEE_Fairs_Events.5021
+	title = FEE_Fairs_Events.5021.T
+	desc = FEE_Fairs_Events.5021.D
+	picture = REVOLT_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		any_owned_province = {
+			NOT = { has_province_modifier = fee_trading_fair_province_modifier }
+			has_province_flag = fee_nomad_caravan_in
+			NOT = { has_province_flag = fee_nomad_restored }
+			NOT = { has_province_flag = fee_nomad_fired_between_fairs }
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			random_owned_province = {
+				limit = {
+					NOT = { has_province_modifier = fee_trading_fair_province_modifier }
+					has_province_flag = fee_nomad_caravan_in
+					NOT = { has_province_flag = fee_nomad_restored }
+					NOT = { has_province_flag = fee_nomad_fired_between_fairs }
+				}
+				save_event_target_as = event_target_fee_nomad_caravan_province
+			}
+		}
+	}
+
+	goto = event_target_fee_nomad_caravan_province
+
+	option = {
+		name = FEE_Fairs_Events.5021.OPT1
+		ai_chance = {
+			factor = 50
+		}
+
+		event_target:event_target_fee_nomad_caravan_province = {
+			if = {
+				limit = {
+					check_variable = {
+						which = feeNomadCaravan
+						value = 10
+					}
+				}
+				add_devastation = 10
+			}
+			else_if = {
+				limit = {
+					check_variable = {
+						which = feeNomadCaravan
+						value = 25
+					}
+				}
+				add_devastation = 33
+				add_base_tax = -1
+				add_base_production = -1
+				add_base_manpower = -1
+			}
+			else_if = {
+				limit = {
+					check_variable = {
+						which = feeNomadCaravan
+						value = 50
+					}
+				}
+				add_devastation = 50
+				add_base_tax = -3
+				add_base_production = -3
+				add_base_manpower = -3
+				owner = {
+					add_stability = -1
+					add_adm_power = -50
+					add_dip_power = -50
+					add_mil_power = -50
+				}
+			}
+		}
+	}
+
+	after = {
+		hidden_effect = {
+			event_target:event_target_fee_nomad_caravan_province = {
+				set_province_flag = fee_nomad_fired_between_fairs
+			}
+		}
+	}
+}
+
+#Famous Artist
+country_event = {
+	id = FEE_Fairs_Events.6000
+	title = FEE_Fairs_Events.6000.T
+	desc = FEE_Fairs_Events.6000.D
+	picture = CARAVAN_EVENT_Picture
+
+	is_triggered_only = yes
+
+	trigger = {
+		event_target:event_target_fee_fair_province = {
+			has_province_modifier = fee_trading_fair_province_modifier
+			NOT = { has_province_flag = fee_province_trading_fair_famous_artist_accepted }
+			NOT = { has_province_flag = fee_province_trading_fair_famous_artist_refused }
+		}
+	}
+
+	goto = event_target_fee_fair_province
+
+	option = {
+		name = FEE_Fairs_Events.6000.OPT1
+
+		random = {
+			chance = 45
+			add_adm_power = 25
+		}
+		event_target:event_target_fee_fair_province = {
+			set_province_flag = fee_province_trading_fair_famous_artist_accepted
+			change_variable = {
+				which = feeTradingFairLevel
+				value = 10
+			}
+		}
+	}
+
+	option = {
+		name = FEE_Fairs_Events.6000.OPT2
+
+		add_years_of_income = -0.0416 #half month of income
+		define_advisor = {
+			type = artist
+			skill = 2
+			cost_multiplier = 0.50
+		}
+		event_target:event_target_fee_fair_province = {
+			set_province_flag = fee_province_trading_fair_famous_artist_refused
+			change_variable = {
+				which = feeTradingFairLevel
+				value = -10
+			}
+		}
+	}
+
+	after = {
+		hidden_effect = {
+			country_event = {
+				id = FEE_Fairs_Events.2000
+				days = 90
+				random = 15
+			}
+		}
+	}
+}
+
+#Banquet Preparation
+country_event = {
+	id = FEE_Fairs_Events.7000
+	title = FEE_Fairs_Events.7000.T
+	desc = FEE_Fairs_Events.7000.D
+	picture = COURT_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		event_target:event_target_fee_fair_province = {
+			has_province_modifier = fee_trading_fair_province_modifier
+			NOT = { current_age = age_of_revolutions }
+			NOT = { current_age = age_of_absolutism }
+			NOT = { current_age = age_of_reformation }
+			had_province_flag = {
+				flag = fee_province_trading_fair_started
+				days = 1095
+			}
+			NOT = { has_province_flag = fee_trading_fair_banquet_preparation }
+		}
+	}
+
+	goto = event_target_fee_fair_province
+
+	option = {
+		name = FEE_Fairs_Events.7000.OPT1
+
+		add_years_of_income = -0.332
+		add_legitimacy_equivalent = { amount = 5 republican_tradition = 5 }
+		event_target:event_target_fee_fair_province = {
+			change_variable = {
+				which = feeTradingFairLevel
+				value = 5
+			}
+		}
+	}
+
+	option = {
+		name = FEE_Fairs_Events.7000.OPT2
+
+		add_prestige = -5
+		event_target:event_target_fee_fair_province = {
+			change_variable = {
+				which = feeTradingFairLevel
+				value = -5
+			}
+		}
+	}
+
+	after = {
+		hidden_effect = {
+			event_target:event_target_fee_fair_province = {
+				set_province_flag = fee_trading_fair_banquet_preparation
+			}
+			country_event = {
+				id = FEE_Fairs_Events.2000
+				days = 90
+				random = 15
+			}
+		}
+	}
+}
+
+#Banquet Invitation
+country_event = {
+	id = FEE_Fairs_Events.7001
+	title = FEE_Fairs_Events.7001.T
+	desc = FEE_Fairs_Events.7001.D
+	picture = COURT_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		event_target:event_target_fee_fair_province = {
+			has_province_flag = fee_trading_fair_banquet_preparation
+		}
+		NOT = { has_country_flag = fee_trading_fair_banquet_invitation }
+	}
+
+	option = {
+		name = FEE_Fairs_Events.7001.OPT1
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 0
+				ai = yes
+			}
+		}
+
+		event_target:event_target_fee_fair_province = {
+			change_variable = {
+				which = feeTradingFairLevel
+				value = 5
+			}
+			set_province_flag = fee_trading_fair_banquet_personal
+		}
+	}
+
+	option = {
+		name = FEE_Fairs_Events.7001.OPT2
+		ai_chance = {
+			factor = 90
+		}
+
+		every_neighbor_country = {
+			limit = {
+				NOT = { war_with = ROOT }
+			}
+			country_event = {
+				id = FEE_Fairs_Events.7002
+				days = 30
+			}
+		}
+	}
+
+	after = {
+		hidden_effect = {
+			set_country_flag = fee_trading_fair_banquet_invitation
+			country_event = {
+				id = FEE_Fairs_Events.2000
+				days = 90
+				random = 15
+			}
+		}
+	}
+}
+
+#Invitation
+country_event = {
+	id = FEE_Fairs_Events.7002
+	title = FEE_Fairs_Events.7002.T
+	desc = FEE_Fairs_Events.7002.D
+	picture = DIPLOMACY_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = FEE_Fairs_Events.7002.OPT1
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 2
+				FROM = {
+					alliance_with = ROOT
+				}
+			}
+			modifier = {
+				factor = 1.5
+				FROM = {
+					marriage_with = ROOT
+				}
+			}
+			modifier = {
+				factor = 2
+				FROM = {
+					is_subject_of = ROOT
+				}
+			}
+			modifier = {
+				factor = 1.25
+				FROM = {
+					has_opinion = {
+						who = ROOT
+						value = 75
+					}
+				}
+			}
+			modifier = {
+				factor = 1.25
+				FROM = {
+					religion = ROOT
+				}
+			}
+			modifier = {
+				factor = 1.125
+				FROM = {
+					culture_group = ROOT
+				}
+			}
+			modifier = {
+				factor = 1.125
+				FROM = {
+					reverse_has_opinion = {
+						who = ROOT
+						value = 125
+					}
+				}
+			}
+		}
+
+		add_opinion = {
+			who = FROM
+			modifier = fee_fairs_accepted_invitation
+		}
+		FROM = {
+			add_opinion = {
+				who = ROOT
+				modifier = fee_fairs_accepted_invitation
+			}
+			country_event = {
+				id = FEE_Fairs_Events.7003
+				days = 30
+			}
+		}
+	}
+
+	option = {
+		name = FEE_Fairs_Events.7002.OPT2
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 2
+				FROM = {
+					is_rival = ROOT
+				}
+			}
+			modifier = {
+				factor = 1.5
+				FROM = {
+					is_enemy = ROOT
+				}
+			}
+			modifier = {
+				factor = 1.25
+				FROM = {
+					NOT = {
+						has_opinion = {
+							who = ROOT
+							value = -50
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 1.25
+				FROM = {
+					NOT = { religion = ROOT }
+				}
+			}
+			modifier = {
+				factor = 1.125
+				FROM = {
+					NOT = { culture_group = ROOT }
+				}
+			}
+		}
+
+		add_opinion = {
+			who = FROM
+			modifier = fee_fairs_declined_invitation
+		}
+		FROM = {
+			add_opinion = {
+				who = ROOT
+				modifier = fee_fairs_declined_invitation
+			}
+			country_event = {
+				id = FEE_Fairs_Events.7004
+				days = 30
+			}
+		}
+	}
+}
+
+#ROOT Comes to Banquet
+country_event = {
+	id = FEE_Fairs_Events.7003
+	title = FEE_Fairs_Events.7003.T
+	desc = FEE_Fairs_Events.7003.D
+	picture = GOOD_WITH_MONARCH_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = FEE_Fairs_Events.7003.OPT1
+
+		add_opinion = {
+			who = FROM
+			modifier = fee_fairs_accepted_invitation
+		}
+		FROM = {
+			add_opinion = {
+				who = ROOT
+				modifier = fee_fairs_accepted_invitation
+			}
+		}
+		random_owned_province = {
+			limit = {
+				has_province_flag = fee_province_trading_fair_started
+			}
+			change_variable = {
+				which = feeTradingFairLevel
+				value = 5
+			}
+		}
+	}
+}
+
+#FROM Does not come to the Banquet
+country_event = {
+	id = FEE_Fairs_Events.7004
+	title = FEE_Fairs_Events.7004.T
+	desc = FEE_Fairs_Events.7004.D
+	picture = BAD_WITH_MONARCH_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = FEE_Fairs_Events.7004.OPT1
+
+		add_opinion = {
+			who = FROM
+			modifier = fee_fairs_declined_invitation
+		}
+		FROM = {
+			add_opinion = {
+				who = ROOT
+				modifier = fee_fairs_declined_invitation
+			}
+		}
+		random_owned_province = {
+			limit = {
+				has_province_flag = fee_province_trading_fair_started
+			}
+			change_variable = {
+				which = feeTradingFairLevel
+				value = -5
+			}
+		}
+	}
+}
+
+#
+#country_event = {
+#	id = FEE_Fairs_Events.
+#	title = FEE_Fairs_Events..T
+#	desc = FEE_Fairs_Events..D
+#	picture = CARAVAN_EVENT_Picture
+#
+#	fire_only_once = yes
+#	trigger = {
+#
+#	}
+#
+#
+#	mean_time_to_happen = {
+#		days = 60
+#	}
+#
+#	option = {
+#		name = FEE_Fairs_Events..OPT1
+#
+#	}
+#}

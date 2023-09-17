@@ -1,0 +1,20 @@
+country_decisions = {
+	xorme_ai_mod_menu = {
+		potential = {
+			is_year = 1445
+            ai = no
+		}
+
+		allow = {
+            always = yes
+		}
+
+		effect = {
+            hidden_effect = {
+                country_event = {
+                    id = xorme_ai_mod_menu.1
+                }
+            }
+		}
+	}
+}

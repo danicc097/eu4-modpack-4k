@@ -1,0 +1,226 @@
+guiTypes = {
+
+	windowType = {
+		name = "estate_privileges_window"
+		position = { x= 864 y= 49}
+		size = { x=1350 y=1530 }
+		moveable = 1
+		dontRender = ""
+		horizontalBorder= ""
+		verticalBorder= ""
+		fullScreen = yes
+		Orientation = "UPPER_LEFT"
+
+		iconType = {
+			name ="copts_bg"
+			spriteType = "GFX_estate_privileges_bg"
+			position = { x= -17939 y = -17852 }
+		}
+
+		instantTextBoxType = {
+			name = "header_label"
+			position = { x = -17957 y = -17924 }
+			format = centre
+			textureFile = ""
+			font = "vic_29"
+			borderSize = {x = 7 y = 7}
+			text = "SEVEN BLESSINGS TO YOU"
+			maxWidth = 1051
+			maxHeight = 58
+			alwaystransparent = yes
+		}
+
+		iconType = {
+			name ="copts_list_bg"
+			spriteType = "GFX_estate_privileges_bg"
+			position = { x= 119 y = 32 }
+		}
+
+		instantTextBoxType = {
+			name = "label"
+			position = { x = 450 y = 166 }
+			format = centre
+			textureFile = ""
+			font = "vic_22s"
+			borderSize = {x = 7 y = 72}
+			text = ""
+			maxWidth = 1051
+			maxHeight = 58
+		}
+
+		listboxType =  {
+			name ="privileges_listbox"
+			position = { x = 207 y = 290 }
+			backGround=""
+			size = { x = 1532 y = 1451 }
+			Orientation = "UPPER_LEFT"
+			horizontal = 0
+			scrollbartype = "standardlistbox_slider"
+			borderSize = {x = 18 y = 18}
+		}
+
+		guiButtonType = {
+			name = "close_button"
+			position = { x= 846 y = 1764}
+			quadTextureSprite ="button_type_1"
+			tooltip = ""
+			tooltipText =""
+			delayedTooltipText = ""
+			buttonText = "HRE_CLOSE"
+			buttonFont = "vic_18"
+			clicksound = close_window
+			shortcut = "ESCAPE"
+		}
+	}
+
+	windowType = {
+		name = "estate_privilege_entry"
+		backGround =""
+		position = { x=0 y=-27 }
+		size = { x=882 y=207 }
+		moveable = 0
+		dontRender = ""
+		horizontalBorder = ""
+
+		iconType = {
+			name = "title_banner"
+			spriteType ="GFX_estate_privilege_entry"
+			position = { x = -27 y = -27 }
+		}
+
+		instantTextBoxType = {
+			position = { x = 99 y = -11}
+			name = "title"
+			font = "vic_22s"
+			borderSize = {x = 0 y = 0}
+			maxWidth = 414
+			maxHeight = 18
+			text = ""
+			format = left
+			fixedsize = yes
+		}
+
+		instantTextBoxType = {
+			name = "modifiers"
+			position = { x = 522 y = -11 }
+			format = left
+			textureFile = ""
+			font = "vic_18"
+			text = ""
+			maxWidth = 468
+			maxHeight = 194
+			#scrollbarType = "standardlistbox_invisible"
+			fixedsize = yes
+		}
+
+		instantTextBoxType = {
+			name = "effects"
+			position = { x = 1035 y = -11 }
+			format = left
+			textureFile = ""
+			font = "vic_18"
+			text = ""
+			maxWidth = 495
+			maxHeight = 198
+			#scrollbarType = "standardlistbox_invisible"
+			fixedsize = yes
+		}
+
+		instantTextBoxType = {
+			name = "cooldown"
+			position = { x = 23 y = 74 }
+			format = right
+			textureFile = ""
+			font = "Main_14"
+			text = ""
+			maxWidth = 396
+			maxHeight = 216
+		}
+
+		instantTextBoxType = {
+			name = "loyalty"
+			position = { x = 153 y = 36 }
+			format = left
+			textureFile = ""
+			font = "vic_18"
+			text = ""
+			maxWidth = 54
+			maxHeight = 29
+		}
+
+		instantTextBoxType = {
+			name = "influence"
+			position = { x = 270 y = 36 }
+			format = left
+			textureFile = ""
+			font = "vic_18"
+			text = ""
+			maxWidth = 54
+			maxHeight = 29
+		}
+
+		instantTextBoxType = {
+			name = "landshare"
+			position = { x = 382 y = 36 }
+			format = left
+			textureFile = ""
+			font = "vic_18"
+			text = ""
+			maxWidth = 54
+			maxHeight = 29
+		}
+
+		instantTextBoxType = {
+			name = "max_absolutism"
+			position = { x = 470 y = 36 }
+			format = left
+			textureFile = ""
+			font = "vic_18"
+			text = ""
+			maxWidth = 54
+			maxHeight = 29
+		}
+
+		iconType = {
+			name = "loyalty_icon"
+			spriteType ="GFX_idea_unknown"
+			position = { x = 97 y = 22 }
+			scale = 0.5
+		}
+
+		iconType = {
+			name = "influence_icon"
+			spriteType ="GFX_idea_unknown"
+			position = { x = 216 y = 22 }
+			scale = 0.5
+		}
+
+		iconType = {
+			name = "landshare_icon"
+			spriteType ="GFX_crownland"
+			position = { x = 333 y = 23 }
+			scale = 0.7
+		}
+
+		iconType = {
+			name = "max_absolutism_icon"
+			spriteType ="GFX_icon_max_absolutism"
+			position = { x = 428 y = 34 }
+			scale = 0.8
+		}
+
+		guiButtonType = {
+			name = "privilege_frame_button"
+			position = { x = -2 y = -27 }
+			quadTextureSprite ="GFX_privilege_blank"
+			Orientation = "UPPER_LEFT"
+		}
+
+		guiButtonType = {
+			name = "privilege_button"
+			position = { x=-5 y = -27 }
+			quadTextureSprite ="GFX_idea_unknown"
+			Orientation = "UPPER_LEFT"
+		}
+	}
+}

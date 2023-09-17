@@ -1,0 +1,2569 @@
+namespace = FEE_Italian_Wars_Events
+
+# Guerra del Gesso
+country_event = {
+	id = FEE_Italian_Wars_Events.100
+	title = FEE_Italian_Wars_Events.100.T
+	desc = FEE_Italian_Wars_Events.100.D
+	picture = BATTLE_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		is_year = 1494
+		NOT = { is_year = 1498 }
+		tag = FRA
+		valid_for_personal_unions_trigger = yes
+		exists = FRA
+		exists = NAP
+		NAP = { valid_for_personal_unions_trigger = yes }
+		NOT = { war_with = NAP }
+		NOT = { truce_with = NAP }
+		NOT = { alliance_with = NAP }
+	}
+
+	mean_time_to_happen = {
+		months = 3
+	}
+
+	major = yes
+	major_trigger = {
+		any_owned_province = {
+			OR = {
+				region = italy_region
+				region = france_region
+				region = iberia_region
+				is_part_of_hre = yes
+			}
+		}
+	}
+
+	option = {
+		name = FEE_Italian_Wars_Events.100.OPT1
+		ai_chance = {
+			factor = 75
+			modifier = {
+				factor = 1.33
+				ai = yes
+			}
+			modifier = {
+				factor = 2
+				OR = {
+					is_rival = NAP
+					is_enemy = NAP
+				}
+			}
+			modifier = {
+				factor = 0
+				alliance_with = NAP
+			}
+		}
+
+		set_country_flag = fee_first_italian_war_flag
+		declare_war_with_cb = {
+			casus_belli = cb_restore_personal_union
+			who = NAP
+		}
+		if = {
+			limit = {
+				exists = MLO
+				MLO = { is_free_or_tributary_trigger = yes }
+			}
+			MLO = {
+				country_event = {
+					id = FEE_Italian_Wars_Events.101
+				}
+			}
+		}
+		if = {
+			limit = {
+				exists = FER
+				FER = { is_free_or_tributary_trigger = yes }
+			}
+			FER = {
+				country_event = {
+					id = FEE_Italian_Wars_Events.101
+				}
+			}
+		}
+		if = {
+			limit = {
+				exists = PAP
+				PAP = { is_free_or_tributary_trigger = yes }
+			}
+			PAP = {
+				country_event = {
+					id = FEE_Italian_Wars_Events.101
+				}
+			}
+		}
+		if = {
+			limit = {
+				exists = VEN
+				VEN = { is_free_or_tributary_trigger = yes }
+			}
+			VEN = {
+				country_event = {
+					id = FEE_Italian_Wars_Events.101
+				}
+			}
+		}
+		if = {
+			limit = {
+				exists = MAN
+				MAN = { is_free_or_tributary_trigger = yes }
+			}
+			MAN = {
+				country_event = {
+					id = FEE_Italian_Wars_Events.101
+				}
+			}
+		}
+		if = {
+			limit = {
+				exists = GEN
+				GEN = { is_free_or_tributary_trigger = yes }
+			}
+			GEN = {
+				country_event = {
+					id = FEE_Italian_Wars_Events.101
+				}
+			}
+		}
+		if = {
+			limit = {
+				exists = ARA
+				ARA = { is_free_or_tributary_trigger = yes }
+			}
+			ARA = {
+				country_event = {
+					id = FEE_Italian_Wars_Events.101
+				}
+			}
+		}
+		if = {
+			limit = {
+				exists = CAS
+				CAS = { is_free_or_tributary_trigger = yes }
+			}
+			CAS = {
+				country_event = {
+					id = FEE_Italian_Wars_Events.101
+				}
+			}
+		}
+	}
+
+	option = {
+		name = FEE_Italian_Wars_Events.100.OPT2
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 50
+				NOT = { stability = 1 }
+			}
+			modifier = {
+				factor = 50
+				NOT = { manpower_percentage = 0.50 }
+			}
+			modifier = {
+				factor = 50
+				NOT = { war_exhaustion = 3 }
+			}
+			modifier = {
+				factor = 100
+				NOT = { army_size = NAP }
+			}
+			modifier = {
+				factor = 1000
+				alliance_with = NAP
+			}
+		}
+
+		add_prestige = -15
+		add_legitimacy_equivalent = { amount = -25 republican_tradition = -13 }
+	}
+}
+
+# French Claim on Naples
+country_event = {
+	id = FEE_Italian_Wars_Events.101
+	title = FEE_Italian_Wars_Events.101.T
+	desc = FEE_Italian_Wars_Events.101.D
+	picture = BATTLE_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = FEE_Italian_Wars_Events.101.OPT1
+		ai_chance = {
+			factor = 40
+			modifier = {
+				factor = 25
+				OR = {
+					tag = MLO
+					tag = FER
+				}
+			}
+			modifier = {
+				factor = 25
+				OR = {
+					is_rival = NAP
+					is_enemy = NAP
+				}
+			}
+			modifier = {
+				factor = 50
+				alliance_with = FRA
+			}
+		}
+
+		join_all_offensive_wars_of = FROM
+		set_country_flag = fee_first_italian_war_flag
+	}
+
+	option = {
+		name = FEE_Italian_Wars_Events.101.OPT2
+		ai_chance = {
+			factor = 40
+			modifier = {
+				factor = 25
+				alliance_with = NAP
+			}
+			modifier = {
+				factor = 25
+				OR = {
+					is_rival = FRA
+					is_enemy = FRA
+				}
+			}
+			modifier = {
+				factor = 25
+				OR = {
+					tag = PAP
+					tag = VEN
+					tag = MAN
+					tag = GEN
+					tag = ARA
+					tag = CAS
+				}
+			}
+		}
+
+		join_all_defensive_wars_of = NAP
+		set_country_flag = fee_first_italian_war_flag
+	}
+
+	option = {
+		name = FEE_Italian_Wars_Events.101.OPT3
+		ai_chance = {
+			factor = 2
+			modifier = {
+				factor = 50
+				NOT = { manpower_percentage = 0.50 }
+			}
+			modifier = {
+				factor = 50
+				NOT = { army_size_percentage = 0.50 }
+			}
+			modifier = {
+				factor = 50
+				war_exhaustion = 3
+			}
+		}
+
+		add_stability = -1
+		add_prestige = -12
+	}
+}
+
+# Battaglia di Fornovo
+country_event = {
+	id = FEE_Italian_Wars_Events.102
+	title = FEE_Italian_Wars_Events.102.T
+	desc = FEE_Italian_Wars_Events.102.D
+	picture = BATTLE_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		is_year = 1494
+		NOT = { is_year = 1498 }
+		FRA = {
+			has_country_flag = fee_first_italian_war_flag
+			offensive_war_with = NAP
+		}
+		OR = {
+			tag = NAP
+			tag = FRA
+		}
+		105 = {
+			NOT = { controlled_by = owner }
+			controller = {
+				OR = {
+					tag = FRA
+					tag = NAP
+					AND = {
+						has_country_flag = fee_first_italian_war_flag
+						offensive_war_with = NAP
+					}
+					AND = {
+						is_in_war = {
+							attacker_leader = FRA
+							defender_leader = NAP
+						}
+						OR = {
+							alliance_with = FRA
+							overlord = {
+								OR = {
+									alliance_with = FRA
+									AND = {
+										offensive_war_with = NAP
+										has_country_flag = fee_first_italian_war_flag
+									}
+								}
+							}
+						}
+					}
+					AND = {
+						has_country_flag = fee_first_italian_war_flag
+						defensive_war_with = FRA
+					}
+					AND = {
+						is_in_war = {
+							attacker_leader = FRA
+							defender_leader = NAP
+						}
+						OR = {
+							alliance_with = NAP
+							overlord = {
+								OR = {
+									alliance_with = NAP
+									AND = {
+										defensive_war_with = FRA
+										has_country_flag = fee_first_italian_war_flag
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	major = yes
+	major_trigger = {
+		has_country_flag = fee_first_italian_war_flag
+		is_in_war = {
+			attacker_leader = FRA
+			defender_leader = NAP
+			casus_belli = cb_restore_personal_union
+		}
+	}
+
+	option = {
+		name = FEE_Italian_Wars_Events.102.OPT1
+
+		every_country = {
+			limit = {
+				OR = {
+					tag = FRA
+					AND = {
+						has_country_flag = fee_first_italian_war_flag
+						offensive_war_with = NAP
+					}
+					AND = {
+						is_in_war = {
+							attacker_leader = FRA
+							defender_leader = NAP
+						}
+						OR = {
+							alliance_with = FRA
+							overlord = {
+								OR = {
+									alliance_with = FRA
+									AND = {
+										offensive_war_with = NAP
+										has_country_flag = fee_first_italian_war_flag
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			add_prestige = -10
+			add_army_tradition = 5
+			add_war_exhaustion = 1
+			add_years_of_income = -0.332
+		}
+		every_country = {
+			limit = {
+				OR = {
+					tag = NAP
+					AND = {
+						defensive_war_with = FRA
+						has_country_flag = fee_first_italian_war_flag
+					}
+					AND = {
+						is_in_war = {
+							attacker_leader = FRA
+							defender_leader = NAP
+						}
+						OR = {
+							alliance_with = NAP
+							overlord = {
+								OR = {
+									alliance_with = NAP
+									AND = {
+										defensive_war_with = FRA
+										has_country_flag = fee_first_italian_war_flag
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			add_prestige_or_monarch_power = { amount = 10 }
+			add_army_tradition = -5
+			add_war_exhaustion = 1
+			add_years_of_income = 0.332
+		}
+	}
+}
+
+# Louis de la Trémoille
+country_event = {
+	id = FEE_Italian_Wars_Events.103
+	title = FEE_Italian_Wars_Events.103.T
+	desc = FEE_Italian_Wars_Events.103.D
+	picture = GENERALS_DISCUSSING_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = FRA
+		offensive_war_with = NAP
+		has_country_flag = fee_first_italian_war_flag
+	}
+
+	option = {
+		name = FEE_Italian_Wars_Events.103.OPT1
+
+		add_mil_power = 25
+		create_general = {
+			tradition = 50
+			name = "Louis de la Trémoille"
+		}
+	}
+}
+
+# Ferrante d'Este
+country_event = {
+	id = FEE_Italian_Wars_Events.104
+	title = FEE_Italian_Wars_Events.104.T
+	desc = FEE_Italian_Wars_Events.104.D
+	picture = GENERALS_DISCUSSING_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = FER
+		has_country_flag = fee_first_italian_war_flag
+		FRA = {
+			offensive_war_with = NAP
+			has_country_flag = fee_first_italian_war_flag
+		}
+	}
+
+	option = {
+		name = FEE_Italian_Wars_Events.104.OPT1
+
+		add_army_tradition = 5
+		create_general = {
+			tradition = 75
+			name = "Ferrante d'Este"
+		}
+	}
+}
+
+# Galeazzo Sanseverino
+country_event = {
+	id = FEE_Italian_Wars_Events.105
+	title = FEE_Italian_Wars_Events.105.T
+	desc = FEE_Italian_Wars_Events.105.D
+	picture = GENERALS_DISCUSSING_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = MLO
+		has_country_flag = fee_first_italian_war_flag
+		FRA = {
+			offensive_war_with = NAP
+			has_country_flag = fee_first_italian_war_flag
+		}
+	}
+
+	option = {
+		name = FEE_Italian_Wars_Events.105.OPT1
+
+		add_legitimacy_equivalent = { amount = 5 republican_tradition = 3 }
+		create_general = {
+			tradition = 33
+			name = "Galeazzo Sanseverino"
+		}
+	}
+}
+
+# Guerra su Napoli
+country_event = {
+	id = FEE_Italian_Wars_Events.200
+	title = FEE_Italian_Wars_Events.200.T
+	desc = FEE_Italian_Wars_Events.200.D
+	picture = BATTLE_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		is_year = 1499
+		NOT = { is_year = 1504 }
+		tag = FRA
+		is_free_or_tributary_trigger = yes
+		exists = MLO
+		MLO = {
+			is_free_or_tributary_trigger = yes
+			NOT = { war_with = ROOT }
+			NOT = { truce_with = ROOT }
+			NOT = { alliance_with = ROOT }
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 3
+	}
+
+	major = yes
+	major_trigger = {
+		any_owned_province = {
+			OR = {
+				region = italy_region
+				region = france_region
+				region = iberia_region
+				is_part_of_hre = yes
+			}
+		}
+	}
+
+	option = {
+		name = FEE_Italian_Wars_Events.200.OPT1
+		ai_chance = {
+			factor = 75
+			modifier = {
+				factor = 1.33
+				ai = yes
+			}
+			modifier = {
+				factor = 0
+				alliance_with = MLO
+			}
+			modifier = {
+				factor = 10
+				OR = {
+					is_rival = MLO
+					is_enemy = MLO
+				}
+			}
+		}
+
+		declare_war_with_cb = {
+			casus_belli = cb_vassalize_mission
+			who = MLO
+		}
+		if = {
+			limit = {
+				exists = PAP
+				PAP = { is_free_or_tributary_trigger = yes }
+			}
+			PAP = {
+				country_event = {
+					id = FEE_Italian_Wars_Events.201
+				}
+			}
+		}
+		if = {
+			limit = {
+				exists = VEN
+				VEN = { is_free_or_tributary_trigger = yes }
+			}
+			VEN = {
+				country_event = {
+					id = FEE_Italian_Wars_Events.201
+				}
+			}
+		}
+		if = {
+			limit = {
+				exists = SWI
+				SWI = { is_free_or_tributary_trigger = yes }
+			}
+			SWI = {
+				country_event = {
+					id = FEE_Italian_Wars_Events.201
+				}
+			}
+		}
+		if = {
+			limit = {
+				exists = NAP
+				NAP = { is_free_or_tributary_trigger = yes }
+			}
+			NAP = {
+				country_event = {
+					id = FEE_Italian_Wars_Events.201
+				}
+			}
+		}
+		if = {
+			limit = {
+				exists = ARA
+				ARA = { is_free_or_tributary_trigger = yes }
+			}
+			ARA = {
+				country_event = {
+					id = FEE_Italian_Wars_Events.201
+				}
+			}
+		}
+		if = {
+			limit = {
+				exists = CAS
+				CAS = { is_free_or_tributary_trigger = yes }
+			}
+			CAS = {
+				country_event = {
+					id = FEE_Italian_Wars_Events.201
+				}
+			}
+		}
+	}
+
+	option = {
+		name = FEE_Italian_Wars_Events.200.OPT2
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 50
+				NOT = { stability = 1 }
+			}
+			modifier = {
+				factor = 50
+				NOT = { manpower_percentage = 0.50 }
+			}
+			modifier = {
+				factor = 50
+				NOT = { war_exhaustion = 3 }
+			}
+			modifier = {
+				factor = 100
+				NOT = { army_size = MLO }
+			}
+			modifier = {
+				factor = 100
+				alliance_with = MLO
+			}
+		}
+
+		add_prestige = -15
+		add_legitimacy_equivalent = { amount = -25 republican_tradition = -13 }
+	}
+}
+
+# Defense of Milan
+country_event = {
+	id = FEE_Italian_Wars_Events.201
+	title = FEE_Italian_Wars_Events.201.T
+	desc = FEE_Italian_Wars_Events.201.D
+	picture = BATTLE_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = FEE_Italian_Wars_Events.201.OPT1
+		ai_chance = {
+			factor = 40
+			modifier = {
+				factor = 25
+				OR = {
+					tag = SWI
+					tag = PAP
+					tag = VEN
+				}
+			}
+			modifier = {
+				factor = 25
+				alliance_with = FRA
+			}
+			modifier = {
+				factor = 25
+				OR = {
+					is_enemy = NAP
+					is_rival = NAP
+				}
+			}
+		}
+
+		join_all_offensive_wars_of = FROM
+	}
+
+	option = {
+		name = FEE_Italian_Wars_Events.201.OPT2
+		ai_chance = {
+			factor = 40
+			modifier = {
+				factor = 25
+				OR = {
+					tag = NAP
+					tag = ARA
+					tag = CAS
+				}
+			}
+			modifier = {
+				factor = 25
+				alliance_with = MLO
+			}
+			modifier = {
+				factor = 25
+				OR = {
+					is_enemy = FRA
+					is_rival = FRA
+				}
+			}
+		}
+
+		join_all_defensive_wars_of = MLO
+	}
+
+	option = {
+		name = FEE_Italian_Wars_Events.201.OPT3
+		ai_chance = {
+			factor = 2
+			modifier = {
+				factor = 50
+				war_exhaustion = 3
+			}
+		}
+
+		add_stability = -1
+		add_prestige = -12
+	}
+}
+
+# Guerra della Lega Santa
+country_event = {
+	id = FEE_Italian_Wars_Events.300
+	title = FEE_Italian_Wars_Events.300.T
+	desc = FEE_Italian_Wars_Events.300.D
+	picture = BATTLE_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		is_year = 1508
+		NOT = { is_year = 1516 }
+		tag = FRA
+		is_free_or_tributary_trigger = yes
+		VEN = {
+			NOT = { war_with = ROOT }
+			NOT = { truce_with = ROOT }
+			NOT = { alliance_with = ROOT }
+			is_free_or_tributary_trigger = yes
+			num_of_owned_provinces_with = {
+				value = 8
+				region = italy_region
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 3
+	}
+
+	major = yes
+	major_trigger = {
+		any_owned_province = {
+			OR = {
+				region = italy_region
+				region = france_region
+				region = iberia_region
+				is_part_of_hre = yes
+			}
+		}
+	}
+
+	option = {
+		name = FEE_Italian_Wars_Events.300.OPT1
+		ai_chance = {
+			factor = 75
+			modifier = {
+				factor = 1.33
+				ai = yes
+			}
+			modifier = {
+				factor = 0
+				alliance_with = VEN
+			}
+			modifier = {
+				factor = 100
+				army_size = VEN
+			}
+			modifier = {
+				factor = 100
+				OR = {
+					is_rival = VEN
+					is_enemy = VEN
+				}
+			}
+		}
+
+		declare_war_with_cb = {
+			casus_belli = cb_humiliate
+			who = VEN
+		}
+
+		if = {
+			limit = {
+				exists = FER
+				FER = { is_free_or_tributary_trigger = yes }
+			}
+			FER = {
+				country_event = {
+					id = FEE_Italian_Wars_Events.301
+				}
+			}
+		}
+		if = {
+			limit = {
+				exists = MAN
+				MAN = { is_free_or_tributary_trigger = yes }
+			}
+			MAN = {
+				country_event = {
+					id = FEE_Italian_Wars_Events.301
+				}
+			}
+		}
+		if = {
+			limit = {
+				exists = MLO
+				MLO = { is_free_or_tributary_trigger = yes }
+			}
+			MLO = {
+				country_event = {
+					id = FEE_Italian_Wars_Events.301
+				}
+			}
+		}
+		if = {
+			limit = {
+				exists = URB
+				URB = { is_free_or_tributary_trigger = yes }
+			}
+			URB = {
+				country_event = {
+					id = FEE_Italian_Wars_Events.301
+				}
+			}
+		}
+		if = {
+			limit = {
+				exists = ENG
+				ENG = { is_free_or_tributary_trigger = yes }
+			}
+			ENG = {
+				country_event = {
+					id = FEE_Italian_Wars_Events.301
+				}
+			}
+		}
+		if = {
+			limit = {
+				exists = SCO
+				SCO = { is_free_or_tributary_trigger = yes }
+			}
+			SCO = {
+				country_event = {
+					id = FEE_Italian_Wars_Events.301
+				}
+			}
+		}
+		if = {
+			limit = {
+				exists = SWI
+				SWI = { is_free_or_tributary_trigger = yes }
+			}
+			SWI = {
+				country_event = {
+					id = FEE_Italian_Wars_Events.301
+				}
+			}
+		}
+		if = {
+			limit = {
+				exists = emperor
+				emperor = { is_free_or_tributary_trigger = yes }
+			}
+			emperor = {
+				country_event = {
+					id = FEE_Italian_Wars_Events.301
+				}
+			}
+		}
+		if = {
+			limit = {
+				exists = PAP
+				PAP = { is_free_or_tributary_trigger = yes }
+			}
+			PAP = {
+				country_event = {
+					id = FEE_Italian_Wars_Events.301
+				}
+			}
+		}
+		if = {
+			limit = {
+				exists = ARA
+				ARA = { is_free_or_tributary_trigger = yes }
+			}
+			ARA = {
+				country_event = {
+					id = FEE_Italian_Wars_Events.301
+				}
+			}
+		}
+		if = {
+			limit = {
+				exists = CAS
+				CAS = { is_free_or_tributary_trigger = yes }
+			}
+			CAS = {
+				country_event = {
+					id = FEE_Italian_Wars_Events.301
+				}
+			}
+		}
+		if = {
+			limit = {
+				exists = SPA
+				SPA = {
+					is_free_or_tributary_trigger = yes
+					is_emperor = no
+				}
+			}
+			SPA = {
+				country_event = {
+					id = FEE_Italian_Wars_Events.301
+				}
+			}
+		}
+	}
+
+	option = {
+		name = FEE_Italian_Wars_Events.300.OPT2
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 50
+				NOT = { stability = 1 }
+			}
+			modifier = {
+				factor = 50
+				NOT = { manpower_percentage = 0.50 }
+			}
+			modifier = {
+				factor = 50
+				NOT = { war_exhaustion = 3 }
+			}
+			modifier = {
+				factor = 100
+				NOT = { army_size = VEN }
+			}
+			modifier = {
+				factor = 100
+				alliance_with = VEN
+			}
+		}
+
+		add_prestige = -30
+	}
+}
+
+# The Holy League
+country_event = {
+	id = FEE_Italian_Wars_Events.301
+	title = FEE_Italian_Wars_Events.301.T
+	desc = FEE_Italian_Wars_Events.301.D
+	picture = BATTLE_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = FEE_Italian_Wars_Events.301.OPT1
+		ai_chance = {
+			factor = 40
+			modifier = {
+				factor = 25
+				alliance_with = FRA
+			}
+			modifier = {
+				factor = 25
+				OR = {
+					is_rival = VEN
+					is_enemy = VEN
+				}
+			}
+			modifier = {
+				factor = 25
+				has_opinion = {
+					who = FRA
+					value = 50
+				}
+			}
+			modifier = {
+				factor = 25
+				tag = SCO
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					tag = ENG
+					tag = CAS
+					tag = SPA
+					tag = ARA
+					tag = emperor
+				}
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					is_rival = FRA
+					is_enemy = FRA
+				}
+			}
+		}
+
+		join_all_offensive_wars_of = FROM
+	}
+
+	option = {
+		name = FEE_Italian_Wars_Events.301.OPT2
+		ai_chance = {
+			factor = 40
+			modifier = {
+				factor = 25
+				has_opinion = {
+					who = VEN
+					value = 100
+				}
+			}
+			modifier = {
+				factor = 50
+				alliance_with = VEN
+			}
+			modifier = {
+				factor = 25
+				OR = {
+					is_rival = FRA
+					is_enemy = FRA
+				}
+			}
+			modifier = {
+				factor = 25
+				OR = {
+					tag = ENG
+					tag = CAS
+					tag = SPA
+					tag = ARA
+					tag = emperor
+				}
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					is_rival = VEN
+					is_enemy = VEN
+				}
+			}
+		}
+
+		join_all_defensive_wars_of = VEN
+	}
+
+	option = {
+		name = FEE_Italian_Wars_Events.301.OPT3
+		ai_chance = {
+			factor = 2
+			modifier = {
+				factor = 50
+				war_exhaustion = 3
+			}
+		}
+
+		add_stability = -1
+		add_prestige = -12
+	}
+}
+
+# Guerra dei Quattro Anni
+country_event = {
+	id = FEE_Italian_Wars_Events.400
+	title = FEE_Italian_Wars_Events.400.T
+	desc = FEE_Italian_Wars_Events.400.D
+	picture = BATTLE_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		is_year = 1521
+		NOT = { is_year = 1526 }
+		if = {
+			limit = {
+				hre_size = 1
+			}
+			tag = emperor
+		}
+		else_if = {
+			limit = {
+				exists = HAB
+			}
+			tag = HAB
+		}
+		else_if = {
+			limit = {
+				tag = SPA
+			}
+			low_countries_region = {
+				owned_by = ROOT
+			}
+			iberia_region = {
+				owned_by = ROOT
+			}
+			italy_region = {
+				owned_by = ROOT
+			}
+		}
+		is_free_or_tributary_trigger = yes
+		exists = FRA
+		FRA = {
+			is_free_or_tributary_trigger = yes
+			NOT = { war_with = ROOT }
+			NOT = { truce_with = ROOT }
+			NOT = { alliance_with = ROOT }
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 3
+	}
+
+	major = yes
+	major_trigger = {
+		any_owned_province = {
+			OR = {
+				region = italy_region
+				region = france_region
+				region = iberia_region
+				is_part_of_hre = yes
+			}
+		}
+	}
+
+	option = {
+		name = FEE_Italian_Wars_Events.400.OPT1
+		ai_chance = {
+			factor = 75
+			modifier = {
+				factor = 1.33
+				ai = yes
+			}
+			modifier = {
+				factor = 100
+				OR = {
+					is_rival = FRA
+					is_enemy = FRA
+				}
+			}
+			modifier = {
+				factor = 0
+				alliance_with = FRA
+			}
+		}
+
+		declare_war_with_cb = {
+			who = FRA
+			casus_belli = cb_humiliate
+		}
+
+		if = {
+			limit = {
+				exists = NAV
+				NAV = { is_free_or_tributary_trigger = yes }
+			}
+			NAV = {
+				country_event = {
+					id = FEE_Italian_Wars_Events.401
+				}
+			}
+		}
+		if = {
+			limit = {
+				exists = VEN
+				VEN = { is_free_or_tributary_trigger = yes }
+			}
+			VEN = {
+				country_event = {
+					id = FEE_Italian_Wars_Events.401
+				}
+			}
+		}
+		if = {
+			limit = {
+				NOT = { tag = SPA }
+				exists = SPA
+				SPA = { is_free_or_tributary_trigger = yes }
+			}
+			SPA = {
+				country_event = {
+					id = FEE_Italian_Wars_Events.401
+				}
+			}
+		}
+		if = {
+			limit = {
+				NOT = { tag = HAB }
+				exists = HAB
+				HAB = { is_free_or_tributary_trigger = yes }
+			}
+			HAB = {
+				country_event = {
+					id = FEE_Italian_Wars_Events.401
+				}
+			}
+		}
+		if = {
+			limit = {
+				exists = ENG
+				ENG = { is_free_or_tributary_trigger = yes }
+			}
+			ENG = {
+				country_event = {
+					id = FEE_Italian_Wars_Events.401
+				}
+			}
+		}
+		if = {
+			limit = {
+				exists = MAN
+				MAN = { is_free_or_tributary_trigger = yes }
+			}
+			MAN = {
+				country_event = {
+					id = FEE_Italian_Wars_Events.401
+				}
+			}
+		}
+		if = {
+			limit = {
+				exists = PAP
+				PAP = { is_free_or_tributary_trigger = yes }
+			}
+			PAP = {
+				country_event = {
+					id = FEE_Italian_Wars_Events.401
+				}
+			}
+		}
+	}
+
+	option = {
+		name = FEE_Italian_Wars_Events.400.OPT2
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 50
+				NOT = { stability = 1 }
+			}
+			modifier = {
+				factor = 50
+				NOT = { manpower_percentage = 0.50 }
+			}
+			modifier = {
+				factor = 50
+				NOT = { war_exhaustion = 3 }
+			}
+			modifier = {
+				factor = 100
+				NOT = { army_size = FRA }
+			}
+			modifier = {
+				factor = 100
+				alliance_with = FRA
+			}
+		}
+
+		add_prestige = -15
+		add_imperial_influence = -15
+	}
+}
+
+# League of Cambrais
+country_event = {
+	id = FEE_Italian_Wars_Events.401
+	title = FEE_Italian_Wars_Events.401.T
+	desc = FEE_Italian_Wars_Events.401.D
+	picture = BATTLE_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = FEE_Italian_Wars_Events.401.OPT1
+		ai_chance = {
+			factor = 40
+			modifier = {
+				factor = 25
+				OR = {
+					tag = SPA
+					tag = ENG
+					tag = MAN
+					tag = PAP
+					tag = HAB
+				}
+			}
+			modifier = {
+				factor = 25
+				OR = {
+					is_rival = FRA
+					is_enemy = FRA
+				}
+			}
+			modifier = {
+				factor = 50
+				alliance_with = FROM
+			}
+		}
+
+		join_all_offensive_wars_of = FROM
+	}
+
+	option = {
+		name = FEE_Italian_Wars_Events.401.OPT2
+		ai_chance = {
+			factor = 40
+			modifier = {
+				factor = 25
+				alliance_with = FRA
+			}
+			modifier = {
+				factor = 25
+				OR = {
+					is_rival = FROM
+					is_enemy = FROM
+				}
+			}
+			modifier = {
+				factor = 25
+				OR = {
+					tag = VEN
+					tag = NAV
+				}
+			}
+		}
+
+		join_all_defensive_wars_of = FRA
+	}
+
+	option = {
+		name = FEE_Italian_Wars_Events.401.OPT3
+		ai_chance = {
+			factor = 2
+			modifier = {
+				factor = 50
+				war_exhaustion = 3
+			}
+		}
+
+		add_stability = -1
+		add_prestige = -12
+	}
+}
+
+# Guerra della Lega di Cognac
+country_event = {
+	id = FEE_Italian_Wars_Events.500
+	title = FEE_Italian_Wars_Events.500.T
+	desc = FEE_Italian_Wars_Events.500.D
+	picture = BATTLE_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		is_year = 1526
+		NOT = { is_year = 1530 }
+		tag = PAP
+		is_free_or_tributary_trigger = yes
+		SPA = {
+			is_emperor = yes
+			is_free_or_tributary_trigger = yes
+			NOT = { war_with = ROOT }
+			NOT = { truce_with = ROOT }
+			NOT = { alliance_with = ROOT }
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 3
+	}
+
+	major = yes
+	major_trigger = {
+		any_owned_province = {
+			OR = {
+				region = italy_region
+				region = france_region
+				region = iberia_region
+				is_part_of_hre = yes
+			}
+		}
+	}
+
+	option = {
+		name = FEE_Italian_Wars_Events.500.OPT1
+		ai_chance = {
+			factor = 75
+			modifier = {
+				factor = 1.33
+				ai = yes
+			}
+			modifier = {
+				factor = 0
+				alliance_with = emperor
+			}
+			modifier = {
+				factor = 100
+				OR = {
+					is_rival = emperor
+					is_enemy = emperor
+				}
+			}
+		}
+
+		declare_war_with_cb = {
+			who = emperor
+			casus_belli = cb_humiliate
+		}
+
+		if = {
+			limit = {
+				exists = VEN
+				VEN = { is_free_or_tributary_trigger = yes }
+			}
+			VEN = {
+				country_event = {
+					id = FEE_Italian_Wars_Events.501
+				}
+			}
+		}
+		if = {
+			limit = {
+				exists = FRA
+				FRA = { is_free_or_tributary_trigger = yes }
+			}
+			FRA = {
+				country_event = {
+					id = FEE_Italian_Wars_Events.501
+				}
+			}
+		}
+		if = {
+			limit = {
+				exists = HAB
+				HAB = { is_free_or_tributary_trigger = yes }
+			}
+			HAB = {
+				country_event = {
+					id = FEE_Italian_Wars_Events.501
+				}
+			}
+		}
+		if = {
+			limit = {
+				exists = LAN
+				LAN = { is_free_or_tributary_trigger = yes }
+			}
+			LAN = {
+				country_event = {
+					id = FEE_Italian_Wars_Events.501
+				}
+			}
+		}
+		if = {
+			limit = {
+				exists = TUS
+				TUS = { is_free_or_tributary_trigger = yes }
+			}
+			TUS = {
+				country_event = {
+					id = FEE_Italian_Wars_Events.501
+				}
+			}
+		}
+		if = {
+			limit = {
+				exists = MLO
+				MLO = { is_free_or_tributary_trigger = yes }
+			}
+			MLO = {
+				country_event = {
+					id = FEE_Italian_Wars_Events.501
+				}
+			}
+		}
+		if = {
+			limit = {
+				exists = GEN
+				GEN = { is_free_or_tributary_trigger = yes }
+			}
+			GEN = {
+				country_event = {
+					id = FEE_Italian_Wars_Events.501
+				}
+			}
+		}
+		if = {
+			limit = {
+				exists = NAV
+				NAV = { is_free_or_tributary_trigger = yes }
+			}
+			NAV = {
+				country_event = {
+					id = FEE_Italian_Wars_Events.501
+				}
+			}
+		}
+		if = {
+			limit = {
+				exists = FER
+				FER = { is_free_or_tributary_trigger = yes }
+			}
+			FER = {
+				country_event = {
+					id = FEE_Italian_Wars_Events.501
+				}
+			}
+		}
+		if = {
+			limit = {
+				exists = SIE
+				SIE = { is_free_or_tributary_trigger = yes }
+			}
+			SIE = {
+				country_event = {
+					id = FEE_Italian_Wars_Events.501
+				}
+			}
+		}
+		if = {
+			limit = {
+				exists = MAN
+				MAN = { is_free_or_tributary_trigger = yes }
+			}
+			MAN = {
+				country_event = {
+					id = FEE_Italian_Wars_Events.501
+				}
+			}
+		}
+	}
+
+	option = {
+		name = FEE_Italian_Wars_Events.500.OPT2
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 50
+				NOT = { stability = 1 }
+			}
+			modifier = {
+				factor = 50
+				NOT = { manpower_percentage = 0.50 }
+			}
+			modifier = {
+				factor = 50
+				NOT = { war_exhaustion = 3 }
+			}
+			modifier = {
+				factor = 100
+				emperor = {
+					army_size = ROOT
+				}
+			}
+			modifier = {
+				factor = 100
+				alliance_with = emperor
+			}
+		}
+
+		add_prestige = -15
+		add_reform_desire = 0.10
+		add_legitimacy_equivalent = { amount = -25 republican_tradition = -13 }
+	}
+}
+
+# Answer the League of Cognac
+country_event = {
+	id = FEE_Italian_Wars_Events.501
+	title = FEE_Italian_Wars_Events.501.T
+	desc = FEE_Italian_Wars_Events.501.D
+	picture = BATTLE_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = FEE_Italian_Wars_Events.501.OPT1
+		ai_chance = {
+			factor = 40
+			modifier = {
+				factor = 25
+				OR = {
+					tag = VEN
+					tag = FRA
+					tag = LAN
+					tag = TUS
+					tag = MLO
+					tag = NAV
+					tag = GEN
+				}
+			}
+			modifier = {
+				factor = 25
+				emperor = {
+					OR = {
+						is_rival = ROOT
+						is_enemy = ROOT
+					}
+				}
+			}
+			modifier = {
+				factor = 50
+				alliance_with = FROM
+			}
+		}
+
+		join_all_offensive_wars_of = FROM
+	}
+
+	option = {
+		name = FEE_Italian_Wars_Events.501.OPT2
+		ai_chance = {
+			factor = 40
+			modifier = {
+				factor = 25
+				emperor = {
+					alliance_with = ROOT
+				}
+			}
+			modifier = {
+				factor = 25
+				OR = {
+					is_rival = FROM
+					is_enemy = FROM
+				}
+			}
+			modifier = {
+				factor = 25
+				OR = {
+					tag = HAB
+					tag = SPA
+					tag = FER
+					tag = SIE
+					tag = MAN
+				}
+			}
+		}
+
+		random_country = {
+			limit = {
+				is_in_war = {
+					attacker_leader = PAP
+					defender_leader = THIS
+				}
+			}
+			ROOT = { join_all_defensive_wars_of = PREV }
+		}
+	}
+
+	option = {
+		name = FEE_Italian_Wars_Events.501.OPT3
+		ai_chance = {
+			factor = 2
+			modifier = {
+				factor = 50
+				war_exhaustion = 3
+			}
+		}
+
+		add_stability = -1
+		add_prestige = -12
+	}
+}
+
+# Sesta Guerra d'Italia
+country_event = {
+	id = FEE_Italian_Wars_Events.600
+	title = FEE_Italian_Wars_Events.600.T
+	desc = FEE_Italian_Wars_Events.600.D
+	picture = BATTLE_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		is_year = 1536
+		NOT = { is_year = 1538 }
+		tag = FRA
+		is_free_or_tributary_trigger = yes
+		SPA = {
+			is_emperor = yes
+			is_free_or_tributary_trigger = yes
+			NOT = { war_with = ROOT }
+			NOT = { truce_with = ROOT }
+			NOT = { alliance_with = ROOT }
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 3
+	}
+
+	major = yes
+	major_trigger = {
+		any_owned_province = {
+			OR = {
+				region = italy_region
+				region = france_region
+				region = iberia_region
+				is_part_of_hre = yes
+			}
+		}
+	}
+
+	option = {
+		name = FEE_Italian_Wars_Events.600.OPT1
+		ai_chance = {
+			factor = 75
+			modifier = {
+				factor = 1.33
+				ai = yes
+			}
+			modifier = {
+				factor = 0
+				alliance_with = emperor
+			}
+			modifier = {
+				factor = 100
+				OR = {
+					is_rival = emperor
+					is_enemy = emperor
+				}
+			}
+		}
+
+		declare_war_with_cb = {
+			who = emperor
+			casus_belli = cb_humiliate
+		}
+		if = {
+			limit = {
+				exists = HAB
+				HAB = { is_free_or_tributary_trigger = yes }
+			}
+			HAB = {
+				country_event = {
+					id = FEE_Italian_Wars_Events.601
+				}
+			}
+		}
+	}
+
+	option = {
+		name = FEE_Italian_Wars_Events.600.OPT2
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 50
+				NOT = { stability = 1 }
+			}
+			modifier = {
+				factor = 50
+				NOT = { manpower_percentage = 0.50 }
+			}
+			modifier = {
+				factor = 50
+				NOT = { war_exhaustion = 3 }
+			}
+			modifier = {
+				factor = 100
+				emperor = {
+					army_size = ROOT
+				}
+			}
+			modifier = {
+				factor = 100
+				alliance_with = emperor
+			}
+		}
+
+		add_prestige = -15
+		add_legitimacy_equivalent = { amount = -25 republican_tradition = -13 }
+	}
+}
+
+# War on the Imperial Throne
+country_event = {
+	id = FEE_Italian_Wars_Events.601
+	title = FEE_Italian_Wars_Events.601.T
+	desc = FEE_Italian_Wars_Events.601.D
+	picture = BATTLE_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = FEE_Italian_Wars_Events.601.OPT1
+		ai_chance = {
+			factor = 40
+			modifier = {
+				factor = 25
+				any_country = {
+					OR = {
+						tag = emperor
+						tag = HAB
+					}
+					OR = {
+						is_rival = ROOT
+						is_enemy = ROOT
+					}
+				}
+			}
+			modifier = {
+				factor = 50
+				alliance_with = FROM
+			}
+		}
+
+		join_all_offensive_wars_of = FROM
+	}
+
+	option = {
+		name = FEE_Italian_Wars_Events.601.OPT2
+		ai_chance = {
+			factor = 40
+			modifier = {
+				factor = 25
+				any_country = {
+					OR = {
+						tag = emperor
+						tag = HAB
+					}
+					alliance_with = ROOT
+				}
+			}
+			modifier = {
+				factor = 25
+				OR = {
+					is_rival = FROM
+					is_enemy = FROM
+				}
+			}
+			modifier = {
+				factor = 25
+				OR = {
+					tag = emperor
+					tag = HAB
+				}
+			}
+		}
+
+		random_country = {
+			limit = {
+				is_in_war = {
+					attacker_leader = FRA
+					defender_leader = THIS
+				}
+			}
+			ROOT = { join_all_defensive_wars_of = PREV }
+		}
+	}
+
+	option = {
+		name = FEE_Italian_Wars_Events.601.OPT3
+		ai_chance = {
+			factor = 2
+			modifier = {
+				factor = 50
+				war_exhaustion = 3
+			}
+		}
+
+		add_stability = -1
+		add_prestige = -12
+	}
+}
+
+# Settima Guerra d'Italia
+country_event = {
+	id = FEE_Italian_Wars_Events.700
+	title = FEE_Italian_Wars_Events.700.T
+	desc = FEE_Italian_Wars_Events.700.D
+	picture = BATTLE_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		is_year = 1542
+		NOT = { is_year = 1546 }
+		tag = FRA
+		is_free_or_tributary_trigger = yes
+		any_country = {
+			NOT = {
+				tag = FRA
+			}
+			owns = 102
+			is_free_or_tributary_trigger = yes
+			NOT = { war_with = ROOT }
+			NOT = { truce_with = ROOT }
+			NOT = { alliance_with = ROOT }
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 3
+	}
+
+	major = yes
+	major_trigger = {
+		any_owned_province = {
+			OR = {
+				region = italy_region
+				region = france_region
+				region = iberia_region
+				is_part_of_hre = yes
+			}
+		}
+	}
+
+	option = {
+		name = FEE_Italian_Wars_Events.700.OPT1
+		ai_chance = {
+			factor = 75
+			modifier = {
+				factor = 1.33
+				ai = yes
+			}
+			modifier = {
+				factor = 100
+				102 = {
+					owner = {
+						OR = {
+							is_rival = ROOT
+							is_enemy = ROOT
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				102 = {
+					owner = {
+						alliance_with = ROOT
+					}
+				}
+			}
+		}
+
+		random_country = {
+			limit = {
+				owns = 102
+			}
+			ROOT = {
+				declare_war_with_cb = {
+					who = PREV
+					casus_belli = cb_vassalize_mission
+				}
+			}
+		}
+
+		if = {
+			limit = {
+				exists = SPA
+				SPA = { is_free_or_tributary_trigger = yes }
+			}
+			SPA = {
+				country_event = {
+					id = FEE_Italian_Wars_Events.701
+				}
+			}
+		}
+		if = {
+			limit = {
+				exists = HAB
+				HAB = { is_free_or_tributary_trigger = yes }
+			}
+			HAB = {
+				country_event = {
+					id = FEE_Italian_Wars_Events.701
+				}
+			}
+		}
+		if = {
+			limit = {
+				exists = SAX
+				SAX = { is_free_or_tributary_trigger = yes }
+			}
+			SAX = {
+				country_event = {
+					id = FEE_Italian_Wars_Events.701
+				}
+			}
+		}
+		if = {
+			limit = {
+				exists = BRA
+				BRA = { is_free_or_tributary_trigger = yes }
+			}
+			BRA = {
+				country_event = {
+					id = FEE_Italian_Wars_Events.701
+				}
+			}
+		}
+		if = {
+			limit = {
+				exists = ENG
+				ENG = { is_free_or_tributary_trigger = yes }
+			}
+			ENG = {
+				country_event = {
+					id = FEE_Italian_Wars_Events.701
+				}
+			}
+		}
+		if = {
+			limit = {
+				exists = TUR
+				TUR = { is_free_or_tributary_trigger = yes }
+			}
+			TUR = {
+				country_event = {
+					id = FEE_Italian_Wars_Events.701
+				}
+			}
+		}
+		if = {
+			limit = {
+				exists = BRG
+				BRG = { is_free_or_tributary_trigger = yes }
+			}
+			BRG = {
+				country_event = {
+					id = FEE_Italian_Wars_Events.701
+				}
+			}
+		}
+		if = {
+			limit = {
+				exists = KLE
+				KLE = { is_free_or_tributary_trigger = yes }
+			}
+			KLE = {
+				country_event = {
+					id = FEE_Italian_Wars_Events.701
+				}
+			}
+		}
+	}
+
+	option = {
+		name = FEE_Italian_Wars_Events.700.OPT2
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 50
+				NOT = { stability = 1 }
+			}
+			modifier = {
+				factor = 50
+				NOT = { manpower_percentage = 0.50 }
+			}
+			modifier = {
+				factor = 50
+				NOT = { war_exhaustion = 3 }
+			}
+			modifier = {
+				factor = 100
+				any_country = {
+					owns = 102
+					army_size = ROOT
+				}
+			}
+			modifier = {
+				factor = 100
+				102 = {
+					owner = {
+						alliance_with = ROOT
+					}
+				}
+			}
+		}
+
+		add_prestige = -15
+		add_legitimacy_equivalent = { amount = -25 republican_tradition = -13 }
+	}
+}
+
+# Treaty of Crépy
+country_event = {
+	id = FEE_Italian_Wars_Events.701
+	title = FEE_Italian_Wars_Events.701.T
+	desc = FEE_Italian_Wars_Events.701.D
+	picture = BATTLE_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = FEE_Italian_Wars_Events.701.OPT1
+		ai_chance = {
+			factor = 40
+			modifier = {
+				factor = 25
+				any_country = {
+					owns = 102
+					OR = {
+						is_rival = ROOT
+						is_enemy = ROOT
+					}
+				}
+			}
+			modifier = {
+				factor = 50
+				alliance_with = FROM
+			}
+			modifier = {
+				factor = 50
+				OR = {
+					tag = TUR
+					tag = BRG
+					tag = KLE
+				}
+			}
+		}
+
+		join_all_offensive_wars_of = FROM
+	}
+
+	option = {
+		name = FEE_Italian_Wars_Events.701.OPT2
+		ai_chance = {
+			factor = 40
+			modifier = {
+				factor = 25
+				any_country = {
+					owns = 102
+					alliance_with = ROOT
+				}
+			}
+			modifier = {
+				factor = 25
+				OR = {
+					is_rival = FROM
+					is_enemy = FROM
+				}
+			}
+			modifier = {
+				factor = 25
+				OR = {
+					tag = emperor
+					tag = HAB
+					tag = SPA
+					tag = SAX
+					tag = BRA
+					tag = ENG
+				}
+			}
+		}
+
+		random_country = {
+			limit = {
+				owns = 102
+				is_in_war = {
+					attacker_leader = FRA
+					defender_leader = THIS
+				}
+			}
+			ROOT = { join_all_defensive_wars_of = PREV }
+		}
+	}
+
+	option = {
+		name = FEE_Italian_Wars_Events.701.OPT3
+		ai_chance = {
+			factor = 2
+			modifier = {
+				factor = 50
+				war_exhaustion = 3
+			}
+		}
+
+		add_stability = -1
+		add_prestige = -12
+	}
+}
+
+# Guerra Asburgo-Valois
+country_event = {
+	id = FEE_Italian_Wars_Events.800
+	title = FEE_Italian_Wars_Events.800.T
+	desc = FEE_Italian_Wars_Events.800.D
+	picture = BATTLE_eventPicture
+
+	trigger = {
+		is_year = 1551
+		NOT = { is_year = 1559 }
+		tag = FRA
+		is_free_or_tributary_trigger = yes
+		SPA = {
+			is_emperor = yes
+			is_free_or_tributary_trigger = yes
+			NOT = { war_with = ROOT }
+			NOT = { truce_with = ROOT }
+			NOT = { alliance_with = ROOT }
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 3
+	}
+
+	major = yes
+	major_trigger = {
+		any_owned_province = {
+			OR = {
+				region = italy_region
+				region = france_region
+				region = iberia_region
+				is_part_of_hre = yes
+			}
+		}
+	}
+
+	option = {
+		name = FEE_Italian_Wars_Events.800.OPT1
+		ai_chance = {
+			factor = 75
+			modifier = {
+				factor = 1.33
+				ai = yes
+			}
+			modifier = {
+				factor = 0
+				alliance_with = SPA
+			}
+			modifier = {
+				factor = 100
+				OR = {
+					is_enemy = SPA
+					is_rival = SPA
+				}
+			}
+		}
+
+		declare_war_with_cb = {
+			who = SPA
+			casus_belli = cb_humiliate
+		}
+		if = {
+			limit = {
+				exists = HAB
+				HAB = {
+					is_free_or_tributary_trigger = yes
+					is_emperor = no
+				}
+			}
+			HAB = {
+				country_event = {
+					id = FEE_Italian_Wars_Events.801
+				}
+			}
+		}
+		if = {
+			limit = {
+				exists = ENG
+				ENG = { is_free_or_tributary_trigger = yes }
+			}
+			ENG = {
+				country_event = {
+					id = FEE_Italian_Wars_Events.801
+				}
+			}
+		}
+		if = {
+			limit = {
+				exists = LAN
+				LAN = { is_free_or_tributary_trigger = yes }
+			}
+			LAN = {
+				country_event = {
+					id = FEE_Italian_Wars_Events.801
+				}
+			}
+		}
+		if = {
+			limit = {
+				exists = TUS
+				TUS = { is_free_or_tributary_trigger = yes }
+			}
+			TUS = {
+				country_event = {
+					id = FEE_Italian_Wars_Events.801
+				}
+			}
+		}
+		if = {
+			limit = {
+				exists = TUR
+				TUR = { is_free_or_tributary_trigger = yes }
+			}
+			TUR = {
+				country_event = {
+					id = FEE_Italian_Wars_Events.801
+				}
+			}
+		}
+		if = {
+			limit = {
+				exists = SAV
+				SAV = { is_free_or_tributary_trigger = yes }
+			}
+			SAV = {
+				country_event = {
+					id = FEE_Italian_Wars_Events.801
+				}
+			}
+		}
+		if = {
+			limit = {
+				exists = SPI
+				SPI = { is_free_or_tributary_trigger = yes }
+			}
+			SPI = {
+				country_event = {
+					id = FEE_Italian_Wars_Events.801
+				}
+			}
+		}
+		if = {
+			limit = {
+				exists = PAP
+				PAP = { is_free_or_tributary_trigger = yes }
+			}
+			PAP = {
+				country_event = {
+					id = FEE_Italian_Wars_Events.801
+				}
+			}
+		}
+		if = {
+			limit = {
+				exists = SIE
+				SIE = { is_free_or_tributary_trigger = yes }
+			}
+			SIE = {
+				country_event = {
+					id = FEE_Italian_Wars_Events.801
+				}
+			}
+		}
+	}
+
+	option = {
+		name = FEE_Italian_Wars_Events.800.OPT2
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 50
+				NOT = { stability = 1 }
+			}
+			modifier = {
+				factor = 50
+				NOT = { manpower_percentage = 0.50 }
+			}
+			modifier = {
+				factor = 50
+				NOT = { war_exhaustion = 3 }
+			}
+			modifier = {
+				factor = 100
+				any_country = {
+					owns = 102
+					army_size = ROOT
+				}
+			}
+			modifier = {
+				factor = 0
+				alliance_with = SPA
+			}
+		}
+
+		add_prestige = -15
+		add_legitimacy_equivalent = { amount = -25 republican_tradition = -13 }
+	}
+}
+
+# Chiamata alle Armi
+country_event = {
+	id = FEE_Italian_Wars_Events.801
+	title = FEE_Italian_Wars_Events.801.T
+	desc = FEE_Italian_Wars_Events.801.D
+	picture = BATTLE_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = FEE_Italian_Wars_Events.801.OPT1
+		ai_chance = {
+			factor = 40
+			modifier = {
+				factor = 25
+				any_country = {
+					owns = 102
+					OR = {
+						is_rival = ROOT
+						is_enemy = ROOT
+					}
+				}
+			}
+			modifier = {
+				factor = 50
+				alliance_with = FROM
+			}
+			modifier = {
+				factor = 50
+				OR = {
+					tag = TUR
+					tag = SIE
+				}
+			}
+		}
+
+		join_all_offensive_wars_of = FROM
+	}
+
+	option = {
+		name = FEE_Italian_Wars_Events.801.OPT2
+		ai_chance = {
+			factor = 40
+			modifier = {
+				factor = 25
+				any_country = {
+					owns = 102
+					alliance_with = ROOT
+				}
+			}
+			modifier = {
+				factor = 25
+				OR = {
+					is_rival = FROM
+					is_enemy = FROM
+				}
+			}
+			modifier = {
+				factor = 25
+				OR = {
+					tag = emperor
+					tag = HAB
+					tag = SPA
+					tag = ENG
+					tag = GEN
+					tag = LAN
+					tag = TUS
+					tag = SAV
+					tag = SPI
+					tag = PAP
+				}
+			}
+		}
+
+		random_country = {
+			limit = {
+				OR = {
+					tag = emperor
+					tag = HAB
+					tag = SPA
+				}
+				is_in_war = {
+					attacker_leader = FRA
+					defender_leader = THIS
+				}
+			}
+			ROOT = { join_all_defensive_wars_of = PREV }
+		}
+	}
+
+	option = {
+		name = FEE_Italian_Wars_Events.801.OPT3
+		ai_chance = {
+			factor = 2
+			modifier = {
+				factor = 50
+				war_exhaustion = 3
+			}
+		}
+
+		add_stability = -1
+		add_prestige = -12
+	}
+}
+
+#
+#country_event = {
+#	id = FEE_Italian_Wars_Events.
+#	title = FEE_Italian_Wars_Events..T
+#	desc = FEE_Italian_Wars_Events..D
+#	picture = BATTLE_eventPicture
+#
+#	fire_only_once = yes
+#	trigger = {
+#
+#	}
+#
+#
+#	mean_time_to_happen = {
+#		months = 6
+#	}
+#
+#	option = {
+#		name = FEE_Italian_Wars_Events..OPT1
+#		ai_chance = {
+#			factor = 50
+#		}
+#
+#	}
+#
+#	option = {
+#		name = FEE_Italian_Wars_Events..OPT2
+#		ai_chance = {
+#			factor = 50
+#		}
+#
+#	}
+#}

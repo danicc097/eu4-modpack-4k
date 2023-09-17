@@ -1,0 +1,278 @@
+guiTypes = {
+
+	###Tooltip offset for mapmodes. From lower left corner of screen.
+	positionType = {
+		name = "tooltip_offset" 
+		position = { x = -1177 y = -68 }
+	}
+	
+	windowType = {
+		name = "mapmode_entry"
+		backGround=""
+		position = { x=0 y=0 }	
+		size = { x=68 y=58 } #Adjust the x-size to fix proper spacing in the lists.
+		moveable = 0
+		dontRender = ""
+		horizontalBorder= ""
+		verticalBorder= ""
+		fullScreen = no
+		
+		guiButtonType = {
+			name = "mapmode_button"
+			position = { x = 0 y = 0 }
+			quadTextureSprite ="GFX_mapmode_notselected"
+			tooltip = ""
+			tooltipText =""
+			delayedTooltipText = ""
+			buttonFont = "Main_14_black"
+			
+			clicksound = click
+		}
+		
+	}
+	
+	windowType = {
+		name = "mapmode_more_window"
+		backGround="Background"
+		position = { x=0 y=-337 }	
+		size = { x=504 y=266 }
+		show_position = { x=-522 y=-337 }
+		hide_position = { x=0 y=-337 }	
+		animation_type = "decelerated"
+		animation_time = 500
+		moveable = 0
+		dontRender = ""
+		horizontalBorder= ""
+		verticalBorder= ""
+		fullScreen = no
+		Orientation = "LOWER_RIGHT"
+
+		
+		guiButtonType = {
+			name = "Background"	
+			quadTextureSprite ="SandboxFloaterBackground"
+			tooltip = ""	
+			tooltipText =""
+			delayedTooltipText = ""
+		}
+		
+		OverlappingElementsBoxType = {
+			name = "list_row_1"
+			position = { x = 11 y = 9 }
+			size = { x = 491 y = 72 }
+			Orientation = "UPPER_LEFT"
+			format = left
+			spacing = 0
+		}
+		
+		OverlappingElementsBoxType = {
+			name = "list_row_2"
+			position = { x = 11 y = 63 }
+			size = { x = 558 y = 72 }
+			Orientation = "UPPER_LEFT"
+			format = left
+			spacing = 0
+		}
+		
+		OverlappingElementsBoxType = {
+			name = "list_row_3"
+			position = { x = 11 y = 117 }
+			size = { x = 558 y = 72 }
+			Orientation = "UPPER_LEFT"
+			format = left
+			spacing = 0
+		}
+		
+		OverlappingElementsBoxType = {
+			name = "list_row_4"
+			position = { x = 11 y = 171 }
+			size = { x = 558 y = 72 }
+			Orientation = "UPPER_LEFT"
+			format = left
+			spacing = 0
+		}
+		
+		
+		windowType = {
+		name = "mapmode_selected_overlay_1"
+		backGround=""
+		position = { x=0 y=0 }	
+		size = { x=180 y=58 }
+		moveable = 0
+		dontRender = ""
+		horizontalBorder= ""
+		verticalBorder= ""
+		fullScreen = no
+			iconType =
+			{
+				name ="bg"
+				spriteType = "GFX_mapmode_selected"
+				position = { x= 0 y = 0 }
+			}		
+		}
+		
+		windowType = {
+		name = "mapmode_selected_overlay_2"
+		backGround=""
+		position = { x=0 y=0 }	
+		size = { x=180 y=58 }
+		moveable = 0
+		dontRender = ""
+		horizontalBorder= ""
+		verticalBorder= ""
+		fullScreen = no
+			iconType =
+			{
+				name ="bg"
+				spriteType = "GFX_mapmode_selected"
+				position = { x= 0 y = 0 }
+			}
+		}
+		
+		windowType = {
+			name = "mapmode_selected_overlay_3"
+			backGround=""
+			position = { x=0 y=0 }	
+			size = { x=180 y=58 }
+			moveable = 0
+			dontRender = ""
+			horizontalBorder= ""
+			verticalBorder= ""
+			fullScreen = no		
+			iconType =
+			{
+				name ="bg"
+				spriteType = "GFX_mapmode_selected"
+				position = { x= 0 y = 0 }
+			}
+		}
+		
+		windowType = {
+			name = "mapmode_selected_overlay_4"
+			backGround=""
+			position = { x=0 y=0 }	
+			size = { x=180 y=58 }
+			moveable = 0
+			dontRender = ""
+			horizontalBorder= ""
+			verticalBorder= ""
+			fullScreen = no
+			iconType =
+			{
+				name ="bg"
+				spriteType = "GFX_mapmode_selected"
+				position = { x= 0 y = 0 }
+			}
+		}
+		
+		windowType = {
+			name = "mapmode_selected_overlay_5"
+			backGround=""
+			position = { x=0 y=0 }	
+			size = { x=180 y=58 }
+			moveable = 0
+			dontRender = ""
+			horizontalBorder= ""
+			verticalBorder= ""
+			fullScreen = no
+			iconType =
+			{
+				name ="bg"
+				spriteType = "GFX_mapmode_selected"
+				position = { x= 0 y = 0 }
+			}
+		}
+		
+		windowType = {
+			name = "mapmode_selected_overlay_6"
+			backGround=""
+			position = { x=0 y=0 }	
+			size = { x=180 y=58 }
+			moveable = 0
+			dontRender = ""
+			horizontalBorder= ""
+			verticalBorder= ""
+			fullScreen = no
+			iconType =
+			{
+				name ="bg"
+				spriteType = "GFX_mapmode_selected"
+				position = { x= 0 y = 0 }
+			}
+		}
+		
+		windowType = {
+			name = "mapmode_selected_overlay_7"
+			backGround=""
+			position = { x=0 y=0 }	
+			size = { x=180 y=58 }
+			moveable = 0
+			dontRender = ""
+			horizontalBorder= ""
+			verticalBorder= ""
+			fullScreen = no
+			iconType =
+			{
+				name ="bg"
+				spriteType = "GFX_mapmode_selected"
+				position = { x= 0 y = 0 }
+			}
+		}
+		
+		windowType = {
+			name = "mapmode_selected_overlay_8"
+			backGround=""
+			position = { x=0 y=0 }	
+			size = { x=180 y=58 }
+			moveable = 0
+			dontRender = ""
+			horizontalBorder= ""
+			verticalBorder= ""
+			fullScreen = no
+			iconType =
+			{
+				name ="bg"
+				spriteType = "GFX_mapmode_selected"
+				position = { x= 0 y = 0 }
+			}
+		}
+		
+		windowType = {
+			name = "mapmode_selected_overlay_9"
+			backGround=""
+			position = { x=0 y=0 }	
+			size = { x=180 y=58 }
+			moveable = 0
+			dontRender = ""
+			horizontalBorder= ""
+			verticalBorder= ""
+			fullScreen = no
+			iconType =
+			{
+				name ="bg"
+				spriteType = "GFX_mapmode_selected"
+				position = { x= 0 y = 0 }
+			}
+		}
+		
+		windowType = {
+			name = "mapmode_selected_overlay_10"
+			backGround=""
+			position = { x=0 y=0 }	
+			size = { x=180 y=58 }
+			moveable = 0
+			dontRender = ""
+			horizontalBorder= ""
+			verticalBorder= ""
+			fullScreen = no
+			iconType =
+			{
+				name ="bg"
+				spriteType = "GFX_mapmode_selected"
+				position = { x= 0 y = 0 }
+			}
+		}
+	}
+
+	
+}

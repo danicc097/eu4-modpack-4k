@@ -1,0 +1,623 @@
+guiTypes = {
+
+	windowType = {
+		name = "countryeconomyview"
+		position = { x=0 y=252 }	
+		#position = { x=-1080 y=252 }	
+		show_position = { x=0 y =252 }
+		hide_position = { x=-1080 y =252 }	
+		animation_type = "decelerated"
+		animation_time = 10	
+		size = { x=1843 y=180 }
+		moveable = 0
+		Orientation = "UPPER_LEFT"
+		
+		upsound = tab_economy
+		
+		iconType =
+		{
+			name ="background"
+			spriteType = "GFX_economy_view_bg"
+			position = { x= -13 y = -18 }
+			Orientation = "UPPER_LEFT"
+
+		}
+		
+		iconType =
+		{
+			name ="topGold"
+			spriteType = "GFX_country_economy_view_topBanner"
+			position = { x= 2 y = 209 }
+			Orientation = "UPPER_LEFT"
+
+		}
+		
+		guiButtonType = {
+			name = "close_button"
+			position = { x = 925 y = -2 }
+			quadTextureSprite ="GFX_closebutton2"	
+			shortcut = "ESCAPE"
+			Orientation = "UPPER_LEFT"
+			clicksound = close_window
+		}		
+
+		instantTextBoxType = {
+			name = "window_title"
+			position = { x = 27 y =140 }
+			textureFile = ""
+			font = "vic_36"
+			borderSize = {x = 7 y = 7}	
+			text = "HEADER_ECONOMY"	
+			maxWidth = 922
+			maxHeight = 58
+			format = centre
+		}
+
+		
+		
+		
+		######################################################
+		### INCOME
+		######################################################		
+		
+		instantTextBoxType = {
+			name = "incomes"
+			position = { x = 149 y =214 }
+			textureFile = ""
+			font = "vic_22"
+			borderSize = {x = 7 y = 7}	
+			text = "CV_INCOMES"	
+			maxWidth = 230
+			maxHeight = 29
+			format = centre
+		}
+		
+		listboxType = {
+			name = "incomes_listbox"
+			backGround = ""
+			position = { x=72 y=261 }
+			size = { x=324 y=540 }
+			Orientation = "UPPER_LEFT"
+			horizontal = 0
+			spacing = 1.5
+			scrollbartype = "standardlistbox_slider"
+			borderSize = {x = 0 y = 0}
+		}		
+
+		iconType = {
+			name ="incomes_total_icon"
+			spriteType = "GFX_icon_gold_font_medium"
+			position = { x= 437 y = 670 }
+			Orientation = "UPPER_LEFT"
+		}
+		
+		instantTextBoxType = {
+			name = "incomes_total_text"
+			position = { x = 68 y =671 }
+			textureFile = ""
+			font = "vic_22"
+			borderSize = {x = 7 y = 7}	
+			text = "CV_INCOMES_TOTAL"	
+			maxWidth = 252
+			maxHeight = 29
+			format = right
+		}
+		
+		instantTextBoxType = {
+			name = "incomes_total"
+			position = { x = 257 y =671 }
+			textureFile = ""
+			font = "vic_22"
+			borderSize = {x = 7 y = 7}	
+			text = "TOTAL +1234"	
+			maxWidth = 180
+			maxHeight = 29
+			format = right
+		}		
+		
+		######################################################
+		### EXPENSES
+		######################################################
+		
+		instantTextBoxType = {
+			name = "expenses"
+			position = { x = 590 y =214 }
+			textureFile = ""
+			font = "vic_22"
+			borderSize = {x = 7 y = 7}	
+			text = "CV_EXPENSES"	
+			maxWidth = 230
+			maxHeight = 29
+			format = centre
+		}		
+		
+		listboxType = {
+			name = "expenses_listbox"
+			backGround = ""
+			position = { x=517 y=261 }
+			size = { x=504 y=540 }
+			Orientation = "UPPER_LEFT"
+			horizontal = 0
+			spacing = 1.0
+			scrollbartype = "standardlistbox_slider"
+			borderSize = {x = 0 y = 0}
+		}		
+
+		iconType = {
+			name ="expenses_total_icon"
+			spriteType = "GFX_icon_gold_font_medium"
+			position = { x= 877 y = 715 }
+			Orientation = "UPPER_LEFT"
+		}
+		
+		instantTextBoxType = {
+			name = "expences_total_text"
+			position = { x = 540 y =716 }
+			textureFile = ""
+			font = "vic_22"
+			borderSize = {x = 7 y = 7}	
+			text = "CV_EXPENSES_TOTAL"	
+			maxWidth = 252
+			maxHeight = 29
+			format = right
+		}
+		
+		instantTextBoxType = {
+			name = "expenses_total"
+			position = { x = 698 y =716 }
+			textureFile = ""
+			font = "vic_22"
+			borderSize = {x = 7 y = 7}	
+			text = "TOTAL -42"	
+			maxWidth = 180
+			maxHeight = 29
+			format = right
+		}	
+
+		iconType = {
+			name ="balance_icon"
+			spriteType = "GFX_icon_gold"
+			position = { x= 877 y = 806 }
+			Orientation = "UPPER_LEFT"
+		}
+		
+		instantTextBoxType = {
+			name = "balance_title"
+			position = { x = 540 y =805 }
+			textureFile = ""
+			font = "vic_29"
+			borderSize = {x = 7 y = 7}	
+			text = "BALANCE"	
+			maxWidth = 166
+			maxHeight = 58
+			format = left
+			
+		}
+		
+		instantTextBoxType = {
+			name = "balance"
+			position = { x = 684 y =807 }
+			textureFile = ""
+			font = "vic_36"
+			borderSize = {x = 7 y = 7}	
+			text = "Balance: -234"	
+			maxWidth = 187
+			maxHeight = 58
+			format = right
+			fixedsize = yes
+		}			
+
+		######################################################
+		###   INFO
+		######################################################
+		
+		
+		iconType = {
+			name ="inflation_linechart_bg"
+			spriteType = "GFX_ledger_econonomy_view_linegraph_bg"
+			position = { x= 83 y = 740 }
+			Orientation = "UPPER_LEFT"
+			scale = 1.0
+			hint_tag = "hint_inflation"
+		}		
+		
+		iconType = {
+			name = "inflation_linechart"
+			spriteType = "GFX_economy_inflation_linechart"
+			position = { x = 85 y = 740 }
+		}	
+
+		iconType = {
+			name ="inflation_linechart_frame"
+			spriteType = "GFX_economy_linechart_frame"
+			position = { x= 72 y = 729 }
+			Orientation = "UPPER_LEFT"
+		}	
+
+		iconType =
+		{
+			name ="inflation_dev_icon"
+			spriteType = "GFX_inflation_arrows_strip"
+			position = { x= 385 y = 716 }
+			Orientation = "UPPER_LEFT"
+			frame = 5
+			hint_tag = "hint_inflation"
+		}
+
+		instantTextBoxType = {
+			name = "inflation_info"
+			position = { x = 342 y = 776 }
+			textureFile = ""
+			font = "vic_18"
+			borderSize = {x = 7 y = 7}	
+			text = "2,2%"	
+			maxWidth = 139
+			maxHeight = 29
+			format = centre
+		}
+		
+		iconType = {
+			name ="war_exhaustion_icon"
+			spriteType = "GFX_icon_war_exhaustion"
+			position = { x= 86 y = 823 }
+			Orientation = "UPPER_LEFT"
+			hint_tag = "hint_warexhaustion"
+		}
+		
+		instantTextBoxType = {
+			name = "war_exhaustion"
+			position = { x = 144 y = 828 }
+			textureFile = ""
+			font = "vic_18"
+			borderSize = {x = 7 y = 7}	
+			text = "War Exhaustion: 12%"	
+			maxWidth = 115
+			maxHeight = 58
+			format = centre
+		}
+		
+		iconType = {
+			name ="development_icon"
+			spriteType = "GFX_development_icon"
+			position = { x= 292 y = 823 }
+			Orientation = "UPPER_LEFT"
+		}
+		
+		instantTextBoxType = {
+			name = "development_base"
+			position = { x = 349 y = 828 }
+			textureFile = ""
+			font = "vic_18"
+			borderSize = {x = 7 y = 7}	
+			text = "Tax Base: 124"	
+			maxWidth = 119
+			maxHeight = 58
+			format = center
+		}
+		
+
+		######################################################
+		###   Buttons
+		######################################################
+
+#GFX_take_loan_button
+		guiButtonType =
+		{
+			name ="debase_currency"
+			quadTextureSprite= "GFX_debase_currency"
+			position = { x= 875 y = 713 }
+			Orientation = "LOWER_LEFT"
+#			buttonText = "CV_DEBASE_CURRENCY"
+			buttonFont = "vic_18"
+		}
+		
+		guiButtonType =
+		{
+			name ="take_loan"
+			quadTextureSprite= "GFX_take_loan_button"
+			position = { x= 510 y = 713 }
+			Orientation = "LOWER_LEFT"
+			buttonFont = "vic_18"
+			hint_tag = "hint_loans"
+		}
+		
+		instantTextBoxType = {
+			name = "take_loan_sum"
+			position = { x = 508 y = 914 }
+			textureFile = ""
+			font = "vic_18"
+			borderSize = {x = 7 y = 7}	
+			text = "TAKE_LOAN_SUM"	
+			maxWidth = 180
+			maxHeight = 58
+			format = right
+			alwaystransparent = yes
+		}		
+		
+		guiButtonType =
+		{
+			name ="repay_loan"
+			quadTextureSprite= "GFX_repay_loan"
+			position = { x= 709 y = 713 }
+			Orientation = "LOWER_LEFT"
+#			buttonText = "CV_REPAY_LOAN"
+			buttonFont = "vic_18"		
+			hint_tag = "hint_loans"	
+		}
+		
+		guiButtonType =
+		{
+			name ="repay_all_loans"
+			quadTextureSprite= "GFX_repay_all_loans"
+			position = { x= 792 y = 713 }
+			Orientation = "LOWER_LEFT"
+#			buttonText = "CV_REPAY_X_LOANS"
+			buttonFont = "vic_18"		
+			hint_tag = "hint_loans"	
+		}
+		
+		guiButtonType =
+		{
+			name ="raise_wartaxes"
+			quadTextureSprite= "GFX_raise_war_tax"
+			position = { x= 77 y = 713 }
+			Orientation = "LOWER_LEFT"
+			buttonFont = "vic_18"
+			clicksound = war_taxes
+			hint_tag = "hint_wartaxes"
+		}
+		
+		guiButtonType =
+		{
+			name ="combat_inflation"
+			quadTextureSprite= "GFX_reduce_inflation"
+			position = { x= 160 y = 713 }
+			Orientation = "LOWER_LEFT"
+			buttonFont = "vic_18"
+			hint_tag = "hint_inflation"	
+		}		
+		
+		
+		guiButtonType =
+		{
+			name ="go_bankrupt"
+			quadTextureSprite = "GFX_declare_bankruptcy"
+			position = { x= 243 y = 713 }
+			Orientation = "LOWER_LEFT"
+ 			buttonFont = "vic_18"		
+		}
+		
+		################################################################################################
+		### --- Repay loan window
+		
+		windowType = {
+			name = "countryeconomyview_repayloan"
+			backGround =""
+			position = { x=0 y=0 }	
+			size = { x=1843 y=180 }
+			moveable = 0
+			dontRender = ""
+			horizontalBorder = ""	
+			
+			iconType =
+			{
+				name ="domesticpanel_overlay"
+				spriteType = "GFX_court_view_select_advisor_bg"
+				position = { x= -13 y = -18 }
+				Orientation = "UPPER_LEFT"
+			}				
+			
+			instantTextBoxType = {
+				name = "title"
+				position = { x = 117 y =247 }
+				format = centre
+				font = "vic_22"
+				maxWidth = 756
+				maxHeight = 58
+				Orientation = "UPPER_LEFT"
+				text = "CV_REPAY_LOAN_TITLE"				
+				
+			}
+
+			listboxType = {
+				name = "loans_listbox"
+				position = { x=117 y =333}
+				backGround=""
+				size = { x=801 y =1143} #was y=513
+				Orientation = "UPPER_LEFT"
+				horizontal = 0
+				spacing = 4
+				scrollbartype = "standardlistbox_slider"
+				borderSize = {x = 0 y = 0}
+			}			
+			
+			guiButtonType = {
+				name = "back_button"
+				position = {  x=432 y =1541} #was y=956
+				quadTextureSprite ="GFX_standard_button_71"	
+				tooltip = ""
+				tooltipText =""
+				delayedTooltipText = ""
+				buttonText = "BACK"
+				buttonFont = "vic_18"
+			}			
+		}		
+	}
+
+	################################################################################################
+	### --- Economy list item
+	
+	windowType = {
+		name = "countryeconomyview_listitem"
+		backGround =""
+		position = { x=0 y=0 }	
+		size = { x=360 y=31 }
+		moveable = 0
+		dontRender = ""
+		horizontalBorder = ""		
+		
+		instantTextBoxType = {
+			name = "name"
+			position = { x = -4 y = -2 }
+			textureFile = ""
+			font = "vic_18"
+			borderSize = {x = 7 y = 7}	
+			text = "EXPENSE_TRIBUTE"	
+			maxWidth = 360
+			maxHeight = 29
+			format = left
+		}
+
+		instantTextBoxType = {
+			name = "value2"
+			position = { x = 169 y = -2 }
+			textureFile = ""
+			font = "vic_18_grey"
+			borderSize = {x = 7 y = 7}	
+			text = ""
+			maxWidth = 180
+			maxHeight = 29
+			format = centre
+		}		
+		
+		instantTextBoxType = {
+			name = "value"
+			position = { x = 306 y = -2 }
+			textureFile = ""
+			font = "vic_18"
+			borderSize = {x = 7 y = 7}	
+			text = "0 (0%)"	
+			maxWidth = 97
+			maxHeight = 29
+			format = right
+		}
+	}	
+	
+	windowType = {
+		name = "countryeconomyview_listitem_slider"
+		backGround =""
+		position = { x=0 y=0 }	
+		size = { x=360 y=29 }
+		moveable = 0
+		dontRender = ""
+		horizontalBorder = ""	
+
+		scrollbarType = {
+			name = "slider"	
+			slider = "SliderButton"
+			track= "TrackButton"
+			leftbutton = "upButton"
+			rightbutton = "downButton"
+			size = {x =396 y =29 }
+			position = {x= 5 y = 5}
+			priority = 100			
+			borderSize = {x =29 y = 29}	
+			maxValue = 1
+			minValue = 0
+			stepSize =0.01
+			startValue = 1
+			horizontal = 1
+
+			guiButtonType = {
+				name = "SliderButton"	
+				quadTextureSprite = "GFX_scroll_drager_blue"
+				tooltip = ""
+				tooltipText =""	
+				delayedTooltipText = ""
+				position = { x=0 y =0}
+			}
+
+			guiButtonType = {
+				name = "TrackButton"
+				quadTextureSprite = "yearslider_background"
+				position = { x=0 y =0}	
+				tooltip = ""
+				tooltipText =""
+				delayedTooltipText = ""	
+
+			}	
+
+			guiButtonType = {
+				parent = "SliderButton"
+				name = "upButton"
+				quadTextureSprite = "GFX_scroll_left"
+				position = { x=0 y =0}	
+			}
+			
+			guiButtonType = {
+				parent = "SliderButton"
+				name = "downButton"
+				quadTextureSprite = "GFX_scroll_right"
+				position = { x=0 y =216}	
+			}
+		}		
+	}		
+	
+	################################################################################################
+	### --- Loan repay list item
+	
+	windowType = {
+		name = "countryeconomyview_loanrepayitem"
+		backGround =""
+		position = { x=0 y=0 }	
+		size = { x=801 y=126 }
+		moveable = 0
+		dontRender = ""
+		horizontalBorder = ""
+
+		iconType =
+		{
+			name ="loan_background"
+			spriteType = "GFX_economy_repayLoan_bg"
+			position = { x= -29 y = -9 }
+			Orientation = "UPPER_LEFT"
+		}		
+
+		instantTextBoxType = {
+			name = "loan_lender"
+			position = { x = 4 y = 4 }
+			textureFile = ""
+			font = "vic_18"
+			borderSize = {x = 7 y = 7}	
+			text = "CV_ECONOMY_LOAN_LENDER"	
+			maxWidth = 540
+			maxHeight = 58
+			format = left
+		}
+		
+		instantTextBoxType = {
+			name = "loan_amount_interest"
+			position = { x = 4 y = 34 }
+			textureFile = ""
+			font = "vic_18"
+			borderSize = {x = 7 y = 7}	
+			text = "CV_ECONOMY_LOAN_AMOUNT_INTEREST"	
+			maxWidth = 540
+			maxHeight = 58
+			format = left
+		}
+
+		instantTextBoxType = {
+			name = "loan_expire"
+			position = { x = 4 y = 65 }
+			textureFile = ""
+			font = "vic_18"
+			borderSize = {x = 7 y = 7}	
+			text = "CV_ECONOMY_LOAN_EXPIRE"	
+			maxWidth = 540
+			maxHeight = 58
+			format = left
+		}		
+
+		guiButtonType = {
+			name = "pay_button"
+			position = { x=607 y = 27}
+			quadTextureSprite ="GFX_standard_button_71"	
+			tooltip = ""
+			tooltipText =""
+			delayedTooltipText = ""
+			buttonText = "CV_ECONOMY_LOAN_REPAY"
+			buttonFont = "vic_18"
+		}		
+	}	
+}

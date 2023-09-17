@@ -1,0 +1,28 @@
+namespace = xorme_ai_estates_and_agendas
+
+country_event = {
+	id = xorme_ai_estates_and_agendas.1
+	title = estate_privileges_and_agendas_events.3.name
+	desc = estate_privileges_and_agendas_events.3.desc
+	picture = NOBLE_ESTATE_DEMANDS_eventPicture
+
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			select_xorme_ai_estate = { flag = present_agenda estate_action = generate_estate_agenda }
+		}
+	}
+
+	after = {
+		clr_country_flag = xorme_ai_estate_agenda
+		clear_estate_agenda_cache = ROOT
+	}
+
+	option = {
+		name = xorme_ai_estates_and_agendas.1.a
+		trigger = { has_country_flag = xorme_ai_estate_agenda }
+		start_estate_agenda = xorme_ai_estate
+		ai_chance = { factor = 100 }
+	}
+}

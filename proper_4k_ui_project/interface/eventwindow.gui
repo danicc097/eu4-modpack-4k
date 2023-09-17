@@ -1,0 +1,130 @@
+guiTypes = {
+	windowType = {
+		name = "EventWindow"
+		backGround="Background"
+		position = { x=-508 y=-738 }	
+		size = { x=1015 y=1116 }
+		moveable = 1
+		dontRender = ""
+		horizontalBorder= ""
+		verticalBorder= ""
+		fullScreen = no
+		Orientation = "CENTER"
+		
+		guiButtonType = {
+			name = "Background"	
+			quadTextureSprite ="GFX_event_bg_transparency"
+			tooltip = ""	
+			tooltipText =""
+			delayedTooltipText = ""
+		}
+
+		iconType =
+		{
+			name ="event_bg_top"
+			spriteType = "GFX_event_bg_top"
+			position = { x= -77 y = 0 }
+			Orientation = "UPPER_LEFT"
+		}
+		
+		iconType =
+		{
+			name ="event_picture"
+			spriteType = "GFX_event_event_test"
+			position = { x = 54 y = 146 }
+			Orientation = "UPPER_LEFT"
+		}
+		
+		iconType =
+		{
+			name ="event_bg_middle"
+			spriteType = "GFX_event_bg_middle"
+			position = { x = -77 y = 401 }
+			Orientation = "UPPER_LEFT"
+		}
+		
+		iconType =
+		{
+			name ="event_bg_bottom"
+			spriteType = "GFX_event_bg_bottom_S"
+			position = { x= -77 y = 0 }
+			Orientation = "UPPER_LEFT"
+		}
+		
+		instantTextBoxType = {
+			name = "Title"
+			position = { x = -77 y = 70 }
+			font = "vic_29s"
+			borderSize = {x = 0 y = 0}
+			text = "Long text here!"	
+			maxWidth = 1181
+			maxHeight = 58
+			format = centre
+		}
+
+		guiButtonType = {
+			name = "event_goto_province"
+			position = { x = 0 y = 25 }
+			quadTextureSprite ="GFX_event_goto_province"
+			buttonFont = "Main_14_black"
+			shortcut = "f"
+			clicksound = click
+		}
+		
+		instantTextBoxType = {
+			name = "Description"
+			position = { x = 56 y = 414 } #change to 56 673 for Great Exhbition
+			textureFile = "" 			#was blank
+			font = "vic_18_black"
+			borderSize = {x = 0 y = 0}
+			text = "Long text here!"	
+			maxWidth = 922
+			maxHeight = 230
+			format = left
+			#fixedsize = yes
+		}
+		
+		listboxType = 
+		{
+			name = "event_option_listbox"
+			position = { x = 0 y = 0 }
+			size = { x = 985 y = 180 }
+			Orientation = "UPPER_LEFT"
+			horizontal = 0
+			spacing = 2
+			scrollbartype = "standardlistbox_slider"
+			borderSize = { x = 0 y = 0 }
+		}		
+	}
+	
+	### Listbox entry for events
+	windowType = {
+		name = "event_option_entry"
+		backGround = ""
+		size = { x = 985 y = 54 }
+		moveable = 0
+		fullScreen = no
+		
+		guiButtonType = {
+			name = "event_option_button"
+			quadTextureSprite = "GFX_event_button_547"
+			buttonFont = "vic_18"
+		}
+
+		guiButtonType = {
+			name = "event_option_goto_button"
+			position = { x = -108 y = 0 }
+			quadTextureSprite ="GFX_event_option_goto_province"
+			buttonFont = "Main_14_black"
+			clicksound = click
+			tooltipText = "GOTO"
+
+			orientation = "UPPER_RIGHT"
+		}
+	}
+	
+	positionType = {
+		name = "event_option_start"
+		position = { x = 23 y = 59 }
+	}
+}

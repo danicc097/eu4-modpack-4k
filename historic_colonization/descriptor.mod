@@ -1,0 +1,5 @@
+name="Historic Colonization"
+picture="thumbnail.png"
+supported_version="1.35.*"
+path="C:/Users/Derek/Documents/Paradox Interactive/Europa Universalis IV/mod/historiccolonization"
+remote_file_id="2252832069"

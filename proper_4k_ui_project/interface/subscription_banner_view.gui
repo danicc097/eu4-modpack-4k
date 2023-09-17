@@ -1,0 +1,96 @@
+guiTypes = {
+	windowType = {
+		name = "game_subscription_banner_view"
+		position = { x= 144 y=-990 }
+		size = { x=695 y=590 }
+		Orientation = "LOWER_LEFT"
+
+		# Windows to allow animation
+		windowType = {
+			name = "bg_animation_bottom"
+			position = { x = -140 y = -187 }
+
+			iconType = {
+				name = "bg"
+				spriteType = "GFX_sub_banner_animation_bottom"
+			}
+		}
+
+		windowType = {
+			name = "bg_animation_top"
+			position = { x = -31 y = -79 }
+
+			iconType = {
+				name = "bg"
+				spriteType = "GFX_sub_banner_animation_top"
+			}
+		}
+
+		iconType = {
+			name = "sub_background"
+			spriteType = "GFX_sub_background"
+		}
+		
+		instantTextBoxType = {
+			name = "subscription_title"
+			text = "SUBSCRIPTION"
+			font = "vic_29s"
+			position = { x=-126 y=202 }
+			maxWidth = 954
+			maxHeight = 54
+			format = centre
+			alwaystransparent = yes
+		}
+		
+		instantTextBoxType = {
+			name = "sub_message_text"
+			text = "SUB_MESSAGE"
+			font = "vic_22"
+			position = { x=108 y=279 }
+			maxWidth = 486
+			maxHeight = 54
+			format = centre
+			alwaystransparent = yes
+		}	
+
+		guiButtonType = {
+			name = "open_subscription_view_button"
+			quadTextureSprite = "button_type_1"
+			position = { x=216 y=409 }
+			buttonText = "READ_MORE"
+			buttonFont = "vic_18"
+			clicksound = click
+		}
+	}
+
+	# Only x used, unit: ms
+	positionType = {
+		name = "bottom_animation_duration"
+		position = { x = 1800 y = 0 }
+	}
+
+	positionType = {
+		name = "top_animation_duration"
+		position = { x = 1800 y = 0 }
+	}
+
+	positionType = {
+		name = "offset_between_animations"
+		position = { x = 540 y = 0 }
+	}
+
+	positionType = {
+		name = "animation_loop_length"
+		position = { x = 5400 y = 0 }
+	}
+
+	positionType = {
+		name = "animation_initial_delay"
+		position = { x = 9000 y = 0 }
+	}
+
+	positionType = {
+		name = "animation_repetitions"
+		position = { x = 9 y = 0 }
+	}
+}

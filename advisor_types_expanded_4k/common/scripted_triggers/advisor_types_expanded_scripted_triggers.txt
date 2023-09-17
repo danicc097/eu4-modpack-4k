@@ -1,0 +1,1032 @@
+# usage:
+## has_ate_advisor = { adm = yes skill = 3 }
+has_ate_advisor = {
+	[[adm]
+		if = {
+			limit = {
+				always = $adm$
+			}
+			# ADM
+			OR = {
+				ate_advisor_loyal_friend_adm = $skill$
+				ate_advisor_court_physician = $skill$
+				ate_advisor_cardinal = $skill$
+				ate_advisor_arch_bishop_catholic = $skill$
+				ate_advisor_arch_bishop_protestant = $skill$
+				ate_advisor_arch_bishop_reformed = $skill$
+				ate_advisor_feudal_tax_collector = $skill$
+				ate_advisor_architect = $skill$
+				ate_advisor_great_administrator = $skill$
+				ate_advisor_steward = $skill$
+				ate_advisor_administrative_genius = $skill$
+				ate_advisor_anti_corruption_officer = $skill$
+				ate_advisor_first_minister_monarchy = $skill$
+				ate_advisor_first_minister_theocracy = $skill$
+				ate_advisor_first_minister_republic = $skill$
+				ate_advisor_state_administrator = $skill$
+				ate_advisor_gold_digger = $skill$
+				ate_advisor_free_thinker = $skill$
+				ate_advisor_revolutionist = $skill$
+				ate_advisor_reformist = $skill$
+				ate_advisor_state_theorist = $skill$
+				ate_advisor_visionary = $skill$
+				ate_advisor_great_philosopher = $skill$
+				ate_advisor_arch_chamberlain = $skill$
+				ate_advisor_monk = $skill$
+				ate_advisor_brahmins_preacher = $skill$
+				ate_advisor_dhimmi_scholar = $skill$
+				ate_advisor_jains_bureaucrat = $skill$
+				ate_advisor_missionary = $skill$
+				ate_advisor_imperial_bureaucrat = $skill$
+				ate_advisor_imam = $skill$
+				ate_advisor_scholar = $skill$
+				ate_advisor_inventor = $skill$
+				ate_advisor_witch_hunter = $skill$
+			}
+		}
+	]
+	[[dip]
+		if = {
+			limit = {
+				always = $dip$
+			}
+			# DIP
+			OR = {
+				ate_advisor_loyal_friend_dip = $skill$
+				ate_advisor_concubine_female = $skill$
+				ate_advisor_concubine_male = $skill$
+				ate_advisor_sailors_recruitmaster = $skill$
+				ate_advisor_blockade_specialist = $skill$
+				ate_advisor_pirate_captain = $skill$
+				ate_advisor_great_negotiator = $skill$
+				ate_advisor_vicegerent = $skill$
+				ate_advisor_traveling_salesman = $skill$
+				ate_advisor_naval_traditional_tactician = $skill$
+				ate_advisor_diplomatic_genius = $skill$
+				ate_advisor_cultural_commissioner = $skill$
+				ate_advisor_herald = $skill$
+				ate_advisor_arch_chancellor = $skill$
+				ate_advisor_envoy = $skill$
+				ate_advisor_vaisyas_peasant = $skill$
+				ate_advisor_guild_trader = $skill$
+				ate_advisor_historian = $skill$
+				ate_advisor_plantation_owner = $skill$
+				ate_advisor_galley_captain = $skill$
+				ate_advisor_galleon_captain = $skill$
+				ate_advisor_colonial_administrator = $skill$
+				ate_advisor_treasure_fleet_captain = $skill$
+			}
+		}
+	]
+	[[mil]
+		if = {
+			limit = {
+				always = $mil$
+			}
+			# MIL
+			OR = {
+				ate_advisor_loyal_friend_mil = $skill$
+				ate_advisor_feudal_lord = $skill$
+				ate_advisor_knight = $skill$
+				ate_advisor_traditional_tactician = $skill$
+				ate_advisor_landsknecht = $skill$
+				ate_advisor_mercenary_leader = $skill$
+				ate_advisor_lord_of_a_castle = $skill$
+				ate_advisor_noble_man = $skill$
+				ate_advisor_military_genius = $skill$
+				ate_advisor_siege_expert = $skill$
+				ate_advisor_master_of_artillery = $skill$
+				ate_advisor_looting_expert = $skill$
+				ate_advisor_marshal = $skill$
+				ate_advisor_arch_marshal = $skill$
+				ate_advisor_supply_expert = $skill$
+				ate_advisor_sergeant = $skill$
+				ate_advisor_maratha_warrior = $skill$
+				ate_advisor_gentleman = $skill$
+				ate_advisor_cossack = $skill$
+				ate_advisor_tribal_chieftain = $skill$
+				ate_advisor_rajputs_warrior = $skill$
+				ate_advisor_banneret = $skill$
+			}
+		}
+	]
+}
+
+ate_can_get_advisor_in_event = {
+	##############################
+	###         Vanilla        ###
+	##############################
+	#############
+	#### ADM ####
+	#############
+	[[artist]
+		if = {
+			limit = {
+				always = $artist$
+			}
+			always = yes
+		}
+	]
+	[[inquisitor]
+		if = {
+			limit = {
+				always = $inquisitor$
+			}
+			always = yes
+		}
+	]
+	[[master_of_mint]
+		if = {
+			limit = {
+				always = $master_of_mint$
+			}
+			always = yes
+		}
+	]
+	[[natural_scientist]
+		if = {
+			limit = {
+				always = $natural_scientist$
+			}
+			always = yes
+		}
+	]
+	[[philosopher]
+		if = {
+			limit = {
+				always = $philosopher$
+			}
+			always = yes
+		}
+	]
+	[[theologian]
+		if = {
+			limit = {
+				always = $theologian$
+			}
+			always = yes
+		}
+	]
+	[[treasurer]
+		if = {
+			limit = {
+				always = $treasurer$
+			}
+			always = yes
+		}
+	]
+	#############
+	#### DIP ####
+	#############
+	[[colonial_governor]
+		if = {
+			limit = {
+				always = $colonial_governor$
+			}
+			num_of_colonists = 1
+			is_colonial_nation = no
+		}
+	]
+	[[diplomat]
+		if = {
+			limit = {
+				always = $diplomat$
+			}
+			always = yes
+		}
+	]
+	[[naval_reformer]
+		if = {
+			limit = {
+				always = $naval_reformer$
+			}
+			primitives = no
+		}
+	]
+	[[navigator]
+		if = {
+			limit = {
+				always = $navigator$
+			}
+			num_of_colonists = 1
+		}
+	]
+	[[spymaster]
+		if = {
+			limit = {
+				always = $spymaster$
+			}
+			always = yes
+		}
+	]
+	[[statesman]
+		if = {
+			limit = {
+				always = $statesman$
+			}
+			always = yes
+		}
+	]
+	[[trader]
+		if = {
+			limit = {
+				always = $trader$
+			}
+			always = yes
+		}
+	]
+	#############
+	#### MIL ####
+	#############
+	[[army_organiser]
+		if = {
+			limit = {
+				always = $army_organiser$
+			}
+			always = yes
+		}
+	]
+	[[army_reformer]
+		if = {
+			limit = {
+				always = $army_reformer$
+			}
+			always = yes
+		}
+	]
+	[[commandant]
+		if = {
+			limit = {
+				always = $commandant$
+			}
+			always = yes
+		}
+	]
+	[[grand_captain]
+		if = {
+			limit = {
+				always = $grand_captain$
+			}
+			always = yes
+		}
+	]
+	[[recruitmaster]
+		if = {
+			limit = {
+				always = $recruitmaster$
+			}
+			always = yes
+		}
+	]
+	[[fortification_expert]
+		if = {
+			limit = {
+				always = $fortification_expert$
+			}
+			always = yes
+		}
+	]
+	[[quartermaster]
+		if = {
+			limit = {
+				always = $quartermaster$
+			}
+			always = yes
+		}
+	]
+
+	##############################
+	### Advisor Types Expanded ###
+	##############################
+	#############
+	#### ADM ####
+	#############
+	[[ate_advisor_loyal_friend_adm]
+		if = {
+			limit = {
+				always = $ate_advisor_loyal_friend_adm$
+			}
+			always = yes
+		}
+	]
+	[[ate_advisor_court_physician]
+		if = {
+			limit = {
+				always = $ate_advisor_court_physician$
+			}
+			always = yes
+		}
+	]
+	[[ate_advisor_cardinal]
+		if = {
+			limit = {
+				always = $ate_advisor_cardinal$
+			}
+			uses_papacy = yes
+		}
+	]
+	[[ate_advisor_arch_bishop_catholic]
+		if = {
+			limit = {
+				always = $ate_advisor_arch_bishop_catholic$
+			}
+			uses_papacy = yes
+		}
+	]
+	[[ate_advisor_arch_bishop_protestant]
+		if = {
+			limit = {
+				always = $ate_advisor_arch_bishop_protestant$
+			}
+			uses_church_aspects = yes
+		}
+	]
+	[[ate_advisor_arch_bishop_reformed]
+		if = {
+			limit = {
+				always = $ate_advisor_arch_bishop_reformed$
+			}
+			uses_fervor = yes
+		}
+	]
+	[[ate_advisor_feudal_tax_collector]
+		if = {
+			limit = {
+				always = $ate_advisor_feudal_tax_collector$
+			}
+			num_of_subjects = 1
+		}
+	]
+	[[ate_advisor_architect]
+		if = {
+			limit = {
+				always = $ate_advisor_architect$
+			}
+			always = yes
+		}
+	]
+	[[ate_advisor_great_administrator]
+		if = {
+			limit = {
+				always = $ate_advisor_great_administrator$
+			}
+			always = yes
+		}
+	]
+	[[ate_advisor_steward]
+		if = {
+			limit = {
+				always = $ate_advisor_steward$
+			}
+			num_of_states = 5
+		}
+	]
+	[[ate_advisor_administrative_genius]
+		if = {
+			limit = {
+				always = $ate_advisor_administrative_genius$
+			}
+			always = yes
+		}
+	]
+	[[ate_advisor_anti_corruption_officer]
+		if = {
+			limit = {
+				always = $ate_advisor_anti_corruption_officer$
+			}
+			always = yes
+		}
+	]
+	[[ate_advisor_first_minister_monarchy]
+		if = {
+			limit = {
+				always = $ate_advisor_first_minister_monarchy$
+			}
+			is_emperor_of_china = no
+			is_nomad = no
+			uses_legitimacy = yes
+		}
+	]
+	[[ate_advisor_first_minister_theocracy]
+		if = {
+			limit = {
+				always = $ate_advisor_first_minister_theocracy$
+			}
+			has_dlc = "Common Sense"
+			uses_devotion = yes
+		}
+	]
+	[[ate_advisor_first_minister_republic]
+		if = {
+			limit = {
+				always = $ate_advisor_first_minister_republic$
+			}
+			uses_republican_tradition = yes
+		}
+	]
+	[[ate_advisor_state_administrator]
+		if = {
+			limit = {
+				always = $ate_advisor_state_administrator$
+			}
+			num_of_states = 5
+		}
+	]
+	[[ate_advisor_gold_digger]
+		if = {
+			limit = {
+				always = $ate_advisor_gold_digger$
+			}
+			gold = 1
+		}
+	]
+	[[ate_advisor_free_thinker]
+		if = {
+			limit = {
+				always = $ate_advisor_free_thinker$
+			}
+			always = yes
+		}
+	]
+	[[ate_advisor_revolutionist]
+		if = {
+			limit = {
+				always = $ate_advisor_revolutionist$
+			}
+			has_dlc = "Emperor"
+			OR = {
+				is_revolution_target = yes
+				is_revolutionary = yes
+			}
+		}
+	]
+	[[ate_advisor_reformist]
+		if = {
+			limit = {
+				always = $ate_advisor_reformist$
+			}
+			always = yes
+		}
+	]
+	[[ate_advisor_state_theorist]
+		if = {
+			limit = {
+				always = $ate_advisor_state_theorist$
+			}
+			is_absolutism_active = yes
+			OR = {
+				NOT = { has_dlc = "Emperor" }
+				AND = {
+					is_revolution_target = no
+					is_revolutionary = no
+				}
+			}
+		}
+	]
+	[[ate_advisor_visionary]
+		if = {
+			limit = {
+				always = $ate_advisor_visionary$
+			}
+			has_dlc = "Leviathan"
+			any_owned_province = {
+				has_great_project = {
+					type = monument
+				}
+				NOT = {
+					has_great_project = {
+						type = monument
+						tier = 3
+					}
+				}
+			}
+		}
+	]
+	[[ate_advisor_great_philosopher]
+		if = {
+			limit = {
+				always = $ate_advisor_great_philosopher$
+			}
+			has_dlc = "Mandate of Heaven"
+			religion = confucianism
+			any_owned_province = {
+				NOT = { religion = PREV }
+				PREV = {
+					NOT = { has_harmonized_with = PREV }
+				}
+			}
+		}
+	]
+	[[ate_advisor_arch_chamberlain]
+		if = {
+			limit = {
+				always = $ate_advisor_arch_chamberlain$
+			}
+			is_emperor = yes
+		}
+	]
+	[[ate_advisor_monk]
+		if = {
+			limit = {
+				always = $ate_advisor_monk$
+			}
+			has_estate = estate_church
+		}
+	]
+	[[ate_advisor_brahmins_preacher]
+		if = {
+			limit = {
+				always = $ate_advisor_brahmins_preacher$
+			}
+			has_estate = estate_brahmins
+		}
+	]
+	[[ate_advisor_dhimmi_scholar]
+		if = {
+			limit = {
+				always = $ate_advisor_dhimmi_scholar$
+			}
+			has_estate = estate_dhimmi
+		}
+	]
+	[[ate_advisor_jains_bureaucrat]
+		if = {
+			limit = {
+				always = $ate_advisor_jains_bureaucrat$
+			}
+			has_estate = estate_jains
+		}
+	]
+	[[ate_advisor_missionary]
+		if = {
+			limit = {
+				always = $ate_advisor_missionary$
+			}
+			NOT = { religious_unity = 1 }
+		}
+	]
+	[[ate_advisor_imperial_bureaucrat]
+		if = {
+			limit = {
+				always = $ate_advisor_imperial_bureaucrat$
+			}
+			has_dlc = "Mandate of Heaven"
+			is_emperor_of_china = yes
+		}
+	]
+	[[ate_advisor_imam]
+		if = {
+			limit = {
+				always = $ate_advisor_imam$
+			}
+			religion_group = muslim
+			uses_piety = yes
+		}
+	]
+	[[ate_advisor_scholar]
+		if = {
+			limit = {
+				always = $ate_advisor_scholar$
+			}
+			is_lacking_institutions = yes
+			primitives = no
+		}
+	]
+	[[ate_advisor_inventor]
+		if = {
+			limit = {
+				always = $ate_advisor_inventor$
+			}
+			has_dlc = "Rule Britannia"
+			NOT = { innovativeness = 100 }
+			primitives = no
+		}
+	]
+	[[ate_advisor_witch_hunter]
+		if = {
+			limit = {
+				always = $ate_advisor_witch_hunter$
+			}
+			religion_group = christian
+			OR = {
+				any_owned_province = {
+					religion_group = PREV
+					OR = {
+						has_owner_religion = no
+						has_hostile_reformation_center = yes
+					}
+				}
+				AND = {
+					has_dlc = "Cradle of Civilization"
+					any_subject_country = {
+						religion = PREV
+						any_owned_province = {
+							religion_group = PREV
+							OR = {
+								has_owner_religion = no
+								has_hostile_reformation_center = yes
+							}
+						}
+					}
+				}
+			}
+		}
+	]
+	#############
+	#### DIP ####
+	#############
+	[[ate_advisor_loyal_friend_dip]
+		if = {
+			limit = {
+				always = $ate_advisor_loyal_friend_dip$
+			}
+			always = yes
+		}
+	]
+	[[ate_advisor_concubine_female]
+		if = {
+			limit = {
+				always = $ate_advisor_concubine_female$
+			}
+			government = monarchy
+			has_government_attribute = heir
+			is_female = no
+			has_regency = no
+			NOT = { has_government_attribute = has_harem }
+		}
+	]
+	[[ate_advisor_concubine_male]
+		if = {
+			limit = {
+				always = $ate_advisor_concubine_male$
+			}
+			government = monarchy
+			has_government_attribute = heir
+			is_female = yes
+			has_regency = no
+			NOT = { has_government_attribute = has_harem }
+		}
+	]
+	[[ate_advisor_sailors_recruitmaster]
+		if = {
+			limit = {
+				always = $ate_advisor_sailors_recruitmaster$
+			}
+			num_of_total_ports = 1
+		}
+	]
+	[[ate_advisor_blockade_specialist]
+		if = {
+			limit = {
+				always = $ate_advisor_blockade_specialist$
+			}
+			num_of_total_ports = 1
+		}
+	]
+	[[ate_advisor_pirate_captain]
+		if = {
+			limit = {
+				always = $ate_advisor_pirate_captain$
+			}
+			num_of_total_ports = 1
+		}
+	]
+	[[ate_advisor_great_negotiator]
+		if = {
+			limit = {
+				always = $ate_advisor_great_negotiator$
+			}
+			always = yes
+		}
+	]
+	[[ate_advisor_vicegerent]
+		if = {
+			limit = {
+				always = $ate_advisor_vicegerent$
+			}
+			num_of_subjects = 1
+		}
+	]
+	[[ate_advisor_traveling_salesman]
+		if = {
+			limit = {
+				always = $ate_advisor_traveling_salesman$
+			}
+			always = yes
+		}
+	]
+	[[ate_advisor_naval_traditional_tactician]
+		if = {
+			limit = {
+				always = $ate_advisor_naval_traditional_tactician$
+			}
+			num_of_total_ports = 1
+		}
+	]
+	[[ate_advisor_diplomatic_genius]
+		if = {
+			limit = {
+				always = $ate_advisor_diplomatic_genius$
+			}
+			always = yes
+		}
+	]
+	[[ate_advisor_cultural_commissioner]
+		if = {
+			limit = {
+				always = $ate_advisor_cultural_commissioner$
+			}
+			any_owned_province = {
+				has_owner_culture = no
+				has_owner_accepted_culture = no
+			}
+		}
+	]
+	[[ate_advisor_herald]
+		if = {
+			limit = {
+				always = $ate_advisor_herald$
+			}
+			always = yes
+		}
+	]
+	[[ate_advisor_arch_chancellor]
+		if = {
+			limit = {
+				always = $ate_advisor_arch_chancellor$
+			}
+			is_emperor = yes
+		}
+	]
+	[[ate_advisor_envoy]
+		if = {
+			limit = {
+				always = $ate_advisor_envoy$
+			}
+			always = yes
+		}
+	]
+	[[ate_advisor_vaisyas_peasant]
+		if = {
+			limit = {
+				always = $ate_advisor_vaisyas_peasant$
+			}
+			has_estate = estate_vaisyas
+		}
+	]
+	[[ate_advisor_guild_trader]
+		if = {
+			limit = {
+				always = $ate_advisor_guild_trader$
+			}
+			has_estate = estate_burghers
+		}
+	]
+	[[ate_advisor_historian]
+		if = {
+			limit = {
+				always = $ate_advisor_historian$
+			}
+			always = yes
+		}
+	]
+	[[ate_advisor_plantation_owner]
+		if = {
+			limit = {
+				always = $ate_advisor_plantation_owner$
+			}
+			always = yes
+		}
+	]
+	[[ate_advisor_galley_captain]
+		if = {
+			limit = {
+				always = $ate_advisor_galley_captain$
+			}
+			num_of_galley = 1
+			num_of_total_ports = 1
+		}
+	]
+	[[ate_advisor_galleon_captain]
+		if = {
+			limit = {
+				always = $ate_advisor_galleon_captain$
+			}
+			num_of_heavy_ship = 1
+			num_of_total_ports = 1
+		}
+	]
+	[[ate_advisor_colonial_administrator]
+		if = {
+			limit = {
+				always = $ate_advisor_colonial_administrator$
+			}
+			num_of_colonists = 1
+			primitives = no
+		}
+	]
+	[[ate_advisor_treasure_fleet_captain]
+		if = {
+			limit = {
+				always = $ate_advisor_treasure_fleet_captain$
+			}
+			OR = {
+				colony = 1
+				crown_colony = 1
+				private_enterprise = 1
+				self_governing_colony = 1
+			}
+			primitives = no
+		}
+	]
+	#############
+	#### MIL ####
+	#############
+	[[ate_advisor_loyal_friend_mil]
+		if = {
+			limit = {
+				always = $ate_advisor_loyal_friend_mil$
+			}
+			always = yes
+		}
+	]
+	[[ate_advisor_feudal_lord]
+		if = {
+			limit = {
+				always = $ate_advisor_feudal_lord$
+			}
+			num_of_subjects = 1
+		}
+	]
+	[[ate_advisor_knight]
+		if = {
+			limit = {
+				always = $ate_advisor_knight$
+			}
+			num_of_cavalry = 1
+		}
+	]
+	[[ate_advisor_traditional_tactician]
+		if = {
+			limit = {
+				always = $ate_advisor_traditional_tactician$
+			}
+			always = yes
+		}
+	]
+	[[ate_advisor_landsknecht]
+		if = {
+			limit = {
+				always = $ate_advisor_landsknecht$
+			}
+			always = yes
+		}
+	]
+	[[ate_advisor_mercenary_leader]
+		if = {
+			limit = {
+				always = $ate_advisor_mercenary_leader$
+			}
+			always = yes
+		}
+	]
+	[[ate_advisor_lord_of_a_castle]
+		if = {
+			limit = {
+				always = $ate_advisor_lord_of_a_castle$
+			}
+			any_owned_province = {
+				OR = {
+					AND = {
+						is_capital = yes
+						fort_level = 2
+					}
+					AND = {
+						is_capital = no
+						fort_level = 1
+					}
+				}
+			}
+		}
+	]
+	[[ate_advisor_noble_man]
+		if = {
+			limit = {
+				always = $ate_advisor_noble_man$
+			}
+			always = yes
+		}
+	]
+	[[ate_advisor_military_genius]
+		if = {
+			limit = {
+				always = $ate_advisor_military_genius$
+			}
+			always = yes
+		}
+	]
+	[[ate_advisor_siege_expert]
+		if = {
+			limit = {
+				always = $ate_advisor_siege_expert$
+			}
+			always = yes
+		}
+	]
+	[[ate_advisor_master_of_artillery]
+		if = {
+			limit = {
+				always = $ate_advisor_master_of_artillery$
+			}
+			num_of_artillery = 1
+		}
+	]
+	[[ate_advisor_looting_expert]
+		if = {
+			limit = {
+				always = $ate_advisor_looting_expert$
+			}
+			always = yes
+		}
+	]
+	[[ate_advisor_marshal]
+		if = {
+			limit = {
+				always = $ate_advisor_marshal$
+			}
+			always = yes
+		}
+	]
+	[[ate_advisor_arch_marshal]
+		if = {
+			limit = {
+				always = $ate_advisor_arch_marshal$
+			}
+			is_emperor = yes
+		}
+	]
+	[[ate_advisor_supply_expert]
+		if = {
+			limit = {
+				always = $ate_advisor_supply_expert$
+			}
+			always = yes
+		}
+	]
+	[[ate_advisor_sergeant]
+		if = {
+			limit = {
+				always = $ate_advisor_sergeant$
+			}
+			has_dlc = "Cradle of Civilization"
+		}
+	]
+	[[ate_advisor_maratha_warrior]
+		if = {
+			limit = {
+				always = $ate_advisor_maratha_warrior$
+			}
+			has_estate = estate_maratha
+		}
+	]
+	[[ate_advisor_gentleman]
+		if = {
+			limit = {
+				always = $ate_advisor_gentleman$
+			}
+			has_estate = estate_nobles
+		}
+	]
+	[[ate_advisor_cossack]
+		if = {
+			limit = {
+				always = $ate_advisor_cossack$
+			}
+			has_estate = estate_cossacks
+		}
+	]
+	[[ate_advisor_tribal_chieftain]
+		if = {
+			limit = {
+				always = $ate_advisor_tribal_chieftain$
+			}
+			has_estate = estate_nomadic_tribes
+		}
+	]
+	[[ate_advisor_rajputs_warrior]
+		if = {
+			limit = {
+				always = $ate_advisor_rajputs_warrior$
+			}
+			has_estate = estate_rajput
+		}
+	]
+	[[ate_advisor_banneret]
+		if = {
+			limit = {
+				always = $ate_advisor_banneret$
+			}
+			always = yes
+		}
+	]
+}

@@ -1,0 +1,113 @@
+establish_annexable_colony = {
+	category = influence
+
+	require_acceptance = no
+
+	is_visible = {
+		ai = no
+		can_create_subject_type = {
+			subject = FROM
+			subject_type = annexable_colony
+		}
+	}
+
+	is_allowed = {
+		can_create_subject_type = {
+			subject = FROM
+			subject_type = annexable_colony
+		}
+		num_of_colonists = 2
+		is_at_war = no
+		FROM = { is_at_war = no }
+		FROM = { NOT = { liberty_desire = 50 } }
+	}
+
+	on_accept = {
+		if = {
+			limit = {
+				can_create_subject_type = {
+					subject = FROM
+					subject_type = annexable_colony
+				}
+				num_of_colonists = 2
+				is_at_war = no
+				FROM = { is_at_war = no }
+				FROM = { NOT = { liberty_desire = 50 } }
+			}
+			create_subject = {
+				subject = FROM
+				subject_type = annexable_colony
+			}
+			FROM = {
+				set_disabled_colonial_nation_spawning_for_region_for_overlord = yes
+			}
+			set_country_flag = has_had_annexable_colony
+		}
+	}
+
+	ai_will_do = {
+		always = no
+	}
+}
+
+make_annexable_colony_to_colony_again = {
+	category = influence
+
+	require_acceptance = no
+
+	is_visible = {
+		FROM = {
+			is_subject_of = ROOT
+			is_subject_of_type = annexable_colony
+		}
+	}
+
+	is_allowed = {
+		hidden_trigger = {
+			FROM = {
+				is_subject_of = ROOT
+				is_subject_of_type = annexable_colony
+			}
+		}
+		is_at_war = no
+		FROM = { is_at_war = no }
+	}
+
+	on_accept = {
+		if = {
+			limit = {
+				FROM = {
+					is_subject_of = ROOT
+					is_subject_of_type = annexable_colony
+				}
+				is_at_war = no
+				FROM = { is_at_war = no }
+			}
+			FROM = {
+				grant_independence = yes
+			}
+			if = {
+				limit = {
+					has_dlc = "Leviathan"
+				}
+				create_subject = {
+					subject = FROM
+					subject_type = crown_colony
+				}
+			}
+			else = {
+				create_subject = {
+					subject = FROM
+					subject_type = colony
+				}
+			}
+			FROM = {
+				unset_disabled_colonial_nation_spawning_for_region_for_overlord = yes
+			}
+		}
+	}
+
+	ai_will_do = {
+		always = yes
+	}
+}

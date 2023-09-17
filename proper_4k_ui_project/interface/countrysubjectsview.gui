@@ -1,0 +1,1876 @@
+guiTypes = {
+
+	#x is minimum resolution height for this country view to increase to large size
+	#y is the size increase for lists and distance to move for buttons at the bottom of the country view
+	positionType =
+	{
+		name ="countrysubjectsview_scaling_large_min_inc"
+		position = { x= 1620 y = 266 }
+	}
+
+	#x is minimum resolution height for this country view to increase to huge size
+	#y is the size increase for lists and distance to move for buttons at the bottom of the country view
+	positionType = {
+		name ="countrysubjectsview_scaling_huge_min_inc"
+		position = { x = 1944 y = 590 }
+	}
+
+	positionType = {
+		name = "move_subject_focus_buttons_to_this_y_if_no_rights_of_man"
+		position = { x=2407 y=68 }
+	}
+
+	positionType = {
+		name = "move_interactions_list_to_this_y_if_no_rights_of_man"
+		position = { x=2407 y=148 }
+	}
+
+	### INTERACTION
+	windowType = {
+		name = "interaction_item"
+		position = { x=0 y=0 }
+		size = { x=900 y=54 }
+		moveable = 0
+		Orientation = "UPPER_LEFT"
+
+		instantTextBoxType = {
+			name = "interaction_name"
+			position = { x = 92 y = 11 }
+			textureFile = ""
+			font = "vic_18"
+			borderSize = {x = 7 y = 7}
+			text = ""
+			maxWidth = 270
+			maxHeight = 27
+			format = left
+			fixedsize = yes
+		}
+
+		iconType =
+		{
+			name ="interaction_icon"
+			spriteType = "GFX_support_loyalists_button_icon"
+			position = { x= 36 y = 11 }
+			Orientation = "UPPER_LEFT"
+		}
+	}
+
+	windowType = {
+		name = "interaction_icon_item"
+		backGround =""
+		position = { x=0 y=0 }
+		size = { x=22 y=22 }
+		moveable = 0
+		dontRender = ""
+		horizontalBorder = ""
+
+		iconType =
+		{
+			name = "interaction_icon"
+			spriteType = "GFX_support_loyalists_button_icon"
+			position = { x= 0 y = 0 }
+			Orientation = "CENTER_LEFT"
+		}
+	}
+
+	### TRADE COMPANY
+	windowType = {
+		name = "subject_trade_company_item"
+		position = { x=0 y=0 }
+		size = { x=900 y=54 }
+		moveable = 0
+		Orientation = "UPPER_LEFT"
+
+		iconType =
+		{
+			name ="flag"
+			spriteType = "GFX_shield_small"
+			position = { x= -4 y = 9 }
+			Orientation = "UPPER_LEFT"
+		}
+
+		iconType =
+		{
+			name ="subject_company_icon"
+			spriteType = "GFX_subject_tradecompany_icon"
+			position = { x= 29 y = 9 }
+			Orientation = "UPPER_LEFT"
+		}
+
+		instantTextBoxType = {
+			name = "name"
+			position = { x = 92 y = 16 }
+			textureFile = ""
+			font = "vic_18"
+			borderSize = {x = 7 y = 7}
+			text = "name"
+			maxWidth = 238
+			maxHeight = 27
+			format = left
+			fixedsize = yes
+		}
+
+		instantTextBoxType = {
+			name = "income"
+			position = { x = 396 y = 16 }
+			textureFile = ""
+			font = "vic_18"
+			borderSize = {x = 7 y = 7}
+			text = "00"
+			maxWidth = 108
+			maxHeight = 54
+			format = center
+		}
+
+		iconType =
+		{
+			name ="icon_strong_merchant"
+			quadTextureSprite = "GFX_icon_merchant"
+			position = { x= 686 y = 11 }
+			Orientation = "UPPER_LEFT"
+		}
+
+		guiButtonType = {
+			name = "promote_investments_button"
+			position = { x = 752 y = 13 }
+			quadTextureSprite ="GFX_promote_investments_button_small"
+			tooltip = ""
+			tooltipText =""
+			delayedTooltipText = ""
+			buttonFont = "Main_14_black"
+			Orientation = "UPPER_LEFT"
+		}
+
+		iconType = {
+			name ="promote_investments_button_glow"
+			spriteType = "GFX_country_subject_button_small_glow"
+			position = { x=752 y=13}
+			Orientation = "UPPER_LEFT"
+		}
+	}
+
+	### SUBJECT
+	windowType = {
+		name = "subject_item"
+		position = { x=0 y=0 }
+		size = { x=900 y=54 }
+		moveable = 0
+		Orientation = "UPPER_LEFT"
+
+
+		instantTextBoxType = {
+			name = "name"
+			position = { x = 92 y = 16 }
+			textureFile = ""
+			font = "vic_18"
+			borderSize = {x = 7 y = 7}
+			text = "name"
+			maxWidth = 238
+			maxHeight = 27
+			format = left
+			fixedsize = yes
+			alwaystransparent = yes
+		}
+
+		guiButtonType = {
+			name = "interactions_dropdown_button"
+			position = { x = -4 y = 11 }
+			quadTextureSprite ="GFX_subject_bg_tile"
+		}
+
+		iconType = {
+			name ="flag"
+			spriteType = "GFX_shield_small"
+			position = { x= -4 y = 9 }
+			#size = {x = 54 y = 29}
+		}
+
+		iconType = {
+			name ="subject_type_icon"
+			spriteType = "GFX_subject_colony_icon"
+			position = { x= 27 y = 9 }
+			alwaystransparent = yes
+		}
+
+		instantTextBoxType = {
+			name = "relation"
+			position = { x = 326 y = 16 }
+			textureFile = ""
+			font = "vic_18"
+			borderSize = {x = 7 y = 7}
+			text = "00"
+			maxWidth = 90 #was 72
+			maxHeight = 54
+			format = left #was center
+		}
+
+		instantTextBoxType = {
+			name = "liberty_value"
+			position = { x = 547 y = 16 }
+			textureFile = ""
+			font = "vic_18"
+			borderSize = {x = 7 y = 7}
+			text = "0"
+			maxWidth = 90
+			maxHeight = 54
+			format = center
+		}
+
+		instantTextBoxType = {
+			name = "armysize"
+			position = { x = 621 y = 16 }
+			textureFile = ""
+			font = "vic_18"
+			borderSize = {x = 7 y = 7}
+			text = "00"
+			maxWidth = 54
+			maxHeight = 54
+			format = center
+		}
+
+		OverlappingElementsBoxType = {
+			name = "interaction_icons"
+			position = { x = 747 y = 13 }
+			size = { x = 115 y = 14 }
+			Orientation = "UPPER_LEFT"
+			format = center
+			spacing = 14
+		}
+
+		iconType = {
+			name ="icon_mil_focus"
+			spriteType = "GFX_subject_focus_icons"
+			position = { x= 842 y = 13 }
+			Orientation = "UPPER_LEFT"
+		}
+
+		instantTextBoxType = {
+			name = "income"
+			position = { x = 396 y = 16 }
+			textureFile = ""
+			font = "vic_18"
+			borderSize = {x = 7 y = 7}
+			text = "00"
+			maxWidth = 103
+			maxHeight = 54
+			format = center
+		}
+
+		iconType = {
+			name = "isolationism_icon"
+			spriteType = "GFX_isolationism_icons"
+			position = { x = 693 y = 18 }
+		}
+
+		iconType = {
+			name ="icon_tribute"
+			spriteType = "GFX_subject_tribute_icons"
+			position = { x= 839 y = 9 }
+			Orientation = "UPPER_LEFT"
+		}
+
+		iconType =
+		{
+			name ="merchant_icon"
+			quadTextureSprite = "GFX_icon_merchant"
+			position = { x= 686 y = 11 }
+			Orientation = "UPPER_LEFT"
+		}
+
+		instantTextBoxType = {
+			name = "tariff_efficiency"
+			position = { x = 468 y = 16 }
+			textureFile = ""
+			font = "vic_18"
+			borderSize = {x = 7 y = 7}
+			text = "00"
+			maxWidth = 108
+			maxHeight = 54
+			format = center
+		}
+
+		iconType = {
+			name ="treasure_fleet_progress"
+			spriteType = "GFX_treasure_fleet_progressbar"
+			position = { x= 85 y = 49 }
+			rotation = 1.5708
+		}
+
+		iconType = {
+			name ="treasure_fleet_progressframe"
+			spriteType = "GFX_treasure_fleet_progress_frame"
+			position = { x= 72 y = 18 }
+		}
+	}
+
+	### MAIN WINDOW
+	windowType = {
+		name = "countrysubjectview"
+		position = { x=0 y =252 }
+		#position = { x=-1080 y=252 }
+		show_position = { x=0 y =252 }
+		hide_position = { x=-1080 y =252 }
+		animation_type = "decelerated"
+		animation_time = 10
+		size = { x=1843 y=180 }
+		moveable = 0
+		Orientation = "UPPER_LEFT"
+		upsound = tab_subjects
+
+		iconType =
+		{
+			name ="subjectspanel_bg_top"
+			spriteType = "GFX_country_diplomacy_view_bg_top"
+			position = { x= -7 y = -18 }
+			Orientation = "UPPER_LEFT"
+		}
+
+		iconType =
+		{
+			name = "subjectspanel_bg_bottom"
+			spriteType = "GFX_country_subject_bg"
+			position = { x = -7 y = -18 }
+			Orientation = "UPPER_LEFT"
+		}
+
+		iconType =
+		{
+			name ="subject_overlay_bg"
+			spriteType = "GFX_country_subject_list_overlay_bg"
+			position = { x= 18 y = 234 }
+			Orientation = "UPPER_LEFT"
+
+		}
+
+		smoothListboxType = {
+			name = "subjects_listbox"
+			backGround = ""
+			position = { x=36 y=288 }
+			size = { x=900 y=436 }
+			Orientation = "UPPER_LEFT"
+			horizontal = 0
+			spacing = 2.5
+			scrollbartype = "standardlistbox_slider"
+			borderSize = {x = 0 y = 0}
+		}
+
+		iconType = {
+			name = "liberty_desire_icon"
+			spriteType = "GFX_liberty_icon"
+			position = { x = 846 y = 245 }
+			Orientation = UPPER_LEFT
+		}
+
+		instantTextBoxType = {
+			name = "liberty_desire_value"
+			position = { x = 886 y = 247 }
+			textureFile = ""
+			font = "vic_18"
+			borderSize = {x = 7 y = 7}
+			text = "-"
+			maxHeight = 58
+			maxWidth = 90
+			format = left
+		}
+
+		instantTextBoxType = {
+			name = "interactions"
+			position = { x = 36 y = 245 }
+			textureFile = ""
+			font = "vic_18"
+			borderSize = {x = 7 y = 7}
+			text = "ONGOING_INTERACTIONS"
+			maxHeight = 108
+			maxWidth = 810
+			format = left
+		}
+
+		smoothListboxType = {
+			name = "interactions_listbox"
+			backGround = ""
+			position = { x=0 y=290 }
+			size = { x=1085 y=436 }
+			Orientation = "UPPER_LEFT"
+			horizontal = 0
+			spacing = 2.5
+			scrollbartype = "standardlistbox_slider"
+			borderSize = {x = 0 y = 0}
+		}
+
+		instantTextBoxType = {
+			name = "tribute_desc"
+
+            if_resolution = {
+                max_height = 867
+				position = { x = 36 y = 630 }
+            }
+            if_resolution = {
+                min_height = 868
+                max_height = 1047
+				position = { x = 36 y = 900 }
+            }
+            if_resolution = {
+                min_height = 1048
+				position = { x = 36 y = 1224 }
+
+            }
+			textureFile = ""
+			font = "vic_18"
+			borderSize = {x = 7 y = 7}
+			text = ""
+			maxHeight = 108
+			maxWidth = 918
+			format = left
+		}
+
+		guiButtonType = {
+			name = "sort_subjects_button"
+			position = { x = 32 y = 250 }
+			quadTextureSprite ="GFX_sort_subjects_button"
+		}
+
+		guiButtonType = {
+			name = "sort_name_button"
+			position = { x = 121 y = 250 }
+			quadTextureSprite ="GFX_sort_button_128"
+			buttonText = "NAME"
+			buttonFont = "vic_18"
+		}
+
+		guiButtonType = {
+			name = "sort_relation_button"
+			position = { x = 365 y = 250 }
+			quadTextureSprite ="GFX_sort_opinion_button"
+		}
+
+		guiButtonType = {
+			name = "sort_income_button"
+			position = { x = 436 y = 250 }
+			quadTextureSprite ="GFX_sort_income_button"
+		}
+
+		guiButtonType = {
+			name = "sort_tariff_button"
+			position = { x = 527 y = 250 }
+			quadTextureSprite ="GFX_sort_tariff_button"
+		}
+
+		guiButtonType = {
+			name = "sort_liberty_desire_button"
+			position = { x = 596 y = 250 }
+			quadTextureSprite ="GFX_sort_union_break_button"
+		}
+		guiButtonType = {
+			name = "sort_armysize_button"
+			position = { x = 664 y = 250 }
+			quadTextureSprite ="GFX_sort_armysize_button"
+		}
+
+		guiButtonType = {
+			name = "sort_bonus_button"
+			position = { x = 711 y = 250 }
+			quadTextureSprite ="GFX_sort_bonus_button"
+		}
+
+		guiButtonType = {
+			name = "sort_action_button"
+			position = { x = 779 y = 250 }
+			quadTextureSprite ="GFX_sort_button_100"
+			buttonText = "INTERACTIONS"
+			buttonFont = "vic_18"
+		}
+
+		##### Bottom part of the view
+		windowType = {
+			name = "country_subjects_info"
+			backGround =""
+			position = { x=0 y=0 }
+			#size = { x=540 y= 198 }
+			dontRender = ""
+			horizontalBorder = ""
+
+			iconType =
+			{
+				name ="tariff_income"
+				spriteType = "GFX_tariff_income"
+				position = { x= 376 y = 790 }
+				Orientation = "UPPER_LEFT"
+			}
+
+			iconType =
+			{
+				name ="vassal_income"
+				spriteType = "GFX_vassal_income"
+				position = { x= 376 y = 859 }
+				Orientation = "UPPER_LEFT"
+			}
+
+			instantTextBoxType = {
+				name = "colony_income_label"
+				position = { x = 117 y = 787 }
+				textureFile = ""
+				font = "vic_22"
+				borderSize = {x = 7 y = 7}
+				text = "SUBJECT_COLONY_INCOME"
+				maxWidth = 270
+				maxHeight = 58
+				format = centre
+			}
+
+			instantTextBoxType = {
+				name = "colony_income_efficiency_value"
+				position = { x = 374 y = 790 }
+				textureFile = ""
+				font = "vic_22"
+				borderSize = {x = 7 y = 7}
+				text = "0%"
+				maxWidth = 162
+				maxHeight = 58
+				format = right
+			}
+
+			instantTextBoxType = {
+				name = "colony_income_value"
+				position = { x = 581 y = 790 }
+				textureFile = ""
+				font = "vic_22"
+				borderSize = {x = 7 y = 7}
+				text = "0.0"
+				maxWidth = 198
+				maxHeight = 58
+				format = centre
+			}
+
+			instantTextBoxType = {
+				name = "vassal_income_label"
+				position = { x = 117 y = 855 }
+				textureFile = ""
+				font = "vic_22"
+				borderSize = {x = 7 y = 7}
+				text = "SUBJECT_VASSAL_INCOME_LABEL"
+				maxWidth = 270
+				maxHeight = 58
+				format = centre
+			}
+
+			instantTextBoxType = {
+				name = "vassal_income_efficiency_value"
+				position = { x = 374 y = 855 }
+				textureFile = ""
+				font = "vic_22"
+				borderSize = {x = 7 y = 7}
+				text = "0%"
+				maxWidth = 162
+				maxHeight = 58
+				format = right
+			}
+
+			instantTextBoxType = {
+				name = "vassal_income_value"
+				position = { x = 581 y = 853 }
+				textureFile = ""
+				font = "vic_22"
+				borderSize = {x = 7 y = 7}
+				text = "0.0"
+				maxWidth = 198
+				maxHeight = 58
+				format = centre
+			}
+
+			instantTextBoxType = {
+				name = "total_subjects_income_label"
+				position = { x = 245 y = 941 }
+				textureFile = ""
+				font = "vic_22"
+				borderSize = {x = 7 y = 7}
+				text = "SUBECT_TOTAL_INCOME"
+				maxWidth = 324
+				maxHeight = 58
+				format = centre
+			}
+
+			instantTextBoxType = {
+				name = "total_subjects_income"
+				position = { x = 581 y = 943 }
+				textureFile = ""
+				font = "vic_22"
+				borderSize = {x = 7 y = 7}
+				text = "0.0"
+				maxWidth = 198
+				maxHeight = 58
+				format = centre
+			}
+
+			guiButtonType = {
+				name = "release_colony"
+				position = { x=837 y=900}
+				quadTextureSprite ="GFX_release_colony_button"
+				tooltip = ""
+				tooltipText =""
+				delayedTooltipText = ""
+				clicksound = click
+			}
+
+			guiButtonType = {
+				name = "subject_military_focus"
+				position = { x=837 y=810 }
+				quadTextureSprite ="GFX_subject_military_focus_button"
+				tooltip = ""
+				tooltipText =""
+				delayedTooltipText = ""
+				clicksound = click
+			}
+
+			guiButtonType = {
+				name = "toggle_overlord"
+				position = { x=70 y=769 }
+				quadTextureSprite ="GFX_toggle_overlord_button"
+				tooltip = ""
+				tooltipText =""
+				delayedTooltipText = ""
+				clicksound = click
+				shortcut = "z" #Arumba
+			}
+		}
+
+		guiButtonType = {
+			name = "close_button"
+			position = { x = 925 y = -2 }
+			quadTextureSprite ="GFX_closebutton2"
+			shortcut = "ESCAPE"
+			Orientation = "UPPER_LEFT"
+			clicksound = close_window
+		}
+
+		instantTextBoxType = {
+			name = "window_title"
+			position = { x = 27 y = 140 }
+			textureFile = ""
+			font = "vic_36"
+			borderSize = {x = 7 y = 7}
+			text = "HEADER_SUBJECTS"
+			maxWidth = 922
+			maxHeight = 58
+			format = centre
+		}
+
+		### COLONY SELECT WINDOW
+		windowType = {
+			name = "colony_select_window"
+			backGround=""
+			position = { x=0 y=0 }
+			size = { x=1843 y=360 }
+			moveable = 0
+			dontRender = ""
+			horizontalBorder= ""
+			verticalBorder= ""
+			fullScreen = yes
+
+			iconType =
+			{
+				name ="background"
+				spriteType = "GFX_court_view_select_advisor_bg"
+				position = { x= -13 y = -16 }
+				Orientation = "UPPER_LEFT"
+			}
+
+
+
+			instantTextBoxType = {
+				name = "description"
+				position = { x = 126 y =248 }
+				format = centre
+				font = "vic_22"
+				maxWidth = 756
+				maxHeight = 58
+				Orientation = "UPPER_LEFT"
+				text = "SUBJECT_RELEASE_COLONY"
+
+			}
+
+			smoothListboxType =
+				{
+				name ="colony_select_list"
+				position = { x=158 y =360}
+				backGround=""
+				size = { x=666 y =1080} #was y=540
+				Orientation = "UPPER_LEFT"
+				horizontal = 0
+				spacing = 4
+				scrollbartype = "standardlistbox_slider"
+				borderSize = {x = 18 y = 18}
+			}
+
+			guiButtonType = {
+				name = "back_button"
+				position = { x=432 y =1496} #was y=956
+				quadTextureSprite ="GFX_standard_button_71"
+				tooltip = ""
+				tooltipText =""
+				delayedTooltipText = ""
+				buttonText = "BACK"
+				buttonFont = "vic_18"
+				clicksound = back_click
+			}
+		}
+
+		### MILITARY FOCUS WINDOW
+		windowType = {
+			name = "subject_military_focus_window"
+			backGround=""
+			position = { x=936 y=819 }
+			size = { x=648 y=108 }
+			moveable = 0
+			dontRender = ""
+			horizontalBorder= ""
+			verticalBorder= ""
+			fullScreen = yes
+
+			# The "background" sprite will be replaced with the sprite used by this element in case the user does not have RoM
+			iconType = {
+				name = "hidden_size_of_window_without_rights_of_man"
+				spriteType = "GFX_subjects_buttons_no_rom_bg"
+			}
+
+			iconType =
+			{
+				name ="background"
+				spriteType = "GFX_subjects_buttons_bg"
+				position = { x= -7 y = -7 }
+			}
+
+			guiButtonType =
+			{
+				name ="focus_select_button_no_focus"
+				quadTextureSprite= "GFX_subject_focus"
+				position = { x = 0 y = 0 }
+				Orientation = "UPPER_LEFT"
+				frame = 1
+			}
+
+			guiButtonType =
+			{
+				name ="focus_select_button_supportive"
+				quadTextureSprite= "GFX_subject_focus"
+				position = { x = 72 y = 0 }
+				Orientation = "UPPER_LEFT"
+				frame = 3
+			}
+
+			guiButtonType =
+			{
+				name ="focus_select_button_aggressive"
+				quadTextureSprite= "GFX_subject_focus"
+				position = { x = 144 y = 0 }
+				Orientation = "UPPER_LEFT"
+				frame = 2
+			}
+
+			guiButtonType =
+			{
+				name ="focus_select_button_passive"
+				quadTextureSprite= "GFX_subject_focus"
+				position = { x = 0 y = 83 }
+				Orientation = "UPPER_LEFT"
+				frame = 4
+			}
+
+			guiButtonType =
+			{
+				name ="focus_select_button_defensive"
+				quadTextureSprite= "GFX_subject_focus"
+				position = { x = 72 y = 83 }
+				Orientation = "UPPER_LEFT"
+				frame = 5
+			}
+
+			guiButtonType =
+			{
+				name ="focus_select_button_siege"
+				quadTextureSprite= "GFX_subject_focus"
+				position = { x = 144 y = 83 }
+				Orientation = "UPPER_LEFT"
+				frame = 6
+			}
+		}
+
+		### SUBJECT INTERACTIONS WINDOW
+		windowType = {
+			name = "subject_interaction_window"
+			backGround=""
+			position = { x=0 y=-5 }
+			size = { x=1843 y= 720 }
+			moveable = 0
+			dontRender = ""
+			horizontalBorder= ""
+			verticalBorder= ""
+			fullScreen = yes
+
+			iconType =
+			{
+				name ="background"
+				spriteType = "GFX_court_view_select_advisor_bg"
+				position = { x= -13 y = -18 }
+				Orientation = "UPPER_LEFT"
+			}
+
+			instantTextBoxType = {
+				name = "description"
+				position = { x = 126 y =248 }
+				format = centre
+				font = "vic_22"
+				maxWidth = 756
+				maxHeight = 58
+				Orientation = "UPPER_LEFT"
+				text = "INTERACTIONS"
+			}
+
+			smoothListboxType =
+			{
+				name ="subject_interaction_list"
+				position = { x=144 y =297}
+				backGround=""
+				size = { x=720 y =648}
+				Orientation = "UPPER_LEFT"
+				horizontal = 0
+				spacing = 4
+				scrollbartype = "standardlistbox_slider"
+				borderSize = {x = 18 y = 18}
+			}
+
+			guiButtonType = {
+				name = "back_button"
+				position = { x=432 y =956}
+				quadTextureSprite ="GFX_standard_button_71"
+				tooltip = ""
+				tooltipText =""
+				delayedTooltipText = ""
+				buttonText = "BACK"
+				buttonFont = "vic_18"
+				clicksound = back_click
+			}
+		}
+
+		windowType = {
+			name = "selected_subject_window"
+			backGround=""
+			position = { x=990 y=32 }
+			size = { x=508 y=436 }
+			moveable = 0
+			dontRender = ""
+			horizontalBorder= ""
+			verticalBorder= ""
+			fullScreen = no
+
+			iconType = {
+				name ="subject_actions_bg"
+				if_resolution = {
+					max_height = 1079
+					spriteType = "GFX_subjects_extension_bg_new"
+				}
+				if_resolution = {
+					min_height = 1080
+					spriteType = "GFX_subjects_extension_bg_huge_new"
+				}
+				position = { x= 0 y = 0 }
+				Orientation = "UPPER_LEFT"
+			}
+
+			iconType = {
+				name ="subject_actions_blank_bg"
+				spriteType = "GFX_subjects_extension_blank_bg"
+				position = { x= 0 y = 0 }
+				Orientation = "UPPER_LEFT"
+			}
+
+			guiButtonType = {
+				name = "close_button"
+				position = { x = 486 y = -18 }
+				quadTextureSprite ="GFX_closebutton2"
+				shortcut = "ESCAPE"
+				Orientation = "UPPER_LEFT"
+				clicksound = close_window
+			}
+
+			smoothListboxType = {
+				name = "list"
+				backGround = ""
+				position = { x = 22 y = 432 }
+				if_resolution = {
+					max_height = 1079
+					size = { x = 459 y = 329 }
+				}
+				if_resolution = {
+					min_height = 1080
+					size = { x = 459 y = 1013 }
+				}
+				Orientation = "UPPER_LEFT"
+				horizontal = 0
+				spacing = 2.5
+				scrollbartype = "standardlistbox_slider"
+				borderSize = {x = 0 y = 0}
+			}
+
+			instantTextBoxType = {
+				name = "subject_name"
+				position = { x = 94 y = 18 }
+
+				if_resolution = {
+					max_height = 1079
+					position = { x = 101 y = 7 }
+					font = "vic_18"
+				}
+
+				format = left
+				font = "vic_22"
+				maxWidth = 396
+				maxHeight = 58
+				Orientation = "UPPER_LEFT"
+				text = "INTERACTIONS"
+				fixedsize = yes
+			}
+
+			iconType = {
+				name = "flag"
+				spriteType = "GFX_shield_small"
+				position = { x= 9 y = 5 }
+
+				if_resolution = {
+					max_height = 1079
+					position = { x= 9 y= -18 }
+
+				}
+			}
+
+			iconType = {
+				name = "subject_type"
+				spriteType = "GFX_subject_colony_icon"
+				position = { x= 36 y = 5 }
+
+				if_resolution = {
+					max_height = 1079
+					position = { x= 36 y= -14 }
+
+				}
+			}
+
+			#			instantTextBoxType = {
+			#				name = "focus_label"
+			#				position = { x = 313 y = 140 }
+			#				format = left
+			#				font = "vic_22"
+			#				text = "Military Focus:"
+			#				maxWidth = 216
+			#				maxHeight = 58
+			#				Orientation = "UPPER_LEFT"
+			#				fixedsize = yes
+			#			}
+
+						# Military focus buttons
+			guiButtonType =
+			{
+				name ="focus_select_button_no_focus"
+				quadTextureSprite= "GFX_subject_focus"
+				position = { x = 27 y = 342 }
+				Orientation = "UPPER_LEFT"
+				frame = 1
+			}
+
+			guiButtonType =
+			{
+				name ="focus_select_button_supportive"
+				quadTextureSprite= "GFX_subject_focus"
+				position = { x = 108 y = 342 }
+				Orientation = "UPPER_LEFT"
+				frame = 3
+			}
+
+			guiButtonType =
+			{
+				name ="focus_select_button_aggressive"
+				quadTextureSprite= "GFX_subject_focus"
+				position = { x = 189 y = 342 }
+				Orientation = "UPPER_LEFT"
+				frame = 2
+			}
+
+			guiButtonType =
+			{
+				name ="focus_select_button_passive"
+				quadTextureSprite= "GFX_subject_focus"
+				position = { x = 270 y = 342 }
+				Orientation = "UPPER_LEFT"
+				frame = 4
+			}
+
+			guiButtonType =
+			{
+				name ="focus_select_button_defensive"
+				quadTextureSprite= "GFX_subject_focus"
+				position = { x = 351 y = 342 }
+				Orientation = "UPPER_LEFT"
+				frame = 5
+			}
+
+			guiButtonType =
+			{
+				name ="focus_select_button_siege"
+				quadTextureSprite= "GFX_subject_focus"
+				position = { x = 432 y = 342 }
+				Orientation = "UPPER_LEFT"
+				frame = 6
+			}
+
+			# Tribute type buttons
+			guiButtonType =
+			{
+				name ="tribute_select_button_none"
+				quadTextureSprite= "GFX_subject_tribute"
+				position = { x = 27 y = 342 }
+				Orientation = "UPPER_LEFT"
+				frame = 1
+			}
+			guiButtonType =
+			{
+				name ="tribute_select_button_cash"
+				quadTextureSprite= "GFX_subject_tribute"
+				position = { x = 108 y = 342 }
+				Orientation = "UPPER_LEFT"
+				frame = 2
+			}
+			guiButtonType =
+			{
+				name ="tribute_select_button_adm"
+				quadTextureSprite= "GFX_subject_tribute"
+				position = { x = 189 y = 342 }
+				Orientation = "UPPER_LEFT"
+				frame = 3
+			}
+			guiButtonType =
+			{
+				name ="tribute_select_button_dip"
+				quadTextureSprite= "GFX_subject_tribute"
+				position = { x = 270 y = 342 }
+				Orientation = "UPPER_LEFT"
+				frame = 4
+			}
+			guiButtonType =
+			{
+				name ="tribute_select_button_mil"
+				quadTextureSprite= "GFX_subject_tribute"
+				position = { x = 351 y = 342 }
+				Orientation = "UPPER_LEFT"
+				frame = 5
+			}
+			guiButtonType =
+			{
+				name ="tribute_select_button_manpower"
+				quadTextureSprite= "GFX_subject_tribute"
+				position = { x = 432 y = 342 }
+				Orientation = "UPPER_LEFT"
+				frame = 6
+			}
+
+			iconType =
+			{
+				name ="development_icon"
+				spriteType = "GFX_development_icon"
+				position = { x= 40 y = 72 }
+				Orientation = "UPPER_LEFT"
+
+				if_resolution = {
+					max_height = 1079
+					position = { x= 40 y= 50 }
+					scale = 0.8
+				}
+			}
+
+			instantTextBoxType = {
+				name = "development"
+				position = { x = 83 y = 79 }
+				format = right
+				font = "vic_22"
+				text = "99,999"
+				maxWidth = 126
+				maxHeight = 58
+				Orientation = "UPPER_LEFT"
+				fixedsize = yes
+
+				if_resolution = {
+					max_height = 1079
+					position = { x= 83 y= 56 }
+					font = "vic_18"
+				}
+			}
+
+			iconType =
+			{
+				name ="manpower_icon"
+				spriteType = "GFX_icon_manpower"
+				position = { x= 40 y = 122 }
+				Orientation = "UPPER_LEFT"
+
+				if_resolution = {
+					max_height = 1079
+					position = { x= 40 y= 86 }
+					scale = 0.8
+				}
+			}
+
+			instantTextBoxType = {
+				name = "manpower"
+				position = { x = 83 y = 130 }
+				format = right
+				font = "vic_22"
+				text = "9,999,999"
+				maxWidth = 126
+				maxHeight = 58
+				Orientation = "UPPER_LEFT"
+				fixedsize = yes
+
+				if_resolution = {
+					max_height = 1079
+					position = { x= 83 y= 92 }
+					font = "vic_18"
+				}
+			}
+
+			iconType =
+			{
+				name ="sailors_icon"
+				spriteType = "GFX_icon_sailors"
+				position = { x= 40 y = 176 }
+				Orientation = "UPPER_LEFT"
+
+				if_resolution = {
+					max_height = 1079
+					position = { x= 40 y= 130 }
+					scale = 0.8
+				}
+			}
+
+			instantTextBoxType = {
+				name = "sailors"
+				position = { x = 83 y = 180 }
+				format = right
+				font = "vic_22"
+				text = "99,999"
+				maxWidth = 126
+				maxHeight = 58
+				Orientation = "UPPER_LEFT"
+				fixedsize = yes
+
+				if_resolution = {
+					max_height = 1079
+					position = { x= 83 y= 130 }
+					font = "vic_18"
+				}
+			}
+
+			iconType =
+			{
+				name ="legitimacy_icon"
+				spriteType = "GFX_icon_legitimacy"
+				position = { x= 40 y = 227 }
+				Orientation = "UPPER_LEFT"
+				frame = 1
+
+				if_resolution = {
+					max_height = 1079
+					position = { x= 40 y= 162 }
+					scale = 0.8
+				}
+			}
+
+			instantTextBoxType = {
+				name = "legitimacy_value"
+				position = { x = 83 y = 230 }
+				format = right
+				font = "vic_22"
+				text = "100"
+				maxWidth = 126
+				maxHeight = 58
+				Orientation = "UPPER_LEFT"
+				fixedsize = yes
+
+				if_resolution = {
+					max_height = 1079
+					position = { x= 83 y= 167 }
+					font = "vic_18"
+				}
+			}
+
+			iconType =
+			{
+				name ="governing_capacity_icon"
+				spriteType = "GFX_governing_capacity"
+				position = { x= 40 y = 281 }
+				Orientation = "UPPER_LEFT"
+
+				if_resolution = {
+					max_height = 1079
+					position = { x= 40 y= 202 }
+					scale = 0.8
+				}
+			}
+
+			instantTextBoxType = {
+				name = "governing_capacity_value"
+				position = { x = 83 y = 284 }
+				format = right
+				font = "vic_22"
+				text = "100"
+				maxWidth = 126
+				maxHeight = 58
+				Orientation = "UPPER_LEFT"
+				fixedsize = yes
+
+				if_resolution = {
+					max_height = 1079
+					position = { x= 83 y= 205 }
+					font = "vic_18"
+				}
+			}
+
+			iconType =
+			{
+				name ="republic_icon"
+				spriteType = "GFX_icon_legitimacy"
+				position = { x= 40 y = 227 }
+				Orientation = "UPPER_LEFT"
+				frame = 2
+
+				if_resolution = {
+					max_height = 1079
+					position = { x= 40 y= 162 }
+					scale = 0.8
+				}
+			}
+
+			instantTextBoxType = {
+				name = "republic_value"
+				position = { x = 83 y = 230 }
+				format = right
+				font = "vic_22"
+				text = "100"
+				maxWidth = 126
+				maxHeight = 58
+				Orientation = "UPPER_LEFT"
+				fixedsize = yes
+				
+				if_resolution = {
+					max_height = 1079
+					position = { x= 83 y= 167 }
+					font = "vic_18"
+				}
+			}
+
+			iconType =
+			{
+				name ="devotion_icon"
+				spriteType = "GFX_icon_legitimacy"
+				position = { x= 40 y = 227 }
+				Orientation = "UPPER_LEFT"
+				frame = 3
+
+				if_resolution = {
+					max_height = 1079
+					position = { x= 40 y= 162 }
+					scale = 0.8
+				}
+			}
+
+			instantTextBoxType = {
+				name = "devotion_value"
+				position = { x = 83 y = 230 }
+				format = right
+				font = "vic_22"
+				text = "100"
+				maxWidth = 126
+				maxHeight = 58
+				Orientation = "UPPER_LEFT"
+				fixedsize = yes
+
+				if_resolution = {
+					max_height = 1079
+					position = { x= 83 y= 167 }
+					font = "vic_18"
+				}
+			}
+
+			iconType =
+			{
+				name ="meritocracy_icon"
+				spriteType = "GFX_icon_legitimacy"
+				position = { x= 40 y = 227 }
+				Orientation = "UPPER_LEFT"
+				frame = 5
+			}
+
+			instantTextBoxType = {
+				name = "meritocracy_value"
+				position = { x = 83 y = 230 }
+				format = right
+				font = "vic_22"
+				text = "13"
+				maxWidth = 126
+				maxHeight = 58
+				Orientation = "UPPER_LEFT"
+				fixedsize = yes
+			}
+
+			iconType =
+			{
+				name ="unity_icon"
+				spriteType = "GFX_icon_legitimacy"
+				position = { x= 40 y = 227 }
+				Orientation = "UPPER_LEFT"
+				frame = 4
+			}
+
+			instantTextBoxType = {
+				name = "unity_value"
+				position = { x = 83 y = 230 }
+				format = right
+				font = "vic_22"
+				text = "100"
+				maxWidth = 126
+				maxHeight = 58
+				Orientation = "UPPER_LEFT"
+				fixedsize = yes
+			}
+
+
+			iconType =
+			{
+				name ="treasury_icon"
+				spriteType = "GFX_icon_gold_strip"
+				position = { x= 245 y = 74 }
+				Orientation = "UPPER_LEFT"
+
+				if_resolution = {
+					max_height = 1079
+					position = { x= 245 y= 54 }
+					scale = 0.8
+				}
+			}
+
+			instantTextBoxType = {
+				name = "treasury"
+				position = { x = 306 y = 83 }
+				format = right
+				font = "vic_22"
+				text = "999K"
+				maxWidth = 180
+				maxHeight = 58
+				Orientation = "UPPER_LEFT"
+				fixedsize = yes
+
+				if_resolution = {
+					max_height = 1079
+					position = { x= 306 y= 56 }
+					font = "vic_18"
+				}
+			}
+
+			instantTextBoxType = {
+				name = "income_label"
+				position = { x = 245 y = 155 }
+				format = left
+				font = "vic_18"
+				text = "DOMESTIC_INCOME"
+				maxWidth = 144
+				maxHeight = 58
+				Orientation = "UPPER_LEFT"
+				fixedsize = yes
+
+				if_resolution = {
+					max_height = 1079
+					position = { x= 245 y= 108 }
+					font = "vic_18"
+				}
+			}
+
+			instantTextBoxType = {
+				name = "income"
+				position = { x = 360 y = 155 }
+				format = right
+				font = "vic_18"
+				text = "9999.99"
+				maxWidth = 126
+				maxHeight = 58
+				Orientation = "UPPER_LEFT"
+				fixedsize = yes
+
+				if_resolution = {
+					max_height = 1079
+					position = { x= 360 y= 108 }
+					font = "vic_18"
+				}
+			}
+
+			instantTextBoxType = {
+				name = "expenses_label"
+				position = { x = 245 y = 194 }
+				format = left
+				font = "vic_18"
+				text = "SUBJECT_EXPENSES"
+				maxWidth = 144
+				maxHeight = 58
+				Orientation = "UPPER_LEFT"
+				fixedsize = yes
+
+				if_resolution = {
+					max_height = 1079
+					position = { x= 245 y= 135 }
+					font = "vic_18"
+				}
+			}
+
+			instantTextBoxType = {
+				name = "expenses"
+				position = { x = 360 y = 194 }
+				format = right
+				font = "vic_18"
+				text = "9999.99"
+				maxWidth = 126
+				maxHeight = 58
+				Orientation = "UPPER_LEFT"
+				fixedsize = yes
+
+				if_resolution = {
+					max_height = 1079
+					position = { x= 360 y= 137 }
+					font = "vic_18"
+				}
+			}
+
+			instantTextBoxType = {
+				name = "balance_label"
+				position = { x = 245 y = 238 }
+				format = left
+				font = "vic_22"
+				text = "BALANCE"
+				maxWidth = 144
+				maxHeight = 58
+				Orientation = "UPPER_LEFT"
+				fixedsize = yes
+
+				if_resolution = {
+					max_height = 1079
+					position = { x= 245 y= 167 }
+					font = "vic_18"
+				}
+			}
+
+			instantTextBoxType = {
+				name = "balance"
+				position = { x = 360 y = 238 }
+				format = right
+				font = "vic_22"
+				text = "-9999.99"
+				maxWidth = 126
+				maxHeight = 58
+				Orientation = "UPPER_LEFT"
+				fixedsize = yes
+
+				if_resolution = {
+					max_height = 1079
+					position = { x= 360 y= 167 }
+					font = "vic_18"
+				}
+			}
+		}
+	}
+
+	### SUBJECT INTERACTION ITEM ###
+	windowType = {
+		name = "subject_interaction_item"
+		backGround=""
+		position = { x=0 y=0 }
+		size = { x=270 y= 65 }
+		moveable = 0
+		dontRender = ""
+		horizontalBorder= ""
+		verticalBorder= ""
+		fullScreen = no
+
+		guiButtonType =
+		{
+			name ="interact_button"
+			spriteType = "GFX_subject_action_bg"
+			position = { x= 0 y = 0 }
+			Orientation = "UPPER_LEFT"
+		}
+
+		instantTextBoxType = {
+			name = "name"
+			position = { x = 72 y =11 }
+			format = left
+			textureFile = ""
+			font = "vic_22"
+			borderSize = {x = 0 y = 0}
+			text = ""
+			maxWidth = 360
+			maxHeight = 58
+			Orientation = "UPPER_LEFT"
+			fixedsize = yes
+			alwaystransparent = yes
+		}
+
+		iconType =
+		{
+			name = "interact_icon"
+			quadTextureSprite= "gfx_transparency_white"
+			position = { x= 18 y = 7 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+	}
+
+	### COLONY SELECTION ENTRY
+	windowType = {
+		name = "colony_selection_entry"
+		backGround=""
+		position = { x=0 y=0 }
+		size = { x=270 y= 180 }
+		moveable = 0
+		dontRender = ""
+		horizontalBorder= ""
+		verticalBorder= ""
+		fullScreen = no
+
+		iconType =
+		{
+			name ="entry_banner"
+			spriteType = "GFX_banner_yellow_20"
+			position = { x= 18 y = -2 }
+			Orientation = "UPPER_LEFT"
+		}
+
+		instantTextBoxType = {
+			name = "name"
+			position = { x = 117 y =5 }
+			format = left
+			textureFile = ""
+			font = "vic_22"
+			borderSize = {x = 0 y = 0}
+			text = ""
+			maxWidth = 360
+			maxHeight = 58
+			Orientation = "UPPER_LEFT"
+			fixedsize = yes
+			alwaystransparent = yes
+		}
+
+		instantTextBoxType = {
+				name = "provinces"
+				position = { x = 108 y = 49 }
+				textureFile = ""
+				font = "vic_18"
+				borderSize = {x = 7 y = 7}
+				text = ""
+				maxWidth = 396
+				maxHeight = 234
+				Orientation = "UPPER_LEFT"
+			}
+
+		guiButtonType =
+		{
+			name ="colony_selection_button"
+			quadTextureSprite= "GFX_shield_thin"
+			position = { x= -45 y = -9 }
+			Orientation = "UPPER_LEFT"
+
+			tooltip = ""
+			tooltipText =""
+			delayedTooltipText = ""
+
+		}
+	}
+
+	### MILITARY FOCUS ENTRY
+	windowType = {
+		name = "subject_military_focus_entry"
+		backGround=""
+		position = { x=0 y=0 }
+		size = { x=270 y= 180 }
+		moveable = 0
+		dontRender = ""
+		horizontalBorder= ""
+		verticalBorder= ""
+		fullScreen = no
+
+		iconType =
+		{
+			name ="entry_banner"
+			spriteType = "GFX_build_category_units_banner"
+			position = { x= 18 y = -2 }
+			Orientation = "UPPER_LEFT"
+		}
+
+		instantTextBoxType = {
+			name = "name"
+			position = { x = 117 y =9 }
+			format = left
+			textureFile = ""
+			font = "vic_22"
+			borderSize = {x = 0 y = 0}
+			text = ""
+			maxWidth = 360
+			maxHeight = 58
+			Orientation = "UPPER_LEFT"
+			fixedsize = yes
+			alwaystransparent = yes
+		}
+
+		guiButtonType =
+		{
+			name ="focus_select_button"
+			quadTextureSprite= "GFX_subject_focus"
+			position = { x= 108 y = 63 }
+			Orientation = "UPPER_LEFT"
+			tooltip = ""
+			tooltipText =""
+			delayedTooltipText = ""
+		}
+
+		instantTextBoxType = {
+			name = "focus_desc"
+			position = { x = 198 y = 67 }
+			format = left
+			textureFile = ""
+			font = "vic_18"
+			borderSize = {x = 0 y = 0}
+			text = ""
+			maxWidth = 360
+			maxHeight = 180
+			Orientation = "UPPER_LEFT"
+			fixedsize = yes
+		}
+
+		iconType =
+		{
+			name ="subject_flag"
+			quadTextureSprite= "GFX_shield_thin"
+			position = { x= -45 y = -9 }
+			Orientation = "UPPER_LEFT"
+		}
+	}
+
+	### SUBJECT INTERACTION ENTRY
+	windowType = {
+		name = "subject_interaction_entry"
+		backGround=""
+		position = { x=0 y=0 }
+		size = { x=270 y= 180 }
+		moveable = 0
+		dontRender = ""
+		horizontalBorder= ""
+		verticalBorder= ""
+		fullScreen = no
+
+		iconType =
+		{
+			name ="entry_banner"
+			spriteType = "GFX_build_category_banner"
+			position = { x= 18 y = -2 }
+			Orientation = "UPPER_LEFT"
+		}
+
+		instantTextBoxType = {
+			name = "name"
+			position = { x = 117 y =9 }
+			format = left
+			textureFile = ""
+			font = "vic_22"
+			borderSize = {x = 0 y = 0}
+			text = ""
+			maxWidth = 360
+			maxHeight = 58
+			Orientation = "UPPER_LEFT"
+			fixedsize = yes
+			alwaystransparent = yes
+		}
+
+		iconType =
+		{
+			name ="subject_flag"
+			quadTextureSprite= "GFX_shield_thin"
+			position = { x= -45 y = -9 }
+			Orientation = "UPPER_LEFT"
+		}
+	}
+
+	guiButtonType =
+	{
+		name = "interact_button"
+		quadTextureSprite= "GFX_subject_focus"
+		position = { x= 0 y = 0 }
+		Orientation = "UPPER_LEFT"
+	}
+
+	guiButtonType = {
+		name ="interact_button_glow"
+		spriteType = "GFX_country_subject_button_large_glow"
+		position = { x=0 y=0}
+		Orientation = "UPPER_LEFT"
+	}
+
+	windowType = {
+		name = "subject_interaction_entry2"
+		backGround=""
+		position = { x=0 y=0 }
+		size = { x=270 y= 54 }
+		moveable = 0
+		dontRender = ""
+		horizontalBorder= ""
+		verticalBorder= ""
+		fullScreen = no
+
+		checkboxType = {
+			name = "interact_button"
+			position = { x=-14 y =5}
+			quadTextureSprite ="GFX_checkbox_button_straight_213_29"
+			tooltip = ""
+			tooltipText =""
+			delayedTooltipText = ""
+			buttonFont = "vic_18"
+		}
+
+		guiButtonType = {
+			name = "country_flag"
+			position = { x = -9 y = 11 }
+			quadTextureSprite ="GFX_flag_small"
+		}
+
+		instantTextBoxType={
+			position = {x = 41 y = 18 }
+			name = "info_text"
+			font = "vic_18"
+			borderSize = {x = 0 y = 0}
+			maxWidth = 378
+			maxHeight = 29
+			text = ""
+			orientation = "UPPER_LEFT"
+			format = left
+		}
+	}
+
+	eu3dialogtype = {
+		name = "SubjectInteractionDialog"
+		backGround=""
+		position = { x=0 y=250 }
+		size = { x=936 y=857 }
+		moveable = 0
+		dontRender = ""
+		horizontalBorder= ""
+		verticalBorder= ""
+		fullScreen = no
+
+		iconType =
+		{
+			name ="Background"
+			spriteType = "GFX_subject_interact_dialog_bg"
+			position = { x= -13 y = -16 }
+			Orientation = "UPPER_LEFT"
+
+		}
+
+		instantTextBoxType = {
+			name = "Title"
+			position = { x = 211 y = 248 }
+			textureFile = ""
+			font = "vic_22s"
+			borderSize = {x = 0 y = 0}
+			text = "XXX"
+			maxWidth = 569
+			maxHeight = 72
+			fixedsize = yes
+			truncate = yes
+			format = centre
+
+			Orientation = "UPPER_LEFT"
+		}
+
+		instantTextBoxType={
+			position = {x = 517 y = 418 }
+			name = "Description"
+			font = "vic_18"
+			borderSize = {x = 0 y = 0}
+			maxWidth = 396
+			maxHeight = 288
+			text = "SP_PRICE"
+			orientation = "UPPER_LEFT"
+			format = centre
+		}
+
+		listboxType ={
+			name ="list"
+			position = { x = 72 y = 378 }
+			backGround=""
+			size = { x=369 y =1080} #was y=540
+			Orientation = "UPPER_LEFT"
+			horizontal = 0
+			spacing = 0
+			scrollbartype = "standardlistbox_slider"
+			borderSize = {x = 0 y = 0}
+		}
+
+		instantTextBoxType = {
+			name = "help_tooltip_click_on_map"
+			position = { x = 459 y = 1186 }
+			textureFile = ""
+			font = "vic_22"
+			borderSize = {x = 0 y = 0}
+			text = "help_tooltip_click_on_map"
+			maxWidth = 504
+			maxHeight = 360
+			format = centre
+			alwaystransparent = yes
+		}
+
+		shieldtype =
+		{
+			name ="LeftShield"
+			spriteType = "standarddialogshield"
+			position = { x= 58 y = 216 }
+		}
+
+		shieldtype =
+		{
+			name ="RightShield"
+			spriteType = "standarddialogshield"
+			position = { x= 767 y = 216 }
+		}
+
+		guiButtonType = {
+			name = "AgreeButton"
+			position = { x=504 y =1541} #was y=945
+			quadTextureSprite ="button_type_4"
+			tooltip = ""
+			tooltipText =""
+			delayedTooltipText = ""
+			buttonText = "OK"
+			buttonFont = "vic_18"
+			shortcut = "c"
+			extra_shortcut = "RETURN"
+			clicksound = ok_click
+		}
+
+
+		guiButtonType = {
+			name = "DeclineButton"
+			position = { x=90 y =1541} #was y=945
+			quadTextureSprite ="button_type_4"
+			tooltip = ""
+			tooltipText =""
+			delayedTooltipText = ""
+			buttonText = "CANCEL"
+			buttonFont = "vic_18"
+			shortcut = "z"
+			extra_shortcut = "ESCAPE"
+		}
+
+	}
+}

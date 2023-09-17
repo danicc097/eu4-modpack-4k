@@ -1,0 +1,60 @@
+set_selected_trade_outpost_region_or_area = {
+	hidden_effect = {
+		set_country_flag = is_releasing_trade_outpost
+		[[area]
+			if = {
+				limit = {
+					always = $area$
+				}
+				set_country_flag = selected_trade_outpost_area_$name$
+			}
+		]
+		[[region]
+			if = {
+				limit = {
+					always = $region$
+				}
+				set_country_flag = selected_trade_outpost_region_$name$
+			}
+		]
+	}
+}
+
+clear_selected_trade_outpost_region_or_area = {
+	if = {
+		limit = {
+			has_country_flag = is_releasing_trade_outpost
+		}
+		clr_country_flag = is_releasing_trade_outpost
+	}
+	if = {
+		limit = {
+			has_country_flag = selected_trade_outpost_region_south_china_region
+		}
+		clr_country_flag = selected_trade_outpost_region_south_china_region
+	}
+	if = {
+		limit = {
+			has_country_flag = selected_trade_outpost_region_north_china_region
+		}
+		clr_country_flag = selected_trade_outpost_region_north_china_region
+	}
+	if = {
+		limit = {
+			has_country_flag = selected_trade_outpost_region_korea_region
+		}
+		clr_country_flag = selected_trade_outpost_region_korea_region
+	}
+	if = {
+		limit = {
+			has_country_flag = selected_trade_outpost_region_japan_region
+		}
+		clr_country_flag = selected_trade_outpost_region_japan_region
+	}
+	if = {
+		limit = {
+			has_country_flag = selected_trade_outpost_area_liaoning_area
+		}
+		clr_country_flag = selected_trade_outpost_area_liaoning_area
+	}
+}

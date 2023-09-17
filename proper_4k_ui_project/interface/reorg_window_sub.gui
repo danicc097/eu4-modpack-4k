@@ -1,0 +1,570 @@
+guiTypes = {
+	#####Reorg entry
+
+	windowType = {
+		name = "reorg_entry"
+		backGround=""
+		position = { x= -360 y= -90 }
+		size = { x=457 y= 65 }
+		moveable = 0
+		dontRender = ""
+		horizontalBorder= ""
+		verticalBorder= ""
+		fullScreen = no
+
+
+		iconType =
+		{
+			name ="band_reorg_regiment_banner"
+			spriteType = "GFX_band_reorg_regiment_banner"
+			position = { x= -36 y = -4 }
+			Orientation = "UPPER_LEFT"
+		}
+
+		iconType =
+		{
+			name ="band_reorg_regiment_streltsy"
+			spriteType = "GFX_band_reorg_regiment_streltsy"
+			position = { x= -36 y = -4 }
+			Orientation = "UPPER_LEFT"
+		}
+		iconType =
+		{
+			name ="band_reorg_regiment_tercio"
+			spriteType = "GFX_band_reorg_regiment_tercio"
+			position = { x= -36 y = -4 }
+			Orientation = "UPPER_LEFT"
+		}
+		iconType =
+		{
+			name ="band_reorg_regiment_musketeer"
+			spriteType = "GFX_band_reorg_regiment_musketeer"
+			position = { x= -36 y = -4 }
+			Orientation = "UPPER_LEFT"
+		}
+		iconType =
+		{
+			name ="band_reorg_regiment_samurai"
+			spriteType = "GFX_band_reorg_regiment_samurai"
+			position = { x= -36 y = -4 }
+			Orientation = "UPPER_LEFT"
+		}
+		iconType =
+		{
+			name ="band_reorg_regiment_geobukseon"
+			spriteType = "GFX_band_reorg_regiment_geobukseon"
+			position = { x= -36 y = -4 }
+			Orientation = "UPPER_LEFT"
+		}
+		iconType =
+		{
+			name ="band_reorg_regiment_man_of_war"
+			spriteType = "GFX_band_reorg_regiment_man_of_war"
+			position = { x= -36 y = -4 }
+			Orientation = "UPPER_LEFT"
+		}
+		iconType =
+		{
+			name ="band_reorg_regiment_galleon"
+			spriteType = "GFX_band_reorg_regiment_galleon"
+			position = { x= -36 y = -4 }
+			Orientation = "UPPER_LEFT"
+		}
+		iconType =
+		{
+			name ="band_reorg_regiment_galleass"
+			spriteType = "GFX_band_reorg_regiment_galleass"
+			position = { x= -36 y = -4 }
+			Orientation = "UPPER_LEFT"
+		}
+		iconType =
+		{
+			name ="band_reorg_regiment_caravel"
+			spriteType = "GFX_band_reorg_regiment_caravel"
+			position = { x= -36 y = -4 }
+			Orientation = "UPPER_LEFT"
+		}
+		iconType =
+		{
+			name ="band_reorg_regiment_voc_indiamen"
+			spriteType = "GFX_band_reorg_regiment_voc_indiamen"
+			position = { x= -36 y = -4 }
+			Orientation = "UPPER_LEFT"
+		}
+		iconType =
+		{
+			name ="band_reorg_regiment_marines"
+			spriteType = "GFX_band_reorg_regiment_marine"
+			position = { x= -36 y = -4 }
+			Orientation = "UPPER_LEFT"
+		}
+
+
+		iconType =
+		{
+			name ="band_reorg_regiment_cossacks"
+			spriteType = "GFX_band_reorg_regiment_cossacks"
+			position = { x= -36 y = -4 }
+			Orientation = "UPPER_LEFT"
+		}
+
+		iconType =
+		{
+			name ="band_reorg_regiment_mercenary"
+			spriteType = "GFX_band_reorg_regiment_mercenary"
+			position = { x= -36 y = -4 }
+			Orientation = "UPPER_LEFT"
+		}
+
+		iconType =
+		{
+			name ="band_reorg_regiment_janissaries"
+			spriteType = "GFX_band_reorg_regiment_janissary"
+			position = { x= -36 y = -4 }
+			Orientation = "UPPER_LEFT"
+		}
+
+		iconType =
+		{
+			name ="band_reorg_regiment_revolutionary_guard"
+			spriteType = "GFX_band_reorg_regiment_revolutionary_guard"
+			position = { x= -36 y = -4 }
+			Orientation = "UPPER_LEFT"
+		}
+
+		iconType =
+		{
+			name ="band_reorg_regiment_rajput"
+			spriteType = "GFX_band_reorg_regiment_rajput"
+			position = { x= -36 y = -4 }
+			Orientation = "UPPER_LEFT"
+		}
+
+		iconType =
+		{
+			name ="band_reorg_regiment_cawa"
+			spriteType = "GFX_band_reorg_regiment_cawa"
+			position = { x= -36 y = -4 }
+			Orientation = "UPPER_LEFT"
+		}
+
+		iconType =
+		{
+			name = "band_reorg_regiment_carolean"
+			spriteType = "GFX_band_reorg_regiment_carolean"
+			position = { x = -36 y = -4 }
+			Orientation = "UPPER_LEFT"
+		}
+		
+		iconType =
+		{
+			name = "band_reorg_regiment_hussars"
+			spriteType = "GFX_band_reorg_regiment_hussars"
+			position = { x = -36 y = -4 }
+			Orientation = "UPPER_LEFT"
+		}
+
+		iconType =
+		{
+			name ="band_reorg_regiment"
+			spriteType = "GFX_band_reorg_regiment"
+			position = { x= -36 y = -4 }
+			Orientation = "UPPER_LEFT"
+		}
+
+		iconType =
+		{
+			name ="band_reorg_regiment_flagship"
+			spriteType = "GFX_band_reorg_blue_select"
+			position = { x= -36 y = -4 }
+			Orientation = "UPPER_LEFT"
+		}
+
+		iconType =
+		{
+			name ="unit_type"
+			spriteType = "GFX_unit_types_strip"
+			position = { x= 4 y = 9 }
+			Orientation = "UPPER_LEFT"
+			scale = 0.5
+		}
+
+		#		iconType = {
+		#			name ="unit_drill_bar_bg"
+		#			spriteType = "GFX_vertical_bar_bg_s"
+		#			position = { x = -23 y = 16 }
+		#			Orientation = "UPPER_LEFT"
+		#		}
+
+		iconType = {
+			name ="subunit_drill"
+			spriteType = "GFX_unitpanel_drill_progressbar_s"
+			position = { x = -20 y = 13 }
+			Orientation = "UPPER_LEFT"
+		}
+		iconType = {
+			name ="subunit_drill_frame"
+			spriteType = "GFX_unitpanel_drilling_frame_s"
+			position = { x = -25 y = -2 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+
+		iconType = {
+			name ="flagship_icon"
+			spriteType = "GFX_flagship_icon"
+			position = { x=-22 y=16 }
+			Orientation = "UPPER_LEFT"
+			scale = 0.7
+		}
+
+		instantTextBoxType = {
+			name = "subunit_name"
+			position = { x = 180 y =34 }
+			textureFile = ""
+			font = "vic_18_grey"
+			borderSize = {x = 7 y =0}
+			text = ""
+			maxWidth = 308
+			maxHeight = 25
+			Orientation = "UPPER_LEFT"
+			fixedsize = yes
+
+
+		}
+
+		instantTextBoxType = {
+			name = "subunit_type"
+			position = { x = 43 y =9 }
+			format = left
+
+			textureFile = ""
+			font = "vic_18"
+			borderSize = {x = 7 y = 0}
+			text = "xxxxxxxxxx"
+			maxWidth = 461
+			maxHeight = 43
+			Orientation = "UPPER_LEFT"
+			fixedsize = yes
+		}
+
+		instantTextBoxType = {
+			name = "subunit_strength"
+			position = { x = 297 y =22 }
+			textureFile = ""
+			font = "vic_18"
+			borderSize = {x = 7 y = 0}
+			text = "xxxx"
+			maxWidth = 144
+			maxHeight = 43
+			Orientation = "UPPER_LEFT"
+			format = right
+
+
+		}
+
+		guiButtonType = {
+				name = "transferbutton"
+				position = { x = 450 y = 13 }
+				quadTextureSprite ="GFX_reorg_right"
+				tooltip = ""
+				tooltipText =""
+				delayedTooltipText = ""
+				buttonText = "  "
+				buttonFont = "vic_18"
+				clicksound = ""
+				shortcut = "b"
+			}
+
+
+	}
+
+	windowType = {
+		name = "reorg_entry_right"
+		backGround=""
+		position = { x= -360 y= -90 }
+		size = { x=457 y= 65 }
+		moveable = 0
+		dontRender = ""
+		horizontalBorder= ""
+		verticalBorder= ""
+		fullScreen = no
+
+
+		iconType =
+		{
+			name ="band_reorg_regiment_banner"
+			spriteType = "GFX_band_reorg_regiment_banner"
+			position = { x= -27 y = -4 }
+			Orientation = "UPPER_LEFT"
+		}
+
+
+		iconType =
+		{
+			name ="band_reorg_regiment_streltsy"
+			spriteType = "GFX_band_reorg_regiment_streltsy"
+			position = { x= -27 y = -4 }
+			Orientation = "UPPER_LEFT"
+		}
+		iconType =
+		{
+			name ="band_reorg_regiment_tercio"
+			spriteType = "GFX_band_reorg_regiment_tercio"
+			position = { x= -27 y = -4 }
+			Orientation = "UPPER_LEFT"
+		}
+		iconType =
+		{
+			name ="band_reorg_regiment_musketeer"
+			spriteType = "GFX_band_reorg_regiment_musketeer"
+			position = { x= -27 y = -4 }
+			Orientation = "UPPER_LEFT"
+		}
+		iconType =
+		{
+			name ="band_reorg_regiment_samurai"
+			spriteType = "GFX_band_reorg_regiment_samurai"
+			position = { x= -27 y = -4 }
+			Orientation = "UPPER_LEFT"
+		}
+		iconType =
+		{
+			name ="band_reorg_regiment_geobukseon"
+			spriteType = "GFX_band_reorg_regiment_geobukseon"
+			position = { x= -27 y = -4 }
+			Orientation = "UPPER_LEFT"
+		}
+		iconType =
+		{
+			name ="band_reorg_regiment_man_of_war"
+			spriteType = "GFX_band_reorg_regiment_man_of_war"
+			position = { x= -27 y = -4 }
+			Orientation = "UPPER_LEFT"
+		}
+		iconType =
+		{
+			name ="band_reorg_regiment_galleon"
+			spriteType = "GFX_band_reorg_regiment_galleon"
+			position = { x= -27 y = -4 }
+			Orientation = "UPPER_LEFT"
+		}
+		iconType =
+		{
+			name ="band_reorg_regiment_galleass"
+			spriteType = "GFX_band_reorg_regiment_galleass"
+			position = { x= -27 y = -4 }
+			Orientation = "UPPER_LEFT"
+		}
+		iconType =
+		{
+			name ="band_reorg_regiment_caravel"
+			spriteType = "GFX_band_reorg_regiment_caravel"
+			position = { x= -27 y = -4 }
+			Orientation = "UPPER_LEFT"
+		}
+		iconType =
+		{
+			name ="band_reorg_regiment_voc_indiamen"
+			spriteType = "GFX_band_reorg_regiment_voc_indiamen"
+			position = { x= -27 y = -4 }
+			Orientation = "UPPER_LEFT"
+		}
+		iconType =
+		{
+			name ="band_reorg_regiment_marines"
+			spriteType = "GFX_band_reorg_regiment_marine"
+			position = { x= -27 y = -4 }
+			Orientation = "UPPER_LEFT"
+		}
+
+		iconType =
+		{
+			name ="band_reorg_regiment_cossacks"
+			spriteType = "GFX_band_reorg_regiment_cossacks"
+			position = { x= -27 y = -4 }
+			Orientation = "UPPER_LEFT"
+		}
+
+		iconType =
+		{
+			name ="band_reorg_regiment_mercenary"
+			spriteType = "GFX_band_reorg_regiment_mercenary"
+			position = { x= -27 y = -4 }
+			Orientation = "UPPER_LEFT"
+		}
+
+		iconType =
+		{
+			name ="band_reorg_regiment_janissaries"
+			spriteType = "GFX_band_reorg_regiment_janissary"
+			position = { x= -36 y = -4 }
+			Orientation = "UPPER_LEFT"
+		}
+
+		iconType =
+		{
+			name ="band_reorg_regiment_revolutionary_guard"
+			spriteType = "GFX_band_reorg_regiment_revolutionary_guard"
+			position = { x= -27 y = -4 }
+			Orientation = "UPPER_LEFT"
+		}
+
+		iconType =
+		{
+			name ="band_reorg_regiment_rajput"
+			spriteType = "GFX_band_reorg_regiment_rajput"
+			position = { x= -27 y = -4 }
+			Orientation = "UPPER_LEFT"
+		}
+
+		iconType =
+		{
+			name ="band_reorg_regiment_cawa"
+			spriteType = "GFX_band_reorg_regiment_cawa"
+			position = { x= -27 y = -4 }
+			Orientation = "UPPER_LEFT"
+		}
+		
+		iconType =
+		{
+			name = "band_reorg_regiment_carolean"
+			spriteType = "GFX_band_reorg_regiment_carolean"
+			position = { x = -36 y = -4 }
+			Orientation = "UPPER_LEFT"
+		}
+		
+		iconType =
+		{
+			name = "band_reorg_regiment_hussars"
+			spriteType = "GFX_band_reorg_regiment_hussars"
+			position = { x = -36 y = -4 }
+			Orientation = "UPPER_LEFT"
+		}
+
+		iconType =
+		{
+			name ="band_reorg_regiment"
+			spriteType = "GFX_band_reorg_regiment"
+			position = { x= -27 y = -4 }
+			Orientation = "UPPER_LEFT"
+		}
+
+		iconType =
+		{
+			name ="band_reorg_regiment_flagship"
+			spriteType = "GFX_band_reorg_blue_select"
+			position = { x= -27 y = -4 }
+			Orientation = "UPPER_LEFT"
+		}
+
+		iconType = {
+			name ="subunit_drill"
+			spriteType = "GFX_unitpanel_drill_progressbar_s"
+			position = { x = 32 y = 13 }
+			Orientation = "UPPER_LEFT"
+		}
+		iconType = {
+			name ="subunit_drill_frame"
+			spriteType = "GFX_unitpanel_drilling_frame_s"
+			position = { x = 25 y = -2 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+
+
+		iconType =
+		{
+			name ="unit_type"
+			spriteType = "GFX_unit_types_strip"
+			position = { x= 49 y = 9 }
+			Orientation = "UPPER_LEFT"
+			scale = 0.5
+		}
+
+		iconType = {
+			name ="flagship_icon"
+			spriteType = "GFX_flagship_icon"
+			position = { x=29 y=16 }
+			Orientation = "UPPER_LEFT"
+			scale = 0.7
+		}
+
+		instantTextBoxType = {
+			name = "subunit_name"
+			position = { x = 95 y = 9 }
+
+			textureFile = ""
+			font = "vic_18"
+			borderSize = {x = 7 y =0}
+			text = ""
+			maxWidth = 308
+			maxHeight = 25
+			Orientation = "UPPER_LEFT"
+			fixedsize = yes
+
+
+		}
+
+		instantTextBoxType = {
+			name = "subunit_type"
+			position = { x = 95 y =34 }
+			format = left
+
+			textureFile = ""
+			font = "vic_18_grey"
+			borderSize = {x = 7 y = 0}
+			text = "xxxxxxxxxx"
+			maxWidth = 461
+			maxHeight = 43
+			Orientation = "UPPER_LEFT"
+			fixedsize = yes
+
+
+		}
+
+		instantTextBoxType = {
+			name = "subunit_strength"
+			position = { x = 369 y =22 }
+			textureFile = ""
+			font = "vic_18"
+			borderSize = {x = 7 y = 0}
+			text = "xxxx"
+			maxWidth = 144
+			maxHeight = 43
+			Orientation = "UPPER_LEFT"
+			format = right
+
+
+		}
+
+		guiButtonType = {
+				name = "transferbutton"
+				position = { x = -14 y = 13 }
+				quadTextureSprite ="GFX_reorg_left"
+				tooltip = ""
+				tooltipText =""
+				delayedTooltipText = ""
+				buttonText = "  "
+				buttonFont = "vic_18"
+				clicksound = ""
+				shortcut = "z"
+			}
+
+
+	}
+
+
+	positionType = {
+		name = "unitlist_start"
+		position = { x = 0 y =234 }
+	}
+
+	positionType = {
+		name = "unitlist_offset"
+		position = { x = 0 y =166 }
+	}
+
+
+
+}

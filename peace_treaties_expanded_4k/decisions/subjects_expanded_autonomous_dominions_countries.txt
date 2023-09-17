@@ -1,0 +1,369 @@
+country_decisions = {
+	autonomous_dominion_thailand_nation = {
+		major = yes
+		potential = {
+			NOT = { exists = THL }
+			NOT = { has_country_flag = changed_from_colonial_nation }
+			OR = {
+				is_former_autonomous_dominion = yes
+				is_subject_of_type = dominion_tc
+				is_subject_of_type = autonomous_dominion_tc
+				is_colonial_nation = yes
+			}
+			is_dominion_tag_in_indochina = yes
+		}
+		allow = {
+			is_former_autonomous_dominion = yes
+			is_subject = no
+			is_at_war = no
+			capital_scope = {
+				trade_company_region = trade_company_indochina
+			}
+		}
+		effect = {
+			hidden_effect = {
+				restore_country_name = yes
+				clr_country_flag = renamed_dominion_accordingly_to_free
+				every_country = {
+					limit = {
+						ROOT = {
+							has_country_flag = renamed_dominion_accordingly_to_@PREV
+						}
+					}
+					ROOT = {
+						clr_country_flag = renamed_dominion_accordingly_to_@PREV
+					}
+				}
+			}
+			add_prestige = 25
+			change_tag = THL
+			set_country_flag = changed_from_colonial_nation
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			swap_free_idea_group = yes
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	autonomous_dominion_india_nation = {
+		major = yes
+		potential = {
+			NOT = { exists = INI }
+			NOT = { has_country_flag = changed_from_colonial_nation }
+			OR = {
+				is_former_autonomous_dominion = yes
+				is_subject_of_type = dominion_tc
+				is_subject_of_type = autonomous_dominion_tc
+				is_colonial_nation = yes
+			}
+			is_dominion_tag_in_india = yes
+		}
+		allow = {
+			is_former_autonomous_dominion = yes
+			is_subject = no
+			is_at_war = no
+			capital_scope = {
+				superregion = india_superregion
+				is_node_in_trade_company_region = yes
+			}
+		}
+		effect = {
+			hidden_effect = {
+				restore_country_name = yes
+				clr_country_flag = renamed_dominion_accordingly_to_free
+				every_country = {
+					limit = {
+						ROOT = {
+							has_country_flag = renamed_dominion_accordingly_to_@PREV
+						}
+					}
+					ROOT = {
+						clr_country_flag = renamed_dominion_accordingly_to_@PREV
+					}
+				}
+			}
+			add_prestige = 25
+			change_tag = INI
+			set_country_flag = changed_from_colonial_nation
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			swap_free_idea_group = yes
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	autonomous_dominion_indonesia_nation = {
+		major = yes
+		potential = {
+			NOT = { exists = IDN }
+			NOT = { has_country_flag = changed_from_colonial_nation }
+			OR = {
+				is_former_autonomous_dominion = yes
+				is_subject_of_type = dominion_tc
+				is_subject_of_type = autonomous_dominion_tc
+				is_colonial_nation = yes
+			}
+			is_dominion_tag_in_east_indies = yes
+		}
+		allow = {
+			is_former_autonomous_dominion = yes
+			is_subject = no
+			is_at_war = no
+			capital_scope = {
+				OR = {
+					trade_company_region = trade_company_moluccas
+					trade_company_region = trade_company_indonesia
+				}
+			}
+		}
+		effect = {
+			hidden_effect = {
+				restore_country_name = yes
+				clr_country_flag = renamed_dominion_accordingly_to_free
+				every_country = {
+					limit = {
+						ROOT = {
+							has_country_flag = renamed_dominion_accordingly_to_@PREV
+						}
+					}
+					ROOT = {
+						clr_country_flag = renamed_dominion_accordingly_to_@PREV
+					}
+				}
+			}
+			add_prestige = 25
+			change_tag = IDN
+			set_country_flag = changed_from_colonial_nation
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			swap_free_idea_group = yes
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	autonomous_dominion_philippines_nation = {
+		major = yes
+		potential = {
+			NOT = { exists = PHI }
+			NOT = { has_country_flag = changed_from_colonial_nation }
+			OR = {
+				is_former_autonomous_dominion = yes
+				is_subject_of_type = dominion_tc
+				is_subject_of_type = autonomous_dominion_tc
+				is_colonial_nation = yes
+			}
+			is_dominion_tag_in_philippines = yes
+		}
+		allow = {
+			is_former_autonomous_dominion = yes
+			is_subject = no
+			is_at_war = no
+			capital_scope = {
+				trade_company_region = trade_company_philippines
+			}
+		}
+		effect = {
+			hidden_effect = {
+				restore_country_name = yes
+				clr_country_flag = renamed_dominion_accordingly_to_free
+				every_country = {
+					limit = {
+						ROOT = {
+							has_country_flag = renamed_dominion_accordingly_to_@PREV
+						}
+					}
+					ROOT = {
+						clr_country_flag = renamed_dominion_accordingly_to_@PREV
+					}
+				}
+			}
+			add_prestige = 25
+			change_tag = PHI
+			set_country_flag = changed_from_colonial_nation
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			swap_free_idea_group = yes
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	autonomous_dominion_ghana_nation = {
+		major = yes
+		potential = {
+			NOT = { exists = GHA }
+			NOT = { has_country_flag = changed_from_colonial_nation }
+			OR = {
+				is_former_autonomous_dominion = yes
+				is_subject_of_type = dominion_tc
+				is_subject_of_type = autonomous_dominion_tc
+				is_colonial_nation = yes
+			}
+			is_dominion_tag_in_west_africa = yes
+		}
+		allow = {
+			is_former_autonomous_dominion = yes
+			is_subject = no
+			is_at_war = no
+			capital_scope = {
+				OR = {
+					trade_company_region = trade_company_west_africa
+					trade_company_region = trade_company_timbuktu
+					trade_company_region = trade_company_katsina
+					trade_company_region = trade_company_kongo
+				}
+			}
+		}
+		effect = {
+			hidden_effect = {
+				restore_country_name = yes
+				clr_country_flag = renamed_dominion_accordingly_to_free
+				every_country = {
+					limit = {
+						ROOT = {
+							has_country_flag = renamed_dominion_accordingly_to_@PREV
+						}
+					}
+					ROOT = {
+						clr_country_flag = renamed_dominion_accordingly_to_@PREV
+					}
+				}
+			}
+			add_prestige = 25
+			change_tag = GHA
+			set_country_flag = changed_from_colonial_nation
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			swap_free_idea_group = yes
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	autonomous_dominion_zimbabwe_nation = {
+		major = yes
+		potential = {
+			NOT = { exists = ZIB }
+			NOT = { has_country_flag = changed_from_colonial_nation }
+			OR = {
+				is_former_autonomous_dominion = yes
+				is_subject_of_type = dominion_tc
+				is_subject_of_type = autonomous_dominion_tc
+				is_colonial_nation = yes
+			}
+			is_dominion_tag_in_east_africa = yes
+		}
+		allow = {
+			is_former_autonomous_dominion = yes
+			is_subject = no
+			is_at_war = no
+			capital_scope = {
+				OR = {
+					trade_company_region = trade_company_east_africa
+					trade_company_region = trade_company_zambezi
+					trade_company_region = trade_company_great_lakes
+					trade_company_region = trade_company_ethiopia
+					AND = {
+						trade_company_region = trade_company_gulf_of_aden
+						continent = africa
+					}
+				}
+			}
+		}
+		effect = {
+			hidden_effect = {
+				restore_country_name = yes
+				clr_country_flag = renamed_dominion_accordingly_to_free
+				every_country = {
+					limit = {
+						ROOT = {
+							has_country_flag = renamed_dominion_accordingly_to_@PREV
+						}
+					}
+					ROOT = {
+						clr_country_flag = renamed_dominion_accordingly_to_@PREV
+					}
+				}
+			}
+			add_prestige = 25
+			change_tag = ZIB
+			set_country_flag = changed_from_colonial_nation
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			swap_free_idea_group = yes
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	autonomous_dominion_south_africa_nation = {
+		major = yes
+		potential = {
+			NOT = { exists = RSA }
+			NOT = { has_country_flag = changed_from_colonial_nation }
+			OR = {
+				is_former_autonomous_dominion = yes
+				is_subject_of_type = dominion_tc
+				is_subject_of_type = autonomous_dominion_tc
+				is_colonial_nation = yes
+			}
+			is_dominion_tag_in_south_africa = yes
+		}
+		allow = {
+			is_former_autonomous_dominion = yes
+			is_subject = no
+			is_at_war = no
+			capital_scope = {
+				trade_company_region = trade_company_south_africa
+			}
+		}
+		effect = {
+			hidden_effect = {
+				restore_country_name = yes
+				clr_country_flag = renamed_dominion_accordingly_to_free
+				every_country = {
+					limit = {
+						ROOT = {
+							has_country_flag = renamed_dominion_accordingly_to_@PREV
+						}
+					}
+					ROOT = {
+						clr_country_flag = renamed_dominion_accordingly_to_@PREV
+					}
+				}
+			}
+			add_prestige = 25
+			change_tag = RSA
+			set_country_flag = changed_from_colonial_nation
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			swap_free_idea_group = yes
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

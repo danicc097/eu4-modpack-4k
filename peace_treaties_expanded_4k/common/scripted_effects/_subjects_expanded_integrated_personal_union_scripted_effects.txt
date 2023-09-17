@@ -1,0 +1,8 @@
+random_chance_to_annex_integrated_personal_union = {
+	random = {
+		chance = $chance$
+		overlord = {
+			country_event = { id = subjects_expanded_integrated_personal_union_events.2 }
+		}
+	}
+}

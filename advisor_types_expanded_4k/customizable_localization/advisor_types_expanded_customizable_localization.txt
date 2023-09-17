@@ -1,0 +1,90 @@
+# For German Localisation:
+defined_text = {
+    name = GetAdmAdvisorDerDie
+	random = no
+
+    text = {
+        localisation_key = string_derdie_male
+        trigger = {
+			employed_advisor = {
+				category = ADM
+				is_male = yes
+			}
+        }
+    }
+	text = {
+        localisation_key = string_derdie_female
+        trigger = {
+			employed_advisor = {
+				category = ADM
+				is_female = yes
+			}
+        }
+    }
+}
+
+defined_text = {
+    name = GetDipAdvisorDerDie
+	random = no
+
+    text = {
+        localisation_key = string_derdie_male
+        trigger = {
+			employed_advisor = {
+				category = DIP
+				is_male = yes
+			}
+        }
+    }
+	text = {
+        localisation_key = string_derdie_female
+        trigger = {
+			employed_advisor = {
+				category = DIP
+				is_female = yes
+			}
+        }
+    }
+}
+
+defined_text = {
+    name = GetMilAdvisorDerDie
+	random = no
+
+    text = {
+        localisation_key = string_derdie_male
+        trigger = {
+			employed_advisor = {
+				category = MIL
+				is_male = yes
+			}
+        }
+    }
+	text = {
+        localisation_key = string_derdie_female
+        trigger = {
+			employed_advisor = {
+				category = MIL
+				is_female = yes
+			}
+        }
+    }
+}
+
+defined_text = {
+    name = GetMmeinemmeiner
+	random = no
+
+    text = {
+        localisation_key = "meinem"
+        trigger = {
+			is_female = no
+        }
+    }
+	text = {
+        localisation_key = "meiner"
+        trigger = {
+			is_female = yes
+        }
+    }
+}

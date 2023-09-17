@@ -1,0 +1,15 @@
+﻿l_english:
+ MODIFIER_IMPERIAL_REFORM_CATHOLIC_APPROVAL: "Imperial Reform Approval by Princes of Emperor's Religion"
+ MODIFIER_IMPERIAL_AUTHORITY: "Imperial Authority Growth"
+ MODIFIER_LIBERTY_DESIRE_FROM_SUBJECT_DEVELOPMENT: "Liberty Desire (Development)"
+
+ has_adm_advisor_4_tooltip: "Is employing an §YAdministrative§! Advisor with at least Skill §Y4§!"
+ has_adm_advisor_5_tooltip: "Is employing an §YAdministrative§! Advisor with at least Skill §Y5§!"
+ has_dip_advisor_4_tooltip: "Is employing a §YDiplomatic§! Advisor with at least Skill §Y4§!"
+ has_dip_advisor_5_tooltip: "Is employing a §YDiplomatic§! Advisor with at least Skill §Y5§!"
+ has_mil_advisor_4_tooltip: "Is employing a §YMilitary§! Advisor with at least Skill §Y4§!"
+ has_mil_advisor_5_tooltip: "Is employing a §YMilitary§! Advisor with at least Skill §Y5§!"
+
+ ATE_KILL_ADVISOR_BY_CATEGORY_EFFECT_TT_ADM: "The §Y[Root.Adm_Advisor.GetTitle]§! §Y[Root.Adm_Advisor.GetName]§! dies."
+ ATE_KILL_ADVISOR_BY_CATEGORY_EFFECT_TT_DIP: "The §Y[Root.Dip_Advisor.GetTitle]§! §Y[Root.Dip_Advisor.GetName]§! dies."
+ ATE_KILL_ADVISOR_BY_CATEGORY_EFFECT_TT_MIL: "The §Y[Root.Mil_Advisor.GetTitle]§! §Y[Root.Mil_Advisor.GetName]§! dies."

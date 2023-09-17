@@ -1,0 +1,19 @@
+estate_xorme_ai_supremacy_over_crown = {
+	icon = privilege_empty_throne
+	max_absolutism = -20
+	is_valid = {
+		has_estate = xorme_ai_estate
+	}
+	penalties = {
+	}
+	benefits = {
+		all_estate_loyalty_equilibrium = 0.15
+		#
+		all_estate_influence_modifier = 0.075
+	}
+	mechanics = {
+	}
+	ai_will_do = {
+		factor = 1000
+	}
+}

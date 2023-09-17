@@ -1,0 +1,255 @@
+guiTypes = {
+
+	#x is minimum resolution height for this country view to increase to large size
+	#y is the size increase for lists and distance to move for buttons at the bottom of the country view
+	positionType =
+	{
+		name ="countrymissionsview_scaling_large_min_inc"
+		position = { x= 1620 y = 279 }
+	}
+
+	#x is minimum resolution height for this country view to increase to huge size
+	#y is the size increase for lists and distance to move for buttons at the bottom of the country view
+	positionType = {
+		name ="countrymissionsview_scaling_huge_min_inc"
+		position = { x= 1944 y = 603 }
+	}
+
+	windowType = {
+		name = "countrymissionsview"
+		position = { x=0 y=252 }
+		#position = { x=0 y=252 }
+		show_position = { x=0 y =252 }
+		hide_position = { x=-1080 y =252 }
+		animation_type = "decelerated"
+		animation_time = 10
+		size = { x=1843 y=180 }
+		moveable = 0
+		Orientation = "UPPER_LEFT"
+		upsound = tab_missions
+
+		iconType =
+		{
+			name ="domesticpanel_bg"
+			spriteType = "GFX_country_mission_view_bg"
+			position = { x= -13 y = -18 }
+			Orientation = "UPPER_LEFT"
+
+		}
+
+		guiButtonType = {
+			name = "close_button"
+			position = { x = 925 y = -2 }
+			quadTextureSprite ="GFX_closebutton2"
+			shortcut = "ESCAPE"
+			Orientation = "UPPER_LEFT"
+			clicksound = close_window
+		}
+
+		instantTextBoxType = {
+			name = "window_title"
+			position = { x = 27 y =140 }
+			textureFile = ""
+			font = "vic_36"
+			borderSize = {x = 7 y = 7}
+			text = "HEADER_MISSIONS"
+			maxWidth = 922
+			maxHeight = 58
+			format = centre
+		}
+
+		smoothListboxType = {
+			name = "countrymissionsview_missions_gridbox_listbox"
+			position = { x=18 y =220}
+			backGround=""
+			size = { x=932 y=733 }
+			Orientation = "UPPER_LEFT"
+			horizontal = 0
+			spacing = 0
+			scrollbartype = "standardlistbox_slider"
+			borderSize = {x = 0 y = 0}
+		}
+
+		OverlappingElementsBoxType = {
+			name = "countrymissionsview_country_list"
+			position = { x=58 y =-115}
+			size = { x=900 y=61 }
+			Orientation = "UPPER_LEFT"
+			spacing = 0
+		}
+	}
+
+	windowType = {
+		name = "countrymissionsview_missions_gridbox_listbox_entry"
+		position = { x=0 y=0 }
+		show_position = { x=0 y =252 }
+		size = { x=954 y=900 }
+		moveable = 0
+
+		gridBoxType = {
+			name = "countrymissionsview_missions_gridbox"
+			position = { x = 0 y = 0 }
+			size = { width = 720 height = 720 }
+			slotsize = { width = 185 height = 270 }
+			max_slots_horizontal = 5
+			format = "UPPER_LEFT"
+		}
+	}
+
+	windowType={
+		name = "countrymissionsview_missions_entry"
+		#size = { width = 187 height = 220 }
+
+		iconType = {
+			name = "mission_icon"
+			position = { x=41 y=32 }
+			quadTextureSprite ="GFX_event_bg_transparency"
+		}
+
+		iconType = {
+			name = "arrow_half_top"
+			position = {x=83 y=218}
+			quadTextureSprite ="gfx_arrow_verticall_tile"
+			alwaystransparent = yes
+		}
+		
+		iconType = {
+			name = "arrow_half_bottom_center"
+			position = {x=68 y=254}
+			quadTextureSprite ="gfx_arrow_end"
+			alwaystransparent = yes
+		}
+
+		iconType = {
+			name = "arrow_half_bottom_left"
+			position = {x=27 y=254}
+			quadTextureSprite ="gfx_arrow_end"
+			alwaystransparent = yes
+		}
+		
+		iconType = {
+			name = "arrow_half_bottom_right"
+			position = {x=110 y=254}
+			quadTextureSprite ="gfx_arrow_end"
+			alwaystransparent = yes
+		}
+		
+		iconType = {
+			name = "skip_tier"
+			position = {x=83 y=252}
+			quadTextureSprite ="gfx_arrow_verticall_skip_tier"
+			alwaystransparent = yes
+		}
+		
+		
+		iconType = {
+			name = "skip_slot"
+			position = {x=-11 y=229}
+			quadTextureSprite ="gfx_arrow_horizontal_skip_slot"
+			alwaystransparent = yes
+		}
+		
+		iconType = {
+			name = "left_branch_out"
+			position = {x=7 y=220}
+			quadTextureSprite ="gfx_arrow_left_out"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "right_branch_in"
+			position = {x=124 y=225}
+			quadTextureSprite ="gfx_arrow_left_in"
+			alwaystransparent = yes
+		}
+		
+		
+		iconType = {
+			name = "right_branch_out"
+			position = {x=108 y=220}
+			quadTextureSprite ="gfx_arrow_right_out"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "left_branch_in"
+			position = {x=-9 y=229}
+			quadTextureSprite ="gfx_arrow_right_in"
+			alwaystransparent = yes
+		}
+
+
+		
+		
+		iconType = {
+			name = "mission_entry_icon"
+			position = {x= 0 y= 0 }
+			quadTextureSprite ="GFX_mission_icons_frame"
+		}
+		
+		guiButtonType = {
+			name = "mission_entry_button"
+			quadTextureSprite ="GFX_mission_icons_frame_complete"
+			position = { x= 0 y = 0 }
+		}
+		
+		iconType = {
+			name = "mission_entry_rewards_glow"
+			position = { x= 0 y= 0 }
+			quadTextureSprite = "GFX_mission_effect_glow"
+		}
+
+		iconType = {
+			name = "mission_entry_rewards"
+			position = { x=126 y=13 }
+			quadTextureSprite = "gfx_mission_effect"
+		}
+
+
+		iconType = {
+			name = "mission_entry_conditions"
+			position = { x= 0 y= 9 }
+			quadTextureSprite = "gfx_mission_trigger"
+		}
+
+		guiButtonType = {
+			name = "mission_entry_conditions_button"
+			quadTextureSprite ="gfx_mission_trigger"
+			position = { x= 0 y = 9 }
+		}
+
+		instantTextBoxType= {
+			position = { x=5 y=151}
+			name = "mission_title"
+			font = "vic_18"
+			borderSize = {x = 0 y = 0}
+			maxWidth = 180
+			maxHeight = 40
+			text = "Subjective and a Noun"
+			orientation = "UPPER_LEFT"
+			format = center
+			alwaystransparent = yes
+		}
+
+		iconType = {
+			name ="country_icon"
+			position = { x= 63 y = 5 }
+			quadTextureSprite = "GFX_shield_small"
+		}
+	}
+
+	windowType={
+		name = "countrymissionsview_nation_entry"
+		size = { x = 61 y = 58 }
+		
+		guiButtonType = {
+			name ="country_mission_button"
+			position = { x= 0 y = 0 }
+			quadTextureSprite = "GFX_shield_small"
+		}
+
+		iconType = {
+			name = "country_higlight"
+			position = { x = 0 y = 0 }
+			quadTextureSprite = "GFX_small_shield_overlay_great_power_transparent"
+		}
+	}
+}

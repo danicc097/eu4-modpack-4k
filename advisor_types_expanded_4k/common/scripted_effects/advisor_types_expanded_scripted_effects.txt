@@ -1,0 +1,3644 @@
+# Compatibility with Peace Treaties Expanded
+ate_pte_take_advisor_adm_effect = {
+	if = {
+		limit = {
+			advisor = ate_advisor_loyal_friend_adm
+		}
+		if = {
+			limit = {
+				ate_advisor_loyal_friend_adm = 3
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_loyal_friend_adm skill = 3 }
+			}
+		}
+		else_if = {
+			limit = {
+				ate_advisor_loyal_friend_adm = 2
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_loyal_friend_adm skill = 2 }
+			}
+		}
+		else = {
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_loyal_friend_adm skill = 1 }
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_court_physician
+		}
+		if = {
+			limit = {
+				ate_advisor_court_physician = 3
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_court_physician skill = 3 }
+			}
+		}
+		else_if = {
+			limit = {
+				ate_advisor_court_physician = 2
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_court_physician skill = 2 }
+			}
+		}
+		else = {
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_court_physician skill = 1 }
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_cardinal
+		}
+		if = {
+			limit = {
+				ate_advisor_cardinal = 3
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_cardinal skill = 3 }
+			}
+		}
+		else_if = {
+			limit = {
+				ate_advisor_cardinal = 2
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_cardinal skill = 2 }
+			}
+		}
+		else = {
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_cardinal skill = 1 }
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_arch_bishop_catholic
+		}
+		if = {
+			limit = {
+				ate_advisor_arch_bishop_catholic = 3
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_arch_bishop_catholic skill = 3 }
+			}
+		}
+		else_if = {
+			limit = {
+				ate_advisor_arch_bishop_catholic = 2
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_arch_bishop_catholic skill = 2 }
+			}
+		}
+		else = {
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_arch_bishop_catholic skill = 1 }
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_arch_bishop_protestant
+		}
+		if = {
+			limit = {
+				ate_advisor_arch_bishop_protestant = 3
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_arch_bishop_protestant skill = 3 }
+			}
+		}
+		else_if = {
+			limit = {
+				ate_advisor_arch_bishop_protestant = 2
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_arch_bishop_protestant skill = 2 }
+			}
+		}
+		else = {
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_arch_bishop_protestant skill = 1 }
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_arch_bishop_reformed
+		}
+		if = {
+			limit = {
+				ate_advisor_arch_bishop_reformed = 3
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_arch_bishop_reformed skill = 3 }
+			}
+		}
+		else_if = {
+			limit = {
+				ate_advisor_arch_bishop_reformed = 2
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_arch_bishop_reformed skill = 2 }
+			}
+		}
+		else = {
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_arch_bishop_reformed skill = 1 }
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_feudal_tax_collector
+		}
+		if = {
+			limit = {
+				ate_advisor_feudal_tax_collector = 3
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_feudal_tax_collector skill = 3 }
+			}
+		}
+		else_if = {
+			limit = {
+				ate_advisor_feudal_tax_collector = 2
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_feudal_tax_collector skill = 2 }
+			}
+		}
+		else = {
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_feudal_tax_collector skill = 1 }
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_architect
+		}
+		if = {
+			limit = {
+				ate_advisor_architect = 3
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_architect skill = 3 }
+			}
+		}
+		else_if = {
+			limit = {
+				ate_advisor_architect = 2
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_architect skill = 2 }
+			}
+		}
+		else = {
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_architect skill = 1 }
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_great_administrator
+		}
+		if = {
+			limit = {
+				ate_advisor_great_administrator = 3
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_great_administrator skill = 3 }
+			}
+		}
+		else_if = {
+			limit = {
+				ate_advisor_great_administrator = 2
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_great_administrator skill = 2 }
+			}
+		}
+		else = {
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_great_administrator skill = 1 }
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_steward
+		}
+		if = {
+			limit = {
+				ate_advisor_steward = 3
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_steward skill = 3 }
+			}
+		}
+		else_if = {
+			limit = {
+				ate_advisor_steward = 2
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_steward skill = 2 }
+			}
+		}
+		else = {
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_steward skill = 1 }
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_administrative_genius
+		}
+		if = {
+			limit = {
+				ate_advisor_administrative_genius = 3
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_administrative_genius skill = 3 }
+			}
+		}
+		else_if = {
+			limit = {
+				ate_advisor_administrative_genius = 2
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_administrative_genius skill = 2 }
+			}
+		}
+		else = {
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_administrative_genius skill = 1 }
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_anti_corruption_officer
+		}
+		if = {
+			limit = {
+				ate_advisor_anti_corruption_officer = 3
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_anti_corruption_officer skill = 3 }
+			}
+		}
+		else_if = {
+			limit = {
+				ate_advisor_anti_corruption_officer = 2
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_anti_corruption_officer skill = 2 }
+			}
+		}
+		else = {
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_anti_corruption_officer skill = 1 }
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_first_minister_monarchy
+		}
+		if = {
+			limit = {
+				ate_advisor_first_minister_monarchy = 3
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_first_minister_monarchy skill = 3 }
+			}
+		}
+		else_if = {
+			limit = {
+				ate_advisor_first_minister_monarchy = 2
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_first_minister_monarchy skill = 2 }
+			}
+		}
+		else = {
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_first_minister_monarchy skill = 1 }
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_first_minister_theocracy
+		}
+		if = {
+			limit = {
+				ate_advisor_first_minister_theocracy = 3
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_first_minister_theocracy skill = 3 }
+			}
+		}
+		else_if = {
+			limit = {
+				ate_advisor_first_minister_theocracy = 2
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_first_minister_theocracy skill = 2 }
+			}
+		}
+		else = {
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_first_minister_theocracy skill = 1 }
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_first_minister_republic
+		}
+		if = {
+			limit = {
+				ate_advisor_first_minister_republic = 3
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_first_minister_republic skill = 3 }
+			}
+		}
+		else_if = {
+			limit = {
+				ate_advisor_first_minister_republic = 2
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_first_minister_republic skill = 2 }
+			}
+		}
+		else = {
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_first_minister_republic skill = 1 }
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_state_administrator
+		}
+		if = {
+			limit = {
+				ate_advisor_state_administrator = 3
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_state_administrator skill = 3 }
+			}
+		}
+		else_if = {
+			limit = {
+				ate_advisor_state_administrator = 2
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_state_administrator skill = 2 }
+			}
+		}
+		else = {
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_state_administrator skill = 1 }
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_gold_digger
+		}
+		if = {
+			limit = {
+				ate_advisor_gold_digger = 3
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_gold_digger skill = 3 }
+			}
+		}
+		else_if = {
+			limit = {
+				ate_advisor_gold_digger = 2
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_gold_digger skill = 2 }
+			}
+		}
+		else = {
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_gold_digger skill = 1 }
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_free_thinker
+		}
+		if = {
+			limit = {
+				ate_advisor_free_thinker = 3
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_free_thinker skill = 3 }
+			}
+		}
+		else_if = {
+			limit = {
+				ate_advisor_free_thinker = 2
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_free_thinker skill = 2 }
+			}
+		}
+		else = {
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_free_thinker skill = 1 }
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_revolutionist
+		}
+		if = {
+			limit = {
+				ate_advisor_revolutionist = 3
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_revolutionist skill = 3 }
+			}
+		}
+		else_if = {
+			limit = {
+				ate_advisor_revolutionist = 2
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_revolutionist skill = 2 }
+			}
+		}
+		else = {
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_revolutionist skill = 1 }
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_reformist
+		}
+		if = {
+			limit = {
+				ate_advisor_reformist = 3
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_reformist skill = 3 }
+			}
+		}
+		else_if = {
+			limit = {
+				ate_advisor_reformist = 2
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_reformist skill = 2 }
+			}
+		}
+		else = {
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_reformist skill = 1 }
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_state_theorist
+		}
+		if = {
+			limit = {
+				ate_advisor_state_theorist = 3
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_state_theorist skill = 3 }
+			}
+		}
+		else_if = {
+			limit = {
+				ate_advisor_state_theorist = 2
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_state_theorist skill = 2 }
+			}
+		}
+		else = {
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_state_theorist skill = 1 }
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_visionary
+		}
+		if = {
+			limit = {
+				ate_advisor_visionary = 3
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_visionary skill = 3 }
+			}
+		}
+		else_if = {
+			limit = {
+				ate_advisor_visionary = 2
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_visionary skill = 2 }
+			}
+		}
+		else = {
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_visionary skill = 1 }
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_great_philosopher
+		}
+		if = {
+			limit = {
+				ate_advisor_great_philosopher = 3
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_great_philosopher skill = 3 }
+			}
+		}
+		else_if = {
+			limit = {
+				ate_advisor_great_philosopher = 2
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_great_philosopher skill = 2 }
+			}
+		}
+		else = {
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_great_philosopher skill = 1 }
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_arch_chamberlain
+		}
+		if = {
+			limit = {
+				ate_advisor_arch_chamberlain = 3
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_arch_chamberlain skill = 3 }
+			}
+		}
+		else_if = {
+			limit = {
+				ate_advisor_arch_chamberlain = 2
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_arch_chamberlain skill = 2 }
+			}
+		}
+		else = {
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_arch_chamberlain skill = 1 }
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_monk
+		}
+		if = {
+			limit = {
+				ate_advisor_monk = 3
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_monk skill = 3 }
+			}
+		}
+		else_if = {
+			limit = {
+				ate_advisor_monk = 2
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_monk skill = 2 }
+			}
+		}
+		else = {
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_monk skill = 1 }
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_brahmins_preacher
+		}
+		if = {
+			limit = {
+				ate_advisor_brahmins_preacher = 3
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_brahmins_preacher skill = 3 }
+			}
+		}
+		else_if = {
+			limit = {
+				ate_advisor_brahmins_preacher = 2
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_brahmins_preacher skill = 2 }
+			}
+		}
+		else = {
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_brahmins_preacher skill = 1 }
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_dhimmi_scholar
+		}
+		if = {
+			limit = {
+				ate_advisor_dhimmi_scholar = 3
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_dhimmi_scholar skill = 3 }
+			}
+		}
+		else_if = {
+			limit = {
+				ate_advisor_dhimmi_scholar = 2
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_dhimmi_scholar skill = 2 }
+			}
+		}
+		else = {
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_dhimmi_scholar skill = 1 }
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_jains_bureaucrat
+		}
+		if = {
+			limit = {
+				ate_advisor_jains_bureaucrat = 3
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_jains_bureaucrat skill = 3 }
+			}
+		}
+		else_if = {
+			limit = {
+				ate_advisor_jains_bureaucrat = 2
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_jains_bureaucrat skill = 2 }
+			}
+		}
+		else = {
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_jains_bureaucrat skill = 1 }
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_missionary
+		}
+		if = {
+			limit = {
+				ate_advisor_missionary = 3
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_missionary skill = 3 }
+			}
+		}
+		else_if = {
+			limit = {
+				ate_advisor_missionary = 2
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_missionary skill = 2 }
+			}
+		}
+		else = {
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_missionary skill = 1 }
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_imperial_bureaucrat
+		}
+		if = {
+			limit = {
+				ate_advisor_imperial_bureaucrat = 3
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_imperial_bureaucrat skill = 3 }
+			}
+		}
+		else_if = {
+			limit = {
+				ate_advisor_imperial_bureaucrat = 2
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_imperial_bureaucrat skill = 2 }
+			}
+		}
+		else = {
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_imperial_bureaucrat skill = 1 }
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_imam
+		}
+		if = {
+			limit = {
+				ate_advisor_imam = 3
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_imam skill = 3 }
+			}
+		}
+		else_if = {
+			limit = {
+				ate_advisor_imam = 2
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_imam skill = 2 }
+			}
+		}
+		else = {
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_imam skill = 1 }
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_scholar
+		}
+		if = {
+			limit = {
+				ate_advisor_scholar = 3
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_scholar skill = 3 }
+			}
+		}
+		else_if = {
+			limit = {
+				ate_advisor_scholar = 2
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_scholar skill = 2 }
+			}
+		}
+		else = {
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_scholar skill = 1 }
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_inventor
+		}
+		if = {
+			limit = {
+				ate_advisor_inventor = 3
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_inventor skill = 3 }
+			}
+		}
+		else_if = {
+			limit = {
+				ate_advisor_inventor = 2
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_inventor skill = 2 }
+			}
+		}
+		else = {
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_inventor skill = 1 }
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_witch_hunter
+		}
+		if = {
+			limit = {
+				ate_advisor_witch_hunter = 3
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_witch_hunter skill = 3 }
+			}
+		}
+		else_if = {
+			limit = {
+				ate_advisor_witch_hunter = 2
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_witch_hunter skill = 2 }
+			}
+		}
+		else = {
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_witch_hunter skill = 1 }
+			}
+		}
+	}
+}
+
+ate_pte_take_advisor_dip_effect = {
+	if = {
+		limit = {
+			advisor = ate_advisor_loyal_friend_dip
+		}
+		if = {
+			limit = {
+				ate_advisor_loyal_friend_dip = 3
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_loyal_friend_dip skill = 3 }
+			}
+		}
+		else_if = {
+			limit = {
+				ate_advisor_loyal_friend_dip = 2
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_loyal_friend_dip skill = 2 }
+			}
+		}
+		else = {
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_loyal_friend_dip skill = 1 }
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			OR = {
+				advisor = ate_advisor_concubine_female
+				advisor = ate_advisor_concubine_male
+			}
+			ROOT = {
+				is_female = no
+			}
+		}
+		if = {
+			limit = {
+				ate_advisor_concubine_female = 3
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_concubine_female skill = 3 }
+			}
+		}
+		else_if = {
+			limit = {
+				ate_advisor_concubine_female = 2
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_concubine_female skill = 2 }
+			}
+		}
+		else = {
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_concubine_female skill = 1 }
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			OR = {
+				advisor = ate_advisor_concubine_female
+				advisor = ate_advisor_concubine_male
+			}
+			ROOT = {
+				is_female = yes
+			}
+		}
+		if = {
+			limit = {
+				ate_advisor_concubine_male = 3
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_concubine_male skill = 3 }
+			}
+		}
+		else_if = {
+			limit = {
+				ate_advisor_concubine_male = 2
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_concubine_male skill = 2 }
+			}
+		}
+		else = {
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_concubine_male skill = 1 }
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_sailors_recruitmaster
+		}
+		if = {
+			limit = {
+				ate_advisor_sailors_recruitmaster = 3
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_sailors_recruitmaster skill = 3 }
+			}
+		}
+		else_if = {
+			limit = {
+				ate_advisor_sailors_recruitmaster = 2
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_sailors_recruitmaster skill = 2 }
+			}
+		}
+		else = {
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_sailors_recruitmaster skill = 1 }
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_blockade_specialist
+		}
+		if = {
+			limit = {
+				ate_advisor_blockade_specialist = 3
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_blockade_specialist skill = 3 }
+			}
+		}
+		else_if = {
+			limit = {
+				ate_advisor_blockade_specialist = 2
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_blockade_specialist skill = 2 }
+			}
+		}
+		else = {
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_blockade_specialist skill = 1 }
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_pirate_captain
+		}
+		if = {
+			limit = {
+				ate_advisor_pirate_captain = 3
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_pirate_captain skill = 3 }
+			}
+		}
+		else_if = {
+			limit = {
+				ate_advisor_pirate_captain = 2
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_pirate_captain skill = 2 }
+			}
+		}
+		else = {
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_pirate_captain skill = 1 }
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_great_negotiator
+		}
+		if = {
+			limit = {
+				ate_advisor_great_negotiator = 3
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_great_negotiator skill = 3 }
+			}
+		}
+		else_if = {
+			limit = {
+				ate_advisor_great_negotiator = 2
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_great_negotiator skill = 2 }
+			}
+		}
+		else = {
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_great_negotiator skill = 1 }
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_vicegerent
+		}
+		if = {
+			limit = {
+				ate_advisor_vicegerent = 3
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_vicegerent skill = 3 }
+			}
+		}
+		else_if = {
+			limit = {
+				ate_advisor_vicegerent = 2
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_vicegerent skill = 2 }
+			}
+		}
+		else = {
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_vicegerent skill = 1 }
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_traveling_salesman
+		}
+		if = {
+			limit = {
+				ate_advisor_traveling_salesman = 3
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_traveling_salesman skill = 3 }
+			}
+		}
+		else_if = {
+			limit = {
+				ate_advisor_traveling_salesman = 2
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_traveling_salesman skill = 2 }
+			}
+		}
+		else = {
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_traveling_salesman skill = 1 }
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_naval_traditional_tactician
+		}
+		if = {
+			limit = {
+				ate_advisor_naval_traditional_tactician = 3
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_naval_traditional_tactician skill = 3 }
+			}
+		}
+		else_if = {
+			limit = {
+				ate_advisor_naval_traditional_tactician = 2
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_naval_traditional_tactician skill = 2 }
+			}
+		}
+		else = {
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_naval_traditional_tactician skill = 1 }
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_diplomatic_genius
+		}
+		if = {
+			limit = {
+				ate_advisor_diplomatic_genius = 3
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_diplomatic_genius skill = 3 }
+			}
+		}
+		else_if = {
+			limit = {
+				ate_advisor_diplomatic_genius = 2
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_diplomatic_genius skill = 2 }
+			}
+		}
+		else = {
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_diplomatic_genius skill = 1 }
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_cultural_commissioner
+		}
+		if = {
+			limit = {
+				ate_advisor_cultural_commissioner = 3
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_cultural_commissioner skill = 3 }
+			}
+		}
+		else_if = {
+			limit = {
+				ate_advisor_cultural_commissioner = 2
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_cultural_commissioner skill = 2 }
+			}
+		}
+		else = {
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_cultural_commissioner skill = 1 }
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_herald
+		}
+		if = {
+			limit = {
+				ate_advisor_herald = 3
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_herald skill = 3 }
+			}
+		}
+		else_if = {
+			limit = {
+				ate_advisor_herald = 2
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_herald skill = 2 }
+			}
+		}
+		else = {
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_herald skill = 1 }
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_arch_chancellor
+		}
+		if = {
+			limit = {
+				ate_advisor_arch_chancellor = 3
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_arch_chancellor skill = 3 }
+			}
+		}
+		else_if = {
+			limit = {
+				ate_advisor_arch_chancellor = 2
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_arch_chancellor skill = 2 }
+			}
+		}
+		else = {
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_arch_chancellor skill = 1 }
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_envoy
+		}
+		if = {
+			limit = {
+				ate_advisor_envoy = 3
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_envoy skill = 3 }
+			}
+		}
+		else_if = {
+			limit = {
+				ate_advisor_envoy = 2
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_envoy skill = 2 }
+			}
+		}
+		else = {
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_envoy skill = 1 }
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_vaisyas_peasant
+		}
+		if = {
+			limit = {
+				ate_advisor_vaisyas_peasant = 3
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_vaisyas_peasant skill = 3 }
+			}
+		}
+		else_if = {
+			limit = {
+				ate_advisor_vaisyas_peasant = 2
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_vaisyas_peasant skill = 2 }
+			}
+		}
+		else = {
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_vaisyas_peasant skill = 1 }
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_guild_trader
+		}
+		if = {
+			limit = {
+				ate_advisor_guild_trader = 3
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_guild_trader skill = 3 }
+			}
+		}
+		else_if = {
+			limit = {
+				ate_advisor_guild_trader = 2
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_guild_trader skill = 2 }
+			}
+		}
+		else = {
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_guild_trader skill = 1 }
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_historian
+		}
+		if = {
+			limit = {
+				ate_advisor_historian = 3
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_historian skill = 3 }
+			}
+		}
+		else_if = {
+			limit = {
+				ate_advisor_historian = 2
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_historian skill = 2 }
+			}
+		}
+		else = {
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_historian skill = 1 }
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_plantation_owner
+		}
+		if = {
+			limit = {
+				ate_advisor_plantation_owner = 3
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_plantation_owner skill = 3 }
+			}
+		}
+		else_if = {
+			limit = {
+				ate_advisor_plantation_owner = 2
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_plantation_owner skill = 2 }
+			}
+		}
+		else = {
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_plantation_owner skill = 1 }
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_galley_captain
+		}
+		if = {
+			limit = {
+				ate_advisor_galley_captain = 3
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_galley_captain skill = 3 }
+			}
+		}
+		else_if = {
+			limit = {
+				ate_advisor_galley_captain = 2
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_galley_captain skill = 2 }
+			}
+		}
+		else = {
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_galley_captain skill = 1 }
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_galleon_captain
+		}
+		if = {
+			limit = {
+				ate_advisor_galleon_captain = 3
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_galleon_captain skill = 3 }
+			}
+		}
+		else_if = {
+			limit = {
+				ate_advisor_galleon_captain = 2
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_galleon_captain skill = 2 }
+			}
+		}
+		else = {
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_galleon_captain skill = 1 }
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_colonial_administrator
+		}
+		if = {
+			limit = {
+				ate_advisor_colonial_administrator = 3
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_colonial_administrator skill = 3 }
+			}
+		}
+		else_if = {
+			limit = {
+				ate_advisor_colonial_administrator = 2
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_colonial_administrator skill = 2 }
+			}
+		}
+		else = {
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_colonial_administrator skill = 1 }
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_treasure_fleet_captain
+		}
+		if = {
+			limit = {
+				ate_advisor_treasure_fleet_captain = 3
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_treasure_fleet_captain skill = 3 }
+			}
+		}
+		else_if = {
+			limit = {
+				ate_advisor_treasure_fleet_captain = 2
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_treasure_fleet_captain skill = 2 }
+			}
+		}
+		else = {
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_treasure_fleet_captain skill = 1 }
+			}
+		}
+	}
+}
+
+ate_pte_take_advisor_mil_effect = {
+	if = {
+		limit = {
+			advisor = ate_advisor_loyal_friend_mil
+		}
+		if = {
+			limit = {
+				ate_advisor_loyal_friend_mil = 3
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_loyal_friend_mil skill = 3 }
+			}
+		}
+		else_if = {
+			limit = {
+				ate_advisor_loyal_friend_mil = 2
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_loyal_friend_mil skill = 2 }
+			}
+		}
+		else = {
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_loyal_friend_mil skill = 1 }
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_feudal_lord
+		}
+		if = {
+			limit = {
+				ate_advisor_feudal_lord = 3
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_feudal_lord skill = 3 }
+			}
+		}
+		else_if = {
+			limit = {
+				ate_advisor_feudal_lord = 2
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_feudal_lord skill = 2 }
+			}
+		}
+		else = {
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_feudal_lord skill = 1 }
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_knight
+		}
+		if = {
+			limit = {
+				ate_advisor_knight = 3
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_knight skill = 3 }
+			}
+		}
+		else_if = {
+			limit = {
+				ate_advisor_knight = 2
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_knight skill = 2 }
+			}
+		}
+		else = {
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_knight skill = 1 }
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_traditional_tactician
+		}
+		if = {
+			limit = {
+				ate_advisor_traditional_tactician = 3
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_traditional_tactician skill = 3 }
+			}
+		}
+		else_if = {
+			limit = {
+				ate_advisor_traditional_tactician = 2
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_traditional_tactician skill = 2 }
+			}
+		}
+		else = {
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_traditional_tactician skill = 1 }
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_landsknecht
+		}
+		if = {
+			limit = {
+				ate_advisor_landsknecht = 3
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_landsknecht skill = 3 }
+			}
+		}
+		else_if = {
+			limit = {
+				ate_advisor_landsknecht = 2
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_landsknecht skill = 2 }
+			}
+		}
+		else = {
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_landsknecht skill = 1 }
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_mercenary_leader
+		}
+		if = {
+			limit = {
+				ate_advisor_mercenary_leader = 3
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_mercenary_leader skill = 3 }
+			}
+		}
+		else_if = {
+			limit = {
+				ate_advisor_mercenary_leader = 2
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_mercenary_leader skill = 2 }
+			}
+		}
+		else = {
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_mercenary_leader skill = 1 }
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_lord_of_a_castle
+		}
+		if = {
+			limit = {
+				ate_advisor_lord_of_a_castle = 3
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_lord_of_a_castle skill = 3 }
+			}
+		}
+		else_if = {
+			limit = {
+				ate_advisor_lord_of_a_castle = 2
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_lord_of_a_castle skill = 2 }
+			}
+		}
+		else = {
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_lord_of_a_castle skill = 1 }
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_noble_man
+		}
+		if = {
+			limit = {
+				ate_advisor_noble_man = 3
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_noble_man skill = 3 }
+			}
+		}
+		else_if = {
+			limit = {
+				ate_advisor_noble_man = 2
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_noble_man skill = 2 }
+			}
+		}
+		else = {
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_noble_man skill = 1 }
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_military_genius
+		}
+		if = {
+			limit = {
+				ate_advisor_military_genius = 3
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_military_genius skill = 3 }
+			}
+		}
+		else_if = {
+			limit = {
+				ate_advisor_military_genius = 2
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_military_genius skill = 2 }
+			}
+		}
+		else = {
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_military_genius skill = 1 }
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_siege_expert
+		}
+		if = {
+			limit = {
+				ate_advisor_siege_expert = 3
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_siege_expert skill = 3 }
+			}
+		}
+		else_if = {
+			limit = {
+				ate_advisor_siege_expert = 2
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_siege_expert skill = 2 }
+			}
+		}
+		else = {
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_siege_expert skill = 1 }
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_master_of_artillery
+		}
+		if = {
+			limit = {
+				ate_advisor_master_of_artillery = 3
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_master_of_artillery skill = 3 }
+			}
+		}
+		else_if = {
+			limit = {
+				ate_advisor_master_of_artillery = 2
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_master_of_artillery skill = 2 }
+			}
+		}
+		else = {
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_master_of_artillery skill = 1 }
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_looting_expert
+		}
+		if = {
+			limit = {
+				ate_advisor_looting_expert = 3
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_looting_expert skill = 3 }
+			}
+		}
+		else_if = {
+			limit = {
+				ate_advisor_looting_expert = 2
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_looting_expert skill = 2 }
+			}
+		}
+		else = {
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_looting_expert skill = 1 }
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_marshal
+		}
+		if = {
+			limit = {
+				ate_advisor_marshal = 3
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_marshal skill = 3 }
+			}
+		}
+		else_if = {
+			limit = {
+				ate_advisor_marshal = 2
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_marshal skill = 2 }
+			}
+		}
+		else = {
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_marshal skill = 1 }
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_arch_marshal
+		}
+		if = {
+			limit = {
+				ate_advisor_arch_marshal = 3
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_arch_marshal skill = 3 }
+			}
+		}
+		else_if = {
+			limit = {
+				ate_advisor_arch_marshal = 2
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_arch_marshal skill = 2 }
+			}
+		}
+		else = {
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_arch_marshal skill = 1 }
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_supply_expert
+		}
+		if = {
+			limit = {
+				ate_advisor_supply_expert = 3
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_supply_expert skill = 3 }
+			}
+		}
+		else_if = {
+			limit = {
+				ate_advisor_supply_expert = 2
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_supply_expert skill = 2 }
+			}
+		}
+		else = {
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_supply_expert skill = 1 }
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_sergeant
+		}
+		if = {
+			limit = {
+				ate_advisor_sergeant = 3
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_sergeant skill = 3 }
+			}
+		}
+		else_if = {
+			limit = {
+				ate_advisor_sergeant = 2
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_sergeant skill = 2 }
+			}
+		}
+		else = {
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_sergeant skill = 1 }
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_maratha_warrior
+		}
+		if = {
+			limit = {
+				ate_advisor_maratha_warrior = 3
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_maratha_warrior skill = 3 }
+			}
+		}
+		else_if = {
+			limit = {
+				ate_advisor_maratha_warrior = 2
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_maratha_warrior skill = 2 }
+			}
+		}
+		else = {
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_maratha_warrior skill = 1 }
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_gentleman
+		}
+		if = {
+			limit = {
+				ate_advisor_gentleman = 3
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_gentleman skill = 3 }
+			}
+		}
+		else_if = {
+			limit = {
+				ate_advisor_gentleman = 2
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_gentleman skill = 2 }
+			}
+		}
+		else = {
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_gentleman skill = 1 }
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_cossack
+		}
+		if = {
+			limit = {
+				ate_advisor_cossack = 3
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_cossack skill = 3 }
+			}
+		}
+		else_if = {
+			limit = {
+				ate_advisor_cossack = 2
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_cossack skill = 2 }
+			}
+		}
+		else = {
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_cossack skill = 1 }
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_tribal_chieftain
+		}
+		if = {
+			limit = {
+				ate_advisor_tribal_chieftain = 3
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_tribal_chieftain skill = 3 }
+			}
+		}
+		else_if = {
+			limit = {
+				ate_advisor_tribal_chieftain = 2
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_tribal_chieftain skill = 2 }
+			}
+		}
+		else = {
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_tribal_chieftain skill = 1 }
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_rajputs_warrior
+		}
+		if = {
+			limit = {
+				ate_advisor_rajputs_warrior = 3
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_rajputs_warrior skill = 3 }
+			}
+		}
+		else_if = {
+			limit = {
+				ate_advisor_rajputs_warrior = 2
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_rajputs_warrior skill = 2 }
+			}
+		}
+		else = {
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_rajputs_warrior skill = 1 }
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_banneret
+		}
+		if = {
+			limit = {
+				ate_advisor_banneret = 3
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_banneret skill = 3 }
+			}
+		}
+		else_if = {
+			limit = {
+				ate_advisor_banneret = 2
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_banneret skill = 2 }
+			}
+		}
+		else = {
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_banneret skill = 1 }
+			}
+		}
+	}
+}
+
+ate_pte_take_advisor_effect = {
+	define_advisor = {
+		type = $type$
+		skill = $skill$
+		culture = PREV
+		religion = PREV
+		cost_multiplier = 0.66
+	}
+}
+
+ate_give_advisor_based_on_gov_rank = {
+	if = {
+		limit = {
+			OR = {
+				government_rank = 3
+				AND = {
+					NOT = { has_dlc = "Common Sense" }
+					total_development = 1000
+				}
+			}
+		}
+		define_advisor = {
+			name = $name$
+			type = $type$
+			skill = 3
+			culture = ROOT
+			religion = ROOT
+			cost_multiplier = 0.75
+			female = no
+			[[power_type]
+			location = event_target:ate_possible_random_advisor_$power_type$_location
+			]
+		}
+	}
+	else_if = {
+		limit = {
+			OR = {
+				government_rank = 2
+				AND = {
+					NOT = { has_dlc = "Common Sense" }
+					total_development = 300
+				}
+			}
+		}
+		define_advisor = {
+			name = $name$
+			type = $type$
+			skill = 2
+			culture = ROOT
+			religion = ROOT
+			cost_multiplier = 0.75
+			female = no
+			[[power_type]
+			location = event_target:ate_possible_random_advisor_$power_type$_location
+			]
+		}
+	}
+	else = {
+		define_advisor = {
+			name = $name$
+			type = $type$
+			skill = 1
+			culture = ROOT
+			religion = ROOT
+			cost_multiplier = 0.75
+			female = no
+			[[power_type]
+			location = event_target:ate_possible_random_advisor_$power_type$_location
+			]
+		}
+	}
+}
+
+ate_clear_flags_for_possible_random_advisors = {
+	clear_saved_name = ate_possible_random_advisor_adm_name
+	clear_saved_name = ate_possible_random_advisor_dip_name
+	clear_saved_name = ate_possible_random_advisor_mil_name
+	# ADM
+	clr_country_flag = ate_possible_advisor_flag_artist
+	clr_country_flag = ate_possible_advisor_flag_inquisitor
+	clr_country_flag = ate_possible_advisor_flag_master_of_mint
+	clr_country_flag = ate_possible_advisor_flag_natural_scientist
+	clr_country_flag = ate_possible_advisor_flag_philosopher
+	clr_country_flag = ate_possible_advisor_flag_theologian
+	clr_country_flag = ate_possible_advisor_flag_treasurer
+	clr_country_flag = ate_possible_advisor_flag_ate_advisor_loyal_friend_adm
+	clr_country_flag = ate_possible_advisor_flag_ate_advisor_court_physician
+	clr_country_flag = ate_possible_advisor_flag_ate_advisor_cardinal
+	clr_country_flag = ate_possible_advisor_flag_ate_advisor_arch_bishop_catholic
+	clr_country_flag = ate_possible_advisor_flag_ate_advisor_arch_bishop_protestant
+	clr_country_flag = ate_possible_advisor_flag_ate_advisor_arch_bishop_reformed
+	clr_country_flag = ate_possible_advisor_flag_ate_advisor_feudal_tax_collector
+	clr_country_flag = ate_possible_advisor_flag_ate_advisor_architect
+	clr_country_flag = ate_possible_advisor_flag_ate_advisor_great_administrator
+	clr_country_flag = ate_possible_advisor_flag_ate_advisor_steward
+	clr_country_flag = ate_possible_advisor_flag_ate_advisor_administrative_genius
+	clr_country_flag = ate_possible_advisor_flag_ate_advisor_anti_corruption_officer
+	clr_country_flag = ate_possible_advisor_flag_ate_advisor_first_minister_monarchy
+	clr_country_flag = ate_possible_advisor_flag_ate_advisor_first_minister_theocracy
+	clr_country_flag = ate_possible_advisor_flag_ate_advisor_first_minister_republic
+	clr_country_flag = ate_possible_advisor_flag_ate_advisor_state_administrator
+	clr_country_flag = ate_possible_advisor_flag_ate_advisor_gold_digger
+	clr_country_flag = ate_possible_advisor_flag_ate_advisor_free_thinker
+	clr_country_flag = ate_possible_advisor_flag_ate_advisor_revolutionist
+	clr_country_flag = ate_possible_advisor_flag_ate_advisor_reformist
+	clr_country_flag = ate_possible_advisor_flag_ate_advisor_state_theorist
+	clr_country_flag = ate_possible_advisor_flag_ate_advisor_visionary
+	clr_country_flag = ate_possible_advisor_flag_ate_advisor_great_philosopher
+	clr_country_flag = ate_possible_advisor_flag_ate_advisor_arch_chamberlain
+	clr_country_flag = ate_possible_advisor_flag_ate_advisor_monk
+	clr_country_flag = ate_possible_advisor_flag_ate_advisor_brahmins_preacher
+	clr_country_flag = ate_possible_advisor_flag_ate_advisor_dhimmi_scholar
+	clr_country_flag = ate_possible_advisor_flag_ate_advisor_jains_bureaucrat
+	clr_country_flag = ate_possible_advisor_flag_ate_advisor_missionary
+	clr_country_flag = ate_possible_advisor_flag_ate_advisor_imperial_bureaucrat
+	clr_country_flag = ate_possible_advisor_flag_ate_advisor_imam
+	clr_country_flag = ate_possible_advisor_flag_ate_advisor_scholar
+	clr_country_flag = ate_possible_advisor_flag_ate_advisor_inventor
+	clr_country_flag = ate_possible_advisor_flag_ate_advisor_witch_hunter
+	# DIP
+	clr_country_flag = ate_possible_advisor_flag_colonial_governor
+	clr_country_flag = ate_possible_advisor_flag_diplomat
+	clr_country_flag = ate_possible_advisor_flag_naval_reformer
+	clr_country_flag = ate_possible_advisor_flag_navigator
+	clr_country_flag = ate_possible_advisor_flag_spymaster
+	clr_country_flag = ate_possible_advisor_flag_statesman
+	clr_country_flag = ate_possible_advisor_flag_trader
+	clr_country_flag = ate_possible_advisor_flag_ate_advisor_loyal_friend_dip
+	clr_country_flag = ate_possible_advisor_flag_ate_advisor_concubine_female
+	clr_country_flag = ate_possible_advisor_flag_ate_advisor_concubine_male
+	clr_country_flag = ate_possible_advisor_flag_ate_advisor_sailors_recruitmaster
+	clr_country_flag = ate_possible_advisor_flag_ate_advisor_blockade_specialist
+	clr_country_flag = ate_possible_advisor_flag_ate_advisor_pirate_captain
+	clr_country_flag = ate_possible_advisor_flag_ate_advisor_great_negotiator
+	clr_country_flag = ate_possible_advisor_flag_ate_advisor_vicegerent
+	clr_country_flag = ate_possible_advisor_flag_ate_advisor_traveling_salesman
+	clr_country_flag = ate_possible_advisor_flag_ate_advisor_naval_traditional_tactician
+	clr_country_flag = ate_possible_advisor_flag_ate_advisor_diplomatic_genius
+	clr_country_flag = ate_possible_advisor_flag_ate_advisor_cultural_commissioner
+	clr_country_flag = ate_possible_advisor_flag_ate_advisor_herald
+	clr_country_flag = ate_possible_advisor_flag_ate_advisor_arch_chancellor
+	clr_country_flag = ate_possible_advisor_flag_ate_advisor_envoy
+	clr_country_flag = ate_possible_advisor_flag_ate_advisor_vaisyas_peasant
+	clr_country_flag = ate_possible_advisor_flag_ate_advisor_guild_trader
+	clr_country_flag = ate_possible_advisor_flag_ate_advisor_historian
+	clr_country_flag = ate_possible_advisor_flag_ate_advisor_plantation_owner
+	clr_country_flag = ate_possible_advisor_flag_ate_advisor_galley_captain
+	clr_country_flag = ate_possible_advisor_flag_ate_advisor_galleon_captain
+	clr_country_flag = ate_possible_advisor_flag_ate_advisor_colonial_administrator
+	clr_country_flag = ate_possible_advisor_flag_ate_advisor_treasure_fleet_captain
+	# MIL
+	clr_country_flag = ate_possible_advisor_flag_army_organiser
+	clr_country_flag = ate_possible_advisor_flag_army_reformer
+	clr_country_flag = ate_possible_advisor_flag_commandant
+	clr_country_flag = ate_possible_advisor_flag_grand_captain
+	clr_country_flag = ate_possible_advisor_flag_recruitmaster
+	clr_country_flag = ate_possible_advisor_flag_fortification_expert
+	clr_country_flag = ate_possible_advisor_flag_quartermaster
+	clr_country_flag = ate_possible_advisor_flag_ate_advisor_loyal_friend_mil
+	clr_country_flag = ate_possible_advisor_flag_ate_advisor_feudal_lord
+	clr_country_flag = ate_possible_advisor_flag_ate_advisor_knight
+	clr_country_flag = ate_possible_advisor_flag_ate_advisor_traditional_tactician
+	clr_country_flag = ate_possible_advisor_flag_ate_advisor_landsknecht
+	clr_country_flag = ate_possible_advisor_flag_ate_advisor_mercenary_leader
+	clr_country_flag = ate_possible_advisor_flag_ate_advisor_lord_of_a_castle
+	clr_country_flag = ate_possible_advisor_flag_ate_advisor_noble_man
+	clr_country_flag = ate_possible_advisor_flag_ate_advisor_military_genius
+	clr_country_flag = ate_possible_advisor_flag_ate_advisor_siege_expert
+	clr_country_flag = ate_possible_advisor_flag_ate_advisor_master_of_artillery
+	clr_country_flag = ate_possible_advisor_flag_ate_advisor_looting_expert
+	clr_country_flag = ate_possible_advisor_flag_ate_advisor_marshal
+	clr_country_flag = ate_possible_advisor_flag_ate_advisor_arch_marshal
+	clr_country_flag = ate_possible_advisor_flag_ate_advisor_supply_expert
+	clr_country_flag = ate_possible_advisor_flag_ate_advisor_sergeant
+	clr_country_flag = ate_possible_advisor_flag_ate_advisor_maratha_warrior
+	clr_country_flag = ate_possible_advisor_flag_ate_advisor_gentleman
+	clr_country_flag = ate_possible_advisor_flag_ate_advisor_cossack
+	clr_country_flag = ate_possible_advisor_flag_ate_advisor_tribal_chieftain
+	clr_country_flag = ate_possible_advisor_flag_ate_advisor_rajputs_warrior
+	clr_country_flag = ate_possible_advisor_flag_ate_advisor_banneret
+}
+
+ate_generate_possible_random_advisor = {
+	[[adm]
+		if = {
+			limit = {
+				always = $adm$
+			}
+			random_owned_province = {
+				save_event_target_as = ate_possible_random_advisor_adm_location
+			}
+			set_saved_name = {
+				key = ate_possible_random_advisor_adm_name
+				type = advisor
+				scope = event_target:ate_possible_random_advisor_adm_location
+			}
+			random_list = {
+				1 = {
+					trigger = {
+						ate_can_get_advisor_in_event = { artist = yes }
+					}
+					set_country_flag = ate_possible_advisor_flag_artist
+				}
+				1 = {
+					trigger = {
+						ate_can_get_advisor_in_event = { inquisitor = yes }
+					}
+					set_country_flag = ate_possible_advisor_flag_inquisitor
+				}
+				1 = {
+					trigger = {
+						ate_can_get_advisor_in_event = { master_of_mint = yes }
+					}
+					set_country_flag = ate_possible_advisor_flag_master_of_mint
+				}
+				1 = {
+					trigger = {
+						ate_can_get_advisor_in_event = { natural_scientist = yes }
+					}
+					set_country_flag = ate_possible_advisor_flag_natural_scientist
+				}
+				1 = {
+					trigger = {
+						ate_can_get_advisor_in_event = { philosopher = yes }
+					}
+					set_country_flag = ate_possible_advisor_flag_philosopher
+				}
+				1 = {
+					trigger = {
+						ate_can_get_advisor_in_event = { theologian = yes }
+					}
+					set_country_flag = ate_possible_advisor_flag_theologian
+				}
+				1 = {
+					trigger = {
+						ate_can_get_advisor_in_event = { treasurer = yes }
+					}
+					set_country_flag = ate_possible_advisor_flag_treasurer
+				}
+				0.5 = {
+					trigger = {
+						ate_can_get_advisor_in_event = { ate_advisor_loyal_friend_adm = yes }
+					}
+					set_country_flag = ate_possible_advisor_flag_ate_advisor_loyal_friend_adm
+				}
+				1 = {
+					trigger = {
+						ate_can_get_advisor_in_event = { ate_advisor_court_physician = yes }
+					}
+					set_country_flag = ate_possible_advisor_flag_ate_advisor_court_physician
+				}
+				1 = {
+					trigger = {
+						ate_can_get_advisor_in_event = { ate_advisor_cardinal = yes }
+					}
+					set_country_flag = ate_possible_advisor_flag_ate_advisor_cardinal
+				}
+				1 = {
+					trigger = {
+						ate_can_get_advisor_in_event = { ate_advisor_arch_bishop_catholic = yes }
+					}
+					set_country_flag = ate_possible_advisor_flag_ate_advisor_arch_bishop_catholic
+				}
+				1 = {
+					trigger = {
+						ate_can_get_advisor_in_event = { ate_advisor_arch_bishop_protestant = yes }
+					}
+					set_country_flag = ate_possible_advisor_flag_ate_advisor_arch_bishop_protestant
+				}
+				1 = {
+					trigger = {
+						ate_can_get_advisor_in_event = { ate_advisor_arch_bishop_reformed = yes }
+					}
+					set_country_flag = ate_possible_advisor_flag_ate_advisor_arch_bishop_reformed
+				}
+				1 = {
+					trigger = {
+						ate_can_get_advisor_in_event = { ate_advisor_feudal_tax_collector = yes }
+					}
+					set_country_flag = ate_possible_advisor_flag_ate_advisor_feudal_tax_collector
+				}
+				1 = {
+					trigger = {
+						ate_can_get_advisor_in_event = { ate_advisor_architect = yes }
+					}
+					set_country_flag = ate_possible_advisor_flag_ate_advisor_architect
+				}
+				1 = {
+					trigger = {
+						ate_can_get_advisor_in_event = { ate_advisor_great_administrator = yes }
+					}
+					set_country_flag = ate_possible_advisor_flag_ate_advisor_great_administrator
+				}
+				1 = {
+					trigger = {
+						ate_can_get_advisor_in_event = { ate_advisor_steward = yes }
+					}
+					set_country_flag = ate_possible_advisor_flag_ate_advisor_steward
+				}
+				0.95 = {
+					trigger = {
+						ate_can_get_advisor_in_event = { ate_advisor_administrative_genius = yes }
+					}
+					set_country_flag = ate_possible_advisor_flag_ate_advisor_administrative_genius
+				}
+				1 = {
+					trigger = {
+						ate_can_get_advisor_in_event = { ate_advisor_anti_corruption_officer = yes }
+					}
+					set_country_flag = ate_possible_advisor_flag_ate_advisor_anti_corruption_officer
+				}
+				1 = {
+					trigger = {
+						ate_can_get_advisor_in_event = { ate_advisor_first_minister_monarchy = yes }
+					}
+					set_country_flag = ate_possible_advisor_flag_ate_advisor_first_minister_monarchy
+				}
+				1 = {
+					trigger = {
+						ate_can_get_advisor_in_event = { ate_advisor_first_minister_theocracy = yes }
+					}
+					set_country_flag = ate_possible_advisor_flag_ate_advisor_first_minister_theocracy
+				}
+				1 = {
+					trigger = {
+						ate_can_get_advisor_in_event = { ate_advisor_first_minister_republic = yes }
+					}
+					set_country_flag = ate_possible_advisor_flag_ate_advisor_first_minister_republic
+				}
+				1 = {
+					trigger = {
+						ate_can_get_advisor_in_event = { ate_advisor_state_administrator = yes }
+					}
+					set_country_flag = ate_possible_advisor_flag_ate_advisor_state_administrator
+				}
+				1 = {
+					trigger = {
+						ate_can_get_advisor_in_event = { ate_advisor_gold_digger = yes }
+					}
+					set_country_flag = ate_possible_advisor_flag_ate_advisor_gold_digger
+				}
+				0.95 = {
+					trigger = {
+						ate_can_get_advisor_in_event = { ate_advisor_free_thinker = yes }
+					}
+					set_country_flag = ate_possible_advisor_flag_ate_advisor_free_thinker
+				}
+				1 = {
+					trigger = {
+						ate_can_get_advisor_in_event = { ate_advisor_revolutionist = yes }
+					}
+					set_country_flag = ate_possible_advisor_flag_ate_advisor_revolutionist
+				}
+				1 = {
+					trigger = {
+						ate_can_get_advisor_in_event = { ate_advisor_reformist = yes }
+					}
+					set_country_flag = ate_possible_advisor_flag_ate_advisor_reformist
+				}
+				1 = {
+					trigger = {
+						ate_can_get_advisor_in_event = { ate_advisor_state_theorist = yes }
+					}
+					set_country_flag = ate_possible_advisor_flag_ate_advisor_state_theorist
+				}
+				1 = {
+					trigger = {
+						ate_can_get_advisor_in_event = { ate_advisor_visionary = yes }
+					}
+					set_country_flag = ate_possible_advisor_flag_ate_advisor_visionary
+				}
+				1 = {
+					trigger = {
+						ate_can_get_advisor_in_event = { ate_advisor_great_philosopher = yes }
+					}
+					set_country_flag = ate_possible_advisor_flag_ate_advisor_great_philosopher
+				}
+				1 = {
+					trigger = {
+						ate_can_get_advisor_in_event = { ate_advisor_arch_chamberlain = yes }
+					}
+					set_country_flag = ate_possible_advisor_flag_ate_advisor_arch_chamberlain
+				}
+				1 = {
+					trigger = {
+						ate_can_get_advisor_in_event = { ate_advisor_monk = yes }
+					}
+					set_country_flag = ate_possible_advisor_flag_ate_advisor_monk
+				}
+				1 = {
+					trigger = {
+						ate_can_get_advisor_in_event = { ate_advisor_brahmins_preacher = yes }
+					}
+					set_country_flag = ate_possible_advisor_flag_ate_advisor_brahmins_preacher
+				}
+				1 = {
+					trigger = {
+						ate_can_get_advisor_in_event = { ate_advisor_dhimmi_scholar = yes }
+					}
+					set_country_flag = ate_possible_advisor_flag_ate_advisor_dhimmi_scholar
+				}
+				1 = {
+					trigger = {
+						ate_can_get_advisor_in_event = { ate_advisor_jains_bureaucrat = yes }
+					}
+					set_country_flag = ate_possible_advisor_flag_ate_advisor_jains_bureaucrat
+				}
+				1 = {
+					trigger = {
+						ate_can_get_advisor_in_event = { ate_advisor_missionary = yes }
+					}
+					set_country_flag = ate_possible_advisor_flag_ate_advisor_missionary
+				}
+				1 = {
+					trigger = {
+						ate_can_get_advisor_in_event = { ate_advisor_imperial_bureaucrat = yes }
+					}
+					set_country_flag = ate_possible_advisor_flag_ate_advisor_imperial_bureaucrat
+				}
+				1 = {
+					trigger = {
+						ate_can_get_advisor_in_event = { ate_advisor_imam = yes }
+					}
+					set_country_flag = ate_possible_advisor_flag_ate_advisor_imam
+				}
+				1 = {
+					trigger = {
+						ate_can_get_advisor_in_event = { ate_advisor_scholar = yes }
+					}
+					set_country_flag = ate_possible_advisor_flag_ate_advisor_scholar
+				}
+				1 = {
+					trigger = {
+						ate_can_get_advisor_in_event = { ate_advisor_inventor = yes }
+					}
+					set_country_flag = ate_possible_advisor_flag_ate_advisor_inventor
+				}
+				1 = {
+					trigger = {
+						ate_can_get_advisor_in_event = { ate_advisor_witch_hunter = yes }
+					}
+					set_country_flag = ate_possible_advisor_flag_ate_advisor_witch_hunter
+				}
+			}
+		}
+	]
+	[[dip]
+		if = {
+			limit = {
+				always = $dip$
+			}
+			random_owned_province = {
+				save_event_target_as = ate_possible_random_advisor_dip_location
+			}
+			set_saved_name = {
+				key = ate_possible_random_advisor_dip_name
+				type = advisor
+				scope = event_target:ate_possible_random_advisor_dip_location
+			}
+			random_list = {
+				1 = {
+					trigger = {
+						ate_can_get_advisor_in_event = { colonial_governor = yes }
+					}
+					set_country_flag = ate_possible_advisor_flag_colonial_governor
+				}
+				1 = {
+					trigger = {
+						ate_can_get_advisor_in_event = { diplomat = yes }
+					}
+					set_country_flag = ate_possible_advisor_flag_diplomat
+				}
+				1 = {
+					trigger = {
+						ate_can_get_advisor_in_event = { naval_reformer = yes }
+					}
+					set_country_flag = ate_possible_advisor_flag_naval_reformer
+				}
+				1 = {
+					trigger = {
+						ate_can_get_advisor_in_event = { navigator = yes }
+					}
+					set_country_flag = ate_possible_advisor_flag_navigator
+				}
+				1 = {
+					trigger = {
+						ate_can_get_advisor_in_event = { spymaster = yes }
+					}
+					set_country_flag = ate_possible_advisor_flag_spymaster
+				}
+				1 = {
+					trigger = {
+						ate_can_get_advisor_in_event = { statesman = yes }
+					}
+					set_country_flag = ate_possible_advisor_flag_statesman
+				}
+				1 = {
+					trigger = {
+						ate_can_get_advisor_in_event = { trader = yes }
+					}
+					set_country_flag = ate_possible_advisor_flag_trader
+				}
+				0.5 = {
+					trigger = {
+						ate_can_get_advisor_in_event = { ate_advisor_loyal_friend_dip = yes }
+					}
+					set_country_flag = ate_possible_advisor_flag_ate_advisor_loyal_friend_dip
+				}
+				1 = {
+					trigger = {
+						ate_can_get_advisor_in_event = { ate_advisor_concubine_female = yes }
+					}
+					set_country_flag = ate_possible_advisor_flag_ate_advisor_concubine_female
+				}
+				1 = {
+					trigger = {
+						ate_can_get_advisor_in_event = { ate_advisor_concubine_male = yes }
+					}
+					set_country_flag = ate_possible_advisor_flag_ate_advisor_concubine_male
+				}
+				1 = {
+					trigger = {
+						ate_can_get_advisor_in_event = { ate_advisor_sailors_recruitmaster = yes }
+					}
+					set_country_flag = ate_possible_advisor_flag_ate_advisor_sailors_recruitmaster
+				}
+				1 = {
+					trigger = {
+						ate_can_get_advisor_in_event = { ate_advisor_blockade_specialist = yes }
+					}
+					set_country_flag = ate_possible_advisor_flag_ate_advisor_blockade_specialist
+				}
+				1 = {
+					trigger = {
+						ate_can_get_advisor_in_event = { ate_advisor_pirate_captain = yes }
+					}
+					set_country_flag = ate_possible_advisor_flag_ate_advisor_pirate_captain
+				}
+				1 = {
+					trigger = {
+						ate_can_get_advisor_in_event = { ate_advisor_great_negotiator = yes }
+					}
+					set_country_flag = ate_possible_advisor_flag_ate_advisor_great_negotiator
+				}
+				1 = {
+					trigger = {
+						ate_can_get_advisor_in_event = { ate_advisor_vicegerent = yes }
+					}
+					set_country_flag = ate_possible_advisor_flag_ate_advisor_vicegerent
+				}
+				1 = {
+					trigger = {
+						ate_can_get_advisor_in_event = { ate_advisor_traveling_salesman = yes }
+					}
+					set_country_flag = ate_possible_advisor_flag_ate_advisor_traveling_salesman
+				}
+				1 = {
+					trigger = {
+						ate_can_get_advisor_in_event = { ate_advisor_naval_traditional_tactician = yes }
+					}
+					set_country_flag = ate_possible_advisor_flag_ate_advisor_naval_traditional_tactician
+				}
+				0.95 = {
+					trigger = {
+						ate_can_get_advisor_in_event = { ate_advisor_diplomatic_genius = yes }
+					}
+					set_country_flag = ate_possible_advisor_flag_ate_advisor_diplomatic_genius
+				}
+				1 = {
+					trigger = {
+						ate_can_get_advisor_in_event = { ate_advisor_cultural_commissioner = yes }
+					}
+					set_country_flag = ate_possible_advisor_flag_ate_advisor_cultural_commissioner
+				}
+				1 = {
+					trigger = {
+						ate_can_get_advisor_in_event = { ate_advisor_herald = yes }
+					}
+					set_country_flag = ate_possible_advisor_flag_ate_advisor_herald
+				}
+				1 = {
+					trigger = {
+						ate_can_get_advisor_in_event = { ate_advisor_arch_chancellor = yes }
+					}
+					set_country_flag = ate_possible_advisor_flag_ate_advisor_arch_chancellor
+				}
+				1 = {
+					trigger = {
+						ate_can_get_advisor_in_event = { ate_advisor_envoy = yes }
+					}
+					set_country_flag = ate_possible_advisor_flag_ate_advisor_envoy
+				}
+				1 = {
+					trigger = {
+						ate_can_get_advisor_in_event = { ate_advisor_vaisyas_peasant = yes }
+					}
+					set_country_flag = ate_possible_advisor_flag_ate_advisor_vaisyas_peasant
+				}
+				1 = {
+					trigger = {
+						ate_can_get_advisor_in_event = { ate_advisor_guild_trader = yes }
+					}
+					set_country_flag = ate_possible_advisor_flag_ate_advisor_guild_trader
+				}
+				1 = {
+					trigger = {
+						ate_can_get_advisor_in_event = { ate_advisor_historian = yes }
+					}
+					set_country_flag = ate_possible_advisor_flag_ate_advisor_historian
+				}
+				1 = {
+					trigger = {
+						ate_can_get_advisor_in_event = { ate_advisor_plantation_owner = yes }
+					}
+					set_country_flag = ate_possible_advisor_flag_ate_advisor_plantation_owner
+				}
+				1 = {
+					trigger = {
+						ate_can_get_advisor_in_event = { ate_advisor_galley_captain = yes }
+					}
+					set_country_flag = ate_possible_advisor_flag_ate_advisor_galley_captain
+				}
+				1 = {
+					trigger = {
+						ate_can_get_advisor_in_event = { ate_advisor_galleon_captain = yes }
+					}
+					set_country_flag = ate_possible_advisor_flag_ate_advisor_galleon_captain
+				}
+				1 = {
+					trigger = {
+						ate_can_get_advisor_in_event = { ate_advisor_colonial_administrator = yes }
+					}
+					set_country_flag = ate_possible_advisor_flag_ate_advisor_colonial_administrator
+				}
+				0.9 = {
+					trigger = {
+						ate_can_get_advisor_in_event = { ate_advisor_treasure_fleet_captain = yes }
+					}
+					set_country_flag = ate_possible_advisor_flag_ate_advisor_treasure_fleet_captain
+				}
+			}
+		}
+	]
+	[[mil]
+		if = {
+			limit = {
+				always = $mil$
+			}
+			random_owned_province = {
+				save_event_target_as = ate_possible_random_advisor_mil_location
+			}
+			set_saved_name = {
+				key = ate_possible_random_advisor_mil_name
+				type = advisor
+				scope = event_target:ate_possible_random_advisor_mil_location
+			}
+			random_list = {
+				1 = {
+					trigger = {
+						ate_can_get_advisor_in_event = { army_organiser = yes }
+					}
+					set_country_flag = ate_possible_advisor_flag_army_organiser
+				}
+				1 = {
+					trigger = {
+						ate_can_get_advisor_in_event = { army_reformer = yes }
+					}
+					set_country_flag = ate_possible_advisor_flag_army_reformer
+				}
+				1 = {
+					trigger = {
+						ate_can_get_advisor_in_event = { commandant = yes }
+					}
+					set_country_flag = ate_possible_advisor_flag_commandant
+				}
+				1 = {
+					trigger = {
+						ate_can_get_advisor_in_event = { grand_captain = yes }
+					}
+					set_country_flag = ate_possible_advisor_flag_grand_captain
+				}
+				1 = {
+					trigger = {
+						ate_can_get_advisor_in_event = { recruitmaster = yes }
+					}
+					set_country_flag = ate_possible_advisor_flag_recruitmaster
+				}
+				1 = {
+					trigger = {
+						ate_can_get_advisor_in_event = { fortification_expert = yes }
+					}
+					set_country_flag = ate_possible_advisor_flag_fortification_expert
+				}
+				1 = {
+					trigger = {
+						ate_can_get_advisor_in_event = { quartermaster = yes }
+					}
+					set_country_flag = ate_possible_advisor_flag_quartermaster
+				}
+				0.5 = {
+					trigger = {
+						ate_can_get_advisor_in_event = { ate_advisor_loyal_friend_mil = yes }
+					}
+					set_country_flag = ate_possible_advisor_flag_ate_advisor_loyal_friend_mil
+				}
+				1 = {
+					trigger = {
+						ate_can_get_advisor_in_event = { ate_advisor_feudal_lord = yes }
+					}
+					set_country_flag = ate_possible_advisor_flag_ate_advisor_feudal_lord
+				}
+				1 = {
+					trigger = {
+						ate_can_get_advisor_in_event = { ate_advisor_knight = yes }
+					}
+					set_country_flag = ate_possible_advisor_flag_ate_advisor_knight
+				}
+				1 = {
+					trigger = {
+						ate_can_get_advisor_in_event = { ate_advisor_traditional_tactician = yes }
+					}
+					set_country_flag = ate_possible_advisor_flag_ate_advisor_traditional_tactician
+				}
+				1 = {
+					trigger = {
+						ate_can_get_advisor_in_event = { ate_advisor_landsknecht = yes }
+					}
+					set_country_flag = ate_possible_advisor_flag_ate_advisor_landsknecht
+				}
+				1 = {
+					trigger = {
+						ate_can_get_advisor_in_event = { ate_advisor_mercenary_leader = yes }
+					}
+					set_country_flag = ate_possible_advisor_flag_ate_advisor_mercenary_leader
+				}
+				1 = {
+					trigger = {
+						ate_can_get_advisor_in_event = { ate_advisor_lord_of_a_castle = yes }
+					}
+					set_country_flag = ate_possible_advisor_flag_ate_advisor_lord_of_a_castle
+				}
+				1 = {
+					trigger = {
+						ate_can_get_advisor_in_event = { ate_advisor_noble_man = yes }
+					}
+					set_country_flag = ate_possible_advisor_flag_ate_advisor_noble_man
+				}
+				0.95 = {
+					trigger = {
+						ate_can_get_advisor_in_event = { ate_advisor_military_genius = yes }
+					}
+					set_country_flag = ate_possible_advisor_flag_ate_advisor_military_genius
+				}
+				1 = {
+					trigger = {
+						ate_can_get_advisor_in_event = { ate_advisor_siege_expert = yes }
+					}
+					set_country_flag = ate_possible_advisor_flag_ate_advisor_siege_expert
+				}
+				1 = {
+					trigger = {
+						ate_can_get_advisor_in_event = { ate_advisor_master_of_artillery = yes }
+					}
+					set_country_flag = ate_possible_advisor_flag_ate_advisor_master_of_artillery
+				}
+				1 = {
+					trigger = {
+						ate_can_get_advisor_in_event = { ate_advisor_looting_expert = yes }
+					}
+					set_country_flag = ate_possible_advisor_flag_ate_advisor_looting_expert
+				}
+				1 = {
+					trigger = {
+						ate_can_get_advisor_in_event = { ate_advisor_marshal = yes }
+					}
+					set_country_flag = ate_possible_advisor_flag_ate_advisor_marshal
+				}
+				1 = {
+					trigger = {
+						ate_can_get_advisor_in_event = { ate_advisor_arch_marshal = yes }
+					}
+					set_country_flag = ate_possible_advisor_flag_ate_advisor_arch_marshal
+				}
+				1 = {
+					trigger = {
+						ate_can_get_advisor_in_event = { ate_advisor_supply_expert = yes }
+					}
+					set_country_flag = ate_possible_advisor_flag_ate_advisor_supply_expert
+				}
+				1 = {
+					trigger = {
+						ate_can_get_advisor_in_event = { ate_advisor_sergeant = yes }
+					}
+					set_country_flag = ate_possible_advisor_flag_ate_advisor_sergeant
+				}
+				1 = {
+					trigger = {
+						ate_can_get_advisor_in_event = { ate_advisor_maratha_warrior = yes }
+					}
+					set_country_flag = ate_possible_advisor_flag_ate_advisor_maratha_warrior
+				}
+				1 = {
+					trigger = {
+						ate_can_get_advisor_in_event = { ate_advisor_gentleman = yes }
+					}
+					set_country_flag = ate_possible_advisor_flag_ate_advisor_gentleman
+				}
+				1 = {
+					trigger = {
+						ate_can_get_advisor_in_event = { ate_advisor_cossack = yes }
+					}
+					set_country_flag = ate_possible_advisor_flag_ate_advisor_cossack
+				}
+				1 = {
+					trigger = {
+						ate_can_get_advisor_in_event = { ate_advisor_tribal_chieftain = yes }
+					}
+					set_country_flag = ate_possible_advisor_flag_ate_advisor_tribal_chieftain
+				}
+				1 = {
+					trigger = {
+						ate_can_get_advisor_in_event = { ate_advisor_rajputs_warrior = yes }
+					}
+					set_country_flag = ate_possible_advisor_flag_ate_advisor_rajputs_warrior
+				}
+				1 = {
+					trigger = {
+						ate_can_get_advisor_in_event = { ate_advisor_banneret = yes }
+					}
+					set_country_flag = ate_possible_advisor_flag_ate_advisor_banneret
+				}
+			}
+		}
+	]
+}
+
+ate_give_possible_random_advisor = {
+	[[adm]
+		if = {
+			limit = {
+				always = $adm$
+			}
+			trigger_switch = {
+				on_trigger = has_country_flag
+				ate_possible_advisor_flag_artist = {
+					ate_give_advisor_based_on_gov_rank = {
+						name = ate_possible_random_advisor_adm_name
+						power_type = adm
+						type = artist
+					}
+				}
+				ate_possible_advisor_flag_inquisitor = {
+					ate_give_advisor_based_on_gov_rank = {
+						name = ate_possible_random_advisor_adm_name
+						power_type = adm
+						type = inquisitor
+					}
+				}
+				ate_possible_advisor_flag_master_of_mint = {
+					ate_give_advisor_based_on_gov_rank = {
+						name = ate_possible_random_advisor_adm_name
+						power_type = adm
+						type = master_of_mint
+					}
+				}
+				ate_possible_advisor_flag_natural_scientist = {
+					ate_give_advisor_based_on_gov_rank = {
+						name = ate_possible_random_advisor_adm_name
+						power_type = adm
+						type = natural_scientist
+					}
+				}
+				ate_possible_advisor_flag_philosopher = {
+					ate_give_advisor_based_on_gov_rank = {
+						name = ate_possible_random_advisor_adm_name
+						power_type = adm
+						type = philosopher
+					}
+				}
+				ate_possible_advisor_flag_theologian = {
+					ate_give_advisor_based_on_gov_rank = {
+						name = ate_possible_random_advisor_adm_name
+						power_type = adm
+						type = theologian
+					}
+				}
+				ate_possible_advisor_flag_treasurer = {
+					ate_give_advisor_based_on_gov_rank = {
+						name = ate_possible_random_advisor_adm_name
+						power_type = adm
+						type = treasurer
+					}
+				}
+				ate_possible_advisor_flag_ate_advisor_loyal_friend_adm = {
+					ate_give_advisor_based_on_gov_rank = {
+						name = ate_possible_random_advisor_adm_name
+						power_type = adm
+						type = ate_advisor_loyal_friend_adm
+					}
+				}
+				ate_possible_advisor_flag_ate_advisor_court_physician = {
+					ate_give_advisor_based_on_gov_rank = {
+						name = ate_possible_random_advisor_adm_name
+						power_type = adm
+						type = ate_advisor_court_physician
+					}
+				}
+				ate_possible_advisor_flag_ate_advisor_cardinal = {
+					ate_give_advisor_based_on_gov_rank = {
+						name = ate_possible_random_advisor_adm_name
+						power_type = adm
+						type = ate_advisor_cardinal
+					}
+				}
+				ate_possible_advisor_flag_ate_advisor_arch_bishop_catholic = {
+					ate_give_advisor_based_on_gov_rank = {
+						name = ate_possible_random_advisor_adm_name
+						power_type = adm
+						type = ate_advisor_arch_bishop_catholic
+					}
+				}
+				ate_possible_advisor_flag_ate_advisor_arch_bishop_protestant = {
+					ate_give_advisor_based_on_gov_rank = {
+						name = ate_possible_random_advisor_adm_name
+						power_type = adm
+						type = ate_advisor_arch_bishop_protestant
+					}
+				}
+				ate_possible_advisor_flag_ate_advisor_arch_bishop_reformed = {
+					ate_give_advisor_based_on_gov_rank = {
+						name = ate_possible_random_advisor_adm_name
+						power_type = adm
+						type = ate_advisor_arch_bishop_reformed
+					}
+				}
+				ate_possible_advisor_flag_ate_advisor_feudal_tax_collector = {
+					ate_give_advisor_based_on_gov_rank = {
+						name = ate_possible_random_advisor_adm_name
+						power_type = adm
+						type = ate_advisor_feudal_tax_collector
+					}
+				}
+				ate_possible_advisor_flag_ate_advisor_architect = {
+					ate_give_advisor_based_on_gov_rank = {
+						name = ate_possible_random_advisor_adm_name
+						power_type = adm
+						type = ate_advisor_architect
+					}
+				}
+				ate_possible_advisor_flag_ate_advisor_great_administrator = {
+					ate_give_advisor_based_on_gov_rank = {
+						name = ate_possible_random_advisor_adm_name
+						power_type = adm
+						type = ate_advisor_great_administrator
+					}
+				}
+				ate_possible_advisor_flag_ate_advisor_steward = {
+					ate_give_advisor_based_on_gov_rank = {
+						name = ate_possible_random_advisor_adm_name
+						power_type = adm
+						type = ate_advisor_steward
+					}
+				}
+				ate_possible_advisor_flag_ate_advisor_administrative_genius = {
+					ate_give_advisor_based_on_gov_rank = {
+						name = ate_possible_random_advisor_adm_name
+						power_type = adm
+						type = ate_advisor_administrative_genius
+					}
+				}
+				ate_possible_advisor_flag_ate_advisor_anti_corruption_officer = {
+					ate_give_advisor_based_on_gov_rank = {
+						name = ate_possible_random_advisor_adm_name
+						power_type = adm
+						type = ate_advisor_anti_corruption_officer
+					}
+				}
+				ate_possible_advisor_flag_ate_advisor_first_minister_monarchy = {
+					ate_give_advisor_based_on_gov_rank = {
+						name = ate_possible_random_advisor_adm_name
+						power_type = adm
+						type = ate_advisor_first_minister_monarchy
+					}
+				}
+				ate_possible_advisor_flag_ate_advisor_first_minister_theocracy = {
+					ate_give_advisor_based_on_gov_rank = {
+						name = ate_possible_random_advisor_adm_name
+						power_type = adm
+						type = ate_advisor_first_minister_theocracy
+					}
+				}
+				ate_possible_advisor_flag_ate_advisor_first_minister_republic = {
+					ate_give_advisor_based_on_gov_rank = {
+						name = ate_possible_random_advisor_adm_name
+						power_type = adm
+						type = ate_advisor_first_minister_republic
+					}
+				}
+				ate_possible_advisor_flag_ate_advisor_state_administrator = {
+					ate_give_advisor_based_on_gov_rank = {
+						name = ate_possible_random_advisor_adm_name
+						power_type = adm
+						type = ate_advisor_state_administrator
+					}
+				}
+				ate_possible_advisor_flag_ate_advisor_gold_digger = {
+					ate_give_advisor_based_on_gov_rank = {
+						name = ate_possible_random_advisor_adm_name
+						power_type = adm
+						type = ate_advisor_gold_digger
+					}
+				}
+				ate_possible_advisor_flag_ate_advisor_free_thinker = {
+					ate_give_advisor_based_on_gov_rank = {
+						name = ate_possible_random_advisor_adm_name
+						power_type = adm
+						type = ate_advisor_free_thinker
+					}
+				}
+				ate_possible_advisor_flag_ate_advisor_revolutionist = {
+					ate_give_advisor_based_on_gov_rank = {
+						name = ate_possible_random_advisor_adm_name
+						power_type = adm
+						type = ate_advisor_revolutionist
+					}
+				}
+				ate_possible_advisor_flag_ate_advisor_reformist = {
+					ate_give_advisor_based_on_gov_rank = {
+						name = ate_possible_random_advisor_adm_name
+						power_type = adm
+						type = ate_advisor_reformist
+					}
+				}
+				ate_possible_advisor_flag_ate_advisor_state_theorist = {
+					ate_give_advisor_based_on_gov_rank = {
+						name = ate_possible_random_advisor_adm_name
+						power_type = adm
+						type = ate_advisor_state_theorist
+					}
+				}
+				ate_possible_advisor_flag_ate_advisor_visionary = {
+					ate_give_advisor_based_on_gov_rank = {
+						name = ate_possible_random_advisor_adm_name
+						power_type = adm
+						type = ate_advisor_visionary
+					}
+				}
+				ate_possible_advisor_flag_ate_advisor_great_philosopher = {
+					ate_give_advisor_based_on_gov_rank = {
+						name = ate_possible_random_advisor_adm_name
+						power_type = adm
+						type = ate_advisor_great_philosopher
+					}
+				}
+				ate_possible_advisor_flag_ate_advisor_arch_chamberlain = {
+					ate_give_advisor_based_on_gov_rank = {
+						name = ate_possible_random_advisor_adm_name
+						power_type = adm
+						type = ate_advisor_arch_chamberlain
+					}
+				}
+				ate_possible_advisor_flag_ate_advisor_monk = {
+					ate_give_advisor_based_on_gov_rank = {
+						name = ate_possible_random_advisor_adm_name
+						power_type = adm
+						type = ate_advisor_monk
+					}
+				}
+				ate_possible_advisor_flag_ate_advisor_brahmins_preacher = {
+					ate_give_advisor_based_on_gov_rank = {
+						name = ate_possible_random_advisor_adm_name
+						power_type = adm
+						type = ate_advisor_brahmins_preacher
+					}
+				}
+				ate_possible_advisor_flag_ate_advisor_dhimmi_scholar = {
+					ate_give_advisor_based_on_gov_rank = {
+						name = ate_possible_random_advisor_adm_name
+						power_type = adm
+						type = ate_advisor_dhimmi_scholar
+					}
+				}
+				ate_possible_advisor_flag_ate_advisor_jains_bureaucrat = {
+					ate_give_advisor_based_on_gov_rank = {
+						name = ate_possible_random_advisor_adm_name
+						power_type = adm
+						type = ate_advisor_jains_bureaucrat
+					}
+				}
+				ate_possible_advisor_flag_ate_advisor_missionary = {
+					ate_give_advisor_based_on_gov_rank = {
+						name = ate_possible_random_advisor_adm_name
+						power_type = adm
+						type = ate_advisor_missionary
+					}
+				}
+				ate_possible_advisor_flag_ate_advisor_imperial_bureaucrat = {
+					ate_give_advisor_based_on_gov_rank = {
+						name = ate_possible_random_advisor_adm_name
+						power_type = adm
+						type = ate_advisor_imperial_bureaucrat
+					}
+				}
+				ate_possible_advisor_flag_ate_advisor_imam = {
+					ate_give_advisor_based_on_gov_rank = {
+						name = ate_possible_random_advisor_adm_name
+						power_type = adm
+						type = ate_advisor_imam
+					}
+				}
+				ate_possible_advisor_flag_ate_advisor_scholar = {
+					ate_give_advisor_based_on_gov_rank = {
+						name = ate_possible_random_advisor_adm_name
+						power_type = adm
+						type = ate_advisor_scholar
+					}
+				}
+				ate_possible_advisor_flag_ate_advisor_inventor = {
+					ate_give_advisor_based_on_gov_rank = {
+						name = ate_possible_random_advisor_adm_name
+						power_type = adm
+						type = ate_advisor_inventor
+					}
+				}
+				ate_possible_advisor_flag_ate_advisor_witch_hunter = {
+					ate_give_advisor_based_on_gov_rank = {
+						name = ate_possible_random_advisor_adm_name
+						power_type = adm
+						type = ate_advisor_witch_hunter
+					}
+				}
+			}
+		}
+	]
+	[[dip]
+		if = {
+			limit = {
+				always = $dip$
+			}
+			trigger_switch = {
+				on_trigger = has_country_flag
+				ate_possible_advisor_flag_colonial_governor = {
+					ate_give_advisor_based_on_gov_rank = {
+						name = ate_possible_random_advisor_dip_name
+						power_type = dip
+						type = colonial_governor
+					}
+				}
+				ate_possible_advisor_flag_diplomat = {
+					ate_give_advisor_based_on_gov_rank = {
+						name = ate_possible_random_advisor_dip_name
+						power_type = dip
+						type = diplomat
+					}
+				}
+				ate_possible_advisor_flag_naval_reformer = {
+					ate_give_advisor_based_on_gov_rank = {
+						name = ate_possible_random_advisor_dip_name
+						power_type = dip
+						type = naval_reformer
+					}
+				}
+				ate_possible_advisor_flag_navigator = {
+					ate_give_advisor_based_on_gov_rank = {
+						name = ate_possible_random_advisor_dip_name
+						power_type = dip
+						type = navigator
+					}
+				}
+				ate_possible_advisor_flag_spymaster = {
+					ate_give_advisor_based_on_gov_rank = {
+						name = ate_possible_random_advisor_dip_name
+						power_type = dip
+						type = spymaster
+					}
+				}
+				ate_possible_advisor_flag_statesman = {
+					ate_give_advisor_based_on_gov_rank = {
+						name = ate_possible_random_advisor_dip_name
+						power_type = dip
+						type = statesman
+					}
+				}
+				ate_possible_advisor_flag_trader = {
+					ate_give_advisor_based_on_gov_rank = {
+						name = ate_possible_random_advisor_dip_name
+						power_type = dip
+						type = trader
+					}
+				}
+				ate_possible_advisor_flag_ate_advisor_loyal_friend_dip = {
+					ate_give_advisor_based_on_gov_rank = {
+						name = ate_possible_random_advisor_dip_name
+						power_type = dip
+						type = ate_advisor_loyal_friend_dip
+					}
+				}
+				ate_possible_advisor_flag_ate_advisor_concubine_female = {
+					ate_give_advisor_based_on_gov_rank = {
+						name = ate_possible_random_advisor_dip_name
+						power_type = dip
+						type = ate_advisor_concubine_female
+					}
+				}
+				ate_possible_advisor_flag_ate_advisor_concubine_male = {
+					ate_give_advisor_based_on_gov_rank = {
+						name = ate_possible_random_advisor_dip_name
+						power_type = dip
+						type = ate_advisor_concubine_male
+					}
+				}
+				ate_possible_advisor_flag_ate_advisor_sailors_recruitmaster = {
+					ate_give_advisor_based_on_gov_rank = {
+						name = ate_possible_random_advisor_dip_name
+						power_type = dip
+						type = ate_advisor_sailors_recruitmaster
+					}
+				}
+				ate_possible_advisor_flag_ate_advisor_blockade_specialist = {
+					ate_give_advisor_based_on_gov_rank = {
+						name = ate_possible_random_advisor_dip_name
+						power_type = dip
+						type = ate_advisor_blockade_specialist
+					}
+				}
+				ate_possible_advisor_flag_ate_advisor_pirate_captain = {
+					ate_give_advisor_based_on_gov_rank = {
+						name = ate_possible_random_advisor_dip_name
+						power_type = dip
+						type = ate_advisor_pirate_captain
+					}
+				}
+				ate_possible_advisor_flag_ate_advisor_great_negotiator = {
+					ate_give_advisor_based_on_gov_rank = {
+						name = ate_possible_random_advisor_dip_name
+						power_type = dip
+						type = ate_advisor_great_negotiator
+					}
+				}
+				ate_possible_advisor_flag_ate_advisor_vicegerent = {
+					ate_give_advisor_based_on_gov_rank = {
+						name = ate_possible_random_advisor_dip_name
+						power_type = dip
+						type = ate_advisor_vicegerent
+					}
+				}
+				ate_possible_advisor_flag_ate_advisor_traveling_salesman = {
+					ate_give_advisor_based_on_gov_rank = {
+						name = ate_possible_random_advisor_dip_name
+						power_type = dip
+						type = ate_advisor_traveling_salesman
+					}
+				}
+				ate_possible_advisor_flag_ate_advisor_naval_traditional_tactician = {
+					ate_give_advisor_based_on_gov_rank = {
+						name = ate_possible_random_advisor_dip_name
+						power_type = dip
+						type = ate_advisor_naval_traditional_tactician
+					}
+				}
+				ate_possible_advisor_flag_ate_advisor_diplomatic_genius = {
+					ate_give_advisor_based_on_gov_rank = {
+						name = ate_possible_random_advisor_dip_name
+						power_type = dip
+						type = ate_advisor_diplomatic_genius
+					}
+				}
+				ate_possible_advisor_flag_ate_advisor_cultural_commissioner = {
+					ate_give_advisor_based_on_gov_rank = {
+						name = ate_possible_random_advisor_dip_name
+						power_type = dip
+						type = ate_advisor_cultural_commissioner
+					}
+				}
+				ate_possible_advisor_flag_ate_advisor_herald = {
+					ate_give_advisor_based_on_gov_rank = {
+						name = ate_possible_random_advisor_dip_name
+						power_type = dip
+						type = ate_advisor_herald
+					}
+				}
+				ate_possible_advisor_flag_ate_advisor_arch_chancellor = {
+					ate_give_advisor_based_on_gov_rank = {
+						name = ate_possible_random_advisor_dip_name
+						power_type = dip
+						type = ate_advisor_arch_chancellor
+					}
+				}
+				ate_possible_advisor_flag_ate_advisor_envoy = {
+					ate_give_advisor_based_on_gov_rank = {
+						name = ate_possible_random_advisor_dip_name
+						power_type = dip
+						type = ate_advisor_envoy
+					}
+				}
+				ate_possible_advisor_flag_ate_advisor_vaisyas_peasant = {
+					ate_give_advisor_based_on_gov_rank = {
+						name = ate_possible_random_advisor_dip_name
+						power_type = dip
+						type = ate_advisor_vaisyas_peasant
+					}
+				}
+				ate_possible_advisor_flag_ate_advisor_guild_trader = {
+					ate_give_advisor_based_on_gov_rank = {
+						name = ate_possible_random_advisor_dip_name
+						power_type = dip
+						type = ate_advisor_guild_trader
+					}
+				}
+				ate_possible_advisor_flag_ate_advisor_historian = {
+					ate_give_advisor_based_on_gov_rank = {
+						name = ate_possible_random_advisor_dip_name
+						power_type = dip
+						type = ate_advisor_historian
+					}
+				}
+				ate_possible_advisor_flag_ate_advisor_plantation_owner = {
+					ate_give_advisor_based_on_gov_rank = {
+						name = ate_possible_random_advisor_dip_name
+						power_type = dip
+						type = ate_advisor_plantation_owner
+					}
+				}
+				ate_possible_advisor_flag_ate_advisor_galley_captain = {
+					ate_give_advisor_based_on_gov_rank = {
+						name = ate_possible_random_advisor_dip_name
+						power_type = dip
+						type = ate_advisor_galley_captain
+					}
+				}
+				ate_possible_advisor_flag_ate_advisor_galleon_captain = {
+					ate_give_advisor_based_on_gov_rank = {
+						name = ate_possible_random_advisor_dip_name
+						power_type = dip
+						type = ate_advisor_galleon_captain
+					}
+				}
+				ate_possible_advisor_flag_ate_advisor_colonial_administrator = {
+					ate_give_advisor_based_on_gov_rank = {
+						name = ate_possible_random_advisor_dip_name
+						power_type = dip
+						type = ate_advisor_colonial_administrator
+					}
+				}
+				ate_possible_advisor_flag_ate_advisor_treasure_fleet_captain = {
+					ate_give_advisor_based_on_gov_rank = {
+						name = ate_possible_random_advisor_dip_name
+						power_type = dip
+						type = ate_advisor_treasure_fleet_captain
+					}
+				}
+			}
+		}
+	]
+	[[mil]
+		if = {
+			limit = {
+				always = $mil$
+			}
+			trigger_switch = {
+				on_trigger = has_country_flag
+				ate_possible_advisor_flag_army_organiser = {
+					ate_give_advisor_based_on_gov_rank = {
+						name = ate_possible_random_advisor_mil_name
+						power_type = mil
+						type = army_organiser
+					}
+				}
+				ate_possible_advisor_flag_army_reformer = {
+					ate_give_advisor_based_on_gov_rank = {
+						name = ate_possible_random_advisor_mil_name
+						power_type = mil
+						type = army_reformer
+					}
+				}
+				ate_possible_advisor_flag_commandant = {
+					ate_give_advisor_based_on_gov_rank = {
+						name = ate_possible_random_advisor_mil_name
+						power_type = mil
+						type = commandant
+					}
+				}
+				ate_possible_advisor_flag_grand_captain = {
+					ate_give_advisor_based_on_gov_rank = {
+						name = ate_possible_random_advisor_mil_name
+						power_type = mil
+						type = grand_captain
+					}
+				}
+				ate_possible_advisor_flag_recruitmaster = {
+					ate_give_advisor_based_on_gov_rank = {
+						name = ate_possible_random_advisor_mil_name
+						power_type = mil
+						type = recruitmaster
+					}
+				}
+				ate_possible_advisor_flag_fortification_expert = {
+					ate_give_advisor_based_on_gov_rank = {
+						name = ate_possible_random_advisor_mil_name
+						power_type = mil
+						type = fortification_expert
+					}
+				}
+				ate_possible_advisor_flag_quartermaster = {
+					ate_give_advisor_based_on_gov_rank = {
+						name = ate_possible_random_advisor_mil_name
+						power_type = mil
+						type = quartermaster
+					}
+				}
+				ate_possible_advisor_flag_ate_advisor_loyal_friend_mil = {
+					ate_give_advisor_based_on_gov_rank = {
+						name = ate_possible_random_advisor_mil_name
+						power_type = mil
+						type = ate_advisor_loyal_friend_mil
+					}
+				}
+				ate_possible_advisor_flag_ate_advisor_feudal_lord = {
+					ate_give_advisor_based_on_gov_rank = {
+						name = ate_possible_random_advisor_mil_name
+						power_type = mil
+						type = ate_advisor_feudal_lord
+					}
+				}
+				ate_possible_advisor_flag_ate_advisor_knight = {
+					ate_give_advisor_based_on_gov_rank = {
+						name = ate_possible_random_advisor_mil_name
+						power_type = mil
+						type = ate_advisor_knight
+					}
+				}
+				ate_possible_advisor_flag_ate_advisor_traditional_tactician = {
+					ate_give_advisor_based_on_gov_rank = {
+						name = ate_possible_random_advisor_mil_name
+						power_type = mil
+						type = ate_advisor_traditional_tactician
+					}
+				}
+				ate_possible_advisor_flag_ate_advisor_landsknecht = {
+					ate_give_advisor_based_on_gov_rank = {
+						name = ate_possible_random_advisor_mil_name
+						power_type = mil
+						type = ate_advisor_landsknecht
+					}
+				}
+				ate_possible_advisor_flag_ate_advisor_mercenary_leader = {
+					ate_give_advisor_based_on_gov_rank = {
+						name = ate_possible_random_advisor_mil_name
+						power_type = mil
+						type = ate_advisor_mercenary_leader
+					}
+				}
+				ate_possible_advisor_flag_ate_advisor_lord_of_a_castle = {
+					ate_give_advisor_based_on_gov_rank = {
+						name = ate_possible_random_advisor_mil_name
+						power_type = mil
+						type = ate_advisor_lord_of_a_castle
+					}
+				}
+				ate_possible_advisor_flag_ate_advisor_noble_man = {
+					ate_give_advisor_based_on_gov_rank = {
+						name = ate_possible_random_advisor_mil_name
+						power_type = mil
+						type = ate_advisor_noble_man
+					}
+				}
+				ate_possible_advisor_flag_ate_advisor_military_genius = {
+					ate_give_advisor_based_on_gov_rank = {
+						name = ate_possible_random_advisor_mil_name
+						power_type = mil
+						type = ate_advisor_military_genius
+					}
+				}
+				ate_possible_advisor_flag_ate_advisor_siege_expert = {
+					ate_give_advisor_based_on_gov_rank = {
+						name = ate_possible_random_advisor_mil_name
+						power_type = mil
+						type = ate_advisor_siege_expert
+					}
+				}
+				ate_possible_advisor_flag_ate_advisor_master_of_artillery = {
+					ate_give_advisor_based_on_gov_rank = {
+						name = ate_possible_random_advisor_mil_name
+						power_type = mil
+						type = ate_advisor_master_of_artillery
+					}
+				}
+				ate_possible_advisor_flag_ate_advisor_looting_expert = {
+					ate_give_advisor_based_on_gov_rank = {
+						name = ate_possible_random_advisor_mil_name
+						power_type = mil
+						type = ate_advisor_looting_expert
+					}
+				}
+				ate_possible_advisor_flag_ate_advisor_marshal = {
+					ate_give_advisor_based_on_gov_rank = {
+						name = ate_possible_random_advisor_mil_name
+						power_type = mil
+						type = ate_advisor_marshal
+					}
+				}
+				ate_possible_advisor_flag_ate_advisor_arch_marshal = {
+					ate_give_advisor_based_on_gov_rank = {
+						name = ate_possible_random_advisor_mil_name
+						power_type = mil
+						type = ate_advisor_arch_marshal
+					}
+				}
+				ate_possible_advisor_flag_ate_advisor_supply_expert = {
+					ate_give_advisor_based_on_gov_rank = {
+						name = ate_possible_random_advisor_mil_name
+						power_type = mil
+						type = ate_advisor_supply_expert
+					}
+				}
+				ate_possible_advisor_flag_ate_advisor_sergeant = {
+					ate_give_advisor_based_on_gov_rank = {
+						name = ate_possible_random_advisor_mil_name
+						power_type = mil
+						type = ate_advisor_sergeant
+					}
+				}
+				ate_possible_advisor_flag_ate_advisor_maratha_warrior = {
+					ate_give_advisor_based_on_gov_rank = {
+						name = ate_possible_random_advisor_mil_name
+						power_type = mil
+						type = ate_advisor_maratha_warrior
+					}
+				}
+				ate_possible_advisor_flag_ate_advisor_gentleman = {
+					ate_give_advisor_based_on_gov_rank = {
+						name = ate_possible_random_advisor_mil_name
+						power_type = mil
+						type = ate_advisor_gentleman
+					}
+				}
+				ate_possible_advisor_flag_ate_advisor_cossack = {
+					ate_give_advisor_based_on_gov_rank = {
+						name = ate_possible_random_advisor_mil_name
+						power_type = mil
+						type = ate_advisor_cossack
+					}
+				}
+				ate_possible_advisor_flag_ate_advisor_tribal_chieftain = {
+					ate_give_advisor_based_on_gov_rank = {
+						name = ate_possible_random_advisor_mil_name
+						power_type = mil
+						type = ate_advisor_tribal_chieftain
+					}
+				}
+				ate_possible_advisor_flag_ate_advisor_rajputs_warrior = {
+					ate_give_advisor_based_on_gov_rank = {
+						name = ate_possible_random_advisor_mil_name
+						power_type = mil
+						type = ate_advisor_rajputs_warrior
+					}
+				}
+				ate_possible_advisor_flag_ate_advisor_banneret = {
+					ate_give_advisor_based_on_gov_rank = {
+						name = ate_possible_random_advisor_mil_name
+						power_type = mil
+						type = ate_advisor_banneret
+					}
+				}
+			}
+		}
+	]
+}

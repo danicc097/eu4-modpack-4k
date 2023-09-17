@@ -1,0 +1,27 @@
+spriteTypes = {
+	
+	
+		
+		
+	
+	corneredTileSpriteType = {
+		name = "MenuMetaChatWindowDialog2"
+		size = { x=1210 y=1071 }
+		texturefile = "gfx//interface//placeholder.dds"
+		borderSize = { x=58 y=58 }
+	}
+
+	corneredTileSpriteType = {
+		name = "GFX_tiles_metaserver_plain"
+		texturefile = "gfx//interface//placeholder.dds"
+		borderSize = { x=58 y=58 }
+	}
+
+	corneredTileSpriteType = {
+		name = "GFX_tiles_metaserver"
+		texturefile = "gfx//interface//placeholder.dds"
+		borderSize = { x=58 y=58 }
+	}
+
+	
+}

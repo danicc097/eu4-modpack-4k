@@ -1,0 +1,5 @@
+﻿l_english:
+ GME_Monument_Events.1.T: "Schnoor Sugar District"
+ GME_Monument_Events.1.D: "The growth of the district's influence over the global trade has reached the most remote provinces of America and now merchants and goods from the Carribean have reached [1874.GetName]. Should we be the exclusive traders and try to grab as much as possible, purely for commerce, obviously?"
+ GME_Monument_Events.1.OPT1: "Surely!"
+ GME_Monument_Events.1.OPT2: "It's not worth."

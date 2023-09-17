@@ -1,0 +1,14 @@
+﻿l_french:
+ MODIFIER_IMPERIAL_REFORM_CATHOLIC_APPROVAL: "Approbation des réformes impériales par les princes de la religion impériale"
+ MODIFIER_IMPERIAL_AUTHORITY: "Accroissement de l'aut. impériale"
+
+ has_adm_advisor_4_tooltip: "Emploie un conseiller §Yadministratif§! au moins de niveau §Y4§!"
+ has_adm_advisor_5_tooltip: "Emploie un conseiller §Yadministratif§! au moins de niveau §Y5§!"
+ has_dip_advisor_4_tooltip: "Emploie un conseiller §Ydiplomatique§! au moins de niveau §Y4§!"
+ has_dip_advisor_5_tooltip: "Emploie un conseiller §Ydiplomatique§! au moins de niveau §Y5§!"
+ has_mil_advisor_4_tooltip: "Emploie un conseiller §Ymilitaire§! au moins de niveau §Y4§!"
+ has_mil_advisor_5_tooltip: "Emploie un conseiller §Ymilitaire§! au moins de niveau §Y5§!"
+
+ ATE_KILL_ADVISOR_BY_CATEGORY_EFFECT_TT_ADM: "Le §Y[Root.Adm_Advisor.GetTitle]§! §Y[Root.Adm_Advisor.GetName]§! meurt."
+ ATE_KILL_ADVISOR_BY_CATEGORY_EFFECT_TT_DIP: "Le §Y[Root.Dip_Advisor.GetTitle]§! §Y[Root.Dip_Advisor.GetName]§! meurt."
+ ATE_KILL_ADVISOR_BY_CATEGORY_EFFECT_TT_MIL: "Le §Y[Root.Mil_Advisor.GetTitle]§! §Y[Root.Mil_Advisor.GetName]§! meurt."

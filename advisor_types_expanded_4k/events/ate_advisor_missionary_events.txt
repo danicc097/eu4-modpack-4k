@@ -1,0 +1,114 @@
+namespace = ate_advisor_missionary_events
+
+country_event = {
+	id = ate_advisor_missionary_events.1
+	title = ate_advisor_missionary_events.EVTNAME1
+	desc = ate_advisor_missionary_events.EVTDESC1
+	picture = ADVISOR_eventPicture
+
+	trigger = {
+		num_of_cities = 2
+		NOT = { advisor = ate_advisor_missionary }
+		OR = {
+			NOT = { religious_unity = 0.5 }
+			has_disaster = french_wars_of_religion
+			has_disaster = religious_turmoil
+		}
+		any_owned_province = {
+			has_owner_religion = no
+			NOT = { has_province_modifier = ate_advisor_missionary_province_modifier }
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 500
+		modifier = {
+			factor = 2
+			num_of_missionaries = 3
+		}
+		modifier = {
+			factor = 0.75
+			NOT = { num_of_missionaries = 1 }
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			random_owned_province = {
+				limit = {
+					has_owner_religion = no
+					NOT = { has_province_modifier = ate_advisor_missionary_province_modifier }
+				}
+				save_event_target_as = advisor_province
+				ROOT = {
+					set_saved_name = {
+						key = local_ate_advisor_missionary
+						type = advisor
+						scope = PREV
+					}
+				}
+			}
+		}
+	}
+
+	option = {
+		name = ate_advisor_missionary_events1.EVTOPT1
+
+		ai_chance = { factor = 0.4 }
+
+		add_meritocracy_effect = yes
+		define_advisor = {
+			name = local_ate_advisor_missionary
+			type = ate_advisor_missionary
+			skill = 2
+			discount = yes
+			female = no
+			religion = ROOT
+			culture = event_target:advisor_province
+			location = event_target:advisor_province
+		}
+	}
+
+	option = {
+		name = ate_advisor_missionary_events1.EVTOPT2
+
+		goto = advisor_province
+
+		ai_chance = { factor = 0.6 }
+
+		event_target:advisor_province = {
+			add_province_modifier = {
+				name = ate_advisor_missionary_province_modifier
+				duration = -1
+			}
+		}
+	}
+
+	option = {
+		name = ate_advisor_missionary_events1.EVTOPT3
+
+		highlight = yes
+
+		trigger = {
+			ruler_has_personality_ancestor = { key = well_connected }
+		}
+
+		ai_chance = { factor = 100 }
+
+		add_meritocracy_effect = yes
+		define_advisor = {
+			name = local_ate_advisor_missionary
+			type = ate_advisor_missionary
+			skill = 3
+			discount = yes
+			female = no
+			religion = ROOT
+			culture = event_target:advisor_province
+			location = event_target:advisor_province
+		}
+	}
+
+	after = {
+		clear_saved_name = local_ate_advisor_missionary
+	}
+}

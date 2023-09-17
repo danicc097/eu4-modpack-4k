@@ -1,0 +1,26 @@
+country_decisions = {
+	enable_colonization_restrictions = {
+		potential = { FROM = { NOT = { has_country_flag = historic_colonization_flag } } }
+		allow = {
+			AND = {
+				ai = no
+				FROM = { NOT = { has_country_flag = historic_colonization_flag } }
+			}
+		}
+		effect = {
+			set_country_flag = historic_colonization_flag
+		}
+	}
+	disable_colonization_restrictions = {
+		potential = { FROM = { has_country_flag = historic_colonization_flag } }
+		allow = {
+			AND = {
+				ai = no
+				FROM = { has_country_flag = historic_colonization_flag }
+			}
+		}
+		effect = {
+			clr_country_flag = historic_colonization_flag
+		}
+	}
+}

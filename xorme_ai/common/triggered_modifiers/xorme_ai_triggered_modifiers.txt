@@ -1,0 +1,160 @@
+#DYNAMIC AI CHEATS
+#SETUP
+xorme_ai_cheat_level_1 = {
+	potential = {
+		has_global_flag = xorme_ai_dynamic_cheats_active
+		NOT = { has_global_flag = xorme_ai_cheats_disabled }
+		ROOT = {
+			NOT = { government = native }
+			ai = yes
+		}
+	}
+
+	trigger = {
+		is_year = 1
+		NOT = { is_year = 1500 }
+    }
+
+    land_maintenance_modifier = -0.1
+    merc_maintenance_modifier = -0.1
+    naval_maintenance_modifier = -0.1
+	all_power_cost = -0.075
+}
+
+xorme_ai_cheat_level_2 = {
+	potential = {
+		has_global_flag = xorme_ai_dynamic_cheats_active
+		NOT = { has_global_flag = xorme_ai_cheats_disabled }
+		ROOT = {
+			NOT = { government = native }
+			ai = yes
+		}
+	}
+
+	trigger = {
+		is_year = 1500
+		NOT = { is_year = 1600 }
+	}
+
+    land_maintenance_modifier = -0.075
+    merc_maintenance_modifier = -0.075
+    naval_maintenance_modifier = -0.075
+	all_power_cost = -0.05
+}
+
+xorme_ai_cheat_level_3 = {
+	potential = {
+		has_global_flag = xorme_ai_dynamic_cheats_active
+		NOT = { has_global_flag = xorme_ai_cheats_disabled }
+		ROOT = {
+			NOT = { government = native }
+			ai = yes
+		}
+	}
+
+	trigger = {
+		is_year = 1600
+		NOT = { is_year = 1700 }
+	}
+
+    land_maintenance_modifier = -0.05
+    merc_maintenance_modifier = -0.05
+    naval_maintenance_modifier = -0.05
+	all_power_cost = -0.025
+}
+
+#MAKE ME CRY
+#SETUP
+xorme_ai_cheat_make_me_cry_ai = {
+	potential = {
+		has_global_flag = xorme_ai_make_me_cry_active
+		NOT = { has_global_flag = xorme_ai_cheats_disabled }
+		ROOT = {
+			NOT = { government = native }
+			ai = yes
+		}
+	}
+
+	trigger ={
+		always = yes
+	}
+
+	global_tax_income = 12 #1.0 ducats for early game stomp
+    land_maintenance_modifier = -0.2
+    merc_maintenance_modifier = -0.2
+    naval_maintenance_modifier = -0.2
+	land_forcelimit_modifier = 0.10
+	naval_forcelimit_modifier = 0.20
+	all_power_cost = -0.075
+	administrative_efficiency = 0.05
+}
+
+xorme_ai_cheat_make_me_cry_player = {
+	potential = {
+		has_global_flag = xorme_ai_make_me_cry_active
+		NOT = { has_global_flag = xorme_ai_cheats_disabled }
+		ROOT = {
+			ai = no
+		}
+	}
+
+	trigger = {
+		always = yes
+	}
+
+	diplomatic_reputation = -2
+	ae_impact = 0.1
+	years_of_nationalism = 5
+	liberty_desire = 20
+	all_power_cost = 0.05
+}
+
+xorme_ai_great_power = {
+	potential = {
+		ai = yes
+		NOT = { primitives = yes }
+		NOT = { government = native }
+		OR = {
+			is_great_power = yes
+			OR = {
+				AND = {
+					NOT = { is_year = 1500 }
+					total_development = 175
+				}
+				AND = {
+					is_year = 1500
+					NOT = { is_year = 1600 }
+					total_development = 300
+				}
+				AND = {
+					is_year = 1600
+					total_development = 600
+				}
+			}
+		}
+	}
+
+	trigger = {
+		always = yes
+	}
+	global_tax_income = 24
+	national_focus_years = -10	
+	technology_cost = -0.05
+}
+
+xorme_ai_valid_for_fort_script = {
+	potential = {
+		ai = yes
+		NOT = { primitives = yes }
+		NOT = { government = native }
+		NOT = { has_country_modifier = xorme_ai_build_fort_cooldown }
+	}
+
+	trigger = {
+		is_in_deficit = no
+		is_at_war = no
+		treasury = 350
+		NOT = { num_of_loans = 1 }
+	}
+
+}

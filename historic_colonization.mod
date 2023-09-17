@@ -1,0 +1,5 @@
+name="Historic Colonization"
+picture="thumbnail.png"
+supported_version="1.33.2"
+remote_file_id="historic_colonization"
+path="mod/historic_colonization/"

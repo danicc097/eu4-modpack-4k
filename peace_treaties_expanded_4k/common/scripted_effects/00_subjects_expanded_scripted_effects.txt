@@ -1,0 +1,32 @@
+ms_calculate_yearly_manpower = {
+	export_to_variable = {
+		which = autonomous_dominion_global_manpower_var
+		value = trigger_value:max_manpower
+	}
+	export_to_variable = {
+		which = autonomous_dominion_manpower_recovery_speed_var
+		value = modifier:manpower_recovery_speed
+	}
+	change_variable = { which = autonomous_dominion_manpower_recovery_speed_var value = 1 }
+	multiply_variable = { which = autonomous_dominion_global_manpower_var which = autonomous_dominion_manpower_recovery_speed_var }
+	divide_variable = { which = autonomous_dominion_global_manpower_var value = 10 }
+	multiply_variable = { which = autonomous_dominion_global_manpower_var value = 1000 }
+	set_variable = { which = autonomous_dominion_manpower_recovery_speed_var value = 0 }
+}
+
+ms_calculate_yearly_sailors = {
+	export_to_variable = {
+		which = autonomous_dominion_global_sailors_var
+		value = trigger_value:max_sailors
+	}
+	divide_variable = { which = autonomous_dominion_global_sailors_var value = 1000 }
+	export_to_variable = {
+		which = autonomous_dominion_sailors_recovery_speed_var
+		value = modifier:sailors_recovery_speed
+	}
+	change_variable = { which = autonomous_dominion_sailors_recovery_speed_var value = 1 }
+	multiply_variable = { which = autonomous_dominion_global_sailors_var which = autonomous_dominion_sailors_recovery_speed_var }
+	divide_variable = { which = autonomous_dominion_global_sailors_var value = 10 }
+	multiply_variable = { which = autonomous_dominion_global_sailors_var value = 1000 }
+	set_variable = { which = autonomous_dominion_sailors_recovery_speed_var value = 0 }
+}

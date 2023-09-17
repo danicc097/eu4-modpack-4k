@@ -1,0 +1,62 @@
+namespace = hc_event
+country_event = {
+	id = hc_event.1
+	
+	title = "hc_event_1_title"
+	desc = "hc_event_1_desc"
+	
+	trigger = {
+		NOT = {
+			religious_unity = .90
+		}
+		has_country_modifier = religious_stability
+	}
+	option = {
+		name = "hc_event_1_option"
+		add_country_modifier = {
+			name = "religious_turmoil"
+			duration = -1
+		}
+		remove_country_modifier = religious_stability
+	}
+}
+country_event = {
+	id = hc_event.2
+	
+	title = "hc_event_2_title"
+	desc = "hc_event_2_desc"
+	
+	trigger = {
+		religious_unity = .90
+		has_country_modifier = religious_turmoil
+	}
+	option = {
+		name = "hc_event_2_option"
+		add_country_modifier = {
+			name = "religious_stability"
+			duration = -1
+		}
+		remove_country_modifier = religious_turmoil
+	}
+}
+country_event = {
+	id = hc_event.3
+	
+	title = "hc_event_3_title"
+	desc = "hc_event_3_desc"
+	
+	trigger = {
+		OR = {
+			calc_true_if = { all_country = { religion = protestant } amount = 1 }
+		}
+		has_country_modifier = stable_europe
+	}
+	option = {
+		name = "hc_event_3_option"
+		add_country_modifier = {
+			name = "unstable_europe"
+			duration = -1
+		}
+		remove_country_modifier = stable_europe
+	}
+}

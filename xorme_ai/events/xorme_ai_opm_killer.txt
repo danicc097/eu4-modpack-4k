@@ -1,0 +1,73 @@
+namespace = xorme_ai_opm_killer
+
+country_event = {
+	id = xorme_ai_opm_killer.1
+	title = "NONE"
+	desc = "NONE"
+	picture = "NONE"
+
+	hidden = yes
+
+	trigger = {
+		is_at_war = no
+		OR = {
+			is_date = 1500.2.2	
+			is_date = 1550.2.2		
+			is_date = 1600.2.2
+			is_date = 1700.2.2
+		}
+		has_country_modifier = xorme_ai_great_power
+	}
+
+	mean_time_to_happen = {
+		months = 4
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				NOT = { is_year = 1550 }
+			}
+			every_neighbor_country = {
+				limit = {
+					ai = yes
+					NOT = { total_development = 105 }
+					NOT = { is_subject_of = ROOT }
+					NOT = { alliance_with = ROOT }
+					NOT = { historical_friend_with = ROOT }
+					NOT = { tag = PAP }
+				}
+				add_opinion = {
+					who = ROOT
+					modifier = xorme_ai_conq_box
+				}
+				reverse_add_opinion = {
+					who = ROOT
+					modifier = xorme_ai_conq_box
+				}
+			}
+		}
+		else = {
+			every_neighbor_country = {
+				limit = {
+					ai = yes
+					NOT = { total_development = 325 }
+					NOT = { is_subject_of = ROOT }
+					NOT = { historical_friend_with = ROOT }
+					NOT = { tag = PAP }
+				}
+				add_opinion = {
+					who = ROOT
+					modifier = xorme_ai_conq_box
+				}
+				reverse_add_opinion = {
+					who = ROOT
+					modifier = xorme_ai_conq_box
+				}
+			}
+		}
+	}
+
+	option = {
+	}
+}

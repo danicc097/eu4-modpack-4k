@@ -1,0 +1,161 @@
+guiTypes = {
+	windowType = {
+		name = "modifier_window"
+		backGround="backgroundee2"
+		position = { x=-684 y=-522 }	
+		size = { x=1800 y=1800 }
+		moveable = 1
+		dontRender = ""
+		horizontalBorder= ""
+		verticalBorder= ""
+		fullScreen = no
+		Orientation = "CENTER"
+		
+		iconType =
+		{
+			name ="modifier_bg"
+			spriteType = "GFX_modifier_bg"
+			position = { x= -90000 y = 0 }
+			Orientation = "UPPER_LEFT"
+		}
+
+		guiButtonType =
+		{
+			name ="backgroundee2"
+			spriteType = "GFX_modifier_bg"
+			position = { x= -9 y = 0 }
+			Orientation = "UPPER_LEFT"
+		}
+		
+		instantTextBoxType = {
+			name = "modifier_label"
+			position = { x = 252 y =27 }
+			font = "vic_29s"
+			borderSize = {x = 0 y = 0}
+			text = "MODIFIERS_STRATEGIC_EFFECTS"	
+			maxWidth = 900
+			maxHeight = 58
+			format = centre			
+		}
+		
+		listboxType = 	{
+			name ="modifier_list"
+			position = { x = 36 y = 101 }
+			backGround=""
+			size = { x=1305  y =898}
+			Orientation = "UPPER_LEFT"
+			spacing = 4
+			scrollbartype = "standardlistbox_slider"
+			borderSize = {x = 0 y = 0}
+		}
+		
+		guiButtonType = {
+			name ="close_button"
+			quadTextureSprite ="button_type_4"
+			position = { x= 511 y = 1013 }
+			buttonText = "CLOSE"
+			buttonFont = "vic_18"
+			shortcut = "ESCAPE"
+		}
+		
+	}
+	
+	###### MODIFIER ENTRY
+	windowType = {
+		name = "modifier_entry"
+		backGround=""
+		position = { x=0 y=0 }	
+		size = { x=900 y= 149 }
+		moveable = 0
+		dontRender = ""
+		horizontalBorder= ""
+		verticalBorder= ""
+		fullScreen = no
+		
+		#remove
+		iconType =
+		{
+			name ="modifier_entry_bg"
+			spriteType = "GFX_modifier_entry_bg"
+			position = { x=-4 y = -7 }
+			Orientation = "UPPER_LEFT"
+		}
+		
+		iconType =
+		{
+			name ="modifier_strip"
+			spriteType = "GFX_idea_unknown"
+			position = { x= 9 y = 14 }
+			Orientation = "UPPER_LEFT"
+		}
+
+		instantTextBoxType = {
+			name = "modifier_name"
+			position = { x = 144 y = 5 }
+			font = "vic_22"
+			borderSize = {x = 0 y = 0}
+			text = "Naval Supremacy in the West"	
+			maxWidth = 900
+			maxHeight = 58
+			fixedsize = yes
+			format = left			
+		}
+		
+		instantTextBoxType = {
+			name = "modifier_effect"
+			position = { x = 144 y = 45 }
+			font = "vic_18"
+			borderSize = {x = 0 y = 0}
+			text = "effect text here"	
+			maxWidth = 540
+			maxHeight = 180
+			format = left			
+		}
+		
+		## stuff to the right
+		
+		#remove
+		iconType =
+		{
+			name ="modifier_info"
+			spriteType = "GFX_modifier_info"
+			position = { x= 17350 y = 22 }
+			Orientation = "UPPER_LEFT"
+		}
+		
+		
+		iconType =
+		{
+			name ="modifier_progress"
+			spriteType = "modifier_progress"
+			position = { x= 1085 y = 90 }
+			Orientation = "UPPER_LEFT"
+			
+		}
+		
+		iconType =
+		{
+			name ="modifier_progress_overlay"
+			spriteType = "GFX_modifier_progress_frame"
+			position = { x= 1058 y = 81 }
+			Orientation = "UPPER_LEFT"
+			
+		}
+		
+		
+		instantTextBoxType = {
+			name = "modifier_status"
+			position = { x = 1085 y = 25 }
+			font = "vic_22"
+			borderSize = {x = 0 y = 0}
+			text = "7/14"	
+			maxWidth = 126
+			maxHeight = 58
+			format = centre			
+		}
+
+	}
+
+
+
+}

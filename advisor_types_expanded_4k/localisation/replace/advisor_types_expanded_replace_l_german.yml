@@ -1,0 +1,20 @@
+﻿l_german:
+ MODIFIER_IMPERIAL_REFORM_CATHOLIC_APPROVAL: "Zustimmung für Reichsreformen (Fürsten mit kaiserlicher Religion)"
+ MODIFIER_LIBERTY_DESIRE_FROM_SUBJECT_DEVELOPMENT: "Freiheitsstreben (Entwicklung)"
+ MODIFIER_MONARCH_LIFESPAN: "Herrscher-Lebensdauer (Ø)"
+ adm_tech_cost_modifier: "Kosten (Adm. Technologien)"
+ dip_tech_cost_modifier: "Kosten (Dip. Technologien)"
+ mil_tech_cost_modifier: "Kosten (Mil. Technologien)"
+ MODIFIER_UNJUSTIFIED_DEMANDS: "Unrechtmäßige Forderungen"
+ MODIFIER_REFORM_PROGRESS_GROWTH: "Regierungsfortschritt"
+
+ has_adm_advisor_4_tooltip: "Beschäftigt einen §Yadministrativen§! Berater von mindestens der Stufe §Y4§!"
+ has_adm_advisor_5_tooltip: "Beschäftigt einen §Yadministrativen§! Berater von mindestens der Stufe §Y5§!"
+ has_dip_advisor_4_tooltip: "Beschäftigt einen §Ydiplomatischen§! Berater von mindestens der Stufe §Y4§!"
+ has_dip_advisor_5_tooltip: "Beschäftigt einen §Ydiplomatischen§! Berater von mindestens der Stufe §Y5§!"
+ has_mil_advisor_4_tooltip: "Beschäftigt einen §Ymilitärischen§! Berater von mindestens der Stufe §Y4§!"
+ has_mil_advisor_5_tooltip: "Beschäftigt einen §Ymilitärischen§! Berater von mindestens der Stufe §Y5§!"
+
+ ATE_KILL_ADVISOR_BY_CATEGORY_EFFECT_TT_ADM: "Der §Y[Root.Adm_Advisor.GetTitle]§! §Y[Root.Adm_Advisor.GetName]§! stirbt."
+ ATE_KILL_ADVISOR_BY_CATEGORY_EFFECT_TT_DIP: "Der §Y[Root.Dip_Advisor.GetTitle]§! §Y[Root.Dip_Advisor.GetName]§! stirbt."
+ ATE_KILL_ADVISOR_BY_CATEGORY_EFFECT_TT_MIL: "Der §Y[Root.Mil_Advisor.GetTitle]§! §Y[Root.Mil_Advisor.GetName]§! stirbt."

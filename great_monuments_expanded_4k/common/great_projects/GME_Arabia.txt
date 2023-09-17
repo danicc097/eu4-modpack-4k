@@ -1,0 +1,163 @@
+gme_mount_arafat = {
+	start = 385
+	date = 1.01.01
+	time = { months = 120 }
+	build_cost = 1000
+	starting_tier = 1
+	type = monument
+	can_be_moved = no
+	build_trigger = { }
+	on_built = { }
+	on_destroyed = { }
+	can_use_modifiers_trigger = {
+		province_is_or_accepts_religion_group = {
+			religion_group = muslim
+		}
+	}
+	can_upgrade_trigger = {
+		province_is_or_accepts_religion_group = {
+			religion_group = muslim
+		}
+	}
+	keep_trigger = { }
+	tier_0 = {
+		upgrade_time = { months = 0 }
+		cost_to_upgrade = { factor = 0 }
+		province_modifiers = { }
+		area_modifier = { }
+		region_modifier = { }
+		country_modifiers = { }
+		on_upgraded = { }
+	}
+	tier_1 = {
+		upgrade_time = { months = 120 }
+		cost_to_upgrade = { factor = 1000 }
+		province_modifiers = {
+			local_development_cost = -0.15
+			local_friendly_movement_speed = 0.15
+			local_institution_spread = 0.15
+		}
+		area_modifier = { }
+		region_modifier = { }
+		country_modifiers = {
+			all_estate_loyalty_equilibrium = 0.05
+			missionaries = 1
+		}
+		on_upgraded = { }
+	}
+	tier_2 = {
+		upgrade_time = { months = 240 }
+		cost_to_upgrade = { factor = 2500 }
+		province_modifiers = { }
+		area_modifier = {
+			local_development_cost = -0.25
+			local_friendly_movement_speed = 0.25
+			local_institution_spread = 0.25
+		}
+		region_modifier = { }
+		country_modifiers = {
+			all_estate_loyalty_equilibrium = 0.10
+			missionaries = 1
+			relation_with_same_religion = 10
+		}
+		on_upgraded = { }
+	}
+	tier_3 = {
+		upgrade_time = { months = 480 }
+		cost_to_upgrade = { factor = 5000 }
+		province_modifiers = { }
+		area_modifier = {
+			local_development_cost = -0.33
+			local_friendly_movement_speed = 0.33
+			local_institution_spread = 0.33
+		}
+		region_modifier = { }
+		country_modifiers = {
+			all_estate_loyalty_equilibrium = 0.15
+			missionaries = 1
+			missionary_maintenance_cost = -0.15
+			relation_with_same_religion = 25
+		}
+		on_upgraded = { }
+	}
+}
+gme_prophet_mosque = {
+	start = 384
+	date = 1.01.01
+	time = { months = 120 }
+	build_cost = 1000
+	starting_tier = 1
+	type = monument
+	can_be_moved = no
+	build_trigger = { }
+	on_built = { }
+	on_destroyed = { }
+	can_use_modifiers_trigger = {
+		province_is_or_accepts_religion_group = {
+			religion_group = muslim
+		}
+	}
+	can_upgrade_trigger = {
+		province_is_or_accepts_religion_group = {
+			religion_group = muslim
+		}
+	}
+	keep_trigger = { }
+	tier_0 = {
+		upgrade_time = { months = 0 }
+		cost_to_upgrade = { factor = 0 }
+		province_modifiers = { }
+		area_modifier = { }
+		region_modifier = { }
+		country_modifiers = { }
+		on_upgraded = { }
+	}
+	tier_1 = {
+		upgrade_time = { months = 120 }
+		cost_to_upgrade = { factor = 1000 }
+		province_modifiers = {
+			local_tax_modifier = 0.25
+		}
+		area_modifier = { }
+		region_modifier = { }
+		country_modifiers = {
+			enforce_religion_cost = -0.1
+			global_missionary_strength = 0.005
+		}
+		on_upgraded = { }
+	}
+	tier_2 = {
+		upgrade_time = { months = 240 }
+		cost_to_upgrade = { factor = 2500 }
+		province_modifiers = {
+			institution_growth = 6
+			local_tax_modifier = 0.33
+		}
+		area_modifier = { }
+		region_modifier = { }
+		country_modifiers = {
+			enforce_religion_cost = -0.25
+			manpower_in_true_faith_provinces = 0.05
+			province_warscore_cost = -0.1
+			global_missionary_strength = 0.01
+		}
+		on_upgraded = { }
+	}
+	tier_3 = {
+		upgrade_time = { months = 480 }
+		cost_to_upgrade = { factor = 5000 }
+		province_modifiers = {
+			institution_growth = 12
+			local_tax_modifier = 0.50
+		}
+		area_modifier = { }
+		region_modifier = { }
+		country_modifiers = {
+			enforce_religion_cost = -0.33
+			manpower_in_true_faith_provinces = 0.15
+			province_warscore_cost = -0.15
+			global_missionary_strength = 0.02
+		}
+		on_upgraded = { }
+	}
+}

@@ -1,0 +1,286 @@
+namespace = ate_advisor_loyal_friend_events
+
+country_event = {
+	id = ate_advisor_loyal_friend_events.1
+	title = ate_advisor_loyal_friend_events.EVTNAME1
+	desc = ate_advisor_loyal_friend_events.EVTDESC1
+	picture = ADVISOR_eventPicture
+
+	trigger = {
+		NOT = { advisor = ate_advisor_loyal_friend_adm }
+		NOT = { advisor = ate_advisor_loyal_friend_dip }
+		NOT = { advisor = ate_advisor_loyal_friend_mil }
+		NOT = { has_ruler_flag = ate_loyal_friend }
+		has_regency = no
+		capital_scope = {
+			has_siege = no
+			controlled_by = ROOT
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 720
+		modifier = {
+			factor = 0.75
+			NOT = { num_of_cities = 5 }
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				ruler_has_personality = kind_hearted_personality
+				ruler_has_personality = well_connected_personality
+				ruler_has_personality = intricate_web_weaver_personality
+				ruler_has_personality = silver_tongue_personality
+				ruler_has_personality = embezzler_personality
+				ruler_has_personality = naive_personality
+			}
+		}
+		modifier = {
+			factor = 2
+			OR = {
+				ruler_has_personality = careful_personality
+				ruler_has_personality = secretive_personality
+				ruler_has_personality = well_advised_personality
+				ruler_has_personality = incorruptible_personality
+				ruler_has_personality = babbling_buffoon_personality
+				ruler_has_personality = cruel_personality
+				ruler_has_personality = loose_lips_personality
+				ruler_has_personality = malevolent_personality
+			}
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			set_ruler_flag = ate_loyal_friend
+			capital_scope = {
+				save_event_target_as = advisor_province
+				ROOT = {
+					set_saved_name = {
+						key = local_ate_advisor_loyal_friend
+						type = advisor
+						scope = PREV
+					}
+				}
+			}
+			random_list = {
+				33 = {
+					modifier = {
+						factor = 0.5
+						NOT = { ADM = 1 }
+					}
+					modifier = {
+						factor = 0.75
+						ADM = 1
+						NOT = { ADM = 3 }
+					}
+					modifier = {
+						factor = 2
+						ADM = 5
+					}
+					set_country_flag = loyal_friend_adm
+				}
+				33 = {
+					modifier = {
+						factor = 0.5
+						NOT = { DIP = 1 }
+					}
+					modifier = {
+						factor = 0.75
+						DIP = 1
+						NOT = { DIP = 3 }
+					}
+					modifier = {
+						factor = 2
+						DIP = 5
+					}
+					set_country_flag = loyal_friend_dip
+				}
+				33 = {
+					modifier = {
+						factor = 0.5
+						NOT = { MIL = 1 }
+					}
+					modifier = {
+						factor = 0.75
+						MIL = 1
+						NOT = { MIL = 3 }
+					}
+					modifier = {
+						factor = 2
+						MIL = 5
+					}
+					set_country_flag = loyal_friend_mil
+				}
+			}
+		}
+	}
+
+	option = {
+		name = ate_advisor_loyal_friend_events1.EVTOPT1
+
+		ai_chance = { factor = 0.4 }
+
+		add_meritocracy_effect = yes
+		trigger_switch = {
+			on_trigger = has_country_flag
+			loyal_friend_adm = {
+				define_advisor = {
+					name = local_ate_advisor_loyal_friend
+					type = ate_advisor_loyal_friend_adm
+					skill = 2
+					female = no
+					religion = event_target:advisor_province
+					culture = event_target:advisor_province
+					location = event_target:advisor_province
+				}
+			}
+			loyal_friend_dip = {
+				define_advisor = {
+					name = local_ate_advisor_loyal_friend
+					type = ate_advisor_loyal_friend_dip
+					skill = 2
+					female = no
+					religion = event_target:advisor_province
+					culture = event_target:advisor_province
+					location = event_target:advisor_province
+				}
+			}
+			loyal_friend_mil = {
+				define_advisor = {
+					name = local_ate_advisor_loyal_friend
+					type = ate_advisor_loyal_friend_mil
+					skill = 2
+					female = no
+					religion = event_target:advisor_province
+					culture = event_target:advisor_province
+					location = event_target:advisor_province
+				}
+			}
+		}
+	}
+
+	option = {
+		name = ate_advisor_loyal_friend_events1.EVTOPT2
+
+		ai_chance = { factor = 0.6 }
+
+		trigger_switch = {
+			on_trigger = has_country_flag
+			loyal_friend_adm = {
+				random_list = {
+					40 = {
+						add_legitimacy_equivalent = { amount = 5 republican_tradition = 3 }
+					}
+					30 = {
+						add_adm_power = 25
+					}
+					20 = {
+						capital_scope = {
+							add_base_tax = 1
+						}
+					}
+					10 = {
+						# No Effect
+					}
+				}
+			}
+			loyal_friend_dip = {
+				random_list = {
+					40 = {
+						add_prestige = 5
+					}
+					30 = {
+						add_dip_power = 25
+					}
+					20 = {
+						capital_scope = {
+							add_base_production = 1
+						}
+					}
+					10 = {
+						# No Effect
+					}
+				}
+			}
+			loyal_friend_mil = {
+				random_list = {
+					40 = {
+						add_mil_power = 25
+					}
+					30 = {
+						create_general = {
+							name = local_ate_advisor_loyal_friend
+							tradition = 60
+						}
+					}
+					20 = {
+						capital_scope = {
+							add_base_manpower = 1
+						}
+					}
+					10 = {
+						# No Effect
+					}
+				}
+			}
+		}
+	}
+
+	option = {
+		name = ate_advisor_loyal_friend_events1.EVTOPT3
+
+		highlight = yes
+
+		trigger = {
+			ruler_has_personality_ancestor = { key = well_connected }
+		}
+
+		ai_chance = { factor = 100 }
+
+		add_meritocracy_effect = yes
+		trigger_switch = {
+			on_trigger = has_country_flag
+			loyal_friend_adm = {
+				define_advisor = {
+					name = local_ate_advisor_loyal_friend
+					type = ate_advisor_loyal_friend_adm
+					skill = 3
+					female = no
+					religion = event_target:advisor_province
+					culture = event_target:advisor_province
+					location = event_target:advisor_province
+				}
+			}
+			loyal_friend_dip = {
+				define_advisor = {
+					name = local_ate_advisor_loyal_friend
+					type = ate_advisor_loyal_friend_dip
+					skill = 3
+					female = no
+					religion = event_target:advisor_province
+					culture = event_target:advisor_province
+					location = event_target:advisor_province
+				}
+			}
+			loyal_friend_mil = {
+				define_advisor = {
+					name = local_ate_advisor_loyal_friend
+					type = ate_advisor_loyal_friend_mil
+					skill = 3
+					female = no
+					religion = event_target:advisor_province
+					culture = event_target:advisor_province
+					location = event_target:advisor_province
+				}
+			}
+		}
+	}
+
+	after = {
+		clr_country_flag = loyal_friend_adm
+		clr_country_flag = loyal_friend_dip
+		clr_country_flag = loyal_friend_mil
+		clear_saved_name = local_ate_advisor_loyal_friend
+	}
+}

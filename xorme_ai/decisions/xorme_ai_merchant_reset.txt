@@ -1,0 +1,28 @@
+country_decisions = {
+    xorme_ai_merchant_reset = {
+        potential = {
+            NOT = { has_country_modifier = xorme_ai_merchant_reset_cooldown }
+            had_recent_war = 10
+            total_development = 200
+            ai = yes
+        }
+
+        allow = {
+			is_at_war = no
+        }
+
+        effect = {
+			add_country_modifier = {
+				name = xorme_ai_merchant_reset_modifier
+				duration = 31
+			}
+            add_country_modifier = {
+                name = xorme_ai_merchant_reset_cooldown
+                duration = 10000
+            }
+        }
+        ai_will_do = {
+            factor = 100
+        }
+    }
+}

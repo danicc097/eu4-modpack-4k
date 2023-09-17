@@ -1,0 +1,47 @@
+establish_palatinate_vassal = {
+	category = influence
+
+	require_acceptance = no
+
+	is_visible = {
+		overlord_of = FROM
+		can_create_subject_type = {
+			subject = FROM
+			subject_type = palatinate_vassal
+		}
+	}
+
+	is_allowed = {
+		hidden_trigger = {
+			overlord_of = FROM
+		}
+		can_create_subject_type = {
+			subject = FROM
+			subject_type = palatinate_vassal
+		}
+		is_at_war = no
+		FROM = { is_at_war = no }
+	}
+
+	on_accept = {
+		if = {
+			limit = {
+				overlord_of = FROM
+				can_create_subject_type = {
+					subject = FROM
+					subject_type = palatinate_vassal
+				}
+				is_at_war = no
+				FROM = { is_at_war = no }
+			}
+			create_subject = {
+				subject = FROM
+				subject_type = palatinate_vassal
+			}
+		}
+	}
+
+	ai_will_do = {
+		always = yes
+	}
+}

@@ -1,0 +1,13 @@
+##################################################
+# Flavour Events Expanded
+##################################################
+
+#Heir Education
+neglected_heir_education = {
+	legitimacy = -0.5
+	heir_chance = -0.5
+}
+
+### Compatability ###
+#Lex Talionis II
+is_usurper = { }

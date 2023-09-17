@@ -1,0 +1,241 @@
+base_dominion_sprite_pack = {
+	country_trigger = {
+		is_dominion_tag = yes
+	}
+
+	sprite_infantry = {
+		0 = westerngfx_INFANTRY_1
+		1 = westerngfx_INFANTRY_2
+		2 = westerngfx_INFANTRY_3
+		3 = westerngfx_INFANTRY_4
+	}
+
+	sprite_cavalry = {
+		0 = westerngfx_CAVALRY_1
+		1 = westerngfx_CAVALRY_2
+		2 = westerngfx_CAVALRY_3
+		3 = westerngfx_CAVALRY_4
+	}
+
+	sprite_artillery = {
+		0 = westerngfx_ARTILLERY_1
+		1 = westerngfx_ARTILLERY_2
+		2 = westerngfx_ARTILLERY_3
+		3 = westerngfx_ARTILLERY_4
+	}
+}
+
+british_dominion_sprite_pack = {
+	country_trigger = {
+		OR = {
+			tag = DA1
+			tag = DC1
+			tag = DE1
+			tag = DI1
+			tag = DS1
+			tag = DW1
+			tag = DP1
+			AND = {
+				is_dominion_tag = yes
+				overlord = {
+					OR = {
+						tag = ENG
+						tag = GBR
+						culture_group = british
+					}
+				}
+			}
+		}
+	}
+
+	sprite_infantry = {
+		0 = ENG_INFANTRY_1
+		1 = ENG_INFANTRY_2
+		2 = ENG_INFANTRY_3
+		3 = ENG_INFANTRY_4
+	}
+
+	sprite_cavalry = {
+		0 = ENG_CAVALRY_1
+		1 = ENG_CAVALRY_2
+		2 = ENG_CAVALRY_3
+		3 = ENG_CAVALRY_4
+	}
+
+	sprite_artillery = {
+		0 = ENG_ARTILLERY_1
+		1 = ENG_ARTILLERY_2
+		2 = ENG_ARTILLERY_3
+		3 = ENG_ARTILLERY_4
+	}
+}
+
+germanic_dominion_sprite_pack = {
+	country_trigger = {
+		OR = {
+			tag = DA2
+			tag = DC2
+			tag = DE2
+			tag = DI2
+			tag = DS2
+			tag = DW2
+			tag = DP2
+			AND = {
+				is_dominion_tag = yes
+				overlord = {
+					OR = {
+						tag = GER
+						culture_group = germanic
+					}
+				}
+			}
+		}
+	}
+
+	sprite_infantry = {
+		0 = PRU_INFANTRY_1
+		1 = PRU_INFANTRY_2
+		2 = PRU_INFANTRY_3
+		3 = PRU_INFANTRY_4
+	}
+
+	sprite_cavalry = {
+		0 = PRU_CAVALRY_1
+		1 = PRU_CAVALRY_2
+		2 = PRU_CAVALRY_3
+		3 = PRU_CAVALRY_4
+	}
+
+	sprite_artillery = {
+		0 = PRU_ARTILLERY_1
+		1 = PRU_ARTILLERY_2
+		2 = PRU_ARTILLERY_3
+		3 = PRU_ARTILLERY_4
+	}
+}
+
+iberian_dominion_sprite_pack = {
+	country_trigger = {
+		OR = {
+			tag = DA3
+			tag = DC3
+			tag = DE3
+			tag = DI3
+			tag = DS3
+			tag = DW3
+			tag = DP3
+			AND = {
+				is_dominion_tag = yes
+				overlord = {
+					OR = {
+						tag = SPA
+						tag = CAS
+						tag = ARA
+						culture_group = iberian
+					}
+				}
+			}
+		}
+	}
+
+	sprite_infantry = {
+		0 = CAS_INFANTRY_1
+		1 = SPA_INFANTRY_2
+		2 = SPA_INFANTRY_3
+		3 = SPA_INFANTRY_4
+	}
+
+	sprite_cavalry = {
+		0 = CAS_CAVALRY_1
+		1 = SPA_CAVALRY_2
+		2 = SPA_CAVALRY_3
+		3 = SPA_CAVALRY_4
+	}
+
+	sprite_artillery = {
+		0 = CAS_ARTILLERY_1
+	}
+}
+
+french_dominion_sprite_pack = {
+	country_trigger = {
+		OR = {
+			tag = DA4
+			tag = DC4
+			tag = DE4
+			tag = DI4
+			tag = DS4
+			tag = DW4
+			tag = DP4
+			AND = {
+				is_dominion_tag = yes
+				overlord = {
+					OR = {
+						tag = FRA
+						culture_group = french
+					}
+				}
+			}
+		}
+	}
+
+	sprite_infantry = {
+		0 = FRA_INFANTRY_1
+		1 = FRA_INFANTRY_2
+		2 = FRA_INFANTRY_3
+		3 = FRA_INFANTRY_4
+	}
+
+	sprite_cavalry = {
+		0 = FRA_CAVALRY_1
+		1 = FRA_CAVALRY_2
+		2 = FRA_CAVALRY_3
+		3 = FRA_CAVALRY_4
+	}
+
+	sprite_artillery = {
+		0 = FRA_ARTILLERY_1
+		1 = FRA_ARTILLERY_2
+		2 = FRA_ARTILLERY_3
+		3 = FRA_ARTILLERY_4
+	}
+}
+
+dutch_dominion_sprite_pack = {
+	country_trigger = {
+		OR = {
+			tag = DE7
+			AND = {
+				is_dominion_tag = yes
+				overlord = {
+					OR = {
+						tag = HOL
+						tag = NED
+						primary_culture = dutch
+					}
+				}
+			}
+		}
+	}
+
+	sprite_infantry = {
+		0 = HOL_INFANTRY_1
+		1 = HOL_INFANTRY_2
+		2 = HOL_INFANTRY_3
+		3 = HOL_INFANTRY_4
+	}
+
+	sprite_cavalry = {
+		0 = HOL_CAVALRY_1
+		1 = HOL_CAVALRY_2
+		2 = HOL_CAVALRY_3
+		3 = HOL_CAVALRY_4
+	}
+
+	sprite_artillery = {
+		0 = HOL_ARTILLERY_1
+		1 = HOL_ARTILLERY_2
+		2 = HOL_ARTILLERY_3
+		3 = HOL_ARTILLERY_4
+	}
+}

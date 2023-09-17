@@ -1,0 +1,1262 @@
+namespace = FEE_Advisor_Event
+
+# A Pouch of Gold?
+country_event = {
+	id = FEE_Advisor_Event.1
+	title = FEE_Advisor_Event.1.T
+	desc = FEE_Advisor_Event.1.D
+	picture = CITY_VIEW_eventPicture
+
+	trigger = {
+		OR = {
+			advisor = treasurer
+			advisor = master_of_mint
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 600
+	}
+
+	option = {
+		name = FEE_Advisor_Event.1.OPT1
+
+		add_treasury = 300
+	}
+}
+
+# Monumental Suggestions
+country_event = {
+	id = FEE_Advisor_Event.2
+	title = FEE_Advisor_Event.2.T
+	desc = FEE_Advisor_Event.2.D
+	picture = ADVISOR_eventPicture
+
+	trigger = {
+		OR = {
+			advisor = treasurer
+			advisor = master_of_mint
+		}
+		NOT = { has_country_flag = fee_events_for_monumental_suggestion_active }
+	}
+
+	mean_time_to_happen = {
+		months = 600
+	}
+
+	option = {
+		name = FEE_Advisor_Event.2.OPT1
+
+		add_treasury = -320
+		custom_tooltip = EVERY_OWNED_CORE_PROVINCE_MINUS_2_UNREST
+		hidden_effect = {
+			set_country_flag = fee_events_for_monumental_suggestion_active
+			every_owned_province = {
+				limit = {
+					is_core = ROOT
+				}
+				add_unrest = -2
+			}
+			random_list = {
+				16 = {
+					country_event = { id = FEE_Advisor_Event.3 days = 345 random = 40 }
+				}
+				16 = {
+					country_event = { id = FEE_Advisor_Event.4 days = 345 random = 40 }
+				}
+				16 = {
+					country_event = { id = FEE_Advisor_Event.5 days = 345 random = 40 }
+				}
+				16 = {
+					country_event = { id = FEE_Advisor_Event.6 days = 345 random = 40 }
+				}
+				16 = {
+					country_event = { id = FEE_Advisor_Event.7 days = 345 random = 40 }
+				}
+				16 = {
+					country_event = { id = FEE_Advisor_Event.8 days = 345 random = 40 }
+				}
+			}
+		}
+	}
+
+	option = {
+		name = FEE_Advisor_Event.2.OPT2
+
+		custom_tooltip = EVERY_OWNED_CORE_PROVINCE_PLUS_1_UNREST
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					is_core = ROOT
+				}
+				add_unrest = 1
+			}
+		}
+	}
+}
+
+# A Monumental Reveal (I)
+country_event = {
+	id = FEE_Advisor_Event.3
+	title = FEE_Advisor_Event.3.T
+	desc = FEE_Advisor_Event.3.D
+	picture = CITY_VIEW
+
+	is_triggered_only = yes
+
+	trigger = {
+		has_country_flag = fee_events_for_monumental_suggestion_active
+	}
+
+	option = {
+		name = FEE_Advisor_Event.3.OPT1
+
+		custom_tooltip = EVERY_OWNED_CORE_PROVINCE_PLUS_1_UNREST
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					is_core = ROOT
+				}
+				add_unrest = 1
+			}
+		}
+	}
+
+	option = {
+		name = FEE_Advisor_Event.3.OPT2
+
+		add_adm_power = -50
+	}
+
+	after = {
+		clr_country_flag = fee_events_for_monumental_suggestion_active
+	}
+}
+
+# A Monumental Reveal (II)
+country_event = {
+	id = FEE_Advisor_Event.4
+	title = FEE_Advisor_Event.4.T
+	desc = FEE_Advisor_Event.4.D
+	picture = CITY_VIEW
+
+	is_triggered_only = yes
+
+	trigger = {
+		has_country_flag = fee_events_for_monumental_suggestion_active
+	}
+
+	immediate = {
+		hidden_effect = {
+			if = {
+				limit = {
+					religion = catholic
+					exists = PAP
+				}
+				PAP = {
+					save_event_target_as = fee_statue_target
+				}
+			}
+			else_if = {
+				limit = {
+					religion = catholic
+					any_country = {
+						is_papal_controller = yes
+					}
+				}
+				random_country = {
+					limit = {
+						is_papal_controller = yes
+					}
+					save_event_target_as = fee_statue_target
+				}
+			}
+			else_if = {
+				limit = {
+					any_country = {
+						religion = ROOT
+					}
+				}
+				random_country = {
+					limit = {
+						religion = ROOT
+					}
+					save_event_target_as = fee_statue_target
+				}
+			}
+			else = {
+				save_event_target_as = fee_statue_target
+			}
+		}
+	}
+
+	option = {
+		name = FEE_Advisor_Event.4.OPT1
+
+		if = {
+			limit = {
+				event_target:fee_statue_target = {
+					NOT = { tag = ROOT }
+				}
+			}
+			if = {
+				limit = {
+					event_target:fee_statue_target = {
+						tag = PAP
+					}
+				}
+				every_country = {
+					limit = {
+						religion = ROOT
+					}
+					add_opinion = {
+						who = ROOT
+						modifier = fee_advisor_religious_statue
+					}
+				}
+			}
+			else = {
+				event_target:fee_statue_target = {
+					add_opinion = {
+						who = ROOT
+						modifier = fee_advisor_religious_statue
+					}
+				}
+			}
+		}
+		else = {
+			add_prestige_or_monarch_power = { amount = 5 }
+		}
+	}
+
+	after = {
+		clr_country_flag = fee_events_for_monumental_suggestion_active
+	}
+}
+
+# A Monumental Reveal (III)
+country_event = {
+	id = FEE_Advisor_Event.5
+	title = FEE_Advisor_Event.5.T
+	desc = FEE_Advisor_Event.5.D
+	picture = CITY_VIEW
+
+	is_triggered_only = yes
+
+	trigger = {
+		has_country_flag = fee_events_for_monumental_suggestion_active
+	}
+
+	option = {
+		name = FEE_Advisor_Event.5.OPT1
+
+		every_country = {
+			limit = {
+				religion = ROOT
+			}
+			add_opinion = {
+				who = ROOT
+				modifier = fee_advisor_devil_statue
+			}
+		}
+	}
+
+	option = {
+		name = FEE_Advisor_Event.5.OPT2
+
+		random = {
+			chance = 30
+			add_ruler_modifier = {
+				name = fee_ruler_trait_wroth
+				duration = -1
+			}
+		}
+	}
+
+	after = {
+		clr_country_flag = fee_events_for_monumental_suggestion_active
+	}
+}
+
+# A Monumental Reveal (IV)
+country_event = {
+	id = FEE_Advisor_Event.6
+	title = FEE_Advisor_Event.6.T
+	desc = FEE_Advisor_Event.6.D
+	picture = CITY_VIEW
+
+	is_triggered_only = yes
+
+	trigger = {
+		has_country_flag = fee_events_for_monumental_suggestion_active
+	}
+
+	option = {
+		name = FEE_Advisor_Event.6.OPT1
+
+		add_legitimacy_equivalent = { amount = 75 republican_tradition = 30 }
+		random = {
+			chance = 25
+			add_ruler_modifier = {
+				name = fee_ruler_trait_proud
+				duration = -1
+			}
+		}
+	}
+
+	option = {
+		name = FEE_Advisor_Event.6.OPT2
+
+		add_prestige_or_monarch_power = { amount = 35 }
+		random = {
+			chance = 25
+			add_ruler_modifier = {
+				name = fee_ruler_trait_humble
+				duration = -1
+			}
+		}
+	}
+
+	after = {
+		clr_country_flag = fee_events_for_monumental_suggestion_active
+	}
+}
+
+# A Monumental Reveal (V)
+country_event = {
+	id = FEE_Advisor_Event.7
+	title = FEE_Advisor_Event.7.T
+	desc = FEE_Advisor_Event.7.D
+	picture = CITY_VIEW
+
+	is_triggered_only = yes
+
+	trigger = {
+		has_country_flag = fee_events_for_monumental_suggestion_active
+	}
+
+	option = {
+		name = FEE_Advisor_Event.7.OPT1
+
+		add_legitimacy_equivalent = { amount = -15 republican_tradition = -8 }
+		add_prestige = -15
+	}
+
+	option = {
+		name = FEE_Advisor_Event.7.OPT2
+
+		add_legitimacy_equivalent = { amount = -10 republican_tradition = -5 }
+		add_prestige = -10
+		if = {
+			limit = {
+				advisor = treasurer
+			}
+			remove_advisor = treasurer
+		}
+		else_if = {
+			limit = {
+				advisor = master_of_mint
+			}
+			remove_advisor = master_of_mint
+		}
+	}
+
+	after = {
+		clr_country_flag = fee_events_for_monumental_suggestion_active
+	}
+}
+
+# A Monumental Reveal (VI)
+country_event = {
+	id = FEE_Advisor_Event.8
+	title = FEE_Advisor_Event.8.T
+	desc = FEE_Advisor_Event.8.D
+	picture = CITY_VIEW
+
+	is_triggered_only = yes
+
+	trigger = {
+		has_country_flag = fee_events_for_monumental_suggestion_active
+	}
+
+	option = {
+		name = FEE_Advisor_Event.8.OPT1
+
+		add_ruler_modifier = {
+			name = fee_ruler_trait_lustful
+			duration = -1
+		}
+		if = {
+			limit = {
+				religion = catholic
+				exists = PAP
+			}
+			PAP = {
+				add_opinion = {
+					who = ROOT
+					modifier = fee_advisor_openly_lustful_ruler
+				}
+			}
+		}
+		else = {
+			every_country = {
+				limit = {
+					religion = ROOT
+				}
+				add_opinion = {
+					who = ROOT
+					modifier = fee_advisor_openly_lustful_ruler_small
+				}
+			}
+		}
+	}
+
+	option = {
+		name = FEE_Advisor_Event.8.OPT2
+
+		if = {
+			limit = {
+				religion = catholic
+				exists = PAP
+			}
+			PAP = {
+				add_opinion = {
+					who = ROOT
+					modifier = fee_advisor_pious_ruler
+				}
+			}
+		}
+		else = {
+			every_country = {
+				limit = {
+					religion = ROOT
+				}
+				add_opinion = {
+					who = ROOT
+					modifier = fee_advisor_pious_ruler_small
+				}
+			}
+		}
+	}
+
+	after = {
+		clr_country_flag = fee_events_for_monumental_suggestion_active
+	}
+}
+
+# Courtly Loans
+country_event = {
+	id = FEE_Advisor_Event.9
+	title = FEE_Advisor_Event.9.T
+	desc = FEE_Advisor_Event.9.D
+	picture = NEW_HEIR_eventPicture
+
+	trigger = {
+		OR = {
+			advisor = treasurer
+			advisor = master_of_mint
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 600
+	}
+
+	option = {
+		name = FEE_Advisor_Event.9.OPT1
+
+		add_treasury = -100
+		add_country_modifier = {
+			name = fee_advisor_collecting_taxes
+			duration = 1825
+		}
+	}
+
+	option = {
+		name = FEE_Advisor_Event.9.OPT2
+
+		if = {
+			limit = {
+				advisor = treasurer
+			}
+			remove_advisor = treasurer
+		}
+		else_if = {
+			limit = {
+				advisor = master_of_mint
+			}
+			remove_advisor = master_of_mint
+		}
+	}
+}
+
+# A Full Days Work (I)
+country_event = {
+	id = FEE_Advisor_Event.10
+	title = FEE_Advisor_Event.10.T
+	desc = FEE_Advisor_Event.10.D
+	picture = CITY_VIEW_eventPicture
+
+	trigger = {
+		OR = {
+			advisor = treasurer
+			advisor = master_of_mint
+		}
+		NOT = { has_country_flag = fee_events_for_a_full_days_work_active }
+	}
+
+	mean_time_to_happen = {
+		months = 600
+	}
+
+	option = {
+		name = FEE_Advisor_Event.10.OPT1
+
+		hidden_effect = {
+			set_country_flag = fee_events_for_a_full_days_work_active
+			country_event = { id = FEE_Advisor_Event.11 days = 5 random = 15 }
+		}
+	}
+
+	option = {
+		name = FEE_Advisor_Event.10.OPT2
+
+	}
+}
+
+# A Full Days Work (II)
+country_event = {
+	id = FEE_Advisor_Event.11
+	title = FEE_Advisor_Event.11.T
+	desc = FEE_Advisor_Event.11.D
+	picture = CITY_VIEW_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		has_country_flag = fee_events_for_a_full_days_work_active
+	}
+
+	option = {
+		name = FEE_Advisor_Event.11.OPT1
+
+		add_ruler_modifier = {
+			name = fee_ruler_trait_honest
+			duration = -1
+		}
+	}
+
+	option = {
+		name = FEE_Advisor_Event.11.OPT2
+
+		random = {
+			chance = 50
+			add_treasury = 30
+		}
+	}
+
+	after = {
+		hidden_effect = {
+			country_event = { id = FEE_Advisor_Event.12 days = 5 random = 15 }
+		}
+	}
+}
+
+# A Full Days Work (III)
+country_event = {
+	id = FEE_Advisor_Event.12
+	title = FEE_Advisor_Event.12.T
+	desc = FEE_Advisor_Event.12.D
+	picture = CITY_VIEW_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		has_country_flag = fee_events_for_a_full_days_work_active
+	}
+
+	option = {
+		name = FEE_Advisor_Event.12.OPT1
+
+	}
+
+	option = {
+		name = FEE_Advisor_Event.12.OPT2
+
+		add_treasury = -60
+		add_ruler_modifier = {
+			name = fee_ruler_trait_trusting
+			duration = -1
+		}
+	}
+
+	option = {
+		name = FEE_Advisor_Event.12.OPT3
+
+		if = {
+			limit = {
+				has_ruler_modifier = fee_ruler_trait_kind
+			}
+			remove_country_modifier = fee_ruler_trait_kind
+		}
+		add_ruler_modifier = {
+			name = fee_ruler_trait_wroth
+			duration = -1
+		}
+	}
+
+	after = {
+		hidden_effect = {
+			country_event = { id = FEE_Advisor_Event.13 days = 5 random = 15 }
+		}
+	}
+}
+
+# A Full Days Work (IV)
+country_event = {
+	id = FEE_Advisor_Event.13
+	title = FEE_Advisor_Event.13.T
+	desc = FEE_Advisor_Event.13.D
+	picture = CITY_VIEW_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		has_country_flag = fee_events_for_a_full_days_work_active
+	}
+
+	option = {
+		name = FEE_Advisor_Event.13.OPT1
+
+		change_adm = 1
+	}
+
+	option = {
+		name = FEE_Advisor_Event.13.OPT2
+
+		add_ruler_modifier = {
+			name = fee_advisor_full_day_work
+			duration = -1
+		}
+	}
+
+	option = {
+		name = FEE_Advisor_Event.13.OPT3
+
+		add_ruler_modifier = {
+			name = fee_ruler_trait_slothful
+			duration = -1
+		}
+	}
+
+	after = {
+		clr_country_flag = fee_events_for_a_full_days_work_active
+	}
+}
+
+# Student of Language? (I)
+country_event = {
+	id = FEE_Advisor_Event.14
+	title = FEE_Advisor_Event.14.T
+	desc = FEE_Advisor_Event.14.D
+	picture = CITY_VIEW_eventPicture
+
+	trigger = {
+		OR = {
+			advisor = statesman
+			advisor = diplomat
+			advisor = colonial_governor
+		}
+		NOT = { has_country_flag = fee_events_for_student_of_language_active }
+		NOT = { has_ruler_flag = fee_events_for_student_of_language_completed }
+	}
+
+	mean_time_to_happen = {
+		months = 600
+	}
+
+	option = {
+		name = FEE_Advisor_Event.14.OPT1
+
+		add_ruler_modifier = {
+			name = fee_advisor_student_language
+			duration = -1
+		}
+		hidden_effect = {
+			set_country_flag = fee_events_for_student_of_language_active
+			random_list = {
+				90 = {
+					country_event = { id = FEE_Advisor_Event.15 days = 180 random = 30 }
+				}
+				10 = {
+					country_event = { id = FEE_Advisor_Event.17 days = 90 random = 30 }
+				}
+			}
+		}
+	}
+
+	option = {
+		name = FEE_Advisor_Event.14.OPT2
+
+		add_ruler_modifier = {
+			name = fee_advisor_ignorant_ruler
+			duration = -1
+		}
+		random_list = {
+			45 = {
+				add_ruler_modifier = {
+					name = fee_ruler_trait_shy
+					duration = -1
+				}
+			}
+			35 = {
+				add_ruler_modifier = {
+					name = fee_ruler_trait_proud
+					duration = -1
+				}
+			}
+			20 = {
+				# No Effect
+			}
+		}
+	}
+}
+
+# Student of Language? (II)
+country_event = {
+	id = FEE_Advisor_Event.15
+	title = FEE_Advisor_Event.15.T
+	desc = FEE_Advisor_Event.15.D
+	picture = CITY_VIEW_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		has_country_flag = fee_events_for_student_of_language_active
+	}
+
+	option = {
+		name = FEE_Advisor_Event.15.OPT1
+
+		random = {
+			chance = 15
+			add_ruler_modifier = {
+				name = fee_ruler_trait_diligent
+				duration = -1
+			}
+		}
+		hidden_effect = {
+			random_list = {
+				45 = {
+					country_event = { id = FEE_Advisor_Event.16 days = 90 random = 30 }
+				}
+				55 = {
+					country_event = { id = FEE_Advisor_Event.17 days = 90 random = 30 }
+				}
+			}
+		}
+	}
+
+	option = {
+		name = FEE_Advisor_Event.15.OPT2
+
+		random = {
+			chance = 15
+			add_ruler_modifier = {
+				name = fee_ruler_trait_slothful
+				duration = -1
+			}
+		}
+		clr_country_flag = fee_events_for_student_of_language_active
+	}
+}
+
+# Student of Language? (III)
+country_event = {
+	id = FEE_Advisor_Event.16
+	title = FEE_Advisor_Event.16.T
+	desc = FEE_Advisor_Event.16.D
+	picture = CITY_VIEW_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		has_country_flag = fee_events_for_student_of_language_active
+	}
+
+	option = {
+		name = FEE_Advisor_Event.16.OPT1
+
+		random = {
+			chance = 35
+			add_ruler_modifier = {
+				name = fee_ruler_trait_wroth
+				duration = -1
+			}
+		}
+	}
+
+	option = {
+		name = FEE_Advisor_Event.16.OPT2
+
+		random = {
+			chance = 35
+			add_ruler_modifier = {
+				name = fee_ruler_trait_patient
+				duration = -1
+			}
+		}
+	}
+
+	after = {
+		random_list = {
+			70 = {
+				country_event = { id = FEE_Advisor_Event.18 days = 90 random = 30 }
+			}
+			30 = {
+				set_country_flag = fee_events_for_student_of_language_alone
+				country_event = { id = FEE_Advisor_Event.17 days = 120 random = 30 }
+			}
+		}
+	}
+}
+
+# Student of Language? (IV)
+country_event = {
+	id = FEE_Advisor_Event.17
+	title = FEE_Advisor_Event.17.T
+	desc = {
+		trigger = {
+			NOT = { has_country_flag = fee_events_for_student_of_language_alone }
+		}
+		desc = FEE_Advisor_Event.17.1.D
+	}
+	desc = {
+		trigger = {
+			has_country_flag = fee_events_for_student_of_language_alone
+		}
+		desc = FEE_Advisor_Event.17.2.D
+	}
+	picture = CITY_VIEW_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		has_country_flag = fee_events_for_student_of_language_active
+	}
+
+	option = {
+		name = FEE_Advisor_Event.17.OPT1
+
+		add_ruler_modifier = {
+			name = fee_advisor_multilingual_ruler
+			duration = -1
+		}
+		clr_country_flag = fee_events_for_student_of_language_active
+		clr_country_flag = fee_events_for_student_of_language_alone
+		set_ruler_flag = fee_events_for_student_of_language_completed
+	}
+}
+
+# Student of Language? (V)
+country_event = {
+	id = FEE_Advisor_Event.18
+	title = FEE_Advisor_Event.18.T
+	desc = FEE_Advisor_Event.18.D
+	picture = CITY_VIEW_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		has_country_flag = fee_events_for_student_of_language_active
+	}
+
+	option = {
+		name = FEE_Advisor_Event.18.OPT1
+
+		if = {
+			limit = {
+				has_ruler_modifier = fee_advisor_student_language
+			}
+			remove_country_modifier = fee_advisor_student_language
+		}
+		clr_country_flag = fee_events_for_student_of_language_active
+		set_ruler_flag = fee_events_for_student_of_language_completed
+	}
+}
+
+# Excessive Bureaucracy
+country_event = {
+	id = FEE_Advisor_Event.19
+	title = FEE_Advisor_Event.19.T
+	desc = FEE_Advisor_Event.19.D
+	picture = CITY_VIEW_eventPicture
+
+	trigger = {
+		OR = {
+			advisor = statesman
+			advisor = diplomat
+			advisor = colonial_governor
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 600
+	}
+
+	option = {
+		name = FEE_Advisor_Event.19.OPT1
+
+		add_treasury = 50
+		remove_advisor_by_category = DIP
+	}
+
+	option = {
+		name = FEE_Advisor_Event.19.OPT2
+
+		add_treasury = 100
+		add_country_modifier = {
+			name = fee_advisor_excessive_bureaucracy
+			duration = 3650
+		}
+	}
+}
+
+# Up and Coming Commander
+country_event = {
+	id = FEE_Advisor_Event.20
+	title = FEE_Advisor_Event.20.T
+	desc = FEE_Advisor_Event.20.D
+	picture = CITY_VIEW_eventPicture
+
+	trigger = {
+		OR = {
+			advisor = army_reformer
+			advisor = army_organiser
+			advisor = commandant
+			advisor = grand_captain
+			advisor = naval_reformer
+			advisor = quartermaster
+			advisor = recruitmaster
+		}
+		NOT = { has_country_modifier = fee_advisor_young_skilled_commander }
+	}
+
+	mean_time_to_happen = {
+		months = 600
+	}
+
+	option = {
+		name = FEE_Advisor_Event.20.OPT1
+
+		create_general = { tradition = 60 }
+		add_country_modifier = {
+			name = fee_advisor_young_skilled_commander
+			duration = 18250
+		}
+	}
+
+	option = {
+		name = FEE_Advisor_Event.20.OPT2
+
+		add_mil_power = 100
+	}
+}
+
+# Untrustworthy Assistants
+country_event = {
+	id = FEE_Advisor_Event.21
+	title = FEE_Advisor_Event.21.T
+	desc = FEE_Advisor_Event.21.D
+	picture = CITY_VIEW_eventPicture
+
+	trigger = {
+		OR = {
+			advisor = army_reformer
+			advisor = army_organiser
+			advisor = commandant
+			advisor = grand_captain
+			advisor = naval_reformer
+			advisor = quartermaster
+			advisor = recruitmaster
+		}
+		capital_scope = {
+			NOT = { has_province_modifier = fee_advisor_disloyal_peasantry }
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 600
+	}
+
+	option = {
+		name = FEE_Advisor_Event.21.OPT1
+
+		remove_advisor_by_category = MIL
+		capital_scope = {
+			add_province_modifier = {
+				name = fee_advisor_disloyal_peasantry
+				duration = 1825
+			}
+		}
+	}
+
+	option = {
+		name = FEE_Advisor_Event.21.OPT2
+
+		capital_scope = {
+			add_province_modifier = {
+				name = fee_advisor_disloyal_peasantry
+				duration = 3650
+			}
+		}
+	}
+}
+
+# Abuse of Power
+country_event = {
+	id = FEE_Advisor_Event.22
+	title = FEE_Advisor_Event.22.T
+	desc = FEE_Advisor_Event.22.D
+	picture = CITY_VIEW_eventPicture
+
+	trigger = {
+		OR = {
+			advisor = army_reformer
+			advisor = army_organiser
+			advisor = commandant
+			advisor = grand_captain
+			advisor = naval_reformer
+			advisor = quartermaster
+			advisor = recruitmaster
+		}
+		capital_scope = {
+			NOT = { has_province_modifier = fee_advisor_disloyal_peasantry }
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 600
+	}
+
+	option = {
+		name = FEE_Advisor_Event.22.OPT1
+
+		remove_advisor_by_category = MIL
+		add_mil_power = 50
+		capital_scope = {
+			add_province_modifier = {
+				name = fee_advisor_disloyal_peasantry
+				duration = 1825
+			}
+		}
+	}
+
+	option = {
+		name = FEE_Advisor_Event.22.OPT2
+
+		add_treasury = 50
+		capital_scope = {
+			add_province_modifier = {
+				name = fee_advisor_disloyal_peasantry
+				duration = 1825
+			}
+		}
+	}
+}
+
+# The Brilliant Inventor
+country_event = {
+	id = FEE_Advisor_Event.23
+	title = FEE_Advisor_Event.23.T
+	desc = FEE_Advisor_Event.23.D
+	picture = CITY_VIEW_eventPicture
+
+	trigger = {
+		OR = {
+			advisor = army_reformer
+			advisor = army_organiser
+			advisor = commandant
+			advisor = grand_captain
+			advisor = naval_reformer
+			advisor = quartermaster
+			advisor = recruitmaster
+		}
+		NOT = { has_country_flag = fee_events_for_the_brilliant_inventor_active }
+	}
+
+	mean_time_to_happen = {
+		months = 600
+	}
+
+	option = {
+		name = FEE_Advisor_Event.23.OPT1
+
+		add_treasury = -50
+		hidden_effect = {
+			set_country_flag = fee_events_for_the_brilliant_inventor_active
+			random_list = {
+				25 = {
+					country_event = { id = FEE_Advisor_Event.24 days = 365 random = 30 }
+				}
+				25 = {
+					country_event = { id = FEE_Advisor_Event.25 days = 365 random = 30 }
+				}
+				25 = {
+					country_event = { id = FEE_Advisor_Event.26 days = 365 random = 30 }
+				}
+				25 = {
+					country_event = { id = FEE_Advisor_Event.27 days = 365 random = 30 }
+				}
+			}
+		}
+	}
+
+	option = {
+		name = FEE_Advisor_Event.23.OPT2
+
+	}
+}
+
+# The Armoured Chariot
+country_event = {
+	id = FEE_Advisor_Event.24
+	title = FEE_Advisor_Event.24.T
+	desc = FEE_Advisor_Event.24.D
+	picture = CITY_VIEW_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		has_country_flag = fee_events_for_the_brilliant_inventor_active
+	}
+
+	option = {
+		name = FEE_Advisor_Event.24.OPT1
+
+		add_mil_power = -75
+		clr_country_flag = fee_events_for_the_brilliant_inventor_active
+	}
+}
+
+# Screaming Arrows
+country_event = {
+	id = FEE_Advisor_Event.25
+	title = FEE_Advisor_Event.25.T
+	desc = FEE_Advisor_Event.25.D
+	picture = CITY_VIEW_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		has_country_flag = fee_events_for_the_brilliant_inventor_active
+	}
+
+	option = {
+		name = FEE_Advisor_Event.25.OPT1
+
+		add_mil_power = 100
+		clr_country_flag = fee_events_for_the_brilliant_inventor_active
+	}
+}
+
+# Burning Sheep
+country_event = {
+	id = FEE_Advisor_Event.26
+	title = FEE_Advisor_Event.26.T
+	desc = FEE_Advisor_Event.26.D
+	picture = CITY_VIEW_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		has_country_flag = fee_events_for_the_brilliant_inventor_active
+	}
+
+	option = {
+		name = FEE_Advisor_Event.26.OPT1
+
+		add_mil_power = -30
+		if = {
+			limit = {
+				OR = {
+					advisor = army_reformer
+					advisor = army_organiser
+					advisor = commandant
+					advisor = grand_captain
+					advisor = naval_reformer
+					advisor = quartermaster
+					advisor = recruitmaster
+				}
+			}
+			random = {
+				chance = 50
+				if = {
+					limit = {
+						advisor = army_reformer
+					}
+					kill_advisor = army_reformer
+				}
+				else_if = {
+					limit = {
+						advisor = army_organiser
+					}
+					kill_advisor = army_organiser
+				}
+				else_if = {
+					limit = {
+						advisor = commandant
+					}
+					kill_advisor = commandant
+				}
+				else_if = {
+					limit = {
+						advisor = grand_captain
+					}
+					kill_advisor = grand_captain
+				}
+				else_if = {
+					limit = {
+						advisor = naval_reformer
+					}
+					kill_advisor = naval_reformer
+				}
+				else_if = {
+					limit = {
+						advisor = quartermaster
+					}
+					kill_advisor = quartermaster
+				}
+				else_if = {
+					limit = {
+						advisor = recruitmaster
+					}
+					kill_advisor = recruitmaster
+				}
+			}
+		}
+		clr_country_flag = fee_events_for_the_brilliant_inventor_active
+	}
+}
+
+# Burning Sheep
+country_event = {
+	id = FEE_Advisor_Event.27
+	title = FEE_Advisor_Event.27.T
+	desc = FEE_Advisor_Event.27.D
+	picture = CITY_VIEW_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		has_country_flag = fee_events_for_the_brilliant_inventor_active
+	}
+
+	option = {
+		name = FEE_Advisor_Event.27.OPT1
+
+		add_prestige = -20
+		add_mil_power = -75
+		clr_country_flag = fee_events_for_the_brilliant_inventor_active
+	}
+}

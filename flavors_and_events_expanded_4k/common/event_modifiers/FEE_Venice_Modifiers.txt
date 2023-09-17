@@ -1,0 +1,177 @@
+fee_ven_mercantile_fleet = {
+	light_ship_cost = -0.15
+}
+fee_ven_galley_fleet = {
+	galley_cost = -0.15
+}
+
+fee_ven_magistrato_milizia_mar = {
+	allowed_marine_fraction = 0.25
+	naval_maintenance_modifier = -0.1
+}
+
+fee_ven_naval_reforms = {
+	dip_tech_cost_modifier = -0.10
+}
+
+fee_ven_commander_convicts = {
+	sailor_maintenance_modifer = -0.15
+	naval_tradition_from_battle = 0.25
+}
+
+fee_ven_porta_magna = {
+	monthly_splendor = 1
+	local_development_cost = -0.05
+}
+
+fee_ven_arsenal_expansion = {
+	local_build_cost = -0.10
+	local_great_project_upgrade_cost = -0.125
+}
+fee_ven_arsenal_expansion_1535 = {
+	local_build_cost = -0.10
+	local_great_project_upgrade_cost = -0.125
+	artillery_cost = -0.10
+}
+fee_ven_arsenal_expansion_final = {
+	local_great_project_upgrade_cost = -0.125
+	artillery_cost = -0.10
+	siege_blockade_progress = 1
+}
+
+fee_ven_fanti_mar = {
+	local_manpower_modifier = 0.075
+	local_regiment_cost = -0.10
+	regiment_recruit_speed = -0.10
+	local_sailors_modifier = 0.075
+}
+
+fee_ven_jew_ghetto = {
+	trade_goods_size = 0.15
+	local_build_time = -0.10
+}
+fee_ven_jew_ghetto_novo = {
+	trade_goods_size = 0.25
+	local_build_time = -0.15
+}
+
+fee_ven_doge_foscari = {
+	all_estate_loyalty_equilibrium = 0.075
+	advisor_cost = -0.05
+}
+
+fee_ven_prosperity_po_valley = {
+	local_development_cost = -0.10
+	local_manpower_modifier = 0.10
+	province_trade_power_modifier = 0.15
+}
+
+fee_ven_malipiero_avogadore_comun = {
+	nobles_influence_modifier = -0.05
+	nobles_loyalty_modifier = 0.05
+}
+
+fee_ven_soranzo_default = {
+	global_tax_modifier = -0.20
+	state_maintenance_modifier = 0.20
+}
+fee_ven_soranzo_default_minimal = {
+	global_tax_modifier = -0.10
+	state_maintenance_modifier = 0.10
+}
+
+fee_ven_moro_provveditore_pubbliche_entrate = {
+	local_development_cost = -0.10
+	local_tax_modifier = 0.10
+	local_build_cost = -0.10
+	local_build_time = -0.10
+}
+
+fee_ven_craine = {
+	local_manpower_modifier = 0.10
+	local_regiment_cost = -0.15
+	regiment_recruit_speed = -0.15
+	local_development_cost = -0.10
+}
+
+fee_ven_treaty_constantinople = {
+	global_tax_income = -10
+	global_own_trade_power = -0.10
+	trade_steering = -0.10
+}
+fee_ven_treaty_constantinople_province = {
+	province_trade_power_modifier = -0.15
+	trade_value_modifier = -0.15
+	local_development_cost = 0.15
+}
+
+fee_ven_aegean_superiority = {
+	global_own_trade_power = 0.10
+	trade_steering = 0.10
+	republican_tradition = 1
+	prestige = 1
+	monthly_splendor = 4
+}
+fee_ven_aegean_superiority_province = {
+	province_trade_power_modifier = 0.15
+	trade_value_modifier = 0.15
+	local_development_cost = -0.15
+}
+
+fee_ven_latin_trebizond_ties = {
+	local_development_cost = -0.15
+	province_trade_power_modifier = 0.15
+	trade_value_modifier = 0.15
+	institution_growth = 4
+}
+
+fee_ven_arabo_venetian_coffee = {
+	local_prosperity_growth = 1.5
+	local_production_efficiency = 0.15
+	local_development_cost = -0.15
+	province_trade_power_modifier = 0.15
+	province_trade_power_value = 0.15
+}
+
+fee_ven_cardinal_domenico_grimani = {
+	local_institution_spread = 0.25
+	local_missionary_strength = 0.03
+	local_missionary_maintenance_cost = -0.25
+	local_tax_modifier = 0.25
+	local_unrest = -2
+	papal_influence = 0.5
+}
+
+fee_ven_andrea_gritti = {
+	province_trade_power_modifier = 0.15
+	province_trade_power_value = 0.15
+	local_development_cost = -0.15
+}
+
+fee_ven_doge_marcantonio_trevisan = {
+	global_unrest = 1
+	papal_influence = 1
+	church_power_modifier = 0.05
+	monthly_fervor_increase = 0.5
+}
+
+fee_ven_francesco_venier_merchant = {
+	province_trade_power_modifier = 0.15
+	province_trade_power_value = 0.15
+	local_development_cost = -0.15
+}
+
+fee_ven_standing_army = {
+	global_manpower_modifier = 0.10
+	land_forcelimit_modifier = 0.10
+	mercenary_manpower = -0.25
+	mercenary_cost = 0.25
+	mercenary_discipline = -0.10
+}
+fee_ven_mercenary_army = {
+	global_manpower_modifier = -0.15
+	land_forcelimit_modifier = -0.15
+	mercenary_manpower = 0.25
+	mercenary_cost = -0.25
+	mercenary_discipline = 0.05
+}

@@ -1,0 +1,314 @@
+has_adm_advisor = {
+	custom_trigger_tooltip = {
+		tooltip = has_adm_advisor_tooltip
+		OR = {
+			advisor = treasurer
+			advisor = philosopher
+			advisor = artist
+			advisor = theologian
+			advisor = master_of_mint
+			advisor = inquisitor
+			advisor = natural_scientist
+			# Advisor Types Expanded
+			has_ate_advisor = { adm = yes skill = 1 }
+			# Compatibility with Advisors Expanded
+			has_advisors_expanded_advisor = { adm = yes skill = 1 }
+			# Compatibility with Flavor Universalis
+			has_flavor_universalis_advisor  = { adm = yes skill = 1 }
+		}
+	}
+}
+
+has_adm_advisor_2 = {
+	custom_trigger_tooltip = {
+		tooltip = has_adm_advisor_2_tooltip
+		OR = {
+			treasurer = 2
+			philosopher = 2
+			artist = 2
+			theologian = 2
+			master_of_mint = 2
+			inquisitor = 2
+			natural_scientist = 2
+			# Advisor Types Expanded
+			has_ate_advisor = { adm = yes skill = 2 }
+			# Compatibility with Advisors Expanded
+			has_advisors_expanded_advisor = { adm = yes skill = 2 }
+			# Compatibility with Flavor Universalis
+			has_flavor_universalis_advisor  = { adm = yes skill = 2 }
+		}
+	}
+}
+
+has_adm_advisor_3 = {
+	custom_trigger_tooltip = {
+		tooltip = has_adm_advisor_3_tooltip
+		OR = {
+			treasurer = 3
+			philosopher = 3
+			artist = 3
+			theologian = 3
+			master_of_mint = 3
+			inquisitor = 3
+			natural_scientist = 3
+			# Advisor Types Expanded
+			has_ate_advisor = { adm = yes skill = 3 }
+			# Compatibility with Advisors Expanded
+			has_advisors_expanded_advisor = { adm = yes skill = 3 }
+			# Compatibility with Flavor Universalis
+			has_flavor_universalis_advisor  = { adm = yes skill = 3 }
+		}
+	}
+}
+
+has_adm_advisor_4 = {
+	custom_trigger_tooltip = {
+		tooltip = has_adm_advisor_4_tooltip
+		OR = {
+			treasurer = 4
+			philosopher = 4
+			artist = 4
+			theologian = 4
+			master_of_mint = 4
+			inquisitor = 4
+			natural_scientist = 4
+			# Advisor Types Expanded
+			has_ate_advisor = { adm = yes skill = 4 }
+			# Compatibility with Advisors Expanded
+			has_advisors_expanded_advisor = { adm = yes skill = 4 }
+			# Compatibility with Flavor Universalis
+			has_flavor_universalis_advisor  = { adm = yes skill = 4 }
+		}
+	}
+}
+
+has_adm_advisor_5 = {
+	custom_trigger_tooltip = {
+		tooltip = has_adm_advisor_5_tooltip
+		OR = {
+			treasurer = 5
+			philosopher = 5
+			artist = 5
+			theologian = 5
+			master_of_mint = 5
+			inquisitor = 5
+			natural_scientist = 5
+			# Advisor Types Expanded
+			has_ate_advisor = { adm = yes skill = 5 }
+			# Compatibility with Advisors Expanded
+			has_advisors_expanded_advisor = { adm = yes skill = 5 }
+			# Compatibility with Flavor Universalis
+			has_flavor_universalis_advisor  = { adm = yes skill = 5 }
+		}
+	}
+}
+
+has_dip_advisor = {
+	custom_trigger_tooltip = {
+		tooltip = has_dip_advisor_tooltip
+		OR = {
+			advisor = statesman
+			advisor = diplomat
+			advisor = naval_reformer
+			advisor = trader
+			advisor = colonial_governor
+			advisor = navigator
+			advisor = spymaster
+			# Advisor Types Expanded
+			has_ate_advisor = { dip = yes skill = 1 }
+			# Compatibility with Advisors Expanded
+			has_advisors_expanded_advisor = { dip = yes skill = 1 }
+			# Compatibility with Flavor Universalis
+			has_flavor_universalis_advisor  = { dip = yes skill = 1 }
+		}
+	}
+}
+
+has_dip_advisor_2 = {
+	custom_trigger_tooltip = {
+		tooltip = has_dip_advisor_2_tooltip
+		OR = {
+			statesman = 2
+			diplomat = 2
+			naval_reformer = 2
+			trader = 2
+			colonial_governor = 2
+			navigator = 2
+			spymaster = 2
+			# Advisor Types Expanded
+			has_ate_advisor = { dip = yes skill = 2 }
+			# Compatibility with Advisors Expanded
+			has_advisors_expanded_advisor = { dip = yes skill = 2 }
+			# Compatibility with Flavor Universalis
+			has_flavor_universalis_advisor  = { dip = yes skill = 2 }
+		}
+	}
+}
+
+has_dip_advisor_3 = {
+	custom_trigger_tooltip = {
+		tooltip = has_dip_advisor_3_tooltip
+		OR = {
+			statesman = 3
+			diplomat = 3
+			naval_reformer = 3
+			trader = 3
+			colonial_governor = 3
+			navigator = 3
+			spymaster = 3
+			# Advisor Types Expanded
+			has_ate_advisor = { dip = yes skill = 3 }
+			# Compatibility with Advisors Expanded
+			has_advisors_expanded_advisor = { dip = yes skill = 3 }
+			# Compatibility with Flavor Universalis
+			has_flavor_universalis_advisor  = { dip = yes skill = 3 }
+		}
+	}
+}
+
+has_dip_advisor_4 = {
+	custom_trigger_tooltip = {
+		tooltip = has_dip_advisor_4_tooltip
+		OR = {
+			statesman = 4
+			diplomat = 4
+			naval_reformer = 4
+			trader = 4
+			colonial_governor = 4
+			navigator = 4
+			spymaster = 4
+			# Advisor Types Expanded
+			has_ate_advisor = { dip = yes skill = 4 }
+			# Compatibility with Advisors Expanded
+			has_advisors_expanded_advisor = { dip = yes skill = 4 }
+			# Compatibility with Flavor Universalis
+			has_flavor_universalis_advisor  = { dip = yes skill = 4 }
+		}
+	}
+}
+
+has_dip_advisor_5 = {
+	custom_trigger_tooltip = {
+		tooltip = has_dip_advisor_5_tooltip
+		OR = {
+			statesman = 5
+			diplomat = 5
+			naval_reformer = 5
+			trader = 5
+			colonial_governor = 5
+			navigator = 5
+			spymaster = 5
+			# Advisor Types Expanded
+			has_ate_advisor = { dip = yes skill = 5 }
+			# Compatibility with Advisors Expanded
+			has_advisors_expanded_advisor = { dip = yes skill = 5 }
+			# Compatibility with Flavor Universalis
+			has_flavor_universalis_advisor  = { dip = yes skill = 5 }
+		}
+	}
+}
+
+has_mil_advisor = {
+	custom_trigger_tooltip = {
+		tooltip = has_mil_advisor_tooltip
+		OR = {
+			advisor = army_organiser
+			advisor = army_reformer
+			advisor = commandant
+			advisor = grand_captain
+			advisor = recruitmaster
+			advisor = fortification_expert
+			advisor = quartermaster
+			# Advisor Types Expanded
+			has_ate_advisor = { mil = yes skill = 1 }
+			# Compatibility with Advisors Expanded
+			has_advisors_expanded_advisor = { mil = yes skill = 1 }
+			# Compatibility with Flavor Universalis
+			has_flavor_universalis_advisor  = { mil = yes skill = 1 }
+		}
+	}
+}
+
+has_mil_advisor_2 = {
+	custom_trigger_tooltip = {
+		tooltip = has_mil_advisor_2_tooltip
+		OR = {
+			army_organiser = 2
+			army_reformer = 2
+			commandant = 2
+			grand_captain = 2
+			recruitmaster = 2
+			fortification_expert = 2
+			quartermaster = 2
+			# Advisor Types Expanded
+			has_ate_advisor = { mil = yes skill = 2 }
+			# Compatibility with Advisors Expanded
+			has_advisors_expanded_advisor = { mil = yes skill = 2 }
+			# Compatibility with Flavor Universalis
+			has_flavor_universalis_advisor  = { mil = yes skill = 2 }
+		}
+	}
+}
+
+has_mil_advisor_3 = {
+	custom_trigger_tooltip = {
+		tooltip = has_mil_advisor_3_tooltip
+		OR = {
+			army_organiser = 3
+			army_reformer = 3
+			commandant = 3
+			grand_captain = 3
+			recruitmaster = 3
+			fortification_expert = 3
+			quartermaster = 3
+			# Advisor Types Expanded
+			has_ate_advisor = { mil = yes skill = 3 }
+			# Compatibility with Advisors Expanded
+			has_advisors_expanded_advisor = { mil = yes skill = 3 }
+			# Compatibility with Flavor Universalis
+			has_flavor_universalis_advisor  = { mil = yes skill = 3 }
+		}
+	}
+}
+
+has_mil_advisor_4 = {
+	custom_trigger_tooltip = {
+		tooltip = has_mil_advisor_4_tooltip
+		OR = {
+			army_organiser = 4
+			army_reformer = 4
+			commandant = 4
+			grand_captain = 4
+			recruitmaster = 4
+			fortification_expert = 4
+			quartermaster = 4
+			# Advisor Types Expanded
+			has_ate_advisor = { mil = yes skill = 4 }
+			# Compatibility with Advisors Expanded
+			has_advisors_expanded_advisor = { mil = yes skill = 4 }
+			# Compatibility with Flavor Universalis
+			has_flavor_universalis_advisor  = { mil = yes skill = 4 }
+		}
+	}
+}
+
+has_mil_advisor_5 = {
+	custom_trigger_tooltip = {
+		tooltip = has_mil_advisor_5_tooltip
+		OR = {
+			army_organiser = 5
+			army_reformer = 5
+			commandant = 5
+			grand_captain = 5
+			recruitmaster = 5
+			fortification_expert = 5
+			quartermaster = 5
+			# Advisor Types Expanded
+			has_ate_advisor = { mil = yes skill = 5 }
+			# Compatibility with Advisors Expanded
+			has_advisors_expanded_advisor = { mil = yes skill = 5 }
+			# Compatibility with Flavor Universalis
+			has_flavor_universalis_advisor  = { mil = yes skill = 5 }
+		}
+	}
+}

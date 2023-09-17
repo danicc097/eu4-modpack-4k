@@ -1,0 +1,929 @@
+guiTypes = {
+
+	########## historical_score_item #############
+	windowType = {
+		name = "historical_score_item"
+		backGround=""
+		position = { x=0 y=0 }	
+		size = { x=414 y= 54 }
+		moveable = 0
+		dontRender = ""
+		horizontalBorder= ""
+		verticalBorder= ""
+		fullScreen = no
+		
+		guiButtonType = {
+			position = { x= 0 y = 0 }
+			name = "country_shield"
+			quadTextureSprite ="GFX_shield_small"
+		}
+
+		instantTextBoxType = {
+			name = "country_name"
+			position = { x = 49 y = 4 } #was 49 2
+			
+			font = "vic_18"
+			borderSize = {x = 7 y = 7}
+			text = ""	
+			maxWidth = 180
+			maxHeight = 29	
+			format = left
+			fixedsize = yes
+		}
+		
+		instantTextBoxType = {
+			name = "score"
+			position = { x = 144 y = 2 }
+			
+			font = "vic_18"
+			borderSize = {x = 7 y = 7}
+			text = ""	
+			maxWidth = 153
+			maxHeight = 29	
+			format = right
+		}
+	}
+
+	########## endgame_dialog #############
+	positionType = {
+		name = "continue_btn_pos"
+		position = { x=950  y =1197}
+	}
+	positionType = {
+		name = "quit_btn_pos"
+		position = { x=950  y =1143}
+	}
+
+	
+	########## endgame_dialog #############
+	eu3dialogtype = {
+		name = "endgame_dialog"
+		backGround=""
+		position = { x=-1080 y=-630 }	
+		size = { x=2160 y=1260 }
+		moveable = 0
+		dontRender = ""
+		horizontalBorder= ""
+		verticalBorder= ""
+		fullScreen = no
+		Orientation = "CENTER"
+
+		iconType = {
+			name ="bg"
+			spriteType = "GFX_endgame"
+			position = { x= 117 y = 0 }
+			Orientation = "UPPER_LEFT"
+		}
+
+		instantTextBoxType = {
+			name = "rule_dates"
+			position = { x= 800 y = 90 }
+			
+			font = "vic_29"
+			borderSize = {x = 7 y = 7}
+			text = ""	
+			maxWidth = 1098
+			maxHeight = 45	
+			format = left
+		}
+		
+		instantTextBoxType = {
+			name = "your_score_label"
+			position = { x = 1638 y = 313 }
+			
+			font = "vic_29"
+			borderSize = {x = 7 y = 7}
+			text = "YOUR_SCORE"	
+			maxWidth = 922
+			maxHeight = 58	
+			format = left
+		}
+
+		iconType = {
+			name ="end_score"
+			spriteType = "GFX_icon_end_score"
+			position = { x = 1642 y = 374 }
+			Orientation = "UPPER_LEFT"
+			pdx_tooltip = "LEDGER_SCORE"
+		}	
+		
+		instantTextBoxType = {
+			name = "score_value"
+			position = { x = 1665 y = 374 }
+			
+			font = "vic_22"
+			borderSize = {x = 7 y = 7}
+			text = ""	
+			maxWidth = 180
+			maxHeight = 58	
+			format = centre
+			pdx_tooltip = "LEDGER_SCORE"
+		}
+		
+		iconType = {
+			name ="is_ironman_icon"
+			spriteType = "GFX_ironman_icon"
+			position = { x = 1670 y = 529 }
+			Orientation = "UPPER_LEFT"
+			pdx_tooltip = "FE_IRONMAN"
+		}	
+		
+		instantTextBoxType = {
+			name = "is_ironman"
+			position = { x = 1724 y = 538 }
+			
+			font = "vic_18"
+			borderSize = {x = 7 y = 7}
+			text = ""	
+			maxWidth = 29
+			maxHeight = 58	
+			format = left
+			pdx_tooltip = "FE_IRONMAN"
+		}
+		
+		instantTextBoxType = {
+			name = "country_name"
+			position = { x = 468 y = 171 }
+			
+			font = "vic_22"
+			borderSize = {x = 7 y = 7}
+			text = ""	
+			maxWidth = 382
+			maxHeight = 58	
+			format = left
+			fixedsize = yes
+		}
+		
+		guiButtonType = {
+			position = { x= 200 y = 74 } #mod was 220 121
+			name = "player_shield"
+			quadTextureSprite ="GFX_shield_fancy"
+		}
+		
+		iconType = {
+			name ="religion_icon"
+			spriteType = "GFX_icon_religion"
+			position = { x= 432 y = 216 }
+			Orientation = "UPPER_LEFT"
+		}
+		
+		iconType = {
+			name ="techgroup_icon"
+			spriteType = "GFX_tech_group_strip"
+			position = { x= 459 y = 333 }
+			Orientation = "UPPER_LEFT"
+		}
+		
+		instantTextBoxType = {
+			name = "statistics_label"
+			position = { x = 774 y = 171 }
+			
+			font = "vic_22"
+			borderSize = {x = 7 y = 7}
+			text = "STATISTICS"	
+			maxWidth = 720
+			maxHeight = 29	
+			format = centre
+		}
+		
+		iconType = {
+			name ="icon_stability"
+			spriteType = "GFX_icon_stability"
+			position = { x = 563 y = 239 }
+			Orientation = "UPPER_LEFT"
+			pdx_tooltip = "LEDGER_STABILITY"
+		}		
+		
+		instantTextBoxType = {
+			name = "stability_value"
+			position = { x = 603 y = 243 }
+			
+			font = "vic_18"
+			borderSize = {x = 7 y = 7}
+			text = ""	
+			maxWidth = 63
+			maxHeight = 29	
+			format = right
+			pdx_tooltip = "LEDGER_STABILITY"
+		}
+		
+		iconType = {
+			name ="icon_prestige"
+			spriteType = "GFX_icon_prestige"
+			position = { x = 563 y = 297 }
+			Orientation = "UPPER_LEFT"
+			pdx_tooltip = "LEDGER_PRESTIGE"
+		}		
+		
+		instantTextBoxType = {
+			name = "prestige_value"
+			position = { x = 603 y = 302 }
+			
+			font = "vic_18"
+			borderSize = {x = 7 y = 7}
+			text = ""	
+			maxWidth = 63
+			maxHeight = 29	
+			format = right
+			pdx_tooltip = "LEDGER_PRESTIGE"
+		}
+		
+		iconType = {
+			name ="icon_ideas"
+			spriteType = "GFX_icon_ideas"
+			position = { x = 565 y = 360 }
+			Orientation = "UPPER_LEFT"
+			pdx_tooltip = "HEADER_IDEAS"
+		}		
+		
+		instantTextBoxType = {
+			name = "ideas_value"
+			position = { x = 603 y = 360 }
+			
+			font = "vic_18"
+			borderSize = {x = 7 y = 7}
+			text = ""	
+			maxWidth = 63
+			maxHeight = 29	
+			format = right
+			pdx_tooltip = "HEADER_IDEAS"
+		}
+		
+		iconType = {
+			name ="icon_admtech"
+			spriteType = "GFX_icon_powers_administrative_tech"
+			position = { x = 698 y = 243 }
+			Orientation = "UPPER_LEFT"
+			pdx_tooltip = "HINT_ADMTECH_TITLE"
+		}			
+		
+		instantTextBoxType = {
+			name = "admtech_value"
+			position = { x = 738 y = 243 }
+			
+			font = "vic_18"
+			borderSize = {x = 7 y = 7}
+			text = ""	
+			maxWidth = 63
+			maxHeight = 29	
+			format = right
+			pdx_tooltip = "HINT_ADMTECH_TITLE"
+		}
+		
+		iconType = {
+			name ="icon_diptech"
+			spriteType = "GFX_icon_powers_diplomatic_tech"
+			position = { x = 698 y = 302 }
+			Orientation = "UPPER_LEFT"
+			pdx_tooltip = "HINT_DIPTECH_TITLE"
+		}		
+		
+		instantTextBoxType = {
+			name = "diptech_value"
+			position = { x = 738 y = 302 }
+			
+			font = "vic_18"
+			borderSize = {x = 7 y = 7}
+			text = ""	
+			maxWidth = 63
+			maxHeight = 29	
+			format = right
+			pdx_tooltip = "HINT_DIPTECH_TITLE"
+		}
+		
+		iconType = {
+			name ="icon_miltech"
+			spriteType = "GFX_icon_powers_military_tech"
+			position = { x = 698 y = 360 }
+			Orientation = "UPPER_LEFT"
+			pdx_tooltip = "HINT_MILTECH_TITLE"
+		}		
+		
+		instantTextBoxType = {
+			name = "miltech_value"
+			position = { x = 738 y = 360 }
+			
+			font = "vic_18"
+			borderSize = {x = 7 y = 7}
+			text = ""	
+			maxWidth = 63
+			maxHeight = 29	
+			format = right
+			pdx_tooltip = "HINT_MILTECH_TITLE"
+		}
+
+		iconType = {
+			name ="province_icon"
+			spriteType = "GFX_province_icon"
+			position = { x = 830 y = 236 }
+			Orientation = "UPPER_LEFT"
+			pdx_tooltip = "PROVINCES"
+		}
+		
+		instantTextBoxType = {
+			name = "realmsize_value"
+			position = { x = 900 y = 243 }
+			
+			font = "vic_18"
+			borderSize = {x = 7 y = 7}
+			text = ""	
+			maxWidth = 90
+			maxHeight = 29	
+			format = right
+			pdx_tooltip = "PROVINCES"
+		}
+		
+		iconType = {
+			name ="icon_overextension"
+			spriteType = "GFX_icon_overextension"
+			position = { x = 832 y = 302 }
+			Orientation = "UPPER_LEFT"
+			pdx_tooltip = "GOVSC_OVEREXTENSION"
+		}		
+		
+		instantTextBoxType = {
+			name = "overextention_value"
+			position = { x = 900 y = 302 }
+			
+			font = "vic_18"
+			borderSize = {x = 7 y = 7}
+			text = ""	
+			maxWidth = 90
+			maxHeight = 29	
+			format = right
+			pdx_tooltip = "GOVSC_OVEREXTENSION"
+		}
+		
+		iconType = {
+			name ="religious_unity_icon"
+			spriteType = "GFX_religious_unity_icon"
+			position = { x = 832 y = 360 }
+			Orientation = "UPPER_LEFT"
+			pdx_tooltip = "religious_unity"
+		}			
+		
+		instantTextBoxType = {
+			name = "religiousunity_value"
+			position = { x = 900 y = 360 }
+			
+			font = "vic_18"
+			borderSize = {x = 7 y = 7}
+			text = ""	
+			maxWidth = 90
+			maxHeight = 29	
+			format = right
+			pdx_tooltip = "religious_unity"
+		}
+
+		iconType = {
+			name ="icon_manpower2"
+			spriteType = "GFX_icon_manpower2"
+			position = { x = 1037 y = 293 }
+			Orientation = "UPPER_LEFT"
+			pdx_tooltip = "HINT_MANPOWER_TITLE"
+		}		
+		
+		instantTextBoxType = {
+			name = "manpower_value"
+			position = { x = 1141 y = 302 }
+			
+			font = "vic_18"
+			borderSize = {x = 7 y = 7}
+			text = ""	
+			maxWidth = 108
+			maxHeight = 29	
+			format = right
+			pdx_tooltip = "HINT_MANPOWER_TITLE"
+		}
+
+		iconType = {
+			name ="land_forcelimit_icon"
+			spriteType = "GFX_land_forcelimit_icon"
+			position = { x = 1033 y = 236 }
+			Orientation = "UPPER_LEFT"
+			pdx_tooltip = "LAND_FORCELIMIT"
+		}	
+		
+		instantTextBoxType = {
+			name = "land_forcelimit_value"
+			position = { x = 1141 y = 241 }
+			
+			font = "vic_18"
+			borderSize = {x = 7 y = 7}
+			text = ""	
+			maxWidth = 108
+			maxHeight = 29	
+			format = right
+			pdx_tooltip = "LAND_FORCELIMIT"
+		}
+
+		iconType = {
+			name ="naval_forcelimit_icon"
+			spriteType = "GFX_naval_forcelimit_icon"
+			position = { x = 1287 y = 243 }
+			Orientation = "UPPER_LEFT"
+			pdx_tooltip = "NAVAL_FORCELIMIT"
+		}	
+		
+		instantTextBoxType = {
+			name = "naval_forcelimit_value"
+			position = { x = 1377 y = 243 }
+			
+			font = "vic_18"
+			borderSize = {x = 7 y = 7}
+			text = ""	
+			maxWidth = 108
+			maxHeight = 29	
+			format = right
+			pdx_tooltip = "NAVAL_FORCELIMIT"
+		}
+		
+		iconType = {
+			name ="infantry_icon"
+			spriteType = "GFX_infantry_icon"
+			position = { x = 1035 y = 358 }
+			Orientation = "UPPER_LEFT"
+			pdx_tooltip = "INFANTRY"
+		}		
+		
+		instantTextBoxType = {
+			name = "total_infantry"
+			position = { x = 1161 y = 380 }
+			
+			font = "vic_18"
+			borderSize = {x = 7 y = 7}
+			text = ""	
+			maxWidth = 108
+			maxHeight = 29	
+			format = left
+			pdx_tooltip = "INFANTRY"
+		}	
+
+		iconType = {
+			name ="cavalry_icon"
+			spriteType = "GFX_cavalry_icon"
+			position = { x = 1035 y = 436 }
+			Orientation = "UPPER_LEFT"
+			pdx_tooltip = "CAVALRY"
+		}
+		
+		instantTextBoxType = {
+			name = "total_cavalry"
+			position = { x = 1161 y = 459 }
+			
+			font = "vic_18"
+			borderSize = {x = 7 y = 7}
+			text = ""	
+			maxWidth = 108
+			maxHeight = 29	
+			format = left
+			pdx_tooltip = "CAVALRY"
+		}
+		
+		iconType = {
+			name ="artillery_icon"
+			spriteType = "GFX_artillery_icon"
+			position = { x = 1030 y = 502 }
+			Orientation = "UPPER_LEFT"
+			pdx_tooltip = "ARTILLERY"
+		}		
+		
+		instantTextBoxType = {
+			name = "total_artillery"
+			position = { x = 1161  y = 520 }
+			
+			font = "vic_18"
+			borderSize = {x = 7 y = 7}
+			text = ""	
+			maxWidth = 108
+			maxHeight = 29	
+			format = left
+			pdx_tooltip = "ARTILLERY"
+		}
+
+		iconType = {
+			name ="big_ship_icon"
+			spriteType = "GFX_big_ship_icon"
+			position = { x = 1269 y = 315 }
+			Orientation = "UPPER_LEFT"
+			pdx_tooltip = "HINT_HEAVYSHIPS_TITLE"
+		}		
+		
+		instantTextBoxType = {
+			name = "total_bigships"
+			position = { x = 1377 y = 324 }
+			
+			font = "vic_18"
+			borderSize = {x = 7 y = 7}
+			text = ""	
+			maxWidth = 108
+			maxHeight = 29	
+			format = right
+			pdx_tooltip = "HINT_HEAVYSHIPS_TITLE"
+		}
+
+		iconType = {
+			name ="light_ship_icon"
+			spriteType = "GFX_light_ship_icon"
+			position = { x = 1273 y = 387 }
+			Orientation = "UPPER_LEFT"
+			pdx_tooltip = "HINT_LIGHTSHIPS_TITLE"
+		}
+		
+		instantTextBoxType = {
+			name = "total_lightships"
+			position = { x = 1377 y = 396 }
+			
+			font = "vic_18"
+			borderSize = {x = 7 y = 7}
+			text = ""	
+			maxWidth = 108
+			maxHeight = 29	
+			format = right
+			pdx_tooltip = "HINT_LIGHTSHIPS_TITLE"
+		}
+		
+		iconType = {
+			name ="galley_icon"
+			spriteType = "GFX_galley_icon"
+			position = { x = 1280 y = 464 }
+			Orientation = "UPPER_LEFT"
+			pdx_tooltip = "HINT_GALLEYS_TITLE"
+		}		
+		
+		instantTextBoxType = {
+			name = "total_galleys"
+			position = { x = 1377 y = 464 }
+			
+			font = "vic_18"
+			borderSize = {x = 7 y = 7}
+			text = ""	
+			maxWidth = 108
+			maxHeight = 29	
+			format = right
+			pdx_tooltip = "HINT_GALLEYS_TITLE"
+		}
+		
+		iconType = {
+			name ="transport_icon"
+			spriteType = "GFX_transport_icon"
+			position = { x = 1280 y = 522 }
+			Orientation = "UPPER_LEFT"
+			pdx_tooltip = "HINT_TRANSPORTS_TITLE"
+		}		
+		
+		instantTextBoxType = {
+			name = "total_transports"
+			position = { x = 1377 y = 522 }
+			
+			font = "vic_18"
+			borderSize = {x = 7 y = 7}
+			text = ""	
+			maxWidth = 108
+			maxHeight = 29	
+			format = right
+			pdx_tooltip = "HINT_TRANSPORTS_TITLE"
+		}
+		
+		iconType =
+		{
+			name ="idea_icon_1"
+			spriteType = "GFX_idea_empty"
+			position = { x= 252 y = 409 }
+			Orientation = "UPPER_LEFT"
+
+		}
+		instantTextBoxType = {
+			name = "idea_value_1"
+			position = { x = 279 y = 531 }
+			
+			font = "vic_18"
+			borderSize = {x = 0 y = 0}
+			text = "0"	
+			maxWidth = 58
+			maxHeight = 29	
+			format = center
+		}
+		iconType =
+		{
+			name ="idea_icon_2"
+			spriteType = "GFX_idea_empty"
+			position = { x= 346	y = 409 }
+			Orientation = "UPPER_LEFT"
+
+		}
+		instantTextBoxType = {
+			name = "idea_value_2"
+			position = { x = 373 y = 531 }
+			
+			font = "vic_18"
+			borderSize = {x = 0 y = 0}
+			text = "0"	
+			maxWidth = 58
+			maxHeight = 29	
+			format = center
+		}
+		iconType =
+		{
+			name ="idea_icon_3"
+			spriteType = "GFX_idea_empty"
+			position = { x= 439 y = 409 }
+			Orientation = "UPPER_LEFT"
+
+		}
+		instantTextBoxType = {
+			name = "idea_value_3"
+			position = { x = 466 y = 531}
+			
+			font = "vic_18"
+			borderSize = {x = 0 y = 0}
+			text = "0"	
+			maxWidth = 58
+			maxHeight = 29	
+			format = center
+		}
+		iconType =
+		{
+			name ="idea_icon_4"
+			spriteType = "GFX_idea_empty"
+			position = { x= 533 y = 409 }
+			Orientation = "UPPER_LEFT"
+
+		}
+		instantTextBoxType = {
+			name = "idea_value_4"
+			position = { x = 560  y = 531 }
+			
+			font = "vic_18"
+			borderSize = {x = 0 y = 0}
+			text = "0"	
+			maxWidth = 58
+			maxHeight = 29	
+			format = center
+		}
+		iconType =
+		{
+			name ="idea_icon_5"
+			spriteType = "GFX_idea_empty"
+			position = { x= 626 y = 409 }
+			Orientation = "UPPER_LEFT"
+
+		}
+		instantTextBoxType = {
+			name = "idea_value_5"
+			position = { x = 653 y = 531 }
+			
+			font = "vic_18"
+			borderSize = {x = 0 y = 0}
+			text = "0"	
+			maxWidth = 58
+			maxHeight = 29	
+			format = center
+		}
+		iconType =
+		{
+			name ="idea_icon_6"
+			spriteType = "GFX_idea_empty"
+			position = { x= 720 y = 409 }
+			Orientation = "UPPER_LEFT"
+
+		}
+		instantTextBoxType = {
+			name = "idea_value_6"
+			position = { x = 747 y = 531 }
+			
+			font = "vic_18"
+			borderSize = {x = 0 y = 0}
+			text = "0"	
+			maxWidth = 58
+			maxHeight = 29	
+			format = center
+		}
+		iconType =
+		{
+			name ="idea_icon_7"
+			spriteType = "GFX_idea_empty"
+			position = { x= 814 y = 409 }
+			Orientation = "UPPER_LEFT"
+
+		}
+		instantTextBoxType = {
+			name = "idea_value_7"
+			position = { x = 841 y = 531 }
+			
+			font = "vic_18"
+			borderSize = {x = 0 y = 0}
+			text = "0"	
+			maxWidth = 58
+			maxHeight = 29	
+			format = center
+		}
+		iconType =
+		{
+			name ="idea_icon_8"
+			spriteType = "GFX_idea_empty"
+			position = { x= 907 y = 409 }
+			Orientation = "UPPER_LEFT"
+
+		}
+		instantTextBoxType = {
+			name = "idea_value_8"
+			position = { x = 934 y = 531 }
+			
+			font = "vic_18"
+			borderSize = {x = 0 y = 0}
+			text = "0"	
+			maxWidth = 58
+			maxHeight = 29	
+			format = center
+		}
+		
+		instantTextBoxType = {
+			name = "historical_scores_label"
+			position = { x = 1548 y = 596 }
+			
+			font = "vic_18"
+			borderSize = {x = 7 y = 7}
+			text = "HISTORICAL_SCORES"	
+			maxWidth = 380
+			maxHeight = 29	
+			format = center
+		}
+		
+		listboxType = {
+			name ="historical_scores_list"
+			position = { x=1566 y =648}
+			backGround=""
+			size = { x=306 y =432}
+			horizontal = 0
+			spacing = 36
+			scrollbartype = "standardlistbox_slider"
+			borderSize = {x = 0 y = 0}
+			Orientation = "UPPER_LEFT"
+		}
+		
+		instantTextBoxType = {
+			name = "history_label"
+			position = { x = 360 y = 596 }
+			
+			font = "vic_18"
+			borderSize = {x = 7 y = 7}
+			text = "M_HISTORY_BUTTON"	
+			maxWidth = 527
+			maxHeight = 29	
+			format = center
+		}
+		
+		listboxType = {
+			name ="history_list"
+			position = { x=243 y =644}
+			backGround=""
+			size = { x=729 y =423}
+			horizontal = 0
+			spacing = 0
+			scrollbartype = "standardlistbox_slider"
+			borderSize = {x = 0 y = 0}
+			Orientation = "UPPER_LEFT"
+		}
+		
+		instantTextBoxType = {
+			name = "leaders_label"
+			position = { x = 1008 y = 596 }
+			
+			font = "vic_18"
+			borderSize = {x = 7 y = 7}
+			text = "WE_HAD_THE"	
+			maxWidth = 484
+			maxHeight = 29	
+			format = center
+		}
+		
+		instantTextBoxType = {
+			name = "army_size_place"
+			position = { x = 1008 y = 700 }
+			
+			font = "vic_18"
+			borderSize = {x = 7 y = 7}
+			text = ""	
+			maxWidth = 484
+			maxHeight = 29	
+			format = center
+		}
+		
+		instantTextBoxType = {
+			name = "navy_size_place"
+			position = { x = 1008 y = 754 }
+			
+			font = "vic_18"
+			borderSize = {x = 7 y = 7}
+			text = ""	
+			maxWidth = 484
+			maxHeight = 29	
+			format = center
+		}
+		
+		instantTextBoxType = {
+			name = "provinces_place"
+			position = { x = 1008 y = 808 }
+			
+			font = "vic_18"
+			borderSize = {x = 7 y = 7}
+			text = ""	
+			maxWidth = 484
+			maxHeight = 29	
+			format = center
+		}
+		
+		instantTextBoxType = {
+			name = "province_value_place"
+			position = { x = 1008 y = 862 }
+			
+			font = "vic_18"
+			borderSize = {x = 7 y = 7}
+			text = ""	
+			maxWidth = 484
+			maxHeight = 29	
+			format = center
+		}
+		
+		instantTextBoxType = {
+			name = "income_place"
+			position = { x = 1008 y = 916 }
+			
+			font = "vic_18"
+			borderSize = {x = 7 y = 7}
+			text = ""	
+			maxWidth = 484
+			maxHeight = 29	
+			format = center
+		}
+		
+		instantTextBoxType = {
+			name = "trade_income_place"
+			position = { x = 1008 y = 970 }
+			
+			font = "vic_18"
+			borderSize = {x = 7 y = 7}
+			text = ""	
+			maxWidth = 484
+			maxHeight = 29	
+			format = center
+		}
+		
+		guiButtonType = {
+			name = "campaign_stats"
+			position = { x=1640 y=171 }
+			quadTextureSprite ="gfx_stats_button"
+			tooltip = ""
+			tooltipText =""
+			delayedTooltipText = ""
+#			buttonText = "STATISTICS"
+			buttonFont = "vic_18"
+		}
+
+		guiButtonType = {
+			name = "spectator"
+			position = { x=950 y=1091 }
+			quadTextureSprite ="largefloaterbutton"
+			tooltip = ""
+			tooltipText =""
+			delayedTooltipText = ""
+			buttonText = "SPECTATOR"
+			buttonFont = "vic_18"
+		}
+		
+		guiButtonType = {
+			name = "timeline_button"
+			position = { x=1602  y =464}
+			quadTextureSprite ="largefloaterbutton"
+			tooltip = ""
+			tooltipText =""
+			delayedTooltipText = ""
+			buttonText = "WATCH_TIMELINE"
+			buttonFont = "vic_18"
+		}
+
+		guiButtonType = {
+			name = "quit_button"
+			position = { x=950  y =1143}
+			quadTextureSprite ="largefloaterbutton"
+			tooltip = ""
+			tooltipText =""
+			delayedTooltipText = ""
+			buttonText = "QUIT"
+			buttonFont = "vic_18"
+		}
+		
+		guiButtonType = {
+			name = "continue_button"
+			position = { x=950  y =1197}
+			quadTextureSprite ="largefloaterbutton"
+			tooltip = ""
+			tooltipText =""
+			delayedTooltipText = ""
+			buttonText = "CONTINUE"
+			buttonFont = "vic_18"
+			shortcut = "ESCAPE"
+		}
+	}
+}

@@ -1,0 +1,62 @@
+guiTypes = {
+
+	windowType = {
+		name = "country_history_window"
+		backGround=""
+		position = { x=-14 y=72 }	
+		size = { x=1843 y=180 }
+		moveable = 0
+		dontRender = ""
+		horizontalBorder= ""
+		verticalBorder= ""
+		fullScreen = yes
+
+		iconType =
+		{
+			name ="bg_country_history"
+			spriteType = "GFX_bg_country_history"
+			position = { x= -488 y = -648 }
+			Orientation = "CENTER"
+		}
+		
+		textBoxType = {
+			name = "title"
+			position = { x = -360 y =-468 }
+			format = centre
+			textureFile = ""
+			font = "vic_22"
+			borderSize = {x = 7 y = 7}
+			text = "The History of France"	
+			maxWidth = 720
+			maxHeight = 58	
+			
+			Orientation = "CENTER"		
+		}
+		
+		listboxType = 
+		{
+			name ="kings"
+			position = { x = -450 y = -418 }
+			backGround=""
+			size = { x= 814 y = 833 }
+			Orientation = "CENTER"
+			horizontal = 0
+			spacing = 0
+			scrollbartype = "standardlistbox_slider"
+			borderSize = {x = 0 y = 0}
+		}
+		
+		guiButtonType = {
+			name = "close_button"
+			position = { x=-139 y =479}
+			Orientation = "CENTER"
+			quadTextureSprite ="button_type_7"	
+			tooltip = ""
+			tooltipText =""
+			delayedTooltipText = ""
+			buttonText = "CLOSE"
+			buttonFont = "vic_18"
+			shortcut = "ESCAPE"
+		}
+	}
+}

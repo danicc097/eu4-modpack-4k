@@ -1,0 +1,151 @@
+namespace = ate_advisor_genius_events
+
+country_event = {
+	id = ate_advisor_genius_events.1
+	title = ate_advisor_genius_events.EVTNAME1
+	desc = ate_advisor_genius_events.EVTDESC1
+	picture = ADVISOR_eventPicture
+
+	trigger = {
+		NOT = { advisor = ate_advisor_administrative_genius }
+		NOT = { advisor = ate_advisor_diplomatic_genius }
+		NOT = { advisor = ate_advisor_military_genius }
+		NOT = { has_ruler_flag = ate_advisor_genius_during_rule }
+		capital_scope = {
+			development = 30
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 900
+	}
+
+	immediate = {
+		hidden_effect = {
+			set_ruler_flag = ate_advisor_genius_during_rule
+			set_saved_name = {
+				key = local_ate_advisor_genius
+				type = advisor
+			}
+			random_list = {
+				33 = {
+					set_country_flag = ate_advisor_genius_adm
+				}
+				33 = {
+					set_country_flag = ate_advisor_genius_dip
+				}
+				33 = {
+					set_country_flag = ate_advisor_genius_mil
+				}
+			}
+		}
+	}
+
+	option = {
+		name = ate_advisor_genius_events1.EVTOPT1
+
+		ai_chance = { factor = 0.4 }
+
+		add_meritocracy_effect = yes
+		trigger_switch = {
+			on_trigger = has_country_flag
+			ate_advisor_genius_adm = {
+				define_advisor = {
+					name = local_ate_advisor_genius
+					type = ate_advisor_administrative_genius
+					skill = 2
+					cost_multiplier = 0.75
+					female = no
+				}
+			}
+			ate_advisor_genius_dip = {
+				define_advisor = {
+					name = local_ate_advisor_genius
+					type = ate_advisor_diplomatic_genius
+					skill = 2
+					cost_multiplier = 0.75
+					female = no
+				}
+			}
+			ate_advisor_genius_mil = {
+				define_advisor = {
+					name = local_ate_advisor_genius
+					type = ate_advisor_military_genius
+					skill = 2
+					cost_multiplier = 0.75
+					female = no
+				}
+			}
+		}
+	}
+
+	option = {
+		name = ate_advisor_genius_events1.EVTOPT2
+
+		ai_chance = { factor = 0.6 }
+
+		trigger_switch = {
+			on_trigger = has_country_flag
+			ate_advisor_genius_adm = {
+				add_adm_power = 50
+			}
+			ate_advisor_genius_dip = {
+				add_dip_power = 50
+			}
+			ate_advisor_genius_mil = {
+				add_mil_power = 50
+			}
+		}
+	}
+
+	option = {
+		name = ate_advisor_genius_events1.EVTOPT3
+
+		highlight = yes
+
+		trigger = {
+			ruler_has_personality_ancestor = { key = well_connected }
+		}
+
+		ai_chance = { factor = 100 }
+
+		add_meritocracy_effect = yes
+		trigger_switch = {
+			on_trigger = has_country_flag
+			ate_advisor_genius_adm = {
+				define_advisor = {
+					name = local_ate_advisor_genius
+					type = ate_advisor_administrative_genius
+					skill = 3
+					cost_multiplier = 0.75
+					female = no
+				}
+			}
+			ate_advisor_genius_dip = {
+				define_advisor = {
+					name = local_ate_advisor_genius
+					type = ate_advisor_diplomatic_genius
+					skill = 3
+					cost_multiplier = 0.75
+					female = no
+				}
+			}
+			ate_advisor_genius_mil = {
+				define_advisor = {
+					name = local_ate_advisor_genius
+					type = ate_advisor_military_genius
+					skill = 3
+					cost_multiplier = 0.75
+					female = no
+				}
+			}
+		}
+	}
+
+	after = {
+		clear_saved_name = local_ate_advisor_genius
+		clr_country_flag = ate_advisor_genius_adm
+		clr_country_flag = ate_advisor_genius_dip
+		clr_country_flag = ate_advisor_genius_mil
+	}
+}

@@ -1,0 +1,428 @@
+can_colonize_province = {
+	condition = {
+		tooltip = "colonial_expansion_limit_tooltip"
+		potential = {
+			always = yes
+		}
+		allow = {
+			OR = {
+				AND = {
+					FROM = { NOT = { has_country_flag = historic_colonization_flag } }  # Allow colonizing anywhere unless user turns on restrictions
+					FROM = { NOT = { ai = yes } }
+				}
+				AND = {
+					is_year = 1700  # Everyone can colonize anywhere from 1700
+					FROM = { NOT = { is_colonial_nation = yes } }  # Except colonial noobs
+				}
+				OR = {  # Anyone can colonize continental Russia/Asia
+						region = ural_region
+						region = west_siberia_region
+						region = east_siberia_region
+						region = manchuria_region
+						province_id = 1127  # Tuat
+						province_id = 2474  # Tajarhi
+						province_id = 2475  # Djado
+				}
+				FROM = {  # Allow colonial nations to colonize in their capital's colonial region
+					is_colonial_nation = yes
+					capital_scope = { colonial_region = ROOT }
+				}
+				AND = {  # Scandanavian Greenland
+					FROM = { capital_scope = { region = scandinavia_region } }
+					area = greenland_area
+				}
+				AND = {  # Swedish restrictions
+					FROM = { tag = SWE }
+					OR = {
+						AND = {
+							is_year = 1638
+							colonial_region = colonial_eastern_america
+						}
+						AND = {
+							is_year = 1650
+							OR = {  # African coast
+								area = jolof_area  # Senegal
+								area = cape_of_good_hope_area  # South Africa
+								province_id = 1119  # Grain Coast
+								province_id = 1126  # Ivory Coast
+								province_id = 2258  # Cape Coast
+								province_id = 1139  # Gold Coast
+								province_id = 1097  # Fernando Po
+								province_id = 1306  # Sao Tome
+								province_id = 1167  # Luanda
+								province_id = 1172  # Benguela
+								province_id = 1098  # St. Helena
+								province_id = 1181  # Natal
+								province_id = 789  # Mtetwa
+								province_id = 1182  # Matsolo
+								province_id = 1183  # Inhambane
+							}
+						}
+					}
+				}
+				AND = {  # Denmark restrictions
+					FROM = { tag = DAN }
+					OR = {
+						AND = {
+							is_year = 1660
+							OR = {  # African coast
+								area = jolof_area  # Senegal
+								area = cape_of_good_hope_area  # South Africa
+								province_id = 1119  # Grain Coast
+								province_id = 1126  # Ivory Coast
+								province_id = 2258  # Cape Coast
+								province_id = 1139  # Gold Coast
+								province_id = 1097  # Fernando Po
+								province_id = 1306  # Sao Tome
+								province_id = 1167  # Luanda
+								province_id = 1172  # Benguela
+								province_id = 1098  # St. Helena
+								province_id = 1181  # Natal
+								province_id = 789  # Mtetwa
+								province_id = 1182  # Matsolo
+								province_id = 1183  # Inhambane
+							}
+						}
+						AND = {  # East Indies
+							is_year = 1669
+							OR = {
+								region = east_indies_col
+								province_id = 4020  # Comoros
+								province_id = 1103  # Ile Bourbon
+								province_id = 1102  # Mauritius
+								province_id = 1100  # Mahe
+							}
+						}
+						AND = {
+							is_year = 1671
+							OR = {  # Eastern Carribean Islands
+								area = leeward_islands_area
+								area = windward_islands_area
+								province_id = 502
+							}
+						}
+					}
+				}
+				AND = {  # English or British restrictions
+					OR = {
+						FROM = { tag = ENG }
+						FROM = { tag = GBR }
+					}
+					OR = {
+						AND = {  # https://en.wikipedia.org/wiki/Newfoundland_Colony
+							is_year = 1610
+							colonial_region = colonial_canada
+						}
+						AND = {  # https://www.historyisfun.org/jamestown-settlement/history-jamestown/#:~:text=The%20founding%20of%20Jamestown%2C%20America's,the%20nation%20and%20the%20world.
+							is_year = 1607
+							colonial_region = colonial_eastern_america
+						}
+						AND = {  # https://www.britishempire.co.uk/maproom/africa.htm
+							is_year = 1632
+							OR = {  # African coast
+								area = jolof_area  # Senegal
+								area = cape_of_good_hope_area  # South Africa
+								province_id = 1119  # Grain Coast
+								province_id = 1126  # Ivory Coast
+								province_id = 2258  # Cape Coast
+								province_id = 1139  # Gold Coast
+								province_id = 1097  # Fernando Po
+								province_id = 1306  # Sao Tome
+								province_id = 1167  # Luanda
+								province_id = 1172  # Benguela
+								province_id = 1098  # St. Helena
+								province_id = 1181  # Natal
+								province_id = 789  # Mtetwa
+								province_id = 1182  # Matsolo
+								province_id = 1183  # Inhambane
+							}
+						}
+						AND = {  # https://en.wikipedia.org/wiki/East_India_Company
+							is_year = 1603
+							OR = {
+								region = east_indies_col
+								province_id = 4020  # Comoros
+								province_id = 1103  # Ile Bourbon
+								province_id = 1102  # Mauritius
+								province_id = 1100  # Mahe
+							}
+						}
+						AND = {  # https://en.wikipedia.org/wiki/Bermuda#Discovery
+							is_year = 1612
+							province_id = 481  # Bermuda
+						}
+						AND = {
+							is_year = 1605
+							OR = {  # https://www.britishempire.co.uk/maproom/caribbean.htm
+								# Guinea and Eastern Carribean Islands
+								province_id = 743
+								province_id = 744
+								province_id = 2931
+								area = leeward_islands_area
+								area = windward_islands_area
+								province_id = 502
+							}
+						}
+					}
+				}
+				AND = {  # French restrictions
+					FROM = { tag = FRA }
+					OR = {
+						AND = {  # https://www.canada.ca/en/immigration-refugees-citizenship/corporate/publications-manuals/discover-canada/read-online/canadas-history.html
+							is_year = 1608
+							colonial_region = colonial_canada
+						}
+						AND = {  # https://www.colonialvoyage.com/french-brazil/
+							is_year = 1555
+							colonial_region = colonial_brazil
+						}
+						AND = {  # https://en.wikipedia.org/wiki/French_colonial_empire#Africa_and_Asia
+							is_year = 1624
+							OR = {  # African coast
+								area = jolof_area  # Senegal
+								area = cape_of_good_hope_area  # South Africa
+								province_id = 1119  # Grain Coast
+								province_id = 1126  # Ivory Coast
+								province_id = 2258  # Cape Coast
+								province_id = 1139  # Gold Coast
+								province_id = 1097  # Fernando Po
+								province_id = 1306  # Sao Tome
+								province_id = 1167  # Luanda
+								province_id = 1172  # Benguela
+								province_id = 1098  # St. Helena
+								province_id = 1181  # Natal
+								province_id = 789  # Mtetwa
+								province_id = 1182  # Matsolo
+								province_id = 1183  # Inhambane
+							}
+						}
+						AND = {  # https://en.wikipedia.org/wiki/French_East_India_Company
+							is_year = 1664
+							OR = {
+								region = east_indies_col
+								province_id = 4020  # Comoros
+								province_id = 1103  # Ile Bourbon
+								province_id = 1102  # Mauritius
+								province_id = 1100  # Mahe
+							}
+						}
+						AND = {  # https://en.wikipedia.org/wiki/French_West_Indies
+							is_year = 1635
+							OR = {  # Guinea and Eastern Carribean Islands
+								province_id = 746
+								area = leeward_islands_area
+								area = windward_islands_area
+								province_id = 502
+							}
+						}
+						AND = {  # https://en.wikipedia.org/wiki/Louisiana_(New_France)
+							is_year = 1660
+							colonial_region = colonial_louisiana
+						}
+					}
+				}
+				AND = {  # Dutch restrictions
+					OR = {
+						FROM = { tag = HOL }
+						FROM = { tag = NED }
+					}
+					OR = {
+						AND = {  # https://en.wikipedia.org/wiki/Batavia,_Dutch_East_Indies
+							is_year = 1619
+							OR = {
+								region = east_indies_col
+								province_id = 4020  # Comoros
+								province_id = 1103  # Ile Bourbon
+								province_id = 1102  # Mauritius
+								province_id = 1100  # Mahe
+							}
+						}
+						AND = {  # https://en.wikipedia.org/wiki/Evolution_of_the_Dutch_Empire#Africa
+							is_year = 1598
+							OR = {  # African coast
+								area = jolof_area  # Senegal
+								area = cape_of_good_hope_area  # South Africa
+								province_id = 1119  # Grain Coast
+								province_id = 1126  # Ivory Coast
+								province_id = 2258  # Cape Coast
+								province_id = 1139  # Gold Coast
+								province_id = 1097  # Fernando Po
+								province_id = 1306  # Sao Tome
+								province_id = 1167  # Luanda
+								province_id = 1172  # Benguela
+								province_id = 1098  # St. Helena
+								province_id = 1181  # Natal
+								province_id = 789  # Mtetwa
+								province_id = 1182  # Matsolo
+								province_id = 1183  # Inhambane
+							}
+						}
+						AND = {  # https://en.wikipedia.org/wiki/Dutch_colonization_of_the_Americas#Mainland_In_North_America
+							is_year = 1623
+							colonial_region = colonial_eastern_america
+						}
+						AND = {  # https://en.wikipedia.org/wiki/Tobago#European_colonisation
+							is_year = 1628
+							OR = {  # Guinea and Eastern Carribean Islands
+								province_id = 745
+								province_id = 2937
+								area = leeward_islands_area
+								area = windward_islands_area
+								province_id = 502
+							}
+						}
+						AND = {  # https://en.wikipedia.org/wiki/Dutch_colonization_of_the_Americas#South_America
+							is_year = 1630
+							colonial_region = colonial_brazil
+						}
+					}
+				}
+				AND = { # Aaragon, Castile, and Spain restrictions
+					OR = {
+						FROM = { tag = ARA }
+						FROM = { tag = CAS }
+						FROM = { tag = SPA }
+					}
+					OR = {
+						AND = {
+							is_year = 1483
+							area = macaronesia_area
+						}
+						AND = {  # Carribean
+							is_year = 1492
+							OR = {
+								AND = {
+									OR = {
+										area = cuba_area
+										area = east_cuba_area
+									}
+									FROM = {
+										NOT = {
+											any_owned_province = {
+												OR = {
+													area = cuba_area
+													area = east_cuba_area
+												}
+											}
+										}
+									}
+								}
+								area = lucayan_area
+								AND = {
+									OR = {
+										area = hispaniola_area
+										area = dominica_area
+									}
+									FROM = {
+										NOT = {
+											any_owned_province = {
+												OR = {
+												area = hispaniola_area
+												area = dominica_area
+												}
+											}
+										}
+									}
+								}
+								# Santiago, Aruba, and Puerto Rico
+								province_id = 487
+								province_id = 491
+								province_id = 492
+							}
+						}
+						AND = {  # Specific areas of colonial Colombia coast
+							is_year = 1500
+							OR = {
+								area = venezuela_area
+								area = maracaibo_area
+								area = coquivacoa_area
+								area = popayan_area
+								area = quito_area
+								area = panama_area
+								area = costa_rica_area
+								area = nicaragua_area
+							}
+						}
+						AND = {
+							is_year = 1513
+							area = florida_area
+						}
+						AND = {
+							is_year = 1519
+							colonial_region = colonial_mexico
+						}
+						AND = {
+							is_year = 1521
+							OR = {  # Allow Pacific islands to reach Philippines
+								province_id = 2002
+								area = northern_polynesia_area
+								area = eastern_polynesia_area
+								area = polynesia_area
+								area = micronesia_area
+								area = west_micronesia_area
+							}
+						}
+						AND = {
+							is_year = 1532
+							colonial_region = colonial_peru
+						}
+						AND = {
+							is_year = 1534
+							OR = {
+								colonial_region = colonial_la_plata
+								province_id = 1095  # Islas Malvinas
+							}
+						}
+						AND = {
+							is_year = 1565
+							region = philippines_col
+						}
+					}
+				}
+				AND = {  # Portugal restrictions
+					FROM = { tag = POR }
+					OR = {
+						AND = {
+							is_year = 1456
+							area = cap_verde_area
+						}
+						AND = {  # https://geography.name/west-african-trading-settlements/
+							is_year = 1482
+							OR = {  # African coast
+								area = jolof_area  # Senegal
+								area = cape_of_good_hope_area  # South Africa
+								province_id = 1119  # Grain Coast
+								province_id = 1126  # Ivory Coast
+								province_id = 2258  # Cape Coast
+								province_id = 1139  # Gold Coast
+								province_id = 1097  # Fernando Po
+								province_id = 1306  # Sao Tome
+								province_id = 1167  # Luanda
+								province_id = 1172  # Benguela
+								province_id = 1098  # St. Helena
+								province_id = 1181  # Natal
+								province_id = 789  # Mtetwa
+								province_id = 1182  # Matsolo
+								province_id = 1183  # Inhambane
+							}
+						}
+						AND = {  # https://en.wikipedia.org/wiki/European_colonisation_of_Southeast_Asia
+							is_year = 1511
+							OR = {
+								region = east_indies_col
+								province_id = 4020  # Comoros
+								province_id = 1103  # Ile Bourbon
+								province_id = 1102  # Mauritius
+								province_id = 1100  # Mahe
+							}
+						}
+						AND = {  # https://en.wikipedia.org/wiki/Colonial_Brazil#:~:text=In%201494%2C%20the%20two%20kingdoms,King%20Manuel%20I%20of%20Portugal.
+							is_year = 1530
+							colonial_region = colonial_brazil
+						}
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,29 @@
+namespace = GME_Monument_Events
+
+# Schnoor Sugar District
+country_event = {
+	id = GME_Monument_Events.1
+	title = GME_Monument_Events.1.T
+	desc = GME_Monument_Events.1.D
+	picture = TRADE_GOODS_PLANTATION_GOODS_IN_WAREHOUSE_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = GME_Monument_Events.1.OPT1
+		ai_chance = {
+			factor = 100
+		}
+
+		1874 = {
+			change_trade_goods = sugar
+		}
+	}
+
+	option = {
+		name = GME_Monument_Events.1.OPT2
+		ai_chance = {
+			factor = 100
+		}
+	}
+}

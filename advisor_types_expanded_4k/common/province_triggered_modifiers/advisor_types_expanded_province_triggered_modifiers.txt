@@ -1,0 +1,21 @@
+ate_advisor_court_physician_alcohol_therapy_modifier = {
+	potential = {
+		always = yes
+	}
+
+	trigger = {
+		always = yes
+	}
+
+	hidden = yes
+
+	#Province scope
+	on_activation = {
+		owner = {
+			country_event = { id = ate_advisor_court_physician_events.2 }
+		}
+	}
+
+	on_deactivation = {
+	}
+}

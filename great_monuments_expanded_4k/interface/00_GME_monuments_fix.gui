@@ -1,0 +1,256 @@
+guiTypes = {
+	windowType =
+	{
+		name = "great_project_entry"
+		backGround=""
+		position = { x=0 y=0 }
+		size = { x=550 y=310 }
+		moveable = 0
+		dontRender = ""
+		horizontalBorder= ""
+		verticalBorder= ""
+		fullScreen = no
+
+		iconType = {
+			name ="great_project_pic"
+			spriteType = "GFX_great_project_place_holder"
+			position = { x = 7 y = 5 }
+		}
+
+		iconType = {
+			name ="great_project_pic_frame"
+			spriteType = "GFX_great_projects_image_frame"
+			position = { x = 0 y = 0 }
+		}
+
+		iconType = {
+			name ="great_project_pic_title_overlay"
+			spriteType = "GFX_great_projects_name_bg_overlay"
+			position = { x = 10 y = 9 }
+			alwaystransparent = yes
+		}
+
+
+		instantTextBoxType = {
+			name = "name_label"
+			position = { x = 34 y = 22 }
+			textureFile = ""
+			borderSize = { x = 0 y = 0 }
+			text = "NAME HERE"
+			maxWidth = 600
+			maxHeight = 60
+			format = left
+		}
+
+		windowType =
+		{
+			name = "progress_bar_window"
+			backGround=""
+			position = { x=155 y=104 }
+			size = { x=260 y=80 }
+			dontRender = ""
+			horizontalBorder= ""
+			verticalBorder= ""
+			fullScreen = no
+			moveable = 0
+			Orientation = "UPPER_LEFT"
+
+			guiButtonType =
+			{
+				name ="great_project_cancel"
+				quadTextureSprite = "GFX_alerticon_dismiss_always"
+				position = { x = 220 y = 10 }
+			}
+
+			iconType =
+			{
+				name ="great_project_progress"
+				spriteType = "GFX_provinceView_progressbar"
+				position = { x = 16 y = 26 }
+			}
+
+			iconType =
+			{
+				name ="great_project_progress_frame"
+				spriteType = "GFX_provinceView_morale_frame_long"
+				position = { x = 0 y = 18 }
+			}
+		}
+
+		guiButtonType =
+		{
+			name ="build_upgrade_button"
+			position = { x= 390 y = 14 }
+			quadTextureSprite ="GFX_great_project_level_icon_upgrade_build"
+			tooltip = ""
+			tooltipText =""
+			delayedTooltipText = ""
+			buttonText = ""
+			Orientation = "UPPER_LEFT"
+		}
+
+		guiButtonType =
+		{
+			name ="use_money_to_boost_button"
+			position = { x= 390 y = 84 }
+			quadTextureSprite ="GFX_great_project_level_icon_upgrade_money"
+			tooltip = ""
+			tooltipText =""
+			delayedTooltipText = ""
+			buttonText = ""
+			Orientation = "UPPER_LEFT"
+		}
+
+		guiButtonType =
+		{
+			name ="use_manpower_to_boost_button"
+			position = { x= 390 y = 154 }
+			quadTextureSprite ="GFX_great_project_level_icon_upgrade_manpower"
+			tooltip = ""
+			tooltipText =""
+			delayedTooltipText = ""
+			buttonText = ""
+			Orientation = "UPPER_LEFT"
+		}
+
+		guiButtonType =
+		{
+			name ="move_button"
+			position = { x= 18 y = 70 }
+			quadTextureSprite ="GFX_great_project_level_icon_move"
+			tooltip = ""
+			tooltipText =""
+			delayedTooltipText = ""
+			buttonText = ""
+			Orientation = "UPPER_LEFT"
+		}
+
+		### TIER ICONS
+		windowType =
+		{
+			name = "tier_0_icon"
+			backGround=""
+			position = { x=20 y=208 }
+			size = { x=64 y= 64 }
+			moveable = 0
+			dontRender = ""
+			horizontalBorder= ""
+			verticalBorder= ""
+			fullScreen = no
+
+			iconType =
+			{
+				name ="bg"
+				spriteType = "GFX_great_project_level_icon_tier_0"
+				position = { x = 0 y = 0 }
+				Orientation = "UPPER_LEFT"
+			}
+		}
+
+		windowType =
+		{
+			name = "tier_1_icon"
+			backGround=""
+			position = { x=94 y=208 }
+			size = { x=64 y= 64 }
+			moveable = 0
+			dontRender = ""
+			horizontalBorder= ""
+			verticalBorder= ""
+			fullScreen = no
+
+			iconType =
+			{
+				name ="bg"
+				spriteType = "GFX_great_project_level_icon_tier_1"
+				position = { x = 0 y = 0 }
+				Orientation = "UPPER_LEFT"
+			}
+		}
+
+		windowType =
+		{
+			name = "tier_2_icon"
+			backGround=""
+			position = { x=174 y=208 }
+			size = { x=64 y= 64 }
+			moveable = 0
+			dontRender = ""
+			horizontalBorder= ""
+			verticalBorder= ""
+			fullScreen = no
+
+			iconType =
+			{
+				name ="bg"
+				spriteType = "GFX_great_project_level_icon_tier_2"
+				position = { x = 0 y = 0 }
+				Orientation = "UPPER_LEFT"
+			}
+		}
+
+		windowType =
+		{
+			name = "tier_3_icon"
+			backGround=""
+			position = { x=254 y=208 }
+			size = { x=64 y= 64 }
+			moveable = 0
+			dontRender = ""
+			horizontalBorder= ""
+			verticalBorder= ""
+			fullScreen = no
+
+			iconType =
+			{
+				name ="bg"
+				spriteType = "GFX_great_project_level_icon_tier_3"
+				position = { x = 0 y = 0 }
+				Orientation = "UPPER_LEFT"
+			}
+		}
+	}
+
+	windowType =
+	{
+		name = "ledger_great_project_entry"
+		backGround=""
+		position = { x=0 y=0 }
+		size = { x=600 y=360 }
+		moveable = 0
+		dontRender = ""
+		horizontalBorder= ""
+		verticalBorder= ""
+		fullScreen = no
+
+		iconType = {
+			name ="ledger_great_project_icon"
+			spriteType = "GFX_great_project_place_holder"
+			position = { x = 2 y = 10 }
+		}
+
+		iconType = {
+			name ="great_project_pic_frame"
+			spriteType = "GFX_great_projects_image_frame"
+			position = { x = -5 y = 5 }
+		}
+
+		iconType = {
+			name ="great_project_pic_title_overlay"
+			spriteType = "GFX_great_projects_name_bg_overlay"
+			position = { x = 5 y = 14 }
+			alwaystransparent = yes
+		}
+
+		instantTextBoxType = {
+			name = "ledger_great_project_name_label"
+			position = { x = 12 y = 16 }
+			textureFile = ""
+			borderSize = { x = 0 y = 0 }
+			text = "NAME HERE"
+			maxWidth = 600
+			maxHeight = 60
+			format = left
+		}
+	}
+}
