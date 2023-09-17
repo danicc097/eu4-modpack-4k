@@ -1,12 +1,21 @@
-$modDir = "D:\Documents\Paradox Interactive\Europa Universalis IV\mod"
-$modBackupDir = "${modDir}_backup"
+param (
+  [Parameter(Mandatory = $True)]
+  [string]$ModDir
+)
+
+$modBackupDir = "${ModDir}_backup"
+
+$confirmation = Read-Host "This will move the current mod folder to $modBackupDir. Continue? (Y/N)"
+if (-not ($confirmation -eq "Y" -or $confirmation -eq "y")) {
+  Exit
+}
 
 if (Test-Path -Path $modBackupDir) {
   $confirmation = Read-Host "A mod backup folder already exists. Do you want to delete it? (Y/N)"
 
   if ($confirmation -eq "Y" -or $confirmation -eq "y") {
     Remove-Item -Path $modBackupDir -Force -Recurse
-    Move-Item $modDir $modBackupDir
+    Move-Item $ModDir $modBackupDir
     Write-Host "The mod backup folder has been updated."
   }
   else {
@@ -15,9 +24,9 @@ if (Test-Path -Path $modBackupDir) {
   }
 }
 
-New-Item -ItemType Junction -Path $modDir -Target (Get-Location).Path
+New-Item -ItemType Junction -Path $ModDir -Target (Get-Location).Path
 
-Write-Host "Mod folder $modDir updated. Please update dlc_load.json to:"
+Write-Host "Mod folder $ModDir updated. Please update dlc_load.json to:"
 Write-Host '
 "enabled_mods": [
     "mod/extended_timeline_map.mod",
@@ -35,4 +44,4 @@ Write-Host '
     "mod/xorme_ai.mod"
   ],
 '
-Write-Host "To revert changes, delete $modDir and rename the backup dir."
+Write-Host "To revert changes, delete $ModDir and rename the backup dir."

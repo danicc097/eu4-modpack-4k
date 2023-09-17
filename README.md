@@ -1,5 +1,7 @@
 # eu4-modpack-4k
 
+![GitHub repo size](https://img.shields.io/github/repo-size/danicc097/eu4-modpack-4k)
+
 Europa Universalis IV opinionated modpack with adhoc 4k compatibility patches. All
 original mod credits go to their respective owners:
 
@@ -17,6 +19,16 @@ original mod credits go to their respective owners:
 - [Peace Treaties Expanded](https://steamcommunity.com/sharedfiles/filedetails/?id=2615504872)
 - [Xorme - AI](https://steamcommunity.com/sharedfiles/filedetails/?id=2451296932)
 
+## Installation
+
+### Windows
+
+```powershell
+git clone https://github.com/danicc097/eu4-modpack-4k # anywhere within your machine, need not be same disk. approx 6GB uncompressed
+cd eu4-modpack-4k
+.\setup.ps1 "<your mod folder>"
+# follow instructions
+```
 
 ## Useful links
 
