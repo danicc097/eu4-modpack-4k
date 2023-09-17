@@ -1,5 +1,7 @@
 # eu4-modpack-4k
 
+**EXPERIMENTAL**
+
 ![GitHub repo size](https://img.shields.io/github/repo-size/danicc097/eu4-modpack-4k)
 
 Europa Universalis IV opinionated modpack with adhoc 4k compatibility patches. All
@@ -21,6 +23,11 @@ original mod credits go to their respective owners:
 
 ## Installation
 
+To ensure seamless and quick upgrades as game and mod updates come, it is recommended to follow the
+setup as a git repo, since it will incrementally update everything. `git` must
+be installed.
+You can always default to downloading the repo as a zip and uncompressing directly.
+
 ### Windows
 
 ```powershell
@@ -28,6 +35,14 @@ git clone https://github.com/danicc097/eu4-modpack-4k # anywhere within your mac
 cd eu4-modpack-4k
 .\setup.ps1 "<your mod folder>"
 # follow instructions
+```
+
+To update on a new release:
+
+```powershell
+cd <...>/eu4-modpack-4k
+git pull
+# run setup again if necessary
 ```
 
 ## Useful links
