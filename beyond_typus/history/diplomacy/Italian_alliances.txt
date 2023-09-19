@@ -1,0 +1,38 @@
+# Montferrat and Savoy
+vassal = {
+	first = SAV
+	second = MFA
+	start_date = 1444.1.1
+	end_date = 1445.3.12
+}
+
+# Naples and Provence
+union = {
+	first = NAP
+	second = PRO
+	start_date = 1389.11.1
+	end_date = 1399.11.1
+}
+# Naples and Provence
+alliance = {
+	first = NAP
+	second = PRO
+	start_date = 1389.11.1
+	end_date = 1399.11.1
+}
+
+dependency = {
+	subject_type = papal_subject_bt
+	first = PAP
+	second = URB
+	start_date = 1443.1.1
+	end_date = 1502.6.1			#Cesare Borgia's short lived duchy
+}
+
+# Lodovico III "il Turco" ~ Barbara , dt. Johann "der Alchemist" Hohenzollern (Brandenburg)
+#royal_marriage = {
+#	first = MAN 
+#	second = BRA 
+#	start_date = 1433.11.12
+#	end_date = 1478.6.12
+#}

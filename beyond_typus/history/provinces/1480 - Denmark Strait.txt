@@ -1,0 +1,8 @@
+1444.1.1 = { discovered_by = ICE }
+1444.1.1 = { discovered_by = NOR }
+1444.1.1 = { discovered_by = DAN }
+1444.1.1 = { discovered_by = SWE }
+
+1600.1.1 = {
+	discovered_by = western
+}	#By the 17th century, whalers, explorers, and profiteers were sailing all around the Atlantic. Not exact, but calling it close enough

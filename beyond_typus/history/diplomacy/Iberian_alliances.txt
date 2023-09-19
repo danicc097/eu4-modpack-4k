@@ -1,0 +1,15 @@
+# Aragon and Sicily, Alfons V/Alfonso I
+union = {
+	first = ARA
+	second = NAP
+	start_date = 1442.3.3
+	end_date = 1458.6.27
+}
+
+# Edward and Leonor of Aragon
+royal_marriage = {
+	first = POR
+	second = ARA
+	start_date = 1428.9.22
+	end_date = 1438.9.13
+}

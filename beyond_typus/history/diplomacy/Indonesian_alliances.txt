@@ -1,0 +1,91 @@
+## Siamnese Dynasties
+
+# Ayutthaya and Sukhothai
+vassal = {
+	first = AYU
+	second = SUK
+	start_date = 1438.1.1
+	end_date = 1530.1.1
+}
+
+# Ligor (Nakhon Si Thammarat)
+vassal = {
+	first = AYU
+	second = LIG
+	start_date = 1400.1.1
+	end_date = 1570.1.1
+}
+
+## Sulu
+guarantee = {
+	first = BEI
+	second = SUL
+	start_date = 1405.1.1
+	end_date = 1578.1.1
+}
+
+## Maynila
+alliance = {
+	first = TDO
+	second = MNA
+	start_date = 1400.1.1
+	end_date = 1500.1.1
+}
+
+# Remaining Mahapahit Tributaries
+### new tags
+dependency = {
+	subject_type = tributary_state
+	first = MAJ
+	second = BNJ
+	start_date = 1444.1.1
+	end_date = 1468.1.1
+}
+
+dependency = {
+	subject_type = tributary_state
+	first = MAJ
+	second = BLI
+	start_date = 1444.1.1
+	end_date = 1475.1.1
+}
+
+dependency = {
+	subject_type = tributary_state
+	first = MAJ
+	second = BLM
+	start_date = 1444.1.1
+	end_date = 1475.1.1
+}
+
+dependency = {
+	subject_type = tributary_state
+	first = MAJ
+	second = PLB
+	start_date = 1444.1.1
+	end_date = 1475.1.1
+}
+
+# Muan Phuang
+### new tags
+guarantee = {
+	first = LXA
+	second = MPH
+	start_date = 1444.1.1
+	end_date = 1531.1.1
+}
+
+guarantee = {
+	first = DAI
+	second = MPH
+	start_date = 1444.1.1
+	end_date = 1478.1.1
+}
+
+dependency = {
+	subject_type = tributary_state
+	first = MNG
+	second = MPH
+	start_date = 1444.1.1
+	end_date = 1531.1.1
+}

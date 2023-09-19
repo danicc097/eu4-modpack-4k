@@ -1,0 +1,25 @@
+# Kalmar Union
+union = {
+	first = DAN
+	second = SWE
+	#start_date = 1397.6.17
+	start_date = 1444.1.1
+	end_date = 1448.6.20
+}
+
+# Denmark-Norway
+union = {
+	first = DAN
+	second = NOR
+	#start_date = 1397.6.17
+	start_date = 1444.1.1
+	end_date = 1449.11.20
+}
+
+# Danish vassal, Holstein
+vassal = {
+	first = DAN
+	second = SHL
+	start_date = 1444.1.1
+	end_date = 1460.3.6
+}

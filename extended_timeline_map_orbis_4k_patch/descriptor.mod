@@ -9,6 +9,7 @@ tags={
 }
 dependencies={
 	"Extended Timeline Map"
+	"Beyond Typus"
 	"Theatrum Orbis Terrarum for 1.30+"
 }
 picture="thumbnail.png"

@@ -1,0 +1,7 @@
+# Barents Sea
+
+discovered_by = eastern
+1444.1.1 = { discovered_by = FIN }
+1444.1.1 = { discovered_by = NOV }
+1444.1.1 = { discovered_by = MOS }
+1444.1.1 = { discovered_by = RUS }

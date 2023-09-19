@@ -1,0 +1,12 @@
+discovered_by = chinese
+1444.1.1 = { discovered_by = MCH }
+1444.1.1 = { discovered_by = KHA }
+1444.1.1 = { discovered_by = OIR }
+1444.1.1 = { discovered_by = QNG }
+1444.1.1 = { discovered_by = ANU }
+
+
+
+
+1640.1.1 = { discovered_by = RUS } # Ivan Moskvitin
+

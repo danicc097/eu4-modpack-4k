@@ -1,0 +1,36 @@
+government = republic
+add_government_reform = oligarchy_reform
+government_rank = 1
+primary_culture = russian
+add_accepted_culture = uralic
+religion = orthodox
+technology_group = eastern
+capital = 3281	# Vyatka
+fixed_capital = 3281 # Cannot move capital away from this province & no power cost to move to it
+historical_friend = GLC			#Great Feudal War specific ally
+
+
+#Couldn't quickly find information, might fill this in later
+1427.1.1 = {
+	monarch = {
+		name = "Nazariy"
+		dynasty = "Rurikovich"
+		adm = 3
+		dip = 2
+		mil = 3
+	}
+}
+
+1437.1.1 = {
+	heir = {
+		name = "Sergey"
+		monarch_name = "Sergey"
+		dynasty = "Rurikovich"
+		birth_date = 1437.1.1
+		death_date = 1483.1.1
+		claim = 95
+		adm = 2
+		dip = 2
+		mil = 1
+	}
+}

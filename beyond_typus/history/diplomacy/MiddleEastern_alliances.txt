@@ -1,0 +1,145 @@
+#Shah Rokhs Empire
+
+#Ulugh Begh
+vassal = {
+	first = TIM
+	second = TRS
+	start_date = 1444.1.1
+	end_date = 1447.3.13 #Death of Shah Rokh
+}
+#Muhammad bin Baysonqor
+#Starts as independent as Shah Rukh/Goharshad has already decided to move against him in late 1444.
+# vassal = {
+	# first = TIM
+	# second = QOM
+	# start_date = 1444.1.1
+	# end_date = 1446.1.1 #Shah Rokh falls ill in 1444, Muhammad sees his chance and rebels on the invitation of the Isfahan city council in 1446.
+# }
+#Sons of Soyurghatmish
+vassal = {
+	first = TIM
+	second = AFG
+	start_date = 1444.1.1
+	end_date = 1447.3.13 #Death of Shah Rokh
+}
+#Abdallah bin Ibrahim, the Child ruler.
+vassal = {
+	first = TIM
+	second = FRS
+	start_date = 1444.1.1
+	end_date = 1447.3.13 #Death of Shah Rokh
+}
+#Babur bin Baysonqor
+vassal = {
+	first = TIM
+	second = KHO
+	start_date = 1444.1.1
+	end_date = 1447.3.13 #Death of Shah Rokh
+}
+
+#End of Timurid Princes
+
+#Atabegs of Samtskhe under Georgia
+guarantee = {
+	first = GEO
+	second = SME
+	start_date = 1444.1.1
+	end_date = 1446.12.1
+}
+
+#Safavid Order
+#vassal = {
+#	first = QAR
+#	second = ARL
+#	start_date = 1444.1.1
+#	end_date = 1468.1.1
+#}
+
+#Kurdish Principalities generally autonomous under Qara Qoyunlu #(JP) Switched from vassal to Guarantee. Seems the biggest two were independent
+#guarantee = {
+#	first = QAR
+#	second = BTL
+#	start_date = 1435.1.1
+#	end_date = 1469.2.4
+#}
+
+#Melikdoms of Kharabak
+
+#vassal = {
+#	first = QAR
+#	second = MLK
+#	start_date = 1435.1.1
+#	end_date = 1469.2.4
+#}
+
+#Biapis
+
+alliance = {
+	first = ARL
+	second = KRY
+	start_date = 1440.1.1
+	end_date = 1504.1.1
+}
+
+#Avar Khanate under the Shamkals
+#vassal = {
+#	first = GAZ
+#	second = AVR
+#	start_date = 1435.1.1
+#	end_date = 1770.1.1
+#}
+
+#Ardalan
+vassal = {
+	first = QOM
+	second = ARD
+	start_date = 1444.1.1
+	end_date = 1446.1.1
+}
+
+#Luristan
+vassal = {
+	first = QOM
+	second = LRI
+	start_date = 1444.1.1
+	end_date = 1446.1.1
+}
+
+#Sistan
+vassal = {
+	first = TIM
+	second = SIS
+	start_date = 1444.1.1 #1383 
+	end_date = 1449.2.1 #Khorasan
+}
+
+# Cyprus, a Mamluk tributary
+guarantee = {
+	first = MAM
+	second = CYP
+	start_date = 1444.1.1
+	end_date = 1489.1.1
+}
+
+vassal = { #Viceroy of the Hejaz
+	first = MAM
+	second = HED
+	start_date = 1444.1.1
+	end_date = 1517.1.1
+}
+
+#Hejaz protected by the Mamluks
+guarantee = {
+	first = MAM
+	second = MDA
+	start_date = 1444.1.1
+	end_date = 1482.6.1
+}
+
+#Amir al Arab
+vassal = {
+	first = MAM
+	second = FAD
+	start_date = 1444.11.10
+	end_date = 1516.8.24
+}

@@ -1,0 +1,4 @@
+
+discovered_by = aboriginal_tech # 1.31
+
+1526.1.1 = { discovered_by = POR } # Don Jorge de Mneses

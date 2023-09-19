@@ -1,0 +1,81 @@
+namespace = BeyondTypusColonialCultures
+
+# Canadian
+# Canadian cut for now as it was implemented in vanilla (slightly changed, obviously, but I'll take a better look later. -D
+
+# Afrikaner
+province_event = {
+	id = BeyondTypusColonialCultures.2
+	title = "BeyondTypusColonialCultures.EVTNAME2"
+	desc = "BeyondTypusColonialCultures.EVTDESC2"
+	picture = COLONIZATION_eventPicture
+	
+	trigger = {
+		colonial_region = colonial_cape
+		OR = {
+			culture = dutch
+			culture = flemish
+			culture = frisian
+		}
+		NOT = { culture = afrikaner_culture }
+	}
+
+	mean_time_to_happen = {
+		months = 960 #80 years
+		
+		#Generic 7 factors
+		modifier = { #Colonial culture owner speeds it up dramatically
+			factor = 0.2
+			owner = { primary_culture = afrikaner_culture }
+		}
+		modifier = { #More likely in later years
+			factor = 0.8
+			is_year = 1600
+		}
+		modifier = { #More likely in later years
+			factor = 0.8
+			is_year = 1675
+		}
+		modifier = { #More likely in later years
+			factor = 0.8
+			is_year = 1750
+		}
+		modifier = { #Larger settlements convert more slowly
+			factor = 1.25
+			development = 5
+		}
+		modifier = { #Larger settlements convert more slowly
+			factor = 1.25
+			development = 10
+		}
+		modifier = { #Larger settlements convert more slowly
+			factor = 1.25
+			development = 20
+		}
+		#Special factors per culture
+	}
+
+	option = { # Okay
+		name = "BeyondTypusColonialCultures.EVTOPTA2"
+		add_local_autonomy = 10
+		change_culture = afrikaner_culture
+		if = {
+			limit = { owner = { NOT = { accepted_culture = afrikaner_culture } } }
+			owner = { add_accepted_culture = afrikaner_culture } # Brian fixed
+		}			#Adding culture as an accepted culture to prevent AI flipping, and to not penalise player in a no-choice culture event
+		if = {
+			limit = {
+				is_capital = yes
+				is_overseas = no
+				owner = {
+					OR = {
+						primary_culture = dutch
+						primary_culture = flemish
+						primary_culture = frisian
+					}
+				}
+			}
+			owner = { change_primary_culture = afrikaner_culture } # Brian fixed
+		}			#If this event hits in a capital, make the national culture the colonial culture. Yes, it will have far reaching effects. This is WaD.
+	}
+}

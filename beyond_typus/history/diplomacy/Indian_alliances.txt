@@ -1,0 +1,167 @@
+#Tributary to Malwa
+guarantee = {
+	first = MLW
+	second = BGA
+	start_date = 1436.1.1
+	end_date = 1470.1.1
+}
+
+#Vijayanagar
+alliance = { #Vijayanagara and the Reddys
+	first = VIJ
+	second = YOR
+	start_date = 1443.1.1
+	end_date = 1448.1.1
+}
+
+#Jaffna
+vassal = {
+	first = VIJ
+	second = JFN
+	start_date = 1432.1.1
+	end_date = 1450.1.1
+}
+
+#Kandy
+vassal = {
+	first = CEY
+	second = KND
+	start_date = 1440.1.1
+	end_date = 1467.1.1
+}
+
+# Zamorins
+# guarantee = {  #Zamorin rulers are tributary to Vijayanagara kings
+	# first = VIJ
+	# second = MAB
+	# start_date = 1444.1.1
+	# end_date = 1540.1.1
+# }
+
+#Mysore
+#Very independent feudatory of Vijayanagar under the Ummatur cheifs, often in rebelion
+# alliance = {
+	# first = VIJ
+	# second = MYS
+	# start_date = 1444.1.1
+	# end_date = 1505.1.1 #Revolt of the Ummatur chiefs followed by final subjugation
+# }
+
+#Hadoti (Bundi & Kota)
+vassal = {
+	first = MER
+	second = HAD
+	start_date = 1444.1.1
+	end_date = 1456.1.1
+}
+
+#Bahlul Lodi's Punjabi Domain
+vassal = {
+	first = DLH
+	second = SRH
+	start_date = 1443.1.1
+	end_date = 1451.4.20
+}
+
+#Bikaner
+vassal = {
+	first = DLH
+	second = JAN
+	start_date = 1414.1.1
+	end_date = 1465.1.1
+}
+
+#Bundelkhand
+
+#Bundelkhand overlord
+vassal = {
+	first = MLW
+	second = KLP
+	start_date = 1443.1.1
+	end_date = 1531.1.1
+}
+
+vassal = {
+	first = MLW
+	second = BND
+	start_date = 1443.1.1
+	end_date = 1531.1.1
+}
+
+#Bagelkhand
+
+vassal = {
+	first = JNP
+	second = BGL
+	start_date = 1413.1.1
+	end_date = 1495.1.1
+}
+
+#Gondwana
+
+#Gondwana overlord
+vassal = {
+	first = MLW
+	second = GDW
+	start_date = 1441.1.1
+	end_date = 1531.1.1
+}
+
+#Orissa & Garjats
+
+vassal = { #Garjat
+	first = ORI
+	second = GRJ 
+	start_date = 1444.1.1
+	end_date = 1568.1.1
+}
+
+vassal = { #Parlakhimidi
+	first = ORI
+	second = PRD
+	start_date = 1444.1.1
+	end_date = 1568.1.1
+}
+
+vassal = { #Keonhjar
+	first = ORI
+	second = KJH
+	start_date = 1444.1.1
+	end_date = 1568.1.1
+}
+
+vassal = { #Jeypore
+	first = ORI
+	second = JPR
+	start_date = 1444.1.1
+	end_date = 1576.1.1
+}
+
+#Telingana
+
+vassal = {
+	first = BAH
+	second = TLG
+	start_date = 1433.1.1 #Defeated by Bahmanis, loses strongholds of Rachakonda and Warangal.
+	end_date = 1452.1.1
+}
+
+#Koch Bihar/Kamata
+
+#Khen-Ahom marriage alliance
+alliance = {
+	first = KMT
+	second = ASS
+	start_date = 1320.1.1
+	end_date = 1490.1.1
+}
+
+#Gujarat
+
+#Vassal of Gujarat
+vassal = {
+	first = GUJ
+	second = KHD
+	start_date = 1418.1.1
+	end_date = 1508.1.1
+}

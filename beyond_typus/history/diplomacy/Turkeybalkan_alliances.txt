@@ -1,0 +1,71 @@
+#Albania guaranteed by Venice
+guarantee = {
+	first = VEN
+	second = ALB
+	start_date = 1444.1.1
+	end_date = 1468.1.1
+}
+
+#Trebizond guaranteed by Georgia
+guarantee = {
+	first = GEO
+	second = TRE
+	start_date = 1398.1.1
+	end_date = 1461.1.1
+}
+
+# Serbia and the Ottomans
+vassal = {
+	first = TUR
+	second = SER
+	start_date = 1389.1.1
+	end_date = 1402.7.1
+}
+
+# Bosnia and the Ottomans
+vassal = {
+	first = TUR
+	second = BOS
+	start_date = 1389.1.1
+	end_date = 1402.7.1
+}
+
+# Athens, a Byzantine vassal
+vassal = {
+	first = BYZ
+	second = ATH
+	start_date = 1444.6.1
+	end_date = 1453.5.29
+}
+
+# Ottoman Royal Marriage 
+royal_marriage = {
+	first = TUR
+	second = DUL
+	start_date = 1403.1.1
+	end_date = 1421.1.1
+}
+
+# Ottoman Royal Marriage 
+royal_marriage = {
+	first = TUR
+	second = CND
+	start_date = 1423.1.1
+	end_date = 1444.1.1
+}
+
+# Ottoman vassal 
+vassal = {
+	first = TUR
+	second = WAL
+	start_date = 1418.1.1
+	end_date = 1443.1.1	# Crusade of Varna
+}
+
+# Ottoman vassal
+guarantee = {
+	first = TUR
+	second = RAG
+	start_date = 1444.1.1
+	end_date = 1528.1.1
+}

@@ -1,0 +1,25 @@
+name = "Old Zurich War"
+war_goal = {
+	type = take_core
+	casus_belli = cb_core
+	province = 8486
+}
+
+1440.11.2 = {
+	add_attacker = ZUR
+	add_defender = TGN
+	add_defender = SWI
+	add_attacker = STY			#Frederick III supported Zurich in the war
+	add_attacker = VOR			#This primarily came from Further Austria
+}
+
+1444.8.30 = {
+	rem_attacker = STY			#Frederick III gave control of Further Austria to Albrecht VI, and made him in charge of the Habsburg war effort.
+}
+
+1446.6.12 = {
+	rem_attacker = ZUR
+	rem_attacker = VOR
+	rem_defender = TGN
+	rem_defender = SWI
+}

@@ -1,0 +1,108 @@
+# Country name see file name.
+
+graphical_culture = westerngfx # was britishgfx # UPE compatibility
+
+color = { 210  109  81 }
+
+historical_idea_groups = {
+	religious_ideas
+	aristocracy_ideas
+	trade_ideas
+	economic_ideas
+	diplomatic_ideas
+	innovativeness_ideas
+	offensive_ideas
+	spy_ideas
+}
+
+historical_units = {
+	western_medieval_infantry
+	western_medieval_knights
+	western_longbow
+	gaelic_mercenary
+	gaelic_free_shooter
+	irish_charge
+	anglofrench_line
+	british_redcoat
+	british_hussar
+	british_square
+	mixed_order_infantry
+	open_order_cavalry
+	napoleonic_square
+	napoleonic_lancers
+}
+
+leader_names = { 
+	Atkinson Armstrong
+	Ball Bell Birkett Braithwaite Burdon
+	Carlisle Cavendish Carr Charlton
+	Dacre Dixon Dodd
+	Elliott 
+	Featherstonehaugh Fenwick
+	Graham Grey
+	Hall Heron Hodgson Hume
+	Lambton Liddell Lowther Lumley
+	Marley Milburn Musgrave
+	Neville 
+	Percy
+	Radcliffe Robinson Robson
+	Scott Shafto Swinburne
+	Todhunter Tyson
+	Walcher "de Saint-Calais" Flambard Rufus
+	Cumin "de Puiset" "de Poitou" Poore "de Gray"
+	Marsh "de Melonsby" Farnham Kirkham Stitchill
+	"of Holy Island" Kellaw "de Beaumont" "de Bury"
+	Hatfield Fordham Skirlaw Langley Booth Dudley
+	Sherwood Foxe Senhouse Bainbridge Ruthall Wolsey
+	Tunstall Pilkington Barnes Hutton Neile
+	Montaigne Howson Morton Crewe Talbot Chandler
+	Butler Trevor Egerton Thurlow Barrington
+}
+
+monarch_names = {
+	"William #5" = 40
+	"Geoffrey #1" = 20
+	"Hugh #1" = 20
+	"Phillip #1" = 20
+	"Richard #5" = 20
+	"John #2" = 10
+	"Thomas #3" = 10
+	"Nicholas #1" = 10
+	"Walter #2" = 10
+	"Robert #2" = 10
+	"Morgan #1" = 0
+	"Anthony #1" = 0
+	"Lewis #1" = 0
+	"Lawrence #0" = 0
+	"Christopher #0" = 0
+	"James #0" = 0
+	"Matthew #0" = 0
+	"Tobias #0" = 0
+	"George #0" = 0
+	"Nathaniel #0" = 0
+	"Edward #0" = 0
+	"Joseph #0" = 0
+	"Shute #0" = 0
+	
+	"Arabella #0" = -1
+	"Breanna #0" = -1
+	"Catherine #0" = -1
+}
+
+ship_names = {
+          Aethelfrith Alnwick
+          Bamburgh Bede Bernicia Berwick Blackadder Borderer Bowes
+          Carlisle Cheviot Cumberland
+          Derwent Durham
+          Eden
+          Hadrian Helvellyn
+          Jarrow
+          Lindisfarne
+          Morpeth
+          Newcastle Northumbria
+          Penrith Percy
+          Reiver Rheged
+          Scafell Shap Skiddaw Solway "St Cuthbert" "St Edwin" "St Oswald" Sunderland
+          Tees Tweed Tyne
+          Wear Westmorland Windermere
+}

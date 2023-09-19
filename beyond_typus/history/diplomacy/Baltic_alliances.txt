@@ -1,0 +1,23 @@
+# Polish vassal
+vassal = {
+	first = POL
+	second = MAZ
+	start_date = 1444.1.1
+	end_date = 1526.3.9
+}
+
+# Polish guarantee/tribute
+guarantee = {
+	first = POL
+	second = MOL
+	start_date = 1444.1.1
+	end_date = 1447.12.12
+}
+
+# Polish-Lithuania
+union = {
+	first = POL
+	second = LIT
+	start_date = 1386.7.1
+	end_date = 1444.11.10
+}

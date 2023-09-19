@@ -1,0 +1,1118 @@
+union = {
+	first = ENG
+	second = WLS
+	start_date = 1444.1.1
+	end_date = 1542.1.22
+}
+
+march = {
+	first = ENG
+	second = WMC
+	start_date = 1444.1.1
+	end_date = 1535.2.4
+}
+
+march = {
+	first = ENG
+	second = DUR
+	start_date = 1291.1.1 
+	end_date = 1836.6.5
+}
+
+march = {
+	first = ENG
+	second = KOI
+	start_date = 1444.1.1
+	end_date = 1707.5.12
+}
+
+march = {
+	first = ENG
+	second = JER
+	start_date = 1444.1.1
+	end_date = 1707.5.12
+}
+
+royal_marriage = {
+	first = SCO
+	second = BRI
+	start_date = 1442.10.30
+	end_date = 1450.7.19
+}
+
+#French Fiefs
+### removed subject_type = vassal
+vassal = {
+	first = FRA
+	second = ORL
+	start_date = 1444.1.1
+	end_date = 1498.1.1
+}
+
+vassal = {
+	first = FRA
+	second = BOU
+	start_date = 1444.1.1
+	end_date = 1531.1.1
+}
+
+vassal = {
+	first = FRA
+	second = AMG
+	start_date = 1444.1.1
+	end_date = 1607.1.1
+}
+
+# Added Foix to France during performance start to keep vanilla setting (questionable)
+
+###vassal = { ### XXX
+###	first = FRA
+###	second = FOI
+###	start_date = 1444.11.16
+###	end_date = 1444.11.18 
+###}
+
+vassal = {
+	first = FRA
+	second = RHM
+	start_date = 1444.1.1
+	end_date = 1607.1.1
+}
+
+vassal = {
+	first = FRA
+	second = LAO
+	start_date = 1444.1.1
+	end_date = 1607.1.1
+}
+
+vassal = {
+	first = FRA
+	second = LGR
+	start_date = 1444.1.1
+	end_date = 1607.1.1
+}
+
+#Burgundian Unions
+union = {
+	first = BUR
+	second = LUX
+	start_date = 1444.1.1
+	end_date = 1477.1.5
+}
+
+union = {
+	first = BUR
+	second = HAI
+	start_date = 1444.1.1
+	end_date = 1477.1.5
+}
+
+union = {
+	first = BUR
+	second = PIC
+	start_date = 1444.1.1
+	end_date = 1477.1.5
+}
+
+union = {
+	first = BUR
+	second = ATS
+	start_date = 1444.1.1
+	end_date = 1477.1.5
+}
+
+vassal = {
+	first = BUR
+	second = BSA
+	start_date = 1444.1.1
+	end_date = 1477.1.5
+}
+
+vassal = {
+	first = BUR
+	second = LXL
+	start_date = 1444.1.1
+	end_date = 1477.1.5
+}
+
+guarantee = {
+	first = BUR
+	second = CMB
+	start_date = 1444.1.1
+	end_date = 1477.1.5
+}
+
+guarantee = {
+	first = BUR
+	second = TOA
+	start_date = 1444.1.1
+	end_date = 1477.1.5
+}
+
+guarantee = {
+	first = BUR
+	second = TRN
+	start_date = 1444.1.1
+	end_date = 1477.1.5
+}
+
+guarantee = {
+	first = BUR
+	second = UTR
+	start_date = 1444.1.1
+	end_date = 1477.1.5
+}
+
+#Other Stuff
+# Provence and Lorraine under René of Anjou
+union = {
+	first = PRO
+	second = LOR
+	start_date = 1431.1.25
+	end_date = 1453.2.28
+}
+
+union = {
+	first = PRO
+	second = BAR
+	start_date = 1444.11.11		#purely to keep from early annexation
+	end_date = 1453.2.28		#copied from Lorraine (LOR)
+}
+
+union = {
+	first = PRO
+	second = ANJ
+	start_date = 1444.11.11		#purely to keep from early annexation
+	end_date = 1453.2.28		#copied from Lorraine (LOR)
+}
+
+vassal = {
+	first = PRO
+	second = MNE
+	start_date = 1444.11.11		#purely to keep from early annexation
+	end_date = 1453.2.28
+}
+
+alliance = {
+	first = FRA
+	second = PRO
+	start_date = 1431.1.25
+	end_date = 1453.7.18
+}
+
+royal_marriage = {		#Marie of Anjou x Charles VII 
+	first = FRA
+	second = PRO
+	start_date = 1422.7.1
+	end_date = 1461.7.22
+}
+
+guarantee = {
+	first = FRA
+	second = PRO
+	start_date = 1444.1.1
+	end_date = 1589.8.2
+}
+
+
+guarantee = {
+	first = FOI
+	second = AOR
+	start_date = 1444.1.1
+	end_date = 1589.8.2
+}
+
+guarantee = {
+	first = FRA
+	second = TOA
+	start_date = 1444.1.1
+	end_date = 1513.1.1		 #Occupied by English, who later restored it to direct French authority.
+}
+
+#Seperation of the Crown of Aragon
+union = {
+	first = ARA
+	second = SAR
+	start_date = 1421.1.1
+	end_date = 1516.1.22
+}
+vassal = { #marquisate of Oristano
+	first = ARA
+	second = ARR
+	start_date = 1421.1.1
+	end_date = 1516.1.22
+}
+
+union = {
+	first = ARA
+	second = SIC
+	start_date = 1409.7.26
+	end_date = 1442.3.3 #Naples temporary annexes Sicily. Actually more complicated, but that is what we're saying for now.
+}
+
+guarantee = {
+	first = ARA
+	second = COR
+	start_date = 1421.1.1
+	end_date = 1453.1.1 #Bank of Saint George takes posession of the island, and the weak Aragonese influence is broken.
+} #Counts of Cinarca, a personal union under the Crown of Aragon... sort of. CHANGED by Nikicaga to be a mere Guarantee. More accurate
+
+guarantee = {
+	first = ARA
+	second = HRZ
+	start_date = 1444.1.1
+	end_date = 1483.1.1
+}
+
+guarantee = {
+	first = ARA
+	second = AOR
+	start_date = 1444.1.1
+	end_date = 1479.9.4
+}
+
+vassal = {
+	first = VEN
+	second = CGG
+	start_date = 1381.1.1
+	end_date = 1412.1.1
+} #Chioggia
+
+vassal = {
+	first = VEN
+	second = AQU
+	start_date = 1420.1.1
+	end_date = 1433.1.1
+} #Patriarchate of Aquileia
+
+vassal = {
+	first = VEN
+	second = CDA
+	start_date = 1444.1.1
+	end_date = 1669.1.1 #Ottoman conquest
+} #Candia
+vassal = {
+	first = VEN
+	second = NEG
+	start_date = 1444.1.1
+	end_date = 1669.1.1 #Ottoman conquest
+} #Negroponte
+
+vassal = {
+	first = VEN
+	second = CEN
+	start_date = 1389.12.19
+	end_date = 1514.1.1 #annexed
+} #Ceneda
+
+union = {
+	first = ARA
+	second = SIC
+	start_date = 1295.6.20		 #Treaty of Anagni gives Sicily to the Pope, who promptly gives it to Charles II of Naples, but the local regent Frederick III of Sicily and populous refuse to acknowledge this and rebel, naming Frederick III of Sicily king and sparking the war again, but putting Sicily back with Aragon's royal family.
+	end_date = 1409.7.25		 #Thrones united when  Martin I inherits Sicily from his son
+}
+
+#Note vanilla file has ARA - NAP union from 1442.3.3 to 1458.6.27
+
+#Papal Fiefs, still independent in 1444 or indepedent after 1444
+
+dependency = { ### XXX
+	subject_type = papal_subject_bt
+	first = PAP
+	second = PSR
+	start_date = 1445.1.1
+	end_date = 1513.1.1
+}
+
+dependency = {
+	subject_type = papal_subject_bt
+	first = PAP
+	second = MRC
+	start_date = 1436.1.1
+	end_date = 1445.1.1
+} #Francesco Sforza's Marche
+
+vassal = {
+	first = MRC
+	second = ANC
+	start_date = 1435.1.1
+	end_date = 1436.1.1
+} #Francesco Sforza's Marche
+
+vassal = {
+	first = PAP
+	second = VLT
+	start_date = 1291.5.19
+	end_date = 1291.5.21
+}
+
+vassal = {
+	first = PAP
+	second = VLT
+	start_date = 1291.5.26
+	end_date = 1408.1.1
+}
+
+vassal = {
+	first = PAP
+	second = VLT
+	start_date = 1414.8.6 
+	end_date = 1591.1.1
+}
+
+vassal = {
+	first = PAP
+	second = ORV
+	start_date = 1291.5.19
+	end_date = 1291.5.21
+}
+
+vassal = {
+	first = PAP
+	second = ORV
+	start_date = 1291.5.26
+	end_date = 1408.1.1
+}
+
+vassal = {
+	first = PAP
+	second = ORV
+	start_date = 1414.8.6 
+	end_date = 1450.1.1
+}
+
+dependency = {
+	subject_type = papal_subject_bt
+	first = PAP
+	second = PGA
+	start_date = 1291.5.19
+	end_date = 1291.5.21
+}
+
+dependency = {
+	subject_type = papal_subject_bt
+	first = PAP
+	second = PGA
+	start_date = 1291.5.26
+	end_date = 1408.1.1
+}
+
+dependency = {
+	subject_type = papal_subject_bt
+	first = PAP
+	second = PGA
+	start_date = 1414.8.6 
+	end_date = 1450.1.1
+}
+
+dependency = {
+	subject_type = papal_subject_bt
+	first = PAP
+	second = CMR
+	start_date = 1291.5.19
+	end_date = 1291.5.21
+}
+
+dependency = {
+	subject_type = papal_subject_bt
+	first = PAP
+	second = CMR
+	start_date = 1291.5.26
+	end_date = 1408.1.1
+}
+
+dependency = {
+	subject_type = papal_subject_bt
+	first = PAP
+	second = CMR
+	start_date = 1414.8.6 
+	end_date = 1502.1.1		 #Cesare Borgia's short lived duchy
+}
+
+dependency = {
+	subject_type = papal_subject_bt
+	first = PAP
+	second = ANC
+	start_date = 1291.5.19
+	end_date = 1291.5.21
+}
+
+dependency = {
+	subject_type = papal_subject_bt
+	first = PAP
+	second = ANC
+	start_date = 1291.5.26
+	end_date = 1408.1.1
+}
+
+dependency = {
+	subject_type = papal_subject_bt
+	first = PAP
+	second = ANC
+	start_date = 1414.8.6 
+	end_date = 1435.1.1		 #To Sforza's Marche
+}
+
+dependency = {
+	subject_type = papal_subject_bt
+	first = PAP
+	second = ANC
+	start_date = 1436.1.1 
+	end_date = 1532.1.1
+}
+
+dependency = {
+	subject_type = papal_subject_bt
+	first = PAP
+	second = FMO
+	start_date = 1291.5.19
+	end_date = 1291.5.21
+}
+
+dependency = {
+	subject_type = papal_subject_bt
+	first = PAP
+	second = FMO
+	start_date = 1291.5.26
+	end_date = 1408.1.1
+}
+
+dependency = {
+	subject_type = papal_subject_bt
+	first = PAP
+	second = FMO
+	start_date = 1414.8.6 
+	end_date = 1435.1.1		 #To Sforza's Marche
+}
+
+dependency = {
+	subject_type = papal_subject_bt
+	first = PAP
+	second = URB
+	start_date = 1291.5.19
+	end_date = 1442.12.31
+} #Pre-vanilla start subject info for Urbino, finished in vanilla files as it is a vanilla tag
+
+#Papal Fiefs, no longer independent in 1444
+dependency = {
+	subject_type = papal_subject_bt
+	first = PAP
+	second = FLG
+	start_date = 1305.1.1
+	end_date = 1408.1.1
+}
+
+dependency = {
+	subject_type = papal_subject_bt
+	first = PAP
+	second = FLG
+	start_date = 1414.8.6
+	end_date = 1439.1.1
+}
+
+dependency = {
+	subject_type = papal_subject_bt
+	first = PAP
+	second = ALR # changed from ALT
+	start_date = 1291.5.19
+	end_date = 1291.5.21
+}
+
+dependency = {
+	subject_type = papal_subject_bt
+	first = PAP
+	second = ALR # changed from ALT
+	start_date = 1291.5.26
+	end_date = 1434.1.1
+}
+
+dependency = {
+	subject_type = papal_subject_bt
+	first = PAP
+	second = TIV
+	start_date = 1291.5.19
+	end_date = 1291.5.21
+}
+
+dependency = {
+	subject_type = papal_subject_bt
+	first = PAP
+	second = TIV
+	start_date = 1291.5.26
+	end_date = 1440.1.1
+}
+
+dependency = {
+	subject_type = papal_subject_bt
+	first = PAP
+	second = TNI
+	start_date = 1291.5.19
+	end_date = 1291.5.21
+}
+
+dependency = {
+	subject_type = papal_subject_bt
+	first = PAP
+	second = TNI
+	start_date = 1291.5.26
+	end_date = 1444.1.1
+}
+
+dependency = {
+	subject_type = papal_subject_bt
+	first = PAP
+	second = NRC
+	start_date = 1291.5.19
+	end_date = 1291.5.21
+}
+
+dependency = {
+	subject_type = papal_subject_bt
+	first = PAP
+	second = NRC
+	start_date = 1291.5.26
+	end_date = 1354.1.1
+}
+
+dependency = {
+	subject_type = papal_subject_bt
+	first = PAP
+	second = SPL
+	start_date = 1291.5.19
+	end_date = 1291.5.21
+}
+
+dependency = {
+	subject_type = papal_subject_bt
+	first = PAP
+	second = SPL
+	start_date = 1291.5.26
+	end_date = 1354.1.1
+}
+
+dependency = {
+	subject_type = papal_subject_bt
+	first = PAP
+	second = FAB
+	start_date = 1291.5.19
+	end_date = 1291.5.21
+}
+
+dependency = {
+	subject_type = papal_subject_bt
+	first = PAP
+	second = FAB
+	start_date = 1291.5.26
+	end_date = 1435.1.1
+}
+
+dependency = {
+	subject_type = papal_subject_bt
+	first = PAP
+	second = MRT
+	start_date = 1291.5.19
+	end_date = 1291.5.21
+}
+
+dependency = {
+	subject_type = papal_subject_bt
+	first = PAP
+	second = MRT
+	start_date = 1291.5.26
+	end_date = 1435.1.1
+}
+
+dependency = {
+	subject_type = papal_subject_bt
+	first = PAP
+	second = GUB
+	start_date = 1291.5.19
+	end_date = 1291.5.21
+}
+
+dependency = {
+	subject_type = papal_subject_bt
+	first = PAP
+	second = GUB
+	start_date = 1291.5.26
+	end_date = 1384.1.1
+}
+
+#######################################################################
+#Temp work to rush out 10.0, fix later
+#######################################################################
+dependency = {
+	subject_type = papal_subject_bt
+	first = PAP
+	second = MTS
+	start_date = 1444.1.1
+	end_date = 1444.11.13
+}
+
+dependency = {
+	subject_type = papal_subject_bt
+	first = PAP
+	second = FRL
+	start_date = 1444.1.1
+	end_date = 1444.11.13
+}
+
+dependency = {
+	subject_type = papal_subject_bt
+	first = PAP
+	second = FNZ
+	start_date = 1444.1.1
+	end_date = 1444.11.13
+}
+
+dependency = {
+	subject_type = papal_subject_bt
+	first = PAP
+	second = BLG
+	start_date = 1444.1.1
+	end_date = 1444.11.13
+}
+
+dependency = {
+	subject_type = papal_subject_bt
+	first = PAP
+	second = MNO
+	start_date = 1444.1.1
+	end_date = 1444.11.13
+}
+
+vassal = {
+	first = GEN
+	second = GZR
+	start_date = 1444.1.1
+	end_date = 1475.1.1 #Ottoman conquest
+} #Gazaria
+
+union = {
+	first = FER
+	second = MOD
+	start_date = 1291.5.19
+	end_date = 1291.5.21
+}
+
+union = {
+	first = FER
+	second = MOD
+	start_date = 1291.5.26
+	end_date = 1308.1.1 #An independent commune gains control of Modena
+}
+
+union = {
+	first = FER
+	second = MOD
+	start_date = 1336.1.1 #Este family back in control 
+	end_date = 1516.1.1 #Papal rule interrupts Este
+}
+
+vassal = {
+	first = LAN
+	second = VLR
+	start_date = 1361.1.1		 #Florence forces Volterra to submit
+	end_date = 1472.1.1 #Annexed to Florence directly
+}
+#Switzerland-Basel
+guarantee = {
+	first = SWI
+	second = BSL
+	start_date = 1444.1.1
+	end_date = 1501.6.9
+}
+alliance = {
+	first = SWI
+	second = BSL
+	start_date = 1444.1.1
+	end_date = 1501.6.9
+}
+#Switzerland-Sieben Zenden
+guarantee = {
+	first = SWI
+	second = ZDN
+	start_date = 1444.1.1
+	end_date = 1529.3.12
+}
+alliance = {
+	first = SWI
+	second = ZDN
+	start_date = 1444.1.1
+	end_date = 1529.3.12
+}
+#Three Leagues
+alliance = {
+	first = ZGB
+	second = GHB
+	start_date = 1444.1.1
+	end_date = 1497.1.1
+}
+alliance = {
+	first = ZGB
+	second = GRB
+	start_date = 1444.1.1
+	end_date = 1497.1.1
+}
+alliance = {
+	first = GHB
+	second = GRB
+	start_date = 1444.1.1
+	end_date = 1497.1.1
+}
+
+vassal = {
+	first = SWI
+	second = TTL
+	start_date = 1497.1.1
+	end_date = 1520.1.1
+} # Switzerland-Grey Leagues relations
+
+union = {
+	first = MUN
+	second = OSN
+	start_date = 1442.1.1
+	end_date = 1450.6.3
+}
+
+union = {
+	first = KOL
+	second = PAD
+	start_date = 1415.1.1
+	end_date = 1463.2.14 ##Cologne/Munster
+}
+
+#vassal = {
+#	first = HAB
+#	second = TST
+#	start_date = 1382.9.30
+#	end_date = 1806.7.11
+#}
+
+vassal = {
+	first = BOH
+	second = GLG
+	start_date = 1444.1.1
+	end_date = 1450.1.1
+}
+
+vassal = {
+	first = BOH
+	second = LEG
+	start_date = 1444.1.1
+	end_date = 1450.1.1
+}
+
+vassal = {
+	first = BOH
+	second = OLE
+	start_date = 1444.1.1
+	end_date = 1450.1.1
+}
+
+vassal = {
+	first = BOH
+	second = OPL
+	start_date = 1444.1.1
+	end_date = 1450.1.1
+}
+
+vassal = {
+	first = BOH
+	second = TRO
+	start_date = 1444.1.1
+	end_date = 1450.1.1
+}
+
+vassal = {
+	first = BOH
+	second = BEG
+	start_date = 1444.1.1
+	end_date = 1450.1.1
+}
+
+vassal = {
+	first = BOH
+	second = TES
+	start_date = 1444.1.1
+	end_date = 1450.1.1
+}
+
+vassal = {
+	first = BOH
+	second = RAC
+	start_date = 1444.1.1
+	end_date = 1450.1.1
+}
+
+vassal = {
+	first = BOH
+	second = NIE
+	start_date = 1444.1.1
+	end_date = 1450.1.1
+}
+
+vassal = {
+	first = BOH
+	second = ASC
+	start_date = 1444.1.1
+	end_date = 1450.1.1
+}
+
+vassal = {
+	first = TEU
+	second = PMS
+	start_date = 1291.5.19
+	end_date = 1291.5.21
+}
+
+vassal = {
+	first = TEU
+	second = PMS
+	start_date = 1291.5.26
+	end_date = 1525.1.1
+}
+
+vassal = {
+	first = TEU
+	second = KUM # changed from KUL
+	start_date = 1291.5.19
+	end_date = 1291.5.21
+}
+
+vassal = {
+	first = TEU
+	second = KUM # changed from KUL
+	start_date = 1291.5.26
+	end_date = 1525.1.1
+}
+
+vassal = {
+	first = TEU
+	second = SMA # changed from SMB
+	start_date = 1291.5.19
+	end_date = 1291.5.21
+}
+
+vassal = {
+	first = TEU
+	second = SMA # changed from SMB
+	start_date = 1291.5.26
+	end_date = 1525.1.1
+}
+
+vassal = {
+	first = TEU
+	second = WRM
+	start_date = 1291.5.19
+	end_date = 1291.5.21
+}
+
+vassal = {
+	first = TEU
+	second = WRM
+	start_date = 1291.5.26
+	end_date = 1466.1.1
+}
+
+vassal = {
+	first = DAN
+	second = ICE
+	start_date = 1444.1.1
+	end_date = 1536.1.1
+}
+
+vassal = {
+	first = LIT
+	second = KIE
+	start_date = 1444.1.1
+	end_date = 1471.1.1 #Principality of Kiev fully annexed to Lithuania with the death of Prince Simeon Olelkovich
+} #Kiev Principality under Lithuania
+
+vassal = {
+	first = LIT
+	second = SMG
+	start_date = 1444.1.1
+	end_date = 1500.1.1 #Generic End Date, replace when I have time to do proper later starts history work
+} #Duchy of Samogitia under Lithuania
+
+#vassal = {
+#	first = LIT
+#	second = SLT
+#	start_date = 1444.1.1
+#	end_date = 1500.1.1 #Generic End Date, replace when I have time to do proper later starts history work
+#} #Principality of Slutsk
+
+#vassal = {
+#	first = LIT
+#	second = DTK
+#	start_date = 1444.1.1
+#	end_date = 1500.1.1 #Generic End Date, replace when I have time to do proper later starts history work
+#} #Principality of Drutsk
+
+guarantee = {
+	first = LIT
+	second = CRI
+	start_date = 1444.1.1
+	end_date = 1475.1.1 #Khanate becomes a protectorate of the Ottoman Empire, essentially.
+} #Agreement between Crimea and Lithuania against Great Horde, Crimea gaining protection in exchange for the Yedisan area.
+
+vassal = {
+	first = TVE
+	second = ZBT
+	start_date = 1444.1.1
+	end_date = 1460.1.1
+} #Tver's autonomous vassal principality
+
+vassal = {
+	first = RYA
+	second = PRS
+	start_date = 1444.1.1
+	end_date = 1483.1.1
+} #Ryazan's autonomous vassal principality and bitter rival for most of its existance. Weakened greatly by this point.
+
+vassal = {
+	first = MOS
+	second = SPK
+	start_date = 1444.1.1
+	end_date = 1446.2.13
+} #Moscow's vassal, Serpukhov breaks vassalage when Shemyaka takes the throne, backing the exiled Vasily II
+
+royal_marriage = {
+	first = MOS
+	second = SPK
+	start_date = 1444.1.1
+	end_date = 1446.2.13
+} #Moscow's vassal, Serpukhov breaks vassalage when Shemyaka takes the throne, backing the exiled Vasily II
+
+alliance = {
+	first = GLC
+	second = VYA
+	start_date = 1444.1.1
+	end_date = 1446.2.13 #Shemyaka takes Moscow
+}
+
+alliance = {
+	first = GLC
+	second = MOZ
+	start_date = 1444.1.1
+	end_date = 1446.2.13 #Shemyaka takes Moscow
+}
+
+vassal = {
+	first = LIT
+	second = VTN
+	start_date = 1444.1.1
+	end_date = 1494.1.1
+}
+
+vassal = {
+	first = LIT
+	second = OKA
+	start_date = 1444.1.1
+	end_date = 1494.1.1
+}
+
+vassal = {
+	first = LIT
+	second = BLV
+	start_date = 1444.1.1
+	end_date = 1494.1.1
+}
+
+vassal = {
+	first = LIT
+	second = MSL
+	start_date = 1444.1.1
+	end_date = 1494.1.1
+}
+
+dependency = {
+	subject_type = tributary_state
+	first = KAZ
+	second = VYA
+	start_date = 1444.1.1
+	end_date = 1489.1.1
+}
+
+dependency = {
+	subject_type = tributary_state
+	first = GOL
+	second = YLT
+	start_date = 1444.1.1
+	end_date = 1483.1.1
+}
+#Cheap wiki quote to remind me to look into something -
+#'During the Great Feudal War in the Grand Duchy of Moscow, Tver once again rose to prominence and concluded defensive alliances with Lithuania, Novgorod, Byzantium, and the Golden Horde.
+
+vassal = {
+	first = LIV
+	second = KUR
+	start_date = 1435.12.4
+	end_date = 1560.5.20
+}
+
+vassal = {
+	first = LIV
+	second = OSL
+	start_date = 1435.12.4
+	end_date = 1560.5.20
+}
+
+vassal = {
+	first = LIV
+	second = DRP
+	start_date = 1435.12.4
+	end_date = 1558.7.18
+}
+
+vassal = {
+	first = LIV
+	second = RIG
+	start_date = 1435.12.4
+	end_date = 1561.1.1
+}
+
+vassal = {
+	first = BYZ
+	second = LES
+	start_date = 1444.1.1
+	end_date = 1453.5.29
+}
+
+vassal = {
+	first = TRE
+	second = FEO
+	start_date = 1444.1.1
+	end_date = 1461.1.1
+} #Evidence I found says feo was a vassal state of the empire of Trebizond, and Trenizond's last remaining holding before the Ottomans completely took over.
+
+union = {
+	first = HUN
+	second = CRO
+	start_date = 1444.1.1 ### XXX 1409.1.1
+	end_date = 1526.1.1 ### XXX 1526.8.30
+}
+
+guarantee = {#Venice protected Zeta from Serbia and Ottomans
+	first = VEN
+	second = MON
+	start_date = 1444.1.1
+	end_date = 1478.1.1
+}
+guarantee = {#Hungary protected Serbia from Ottoman attacks, arguably Serbia was a vassal
+	first = HUN
+	second = SER
+	start_date = 1444.1.1
+	end_date = 1459.1.1
+}
+
+#Calenburg PU over Gottingen
+#(JP) Just checked with Gottingen, it seems Otto II abdicated in 1435 but was not inherited till 1463 by William I/III/IV. I think you are right in representing it as a PU 1435-1463. It wasn't actually merged into Calenburg until 1495 it seems? Though because it was split again in 1473 for William VI
+union = { 
+	first = CBG
+	second = GTT
+	start_date = 1435.1.1
+	end_date = 1463.1.1
+}

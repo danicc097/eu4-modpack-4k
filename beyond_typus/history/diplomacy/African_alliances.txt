@@ -1,0 +1,71 @@
+#Maravi State System
+vassal = {
+	first = MRA
+	second = LDU
+	start_date = 1444.1.1
+	end_date = 1572.1.1
+}
+
+#Zimbabwe
+vassal = {
+	first = ZIM
+	second = RZW
+	start_date = 1440.1.1
+	end_date = 1650.1.1
+}
+
+#Hafsids - Fezzan
+guarantee = {
+	first = TUN
+	second = FZA
+	start_date = 1444.1.1
+	end_date = 1558.1.1
+}
+
+#Kilwan Vassals
+vassal = {
+	first = ZAN
+	second = SFA
+	start_date = 1444.1.1
+	end_date = 1490.1.1
+}
+
+#Ajuuran Vassal
+vassal = {
+	first = AJU
+	second = MDI
+	start_date = 1444.1.1
+	end_date = 1615.1.1
+}
+
+#Kongo
+vassal = {
+	first = KON
+	second = NDO
+	start_date = 1444.1.1
+	end_date = 1556.1.1
+}
+
+vassal = {
+	first = KON
+	second = LOA
+	start_date = 1444.1.1
+	end_date = 1564.1.1
+}
+
+#Ethiopian Vassals
+#Damot
+vassal = {
+	first = ETH
+	second = DAM
+	start_date = 1444.1.1
+	end_date = 1670.1.1
+}
+
+#Hadiya
+vassal = {
+	first = ETH
+	second = HDY
+	start_date = 1444.1.1
+	end_date = 1534.1.1
+}

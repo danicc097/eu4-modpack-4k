@@ -1,0 +1,28 @@
+# No previous file for Hasinai
+
+owner = HNI
+controller = HNI
+add_core = HNI
+culture = caddo
+religion = totemism
+capital = "Hasinai"
+trade_goods = unknown
+hre = no
+is_city = yes
+base_tax = 1  
+base_production = 1 
+base_manpower = 1 
+
+
+
+discovered_by = north_american
+
+1542.1.1 = { discovered_by = SPA } # Hernando de Soto
+
+1760.1.1 = {
+	owner = CAD
+	controller = CAD
+	add_core = CAD
+	trade_goods = cotton
+	is_city = yes 
+} #Great Plain tribes spread over vast territories

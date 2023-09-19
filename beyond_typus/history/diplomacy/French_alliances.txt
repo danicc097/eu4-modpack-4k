@@ -1,0 +1,15 @@
+# Burgundy - Brittany alliance for balance
+alliance = {
+	first = BUR
+	second = BRI
+	start_date = 1435.9.21
+	end_date = 1441.1.2
+}
+
+# Auld Alliance
+guarantee = {
+	first = FRA
+	second = SCO
+	start_date = 1444.1.1
+	end_date = 1560.1.1
+}

@@ -1,0 +1,21 @@
+government_rank = 1
+government = tribal
+add_government_reform = tribal_despotism
+primary_culture = libyan_berber_culture
+technology_group = muslim
+religion = ibadi
+capital = 4567
+
+
+
+#May fill in later, but very unlikely anyone will care
+1444.1.1 = {
+	monarch = {
+		name = "Wahid"
+		dynasty = "al Nafusi"
+		birth_date = 1410.1.1
+		adm = 1
+		dip = 2
+		mil = 3
+	}
+}

@@ -1,0 +1,23 @@
+# Barents Sea
+
+
+
+discovered_by = western
+discovered_by = eastern
+1444.1.1 = { discovered_by = SWE }
+1444.1.1 = { discovered_by = NOR }
+1444.1.1 = { discovered_by = DAN }
+1444.1.1 = { discovered_by = FIN }
+1444.1.1 = { discovered_by = GOT }
+1444.1.1 = { discovered_by = SHL }
+1444.1.1 = { discovered_by = SCA }
+1444.1.1 = { discovered_by = NOV }
+1444.1.1 = { discovered_by = MOS }
+1444.1.1 = { discovered_by = PSK }
+1444.1.1 = { discovered_by = RUS }
+1444.1.1 = { discovered_by = RYA }
+1444.1.1 = { discovered_by = TVE }
+1444.1.1 = { discovered_by = YAR }
+1444.1.1 = { discovered_by = PLT }
+1444.1.1 = { discovered_by = SMO }
+1444.1.1 = { discovered_by = NZH }

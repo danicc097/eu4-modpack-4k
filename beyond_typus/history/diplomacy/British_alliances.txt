@@ -1,0 +1,23 @@
+#Scotland-Isles
+vassal = {
+	first = SCO
+	second = LOI
+	start_date = 1444.1.1
+	end_date = 1493.1.1
+}
+
+# The Anglo-Portuguese alliance
+alliance = {
+	first = ENG
+	second = POR
+	start_date = 1373.1.1
+	end_date = 1701.9.1
+}
+
+# Henry V and Catherine of Valois
+royal_marriage = {
+	first = ENG
+	second = FRA
+	start_date = 1420.6.2
+	end_date = 1422.8.31
+}

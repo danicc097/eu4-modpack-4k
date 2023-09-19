@@ -1,0 +1,509 @@
+BT15.0.1
+#New Additions
+ - German Localisation updated for BT15 (thanks to Malcador)
+ - Because of a missing '*', it is now updated to 1.33.3
+
+#Bugfixes
+ - Added missing adjectives for EGL and SRN
+ - Fixed bugs with events for Fate of the Crimean Khanate chain
+ - Fixed bugs with events for Genoa and Ottomans
+ - Fixed a bug with Anglo-Ireland having female names for male rulers
+ - Fixed a bug where BRX had wrong primary culture
+ - Fixed a bug where RAM had wrong primary culture
+ - Fixed a bug where Mandeaen did not have a harmonised modifier for Confucianism
+ - Fixed a bug where Syriac Culture Group did not have an assimilation modifier for Mughals
+
+#Tweaks and Balance
+ - Tweaked some adjectives for minor French tags
+ - Upgrading CoT's to tier two and tier three now require 16 dev and 40 dev respectively
+ - 1099 (Socotra) is not Nestorian
+ - Removed area governing cost from Gates of Nineveh
+ - Winmerged 01_monuments.txt to update vanilla triggers and modifiers into BT where they changed
+ - Mandaeans can no longer be converted by Muslim propogate trade mechanics (since they are the Sabian People of the Book)
+ - General update and clean up of 00_religion.txt
+
+#Localised naming
+ - Added a Turkish name for 6096 (Samos)
+ - Fixed an encoding error with syriac_group.txt
+ 
+#GFX
+ - Update the province view monument screen (thanks to Hadiros)
+ - Added new Alawite symbol for Church Power mechanic (thanks to Schoko) though may not yet work as intended
+
+
+
+BT15
+#New Additions
+ - Total Overhaul to the Levant and Mesopotamia regions.
+ - New Druze Religion and mechanics
+ - New Yazidi Religion and mechanics
+ - New Alawite Religion and mechanics
+ - New Mandaean Religion and mechanics
+ - New Nestorian Religion and mechanics
+ - New Assyrian, Aramean and Mandaean Cultures in a new Syriac culture group, replacing the old Syriac culture
+ - New Turkoman culture representing the unsettled Oghuz people in Mesopotamia, including the rulers of the Black and White Sheep Turkomen
+ - New tags across Kurdistan, including three Yazidi nations, mostly guaranteed by the regional powers
+ - Basra independent representing the al-Muntafiq ruling the area, later ruling most of Lower Mesopotamia
+ - Iraq renamed to Baghdad to represent the Qara Qoyunlu dynasty ruling there in rebellion against Jahan Shah, with two events to help stimulate historical outcomes
+ - New Palestine and Transjordan tags as releasable, along side Lebanon and Syria
+ - New Great Projects
+  * Beaune Hospices
+  * Burkhan Khaldun
+  * Canterbury Cathedral
+  * Castle Rock
+  * Cathedral of the Holy Cross
+  * Citadel of Aleppo
+  * Divrigi Great Mosque and Hospital
+  * Diyarbakir Fortress
+  * Erbil Citadel
+  * Gates of Nineveh
+  * Great Mosque of Aleppo
+  * Great Mosque of Kufa
+  * Imam Ali Holy Shrine
+  * Lalish Valley
+  * Painted Churches of Cyprus
+  * Pelourinho
+  * Pont du Gard
+  * Saint Catherine's Monastery
+  * Valley of the Temples
+  * Venetian Arsenal
+  * Umayyad Mosque
+  * York Minster
+ 
+#Bugfixes
+ - Lots of bugfixes, many likely forgotten to be recorded
+ - Fixed numerous bugs with positions
+ - Fixed a bug where NZZ had umbrian as its primary culture
+ - Removed an unconnected core of Transylvania on Temes
+ - Removed occurances with areas with duplicate names/unnamed
+
+#Tweaks and Balance
+ - Cultural set up of the Levant and the Mesopotamia updated 
+ - Religious set up of the Levant and the Mesopotamia updated
+ - Renamed Mashriqi (Arabic Group) to Mesopotamian
+ - Updated (though no new) Trade Nodes and Companies in the Levant and Mesopotamia to correspond to new borders
+ - Renamed Basra to Baghdad and adjusted connections of the trade node
+ - Updated Trade Goods throughout the Levant and Mesopotamia to better represent the local industries and agriculture
+ - Updated, renamed, and new areas added throughout the Levant and Mesopotamia
+ - Updated the terrain set up of the Levant and Mesopotamia to be more accurate
+ - Added Latin Empire tags and some Shattered Europe tags to no longer be revoltable
+
+#Localised Naming
+ - Full naming in the Levant for british.txt (English), french.txt (French), germanic.txt (German), latin.txt (Italian), iberian.txt (Spanish), portugese.txt (Portuguese), brazilian.txt (Brazilian Portuguese), roman.txt (Ancient Latin), turkish_g.txt (Turkish), turko_semitic.txt (Arabic)
+ - Some naming in the Levant for old_egyptian.txt (Ancient Egyptian), phoenician.txt (Phoenician), egyptian_group.txt (Coptic Egyptian), kurdish.txt (Kurdish), aramaic.txt (Aramean), armenian.txt and cilician.txt (Armenian)
+ - Full naming in Mesopotamia for turko_semitic (Arabic), turkish_g.txt (Turkish), kurdish.txt (Kurdish) in Mesopotamia
+ - Some naming in Mesopotamia for turkoman.txt (Turkoman) in Mesopotamia
+ - Near full reorganisation of germanic.txt (German) by Arga and myself
+ - Some new naming in germanic.txt (German) for Russia and Ruthenia (thanks to Fatharitan)
+ - Some naming all over the place for aramaic.txt (thanks to Arga)
+ - Full naming in Southeast and Northeast in british.txt (British English) thanks to Alexious
+ - Some naming all over the place for turko_semitic.txt (Arabic) thanks to Fatharitan
+ - Some naming for somali.txt (Somalian) thanks to Arga
+ - Tonnes more korean_g.txt (Korean) for all over East Asia thanks to Flandre Scarlet
+
+#GFX
+ - New flags for new tags in Mesopotamia
+ - Updated flags for prior Kurdish states, plus the repurposed Baghdad and Basra
+ - Tweaked the interface gfx for Great Projects Tab
+
+
+
+BT14.1.3
+#Bugfixes
+ - Fixed a bug where there was a crash on 1444.11.12 due to a bad on_actions. 
+
+
+
+BT14.1.2
+#Bugfixes
+ - Fixed a bug where the Bavaria formation decision was impossible due to vassals being too large
+ - Fixed a bug with the Jerusalem formable decision
+ - Fixed a bug with the BT pretender.txt file
+ - Fixed a bug with happy Clergy causing unrest
+ - Fixed a bug where some code had accidentally been removed from 00_on_actions.txt
+ 
+#Tweaks and Balance
+ - Removed Carpathian German culture from Tirgoviste and Campulung after further looking at the extent of Germans in Wallachia
+ - Changed the primary tag of Walloon from Hainaut to Liege since Hainaut is not a Picard tag
+ 
+#Localised Naming
+ - Added albanian.txt as a dummy file so that vanilla naming does not overwrite BT illyrian.txt
+ - Added naming in dutch.txt and flemish.txt for Low Countries and North Germany (thanks to gijs)
+ - Updated byzantine.txt with contributions from Andreas Cynicus
+
+
+
+
+BT14.1.1
+#Bugfixes
+ - Fixed a bug with a wrong reference to GAU rather than VOR causing Austria to see the world
+ - Fixed a bug with positions in the US with a port in the wrong province
+ - Fixed a bug with positions in Neumark
+ - Fixed a bug where excess " led to German localisation not functioning correctly
+ 
+#Tweaks and Balance
+ - Updated German Localisation slightly
+ 
+#Localised Naming
+ - Fixed a bug where 5306 was 5309 in byzantine.txt
+
+
+
+BT14.1
+#New Additions
+ - North American 1444 Political set up now updated to the new vanilla tags and tribal territory set up
+ - Tweaked North American province map (no new provinces) to align with rivers what should line with rivers
+ - Updated the North American culture map to add the new cultures and fix a few obvious innacuracies
+ - Added modifiers for the following monuments:
+	* Ishiyama Hongan-ji
+	* Mahabodhi Temple
+	* Meenakshi Temple
+	* Old Summer Palace
+	* Potala Palace
+	* Red Fort
+ - New full German localisation thanks to Malcador!
+ - New event to dynamically add Centres of Trade in the Americas (thanks to Dub)
+
+#Bugfixes
+ - Fixed a bug where there were two "Meductic" in New Brunswick
+ - Fixed a bug where Eluthera (5574) was connected to an unused province
+ - Fixed a bug where Dresden (61) would get Meissen Porcelain instead of Meissen (8276)
+ - Fixed a bug where a Hanseatic mission wanted an old trade_node 
+ - Fixed a bug where Clergy and Burghers were missing a -2 unrest modifier for being angry
+ - Fixed a bug where RHN missed localisation
+ - Fixed a bug where LAO and RHM history files were encoded wrong
+ - Fixed a bug where there were ; instead of # in area.txt
+ - Fixed a bug where BAV couldn't be formed due to vassals being too big
+ - Fixed a bug with apostolic rebels
+ - Fixed a bug where most shattered start tags were unlocalised
+ - Fixed a bug where Jerusalem was not releasable by end-game tags or the Pope (thanks to Dub)
+ - Fixed a bug where YKK is missing localisation
+ - Fixed a vanilla bug with the tooltip IMPERIAL_NO_INCIDENT_TITLE_TOOLTIP
+ - Fixed a bug in dynamic naming for Portuguese and Brazilian cultures due to a stray quotation mark
+ - Fixed a bug with Maine being annexable by Provence as soon as game starts
+ - Fixed a bug with the encoding in 8474
+ - Fixed a bug where East Celebes area was called Makassar despite not owning Makassar
+ - Fixed a bug where Indonesian minors could not complete all trade missions
+ - Fixed a bug with some positions in India and Tasmania
+ - Fixed a bug where reforming Austria did not give the Archduchy reform
+ - Fixed a bug that spammed the error.log related to Aboriginal tags
+
+#Tweaks and Balance
+ - Nerfed the Torre del Oro again
+ - New image for the Ise Grand Shrine added
+ - Tweaked modifiers for Solovetsky Monastery and Pyramids of Meroë
+ - Allowed use of Schonbrünn Castle even if Vienna is not the capital as long as country is still Emperor
+ - Renamed the new "tionontate" (a name from.. AC Valhalla it seems...?) to Eire, one of the dominant western Iroquioan tribes
+ - Tweaked events relating to Austrian Succession (thanks to Pieter / Pbhuh)
+ - Added Austrian as accepted culture for PSS
+ - Added Romansch as accepted culture for GHB
+ - Added Bavarian as accepted culture for TIR
+ - Renamed CND from "Candar" to "Jandar" after discussion with VLinderman and Chrys
+ - Tweaked a tonne of positions in the Low Countries
+ - Tweaked hydraulic rights modifiers to match BT changes in terrain balance
+ - Tweaked the cost for centralising state, please do respond about balance thoughts here
+ - Tweaked a few defines that had not been adjusted for development doubling
+ - Updated an issue with the descriptors
+ - Tweaked the river flowing to the sea in Ayasoluk
+ - Tweaked some of the terrain around the Carpathians to include a few mountains and more hills.
+
+#Localised Naming
+ - Added full naming in germanic.txt, west_slavic.txt (Polish), east_slavic.txt (Russian), ruthenian.txt (Ukrainian) and lithuanian.txt for Ruthenia
+ - Added full naming in latin.txt (Italian) for Anatolia (thanks to Alexious and Fatharitan)
+ - Added full naming in east_slavic.txt (Russian) for Russia, Urals, Pontic Steppe and Caucasia (thanks to Alexious)
+ - Added full naming in germanic.txt (German) for all of historic German Empire borders (thanks to Arga)
+ - Removed broken "š" character from a number of files
+ - Donauwörth is now called Donauwörth for Donauwörth. Donauwörception
+ - Added a French name for Corycus province which Cyprus owns at the start date
+ - Added naming in west_slavic.txt (Polish) for Carpathia so it is now 100% complete (thanks to McLurr)
+ - Added lots of naming in korean_g.txt in multiple regions (thanks to Flandre Scarlet)
+ - Added naming in germanic.txt for Britain, Ireland and Central America (thanks to Arga)
+ - Added naming in east_slavic.txt (Russian) for Balkans and Anatolia make(thanks to Arga)
+ - Added naming in byelorussian.txt in multiple regions (thanks to Fatharitan)
+ - Added some naming in SWI.txt (thanks to Arga)
+ - Added the Armenian naming to armenian.txt (previously just in cilician.txt)
+ - Fixed an incorrect ID for Russian Australia
+ - Tweaked a few names in a few files for a few provinces in the Pontic Steppe
+ - Tweaked a few names in carpathian.txt (Hungarian) in Carpathia and the Balkans
+ 
+#GFX
+ - Updated flags of ARM, CIL, EFR, KUR, LIT, POL, TRE
+ 
+
+
+BT14.0.7
+
+#New Additions
+ - Added modifiers for the following monuments:
+	* Lighthouse of Alexandria
+	* Meroe Pyramids
+	* Teotihuacan
+	* Walled City of Shibam
+
+#Bugfixes
+ - ** FIXED BOTH CRASHES ** (thanks to all those who have helped to work out what it was, in particular Dub)
+ - Fixed adjacencies to non-existing provinces that could cause crashes when natives migrate (fixed date crash)
+ - Fixed positions in SEA that could cause crashes when hovering nearby after ships built (hover region crash)
+ - Fixed a bug where the Torre del Oro was hella overpowered
+ - Fixed a bug with the gc_ara_italy mission (thanks to Dub)
+ 
+#Tweaks and Balance
+ - Tweaked the culture requirements for the Pyramid of Cheops
+ - Tweaked national idea requirements so that tags in Cascadia/Alaska/California get Northwestern Native Ideas (thanks to Dub)
+ 
+#Localised Naming
+ - Added a tonne of naming to british.txt (British English) for the Deccan and Western India
+ - Added some naming in czech.txt to overwrite west_slavic.txt  
+ - Added full naming in germanic.txt, west_slavic.txt, czech.txt and slovak.txt for the three Silesia areas
+ - Tweaked some naming in hawaiian.txt
+ - Added some naming in armenian.txt and cilician.txt for Caucasia and Mesopotamia (Forgot to put in Armenian, will for next update)
+
+
+
+BT14.0.6
+
+#New Additions
+ - Added modifiers for the following monuments:
+	* Santiago de Compostela Cathedral
+	* Segovia Alcazar
+	* Mosque-Cathedral of Córdoba
+	* Torre del Oro
+	* Mont-Saint-Michel
+	* Palace of the Popes
+	* Aula Palatina
+	* Herrenhausen Gardens
+	* Sanssouci
+	* Schönbrunn Palace
+	* Solovetsky Monastery
+	* Saint Basil's Cathedral
+ - Added IST tag for Istrian culture, representing the March of Istria (thanks to Donlad)
+ - Added Istrian and Forlivesi ideas (thanks to Donlad)
+ - Added Aquelian ideas (designed by 6yo, updated by Donlad)
+ - Begun the process of adding new tags from Vanilla to North America (Roughly finished Alaska, Canada and New England)
+ - Begun the process of adding Tribal territories to North America (Roughly finished Alaska, Canada and New England)
+
+#Bugfixes
+ - Fixed a bug where two pixels existed for Oahu near Fiji
+ - Fixed a small bug in the Polish mission tree
+ - Fixed a bug with adjacencies in Hawaii
+ - Removed stray references to MST
+ - Fixed a bug in gc_cas_spa_expel_moriscos with province highlighting (thanks to Dub)
+ - Fixed issues in khmer_empire_nation (thanks to Dub)
+ - Fixed some issues in MND_Khmer_Missions (thanks to Dub)
+ - Readded BT Siamese and Cambodian missions which has accidentally been removed in a previous version (thanks to Dub)
+ - Fixed a bug where forming Siam led to getting generic missions (thanks to Dub)
+ - Fixed missing Siebenburger flag
+ - Fixed a bug with Nancy's positions
+ - Fixed a bug with VIL, LAI, VNL, HAW, MAU, OAH and KAA not having correct primary cultures
+ - Coptic culture can now *actually* use the Pyramid of Cheops
+ - Fixed a bug where new graphicalculturetypes were not added to any culture in BT
+
+#Tweaks and Balance
+ - Hopefully allowed Reformed and Protestantism to have 5 CoR as was previously intended
+ - Nerfed a few BT monuments
+ - Removed Lincoln Cathedral, will be replaced with two other monuments later on
+ - Updated Unite The Celts decision as to not spam the screen with the decision (thanks to Hadiros)
+ - Update adjective for FRL (thanks to Donlad)
+ - Updated parliament names for FRL, IST and JER (thanks to Donlad)
+ - Added IST cores to Istria
+ - Unique dynasty names for Istrian (thanks to Donlad)
+ - Mount Athos & Ecumenical Patriarch modifiers are no longer present if Leviathan is installed, as the modifiers are now given to monuments (thanks to Dub)
+ - Institutions that had tech-group-specific spread added to them by Draiocht now also take aboriginal & polynesian tech groups into account, both following South American old 250% tech penalty (thanks to Dub)
+ - Changed Tenerife's base capital to "Anazo", rather than just "Tenerife"
+
+#Localised Naming
+ - Added a tonne of naming in germanic.txt for all around the world (Thanks to Arga)
+ - Added a tonne of naming in korean_g.txt for all around the world (Thanks to Flandre Scarlet)
+ - Added a tonne of naming in west_slavic.txt (Polish) for North Germany (thanks to Heinith)
+ - Added a tonne of naming in berber_group.txt for the Maghreb and neighbouring regions (Thanks to Arga)
+ - Added a tonne of naming in east_slavic.txt (Russian) for North Germany, South Germany, Poland and Carpathia (Thanks to Fatharitan)
+ - Added a tonne of naming to iberian.txt (Castillian Spanish) for Alaska and Polynesia (Thanks to Alexious)
+ - Added a tonne of naming to british.txt (British English) for the Deccan and Coromandel
+ - Added a berber.txt dummy file so that Zenati used berber_group.txt naming
+
+
+
+BT14.0.5
+
+#New Additions
+ - Now *officially* updated to 1.32.2. All I had to do was tweak two lines
+ - New ideas for DUR, GZR and GRN  (thanks to Donlad)
+
+#Bugfixes
+ - *Fixed a crash from looking at second tier north_american units* (thanks to Bluehunter for working out the issue, and neo for fixing it)
+ - *Fixed a bug where BT was still using the old Papal interractions*
+ - Fixed a bug where a Norwegian province is called "Andorra" to Iberians
+ - Fixed a bug where multiple Australian provinces had bad/lacking nudges
+ - Added a (aka two) missing file(s) needed for demand unlawful territory tweaks to take effect
+ - Fixed a bug where MKL did not get its new ideas
+ - Fixed WMC_idea_3
+ - Fixed a bug where AVR was a subject of another tag, yet did not exist on map
+ - Fixed a vanilla bug with concentrate development (ask Dub, I have no clue here)
+ - Fixed a bug where the statue_in_restraint_of_appeals decision appears twice
+ - Fixed a bug where ANJ had "Provencal Ideas"
+ - Fixed a bug where PROV5050 had a small exclave
+ - Cleaned a few error.log entries
+
+#Tweaks and Balance
+ - Updated form_kingdom_of_prussia decision to be able to convert a markish province to prussian culture
+ - Updated ruler names for DUR (thanks to Donlad)
+ - Added a Parliament name for DUR and GZR (thanks to Donlad)
+ - STR now gets Mecklenburg ideas
+ - Tweaked localisation of ideas added in BT14.0.4
+ - Changed tag's CEL and TNA back to "Celtica" and "Gaelica"
+ 
+#Localised Naming
+ - Added naming in east_slavic.txt for Poland, Madagascar, Sri Lanka, Alaska, Cascadia, Mexico, Persia, Khorasan, Central Asia, Mongolia and Manchuria (thanks to Fatharitan)
+ - Added naming in germanic.txt for Poland, Ruthenia, Russia, Pontic Steppe, Urals, West Siberia, Central Asia and Mongolia (thanks to Fatharitan)
+ - Changed province name in germanic.txt of 1952 to "Nordmarmarosch"
+ - Moved central_thai.txt naming into thai_group.txt, with tai.txt and northern_thai.txt overwriting this.
+ - Added naming in thai_group.txt for Indochina, South China, Xinan, Northeast, Southeast, Cascadia and California (thanks to Davadius)
+ - Added naming in latin.txt for the Congo (thanks to Fatharitan)
+ - Added naming in korean_g.txt for Cascadia, California, Korea, Manchuria and Philippines (thanks to Flandre Scarlet)
+ - Added naming in lao.txt for Indochina (thanks to Davadius)
+ - Added lots of naming throughout North America to iberian.txt, bringing it inline with new provinces (thanks to Alexious)
+
+
+
+BT14.0.4
+
+#New Additions
+ - New Siebenburger tag for Carpathian Culture revolter (thanks to Donlad)
+ - New ideas for MKL, SBG, CUM, SZE, JER and WMC (thanks to Donlad)
+ - New and updated personal names for Syriac (thanks to Donlad)
+
+#Bugfixes
+ - Fixed Consecrate Metropolitan tooltip to now correctly state a requirement of 60 development
+ - Fixed a bug where zelandia_nation required capital to be in Australia, not Polynesia/New Zealand
+ - Fixed are_legend_of_the_true_cross missing localisation
+
+#Tweaks and Balance
+ - Adjusted 00_religion.txt for catholic to be in line with vanilla changes
+ - Updated Swabia formation
+ - Nerfed vanilla's Religious Culture privilage for Clergy
+ - Added a Parliament name for WMC and BOH (thanks to Donlad)
+ - Updated ruler names for CUM, USA, SBG and JER (thanks to Donlad)
+ - Made SBG the primary tag of carpathian culture
+ - Updated some rules surrounding Unlawful Territory (thanks to schockochan)
+ - Updated abolish_slavery_act to hopefully make it more historic (thanks to schockochan)
+ - Halved penalty from heretic princes due to increase in number of princes
+ - Pyramids of Cheops should work for Coptic culture now
+
+
+
+BT14.0.3
+
+#New Additions
+ - Added modifiers to the following monuments:
+	* Aachen Cathedral
+	* Lapa Arches
+	* Leaning Tower of Pisa
+
+#Bugfixes
+ - Fixed potential bugs with the new monument adding system
+ - Fixed unused provinces being in Middle Silesia
+ - Fixed being unable to upgrade to Early Frigates
+ - Fixed a bug where NEO was unlocalised
+ - Fixed a bug where a Hungarian event fires literally every two months 
+ - Removed the Tribal Development Growth malus from army tradition because vanilla can't make up its mind
+ - Corrected some internal scripting errors
+ - Localized Scania, finally
+ - Gave province 8401 (Leer/Lier) the port it deserves
+ - Fixed Saxe-Wittenburg having a national idea identity crisis when uniting itself into the big beautiful Saxony the world needs
+ - Fixed many broken positions in Canada, Germany, and Australia
+ - Fixed a broken vanilla event
+ - Fixed Courthouse buildings getting yeeted
+ - Added localization that Paradox somehow forgot for a wargoal 
+ 
+#Tweaks and Balance
+ - Removed the Sultan Ahmed Mosque at the start date; the monument now is added after the Ottomans take the "Make Constantinople Capital" decision.
+ - Changed Giessen's capital to Gießen
+ - Changed the Colosseum monument to now give Cavalry Combat Ability in addition to the existing Army Morale bonus at tier 3
+ - Adjusted some concentrate development defines to fit with BT's dev doubling
+ - Nerfed the Globe Theatre monument's modifiers
+ - Moved Mount Olympus to province 147 (Thessaly)
+ - New image for the Torre del Oro monument
+ 
+#Localised Naming
+ - Added a dummy file for aragonese.txt
+ - Changed korean.txt to a dummy file, and moved names to korean_g.txt for futureproofing
+ - Overwritten swedish.txt with changes and contributions from Dub
+ - Updated naming in east_slavic.txt for Baltic, through suggestions by Fatharitan
+ - Added city name of Lower Navarre for French and Basque
+ - Added two names for Tatars in the Pontic Steppe, courtesy of Arga and Nugs
+ - Added naming in carpathian.txt for literallyall over the world, primarily in Balkans and Italy
+ - Added naming in germanic.txt for the Bahamas, courtesy of Arga
+ - Added naming in east_slavic.txt for Anatolia, Mongolia and Australia, courtesy of Fatharitan
+ - Added naming in danish.txt for Scandinavia, courtesy of Papa Putin
+ - Added naming in thai_group.txt for Vietnam and China, courtesy of Davadius
+ - Added naming in korean.txt, courtesy of Flandre Scarlet
+ - Added naming in basque.txt
+ - Added naming for 267 (Plzen) in czech.txt
+ 
+
+
+BT14.0.2
+
+#Bugfixes
+ - **Fixed a bug where the mission "Prepare Reconquista" granted permaclaims on every province**
+ - Fixed "Saxe-Wittenberg" incorrectly being named "Saxe-Wittenburg"
+ 
+#Tweaks and Balance
+ - Changed numerous adjectives for tag in the HRE
+
+#Localised Naming
+ - Added a dummy file for LUX.txt
+ - Added a large amount of historical and ahistoric naming in british.txt
+ - Added localised naming for Galician in Iberia, the rest of the world will use Portuguese for now
+ - Added lots of localised naming for illyrian.txt
+
+
+
+
+BT14.0.1
+
+#New Additions
+ - Added a new event for spawning Pompeii! This event will not fire for in-progress save games that have the Pompeii monument already, and in-progress save games will still be able to upgrade Pompeii.
+
+#Bugfixes 
+ - Fixed a bug where Middle Saxony area had a deleted province
+ - Fixed a bug where Peleponnese area had infinite provinces
+ - Fixed a bug where a Bavarian mission wanted a random Indonesian province
+ - Fixed a vanilla bug where a new localisation used horrific grammar
+ - Fixed a bug where ETH does not start with their new government type
+ - Fixed a bug where BEG does not having Silesian ideas like all other Silesian duchies have
+ - Fixed a bug where a strait between 100 and 97 still existed
+ - Fixed a bug where OSM still had deprecated westphalian as primary culture
+ - Fixed a bug where new vanilla OGD did not control 1207 and 2779
+ - Fixed a bug where new vanilla TOG did not control 1989
+ - Fixed a bug where cloves did not have a manufactory
+ - Fixed a bug where BT still contained now-deleted Indochinese mission files
+ - Fixed an absolute shit tonne of positions in North America, Oceania, Carpathia and the Balkans
+
+#Tweaks and Balance
+ - Moved Centre of Trade from 5156 to 5153 in Anatolia
+ - Allowed Hainaut and Brabant to now form Belgium
+ - Stopped Stonehenge from being able to be moved
+ - Stopped Rhineland formable swapping ideas and missions to generic
+ - Pompeii no longer gives bonuses to hostile attrition
+ - Gave SPY and BAD franconian accepted culture
+ - Gave MBZ swiss accepted culture
+ - Gave BRG dutch accepted culture
+ - Gave KLE lower_saxon accepted culture
+ - Changed KLE primary culture to dutch
+ - Changed HEL primary culture to franconian
+ - Changed MTZ and VDN primary culture to lorraine_culture
+ - Changed BGM adjective to Bergamasque, from Bergaman
+ - Changed HSA adjective to Lubecker, from Hanseatic
+ - Removed special characters from numerous tags to standardise country naming in English
+ - Added bt_trade_good_books to state_house
+ - Added bt_trade_good_fruit, bt_trade_good_beer, bt_trade_good_apiculture to soldier_households
+ - Removed latent_trade_goods coal from 4308
+ - Gave FLD imperial_abbey_reform
+ - Changed WOR_adj to Wormser
+ 
+#Localised Naming
+ - Changed the germanic name of 94 from Arelerland to Arel to conform with other dynamic names for the province
+ - Gave 7855 an eszett in germanic.txt
+ - Gave 8171 a localised name in turkish_g.txt
+ - Changed 8184 in turkish_g.txt so that it no longer refers to deprecated "Esztergom"

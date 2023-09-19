@@ -1,0 +1,62 @@
+
+#Dusun
+
+culture = kutainese
+religion = hinduism
+capital = "Lasan"
+trade_goods = unknown
+hre = no
+base_tax = 1
+base_production = 1
+base_manpower = 1
+native_size = 10
+native_ferocity = 9
+native_hostileness = 5
+
+1444.1.1 = { discovered_by = ATJ }
+1444.1.1 = { discovered_by = MAJ }
+1444.1.1 = { discovered_by = MKS }
+1444.1.1 = { discovered_by = BLI }
+1444.1.1 = { discovered_by = BAN }
+1444.1.1 = { discovered_by = BEI }
+1444.1.1 = { discovered_by = BLM }
+1444.1.1 = { discovered_by = BTN }
+1444.1.1 = { discovered_by = CRB }
+1444.1.1 = { discovered_by = DMK }
+1444.1.1 = { discovered_by = PGR }
+1444.1.1 = { discovered_by = PLB }
+1444.1.1 = { discovered_by = PSA }
+1444.1.1 = { discovered_by = SAK }
+1444.1.1 = { discovered_by = SUN }
+1444.1.1 = { discovered_by = KUT }
+1444.1.1 = { discovered_by = BNJ }
+1444.1.1 = { discovered_by = LFA }
+1444.1.1 = { discovered_by = LNO }
+1444.1.1 = { discovered_by = LUW }
+1444.1.1 = { discovered_by = MGD }
+1444.1.1 = { discovered_by = TER }
+1444.1.1 = { discovered_by = TID }
+#New
+1444.1.1 = { discovered_by = SKD }
+1444.1.1 = { discovered_by = LDA }
+1444.1.1 = { discovered_by = BEU }
+1444.1.1 = { discovered_by = SPP }
+1444.1.1 = { discovered_by = WJO }
+1444.1.1 = { discovered_by = BNE }
+1444.1.1 = { discovered_by = BMA }
+1444.1.1 = { discovered_by = SBW }
+1444.1.1 = { discovered_by = SPR }
+1444.1.1 = { discovered_by = BLI }
+1444.1.1 = { discovered_by = GLU }
+1444.1.1 = { discovered_by = JMB }
+1444.1.1 = { discovered_by = IDG }
+1444.1.1 = { discovered_by = IDP }
+1444.1.1 = { discovered_by = ARU }
+1444.1.1 = { discovered_by = BRS }
+1444.1.1 = { discovered_by = ATJ }
+1444.1.1 = { discovered_by = PAH }
+1444.1.1 = { discovered_by = KEL }
+1444.1.1 = { discovered_by = IFG }
+1444.1.1 = { discovered_by = DPT }
+
+1521.1.1 = { discovered_by = POR }

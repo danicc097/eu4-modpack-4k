@@ -1,0 +1,17 @@
+# No previous file for Beyond Typus province
+owner = ISL
+controller = ISL
+add_core = ISL
+culture = keres
+religion = totemism 
+capital = "Tamaiya" 			#Arawageeki is modern Albuquerque, apparently
+trade_goods = unknown
+hre = no 
+is_city = yes
+base_tax = 1 
+base_production = 1 
+base_manpower = 1 
+
+discovered_by = north_american
+
+

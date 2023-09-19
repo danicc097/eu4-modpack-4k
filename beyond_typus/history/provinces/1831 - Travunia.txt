@@ -1,0 +1,31 @@
+ 
+#1831 - Travunia
+
+owner = HRZ
+controller = HRZ
+culture = serbian
+religion = orthodox
+capital = "Onogost"
+trade_goods = bt_trade_good_beer
+hre = no
+base_tax = 1 
+base_production = 1 
+base_manpower = 1 
+is_city = yes
+add_core = HRZ
+
+1444.1.1 = { discovered_by = KAZ }
+1444.1.1 = { discovered_by = CRI }
+1444.1.1 = { discovered_by = GOL }
+1444.1.1 = { discovered_by = AST }
+1444.1.1 = { discovered_by = QAS }
+discovered_by = western
+discovered_by = eastern
+discovered_by = muslim
+discovered_by = ottoman
+
+1521.1.1 = {
+	owner = TUR
+	controller = TUR
+	add_core = TUR
+}

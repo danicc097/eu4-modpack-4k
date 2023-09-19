@@ -1,0 +1,125 @@
+vassal = {
+	first = KAR
+	second = ALI
+	start_date = 1444.1.1
+	end_date = 1471.1.1
+}
+
+#Going to try Paradox's way. Independent Ayyubids
+#vassal = {
+#	first = MAM
+#	second = HSN
+#	start_date = 1444.1.1
+#	end_date = 1461.12.31
+#}	#From start date until rise of Aq Qoyunlu
+
+vassal = {
+	first = MAM
+	second = HWA # changed from HAW
+	start_date = 1444.1.1
+	end_date = 1517.1.1
+}
+
+vassal = {
+	first = MAM
+	second = BEJ
+	start_date = 1444.1.1
+	end_date = 1517.1.1
+}
+vassal = {
+	first = MAM
+	second = KIL
+	start_date = 1444.1.1
+	end_date = 1516.8.24		#(JP) Battle of Marj Dabiq led to the fall of the Levant to the Ottomans. Can no find direct date when Kilis flipped
+}
+vassal = {
+	first = TUR
+	second = KIL
+	start_date = 1516.8.24
+	end_date = 1610.1.1			#(JP) Ottomans sent an army to settle conflict between the Sheikhs of Kilis and local Pasha based in Aleppo. Last Sheikh went on a rampage in return of the death of his uncle at the hands of this Pasha.
+}
+vassal = {
+	first = MOR
+	second = DBD
+	start_date = 1444.1.1
+	end_date = 1563.12.31
+}
+
+dependency = {
+	subject_type = tributary_state	#(JP) Switched from vassal to Guarantee
+	first = QAR
+	second = BHT
+	start_date = 1435.1.1
+	end_date = 1469.2.4
+}
+
+dependency = {
+	subject_type = tributary_state
+	first = QAR
+	second = SIN
+	start_date = 1435.1.1
+	end_date = 1469.2.4
+}
+
+dependency = {
+	subject_type = tributary_state
+	first = QAR
+	second = HAK
+	start_date = 1435.1.1
+	end_date = 1469.2.4
+}
+
+dependency = {
+	subject_type = tributary_state
+	first = QAR
+	second = BDI
+	start_date = 1435.1.1
+	end_date = 1469.2.4
+}
+
+dependency = {
+	subject_type = tributary_state
+	first = QAR
+	second = SRN
+	start_date = 1435.1.1
+	end_date = 1469.2.4
+}
+
+dependency = {
+	subject_type = tributary_state
+	first = QAR
+	second = MHM
+	start_date = 1435.1.1
+	end_date = 1469.2.4
+}
+
+dependency = {
+	subject_type = tributary_state
+	first = AKK
+	second = EGL
+	start_date = 1435.1.1
+	end_date = 1503.1.1
+}
+
+dependency = {
+	subject_type = tributary_state
+	first = AKK
+	second = BIN
+	start_date = 1435.1.1
+	end_date = 1503.1.1
+}
+
+dependency = {
+	subject_type = tributary_state
+	first = AKK
+	second = ZIR
+	start_date = 1435.1.1
+	end_date = 1503.1.1
+}
+
+vassal = {
+	first = QAR
+	second = IRQ
+	start_date = 1433.4.9
+	end_date = 1445.3.8
+}

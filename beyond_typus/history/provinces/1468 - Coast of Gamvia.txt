@@ -1,0 +1,14 @@
+1444.1.1 = { discovered_by = MAL }
+1444.1.1 = { discovered_by = SOF }
+1444.1.1 = { discovered_by = ASH }
+1444.1.1 = { discovered_by = SON }
+1444.1.1 = { discovered_by = HAU }
+1444.1.1 = { discovered_by = KBO }
+1444.1.1 = { discovered_by = OYO }
+1444.1.1 = { discovered_by = BEN }
+1444.1.1 = { discovered_by = JOL }
+
+
+1462.1.1 = { discovered_by = POR } 
+1529.6.1 = { discovered_by = FRA } # Parmentier Brothers
+

@@ -1,0 +1,10 @@
+discovered_by = north_american
+1444.1.1 = { discovered_by = CRE }
+1444.1.1 = { discovered_by = CHE }
+
+
+
+
+1521.1.1 = { discovered_by = SPA } # Lucas Vásquez de Ayllón
+1526.1.1 = { discovered_by = FRA }
+
