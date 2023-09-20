@@ -1,5 +1,5 @@
 From;To;Type;Through;start_x;start_y;stop_x;stop_y;Comment
-7766;12;sea;1258;-1;-1;-1;-1;Skåne-Sjaelland
+7766;12;sea;1258;-1;-1;-1;-1;Skï¿½ne-Sjaelland
 7768;14;sea;5494;-1;-1;-1;-1;Sjaelland-Fyn
 14;4142;sea;5494;-1;-1;-1;-1;Fyn-Aarhus
 14;4149;sea;5494;-1;-1;-1;-1;Fyn-Kolding
@@ -9,8 +9,8 @@ From;To;Type;Through;start_x;start_y;stop_x;stop_y;Comment
 123;124;sea;1307;-1;-1;-1;-1;Calabria-Messina
 151;316;sea;1320;-1;-1;-1;-1;Thrace-Bithynia
 911;945;sea;1662;-1;-1;-1;-1;Menominee-Michigan
-1;1930;sea;1928;-1;-1;-1;-1;Stockholm-Åland
-1930;27;sea;1928;-1;-1;-1;-1;Åland-Finland
+1;1930;sea;1928;-1;-1;-1;-1;Stockholm-ï¿½land
+1930;27;sea;1928;-1;-1;-1;-1;ï¿½land-Finland
 4110;369;sea;1299;-1;-1;-1;-1;Sutherland-Orkney
 96;8112;sea;1269;-1;-1;-1;-1;Zeeland-Rotterdam
 96;95;sea;1269;-1;-1;-1;-1;Zeeland-Breda
@@ -20,7 +20,7 @@ From;To;Type;Through;start_x;start_y;stop_x;stop_y;Comment
 4186;1825;sea;1390;-1;-1;-1;-1;Aki-Iyo
 2159;666;sea;1370;-1;-1;-1;-1;Jiangmen-Hainan
 3231;7857;sea;1926;-1;-1;-1;-1;Haapsalu-Hiiumaa
-35;3227;sea;1256;-1;-1;-1;-1;Ösel-Piltene
+35;3227;sea;1256;-1;-1;-1;-1;ï¿½sel-Piltene
 597;620;sea;1361;-1;-1;-1;-1;Johor-Siak
 5048;982;sea;1491;-1;-1;-1;-1;Esgigeoag-Unamakik
 4891;983;sea;1491;-1;-1;-1;-1;Segepenegatig-Epekwitk
@@ -58,8 +58,8 @@ From;To;Type;Through;start_x;start_y;stop_x;stop_y;Comment
 2999;5249;sea;1334;-1;-1;-1;-1;Hormuz-Khasab
 4351;4352;sea;1397;-1;-1;-1;-1;Buglas-Cebu
 7194;7195;sea;1322;-1;-1;-1;-1;Kinburn-Ochakiv
-35;7857;sea;1926;-1;-1;-1;-1;Hiiumaa-Ösel
-3231;35;sea;1256;-1;-1;-1;-1;Haapsalu-Ösel
+35;7857;sea;1926;-1;-1;-1;-1;Hiiumaa-ï¿½sel
+3231;35;sea;1256;-1;-1;-1;-1;Haapsalu-ï¿½sel
 4363;4364;sea;1283;-1;-1;-1;-1;Argyll-Inner Hebrides
 8155;4364;sea;1283;-1;-1;-1;-1;Locahber-Inner Hebrides
 3137;4364;sea;1283;-1;-1;-1;-1;Ross-Inner Hebrides
@@ -196,4 +196,5 @@ From;To;Type;Through;start_x;start_y;stop_x;stop_y;Comment
 4141;8297;sea;1268;-1;-1;-1;-1;Dithmarschen-Hadeln
 8299;8298;sea;1268;-1;-1;-1;-1;Jever-Wursten
 1931;4382;sea;1268;-1;-1;-1;-1;Emsgau-Ommelanden
+1751;226;sea;1293;-1;-1;-1;-1;Ceuta-Gibraltar
 -1;-1;;-1;-1;-1;-1;-1;-1;
