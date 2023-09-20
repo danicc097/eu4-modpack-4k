@@ -1,6 +1,6 @@
 country_decisions = {
 
-#Moving the 1001 different files into this one, mostly for my sanity, easier ctrl-f, and because I'm slowly overhauling them all anyway to a hopefully more dynamic system with fewer assumptions, limitations, and more dynamic possibilities. Playing checkers to get that one required province to form a country 
+#Moving the 1001 different files into this one, mostly for my sanity, easier ctrl-f, and because I'm slowly overhauling them all anyway to a hopefully more dynamic system with fewer assumptions, limitations, and more dynamic possibilities. Playing checkers to get that one required province to form a country
 #really isn't the point, I think, so in general I'm moving away from specific provinces requirments and moving towards percentage of the provinces in the general area.
 #Note that, as a general rule, I'm removing religion requirements, most capital switching, most non-specific culture flipping, most government type switching, and most anything else that limits the decision to a certain historical path. With the current system of primary tags and cultures,
 #Everything is far too linked with culture for some of this clutter, and I don't want to establish a precedent of making a new, different religion or differnt gov type versions for every tag in the game. If people want a new capital, they can set it themselves, if people want to change culture, unless
@@ -74,7 +74,7 @@ country_decisions = {
 			is_at_war = no
 			is_free_or_tributary_trigger = yes
 			is_nomad = no
-			owns_core_province = 338			# Algiers´
+			owns_core_province = 338			# Algiersï¿½
 			num_of_owned_provinces_with = {
 				is_core = ROOT
 				OR = {
@@ -230,8 +230,8 @@ country_decisions = {
 		effect = {
 			hidden_effect = {
 				if = {
-					limit = { 
-						tag = MOR 
+					limit = {
+						tag = MOR
 						has_dlc = "Golden Century"
 					}
 					complete_mission = gra_overcome_internal_strife
@@ -239,8 +239,8 @@ country_decisions = {
 			}
 			hidden_effect = {
 				if = {
-					limit = { 
-						tag = MOR 
+					limit = {
+						tag = MOR
 						has_dlc = "Golden Century"
 					}
 					complete_mission = gra_friends_in_high_places
@@ -371,7 +371,7 @@ country_decisions = {
 		}
 		ai_importance = 400 #
 	}
-	
+
 ###################################################################################################
 ################################			Arabia			 ##############################################
 ###################################################################################################
@@ -471,7 +471,7 @@ country_decisions = {
 			is_nomad = no
 			#religion_group = christian
 			owns_core_province = 419			#Yerivan
-			owns_core_province = 3254			#Ararat 
+			owns_core_province = 3254			#Ararat
 			num_of_owned_provinces_with = {
 				is_core = ROOT
 				OR = {
@@ -686,7 +686,7 @@ country_decisions = {
 			65 = { add_base_tax = 2 }
 			set_country_flag = formed_bavaria_flag
 			if = {
-				limit = { 
+				limit = {
 					has_custom_ideas = no
 					NOT = { has_idea_group = BAV_ideas }
 				}
@@ -761,7 +761,7 @@ country_decisions = {
 					limit = { tag = SCO }
 					complete_mission = eng_mighty_army
 					complete_mission = conquer_scotland
-				}	
+				}
 			}
 			hidden_effect = {
 				if = {
@@ -769,7 +769,7 @@ country_decisions = {
 					complete_mission = eng_mighty_army
 					complete_mission = conquer_scotland
 					complete_mission = conquer_ireland
-				}	
+				}
 			}
 			change_tag = GBR
 			swap_non_generic_missions = yes
@@ -821,7 +821,7 @@ country_decisions = {
 		}
 		ai_importance = 400
 	}
-	
+
 ###################################################################################################
 ################################		Britain (diplomatic)		 ##############################################
 ###################################################################################################
@@ -872,8 +872,8 @@ country_decisions = {
 			every_subject_country = {
 				limit = {
 					ai = yes
-					capital_scope = { 
-						region = british_isles_region 
+					capital_scope = {
+						region = british_isles_region
 						NOT = { province_id = 4365 } #Excluding Mann
 					}
 					OR = {
@@ -897,7 +897,7 @@ country_decisions = {
 					complete_mission = eng_mighty_army
 					complete_mission = conquer_scotland
 					complete_mission = eng_rb_war_of_roses
-				}	
+				}
 			}
 			change_tag = GBR
 			swap_non_generic_missions = yes
@@ -951,7 +951,7 @@ country_decisions = {
 		do_not_integrate = SCO
 		do_not_integrate = WLS
 	}
-	
+
 ###################################################################################################
 ################################			Croatia			 ##############################################			#Note needs work
 ###################################################################################################
@@ -1061,7 +1061,7 @@ country_decisions = {
 		}
 		ai_importance = 400
 	}
-	
+
 ###################################################################################################
 ################################			England			 ##############################################
 ###################################################################################################
@@ -1401,7 +1401,7 @@ country_decisions = {
 			}
 
 			swap_non_generic_missions = yes
-			
+
 			if = {
 				limit = {
 					is_playing_custom_nation = no
@@ -1487,7 +1487,7 @@ country_decisions = {
 			}
 			if = {
 				limit = {
-					NOT = { has_idea_group = greek_ideas } 
+					NOT = { has_idea_group = greek_ideas }
 				}
 				swap_ideas = yes
 			}
@@ -1539,7 +1539,7 @@ country_decisions = {
 				ai = no
 				AND = {
 					ai = yes
-					num_of_cities = 3	
+					num_of_cities = 3
 				}
 			}
 		}
@@ -1664,9 +1664,9 @@ country_decisions = {
 			}
 			change_tag = HAN
 			restore_country_name_effect = yes
-			1758 = { 
-				add_base_tax = 1 
-				add_base_production = 1 
+			1758 = {
+				add_base_tax = 1
+				add_base_production = 1
 			}
 			add_country_modifier = {
 				name = "centralization_modifier"
@@ -1766,7 +1766,7 @@ country_decisions = {
 					if = {
 						limit = { ROOT = { tag = SWE } }
 						set_province_flag = swedish_core
-					}					
+					}
 				}
 			}
 			change_tag = ICE
@@ -1778,22 +1778,22 @@ country_decisions = {
 							has_province_flag = norwegian_core
 						}
 						add_core = NOR
-						clr_province_flag = norwegian_core					
+						clr_province_flag = norwegian_core
 					}
 					if = {
 						limit = {
 							has_province_flag = danish_core
 						}
 						add_core = DAN
-						clr_province_flag = danish_core					
+						clr_province_flag = danish_core
 					}
 					if = {
 						limit = {
 							has_province_flag = swedish_core
 						}
 						add_core = SWE
-						clr_province_flag = swedish_core					
-					}					
+						clr_province_flag = swedish_core
+					}
 				}
 			}
 			add_country_modifier = {
@@ -1813,7 +1813,7 @@ country_decisions = {
 		}
 		ai_importance = 400 #
 	}
-	
+
 ###################################################################################################
 ################################			Ireland			 ##############################################
 ###################################################################################################
@@ -2174,7 +2174,7 @@ country_decisions = {
 			factor = 0
 		}
 	}
-	
+
 ###################################################################################################
 ################################			Morocco			 ##############################################
 ###################################################################################################
@@ -2558,7 +2558,7 @@ country_decisions = {
 			bt_generic_can_form_potential_check = yes
 			bt_hre_stem_duchy_check = yes			#prevents lateral progression. Must not be or have been a stem duchy already
 			NOT = { has_country_flag = bt_formed_stem_duchy } 			#prevents lateral progression. All Stem Duchies should give this and check for this.
-			NOT = { has_country_flag = formed_pomerania_flag_btp } 
+			NOT = { has_country_flag = formed_pomerania_flag_btp }
 			NOT = { num_of_cities = 30 }	#With more than 30 cities, tag should be aiming to form Prussia or Germany
 			OR = {
 				#Tags which we want to see the decision by default
@@ -2584,7 +2584,7 @@ country_decisions = {
 			}
 		}
 		provinces_to_highlight = {
-			OR = { 
+			OR = {
 				area = vorpommern_area
 				area = hinter_pommern_area
 			}
@@ -2594,10 +2594,10 @@ country_decisions = {
 			}
 		}
 		allow = {
-			NOT = { exists = POM } 
-			is_at_war = no 
-			is_free_or_tributary_trigger = yes 
-			is_nomad = no 
+			NOT = { exists = POM }
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
 			OR = {
 				custom_trigger_tooltip = {
 					tooltip = bt_sole_pomeranian_duchy_tooltip
@@ -2734,7 +2734,7 @@ country_decisions = {
 		}
 		provinces_to_highlight = {
 			OR = {
-				province_id = 41	# Königsberg
+				province_id = 41	# Kï¿½nigsberg
 				AND = {
 					province_id = 43	# Danzig
 					ROOT = { NOT = { owns_core_province = 2995 } }
@@ -2754,7 +2754,7 @@ country_decisions = {
 			is_nomad = no
 			is_free_or_tributary_trigger = yes
 			is_at_war = no
-			owns_core_province = 41			# Königsberg
+			owns_core_province = 41			# Kï¿½nigsberg
 			OR = {
 				owns_core_province = 43		# Danzig
 				owns_core_province = 2995	# Stolp
@@ -2803,13 +2803,13 @@ country_decisions = {
 			change_primary_culture = prussian
 			PRU = {
 				random_owned_province = {
-					limit = { 
+					limit = {
 						OR = {
 							culture = saxon
 							culture = pommeranian
 							culture = markish
 						}
-					} 
+					}
 					change_culture = prussian
 				}
 			}				#The special thing about this decision, apparently. Monastic TEU gets relation change instead with neighbours
@@ -2870,7 +2870,7 @@ country_decisions = {
 		}
 		provinces_to_highlight = {
 			OR = {
-				province_id = 41	# Königsberg
+				province_id = 41	# Kï¿½nigsberg
 				AND = {
 					province_id = 43	# Danzig
 					ROOT = { NOT = { owns_core_province = 2995 } }
@@ -2890,7 +2890,7 @@ country_decisions = {
 			is_nomad = no
 			is_free_or_tributary_trigger = yes
 			is_at_war = no
-			owns_core_province = 41			# Königsberg
+			owns_core_province = 41			# Kï¿½nigsberg
 			OR = {
 				owns_core_province = 43		# Danzig
 				owns_core_province = 2995	# Stolp
@@ -2998,12 +2998,12 @@ country_decisions = {
 				}
 				NOT = { tag = TEU }
 			}
-			owns_core_province = 41			# Königsberg
+			owns_core_province = 41			# Kï¿½nigsberg
 			num_of_cities = 12			#If not one of the normal candidates, needs 12 provinces plus Koenigsberg to see
 		}
 		provinces_to_highlight = {
 			OR = {
-				province_id = 41	# Königsberg
+				province_id = 41	# Kï¿½nigsberg
 				province_id = 43	# Danzig
 				province_id = 2995	# Stolp
 			}
@@ -3021,7 +3021,7 @@ country_decisions = {
 				religion = reformed
 				religion = protestant
 			}
-			owns_core_province = 41			# Königsberg
+			owns_core_province = 41			# Kï¿½nigsberg
 			owns_core_province = 43		# Danzig
 			owns_core_province = 2995	# Stolp
 			total_development = 150			#Normal requirement for rank 2 is 500 dev, so this is 70 percent discounted
@@ -3074,12 +3074,12 @@ country_decisions = {
 				change_culture = prussian
 			}
 			random_owned_province = {
-				limit = { 
+				limit = {
 					OR = {
 						culture = saxon
 						culture = pommeranian
 					}
-				} 
+				}
 				change_culture = prussian
 			}
 			west_prussia_area = {
@@ -3382,16 +3382,16 @@ country_decisions = {
 			OR = {
 				AND = {
 					tag = SAV
-					SAR = { 
-						ai = yes 
+					SAR = {
+						ai = yes
 						was_player = no
 					}
 				}
 				AND = {
 					tag = SAR
-					SAV = { 
-						ai = yes 
-						was_player = no 
+					SAV = {
+						ai = yes
+						was_player = no
 					}
 				}
 			}
@@ -3637,12 +3637,14 @@ country_decisions = {
 			NOT = { tag = SPA }
 			NOT = { tag = ADU }
 			NOT = { tag = KNI }
-			NOT = { religion_group = muslim }			#Muslims go for Andalusia
+
+      # TODO: ignore muslim azores of portugal PU, for example.
+			#NOT = { religion_group = muslim }			#Muslims go for Andalusia
 			OR = {
 				AND = {
 					culture_group = iberian
 					NOT = { primary_culture = portugese }				#Portuguese go for Iberia tag
-				} 
+				}
 				primary_culture = basque
 			}
 		}
@@ -3671,15 +3673,15 @@ country_decisions = {
 			}
 			total_development = 250			#Normal requirement for rank 2 is 500 dev, so this is 50 percent discounted
 			prestige = 25			#Normal requirement for rank 2 is 50 prestige, so this is 50 percent discounted
-			iberia_region = { type = all NOT = { owner = { religion_group = muslim } } }			#Eventually make it so Portgual can fail and still spain can be formed
+			#iberia_region = { type = all NOT = { owner = { religion_group = muslim } } }			#Eventually make it so Portgual can fail and still spain can be formed
 		}
 		effect = {
 			change_tag = SPA
 			if = {
 				limit = {
-					NOT = { 
+					NOT = {
 						AND = {
-							has_dlc = "Golden Century" 
+							has_dlc = "Golden Century"
 							OR = {
 								tag = ARA
 								tag = CAT
@@ -3808,7 +3810,7 @@ country_decisions = {
 			change_tag = SPA
 			if = {
 				limit = {
-					NOT = { 
+					NOT = {
 						AND = {
 							has_dlc = "Golden Century"
 							tag = ARA
@@ -3933,7 +3935,7 @@ country_decisions = {
 				# if = {
 					# limit = { tag = LOI }
 					# complete_mission = sco_highlands_mission
-				# }	
+				# }
 			# }
 			change_tag = SCO
 			swap_non_generic_missions = yes
@@ -3953,37 +3955,37 @@ country_decisions = {
 				set_government_rank = 2
 			}
 			lowlands_area = {
-				limit = { 
-					NOT = { is_permanent_claim = ROOT } 
-					NOT = { is_core = ROOT } 
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
 				}
 				add_permanent_claim = SCO
 			}
 			scottish_marches_area = {
-				limit = { 
-					NOT = { is_permanent_claim = ROOT } 
-					NOT = { is_core = ROOT } 
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
 				}
 				add_permanent_claim = SCO
 			}
 			highlands_area = {
-				limit = { 
-					NOT = { is_permanent_claim = ROOT } 
-					NOT = { is_core = ROOT } 
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
 				}
 				add_permanent_claim = SCO
 			}
 			kingdom_of_the_isles_area = {
-				limit = { 
-					NOT = { is_permanent_claim = ROOT } 
-					NOT = { is_core = ROOT } 
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
 				}
 				add_permanent_claim = SCO
 			}
 			grampians_area = {
-				limit = { 
-					NOT = { is_permanent_claim = ROOT } 
-					NOT = { is_core = ROOT } 
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
 				}
 				add_permanent_claim = SCO
 			}
@@ -4168,7 +4170,7 @@ country_decisions = {
 		ai_importance = 400
 	}
 
-	
+
 ###################################################################################################
 ################################			Tripolitania			 ##############################################
 ###################################################################################################
@@ -4250,30 +4252,30 @@ country_decisions = {
 				duration = 7300
 			}
 			tripolitania_area = {
-				limit = { 
-					NOT = { is_permanent_claim = ROOT } 
-					NOT = { is_core = ROOT } 
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
 				}
 				add_permanent_claim = TRP
 			}
 			fezzan_area = {
-				limit = { 
-					NOT = { is_permanent_claim = ROOT } 
-					NOT = { is_core = ROOT } 
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
 				}
 				add_permanent_claim = TRP
 			}
 			cyrenaica_area = {
-				limit = { 
-					NOT = { is_permanent_claim = ROOT } 
-					NOT = { is_core = ROOT } 
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
 				}
 				add_permanent_claim = TRP
 			}
 			nafusa_mountains_area = {
-				limit = { 
-					NOT = { is_permanent_claim = ROOT } 
-					NOT = { is_core = ROOT } 
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
 				}
 				add_permanent_claim = TRP
 			}
@@ -4361,30 +4363,30 @@ country_decisions = {
 				duration = 7300
 			}
 			tunisia_area = {
-				limit = { 
-					NOT = { is_permanent_claim = ROOT } 
-					NOT = { is_core = ROOT } 
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
 				}
 				add_permanent_claim = OTN
 			}
 			djerba_area = {
-				limit = { 
-					NOT = { is_permanent_claim = ROOT } 
-					NOT = { is_core = ROOT } 
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
 				}
 				add_permanent_claim = OTN
 			}
 			#djerid_area = { # Brian; doesn't exist in BT
-			#	limit = { 
-			#		NOT = { is_permanent_claim = ROOT } 
-			#		NOT = { is_core = ROOT } 
+			#	limit = {
+			#		NOT = { is_permanent_claim = ROOT }
+			#		NOT = { is_core = ROOT }
 			#	}
 			#	add_permanent_claim = OTN
 			#}
 			#east_aures_area = { # Brian; doesn't exist in BT
-			#	limit = { 
-			#		NOT = { is_permanent_claim = ROOT } 
-			#		NOT = { is_core = ROOT } 
+			#	limit = {
+			#		NOT = { is_permanent_claim = ROOT }
+			#		NOT = { is_core = ROOT }
 			#	}
 			#	add_permanent_claim = OTN
 			#}
@@ -4402,7 +4404,7 @@ country_decisions = {
 		}
 		ai_importance = 400
 	}
-	
+
 ###################################################################################################
 ################################			Tuscany			 ##############################################			#Note needs work
 ###################################################################################################
@@ -4454,16 +4456,16 @@ country_decisions = {
 			change_tag = TUS
 			#remove_non_electors_emperors_from_empire_effect = yes
 			tuscany_area = {
-				limit = { 
-					NOT = { is_permanent_claim = ROOT } 
-					NOT = { is_core = ROOT } 
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
 				}
 				add_permanent_claim = TUS
 			}
 			south_tuscany_area = {
 				limit = {
-					NOT = { is_permanent_claim = ROOT } 
-					NOT = { is_core = ROOT } 
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
 				}
 				add_permanent_claim = TUS
 			}
@@ -4621,9 +4623,9 @@ country_decisions = {
 				}
 				set_government_rank = 2
 			}
-			capital_scope = { 
-				add_base_tax = 1 
-				add_base_production = 1 
+			capital_scope = {
+				add_base_tax = 1
+				add_base_production = 1
 			}
 			if = {
 				limit = {
@@ -4675,7 +4677,7 @@ country_decisions = {
 			modifier = {
 				factor = 0
 				is_part_of_hre = yes
-				is_elector = no	
+				is_elector = no
 			}
 		}
 		ai_importance = 400 #
