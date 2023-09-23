@@ -1,0 +1,193 @@
+guiTypes = {
+	windowType = {
+		name = "countrycourtview_abilitylistitem"
+		backGround =""
+		position = { x=0 y=0 }
+		size = { x=170 y=86 }
+		moveable = 0
+		dontRender = ""
+		horizontalBorder = ""
+		Orientation = "UPPER_LEFT"
+
+		instantTextBoxType = {
+			name = "advisor_name"
+			position = { x = 136 y = 0 }
+			textureFile = ""
+			font = "vic_22"
+			borderSize = {x = 4 y = 4}
+			text = "Charles Darwin"
+			maxWidth = 160
+			maxHeight = 32
+			format = center
+			fixedsize = yes
+		}
+
+		listboxType = {
+			name = "advisor_modifier_listbox"
+			backGround = ""
+			position = { x=82 y=28 }
+			size = { x=100 y=30 }
+			Orientation = "UPPER_LEFT"
+			horizontal = 0
+			spacing = 0
+			borderSize = {x = 0 y = 0}
+		}
+
+		instantTextBoxType = {
+			name = "advisor_cost"
+			position = { x=82 y=51 }
+			textureFile = ""
+			font = "vic_18"
+			borderSize = {x = 4 y = 4}
+			text = ""
+			maxWidth = 152
+			maxHeight = 30
+			format = left
+		}
+
+		instantTextBoxType = {
+			name = "advisor_activefor"
+			position = { x = 271 y = 51 }
+			textureFile = ""
+			font = "vic_18"
+			borderSize = {x = 4 y = 4}
+			text = ""
+			maxWidth = 80
+			maxHeight = 30
+			format = right
+		}
+
+		guiButtonType =
+		{
+			name ="advisor_button"
+			quadTextureSprite= "GFX_advisor_noAdvisorType"
+			position = { x= 3 y = 3 }
+			Orientation = "UPPER_LEFT"
+			tooltip = ""
+			tooltipText =""
+			delayedTooltipText = ""
+			hint_tag = "hint_advisor"
+		}
+
+
+
+
+		iconType ={
+			name ="advisor_indicator_religion"
+			spriteType = "GFX_advisor_indicator_religion"
+			position = { x= -18 y = 5 }
+			Orientation = "UPPER_LEFT"
+		}
+
+		iconType ={
+			name ="advisor_indicator_religion_icon"
+			spriteType = "GFX_province_view_religion"
+			position = { x= -13 y = 10 }
+			Orientation = "UPPER_LEFT"
+			scale = 0.9
+			alwaystransparent = yes
+			frame = 17
+		}
+
+		iconType ={
+			name ="advisor_indicator_culture"
+			spriteType = "GFX_advisor_indicator_culture"
+			position = { x= -18 y = 39 }
+			Orientation = "UPPER_LEFT"
+			frame = 1
+		}
+
+
+
+
+
+		guiButtonType = {
+			name = "advisor_sack"
+			position = { x=326 y = -1 }
+			quadTextureSprite ="GFX_dismiss_leader"
+			tooltip = ""
+			tooltipText =""
+			delayedTooltipText = ""
+			buttonFont = "vic_18"
+		}
+
+		guiButtonType = {
+			name = "advisor_promote"
+			position = { x=299 y = -1 }
+			quadTextureSprite ="GFX_promote_advisor"
+			tooltip = ""
+			tooltipText =""
+			delayedTooltipText= ""
+			buttonFont = "vic_18"
+		}
+
+		instantTextBoxType = {
+			name = "advisor_ability_skill"
+			position = { x = 100 y = 0 }
+			textureFile = ""
+			font = "vic_22"
+			borderSize = {x = 4 y = 4}
+			text = "7"
+			maxWidth = 30
+			maxHeight = 32
+			format = center
+			Orientation = "UPPER_LEFT"
+		}
+
+		iconType =
+		{
+			name ="advisor_skill_icon"
+			spriteType = "GFX_icon_powers_administrative"
+			tooltip = ""
+			tooltipText =""
+			delayedTooltipText = ""
+			position = { x= 80 y = 0 }
+			Orientation = "UPPER_LEFT"
+		}
+
+		instantTextBoxType = {
+			name = "ability_skill"
+			position = { x = 445 y = 4 }
+			textureFile = ""
+			font = "vic_36"
+			borderSize = {x = 4 y = 4}
+			text = "7"
+			maxWidth = 55
+			maxHeight = 32
+			format = center
+			Orientation = "UPPER_LEFT"
+		}
+
+		iconType =
+		{
+			name ="power_progress"
+			spriteType = "GFX_default_progressbar"
+			position = { x= 374 y = 50 }
+			Orientation = "UPPER_LEFT"
+		}
+
+		instantTextBoxType = {
+			name = "power"
+			position = { x = 370 y = 47 }
+			textureFile = ""
+			font = "vic_18"
+			borderSize = {x = 4 y = 4}
+			text = "325 power"
+			maxWidth = 125
+			maxHeight = 32
+			format = center
+			alwaystransparent = yes
+		}
+
+		guiButtonType =
+		{
+			name ="progress_bar_frame"
+			spriteType = "GFX_progress_bar_frame"
+			tooltip = ""
+			tooltipText =""
+			delayedTooltipText = ""
+			position = { x= 363 y = 46 }
+			Orientation = "UPPER_LEFT"
+		}
+	}
+}

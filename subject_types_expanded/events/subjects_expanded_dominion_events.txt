@@ -1,0 +1,1113 @@
+namespace = subjects_expanded_dominion_events
+
+country_event = {
+	id = subjects_expanded_dominion_events.1
+	title = subjects_expanded_dominion_events.EVTNAME1
+	desc = subjects_expanded_dominion_events.EVTDESC1
+	picture = DIPLOMACY_eventPicture
+
+	hidden = yes
+
+	trigger = {
+		is_any_dominion_subject = yes
+		OR = {
+			NOT = { has_country_flag = was_dominion_subject }
+			AND = {
+				is_any_colonial_region_dominion_subject = yes
+				OR = {
+					NOT = { has_reform = colonial_government }
+					capital_scope = {
+						is_node_in_trade_company_region = yes
+						OR = {
+							NOT = { has_global_flag = extended_timeline_mod }
+							AND = {
+								has_global_flag = extended_timeline_mod
+								NOT = { colonial_region = colonial_oceania }
+								NOT = { colonial_region = colonial_south_africa }
+								NOT = { colonial_region = colonial_zambezi }
+								NOT = { colonial_region = colonial_congo }
+								NOT = { colonial_region = colonial_east_africa }
+								NOT = { colonial_region = colonial_ethiopia }
+								NOT = { colonial_region = colonial_sudan }
+								NOT = { colonial_region = colonial_central_africa }
+								NOT = { colonial_region = colonial_niger }
+								NOT = { colonial_region = colonial_ivory_coast }
+								NOT = { colonial_region = colonial_mali }
+								NOT = { colonial_region = colonial_west_africa }
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	mean_time_to_happen = { days = 1 }
+
+	immediate = {
+		hidden_effect = {
+			if = {
+				limit = {
+					NOT = { has_country_flag = was_dominion_subject }
+				}
+				set_country_flag = was_dominion_subject
+			}
+			if = {
+				limit = {
+					is_any_colonial_region_dominion_subject = yes
+					NOT = { has_reform = colonial_government }
+				}
+				change_government = republic
+				add_government_reform = colonial_government
+			}
+			if = {
+				limit = {
+					is_any_colonial_region_dominion_subject = yes
+					capital_scope = {
+						is_node_in_trade_company_region = yes
+						OR = {
+							NOT = { has_global_flag = extended_timeline_mod }
+							AND = {
+								has_global_flag = extended_timeline_mod
+								NOT = { colonial_region = colonial_oceania }
+								NOT = { colonial_region = colonial_south_africa }
+								NOT = { colonial_region = colonial_zambezi }
+								NOT = { colonial_region = colonial_congo }
+								NOT = { colonial_region = colonial_east_africa }
+								NOT = { colonial_region = colonial_ethiopia }
+								NOT = { colonial_region = colonial_sudan }
+								NOT = { colonial_region = colonial_central_africa }
+								NOT = { colonial_region = colonial_niger }
+								NOT = { colonial_region = colonial_ivory_coast }
+								NOT = { colonial_region = colonial_mali }
+								NOT = { colonial_region = colonial_west_africa }
+							}
+						}
+					}
+				}
+				if = {
+					limit = {
+						is_subject_of_type = dominion
+					}
+					overlord = {
+						set_country_flag = is_releasing_dominion_in_trade_company_region
+						create_subject = {
+							subject = ROOT
+							subject_type = dominion_tc
+						}
+						clr_country_flag = is_releasing_dominion_in_trade_company_region
+					}
+				}
+				else_if = {
+					limit = {
+						is_subject_of_type = autonomous_dominion
+					}
+					overlord = {
+						set_country_flag = is_releasing_dominion_in_trade_company_region
+						create_subject = {
+							subject = ROOT
+							subject_type = autonomous_dominion_tc
+						}
+						clr_country_flag = is_releasing_dominion_in_trade_company_region
+					}
+				}
+			}
+		}
+	}
+
+	option = {
+		name = subjects_expanded_dominion_events1.EVTOPT1
+
+		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = {
+	id = subjects_expanded_dominion_events.2
+	title = subjects_expanded_dominion_events.EVTNAME2
+	desc = subjects_expanded_dominion_events.EVTDESC2
+	picture = BATTLE_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = subjects_expanded_dominion_events2.EVTOPT1
+
+		ai_chance = { factor = 100 }
+
+		tooltip = {
+			FROM = {
+				add_manpower = 5
+			}
+			add_manpower = -5
+			add_liberty_desire = 10
+		}
+	}
+}
+
+# Give provinces in Indian trade company regions to specific autonomous dominion
+country_event = {
+	id = subjects_expanded_dominion_events.3
+	title = subjects_expanded_dominion_events.EVTNAME3
+	desc = subjects_expanded_dominion_events.EVTDESC3
+	picture = DIPLOMACY_eventPicture
+
+	# hidden = yes
+
+	trigger = {
+		capital_scope = {
+			NOT = { superregion = india_superregion }
+			NOT = { superregion = china_superregion }
+			NOT = { region = japan_region }
+			NOT = { continent = oceania }
+			NOT = { superregion = east_indies_superregion }
+			NOT = { continent = africa }
+		}
+		NOT = { is_dominion_tag = yes }
+		any_subject_country = {
+			is_any_dominion_subject = yes
+			is_dominion_tag_in_india = yes
+		}
+		any_owned_province = {
+			is_in_capital_area = no
+			is_city = yes
+			superregion = india_superregion
+			is_node_in_trade_company_region = yes
+		}
+	}
+
+	mean_time_to_happen = { days = 1 }
+
+	immediate = {
+		hidden_effect = {
+			set_variable = { which = num_of_provinces_ceded_to_autonomous_dominion_india value = 0 }
+			india_superregion = {
+				limit = {
+					owned_by = ROOT
+					is_in_capital_area = no
+					is_city = yes
+					is_node_in_trade_company_region = yes
+				}
+				ROOT = { change_variable = { which = num_of_provinces_ceded_to_autonomous_dominion_india value = 1 } }
+				random_country = {
+					limit = {
+						is_subject_of = ROOT
+						is_any_dominion_subject = yes
+						is_dominion_tag_in_india = yes
+					}
+					PREV = {
+						if = {
+							limit = {
+								OR = {
+									is_core = ROOT
+									has_construction = core
+								}
+							}
+							remove_core = ROOT
+							add_core = PREV
+						}
+						cede_province = PREV
+					}
+				}
+			}
+		}
+	}
+
+	option = {
+		name = subjects_expanded_dominion_events3.EVTOPT1
+
+		ai_chance = { factor = 100 }
+	}
+}
+
+# Give provinces in East Indies trade company regions to specific autonomous dominion
+country_event = {
+	id = subjects_expanded_dominion_events.4
+	title = subjects_expanded_dominion_events.EVTNAME4
+	desc = subjects_expanded_dominion_events.EVTDESC4
+	picture = DIPLOMACY_eventPicture
+
+	# hidden = yes
+
+	trigger = {
+		capital_scope = {
+			NOT = { superregion = india_superregion }
+			NOT = { superregion = china_superregion }
+			NOT = { region = japan_region }
+			NOT = { continent = oceania }
+			NOT = { superregion = east_indies_superregion }
+			NOT = { continent = africa }
+		}
+		NOT = { is_dominion_tag = yes }
+		any_subject_country = {
+			is_any_dominion_subject = yes
+			is_dominion_tag_in_east_indies = yes
+		}
+		any_owned_province = {
+			is_in_capital_area = no
+			is_city = yes
+			OR = {
+				trade_company_region = trade_company_indonesia
+				trade_company_region = trade_company_moluccas
+			}
+		}
+	}
+
+	mean_time_to_happen = { days = 1 }
+
+	immediate = {
+		hidden_effect = {
+			set_variable = { which = num_of_provinces_ceded_to_autonomous_dominion_east_indies value = 0 }
+			trade_company_indonesia = {
+				limit = {
+					owned_by = ROOT
+					is_in_capital_area = no
+					is_city = yes
+				}
+				ROOT = { change_variable = { which = num_of_provinces_ceded_to_autonomous_dominion_east_indies value = 1 } }
+				random_country = {
+					limit = {
+						is_subject_of = ROOT
+						is_any_dominion_subject = yes
+						is_dominion_tag_in_east_indies = yes
+					}
+					PREV = {
+						if = {
+							limit = {
+								OR = {
+									is_core = ROOT
+									has_construction = core
+								}
+							}
+							remove_core = ROOT
+							add_core = PREV
+						}
+						cede_province = PREV
+					}
+				}
+			}
+			trade_company_moluccas = {
+				limit = {
+					owned_by = ROOT
+					is_in_capital_area = no
+					is_city = yes
+				}
+				ROOT = { change_variable = { which = num_of_provinces_ceded_to_autonomous_dominion_east_indies value = 1 } }
+				random_country = {
+					limit = {
+						is_subject_of = ROOT
+						is_any_dominion_subject = yes
+						is_dominion_tag_in_east_indies = yes
+					}
+					PREV = {
+						if = {
+							limit = {
+								OR = {
+									is_core = ROOT
+									has_construction = core
+								}
+							}
+							remove_core = ROOT
+							add_core = PREV
+						}
+						cede_province = PREV
+					}
+				}
+			}
+		}
+	}
+
+	option = {
+		name = subjects_expanded_dominion_events4.EVTOPT1
+
+		ai_chance = { factor = 100 }
+	}
+}
+
+# Give provinces in Indochina trade company regions to specific autonomous dominion
+country_event = {
+	id = subjects_expanded_dominion_events.5
+	title = subjects_expanded_dominion_events.EVTNAME5
+	desc = subjects_expanded_dominion_events.EVTDESC5
+	picture = DIPLOMACY_eventPicture
+
+	# hidden = yes
+
+	trigger = {
+		capital_scope = {
+			NOT = { superregion = india_superregion }
+			NOT = { superregion = china_superregion }
+			NOT = { region = japan_region }
+			NOT = { continent = oceania }
+			NOT = { superregion = east_indies_superregion }
+			NOT = { continent = africa }
+		}
+		NOT = { is_dominion_tag = yes }
+		any_subject_country = {
+			is_any_dominion_subject = yes
+			is_dominion_tag_in_indochina = yes
+		}
+		any_owned_province = {
+			is_in_capital_area = no
+			is_city = yes
+			OR = {
+				trade_company_region = trade_company_indochina
+				trade_company_region = trade_company_burma
+				trade_company_region = trade_company_east_india
+			}
+			NOT = { superregion = india_superregion }
+		}
+	}
+
+	mean_time_to_happen = { days = 1 }
+
+	immediate = {
+		hidden_effect = {
+			set_variable = { which = num_of_provinces_ceded_to_autonomous_dominion_indochina value = 0 }
+			trade_company_indochina = {
+				limit = {
+					owned_by = ROOT
+					is_in_capital_area = no
+					is_city = yes
+				}
+				ROOT = { change_variable = { which = num_of_provinces_ceded_to_autonomous_dominion_indochina value = 1 } }
+				random_country = {
+					limit = {
+						is_subject_of = ROOT
+						is_any_dominion_subject = yes
+						is_dominion_tag_in_indochina = yes
+					}
+					PREV = {
+						if = {
+							limit = {
+								OR = {
+									is_core = ROOT
+									has_construction = core
+								}
+							}
+							remove_core = ROOT
+							add_core = PREV
+						}
+						cede_province = PREV
+					}
+				}
+			}
+			trade_company_burma = {
+				limit = {
+					owned_by = ROOT
+					is_in_capital_area = no
+					is_city = yes
+					NOT = { superregion = india_superregion }
+				}
+				ROOT = { change_variable = { which = num_of_provinces_ceded_to_autonomous_dominion_indochina value = 1 } }
+				random_country = {
+					limit = {
+						is_subject_of = ROOT
+						is_any_dominion_subject = yes
+						is_dominion_tag_in_indochina = yes
+					}
+					PREV = {
+						if = {
+							limit = {
+								OR = {
+									is_core = ROOT
+									has_construction = core
+								}
+							}
+							remove_core = ROOT
+							add_core = PREV
+						}
+						cede_province = PREV
+					}
+				}
+			}
+			trade_company_east_india = {
+				limit = {
+					owned_by = ROOT
+					is_in_capital_area = no
+					is_city = yes
+					NOT = { superregion = india_superregion }
+				}
+				ROOT = { change_variable = { which = num_of_provinces_ceded_to_autonomous_dominion_indochina value = 1 } }
+				random_country = {
+					limit = {
+						is_subject_of = ROOT
+						is_any_dominion_subject = yes
+						is_dominion_tag_in_indochina = yes
+					}
+					PREV = {
+						if = {
+							limit = {
+								OR = {
+									is_core = ROOT
+									has_construction = core
+								}
+							}
+							remove_core = ROOT
+							add_core = PREV
+						}
+						cede_province = PREV
+					}
+				}
+			}
+		}
+	}
+
+	option = {
+		name = subjects_expanded_dominion_events5.EVTOPT1
+
+		ai_chance = { factor = 100 }
+	}
+}
+
+# Give provinces in West Africa trade company regions to specific autonomous dominion
+country_event = {
+	id = subjects_expanded_dominion_events.6
+	title = subjects_expanded_dominion_events.EVTNAME6
+	desc = subjects_expanded_dominion_events.EVTDESC6
+	picture = DIPLOMACY_eventPicture
+
+	# hidden = yes
+
+	trigger = {
+		NOT = { has_global_flag = extended_timeline_mod }
+		capital_scope = {
+			NOT = { superregion = india_superregion }
+			NOT = { superregion = china_superregion }
+			NOT = { region = japan_region }
+			NOT = { continent = oceania }
+			NOT = { superregion = east_indies_superregion }
+			NOT = { continent = africa }
+		}
+		NOT = { is_dominion_tag = yes }
+		any_subject_country = {
+			is_any_dominion_subject = yes
+			is_dominion_tag_in_west_africa = yes
+		}
+		any_owned_province = {
+			is_in_capital_area = no
+			is_city = yes
+			OR = {
+				trade_company_region = trade_company_west_africa
+				trade_company_region = trade_company_timbuktu
+				trade_company_region = trade_company_katsina
+				trade_company_region = trade_company_kongo
+			}
+		}
+	}
+
+	mean_time_to_happen = { days = 1 }
+
+	immediate = {
+		hidden_effect = {
+			set_variable = { which = num_of_provinces_ceded_to_autonomous_dominion_west_africa value = 0 }
+			trade_company_west_africa = {
+				limit = {
+					owned_by = ROOT
+					is_in_capital_area = no
+					is_city = yes
+				}
+				ROOT = { change_variable = { which = num_of_provinces_ceded_to_autonomous_dominion_west_africa value = 1 } }
+				random_country = {
+					limit = {
+						is_subject_of = ROOT
+						is_any_dominion_subject = yes
+						is_dominion_tag_in_west_africa = yes
+					}
+					PREV = {
+						if = {
+							limit = {
+								OR = {
+									is_core = ROOT
+									has_construction = core
+								}
+							}
+							remove_core = ROOT
+							add_core = PREV
+						}
+						cede_province = PREV
+					}
+				}
+			}
+			trade_company_timbuktu = {
+				limit = {
+					owned_by = ROOT
+					is_in_capital_area = no
+					is_city = yes
+				}
+				ROOT = { change_variable = { which = num_of_provinces_ceded_to_autonomous_dominion_west_africa value = 1 } }
+				random_country = {
+					limit = {
+						is_subject_of = ROOT
+						is_any_dominion_subject = yes
+						is_dominion_tag_in_west_africa = yes
+					}
+					PREV = {
+						if = {
+							limit = {
+								OR = {
+									is_core = ROOT
+									has_construction = core
+								}
+							}
+							remove_core = ROOT
+							add_core = PREV
+						}
+						cede_province = PREV
+					}
+				}
+			}
+			trade_company_katsina = {
+				limit = {
+					owned_by = ROOT
+					is_in_capital_area = no
+					is_city = yes
+				}
+				ROOT = { change_variable = { which = num_of_provinces_ceded_to_autonomous_dominion_west_africa value = 1 } }
+				random_country = {
+					limit = {
+						is_subject_of = ROOT
+						is_any_dominion_subject = yes
+						is_dominion_tag_in_west_africa = yes
+					}
+					PREV = {
+						if = {
+							limit = {
+								OR = {
+									is_core = ROOT
+									has_construction = core
+								}
+							}
+							remove_core = ROOT
+							add_core = PREV
+						}
+						cede_province = PREV
+					}
+				}
+			}
+			trade_company_kongo = {
+				limit = {
+					owned_by = ROOT
+					is_in_capital_area = no
+					is_city = yes
+				}
+				ROOT = { change_variable = { which = num_of_provinces_ceded_to_autonomous_dominion_west_africa value = 1 } }
+				random_country = {
+					limit = {
+						is_subject_of = ROOT
+						is_any_dominion_subject = yes
+						is_dominion_tag_in_west_africa = yes
+					}
+					PREV = {
+						if = {
+							limit = {
+								OR = {
+									is_core = ROOT
+									has_construction = core
+								}
+							}
+							remove_core = ROOT
+							add_core = PREV
+						}
+						cede_province = PREV
+					}
+				}
+			}
+		}
+	}
+
+	option = {
+		name = subjects_expanded_dominion_events6.EVTOPT1
+
+		ai_chance = { factor = 100 }
+	}
+}
+
+# Give provinces in East Africa trade company regions to specific autonomous dominion
+country_event = {
+	id = subjects_expanded_dominion_events.7
+	title = subjects_expanded_dominion_events.EVTNAME7
+	desc = subjects_expanded_dominion_events.EVTDESC7
+	picture = DIPLOMACY_eventPicture
+
+	# hidden = yes
+
+	trigger = {
+		NOT = { has_global_flag = extended_timeline_mod }
+		capital_scope = {
+			NOT = { superregion = india_superregion }
+			NOT = { superregion = china_superregion }
+			NOT = { region = japan_region }
+			NOT = { continent = oceania }
+			NOT = { superregion = east_indies_superregion }
+			NOT = { continent = africa }
+		}
+		NOT = { is_dominion_tag = yes }
+		any_subject_country = {
+			is_any_dominion_subject = yes
+			is_dominion_tag_in_east_africa = yes
+		}
+		any_owned_province = {
+			is_in_capital_area = no
+			is_city = yes
+			OR = {
+				trade_company_region = trade_company_east_africa
+				trade_company_region = trade_company_zambezi
+				trade_company_region = trade_company_great_lakes
+				trade_company_region = trade_company_ethiopia
+				AND = {
+					trade_company_region = trade_company_gulf_of_aden
+					continent = africa
+				}
+			}
+		}
+	}
+
+	mean_time_to_happen = { days = 1 }
+
+	immediate = {
+		hidden_effect = {
+			set_variable = { which = num_of_provinces_ceded_to_autonomous_dominion_east_africa value = 0 }
+			trade_company_east_africa = {
+				limit = {
+					owned_by = ROOT
+					is_in_capital_area = no
+					is_city = yes
+				}
+				ROOT = { change_variable = { which = num_of_provinces_ceded_to_autonomous_dominion_east_africa value = 1 } }
+				random_country = {
+					limit = {
+						is_subject_of = ROOT
+						is_any_dominion_subject = yes
+						is_dominion_tag_in_east_africa = yes
+					}
+					PREV = {
+						if = {
+							limit = {
+								OR = {
+									is_core = ROOT
+									has_construction = core
+								}
+							}
+							remove_core = ROOT
+							add_core = PREV
+						}
+						cede_province = PREV
+					}
+				}
+			}
+			trade_company_zambezi = {
+				limit = {
+					owned_by = ROOT
+					is_in_capital_area = no
+					is_city = yes
+				}
+				ROOT = { change_variable = { which = num_of_provinces_ceded_to_autonomous_dominion_east_africa value = 1 } }
+				random_country = {
+					limit = {
+						is_subject_of = ROOT
+						is_any_dominion_subject = yes
+						is_dominion_tag_in_east_africa = yes
+					}
+					PREV = {
+						if = {
+							limit = {
+								OR = {
+									is_core = ROOT
+									has_construction = core
+								}
+							}
+							remove_core = ROOT
+							add_core = PREV
+						}
+						cede_province = PREV
+					}
+				}
+			}
+			trade_company_great_lakes = {
+				limit = {
+					owned_by = ROOT
+					is_in_capital_area = no
+					is_city = yes
+				}
+				ROOT = { change_variable = { which = num_of_provinces_ceded_to_autonomous_dominion_east_africa value = 1 } }
+				random_country = {
+					limit = {
+						is_subject_of = ROOT
+						is_any_dominion_subject = yes
+						is_dominion_tag_in_east_africa = yes
+					}
+					PREV = {
+						if = {
+							limit = {
+								OR = {
+									is_core = ROOT
+									has_construction = core
+								}
+							}
+							remove_core = ROOT
+							add_core = PREV
+						}
+						cede_province = PREV
+					}
+				}
+			}
+			trade_company_ethiopia = {
+				limit = {
+					owned_by = ROOT
+					is_in_capital_area = no
+					is_city = yes
+				}
+				ROOT = { change_variable = { which = num_of_provinces_ceded_to_autonomous_dominion_east_africa value = 1 } }
+				random_country = {
+					limit = {
+						is_subject_of = ROOT
+						is_any_dominion_subject = yes
+						is_dominion_tag_in_east_africa = yes
+					}
+					PREV = {
+						if = {
+							limit = {
+								OR = {
+									is_core = ROOT
+									has_construction = core
+								}
+							}
+							remove_core = ROOT
+							add_core = PREV
+						}
+						cede_province = PREV
+					}
+				}
+			}
+			trade_company_gulf_of_aden = {
+				limit = {
+					continent = africa
+					owned_by = ROOT
+					is_in_capital_area = no
+					is_city = yes
+				}
+				ROOT = { change_variable = { which = num_of_provinces_ceded_to_autonomous_dominion_east_africa value = 1 } }
+				random_country = {
+					limit = {
+						is_subject_of = ROOT
+						is_any_dominion_subject = yes
+						is_dominion_tag_in_east_africa = yes
+					}
+					PREV = {
+						if = {
+							limit = {
+								OR = {
+									is_core = ROOT
+									has_construction = core
+								}
+							}
+							remove_core = ROOT
+							add_core = PREV
+						}
+						cede_province = PREV
+					}
+				}
+			}
+		}
+	}
+
+	option = {
+		name = subjects_expanded_dominion_events7.EVTOPT1
+
+		ai_chance = { factor = 100 }
+	}
+}
+
+# Give provinces in South Africa trade company regions to specific autonomous dominion
+country_event = {
+	id = subjects_expanded_dominion_events.8
+	title = subjects_expanded_dominion_events.EVTNAME8
+	desc = subjects_expanded_dominion_events.EVTDESC8
+	picture = DIPLOMACY_eventPicture
+
+	# hidden = yes
+
+	trigger = {
+		NOT = { has_global_flag = extended_timeline_mod }
+		capital_scope = {
+			NOT = { superregion = india_superregion }
+			NOT = { superregion = china_superregion }
+			NOT = { region = japan_region }
+			NOT = { continent = oceania }
+			NOT = { superregion = east_indies_superregion }
+			NOT = { continent = africa }
+		}
+		NOT = { is_dominion_tag = yes }
+		any_subject_country = {
+			is_any_dominion_subject = yes
+			is_dominion_tag_in_south_africa = yes
+		}
+		any_owned_province = {
+			is_in_capital_area = no
+			is_city = yes
+			trade_company_region = trade_company_south_africa
+		}
+	}
+
+	mean_time_to_happen = { days = 1 }
+
+	immediate = {
+		hidden_effect = {
+			set_variable = { which = num_of_provinces_ceded_to_autonomous_dominion_south_africa value = 0 }
+			trade_company_south_africa = {
+				limit = {
+					owned_by = ROOT
+					is_in_capital_area = no
+					is_city = yes
+				}
+				ROOT = { change_variable = { which = num_of_provinces_ceded_to_autonomous_dominion_south_africa value = 1 } }
+				random_country = {
+					limit = {
+						is_subject_of = ROOT
+						is_any_dominion_subject = yes
+						is_dominion_tag_in_south_africa = yes
+					}
+					PREV = {
+						if = {
+							limit = {
+								OR = {
+									is_core = ROOT
+									has_construction = core
+								}
+							}
+							remove_core = ROOT
+							add_core = PREV
+						}
+						cede_province = PREV
+					}
+				}
+			}
+		}
+	}
+
+	option = {
+		name = subjects_expanded_dominion_events8.EVTOPT1
+
+		ai_chance = { factor = 100 }
+	}
+}
+
+# Give provinces in Philippines trade company regions to specific autonomous dominion
+country_event = {
+	id = subjects_expanded_dominion_events.9
+	title = subjects_expanded_dominion_events.EVTNAME9
+	desc = subjects_expanded_dominion_events.EVTDESC9
+	picture = DIPLOMACY_eventPicture
+
+	# hidden = yes
+
+	trigger = {
+		capital_scope = {
+			NOT = { superregion = india_superregion }
+			NOT = { superregion = china_superregion }
+			NOT = { region = japan_region }
+			NOT = { continent = oceania }
+			NOT = { superregion = east_indies_superregion }
+			NOT = { continent = africa }
+		}
+		NOT = { is_dominion_tag = yes }
+		any_subject_country = {
+			is_any_dominion_subject = yes
+			is_dominion_tag_in_philippines = yes
+		}
+		any_owned_province = {
+			is_in_capital_area = no
+			is_city = yes
+			trade_company_region = trade_company_philippines
+		}
+	}
+
+	mean_time_to_happen = { days = 1 }
+
+	immediate = {
+		hidden_effect = {
+			set_variable = { which = num_of_provinces_ceded_to_autonomous_dominion_philippines value = 0 }
+			trade_company_philippines = {
+				limit = {
+					owned_by = ROOT
+					is_in_capital_area = no
+					is_city = yes
+				}
+				ROOT = { change_variable = { which = num_of_provinces_ceded_to_autonomous_dominion_philippines value = 1 } }
+				random_country = {
+					limit = {
+						is_subject_of = ROOT
+						is_any_dominion_subject = yes
+						is_dominion_tag_in_philippines = yes
+					}
+					PREV = {
+						if = {
+							limit = {
+								OR = {
+									is_core = ROOT
+									has_construction = core
+								}
+							}
+							remove_core = ROOT
+							add_core = PREV
+						}
+						cede_province = PREV
+					}
+				}
+			}
+		}
+	}
+
+	option = {
+		name = subjects_expanded_dominion_events9.EVTOPT1
+
+		ai_chance = { factor = 100 }
+	}
+}
+
+# apply/remove custom name
+country_event = {
+	id = subjects_expanded_dominion_events.10
+	title = subjects_expanded_dominion_events.EVTNAME10
+	desc = subjects_expanded_dominion_events.EVTDESC10
+	picture = DIPLOMACY_eventPicture
+
+	hidden = yes
+
+	trigger = {
+		is_dominion_tag = yes
+		OR = {
+			AND = {
+				is_subject = no
+				NOT = { has_country_flag = renamed_dominion_accordingly_to_free }
+			}
+			AND = {
+				is_subject = yes
+				OR = {
+					has_country_flag = renamed_dominion_accordingly_to_free
+					overlord = {
+						country_has_custom_name_for_dominions = yes
+						OR = {
+							ROOT = {
+								NOT = { tag = DE7 }
+							}
+							AND = {
+								NOT = { tag = NED }
+								NOT = { tag = HOL }
+							}
+						}
+						OR = {
+							ROOT = {
+								NOT = { tag = DI1 }
+							}
+							AND = {
+								NOT = { tag = GBR }
+								NOT = { tag = ENG }
+							}
+						}
+						ROOT = {
+							NOT = { has_country_flag = renamed_dominion_accordingly_to_@PREV }
+						}
+					}
+				}
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 1
+	}
+
+	immediate = {
+		hidden_effect = {
+			if = {
+				limit = {
+					is_dominion_tag_in_east_africa = yes
+				}
+				rename_dominion_accordingly_to_overlord = { dominion_region = EAST_AFRICA }
+			}
+			else_if = {
+				limit = {
+					is_dominion_tag_in_indochina = yes
+				}
+				rename_dominion_accordingly_to_overlord = { dominion_region = INDOCHINA }
+			}
+			else_if = {
+				limit = {
+					is_dominion_tag_in_east_indies = yes
+				}
+				rename_dominion_accordingly_to_overlord = { dominion_region = EAST_INDIES }
+			}
+			else_if = {
+				limit = {
+					is_dominion_tag_in_india = yes
+				}
+				rename_dominion_accordingly_to_overlord = { dominion_region = INDIA }
+			}
+			else_if = {
+				limit = {
+					is_dominion_tag_in_south_africa = yes
+				}
+				rename_dominion_accordingly_to_overlord = { dominion_region = SOUTH_AFRICA }
+			}
+			else_if = {
+				limit = {
+					is_dominion_tag_in_west_africa = yes
+				}
+				rename_dominion_accordingly_to_overlord = { dominion_region = WEST_AFRICA }
+			}
+			else_if = {
+				limit = {
+					is_dominion_tag_in_philippines = yes
+				}
+				rename_dominion_accordingly_to_overlord = { dominion_region = PHILIPPINES }
+			}
+		}
+	}
+
+	option = {
+		name = subjects_expanded_dominion_events10.EVTOPT1
+
+		ai_chance = { factor = 100 }
+	}
+}
+
+# remove custom name
+country_event = {
+	id = subjects_expanded_dominion_events.11
+	title = subjects_expanded_dominion_events.EVTNAME11
+	desc = subjects_expanded_dominion_events.EVTDESC11
+	picture = DIPLOMACY_eventPicture
+
+	hidden = yes
+
+	trigger = {
+		was_dominion_tag = yes
+		NOT = { is_dominion_tag = yes }
+		OR = {
+			has_country_flag = renamed_dominion_accordingly_to_free
+			any_country = {
+				ROOT = {
+					has_country_flag = renamed_dominion_accordingly_to_@PREV
+				}
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 1
+	}
+
+	immediate = {
+		hidden_effect = {
+			restore_country_name = yes
+		}
+	}
+
+	option = {
+		name = subjects_expanded_dominion_events11.EVTOPT1
+
+		ai_chance = { factor = 100 }
+	}
+}

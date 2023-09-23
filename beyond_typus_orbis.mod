@@ -9,5 +9,5 @@ tags={
 picture="thumbnail.png"
 name="Theatrum Orbis Terrarum: Beyond Typus Edition"
 supported_version="1.33.*"
-remote_file_id="2626419168"
+remote_file_id="zzzzzz"
 path="mod/beyond_typus_orbis/"

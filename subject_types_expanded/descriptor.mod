@@ -1,12 +1,15 @@
-name="Peace Treaties Expanded"
+name="Subjects Expanded"
 dependencies={
+	"Governments Expanded"
+	"Governments Expanded [GITHUB]"
+	"Missions Expanded"
+	"Missions Expanded (old)"
 	"Extended Timeline"
-	"Flavour and Events Expanded"
-	"Flavour and Events Expanded - 1.32 Origins"
 }
 tags={
+	"New Subject Types"
 	"Gameplay"
 }
-picture="thumbnail.png"
+picture="thumbnail.jpg"
 supported_version="1.35.*"
-remote_file_id="2615504872"
+remote_file_id="1834079712"

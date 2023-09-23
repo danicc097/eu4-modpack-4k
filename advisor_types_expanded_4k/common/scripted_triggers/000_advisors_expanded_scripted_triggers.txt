@@ -1,0 +1,320 @@
+has_adm_advisor = {
+	custom_trigger_tooltip = {
+		tooltip = has_adm_advisor_tooltip
+		OR = {
+			advisor = treasurer
+			advisor = philosopher
+			advisor = artist
+			advisor = theologian
+			advisor = master_of_mint
+			advisor = inquisitor
+			advisor = natural_scientist
+			advisor = administrator
+			advisor = state_overseer
+			advisor = civil_engineer
+			advisor = researcher
+			advisor = reformist
+			advisor = religious_representative
+		}
+	}
+}
+
+has_adm_advisor_2 = {
+	custom_trigger_tooltip = {
+		tooltip = has_adm_advisor_2_tooltip
+		OR = {
+			treasurer = 2
+			philosopher = 2
+			artist = 2
+			theologian = 2
+			master_of_mint = 2
+			inquisitor = 2
+			natural_scientist = 2
+			administrator = 2
+			state_overseer = 2
+			civil_engineer = 2
+			researcher = 2
+			reformist = 2
+			religious_representative = 2
+		}
+	}
+}
+
+has_adm_advisor_3 = {
+	custom_trigger_tooltip = {
+		tooltip = has_adm_advisor_3_tooltip
+		OR = {
+			treasurer = 3
+			philosopher = 3
+			artist = 3
+			theologian = 3
+			master_of_mint = 3
+			inquisitor = 3
+			natural_scientist = 3
+			administrator = 3
+			state_overseer = 3
+			civil_engineer = 3
+			researcher = 3
+			reformist = 3
+			religious_representative = 3
+		}
+	}
+}
+
+has_adm_advisor_4 = {
+	custom_trigger_tooltip = {
+		tooltip = has_adm_advisor_4_tooltip
+		OR = {
+			treasurer = 4
+			philosopher = 4
+			artist = 4
+			theologian = 4
+			master_of_mint = 4
+			inquisitor = 4
+			natural_scientist = 4
+			administrator = 4
+			state_overseer = 4
+			civil_engineer = 4
+			researcher = 4
+			reformist = 4
+			religious_representative = 4
+		}
+	}
+}
+
+has_adm_advisor_5 = {
+	custom_trigger_tooltip = {
+		tooltip = has_adm_advisor_5_tooltip
+		OR = {
+			treasurer = 5
+			philosopher = 5
+			artist = 5
+			theologian = 5
+			master_of_mint = 5
+			inquisitor = 5
+			natural_scientist = 5
+			administrator = 5
+			state_overseer = 5
+			civil_engineer = 5
+			researcher = 5
+			reformist = 5
+			religious_representative = 5
+		}
+	}
+}
+
+
+has_dip_advisor = {
+	custom_trigger_tooltip = {
+		tooltip = has_dip_advisor_tooltip
+		OR = {
+			advisor = statesman
+			advisor = diplomat
+			advisor = naval_reformer
+			advisor = trader
+			advisor = colonial_governor
+			advisor = navigator
+			advisor = spymaster
+			advisor = negotiator
+			advisor = pioneer
+			advisor = marauder_captain
+			advisor = marketeer
+			advisor = mercantile_influencer
+			advisor = navarch
+			advisor = subject_mediator
+		}
+	}
+}
+
+has_dip_advisor_2 = {
+	custom_trigger_tooltip = {
+		tooltip = has_dip_advisor_2_tooltip
+		OR = {
+			statesman = 2
+			diplomat = 2
+			naval_reformer = 2
+			trader = 2
+			colonial_governor = 2
+			navigator = 2
+			spymaster = 2
+			negotiator = 2
+			pioneer = 2
+			marauder_captain = 2
+			marketeer = 2
+			mercantile_influencer = 2
+			navarch = 2
+			subject_mediator = 2
+		}
+	}
+}
+
+has_dip_advisor_3 = {
+	custom_trigger_tooltip = {
+		tooltip = has_dip_advisor_3_tooltip
+		OR = {
+			statesman = 3
+			diplomat = 3
+			naval_reformer = 3
+			trader = 3
+			colonial_governor = 3
+			navigator = 3
+			spymaster = 3
+			negotiator = 3
+			pioneer = 3
+			marauder_captain = 3
+			marketeer = 3
+			mercantile_influencer = 3
+			navarch = 3
+			subject_mediator = 3
+		}
+	}
+}
+
+has_dip_advisor_4 = {
+	custom_trigger_tooltip = {
+		tooltip = has_dip_advisor_4_tooltip
+		OR = {
+			statesman = 4
+			diplomat = 4
+			naval_reformer = 4
+			trader = 4
+			colonial_governor = 4
+			navigator = 4
+			spymaster = 4
+			negotiator = 4
+			pioneer = 4
+			marauder_captain = 4
+			marketeer = 4
+			mercantile_influencer = 4
+			navarch = 4
+			subject_mediator = 4
+		}
+	}
+}
+
+has_dip_advisor_5 = {
+	custom_trigger_tooltip = {
+		tooltip = has_dip_advisor_5_tooltip
+		OR = {
+			statesman = 5
+			diplomat = 5
+			naval_reformer = 5
+			trader = 5
+			colonial_governor = 5
+			navigator = 5
+			spymaster = 5
+			negotiator = 5
+			pioneer = 5
+			marauder_captain = 5
+			marketeer = 5
+			mercantile_influencer = 5
+			navarch = 5
+			subject_mediator = 5
+		}
+	}
+}
+
+has_mil_advisor = {
+	custom_trigger_tooltip = {
+		tooltip = has_mil_advisor_tooltip
+		OR = {
+			advisor = army_organiser
+			advisor = army_reformer
+			advisor = commandant
+			advisor = grand_captain
+			advisor = recruitmaster
+			advisor = fortification_expert
+			advisor = quartermaster
+			advisor = commander
+			advisor = drill_instructor
+			advisor = combat_engineer
+			advisor = tactician
+			advisor = mercenary_captain
+			advisor = defensive_planner
+		}
+	}
+}
+
+has_mil_advisor_2 = {
+	custom_trigger_tooltip = {
+		tooltip = has_mil_advisor_2_tooltip
+		OR = {
+			army_organiser = 2
+			army_reformer = 2
+			commandant = 2
+			grand_captain = 2
+			recruitmaster = 2
+			fortification_expert = 2
+			quartermaster = 2
+			commander = 2
+			drill_instructor = 2
+			combat_engineer = 2
+			tactician = 2
+			mercenary_captain = 2
+			defensive_planner = 2
+		}
+	}
+}
+
+has_mil_advisor_3 = {
+	custom_trigger_tooltip = {
+		tooltip = has_mil_advisor_3_tooltip
+		OR = {
+			army_organiser = 3
+			army_reformer = 3
+			commandant = 3
+			grand_captain = 3
+			recruitmaster = 3
+			fortification_expert = 3
+			quartermaster = 3
+			commander = 3
+			drill_instructor = 3
+			combat_engineer = 3
+			tactician = 3
+			mercenary_captain = 3
+			defensive_planner = 3
+		}
+	}
+}
+
+has_mil_advisor_4 = {
+	custom_trigger_tooltip = {
+		tooltip = has_mil_advisor_4_tooltip
+		OR = {
+			army_organiser = 4
+			army_reformer = 4
+			commandant = 4
+			grand_captain = 4
+			recruitmaster = 4
+			fortification_expert = 4
+			quartermaster = 4
+			commander = 4
+			drill_instructor = 4
+			combat_engineer = 4
+			tactician = 4
+			mercenary_captain = 4
+			defensive_planner = 4
+		}
+	}
+}
+
+has_mil_advisor_5 = {
+	custom_trigger_tooltip = {
+		tooltip = has_mil_advisor_5_tooltip
+		OR = {
+			army_organiser = 5
+			army_reformer = 5
+			commandant = 5
+			grand_captain = 5
+			recruitmaster = 5
+			fortification_expert = 5
+			quartermaster = 5
+			commander = 5
+			drill_instructor = 5
+			combat_engineer = 5
+			tactician = 5
+			mercenary_captain = 5
+			defensive_planner = 5
+		}
+	}
+}

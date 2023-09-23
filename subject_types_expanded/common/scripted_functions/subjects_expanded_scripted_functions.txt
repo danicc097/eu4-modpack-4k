@@ -1,0 +1,294 @@
+can_move_capital = {
+	# Vanilla:
+	condition = {
+		tooltip = NO_CAPITAL_MOVE_SHOGUN
+		potential = {
+			FROM = {
+				has_reform = shogunate
+			}
+		}
+		allow = {
+			always = no
+		}
+	}
+	# For SE:
+	condition = {
+		tooltip = NO_CAPITAL_MOVE_DUTCH_PROVINCE
+		potential = {
+			FROM = {
+				is_subject_of_type = dutch_province_subject
+			}
+		}
+		allow = {
+			region = low_countries_region
+		}
+	}
+}
+
+can_colonize_province = {
+	# For ET:
+	condition = {
+		tooltip = NEED_TECH_TO_COLONIZE
+		potential = {
+			has_province_modifier = hard_to_colonize
+		}
+		allow = {
+			FROM = { dip_tech = 78 }
+		}
+	}
+	# For SE:
+	condition = {
+		tooltip = NATIVE_RESERVE_CANNOT_COLONIZE_PROVINCE_WITH_OTHER_CULTURE
+		potential = {
+			FROM = {
+				is_subject_of_type = native_reserve
+			}
+		}
+		allow = {
+			culture = FROM
+		}
+	}
+	condition = {
+		tooltip = TRADE_OUTPOST_CANNOT_COLONIZE
+		potential = {
+			FROM = {
+				is_subject_of_type = trade_outpost
+			}
+		}
+		allow = {
+			always = no
+		}
+	}
+	condition = {
+		tooltip = TRADE_COMPANY_DOMINION_CANNOT_COLONIZE_IN_NON_TRADE_COMPANY_REGION
+		potential = {
+			FROM = {
+				is_any_trade_company_region_dominion_subject = yes
+			}
+		}
+		allow = {
+			is_node_in_trade_company_region = yes
+		}
+	}
+}
+
+can_colonize_province_siberian_frontier = {
+	# For ET:
+	condition = {
+		tooltip = NEED_TECH_TO_COLONIZE
+		potential = {
+			has_province_modifier = hard_to_colonize
+		}
+		allow = {
+			FROM = { dip_tech = 78 }
+		}
+	}
+	# For SE:
+	condition = {
+		tooltip = NATIVE_RESERVE_CANNOT_COLONIZE_PROVINCE_WITH_OTHER_CULTURE
+		potential = {
+			FROM = {
+				is_subject_of_type = native_reserve
+			}
+		}
+		allow = {
+			culture = FROM
+		}
+	}
+	condition = {
+		tooltip = TRADE_OUTPOST_CANNOT_COLONIZE
+		potential = {
+			FROM = {
+				is_subject_of_type = trade_outpost
+			}
+		}
+		allow = {
+			always = no
+		}
+	}
+	condition = {
+		tooltip = TRADE_COMPANY_DOMINION_CANNOT_COLONIZE_IN_NON_TRADE_COMPANY_REGION
+		potential = {
+			FROM = {
+				is_any_trade_company_region_dominion_subject = yes
+			}
+		}
+		allow = {
+			is_node_in_trade_company_region = yes
+		}
+	}
+}
+
+can_add_province_to_hre = {
+	condition = {
+		tooltip = IMPERIAL_FEUD_SUBJECTS_CANNOT_ADD_PROVINCES_TO_THE_HRE
+		potential = {
+			FROM = {
+				is_subject_of_type = imperial_feud_subject
+			}
+		}
+		allow = {
+			always = no
+		}
+	}
+}
+
+can_have_colonial_nations = {
+	# Vanilla:
+	condition = {
+		potential = {
+			FROM = {
+				has_country_flag = no_colonial_nations
+			}
+		}
+		allow = {
+			always = no
+		}
+	}
+	# For SE:
+	condition = {
+		potential = {
+			FROM = {
+				is_any_dominion_subject = yes
+			}
+		}
+		allow = {
+			always = no
+		}
+	}
+	condition = {
+		potential = {
+			OR = {
+				has_disabled_colonial_nation_spawning = {
+					is_province = yes
+					who = FROM
+					colonial_region = colonial_alaska
+				}
+				has_disabled_colonial_nation_spawning = {
+					is_province = yes
+					who = FROM
+					colonial_region = colonial_canada
+				}
+				has_disabled_colonial_nation_spawning = {
+					is_province = yes
+					who = FROM
+					colonial_region = colonial_eastern_america
+				}
+				has_disabled_colonial_nation_spawning = {
+					is_province = yes
+					who = FROM
+					colonial_region = colonial_louisiana
+				}
+				has_disabled_colonial_nation_spawning = {
+					is_province = yes
+					who = FROM
+					colonial_region = colonial_california
+				}
+				has_disabled_colonial_nation_spawning = {
+					is_province = yes
+					who = FROM
+					colonial_region = colonial_mexico
+				}
+				has_disabled_colonial_nation_spawning = {
+					is_province = yes
+					who = FROM
+					colonial_region = colonial_the_carribean
+				}
+				has_disabled_colonial_nation_spawning = {
+					is_province = yes
+					who = FROM
+					colonial_region = colonial_colombia
+				}
+				has_disabled_colonial_nation_spawning = {
+					is_province = yes
+					who = FROM
+					colonial_region = colonial_peru
+				}
+				has_disabled_colonial_nation_spawning = {
+					is_province = yes
+					who = FROM
+					colonial_region = colonial_la_plata
+				}
+				has_disabled_colonial_nation_spawning = {
+					is_province = yes
+					who = FROM
+					colonial_region = colonial_brazil
+				}
+				has_disabled_colonial_nation_spawning = {
+					is_province = yes
+					who = FROM
+					colonial_region = colonial_australia
+				}
+				# Extended Timeline:
+				AND = {
+					has_global_flag = extended_timeline_mod
+					OR = {
+						has_disabled_colonial_nation_spawning = {
+							is_province = yes
+							who = FROM
+							colonial_region = colonial_oceania
+						}
+						has_disabled_colonial_nation_spawning = {
+							is_province = yes
+							who = FROM
+							colonial_region = colonial_south_africa
+						}
+						has_disabled_colonial_nation_spawning = {
+							is_province = yes
+							who = FROM
+							colonial_region = colonial_zambezi
+						}
+						has_disabled_colonial_nation_spawning = {
+							is_province = yes
+							who = FROM
+							colonial_region = colonial_congo
+						}
+						has_disabled_colonial_nation_spawning = {
+							is_province = yes
+							who = FROM
+							colonial_region = colonial_east_africa
+						}
+						has_disabled_colonial_nation_spawning = {
+							is_province = yes
+							who = FROM
+							colonial_region = colonial_ethiopia
+						}
+						has_disabled_colonial_nation_spawning = {
+							is_province = yes
+							who = FROM
+							colonial_region = colonial_sudan
+						}
+						has_disabled_colonial_nation_spawning = {
+							is_province = yes
+							who = FROM
+							colonial_region = colonial_central_africa
+						}
+						has_disabled_colonial_nation_spawning = {
+							is_province = yes
+							who = FROM
+							colonial_region = colonial_niger
+						}
+						has_disabled_colonial_nation_spawning = {
+							is_province = yes
+							who = FROM
+							colonial_region = colonial_ivory_coast
+						}
+						has_disabled_colonial_nation_spawning = {
+							is_province = yes
+							who = FROM
+							colonial_region = colonial_mali
+						}
+						has_disabled_colonial_nation_spawning = {
+							is_province = yes
+							who = FROM
+							colonial_region = colonial_west_africa
+						}
+					}
+				}
+			}
+		}
+		allow = {
+			always = no
+		}
+	}
+}

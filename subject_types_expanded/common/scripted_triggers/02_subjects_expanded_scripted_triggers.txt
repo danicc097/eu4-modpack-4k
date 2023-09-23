@@ -1,0 +1,354 @@
+is_dominion_tag = {
+	OR = {
+		is_dominion_tag_in_east_africa = yes
+		is_dominion_tag_in_indochina = yes
+		is_dominion_tag_in_east_indies = yes
+		is_dominion_tag_in_india = yes
+		is_dominion_tag_in_south_africa = yes
+		is_dominion_tag_in_west_africa = yes
+		is_dominion_tag_in_philippines = yes
+	}
+}
+
+was_dominion_tag = {
+	OR = {
+		was_dominion_tag_in_east_africa = yes
+		was_dominion_tag_in_indochina = yes
+		was_dominion_tag_in_east_indies = yes
+		was_dominion_tag_in_india = yes
+		was_dominion_tag_in_south_africa = yes
+		was_dominion_tag_in_west_africa = yes
+		was_dominion_tag_in_philippines = yes
+	}
+}
+
+is_former_autonomous_dominion = {
+	custom_trigger_tooltip = {
+		tooltip = THIS_IS_FORMER_AUTONOMOUS_DOMINION
+		OR = {
+			AND = {
+				NOT = { is_subject_of_type = autonomous_dominion }
+				has_country_flag = was_dominion_subject
+			}
+			is_former_colonial_nation = yes
+		}
+	}
+}
+
+is_dominion_tag_in_east_africa = {
+	OR = {
+		tag = DA1
+		tag = DA2
+		tag = DA3
+		tag = DA4
+		tag = DA5
+		tag = DA6
+		tag = DA7
+	}
+}
+
+is_dominion_tag_in_indochina = {
+	OR = {
+		tag = DC1
+		tag = DC2
+		tag = DC3
+		tag = DC4
+		tag = DC5
+		tag = DC6
+		tag = DC7
+	}
+}
+
+is_dominion_tag_in_east_indies = {
+	OR = {
+		tag = DE1
+		tag = DE2
+		tag = DE3
+		tag = DE4
+		tag = DE5
+		tag = DE6
+		tag = DE7
+		tag = DE8
+		tag = DE9
+	}
+}
+
+is_dominion_tag_in_india = {
+	OR = {
+		tag = DI1
+		tag = DI2
+		tag = DI3
+		tag = DI4
+		tag = DI5
+		tag = DI6
+		tag = DI7
+		tag = DI8
+		tag = DI9
+	}
+}
+
+is_dominion_tag_in_south_africa = {
+	OR = {
+		tag = DS1
+		tag = DS2
+		tag = DS3
+		tag = DS4
+		tag = DS5
+		tag = DS6
+		tag = DS7
+	}
+}
+
+is_dominion_tag_in_west_africa = {
+	OR = {
+		tag = DW1
+		tag = DW2
+		tag = DW3
+		tag = DW4
+		tag = DW5
+		tag = DW6
+		tag = DW7
+	}
+}
+
+is_dominion_tag_in_philippines = {
+	OR = {
+		tag = DP1
+		tag = DP2
+		tag = DP3
+		tag = DP4
+		tag = DP5
+		tag = DP6
+		tag = DP7
+		tag = DP8
+		tag = DP9
+	}
+}
+
+was_dominion_tag_in_east_africa = {
+	OR = {
+		was_tag = DA1
+		was_tag = DA2
+		was_tag = DA3
+		was_tag = DA4
+		was_tag = DA5
+		was_tag = DA6
+		was_tag = DA7
+	}
+}
+
+was_dominion_tag_in_indochina = {
+	OR = {
+		was_tag = DC1
+		was_tag = DC2
+		was_tag = DC3
+		was_tag = DC4
+		was_tag = DC5
+		was_tag = DC6
+		was_tag = DC7
+	}
+}
+
+was_dominion_tag_in_east_indies = {
+	OR = {
+		was_tag = DE1
+		was_tag = DE2
+		was_tag = DE3
+		was_tag = DE4
+		was_tag = DE5
+		was_tag = DE6
+		was_tag = DE7
+		was_tag = DE8
+		was_tag = DE9
+	}
+}
+
+was_dominion_tag_in_india = {
+	OR = {
+		was_tag = DI1
+		was_tag = DI2
+		was_tag = DI3
+		was_tag = DI4
+		was_tag = DI5
+		was_tag = DI6
+		was_tag = DI7
+		was_tag = DI8
+		was_tag = DI9
+	}
+}
+
+was_dominion_tag_in_south_africa = {
+	OR = {
+		was_tag = DS1
+		was_tag = DS2
+		was_tag = DS3
+		was_tag = DS4
+		was_tag = DS5
+		was_tag = DS6
+		was_tag = DS7
+	}
+}
+
+was_dominion_tag_in_west_africa = {
+	OR = {
+		was_tag = DW1
+		was_tag = DW2
+		was_tag = DW3
+		was_tag = DW4
+		was_tag = DW5
+		was_tag = DW6
+		was_tag = DW7
+	}
+}
+
+was_dominion_tag_in_philippines = {
+	OR = {
+		was_tag = DP1
+		was_tag = DP2
+		was_tag = DP3
+		was_tag = DP4
+		was_tag = DP5
+		was_tag = DP6
+		was_tag = DP7
+		was_tag = DP8
+		was_tag = DP9
+	}
+}
+
+tc_dominion_owns_provinces_in_wrong_trade_company_region = {
+	OR = {
+		AND = {
+			is_dominion_tag_in_east_africa = yes
+			any_owned_province = {
+				NOT = { trade_company_region = trade_company_east_africa }
+				NOT = { trade_company_region = trade_company_zambezi }
+				NOT = { trade_company_region = trade_company_great_lakes }
+				NOT = { trade_company_region = trade_company_ethiopia }
+				OR = {
+					NOT = { trade_company_region = trade_company_gulf_of_aden }
+					NOT = { continent = africa }
+				}
+			}
+		}
+		AND = {
+			is_dominion_tag_in_indochina = yes
+			any_owned_province = {
+				NOT = { trade_company_region = trade_company_indochina }
+				OR = {
+					NOT = { trade_company_region = trade_company_burma }
+					superregion = india_superregion
+				}
+				OR = {
+					NOT = { trade_company_region = trade_company_east_india }
+					superregion = india_superregion
+				}
+			}
+		}
+		AND = {
+			is_dominion_tag_in_east_indies = yes
+			any_owned_province = {
+				NOT = { trade_company_region = trade_company_indonesia }
+				NOT = { trade_company_region = trade_company_moluccas }
+			}
+		}
+		AND = {
+			is_dominion_tag_in_india = yes
+			any_owned_province = {
+				OR = {
+					NOT = { superregion = india_superregion }
+					is_node_in_trade_company_region = no
+				}
+			}
+		}
+		AND = {
+			is_dominion_tag_in_south_africa = yes
+			any_owned_province = {
+				NOT = { trade_company_region = trade_company_south_africa }
+			}
+		}
+		AND = {
+			is_dominion_tag_in_west_africa = yes
+			any_owned_province = {
+				NOT = { trade_company_region = trade_company_west_africa }
+				NOT = { trade_company_region = trade_company_timbuktu }
+				NOT = { trade_company_region = trade_company_katsina }
+				NOT = { trade_company_region = trade_company_kongo }
+			}
+		}
+		AND = {
+			is_dominion_tag_in_philippines = yes
+			any_owned_province = {
+				NOT = { trade_company_region = trade_company_philippines }
+			}
+		}
+	}
+}
+
+tc_dominion_province_is_in_wrong_trade_company_region = {
+	OR = {
+		AND = {
+			owner = {
+				is_dominion_tag_in_east_africa = yes
+			}
+			NOT = { trade_company_region = trade_company_east_africa }
+			NOT = { trade_company_region = trade_company_zambezi }
+			NOT = { trade_company_region = trade_company_great_lakes }
+			NOT = { trade_company_region = trade_company_ethiopia }
+			OR = {
+				NOT = { trade_company_region = trade_company_gulf_of_aden }
+				NOT = { continent = africa }
+			}
+		}
+		AND = {
+			owner = {
+				is_dominion_tag_in_indochina = yes
+			}
+			NOT = { trade_company_region = trade_company_indochina }
+			OR = {
+				NOT = { trade_company_region = trade_company_burma }
+				superregion = india_superregion
+			}
+			OR = {
+				NOT = { trade_company_region = trade_company_east_india }
+				superregion = india_superregion
+			}
+		}
+		AND = {
+			owner = {
+				is_dominion_tag_in_east_indies = yes
+			}
+			NOT = { trade_company_region = trade_company_indonesia }
+			NOT = { trade_company_region = trade_company_moluccas }
+		}
+		AND = {
+			owner = {
+				is_dominion_tag_in_india = yes
+			}
+			OR = {
+				NOT = { superregion = india_superregion }
+				is_node_in_trade_company_region = no
+			}
+		}
+		AND = {
+			owner = {
+				is_dominion_tag_in_south_africa = yes
+			}
+			NOT = { trade_company_region = trade_company_south_africa }
+		}
+		AND = {
+			owner = {
+				is_dominion_tag_in_west_africa = yes
+			}
+			NOT = { trade_company_region = trade_company_west_africa }
+			NOT = { trade_company_region = trade_company_timbuktu }
+			NOT = { trade_company_region = trade_company_katsina }
+			NOT = { trade_company_region = trade_company_kongo }
+		}
+		AND = {
+			owner = {
+				is_dominion_tag_in_philippines = yes
+			}
+			NOT = { trade_company_region = trade_company_philippines }
+		}
+	}
+}

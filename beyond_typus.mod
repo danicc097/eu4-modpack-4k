@@ -17,5 +17,5 @@ tags={
 	"Map"
 }
 supported_version="1.33.*"
-remote_file_id="2656711777"
+remote_file_id="zzzzzz"
 path="mod/beyond_typus/"

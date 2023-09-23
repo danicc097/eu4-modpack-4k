@@ -1,0 +1,100 @@
+pte_delegitimize_dynastic_branch = {
+	category = 6
+	power_projection = no
+	power_cost_base = 0
+	prestige_base = 0.2
+	ae_base = 0
+	warscore_cost = {
+		all_provinces = 0.0
+		no_provinces = 50.0
+		owner_keeps = 0.0
+		conquered = 0.0
+		returned_core = 0.0
+		released_nation = 0.0
+		cancelled_subject = 0.0
+		concede_colonial_region = 0.0
+	}
+	warscore_cap = -1
+	requires_demand_independence = no
+	is_make_subject = no
+	requires_is_allowed = no
+
+	is_visible = {
+		OR = {
+			current_age = age_of_discovery
+			current_age = age_of_reformation
+			AND = {
+				has_global_flag = extended_timeline_mod
+				OR = {
+					current_age = feudal_age
+					current_age = high_middle_ages
+					current_age = late_middle_ages
+				}
+			}
+		}
+		government = monarchy
+		uses_legitimacy = yes
+		dynasty = FROM
+		FROM = {
+			government = monarchy
+			uses_legitimacy = yes
+			legitimacy = 1
+		}
+	}
+	is_allowed = {
+		legitimacy = FROM
+	}
+	effect = {
+		FROM = {
+			add_legitimacy = -50
+			if = {
+				limit = {
+					has_heir = yes
+				}
+				add_heir_claim = -33
+			}
+		}
+	}
+	ai_weight = {
+		export_to_variable = {
+			variable_name = ai_value
+			value = 1
+		}
+		limit = {
+			religion_group = christian
+			marriage_with = FROM
+			total_development = 150
+			has_regency = no
+			FROM = {
+				has_regency = no
+				religion_group = christian
+				has_heir = yes
+				heir_claim = 1
+				NOT = { heir_claim = 60 }
+				total_development = 150
+			}
+			NOT = { succession_claim = FROM }
+			NOT = {
+				is_in_war = {
+					attacker_leader = ROOT
+					defender_leader = FROM
+					casus_belli = cb_restore_personal_union
+				}
+			}
+			NOT = {
+				is_in_war = {
+					attacker_leader = ROOT
+					defender_leader = FROM
+					casus_belli = cb_hundred_years_war
+				}
+			}
+			NOT = {
+				is_in_war = {
+					attacker_leader = ROOT
+					defender_leader = FROM
+					casus_belli = cb_claim_throne
+				}
+			}
+		}
+	}
+}

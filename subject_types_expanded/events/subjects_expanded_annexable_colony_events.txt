@@ -1,0 +1,437 @@
+namespace = subjects_expanded_annexable_colony_events
+
+country_event = {
+	id = subjects_expanded_annexable_colony_events.1
+	title = subjects_expanded_annexable_colony_events.EVTNAME1
+	desc = subjects_expanded_annexable_colony_events.EVTDESC1
+	picture = GOOD_WITH_MONARCH_eventPicture
+
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			set_country_flag = release_an_annexed_annexable_colony_decision_active
+		}
+	}
+
+	option = {
+		name = subjects_expanded_annexable_colony_events1.EVTOPT1
+
+		highlight = yes
+
+		ai_chance = { factor = 100 }
+	}
+
+	option = {
+		name = colonial_alaska
+
+		trigger = {
+			has_disabled_colonial_nation_spawning = {
+				who = ROOT
+				colonial_region = colonial_alaska
+			}
+		}
+
+		ai_chance = { factor = 0 }
+
+		unset_disabled_colonial_nation_spawning_for_region = {
+			colonial_region = colonial_alaska
+		}
+	}
+
+	option = {
+		name = colonial_canada
+
+		trigger = {
+			has_disabled_colonial_nation_spawning = {
+				who = ROOT
+				colonial_region = colonial_canada
+			}
+		}
+
+		ai_chance = { factor = 0 }
+
+		unset_disabled_colonial_nation_spawning_for_region = {
+			colonial_region = colonial_canada
+		}
+	}
+
+	option = {
+		name = colonial_eastern_america
+
+		trigger = {
+			has_disabled_colonial_nation_spawning = {
+				who = ROOT
+				colonial_region = colonial_eastern_america
+			}
+		}
+
+		ai_chance = { factor = 0 }
+
+		unset_disabled_colonial_nation_spawning_for_region = {
+			colonial_region = colonial_eastern_america
+		}
+	}
+
+	option = {
+		name = colonial_louisiana
+
+		trigger = {
+			has_disabled_colonial_nation_spawning = {
+				who = ROOT
+				colonial_region = colonial_louisiana
+			}
+		}
+
+		ai_chance = { factor = 0 }
+
+		unset_disabled_colonial_nation_spawning_for_region = {
+			colonial_region = colonial_louisiana
+		}
+	}
+
+	option = {
+		name = colonial_california
+
+		trigger = {
+			has_disabled_colonial_nation_spawning = {
+				who = ROOT
+				colonial_region = colonial_california
+			}
+		}
+
+		ai_chance = { factor = 0 }
+
+		unset_disabled_colonial_nation_spawning_for_region = {
+			colonial_region = colonial_california
+		}
+	}
+
+	option = {
+		name = colonial_mexico
+
+		trigger = {
+			has_disabled_colonial_nation_spawning = {
+				who = ROOT
+				colonial_region = colonial_mexico
+			}
+		}
+
+		ai_chance = { factor = 0 }
+
+		unset_disabled_colonial_nation_spawning_for_region = {
+			colonial_region = colonial_mexico
+		}
+	}
+
+	option = {
+		name = colonial_the_carribean
+
+		trigger = {
+			has_disabled_colonial_nation_spawning = {
+				who = ROOT
+				colonial_region = colonial_the_carribean
+			}
+		}
+
+		ai_chance = { factor = 0 }
+
+		unset_disabled_colonial_nation_spawning_for_region = {
+			colonial_region = colonial_the_carribean
+		}
+	}
+
+	option = {
+		name = colonial_colombia
+
+		trigger = {
+			has_disabled_colonial_nation_spawning = {
+				who = ROOT
+				colonial_region = colonial_colombia
+			}
+		}
+
+		ai_chance = { factor = 0 }
+
+		unset_disabled_colonial_nation_spawning_for_region = {
+			colonial_region = colonial_colombia
+		}
+	}
+
+	option = {
+		name = colonial_peru
+
+		trigger = {
+			has_disabled_colonial_nation_spawning = {
+				who = ROOT
+				colonial_region = colonial_peru
+			}
+		}
+
+		ai_chance = { factor = 0 }
+
+		unset_disabled_colonial_nation_spawning_for_region = {
+			colonial_region = colonial_peru
+		}
+	}
+
+	option = {
+		name = colonial_la_plata
+
+		trigger = {
+			has_disabled_colonial_nation_spawning = {
+				who = ROOT
+				colonial_region = colonial_la_plata
+			}
+		}
+
+		ai_chance = { factor = 0 }
+
+		unset_disabled_colonial_nation_spawning_for_region = {
+			colonial_region = colonial_la_plata
+		}
+	}
+
+	option = {
+		name = colonial_brazil
+
+		trigger = {
+			has_disabled_colonial_nation_spawning = {
+				who = ROOT
+				colonial_region = colonial_brazil
+			}
+		}
+
+		ai_chance = { factor = 0 }
+
+		unset_disabled_colonial_nation_spawning_for_region = {
+			colonial_region = colonial_brazil
+		}
+	}
+
+	option = {
+		name = colonial_australia
+
+		trigger = {
+			has_disabled_colonial_nation_spawning = {
+				who = ROOT
+				colonial_region = colonial_australia
+			}
+		}
+
+		ai_chance = { factor = 0 }
+
+		unset_disabled_colonial_nation_spawning_for_region = {
+			colonial_region = colonial_australia
+		}
+	}
+
+	# Extended Timeline:
+	option = {
+		name = colonial_oceania
+
+		trigger = {
+			has_disabled_colonial_nation_spawning = {
+				who = ROOT
+				colonial_region = colonial_oceania
+			}
+		}
+
+		ai_chance = { factor = 0 }
+
+		unset_disabled_colonial_nation_spawning_for_region = {
+			colonial_region = colonial_oceania
+		}
+	}
+
+	option = {
+		name = colonial_south_africa
+
+		trigger = {
+			has_disabled_colonial_nation_spawning = {
+				who = ROOT
+				colonial_region = colonial_south_africa
+			}
+		}
+
+		ai_chance = { factor = 0 }
+
+		unset_disabled_colonial_nation_spawning_for_region = {
+			colonial_region = colonial_south_africa
+		}
+	}
+
+	option = {
+		name = colonial_zambezi
+
+		trigger = {
+			has_disabled_colonial_nation_spawning = {
+				who = ROOT
+				colonial_region = colonial_zambezi
+			}
+		}
+
+		ai_chance = { factor = 0 }
+
+		unset_disabled_colonial_nation_spawning_for_region = {
+			colonial_region = colonial_zambezi
+		}
+	}
+
+	option = {
+		name = colonial_congo
+
+		trigger = {
+			has_disabled_colonial_nation_spawning = {
+				who = ROOT
+				colonial_region = colonial_congo
+			}
+		}
+
+		ai_chance = { factor = 0 }
+
+		unset_disabled_colonial_nation_spawning_for_region = {
+			colonial_region = colonial_congo
+		}
+	}
+
+	option = {
+		name = colonial_east_africa
+
+		trigger = {
+			has_disabled_colonial_nation_spawning = {
+				who = ROOT
+				colonial_region = colonial_east_africa
+			}
+		}
+
+		ai_chance = { factor = 0 }
+
+		unset_disabled_colonial_nation_spawning_for_region = {
+			colonial_region = colonial_east_africa
+		}
+	}
+
+	option = {
+		name = colonial_ethiopia
+
+		trigger = {
+			has_disabled_colonial_nation_spawning = {
+				who = ROOT
+				colonial_region = colonial_ethiopia
+			}
+		}
+
+		ai_chance = { factor = 0 }
+
+		unset_disabled_colonial_nation_spawning_for_region = {
+			colonial_region = colonial_ethiopia
+		}
+	}
+
+	option = {
+		name = colonial_sudan
+
+		trigger = {
+			has_disabled_colonial_nation_spawning = {
+				who = ROOT
+				colonial_region = colonial_sudan
+			}
+		}
+
+		ai_chance = { factor = 0 }
+
+		unset_disabled_colonial_nation_spawning_for_region = {
+			colonial_region = colonial_sudan
+		}
+	}
+
+	option = {
+		name = colonial_central_africa
+
+		trigger = {
+			has_disabled_colonial_nation_spawning = {
+				who = ROOT
+				colonial_region = colonial_central_africa
+			}
+		}
+
+		ai_chance = { factor = 0 }
+
+		unset_disabled_colonial_nation_spawning_for_region = {
+			colonial_region = colonial_central_africa
+		}
+	}
+
+	option = {
+		name = colonial_niger
+
+		trigger = {
+			has_disabled_colonial_nation_spawning = {
+				who = ROOT
+				colonial_region = colonial_niger
+			}
+		}
+
+		ai_chance = { factor = 0 }
+
+		unset_disabled_colonial_nation_spawning_for_region = {
+			colonial_region = colonial_niger
+		}
+	}
+
+	option = {
+		name = colonial_ivory_coast
+
+		trigger = {
+			has_disabled_colonial_nation_spawning = {
+				who = ROOT
+				colonial_region = colonial_ivory_coast
+			}
+		}
+
+		ai_chance = { factor = 0 }
+
+		unset_disabled_colonial_nation_spawning_for_region = {
+			colonial_region = colonial_ivory_coast
+		}
+	}
+
+	option = {
+		name = colonial_mali
+
+		trigger = {
+			has_disabled_colonial_nation_spawning = {
+				who = ROOT
+				colonial_region = colonial_mali
+			}
+		}
+
+		ai_chance = { factor = 0 }
+
+		unset_disabled_colonial_nation_spawning_for_region = {
+			colonial_region = colonial_mali
+		}
+	}
+
+	option = {
+		name = colonial_west_africa
+
+		trigger = {
+			has_disabled_colonial_nation_spawning = {
+				who = ROOT
+				colonial_region = colonial_west_africa
+			}
+		}
+
+		ai_chance = { factor = 0 }
+
+		unset_disabled_colonial_nation_spawning_for_region = {
+			colonial_region = colonial_west_africa
+		}
+	}
+
+	after = {
+		clr_country_flag = release_an_annexed_annexable_colony_decision_active
+	}
+}
