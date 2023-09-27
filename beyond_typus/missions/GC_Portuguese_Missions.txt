@@ -1,4 +1,90 @@
 #Updated and scriptified by Dub.
+
+#Fix crash upon circumnavigation completed
+gc_por_5_dom = {
+	slot = 5
+	generic = no
+	ai = yes
+	potential_on_load = {
+		has_dlc = "Golden Century"
+		has_dlc = "Domination"
+	}
+	potential = {
+		has_dlc = "Golden Century"
+		has_dlc = "Domination"
+		tag = POR
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+
+	dom_portugal_exploration_ideas = {
+		icon = imperial_navy
+		required_missions = { }
+		position = 1
+
+		trigger = {
+			OR = {
+				full_idea_group = exploration_ideas
+				full_idea_group = expansion_ideas
+			}
+		}
+
+		effect = {
+			if = {
+				limit = { has_dlc = "Rights of Man" }
+				custom_tooltip = por_more_likely_to_get_expansionist_tt
+				set_country_flag = por_more_likely_to_get_expansionist_flag
+				change_ruler_stat = {
+					stat = dip
+					amount = 1
+				}
+			}
+			else = {
+				change_ruler_stat = {
+					stat = dip
+					amount = 2
+				}
+				add_prestige_or_monarch_power = { amount = 10 }
+			}
+		}
+	}
+
+	dom_portugal_circumnavigation = {
+		icon = mission_explore_the_world
+		required_missions = { dom_portugal_exploration_ideas gc_por_discovers_cape_good_hope }
+		position = 3
+
+		trigger = {
+			OR = {
+				custom_trigger_tooltip = {
+					tooltip = achievement_magellans_voyage_tooltip
+					has_country_flag = circumnavigation_first
+				}
+				custom_trigger_tooltip = {
+					tooltip = second_circumnavigation_tt
+					has_country_flag = circumnavigation_done
+				}
+			}
+		}
+
+		effect = {
+			if = {
+				limit = { has_country_flag = circumnavigation_first }
+				add_country_modifier = {
+					name = por_first_circumnavigation_modifier
+					duration = -1
+				}
+			}
+			else = {
+				add_country_modifier = {
+					name = por_first_circumnavigation_modifier
+					duration = 9125
+				}
+			}
+		}
+	}
+}
+
 gc_por_1 = {
 	slot = 1
 	generic = no
@@ -13,20 +99,20 @@ gc_por_1 = {
 		is_random_new_world = no
 	}
 	has_country_shield = yes
-	
+
 	gc_por_portugal_discovers_south_america = {
 		icon = mission_establish_high_seas_navy
 		required_missions = { gc_por_discover_african_coast }
 		position = 2
 		completed_by = 1501.1.1
-		
+
 		provinces_to_highlight = {
 			colonial_region = colonial_brazil
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 			has_discovered = ROOT
 		}
-		
-		trigger = { 
+
+		trigger = {
 			custom_trigger_tooltip = {
 				tooltip = miss_discover_brazil
 				colonial_brazil = {
@@ -42,7 +128,7 @@ gc_por_1 = {
 				}
 			}
 		}
-	
+
 		effect = {
 			add_country_modifier = {
 				name = "por_brazil_colonial"
@@ -54,14 +140,14 @@ gc_por_1 = {
 		icon = mission_iberian_conquistador
 		required_missions = { gc_por_portugal_discovers_south_america }
 		completed_by = 1540.1.1
-		
+
 		provinces_to_highlight = {
 			colonial_region = colonial_brazil
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 			has_discovered = ROOT
 		}
-		
-		trigger = { 
+
+		trigger = {
 			custom_trigger_tooltip = {
 				tooltip = por_establishes_foothold_brazil.tooltip
 				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
@@ -71,7 +157,7 @@ gc_por_1 = {
 				}
 			}
 		}
-		
+
 		effect = {
 			add_country_modifier = {
 				name = "por_brazil_tariffs"
@@ -82,13 +168,13 @@ gc_por_1 = {
 	gc_por_bandeirantes = {
 		icon = mission_brazilian_bandeirantes
 		required_missions = { gc_por_establishes_foothold_brazil }
-		
+
 		provinces_to_highlight = {
 			gc_por_bandeirantes_provinces = yes
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 			has_discovered = ROOT
 		}
-		
+
 		trigger = {
 			if = {
 				limit = {
@@ -108,7 +194,7 @@ gc_por_1 = {
 				}
 			}
 			has_fulfiled_province_requirement_for_mission_trigger = {
-                tooltip=country_holds_or_non_sovereign_subject_holds_highlighted 
+                tooltip=country_holds_or_non_sovereign_subject_holds_highlighted
                 provinces=gc_por_bandeirantes_provinces
                 owner_type=country_or_non_sovereign_subject_holds
             }
@@ -139,12 +225,12 @@ gc_por_1 = {
 	gc_por_jesuits = {
 		icon = mission_establish_jesuit_missions
 		required_missions = { gc_por_bandeirantes }
-		
+
 		provinces_to_highlight = {
 			colonial_region = colonial_brazil
 			has_discovered = ROOT
 		}
-		
+
 		trigger = {
 			custom_trigger_tooltip = {
 				tooltip = port_jesuits_tooltip
@@ -189,7 +275,7 @@ gc_por_1_b = {
 		icon = mission_wine_monopolies
 		required_missions = {  }
 		position = 6
-		
+
 		provinces_to_highlight = {
 			trade_goods = wine
 			NOT = { owned_by = ROOT }
@@ -201,7 +287,7 @@ gc_por_1_b = {
 			}
 			has_discovered = ROOT
 		}
-		
+
 		trigger = {
 			OR = {
 				custom_trigger_tooltip = {
@@ -231,11 +317,11 @@ gc_por_1_b = {
 	gc_por_trading_houses = {
 		icon = mission_great_trading_houses
 		required_missions = { gc_por_wine_monopolies }
-		
+
 		provinces_to_highlight = {
 			province_id = 224
 		}
-		
+
 		trigger = {
 			OR = {
 				num_of_merchants = 8 #Upped from 6 due to +1 base merchants and new colonial regions.
@@ -261,15 +347,15 @@ gc_por_1_b = {
 	gc_por_universities = {
 		icon = mission_arts_and_letters
 		required_missions = { gc_por_trading_houses }
-		
+
 		provinces_to_highlight = {
 			province_id = 227
-			NOT = { 
-				has_building = university 
+			NOT = {
+				has_building = university
 				owned_by = ROOT
-			}			
+			}
 		}
-		
+
 		trigger = {
 			university = 8
 			227 = {
@@ -299,12 +385,12 @@ gc_por_2 = {
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
-	
+
 	gc_por_discover_african_coast = {
 		icon = mission_establish_high_seas_navy
 		required_missions = { }
 		completed_by = 1445.1.1
-		
+
 		trigger = {
 			custom_trigger_tooltip = {
 				tooltip = miss_discover_west_africa
@@ -314,7 +400,7 @@ gc_por_2 = {
 			}
 			num_of_colonists = 1
 		}
-		
+
 		effect = {
 			add_prestige = 10
 			add_country_modifier = {
@@ -327,7 +413,7 @@ gc_por_2 = {
 		icon = mission_colonial
 		required_missions = { gc_por_discover_african_coast }
 		completed_by = 1445.1.1
-		
+
 		provinces_to_highlight = {
 			region = guinea_region
 			OR = {
@@ -336,8 +422,8 @@ gc_por_2 = {
 			}
 			has_discovered = ROOT
 		}
-		
-		trigger = { 
+
+		trigger = {
 			custom_trigger_tooltip = {
 				tooltip = miss_colonize_west_africa
 				guinea_region = {
@@ -346,7 +432,7 @@ gc_por_2 = {
 				}
 			}
 		}
-	
+
 		effect = {
 			create_explorer = {
 				tradition = 60
@@ -358,21 +444,21 @@ gc_por_2 = {
 		icon = mission_african_soldier
 		required_missions = { gc_por_colonise_west_africa }
 		completed_by = 1584.1.1
-		
+
 		provinces_to_highlight = {
 			region = kongo_region
 			NOT = { owned_by = ROOT }
 			has_discovered = ROOT
 		}
-		
-		trigger = { 
+
+		trigger = {
 			custom_trigger_tooltip = {
 				tooltip = miss_discover_kongo
 				kongo_region = {
 					has_discovered = ROOT
 				}
 			}
-			custom_trigger_tooltip = {	
+			custom_trigger_tooltip = {
 				tooltip = miss_colonize_kongo
 				kongo_region = {
 					owned_by = ROOT
@@ -380,7 +466,7 @@ gc_por_2 = {
 				}
 			}
 		}
-	
+
 		effect = {
 			hidden_effect = {
 				4097 = {
@@ -417,7 +503,7 @@ gc_por_2_b = {
 		icon = mission_the_triangle_trade
 		required_missions = { gc_por_colonise_central_africa gc_por_establishes_foothold_brazil }
 		position = 4
-		
+
 		provinces_to_highlight = {
 			OR = {
 				province_id = 1466
@@ -429,7 +515,7 @@ gc_por_2_b = {
 			}
 			has_discovered = ROOT
 		}
-		
+
 		trigger = {
 			1466 = {
 				is_strongest_trade_power = ROOT
@@ -480,16 +566,16 @@ gc_por_2_c = {
 		icon = mission_african_gold
 		required_missions = { gc_por_discovers_east_africa }
 		position = 5
-		
+
 		provinces_to_highlight = {
 			gc_por_african_gold_provinces = yes
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 			has_discovered = ROOT
 		}
-		
+
 		trigger = {
 			has_fulfiled_province_requirement_for_mission_trigger = {
-                tooltip=country_holds_or_non_sovereign_subject_holds_highlighted 
+                tooltip=country_holds_or_non_sovereign_subject_holds_highlighted
                 provinces=gc_por_african_gold_provinces
                 owner_type=country_or_non_sovereign_subject_holds
             }
@@ -537,16 +623,16 @@ gc_por_2_c = {
 		icon = mission_portuguese_ceylon
 		required_missions = { gc_por_malabar }
 		position = 7
-		
+
 		provinces_to_highlight = {
 			gc_por_ceylon_provinces = yes
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 			has_discovered = ROOT
 		}
-		
+
 		trigger = {
 			has_fulfiled_province_requirement_for_mission_trigger = {
-                tooltip=country_holds_or_non_sovereign_subject_holds_highlighted 
+                tooltip=country_holds_or_non_sovereign_subject_holds_highlighted
                 provinces=gc_por_ceylon_provinces
                 owner_type=country_or_non_sovereign_subject_holds
             }
@@ -558,16 +644,16 @@ gc_por_2_c = {
 	gc_por_burma = {
 		icon = mission_portuguese_burma
 		required_missions = { gc_por_surat }
-		
+
 		provinces_to_highlight = {
 			gc_por_burma_provinces = yes
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 			has_discovered = ROOT
 		}
-		
+
 		trigger = {
 			has_fulfiled_province_requirement_for_mission_trigger = {
-                tooltip=country_holds_or_non_sovereign_subject_holds_highlighted 
+                tooltip=country_holds_or_non_sovereign_subject_holds_highlighted
                 provinces=gc_por_burma_provinces
                 owner_type=country_or_non_sovereign_subject_holds
             }
@@ -601,7 +687,7 @@ gc_por_3 = {
 	gc_por_english_alliance = {
 		icon = mission_anglo_portuguese_alliance
 		required_missions = {  }
-		
+
 		trigger = {
 			if = {
 				limit = {
@@ -650,7 +736,7 @@ gc_por_3 = {
 		}
 	}
 }
-	
+
 gc_por_3_b = {
 	slot = 3
 	generic = no
@@ -669,7 +755,7 @@ gc_por_3_b = {
 		icon = mission_colonize_the_caribbean
 		required_missions = { gc_por_discover_african_coast }
 		position = 2
-		
+
 		provinces_to_highlight = {
 			OR = {
 				colonial_region = colonial_the_carribean
@@ -680,7 +766,7 @@ gc_por_3_b = {
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 			has_discovered = ROOT
 		}
-		
+
 		trigger = {
 			OR = {
 				custom_trigger_tooltip = {
@@ -716,9 +802,9 @@ gc_por_3_b = {
 					}
 				}
 			}
-			
+
 		}
-		
+
 		effect = {
 			custom_tooltip = portuguese_carib_tooltip
 			hidden_effect = {
@@ -761,7 +847,7 @@ gc_por_3_c = {
 		required_missions = { gc_por_colonise_west_africa }
 		completed_by = 1499.1.1
 		position = 3
-		
+
 		trigger = {
 			custom_trigger_tooltip = {
 				tooltip = miss_discover_south_africa
@@ -772,7 +858,7 @@ gc_por_3_c = {
 			light_ship_fraction = 0.25
 			navy_size_percentage = 1
 		}
-	
+
 		effect = {
 			add_prestige = 10
 			add_yearly_sailors = 3
@@ -790,14 +876,14 @@ gc_por_3_c = {
 		icon = mission_have_two_subjects
 		required_missions = { gc_por_discovers_cape_good_hope }
 		completed_by = 1530.1.1
-		
+
 		provinces_to_highlight = {
 			gc_por_discovers_east_africa_provinces = yes
 			NOT = { owned_by = ROOT }
 			has_discovered = ROOT
 		}
-		
-		trigger = { 
+
+		trigger = {
 			custom_trigger_tooltip = {
 				tooltip = miss_discover_east_africa
 				east_africa_region = {
@@ -810,7 +896,7 @@ gc_por_3_c = {
                 owner_type=owned_by
             }
 		}
-	
+
 		effect = {
 			add_prestige = 10
 			#I don't understand all these claims and why they're permanent. They're not required whatsoever. I'll make them regular claims.
@@ -837,19 +923,19 @@ gc_por_3_c = {
 		icon = mission_cannons_firing
 		required_missions = { gc_por_discovers_east_africa }
 		position = 5
-		
+
 		provinces_to_highlight = {
 			province_id = 1201
 			NOT = { owned_by = ROOT }
 			has_discovered = ROOT
 		}
-		
-		trigger = { 
+
+		trigger = {
 			1201 = {
 				owned_by = ROOT
 			}
 		}
-	
+
 		effect = {
 			1201 = {
 				add_base_production = 3
@@ -864,16 +950,16 @@ gc_por_3_c = {
 	gc_por_malabar = {
 		icon = mission_portuguese_malabar
 		required_missions = { gc_portugal_discovers_india }
-		
+
 		provinces_to_highlight = {
 			gc_por_malabar_provinces = yes
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 			has_discovered = ROOT
 		}
-		
+
 		trigger = {
 			has_fulfiled_province_requirement_for_mission_trigger = {
-                tooltip=country_holds_or_non_sovereign_subject_holds_highlighted 
+                tooltip=country_holds_or_non_sovereign_subject_holds_highlighted
                 provinces=gc_por_malabar_provinces
                 owner_type=country_or_non_sovereign_subject_holds
             }
@@ -886,16 +972,16 @@ gc_por_3_c = {
 	gc_por_surat = {
 		icon = mission_control_surat
 		required_missions = { gc_por_malabar }
-		
+
 		provinces_to_highlight = {
 			gc_por_surat_provinces = yes
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 			has_discovered = ROOT
 		}
-		
+
 		trigger = {
 			has_fulfiled_province_requirement_for_mission_trigger = {
-                tooltip=country_holds_or_non_sovereign_subject_holds_highlighted 
+                tooltip=country_holds_or_non_sovereign_subject_holds_highlighted
                 provinces=gc_por_surat_provinces
                 owner_type=country_or_non_sovereign_subject_holds
             }
@@ -919,7 +1005,7 @@ gc_por_3_c = {
 	gc_por_indian_investment = {
 		icon = mission_indian_trade_company
 		required_missions = { gc_por_surat }
-		
+
 		trigger = {
 			if = {
 				limit = {
@@ -956,6 +1042,39 @@ gc_por_3_c = {
 			country_event = { id = flavor_por.4 }
 		}
 	}
+
+	dom_portugal_reform_navy = {
+		icon = mission_aragonese_navy
+		required_missions = { gc_por_flagship }
+		position = 11
+		trigger = {
+			num_of_owned_provinces_with = {
+				has_shipyard_building_trigger = yes
+				value = 6
+			}
+			OR = {
+				navy_tradition = 75
+				navy_size = 80
+			}
+		}
+		effect = {
+			if = {
+				limit = { has_dlc = "Domination" }
+				add_country_modifier = {
+					name = por_reform_navy_1_modifier
+					duration = -1
+				}
+			}
+			else = {
+				define_advisor = {
+					type = naval_reformer
+					skill = 3
+					cost_multiplier = 0.25
+				}
+				add_navy_tradition = 25
+			}
+		}
+	}
 }
 
 gc_por_4 = {
@@ -974,7 +1093,7 @@ gc_por_4 = {
 	gc_por_flagship = {
 		icon = mission_launch_a_flagship
 		required_missions = {  }
-		
+
 		trigger = {
 			has_flagship = yes
 		}
@@ -986,15 +1105,15 @@ gc_por_4 = {
 	gc_por_intervene_in_castile = {
 		icon = mission_intervene_in_castile
 		required_missions = { gc_por_flagship gc_por_english_alliance }
-		
+
 		provinces_to_highlight = {
 			gc_por_intervene_in_castile_provinces = yes
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
-		
+
 		trigger = {
 			has_fulfiled_province_requirement_for_mission_trigger = {
-                tooltip=country_holds_or_non_sovereign_subject_holds_highlighted 
+                tooltip=country_holds_or_non_sovereign_subject_holds_highlighted
                 provinces=gc_por_intervene_in_castile_provinces
                 owner_type=country_or_non_sovereign_subject_holds
             }
@@ -1006,15 +1125,15 @@ gc_por_4 = {
 	gc_por_lusitanian_empire = {
 		icon = mission_lusitanian_empire
 		required_missions = { gc_por_intervene_in_castile }
-		
+
 		provinces_to_highlight = {
 			gc_por_lusitanian_empire_provinces = yes
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
-		
+
 		trigger = {
 			has_fulfiled_province_requirement_for_mission_trigger = {
-                tooltip=country_holds_or_non_sovereign_subject_holds_highlighted 
+                tooltip=country_holds_or_non_sovereign_subject_holds_highlighted
                 provinces=gc_por_lusitanian_empire_provinces
                 owner_type=country_or_non_sovereign_subject_holds
             }
@@ -1035,8 +1154,8 @@ gc_por_4 = {
 		icon = mission_establish_high_seas_navy
 		required_missions = { gc_por_discovers_cape_good_hope }
 		completed_by = 1535.1.1
-		
-		trigger = { 
+
+		trigger = {
 			custom_trigger_tooltip = {
 				tooltip = miss_discover_horn_africa
 				OR = {
@@ -1046,7 +1165,7 @@ gc_por_4 = {
 				}
 			}
 		}
-	
+
 		effect = {
 			1201 = {
 				add_trade_modifier = {
@@ -1075,7 +1194,7 @@ gc_por_4 = {
 		icon = mission_trade_company_region_abroad
 		required_missions = { gc_por_discovers_horn_africa }
 		completed_by = 1536.1.1
-		
+
 		trigger = {
 			custom_trigger_tooltip = {
 				tooltip = portugal_discovers_india.tooltip
@@ -1087,7 +1206,7 @@ gc_por_4 = {
 				}
 			}
 		}
-		
+
 		effect = {
 			define_explorer = {
 				name = "Afonso de Albuquerque"
@@ -1106,13 +1225,13 @@ gc_por_4 = {
 		icon = mission_junk_boat
 		required_missions = { gc_portugal_discovers_india }
 		completed_by = 1536.1.1
-		
+
 		provinces_to_highlight = {
 			region = malaya_region
 			NOT = { owned_by = ROOT }
 			has_discovered = ROOT
 		}
-		
+
 		trigger = { #Tweaked to match vanilla coverage of Malaya, split in BT into Malaya & Sumatra.
 			OR = {
 				custom_trigger_tooltip = {
@@ -1144,9 +1263,9 @@ gc_por_4 = {
 					}
 				}
 			}
-			
+
 		}
-	
+
 		effect = {
 			add_country_modifier = {
 				name = "por_spice_trade"
@@ -1170,15 +1289,15 @@ gc_por_4 = {
 		required_missions = { gc_por_discovers_indonesia }
 		completed_by = 1542.1.1
 		position = 7
-		
-		trigger = { 
+
+		trigger = {
 			custom_trigger_tooltip = {
 				tooltip = miss_discover_south_china_sea_japan
 				japan_region = { has_discovered = ROOT }
 				south_china_region = { has_discovered = ROOT }
 			}
 		}
-	
+
 		effect = {
 			add_dip_power = 50
 			add_prestige = 30
@@ -1196,12 +1315,12 @@ gc_por_4 = {
 	gc_por_trade_with_china = {
 		icon = mission_trade_with_cathay
 		required_missions = { gc_portugal_discovers_the_far_east }
-		
+
 		provinces_to_highlight = {
 			province_id = 1371
 			has_discovered = ROOT
 		}
-		
+
 		trigger = {
 			1371 = {
 				trade_share = {
@@ -1234,7 +1353,7 @@ gc_por_4 = {
 							}
 						}
 					}
-					
+
 					hidden_effect = {
 						668 = {
 							owner = {
@@ -1255,7 +1374,7 @@ gc_por_4 = {
 	gc_por_japanese_trade = {
 		icon = mission_trade_with_japan
 		required_missions = { gc_por_trade_with_china }
-		
+
 		provinces_to_highlight = {
 			OR = {
 				province_id = 1376
@@ -1340,11 +1459,11 @@ gc_por_5 = {
 		icon = mission_sea_battles
 		required_missions = {}
 		completed_by = 1470.1.1
-		
+
 		trigger = {
 			navy_size_percentage = 1
 		}
-		
+
 		effect = {
 			add_dip_power = 50
 			add_navy_tradition = 15
@@ -1365,16 +1484,16 @@ gc_por_5 = {
 		icon = mission_unite_home_region
 		required_missions = { gc_por_build_the_navy }
 		completed_by = 1472.1.1
-		
+
 		provinces_to_highlight = {
 			province_id = 334
 			NOT = { owned_by = ROOT }
 		}
-		
+
 		trigger = {
 			owns = 334
 		}
-		
+
 		effect = {
 			add_adm_power = 150
 			add_prestige = 5
@@ -1402,17 +1521,17 @@ gc_por_5 = {
 			}
 		}
 	}
-	
+
 	gc_conquer_the_north_african_coast = {
 		icon = mission_arabian_fort
 		required_missions = { gc_por_conquer_tangiers }
 		completed_by = 1488.1.1
-		
+
 		provinces_to_highlight = {
 			gc_conquer_the_north_african_coast_provinces = yes
 			NOT = { owned_by = ROOT }
 		}
-		
+
 		trigger = {
 			has_fulfiled_province_requirement_for_mission_trigger = {
                 tooltip=country_holds_highlighted
@@ -1420,10 +1539,10 @@ gc_por_5 = {
                 owner_type=owned_by
             }
 		}
-		
+
 		effect = {
 			western_morocco_area = {
-				limit = { 
+				limit = {
 					owned_by = ROOT
 				}
 				add_province_modifier = {
@@ -1432,7 +1551,7 @@ gc_por_5 = {
 				}
 			}
 			northern_morocco_area = {
-				limit = { 
+				limit = {
 					owned_by = ROOT
 				}
 				add_province_modifier = {
@@ -1441,7 +1560,7 @@ gc_por_5 = {
 				}
 			}
 			marrekesh_area = {
-				limit = { 
+				limit = {
 					owned_by = ROOT
 				}
 				add_province_modifier = {
@@ -1456,19 +1575,19 @@ gc_por_5 = {
 		required_missions = { gc_por_discovers_horn_africa }
 		position = 5
 		completed_by = 1508.1.1
-		
+
 		provinces_to_highlight = {
 			province_id = 2999
 			NOT = { owned_by = ROOT }
 			has_discovered = ROOT
 		}
-		
-		trigger = { 
+
+		trigger = {
 			2999 = {
 				owned_by = ROOT
 			}
 		}
-	
+
 		effect = {
 			2999 = {
 				add_base_production = 3
@@ -1484,7 +1603,7 @@ gc_por_5 = {
 	gc_por_oman = {
 		icon = mission_portuguese_oman
 		required_missions = { gc_por_conquers_hormuz }
-		
+
 		provinces_to_highlight = {
 			OR = {
 				AND = {
@@ -1498,10 +1617,10 @@ gc_por_5 = {
 			}
 			has_discovered = ROOT
 		}
-		
+
 		trigger = {
 			has_fulfiled_province_requirement_for_mission_trigger = {
-                tooltip=country_holds_or_non_sovereign_subject_holds_highlighted 
+                tooltip=country_holds_or_non_sovereign_subject_holds_highlighted
                 provinces=gc_por_oman_provinces
                 owner_type=country_or_non_sovereign_subject_holds
             }
@@ -1532,13 +1651,13 @@ gc_por_5 = {
 	gc_por_malacca = {
 		icon = mission_portuguese_malacca
 		required_missions = { gc_por_discovers_indonesia }
-		
+
 		provinces_to_highlight = {
 			province_id = 596
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 			has_discovered = ROOT
 		}
-		
+
 		trigger = {
 			owns_core_province = 596
 		}
@@ -1561,18 +1680,18 @@ gc_por_5 = {
 	gc_por_indonesia_dominance = {
 		icon = mission_junk_boat
 		required_missions = { gc_por_malacca }
-		
+
 		provinces_to_highlight = {
 			province_id = 1361
 			has_discovered = ROOT
 		}
-		
-		trigger = { 
+
+		trigger = {
 			1361 = {		# Straits of Johor
 				is_strongest_trade_power = POR
 			}
 		}
-	
+
 		effect = {
 			add_country_modifier = {
 				name = "por_johor_dominance"
