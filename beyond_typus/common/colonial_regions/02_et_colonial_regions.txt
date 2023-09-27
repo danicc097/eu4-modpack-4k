@@ -1,3 +1,5 @@
+#requires extended_timeline colonial localisation
+
 # Australia
 colonial_australia = {
 	color = { 25 25 160 }
@@ -7,7 +9,7 @@ colonial_australia = {
 	native_size = 4
 	native_ferocity = 1
 	native_hostileness = 4
-	
+
 	trade_goods = {
 		grain = 20
 		wool = 4
@@ -17,11 +19,11 @@ colonial_australia = {
 		cotton = 1
 		iron = 1
 	}
-	
+
 	culture = {
 		aboriginal = 10
 	}
-	
+
 	religion = {
 		animism = 10
 	}
@@ -29,10 +31,10 @@ colonial_australia = {
 	provinces = {
 1084 1085 1086 1087 1088 1089 1090 1091 1092 1093 1094 1790 1791 3044 3045 2726 2736 2727
 2728 2729 2730 2731 2732 2733 3048 3049 3050 3051 3052 3053 3054 3055 3056
-2735 2734 3119 3122 3144 3145 4846 4847 4848 4849 4850 4851 4852 4853 4854 4855 4856 4857 
+2735 2734 3119 3122 3144 3145 4846 4847 4848 4849 4850 4851 4852 4853 4854 4855 4856 4857
 4858 4859 4860 4861 4862 4863 4864 4865 4866 4867 4868 4869
 	}
-	
+
 	# Specific
 	names = {
 		trigger = {
@@ -83,7 +85,7 @@ colonial_oceania = {
 	native_size = 6
 	native_ferocity = 2
 	native_hostileness = 5
-	
+
 	trade_goods = {
 		fish = 15
 		naval_supplies = 3
@@ -92,14 +94,14 @@ colonial_oceania = {
 		copper = 1
 		sugar = 1
 	}
-	
+
 	culture = {
 		papuan = 2
 		polynesian = 10
 		melanesian = 10
 		moluccan = 2
 	}
-	
+
 	religion = {
 		animism = 10
 	}
@@ -109,7 +111,7 @@ colonial_oceania = {
 1989 1990 1991 1992 1993 1994 1995 1996 1997
 2722 2721 2720 2719 2738 2737 2739 3112 3113 3142 3214 3215 3216 3217 3238 3239 3240 4934 4935 4936 4937 4938 4939
 	}
-	
+
 	# Specific
 	names = {
 		trigger = {
@@ -180,7 +182,7 @@ colonial_south_africa = {
 	native_size = 10
 	native_ferocity = 5
 	native_hostileness = 8
-	
+
 	trade_goods = {
 		grain = 7
 		wine = 3
@@ -190,11 +192,11 @@ colonial_south_africa = {
 		gold = 1
 		fish = 1
 	}
-	
+
 	culture = {
 		bantu = 10
 	}
-	
+
 	religion = {
 		shamanism = 10
 	}
@@ -204,7 +206,7 @@ colonial_south_africa = {
 3065 3066 3067 3071 2864 4781 789 2880 2856 833 3223 3224 3225 4782 4784 3226 3227
 3228
 	}
-	
+
 	# Specific
 	names = {
 		trigger = {
@@ -240,7 +242,7 @@ colonial_zambezi = {
 	native_size = 10
 	native_ferocity = 5
 	native_hostileness = 8
-	
+
 	trade_goods = {
 		grain = 7
 		ivory = 7
@@ -248,13 +250,13 @@ colonial_zambezi = {
 		wool = 1
 		gold = 1
 	}
-	
+
 	culture = {
 		bantu = 10
 		shona = 10
 		swahili = 4
 	}
-	
+
 	religion = {
 		shamanism = 10
 	}
@@ -265,7 +267,7 @@ colonial_zambezi = {
 4106 4046 4047 4039 4034 4048 4035 4036 4049 4044 4045 1194 4031 4023 4021 4024 4027 4026
 4032 4029 1800 3264 3265 3266
 	}
-	
+
 	# Specific
 	names = {
 		trigger = {
@@ -317,7 +319,7 @@ colonial_congo = {
 	native_size = 10
 	native_ferocity = 5
 	native_hostileness = 8
-	
+
 	trade_goods = {
 		grain = 6
 		naval_supplies = 6
@@ -327,11 +329,11 @@ colonial_congo = {
 		ivory = 1
 		fish = 1
 	}
-	
+
 	culture = {
 		kongolese = 10
 	}
-	
+
 	religion = {
 		shamanism = 10
 	}
@@ -342,7 +344,7 @@ colonial_congo = {
 4092 4095 4098 4096 4097 4105 4109 4068 4100 3219 3220 3221 3222 3229 3230 3233
 3234 4080 3237 3261
 	}
-	
+
 	# Specific
 	names = {
 		trigger = {
@@ -365,7 +367,7 @@ colonial_east_africa = {
 	native_size = 10
 	native_ferocity = 5
 	native_hostileness = 8
-	
+
 	trade_goods = {
 		grain = 11
 		wool = 7
@@ -376,12 +378,12 @@ colonial_east_africa = {
 		spices = 1
 		salt = 1
 	}
-	
+
 	culture = {
 		bantu = 5
 		swahili = 4
 	}
-	
+
 	religion = {
 		shamanism = 10
 	}
@@ -391,7 +393,7 @@ colonial_east_africa = {
 4058 4055 2796 1925 1198 1197 4043 4042 4041 4077 4076 4071 4069 4063 4057 4059
 4066 4065 4075 4062 4053 4060 4051 4052
 	}
-	
+
 	# Specific
 
 	# Generic
@@ -409,7 +411,7 @@ colonial_ethiopia = {
 	native_size = 10
 	native_ferocity = 5
 	native_hostileness = 8
-	
+
 	trade_goods = {
 		grain = 11
 		wool = 7
@@ -420,11 +422,11 @@ colonial_ethiopia = {
 		spices = 1
 		salt = 1
 	}
-	
+
 	culture = {
 		somali = 8
 	}
-	
+
 	religion = {
 		shamanism = 10
 	}
@@ -435,7 +437,7 @@ colonial_ethiopia = {
 2791 2761 1210 2773 1208 2793 2792 2790 2789 2786 2788 1206 2024 2783 2795 2785 2782
 2780 2776 2775 2777 2794 2774 1799 4158 3267 3268
 	}
-	
+
 	# Specific
 	names = {
 		trigger = {
@@ -463,18 +465,18 @@ colonial_sudan = {
 	native_size = 10
 	native_ferocity = 5
 	native_hostileness = 8
-	
+
 	trade_goods = {
 		wool = 6
 		grain = 4
 		ivory = 3
 		slaves = 1
 	}
-	
+
 	culture = {
 		nubian = 10
 	}
-	
+
 	religion = {
 		shamanism = 10
 	}
@@ -483,7 +485,7 @@ colonial_sudan = {
 1216 2801 1220 1221 1222 1225 1226 1228 1229 1232 3024 1219 1217 3026 3032 2322 2323
 2797 774 2802 2800 2798 2799 3075 3076 1798 4033
 	}
-	
+
 	# Specific
 
 	# Generic
@@ -504,7 +506,7 @@ colonial_central_africa = {
 	native_size = 10
 	native_ferocity = 5
 	native_hostileness = 8
-	
+
 	trade_goods = {
 		grain = 7
 		ivory = 3
@@ -512,13 +514,13 @@ colonial_central_africa = {
 		coffee = 1
 		slaves = 1
 	}
-	
+
 	culture = {
 		kongolese = 6
 		mali = 4
 		tuareg = 2
 	}
-	
+
 	religion = {
 		shamanism = 10
 	}
@@ -527,7 +529,7 @@ colonial_central_africa = {
 1097 1158 1159 1164 1165 1166 1169 1249 1796 3019 3020 3021 1160 3022 3023 2932 2475 3027
 2286 3033 1306 3059 3060 3062 3063 3064 2288 2287 3074 3101 3102 3103 3231 3232 3235 4078
 	}
-	
+
 	# Specific
 	names = {
 		trigger = {
@@ -567,20 +569,20 @@ colonial_niger = {
 	native_size = 10
 	native_ferocity = 5
 	native_hostileness = 8
-	
+
 	trade_goods = {
 		grain = 18
 		salt = 3
 		ivory = 2
 		wool = 1
 	}
-	
+
 	culture = {
 		mali = 14
 		yorumba = 5
 		bantu = 4
 	}
-	
+
 	religion = {
 		shamanism = 10
 	}
@@ -590,7 +592,7 @@ colonial_niger = {
 2275 2274 2290 2289 2293 2278 2281 2280 2283 2285 2269 2268 2270 2273 2272 2276 2279 2282 2277
 2294 3273 3274
 	}
-	
+
 	# Specific
 	names = {
 		trigger = {
@@ -621,21 +623,21 @@ colonial_ivory_coast = {
 	native_size = 10
 	native_ferocity = 5
 	native_hostileness = 8
-	
+
 	trade_goods = {
 		grain = 5
 		ivory = 3
 		gold = 2
 		slaves = 1
 	}
-	
+
 	culture = {
 		yorumba = 3
 		mali = 3
 		dyola = 2
 		aka = 2
 	}
-	
+
 	religion = {
 		shamanism = 10
 	}
@@ -644,7 +646,7 @@ colonial_ivory_coast = {
 1117 1118 1119 1121 2251 1125 1126 1138 1139 1140 1141 1143 3007 2238 2241 1122 2255 2258 2257 2254
 2256 2295 2292 2291 2242 3260 3269 3270 3271 3272 3273
 	}
-	
+
 	# Specific
 	names = {
 		trigger = {
@@ -673,18 +675,18 @@ colonial_mali = {
 	native_size = 10
 	native_ferocity = 5
 	native_hostileness = 8
-	
+
 	trade_goods = {
 		grain = 7
 		salt = 4
 		ivory = 1
 		gold = 1
 	}
-	
+
 	culture = {
 		mali = 10
 	}
-	
+
 	religion = {
 		shamanism = 10
 	}
@@ -693,7 +695,7 @@ colonial_mali = {
 1120 1123 2253 1128 1129 1130 1131 1132 1133 1134 1135 1136 1137 2245 2248 1124 2249 2250 2260 2259 2261
 2263 2264 2262 2252 2267 2266 2265 2271
 	}
-	
+
 	# Specific
 
 	# Generic
@@ -714,7 +716,7 @@ colonial_west_africa = {
 	native_size = 10
 	native_ferocity = 5
 	native_hostileness = 8
-	
+
 	trade_goods = {
 		grain = 7
 		iron = 1
@@ -722,12 +724,12 @@ colonial_west_africa = {
 		slaves = 1
 		fish = 1
 	}
-	
+
 	culture = {
 		senegambian = 6
 		tuareg = 4
 	}
-	
+
 	religion = {
 		shamanism = 10
 	}
@@ -735,7 +737,7 @@ colonial_west_africa = {
 	provinces = {
 1096 1111 1112 1113 1114 1115 1116 1793 3006 3029 2244 2243 2247 2246 2240 2237 2239 3259 4569
 	}
-	
+
 	# Specific
 	names = {
 		trigger = {
