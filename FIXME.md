@@ -5,4 +5,4 @@
    "add_estate_influence_modifier", Error: Invalid Estate Specified!
 
 - beyond typus fix for missions\DOM_Spain_Missions.txt, `spa_dominate_sevilla`
-  70% trade power
+  70% trade power. See common/tradenodes for last path
