@@ -10,4 +10,5 @@ Additional features:
 ## TODOs
 
 - Can seize land from crown colonies (FIXME: annexed back after a day since
-  province belongs to ).
+  province belongs to . see Settler Colony for subjects expanded mod since
+  that's basically what we want).
