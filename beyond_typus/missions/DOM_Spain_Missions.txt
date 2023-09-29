@@ -3751,6 +3751,11 @@ dom_cas_missions_5 = {
 				limit = { ai = no }
 				OR = {
 					treasurer = 3
+					master_of_mint = 3
+          ate_advisor_feudal_tax_collector = 3
+          ate_advisor_great_administrator = 3
+          ate_advisor_gold_digger = 3
+          ate_advisor_imperial_bureaucrat = 3
 					full_idea_group = economic_ideas
 				}
 				OR = {
