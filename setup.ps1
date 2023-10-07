@@ -27,6 +27,8 @@ if (Test-Path -Path $modBackupDir) {
 New-Item -ItemType Junction -Path $ModDir -Target (Get-Location).Path
 
 Write-Host "Mod folder $ModDir updated. Please update dlc_load.json to:"
+#     "mod/beyond_typus.mod",
+#     "mod/beyond_typus_orbis.mod",
 Write-Host '
 "enabled_mods": [
     "mod/extended_timeline_map.mod",
