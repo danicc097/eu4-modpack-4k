@@ -39,7 +39,7 @@ crown_of_castille = {
 	valid_for_nation_designer = yes
 	nation_designer_cost = 10
 	modifiers = {
-		diplomatic_upkeep = 1
+		diplomatic_upkeep = 3 #+2 to account for corsica and sardinia at least in beyond typus
 	}
 	custom_attributes = {
 		enables_trade_princes = yes #1 Merchant if you got a aragonese of catalan vassal

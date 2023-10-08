@@ -21,7 +21,7 @@ Code
 
 static const float3 LIGHT_DIFFUSE				= float3( 1.0f, 1.0f, 1.0f );
 static const float  LIGHT_INTENSITY   			= 1.0f;
-static const float  AMBIENT						= 0.2f;
+static const float  AMBIENT						= 1.0f;
 static const float3 MAP_LIGHT_DIFFUSE			= float3( 0.5f, 0.5f, 0.5f );
 static const float  MAP_LIGHT_INTENSITY   		= 1.1f;
 static const float  MAP_AMBIENT					= 0.85f; // illusionary flat map
@@ -47,9 +47,9 @@ static const float 	BORDER_TILE					= 0.2f;
 
 
 
-// Snow color									standardfuncsgfx.fxh   
+// Snow color									standardfuncsgfx.fxh
 // const static float3 SNOW_COLOR = float3( 0.8f, 0.8f, 0.8f );
-// Snow fade									standardfuncsgfx.fxh   
+// Snow fade									standardfuncsgfx.fxh
 // 	float vSnow = saturate( saturate( vNoise - ( 1.0f - vIsSnow ) ) * 5.0f );
 
 static const float 	TREE_SEASON_MIN 			= 0.5f;
@@ -70,7 +70,7 @@ static const float 	WATER_TIME_SCALE			= 5.0f;
 // --------------------------------------------------------------
 
 //	PORT_SHIP_OFFSET = 2.0,					defines.lua   (reload defines)
-//	SHIP_IN_PORT_SCALE = 0.25,				
+//	SHIP_IN_PORT_SCALE = 0.25,
 //  BUILDING SIZE?
 
 
