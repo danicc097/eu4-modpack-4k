@@ -173,65 +173,6 @@ colonial_oceania = {
 	}
 }
 
-# South Africa
-colonial_south_africa = {
-	color = { 106 112 32 }
-
-	# Random New World
-	tax_income = 1
-	native_size = 10
-	native_ferocity = 5
-	native_hostileness = 8
-
-	trade_goods = {
-		grain = 7
-		wine = 3
-		copper = 2
-		wool = 1
-		ivory = 1
-		gold = 1
-		fish = 1
-	}
-
-	culture = {
-		bantu = 10
-	}
-
-	religion = {
-		shamanism = 10
-	}
-
-	provinces = {
-1098 1173 1174 1175 1176 1177 1178 1179 1180 1181 1801 4783 3011 3012 3013 3014 3058
-3065 3066 3067 3071 2864 4781 789 2880 2856 833 3223 3224 3225 4782 4784 3226 3227
-3228
-	}
-
-	# Specific
-	names = {
-		trigger = {
-			tag = NED
-		}
-		name = "COLONIAL_SOUTH_AFRICA_Batavia"
-	}
-	names = {
-		trigger = {
-			tag = GBR
-		}
-		name = "COLONIAL_SOUTH_AFRICA_Cape_Colony"
-	}
-	names = {
-		trigger = {
-			owns = 1173
-			NOT = { owns = 1177 }
-		}
-		name = "COLONIAL_SOUTH_AFRICA_Root_GetAdjective_Southwest_Africa"
-	}
-	# Generic
-	names = {
-		name = "COLONIAL_SOUTH_AFRICA_Root_GetAdjective_South_Africa"
-	}
-}
 
 # Zambezi
 colonial_zambezi = {
