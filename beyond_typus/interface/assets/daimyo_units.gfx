@@ -7,7 +7,7 @@ objectTypes = {
 		name = "daimyo_katana_01_mesh"
 		file = "gfx/models/Units/daimyo_katana_01.mesh"			
 	
-		scale = 0.35			#BTAddOn changing all unit sizes from scale 0.5 to scale 0.35
+		scale = 0.5			#BTAddOn changing all unit sizes from scale 0.5 to scale 0.35
 	}
 
 	pdxmesh = {
@@ -19,7 +19,7 @@ objectTypes = {
 		 animation = { id = "horse_walk"		type = "daimyo_cavalry_horse_moving_animation" }
 		 animation = { id = "horse_retreat"		type = "daimyo_cavalry_horse_moving_animation" }
 		
-		 scale = 0.34			#BTAddOn changed from 0.48
+		 scale = 0.5			#BTAddOn changed from 0.48
 	 }
 
 	###################################################################################################################
@@ -41,7 +41,7 @@ objectTypes = {
 		animation = { id = "horse_walk"			type = "daimyo_cavalry_rider_01_moving_animation" }	
 		animation = { id = "horse_retreat"		type = "daimyo_cavalry_rider_01_retreat_animation" }	
 		
-		scale = 0.35			#BTAddOn changing all unit sizes from scale 0.5 to scale 0.35
+		scale = 0.5			#BTAddOn changing all unit sizes from scale 0.5 to scale 0.35
 	}	
 
 	pdxmesh = {
@@ -59,7 +59,7 @@ objectTypes = {
 		animation = { id = "horse_walk"			type = "daimyo_cavalry_rider_01_moving_animation" }	
 		animation = { id = "horse_retreat"		type = "daimyo_cavalry_rider_01_retreat_animation" }	
 		
-		scale = 0.35			#BTAddOn changing all unit sizes from scale 0.5 to scale 0.35
+		scale = 0.5			#BTAddOn changing all unit sizes from scale 0.5 to scale 0.35
 	}	
 	pdxmesh = {
 		name = "daimyo_HTK_infantry_01"
@@ -76,7 +76,7 @@ objectTypes = {
 		animation = { id = "horse_walk"			type = "daimyo_cavalry_rider_01_moving_animation" }	
 		animation = { id = "horse_retreat"		type = "daimyo_cavalry_rider_01_retreat_animation" }	
 		
-		scale = 0.35			#BTAddOn changing all unit sizes from scale 0.5 to scale 0.35
+		scale = 0.5			#BTAddOn changing all unit sizes from scale 0.5 to scale 0.35
 	}
 	pdxmesh = {
 		name = "daimyo_IMG_infantry_01"
@@ -93,7 +93,7 @@ objectTypes = {
 		animation = { id = "horse_walk"			type = "daimyo_cavalry_rider_01_moving_animation" }	
 		animation = { id = "horse_retreat"		type = "daimyo_cavalry_rider_01_retreat_animation" }	
 		
-		scale = 0.35			#BTAddOn changing all unit sizes from scale 0.5 to scale 0.35
+		scale = 0.5			#BTAddOn changing all unit sizes from scale 0.5 to scale 0.35
 	}
 	pdxmesh = {
 		name = "daimyo_OTM_infantry_01"
@@ -110,7 +110,7 @@ objectTypes = {
 		animation = { id = "horse_walk"			type = "daimyo_cavalry_rider_01_moving_animation" }	
 		animation = { id = "horse_retreat"		type = "daimyo_cavalry_rider_01_retreat_animation" }	
 		
-		scale = 0.35			#BTAddOn changing all unit sizes from scale 0.5 to scale 0.35
+		scale = 0.5			#BTAddOn changing all unit sizes from scale 0.5 to scale 0.35
 	}	
 	pdxmesh = {
 		name = "daimyo_OUC_infantry_01"
@@ -127,7 +127,7 @@ objectTypes = {
 		animation = { id = "horse_walk"			type = "daimyo_cavalry_rider_01_moving_animation" }	
 		animation = { id = "horse_retreat"		type = "daimyo_cavalry_rider_01_retreat_animation" }	
 		
-		scale = 0.35			#BTAddOn changing all unit sizes from scale 0.5 to scale 0.35
+		scale = 0.5			#BTAddOn changing all unit sizes from scale 0.5 to scale 0.35
 	}
 	pdxmesh = {
 		name = "daimyo_SBA_infantry_01"
@@ -144,7 +144,7 @@ objectTypes = {
 		animation = { id = "horse_walk"			type = "daimyo_cavalry_rider_01_moving_animation" }	
 		animation = { id = "horse_retreat"		type = "daimyo_cavalry_rider_01_retreat_animation" }	
 		
-		scale = 0.35			#BTAddOn changing all unit sizes from scale 0.5 to scale 0.35
+		scale = 0.5			#BTAddOn changing all unit sizes from scale 0.5 to scale 0.35
 	}
 	pdxmesh = {
 	
@@ -162,7 +162,7 @@ objectTypes = {
 		animation = { id = "horse_walk"			type = "daimyo_cavalry_rider_01_moving_animation" }	
 		animation = { id = "horse_retreat"		type = "daimyo_cavalry_rider_01_retreat_animation" }	
 		
-		scale = 0.35			#BTAddOn changing all unit sizes from scale 0.5 to scale 0.35
+		scale = 0.5			#BTAddOn changing all unit sizes from scale 0.5 to scale 0.35
 	}
 	pdxmesh = {
 		name = "daimyo_TKD_infantry_01"
@@ -179,7 +179,7 @@ objectTypes = {
 		animation = { id = "horse_walk"			type = "daimyo_cavalry_rider_01_moving_animation" }	
 		animation = { id = "horse_retreat"		type = "daimyo_cavalry_rider_01_retreat_animation" }	
 		
-		scale = 0.35			#BTAddOn changing all unit sizes from scale 0.5 to scale 0.35
+		scale = 0.5			#BTAddOn changing all unit sizes from scale 0.5 to scale 0.35
 	}
 	pdxmesh = {
 		name = "daimyo_UES_infantry_01"
@@ -196,7 +196,7 @@ objectTypes = {
 		animation = { id = "horse_walk"			type = "daimyo_cavalry_rider_01_moving_animation" }	
 		animation = { id = "horse_retreat"		type = "daimyo_cavalry_rider_01_retreat_animation" }	
 		
-		scale = 0.35			#BTAddOn changing all unit sizes from scale 0.5 to scale 0.35
+		scale = 0.5			#BTAddOn changing all unit sizes from scale 0.5 to scale 0.35
 	}		
 	pdxmesh = {
 		name = "daimyo_RFR_infantry_01"
@@ -213,7 +213,7 @@ objectTypes = {
 		animation = { id = "horse_walk"			type = "daimyo_cavalry_rider_01_moving_animation" }	
 		animation = { id = "horse_retreat"		type = "daimyo_cavalry_rider_01_retreat_animation" }	
 		
-		scale = 0.35			#BTAddOn changing all unit sizes from scale 0.5 to scale 0.35
+		scale = 0.5			#BTAddOn changing all unit sizes from scale 0.5 to scale 0.35
 	}	
 	pdxmesh = {
 		name = "daimyo_YMN_infantry_01"
@@ -230,6 +230,6 @@ objectTypes = {
 		animation = { id = "horse_walk"			type = "daimyo_cavalry_rider_01_moving_animation" }	
 		animation = { id = "horse_retreat"		type = "daimyo_cavalry_rider_01_retreat_animation" }	
 		
-		scale = 0.35			#BTAddOn changing all unit sizes from scale 0.5 to scale 0.35
+		scale = 0.5			#BTAddOn changing all unit sizes from scale 0.5 to scale 0.35
 	}	
 }

@@ -30,7 +30,7 @@ objectTypes = {
 		animation = { id = "horse_death"		type = "marnoup_cavalry_rider_noarmor_death_animation" }
 		animation = { id = "horse_retreat"		type = "cavalry_rider_retreat_animation" }		
 		
-		scale = 0.35			#BTAddOn changing all unit sizes from scale 0.5 to scale 0.35
+		scale = 0.5			#BTAddOn changing all unit sizes from scale 0.5 to scale 0.35
 	}	
 
 	###################################################################################################################
@@ -55,7 +55,7 @@ objectTypes = {
 		animation = { id = "horse_death"		type = "marnoup_cavalry_rider_noarmor_death_animation" }
 		animation = { id = "horse_retreat"		type = "cavalry_rider_retreat_animation" }			
 		
-		scale = 0.35			#BTAddOn changing all unit sizes from scale 0.5 to scale 0.35
+		scale = 0.5			#BTAddOn changing all unit sizes from scale 0.5 to scale 0.35
 	}	
 
 	###################################################################################################################
@@ -80,7 +80,7 @@ objectTypes = {
 		animation = { id = "horse_death"		type = "marnoup_cavalry_rider_noarmor_death_animation" }
 		animation = { id = "horse_retreat"		type = "cavalry_rider_retreat_animation" }		
 		
-		scale = 0.35			#BTAddOn changing all unit sizes from scale 0.5 to scale 0.35
+		scale = 0.5			#BTAddOn changing all unit sizes from scale 0.5 to scale 0.35
 	}
 
 	###################################################################################################################
@@ -103,7 +103,7 @@ objectTypes = {
 		animation = { id = "horse_death"		type = "marnoup_cavalry_rider_noarmor_death_animation" }
 		animation = { id = "horse_retreat"		type = "cavalry_rider_retreat_animation" }				
 		
-		scale = 0.35			#BTAddOn changing all unit sizes from scale 0.5 to scale 0.35
+		scale = 0.5			#BTAddOn changing all unit sizes from scale 0.5 to scale 0.35
 	}
 	
 	##SOMALIA(MDI), copied to AJU, MRE, WAR, ADA, MJE, HOB.
@@ -131,7 +131,7 @@ objectTypes = {
 		animation = { id = "horse_death"		type = "marnoup_cavalry_rider_noarmor_death_animation" }
 		animation = { id = "horse_retreat"		type = "cavalry_rider_retreat_animation" }		
 		
-		scale = 0.35			#BTAddOn changing all unit sizes from scale 0.5 to scale 0.35
+		scale = 0.5			#BTAddOn changing all unit sizes from scale 0.5 to scale 0.35
 	}	
 
 	###################################################################################################################
@@ -156,7 +156,7 @@ objectTypes = {
 		animation = { id = "horse_death"		type = "marnoup_cavalry_rider_noarmor_death_animation" }
 		animation = { id = "horse_retreat"		type = "cavalry_rider_retreat_animation" }		
 		
-		scale = 0.35			#BTAddOn changing all unit sizes from scale 0.5 to scale 0.35
+		scale = 0.5			#BTAddOn changing all unit sizes from scale 0.5 to scale 0.35
 	}	
 
 	###################################################################################################################
@@ -181,7 +181,7 @@ objectTypes = {
 		animation = { id = "horse_death"		type = "marnoup_cavalry_rider_noarmor_death_animation" }
 		animation = { id = "horse_retreat"		type = "cavalry_rider_retreat_animation" }			
 		
-		scale = 0.35			#BTAddOn changing all unit sizes from scale 0.5 to scale 0.35
+		scale = 0.5			#BTAddOn changing all unit sizes from scale 0.5 to scale 0.35
 	}
 
 	###################################################################################################################
@@ -204,7 +204,7 @@ objectTypes = {
 		animation = { id = "horse_death"		type = "marnoup_cavalry_rider_noarmor_death_animation" }
 		animation = { id = "horse_retreat"		type = "cavalry_rider_retreat_animation" }				
 		
-		scale = 0.35			#BTAddOn changing all unit sizes from scale 0.5 to scale 0.35
+		scale = 0.5			#BTAddOn changing all unit sizes from scale 0.5 to scale 0.35
 	}
 
 	##SWAHILI(ZAN), copied to MBA, MLI, PTE, SFA.
@@ -231,7 +231,7 @@ objectTypes = {
 		animation = { id = "horse_death"		type = "marnoup_cavalry_rider_noarmor_death_animation" }
 		animation = { id = "horse_retreat"		type = "cavalry_rider_retreat_animation" }			
 		
-		scale = 0.35			#BTAddOn changing all unit sizes from scale 0.5 to scale 0.35
+		scale = 0.5			#BTAddOn changing all unit sizes from scale 0.5 to scale 0.35
 	}	
 
 	###################################################################################################################
@@ -256,7 +256,7 @@ objectTypes = {
 		animation = { id = "horse_death"		type = "marnoup_cavalry_rider_noarmor_death_animation" }
 		animation = { id = "horse_retreat"		type = "cavalry_rider_retreat_animation" }		
 		
-		scale = 0.35			#BTAddOn changing all unit sizes from scale 0.5 to scale 0.35
+		scale = 0.5			#BTAddOn changing all unit sizes from scale 0.5 to scale 0.35
 	}	
 
 	###################################################################################################################
@@ -281,7 +281,7 @@ objectTypes = {
 		animation = { id = "horse_death"		type = "marnoup_cavalry_rider_noarmor_death_animation" }
 		animation = { id = "horse_retreat"		type = "cavalry_rider_retreat_animation" }		
 		
-		scale = 0.35			#BTAddOn changing all unit sizes from scale 0.5 to scale 0.35
+		scale = 0.5			#BTAddOn changing all unit sizes from scale 0.5 to scale 0.35
 	}
 
 	###################################################################################################################
@@ -304,7 +304,7 @@ objectTypes = {
 		animation = { id = "horse_death"		type = "marnoup_cavalry_rider_noarmor_death_animation" }
 		animation = { id = "horse_retreat"		type = "cavalry_rider_retreat_animation" }				
 		
-		scale = 0.35			#BTAddOn changing all unit sizes from scale 0.5 to scale 0.35
+		scale = 0.5			#BTAddOn changing all unit sizes from scale 0.5 to scale 0.35
 	}
 	
 }

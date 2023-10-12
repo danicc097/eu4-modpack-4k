@@ -9,7 +9,7 @@ objectTypes = {
 		name = "musup_spear_mesh"
 		file = "gfx/models/Units/musup_spear.mesh"			
 	
-		scale = 0.35			#BTAddOn changing all unit sizes from scale 0.5 to scale 0.35
+		scale = 0.5			#BTAddOn changing all unit sizes from scale 0.5 to scale 0.35
 	}
 	
 	###################################################################################################################
@@ -30,7 +30,7 @@ objectTypes = {
 		animation = { id = "elephant_special_1"		type = "dharma_cavalry_elephant_muslim_special_1_animation" }		
 		
 	
-		scale = 0.35			#BTAddOn changing all unit sizes from scale 0.5 to scale 0.35
+		scale = 0.5			#BTAddOn changing all unit sizes from scale 0.5 to scale 0.35
 	}
 
 
@@ -61,7 +61,7 @@ objectTypes = {
 		animation = { id = "horse_death"			type = "cavalry_rider_death_animation" }
 		animation = { id = "horse_retreat"			type = "cavalry_rider_retreat_animation" }		
 		
-		scale = 0.35			#BTAddOn changing all unit sizes from scale 0.5 to scale 0.35
+		scale = 0.5			#BTAddOn changing all unit sizes from scale 0.5 to scale 0.35
 	}	
 	pdxmesh = {
 		name = "musup_BAH_infantry_02"
@@ -86,7 +86,7 @@ objectTypes = {
 		animation = { id = "horse_death"			type = "cavalry_rider_death_animation" }
 		animation = { id = "horse_retreat"			type = "cavalry_rider_retreat_animation" }			
 		
-		scale = 0.35			#BTAddOn changing all unit sizes from scale 0.5 to scale 0.35
+		scale = 0.5			#BTAddOn changing all unit sizes from scale 0.5 to scale 0.35
 	}	
 	pdxmesh = {
 		name = "musup_BAH_infantry_03"
@@ -111,7 +111,7 @@ objectTypes = {
 		animation = { id = "horse_death"			type = "cavalry_rider_death_animation" }
 		animation = { id = "horse_retreat"			type = "cavalry_rider_retreat_animation" }		
 		
-		scale = 0.35			#BTAddOn changing all unit sizes from scale 0.5 to scale 0.35
+		scale = 0.5			#BTAddOn changing all unit sizes from scale 0.5 to scale 0.35
 	}	
 	pdxmesh = {
 		name = "musup_BAH_infantry_04"
@@ -136,7 +136,7 @@ objectTypes = {
 		animation = { id = "horse_death"			type = "cavalry_rider_death_animation" }
 		animation = { id = "horse_retreat"			type = "cavalry_rider_retreat_animation" }	
 		
-		scale = 0.35			#BTAddOn changing all unit sizes from scale 0.5 to scale 0.35
+		scale = 0.5			#BTAddOn changing all unit sizes from scale 0.5 to scale 0.35
 	}
 	
 	
@@ -165,7 +165,7 @@ objectTypes = {
 		animation = { id = "horse_death"			type = "cavalry_rider_death_animation" }
 		animation = { id = "horse_retreat"			type = "cavalry_rider_retreat_animation" }		
 		
-		scale = 0.35			#BTAddOn changing all unit sizes from scale 0.5 to scale 0.35
+		scale = 0.5			#BTAddOn changing all unit sizes from scale 0.5 to scale 0.35
 	}	
 	pdxmesh = {
 		name = "musup_GUJ_infantry_02"
@@ -190,7 +190,7 @@ objectTypes = {
 		animation = { id = "horse_death"			type = "cavalry_rider_death_animation" }
 		animation = { id = "horse_retreat"			type = "cavalry_rider_retreat_animation" }			
 		
-		scale = 0.35			#BTAddOn changing all unit sizes from scale 0.5 to scale 0.35
+		scale = 0.5			#BTAddOn changing all unit sizes from scale 0.5 to scale 0.35
 	}	
 	pdxmesh = {
 		name = "musup_GUJ_infantry_03"
@@ -215,7 +215,7 @@ objectTypes = {
 		animation = { id = "horse_death"			type = "cavalry_rider_death_animation" }
 		animation = { id = "horse_retreat"			type = "cavalry_rider_retreat_animation" }		
 		
-		scale = 0.35			#BTAddOn changing all unit sizes from scale 0.5 to scale 0.35
+		scale = 0.5			#BTAddOn changing all unit sizes from scale 0.5 to scale 0.35
 	}	
 	pdxmesh = {
 		name = "musup_GUJ_infantry_04"
@@ -240,7 +240,7 @@ objectTypes = {
 		animation = { id = "horse_death"			type = "cavalry_rider_death_animation" }
 		animation = { id = "horse_retreat"			type = "cavalry_rider_retreat_animation" }	
 		
-		scale = 0.35			#BTAddOn changing all unit sizes from scale 0.5 to scale 0.35
+		scale = 0.5			#BTAddOn changing all unit sizes from scale 0.5 to scale 0.35
 	}
 	
 	
@@ -269,7 +269,7 @@ objectTypes = {
 		animation = { id = "horse_death"			type = "cavalry_rider_death_animation" }
 		animation = { id = "horse_retreat"			type = "cavalry_rider_retreat_animation" }		
 		
-		scale = 0.35			#BTAddOn changing all unit sizes from scale 0.5 to scale 0.35
+		scale = 0.5			#BTAddOn changing all unit sizes from scale 0.5 to scale 0.35
 	}	
 	pdxmesh = {
 		name = "musup_JNP_infantry_02"
@@ -294,7 +294,7 @@ objectTypes = {
 		animation = { id = "horse_death"			type = "cavalry_rider_death_animation" }
 		animation = { id = "horse_retreat"			type = "cavalry_rider_retreat_animation" }			
 		
-		scale = 0.35			#BTAddOn changing all unit sizes from scale 0.5 to scale 0.35
+		scale = 0.5			#BTAddOn changing all unit sizes from scale 0.5 to scale 0.35
 	}	
 	pdxmesh = {
 		name = "musup_JNP_infantry_03"
@@ -319,7 +319,7 @@ objectTypes = {
 		animation = { id = "horse_death"			type = "cavalry_rider_death_animation" }
 		animation = { id = "horse_retreat"			type = "cavalry_rider_retreat_animation" }		
 		
-		scale = 0.35			#BTAddOn changing all unit sizes from scale 0.5 to scale 0.35
+		scale = 0.5			#BTAddOn changing all unit sizes from scale 0.5 to scale 0.35
 	}	
 	pdxmesh = {
 		name = "musup_JNP_infantry_04"
@@ -344,7 +344,7 @@ objectTypes = {
 		animation = { id = "horse_death"			type = "cavalry_rider_death_animation" }
 		animation = { id = "horse_retreat"			type = "cavalry_rider_retreat_animation" }	
 		
-		scale = 0.35			#BTAddOn changing all unit sizes from scale 0.5 to scale 0.35
+		scale = 0.5			#BTAddOn changing all unit sizes from scale 0.5 to scale 0.35
 	}
 	
 	
@@ -373,7 +373,7 @@ objectTypes = {
 		animation = { id = "horse_death"			type = "cavalry_rider_death_animation" }
 		animation = { id = "horse_retreat"			type = "cavalry_rider_retreat_animation" }		
 		
-		scale = 0.35			#BTAddOn changing all unit sizes from scale 0.5 to scale 0.35
+		scale = 0.5			#BTAddOn changing all unit sizes from scale 0.5 to scale 0.35
 	}	
 	pdxmesh = {
 		name = "musup_MLW_infantry_02"
@@ -398,7 +398,7 @@ objectTypes = {
 		animation = { id = "horse_death"			type = "cavalry_rider_death_animation" }
 		animation = { id = "horse_retreat"			type = "cavalry_rider_retreat_animation" }			
 		
-		scale = 0.35			#BTAddOn changing all unit sizes from scale 0.5 to scale 0.35
+		scale = 0.5			#BTAddOn changing all unit sizes from scale 0.5 to scale 0.35
 	}	
 	pdxmesh = {
 		name = "musup_MLW_infantry_03"
@@ -423,7 +423,7 @@ objectTypes = {
 		animation = { id = "horse_death"			type = "cavalry_rider_death_animation" }
 		animation = { id = "horse_retreat"			type = "cavalry_rider_retreat_animation" }		
 		
-		scale = 0.35			#BTAddOn changing all unit sizes from scale 0.5 to scale 0.35
+		scale = 0.5			#BTAddOn changing all unit sizes from scale 0.5 to scale 0.35
 	}	
 	pdxmesh = {
 		name = "musup_MLW_infantry_04"
@@ -448,7 +448,7 @@ objectTypes = {
 		animation = { id = "horse_death"			type = "cavalry_rider_death_animation" }
 		animation = { id = "horse_retreat"			type = "cavalry_rider_retreat_animation" }	
 		
-		scale = 0.35			#BTAddOn changing all unit sizes from scale 0.5 to scale 0.35
+		scale = 0.5			#BTAddOn changing all unit sizes from scale 0.5 to scale 0.35
 	}
 	
 	
@@ -477,7 +477,7 @@ objectTypes = {
 		animation = { id = "horse_death"			type = "cavalry_rider_death_animation" }
 		animation = { id = "horse_retreat"			type = "cavalry_rider_retreat_animation" }		
 		
-		scale = 0.35			#BTAddOn changing all unit sizes from scale 0.5 to scale 0.35
+		scale = 0.5			#BTAddOn changing all unit sizes from scale 0.5 to scale 0.35
 	}	
 	pdxmesh = {
 		name = "musup_MUG_infantry_02"
@@ -502,7 +502,7 @@ objectTypes = {
 		animation = { id = "horse_death"			type = "cavalry_rider_death_animation" }
 		animation = { id = "horse_retreat"			type = "cavalry_rider_retreat_animation" }			
 		
-		scale = 0.35			#BTAddOn changing all unit sizes from scale 0.5 to scale 0.35
+		scale = 0.5			#BTAddOn changing all unit sizes from scale 0.5 to scale 0.35
 	}	
 	pdxmesh = {
 		name = "musup_MUG_infantry_03"
@@ -527,7 +527,7 @@ objectTypes = {
 		animation = { id = "horse_death"			type = "cavalry_rider_death_animation" }
 		animation = { id = "horse_retreat"			type = "cavalry_rider_retreat_animation" }		
 		
-		scale = 0.35			#BTAddOn changing all unit sizes from scale 0.5 to scale 0.35
+		scale = 0.5			#BTAddOn changing all unit sizes from scale 0.5 to scale 0.35
 	}	
 	pdxmesh = {
 		name = "musup_MUG_infantry_04"
@@ -552,7 +552,7 @@ objectTypes = {
 		animation = { id = "horse_death"			type = "cavalry_rider_death_animation" }
 		animation = { id = "horse_retreat"			type = "cavalry_rider_retreat_animation" }	
 		
-		scale = 0.35			#BTAddOn changing all unit sizes from scale 0.5 to scale 0.35
+		scale = 0.5			#BTAddOn changing all unit sizes from scale 0.5 to scale 0.35
 	}
 
 }

@@ -10,7 +10,7 @@ objectTypes = {
 		animation = { id = "horse_walk"			type = "cavalry_horse_moving_animation" }
 		animation = { id = "horse_retreat"		type = "cavalry_horse_moving_animation" }
 		
-		scale = 0.34			#BTAddOn changed from 0.48
+		scale = 0.5			#BTAddOn changed from 0.48
 	}
 	
 		pdxmesh = {
@@ -22,14 +22,14 @@ objectTypes = {
 		animation = { id = "horse_walk"			type = "cavalry_horse_moving_animation" }
 		animation = { id = "horse_retreat"		type = "cavalry_horse_moving_animation" }
 		
-		scale = 0.34			#BTAddOn changed from 0.48
+		scale = 0.5			#BTAddOn changed from 0.48
 	}
 	
 		pdxmesh = {
 		name = "meamup_shield_small_mesh"
 		file = "gfx/models/Units/meamup_shield_small.mesh"
 		
-		scale = 0.35			#BTAddOn changing all unit sizes from scale 0.5 to scale 0.35
+		scale = 0.5			#BTAddOn changing all unit sizes from scale 0.5 to scale 0.35
 	}
 	
 
@@ -37,49 +37,49 @@ objectTypes = {
 		name = "meamup_shield_MAY_mesh"
 		file = "gfx/models/Units/meamup_shield_MAY.mesh"
 		
-		scale = 0.35			#BTAddOn changing all unit sizes from scale 0.5 to scale 0.35
+		scale = 0.5			#BTAddOn changing all unit sizes from scale 0.5 to scale 0.35
 	}
 	
 		pdxmesh = {
 		name = "meamup_shield_AZT_mesh"
 		file = "gfx/models/Units/meamup_shield_AZT.mesh"
 		
-		scale = 0.35			#BTAddOn changing all unit sizes from scale 0.5 to scale 0.35
+		scale = 0.5			#BTAddOn changing all unit sizes from scale 0.5 to scale 0.35
 	}
 	
 	pdxmesh = {
 		name = "meamup_spear_mesh"
 		file = "gfx/models/Units/meamup_spear.mesh"
 		
-		scale = 0.35			#BTAddOn changing all unit sizes from scale 0.5 to scale 0.35
+		scale = 0.5			#BTAddOn changing all unit sizes from scale 0.5 to scale 0.35
 	}
 	
 		pdxmesh = {
 		name = "meamup_club_AZT_MAY_mesh"
 		file = "gfx/models/Units/meamup_club_AZT_MAY.mesh"
 		
-		scale = 0.35			#BTAddOn changing all unit sizes from scale 0.5 to scale 0.35
+		scale = 0.5			#BTAddOn changing all unit sizes from scale 0.5 to scale 0.35
 	}
 	
 	pdxmesh = {
 		name = "meamup_rifle_02_mesh"
 		file = "gfx/models/Units/meamup_rifle_02.mesh"
 		
-		scale = 0.35			#BTAddOn changing all unit sizes from scale 0.5 to scale 0.35
+		scale = 0.5			#BTAddOn changing all unit sizes from scale 0.5 to scale 0.35
 	}
 	
 	pdxmesh = {
 		name = "meamup_rifle_03_mesh"
 		file = "gfx/models/Units/meamup_rifle_03.mesh"
 		
-		scale = 0.35			#BTAddOn changing all unit sizes from scale 0.5 to scale 0.35
+		scale = 0.5			#BTAddOn changing all unit sizes from scale 0.5 to scale 0.35
 	}
 	
 			pdxmesh = {
 		name = "meamup_rifle_04_mesh"
 		file = "gfx/models/Units/meamup_rifle_04.mesh"
 		
-		scale = 0.35			#BTAddOn changing all unit sizes from scale 0.5 to scale 0.35
+		scale = 0.5			#BTAddOn changing all unit sizes from scale 0.5 to scale 0.35
 	}
 	
 
@@ -87,7 +87,7 @@ objectTypes = {
 		name = "meamup_cavalry_saber_mesh"
 		file = "gfx/models/Units/meamup_cavalry_saber.mesh"			
 		
-		scale = 0.35			#BTAddOn changing all unit sizes from scale 0.5 to scale 0.35
+		scale = 0.5			#BTAddOn changing all unit sizes from scale 0.5 to scale 0.35
 	}
 
 
@@ -110,7 +110,7 @@ pdxmesh = {
 		animation = { id = "walk"				type = "meamup_club_and_shield_moving_animation" }
 		animation = { id = "retreat"			type = "polearm_twohanded_retreat_animation" }
 		
-		scale = 0.35			#BTAddOn changing all unit sizes from scale 0.5 to scale 0.35
+		scale = 0.5			#BTAddOn changing all unit sizes from scale 0.5 to scale 0.35
 	}
 
 	pdxmesh = {
@@ -124,7 +124,7 @@ pdxmesh = {
 		animation = { id = "horse_death"		type = "cavalry_rider_death_animation" }
 		animation = { id = "horse_retreat"		type = "cavalry_rider_retreat_animation" }	
 
-		scale = 0.35			#BTAddOn changing all unit sizes from scale 0.5 to scale 0.35
+		scale = 0.5			#BTAddOn changing all unit sizes from scale 0.5 to scale 0.35
 	}
 	
 	
@@ -139,7 +139,7 @@ pdxmesh = {
 		animation = { id = "death"				type = "rifleman_death_animation" }
 		animation = { id = "retreat"			type = "rifleman_retreat_animation" }
 		
-		scale = 0.35			#BTAddOn changing all unit sizes from scale 0.5 to scale 0.35
+		scale = 0.5			#BTAddOn changing all unit sizes from scale 0.5 to scale 0.35
 	}
 
 	pdxmesh = {
@@ -153,7 +153,7 @@ pdxmesh = {
 		animation = { id = "horse_death"		type = "cavalry_rider_death_animation" }
 		animation = { id = "horse_retreat"		type = "cavalry_rider_retreat_animation" }	
 
-		scale = 0.35			#BTAddOn changing all unit sizes from scale 0.5 to scale 0.35
+		scale = 0.5			#BTAddOn changing all unit sizes from scale 0.5 to scale 0.35
 	}
 
 	
@@ -167,7 +167,7 @@ pdxmesh = {
 		animation = { id = "death"				type = "rifleman_death_animation" }
 		animation = { id = "retreat"			type = "rifleman_retreat_animation" }
 
-		scale = 0.35			#BTAddOn changing all unit sizes from scale 0.5 to scale 0.35
+		scale = 0.5			#BTAddOn changing all unit sizes from scale 0.5 to scale 0.35
 	}
 
 	pdxmesh = {
@@ -181,7 +181,7 @@ pdxmesh = {
 		animation = { id = "horse_death"		type = "cavalry_rider_death_animation" }
 		animation = { id = "horse_retreat"		type = "cavalry_rider_retreat_animation" }	
 
-		scale = 0.35			#BTAddOn changing all unit sizes from scale 0.5 to scale 0.35
+		scale = 0.5			#BTAddOn changing all unit sizes from scale 0.5 to scale 0.35
 	}
 	
 	
@@ -195,7 +195,7 @@ pdxmesh = {
 		animation = { id = "death"				type = "rifleman_death_animation" }
 		animation = { id = "retreat"			type = "rifleman_retreat_animation" }
 
-		scale = 0.35			#BTAddOn changing all unit sizes from scale 0.5 to scale 0.35
+		scale = 0.5			#BTAddOn changing all unit sizes from scale 0.5 to scale 0.35
 	}
 
 	pdxmesh = {
@@ -209,7 +209,7 @@ pdxmesh = {
 		animation = { id = "horse_death"		type = "cavalry_rider_death_animation" }
 		animation = { id = "horse_retreat"		type = "cavalry_rider_retreat_animation" }	
 
-		scale = 0.35			#BTAddOn changing all unit sizes from scale 0.5 to scale 0.35
+		scale = 0.5			#BTAddOn changing all unit sizes from scale 0.5 to scale 0.35
 	}
 	
 ###################################################################################################################
@@ -228,7 +228,7 @@ pdxmesh = {
 		animation = { id = "walk"				type = "meamup_club_and_shield_moving_animation" }
 		animation = { id = "retreat"			type = "polearm_twohanded_retreat_animation" }
 
-		scale = 0.35			#BTAddOn changing all unit sizes from scale 0.5 to scale 0.35
+		scale = 0.5			#BTAddOn changing all unit sizes from scale 0.5 to scale 0.35
 	}
 
 	pdxmesh = {
@@ -242,7 +242,7 @@ pdxmesh = {
 		animation = { id = "horse_death"		type = "cavalry_rider_death_animation" }
 		animation = { id = "horse_retreat"		type = "cavalry_rider_retreat_animation" }	
 
-		scale = 0.35			#BTAddOn changing all unit sizes from scale 0.5 to scale 0.35
+		scale = 0.5			#BTAddOn changing all unit sizes from scale 0.5 to scale 0.35
 	}
 	
 	
@@ -257,7 +257,7 @@ pdxmesh = {
 		animation = { id = "death"				type = "rifleman_death_animation" }
 		animation = { id = "retreat"			type = "rifleman_retreat_animation" }
 
-		scale = 0.35			#BTAddOn changing all unit sizes from scale 0.5 to scale 0.35
+		scale = 0.5			#BTAddOn changing all unit sizes from scale 0.5 to scale 0.35
 	}
 
 	pdxmesh = {
@@ -271,7 +271,7 @@ pdxmesh = {
 		animation = { id = "horse_death"		type = "cavalry_rider_death_animation" }
 		animation = { id = "horse_retreat"		type = "cavalry_rider_retreat_animation" }	
 
-		scale = 0.35			#BTAddOn changing all unit sizes from scale 0.5 to scale 0.35
+		scale = 0.5			#BTAddOn changing all unit sizes from scale 0.5 to scale 0.35
 	}
 
 	
@@ -285,7 +285,7 @@ pdxmesh = {
 		animation = { id = "death"				type = "rifleman_death_animation" }
 		animation = { id = "retreat"			type = "rifleman_retreat_animation" }
 
-		scale = 0.35			#BTAddOn changing all unit sizes from scale 0.5 to scale 0.35
+		scale = 0.5			#BTAddOn changing all unit sizes from scale 0.5 to scale 0.35
 	}
 
 	pdxmesh = {
@@ -299,7 +299,7 @@ pdxmesh = {
 		animation = { id = "horse_death"		type = "cavalry_rider_death_animation" }
 		animation = { id = "horse_retreat"		type = "cavalry_rider_retreat_animation" }	
 
-		scale = 0.35			#BTAddOn changing all unit sizes from scale 0.5 to scale 0.35
+		scale = 0.5			#BTAddOn changing all unit sizes from scale 0.5 to scale 0.35
 	}
 	
 	
@@ -313,7 +313,7 @@ pdxmesh = {
 		animation = { id = "death"				type = "rifleman_death_animation" }
 		animation = { id = "retreat"			type = "rifleman_retreat_animation" }
 
-		scale = 0.35			#BTAddOn changing all unit sizes from scale 0.5 to scale 0.35
+		scale = 0.5			#BTAddOn changing all unit sizes from scale 0.5 to scale 0.35
 	}
 
 	pdxmesh = {
@@ -327,7 +327,7 @@ pdxmesh = {
 		animation = { id = "horse_death"		type = "cavalry_rider_death_animation" }
 		animation = { id = "horse_retreat"		type = "cavalry_rider_retreat_animation" }	
 
-		scale = 0.35			#BTAddOn changing all unit sizes from scale 0.5 to scale 0.35
+		scale = 0.5			#BTAddOn changing all unit sizes from scale 0.5 to scale 0.35
 	}
 
 
@@ -347,7 +347,7 @@ pdxmesh = {
 		animation = { id = "walk"				type = "spear_shield_moving_animation" }
 		animation = { id = "retreat"			type = "polearm_twohanded_retreat_animation" }
 
-		scale = 0.35			#BTAddOn changing all unit sizes from scale 0.5 to scale 0.35
+		scale = 0.5			#BTAddOn changing all unit sizes from scale 0.5 to scale 0.35
 	}
 
 	pdxmesh = {
@@ -361,7 +361,7 @@ pdxmesh = {
 		animation = { id = "horse_death"		type = "cavalry_rider_death_animation" }
 		animation = { id = "horse_retreat"		type = "cavalry_rider_retreat_animation" }	
 
-		scale = 0.35			#BTAddOn changing all unit sizes from scale 0.5 to scale 0.35
+		scale = 0.5			#BTAddOn changing all unit sizes from scale 0.5 to scale 0.35
 	}
 	
 	
@@ -376,7 +376,7 @@ pdxmesh = {
 		animation = { id = "death"				type = "rifleman_death_animation" }
 		animation = { id = "retreat"			type = "rifleman_retreat_animation" }
 
-		scale = 0.35			#BTAddOn changing all unit sizes from scale 0.5 to scale 0.35
+		scale = 0.5			#BTAddOn changing all unit sizes from scale 0.5 to scale 0.35
 	}
 
 	pdxmesh = {
@@ -390,7 +390,7 @@ pdxmesh = {
 		animation = { id = "horse_death"		type = "cavalry_rider_death_animation" }
 		animation = { id = "horse_retreat"		type = "cavalry_rider_retreat_animation" }	
 
-		scale = 0.35			#BTAddOn changing all unit sizes from scale 0.5 to scale 0.35
+		scale = 0.5			#BTAddOn changing all unit sizes from scale 0.5 to scale 0.35
 	}
 
 	
@@ -404,7 +404,7 @@ pdxmesh = {
 		animation = { id = "death"				type = "rifleman_death_animation" }
 		animation = { id = "retreat"			type = "rifleman_retreat_animation" }
 
-		scale = 0.35			#BTAddOn changing all unit sizes from scale 0.5 to scale 0.35
+		scale = 0.5			#BTAddOn changing all unit sizes from scale 0.5 to scale 0.35
 	}
 
 	pdxmesh = {
@@ -418,7 +418,7 @@ pdxmesh = {
 		animation = { id = "horse_death"		type = "cavalry_rider_death_animation" }
 		animation = { id = "horse_retreat"		type = "cavalry_rider_retreat_animation" }	
 
-		scale = 0.35			#BTAddOn changing all unit sizes from scale 0.5 to scale 0.35
+		scale = 0.5			#BTAddOn changing all unit sizes from scale 0.5 to scale 0.35
 	}
 	
 	
@@ -432,7 +432,7 @@ pdxmesh = {
 		animation = { id = "death"				type = "rifleman_death_animation" }
 		animation = { id = "retreat"			type = "rifleman_retreat_animation" }
 
-		scale = 0.35			#BTAddOn changing all unit sizes from scale 0.5 to scale 0.35
+		scale = 0.5			#BTAddOn changing all unit sizes from scale 0.5 to scale 0.35
 	}
 
 	pdxmesh = {
@@ -446,7 +446,7 @@ pdxmesh = {
 		animation = { id = "horse_death"		type = "cavalry_rider_death_animation" }
 		animation = { id = "horse_retreat"		type = "cavalry_rider_retreat_animation" }	
 
-		scale = 0.35			#BTAddOn changing all unit sizes from scale 0.5 to scale 0.35
+		scale = 0.5			#BTAddOn changing all unit sizes from scale 0.5 to scale 0.35
 	}
 
 

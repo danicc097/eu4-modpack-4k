@@ -21,7 +21,7 @@ objectTypes = {
 		animation = { id = "horse_death"		type = "cavalry_rider_death_animation" }
 		animation = { id = "horse_retreat"		type = "cavalry_rider_retreat_animation" }	
 		
-		scale = 0.35
+		scale = 0.5
 	}	
 	pdxmesh = {
 		name = "gcup_GAL_infantry_02"
@@ -39,7 +39,7 @@ objectTypes = {
 		animation = { id = "horse_death"		type = "cavalry_rider_death_animation" }
 		animation = { id = "horse_retreat"		type = "cavalry_rider_retreat_animation" }		
 		
-		scale = 0.35
+		scale = 0.5
 	}	
 	pdxmesh = {
 		name = "gcup_GAL_infantry_03"
@@ -57,7 +57,7 @@ objectTypes = {
 		animation = { id = "horse_death"		type = "cavalry_rider_death_animation" }
 		animation = { id = "horse_retreat"		type = "cavalry_rider_retreat_animation" }
 		
-		scale = 0.35
+		scale = 0.5
 	}	
 	pdxmesh = {
 		name = "gcup_GAL_infantry_04"
@@ -75,7 +75,7 @@ objectTypes = {
 		animation = { id = "horse_death"		type = "cavalry_rider_death_animation" }
 		animation = { id = "horse_retreat"		type = "cavalry_rider_retreat_animation" }	
 		
-		scale = 0.35
+		scale = 0.5
 	}	
 
 	pdxmesh = {
@@ -94,7 +94,7 @@ objectTypes = {
 		animation = { id = "horse_death"		type = "cavalry_rider_death_animation" }
 		animation = { id = "horse_retreat"		type = "cavalry_rider_retreat_animation" }		
 		
-		scale = 0.35
+		scale = 0.5
 	}
 	pdxmesh = {
 		name = "gcup_GRA_infantry_02"
@@ -112,7 +112,7 @@ objectTypes = {
 		animation = { id = "horse_death"		type = "cavalry_rider_death_animation" }
 		animation = { id = "horse_retreat"		type = "cavalry_rider_retreat_animation" }	
 		
-		scale = 0.35
+		scale = 0.5
 	}
 	pdxmesh = {
 		name = "gcup_GRA_infantry_03"
@@ -130,7 +130,7 @@ objectTypes = {
 		animation = { id = "horse_death"		type = "cavalry_rider_death_animation" }
 		animation = { id = "horse_retreat"		type = "cavalry_rider_retreat_animation" }	
 		
-		scale = 0.35
+		scale = 0.5
 	}
 	pdxmesh = {
 		name = "gcup_GRA_infantry_04"
@@ -148,7 +148,7 @@ objectTypes = {
 		animation = { id = "horse_death"		type = "cavalry_rider_death_animation" }
 		animation = { id = "horse_retreat"		type = "cavalry_rider_retreat_animation" }
 		
-		scale = 0.35
+		scale = 0.5
 	}
 	pdxmesh = {
 		name = "gcup_NAV_infantry_01"
@@ -166,7 +166,7 @@ objectTypes = {
 		animation = { id = "horse_death"		type = "cavalry_rider_death_animation" }
 		animation = { id = "horse_retreat"		type = "cavalry_rider_retreat_animation" }		
 		
-		scale = 0.35
+		scale = 0.5
 	}
 	pdxmesh = {
 		name = "gcup_NAV_infantry_02"
@@ -184,7 +184,7 @@ objectTypes = {
 		animation = { id = "horse_death"		type = "cavalry_rider_death_animation" }
 		animation = { id = "horse_retreat"		type = "cavalry_rider_retreat_animation" }	
 		
-		scale = 0.35
+		scale = 0.5
 	}
 	pdxmesh = {
 		name = "gcup_NAV_infantry_03"
@@ -202,7 +202,7 @@ objectTypes = {
 		animation = { id = "horse_death"		type = "cavalry_rider_death_animation" }
 		animation = { id = "horse_retreat"		type = "cavalry_rider_retreat_animation" }
 		
-		scale = 0.35
+		scale = 0.5
 	}
 	pdxmesh = {
 		name = "gcup_NAV_infantry_04"
@@ -220,7 +220,7 @@ objectTypes = {
 		animation = { id = "horse_death"		type = "cavalry_rider_death_animation" }
 		animation = { id = "horse_retreat"		type = "cavalry_rider_retreat_animation" }	
 		
-		scale = 0.35
+		scale = 0.5
 	}	
 
 
@@ -240,7 +240,7 @@ objectTypes = {
 		animation = { id = "horse_death"		type = "cavalry_rider_death_animation" }
 		animation = { id = "horse_retreat"		type = "cavalry_rider_retreat_animation" }		
 		
-		scale = 0.35
+		scale = 0.5
 	}
 	pdxmesh = {
 		name = "gcup_SLE_infantry_02"
@@ -258,7 +258,7 @@ objectTypes = {
 		animation = { id = "horse_death"		type = "cavalry_rider_death_animation" }
 		animation = { id = "horse_retreat"		type = "cavalry_rider_retreat_animation" }	
 		
-		scale = 0.35
+		scale = 0.5
 	}
 	pdxmesh = {
 		name = "gcup_SLE_infantry_03"
@@ -276,7 +276,7 @@ objectTypes = {
 		animation = { id = "horse_death"		type = "cavalry_rider_death_animation" }
 		animation = { id = "horse_retreat"		type = "cavalry_rider_retreat_animation" }
 		
-		scale = 0.35
+		scale = 0.5
 	}
 	pdxmesh = {
 		name = "gcup_SLE_infantry_04"
@@ -294,7 +294,7 @@ objectTypes = {
 		animation = { id = "horse_death"		type = "cavalry_rider_death_animation" }
 		animation = { id = "horse_retreat"		type = "cavalry_rider_retreat_animation" }	
 		
-		scale = 0.35
+		scale = 0.5
 	}	
 	pdxmesh = {
 		name = "gcup_NSS_infantry_01"
@@ -312,7 +312,7 @@ objectTypes = {
 		animation = { id = "horse_death"		type = "cavalry_rider_death_animation" }
 		animation = { id = "horse_retreat"		type = "cavalry_rider_retreat_animation" }		
 		
-		scale = 0.35
+		scale = 0.5
 	}
 	pdxmesh = {
 		name = "gcup_NSS_infantry_02"
@@ -330,7 +330,7 @@ objectTypes = {
 		animation = { id = "horse_death"		type = "cavalry_rider_death_animation" }
 		animation = { id = "horse_retreat"		type = "cavalry_rider_retreat_animation" }	
 		
-		scale = 0.35
+		scale = 0.5
 	}
 	pdxmesh = {
 		name = "gcup_NSS_infantry_03"
@@ -348,7 +348,7 @@ objectTypes = {
 		animation = { id = "horse_death"		type = "cavalry_rider_death_animation" }
 		animation = { id = "horse_retreat"		type = "cavalry_rider_retreat_animation" }
 		
-		scale = 0.35
+		scale = 0.5
 	}
 	pdxmesh = {
 		name = "gcup_NSS_infantry_04"
@@ -366,7 +366,7 @@ objectTypes = {
 		animation = { id = "horse_death"		type = "cavalry_rider_death_animation" }
 		animation = { id = "horse_retreat"		type = "cavalry_rider_retreat_animation" }	
 		
-		scale = 0.35
+		scale = 0.5
 	}	
 }
 

@@ -3,7 +3,7 @@ objectTypes = {
 	pdxmesh = {
 		name = "roman_sword_mesh"
 		file = "gfx/models/Units/roman_sword.mesh"
-		scale = 0.35
+		scale = 0.5
 	}
 	
 	
@@ -25,7 +25,7 @@ objectTypes = {
 		animation = { id = "horse_death"		type = "cavalry_rider_death_animation" }
 		animation = { id = "horse_retreat"		type = "cavalry_rider_retreat_animation" }		
 		
-		scale = 0.35
+		scale = 0.5
 	}
 	pdxmesh = {
 		name = "ROM_infantry_02_mesh"
@@ -43,7 +43,7 @@ objectTypes = {
 		animation = { id = "horse_death"		type = "cavalry_rider_death_animation" }
 		animation = { id = "horse_retreat"		type = "cavalry_rider_retreat_animation" }	
 		
-		scale = 0.35
+		scale = 0.5
 	}
 	pdxmesh = {
 		name = "ROM_infantry_03_mesh"
@@ -61,7 +61,7 @@ objectTypes = {
 		animation = { id = "horse_death"		type = "cavalry_rider_death_animation" }
 		animation = { id = "horse_retreat"		type = "cavalry_rider_retreat_animation" }	
 		
-		scale = 0.35
+		scale = 0.5
 	}
 	pdxmesh = {
 		name = "ROM_infantry_04_mesh"
@@ -79,7 +79,7 @@ objectTypes = {
 		animation = { id = "horse_death"		type = "cavalry_rider_death_animation" }
 		animation = { id = "horse_retreat"		type = "cavalry_rider_retreat_animation" }
 		
-		scale = 0.35
+		scale = 0.5
 	}
 	 pdxmesh = {
 		 name = "roman_horse"
@@ -90,7 +90,7 @@ objectTypes = {
 		 animation = { id = "horse_walk"		type = "roman_cavalry_horse_moving_animation" }
 		 animation = { id = "horse_retreat"		type = "roman_cavalry_horse_moving_animation" }
 		
-		 scale = 0.34
+		 scale = 0.5
 	 }	
 	
 }
