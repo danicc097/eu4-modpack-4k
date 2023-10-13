@@ -2,7 +2,7 @@
 
 graphical_culture = westerngfx
 
-color = { 252  233  58 }
+color = { 231  181  12 }
 revolutionary_colors = { 5 8 5 }
 
 historical_idea_groups = {
@@ -40,9 +40,9 @@ monarch_names = {
 	"Juana #2" = -10
 	"Juan #1" = 10
 	"Luis #1" = 10
-	"Andrés #0 Febo" = 10
+	"Andrï¿½s #0 Febo" = 10
 	"Catalina #0" = -10
-	"Gastón #0" = 10
+	"Gastï¿½n #0" = 10
 	"Leonor #0" = -10
 	"Blanca #1" = -10
 	"Pedro #1" = 5
@@ -52,46 +52,46 @@ monarch_names = {
 	"Jaime #0" = 5
 	"Lanzarote #0" = 5
 	"Leonel #0" = 5
-	"Martín #0" = 5
+	"Martï¿½n #0" = 5
 	"Sancho #7" = 1
-	"García #5" = 1
+	"Garcï¿½a #5" = 1
 	"Felipe #3" = 1
 	"Teobaldo #2" = 1
 	"Alfonso #1" = 1
-	"Agustín #0" = 0
+	"Agustï¿½n #0" = 0
 	"Alejandro #0" = 0
-	"Álvaro #0" = 0
-	"Andrés #0" = 0
+	"ï¿½lvaro #0" = 0
+	"Andrï¿½s #0" = 0
 	"Antonio #0" = 0
 	"Bernardo #0" = 0
-	"César #0" = 0
-	"Cristóbal #0" = 0
+	"Cï¿½sar #0" = 0
+	"Cristï¿½bal #0" = 0
 	"Diego #0" = 0
 	"Esteban #0" = 0
 	"Fernando #0" = 0
 	"Gaspar #0" = 0
-	"José #0" = 0
+	"Josï¿½ #0" = 0
 	"Melchor #0" = 0
-	"Nicolás #0" = 0
-	"Simón #0" = 0
+	"Nicolï¿½s #0" = 0
+	"Simï¿½n #0" = 0
 }
 
 leader_names = {
-	"de Aguirre" "de Albret" "de Antillón" "de Aranda" "de Armendariz" "de Azagra" "de Azpilcueta"
-	"de Beaumont" "de Beortegui" Bergera "de Borbón" "de Carranza"	Elizalde
-	"de Garay" "de Goñi" Goyeneche "de Heredia" "de Hijar"
-	"de Jaso" "Jiménez de Rada" Jimeno "de Landívar" Navarro
-	Palafox "Pérez de Zabalza" "de Salazar" "de Uribe" "de Ursúa"
-	"de Yanguas" "de Zárate"
+	"de Aguirre" "de Albret" "de Antillï¿½n" "de Aranda" "de Armendariz" "de Azagra" "de Azpilcueta"
+	"de Beaumont" "de Beortegui" Bergera "de Borbï¿½n" "de Carranza"	Elizalde
+	"de Garay" "de Goï¿½i" Goyeneche "de Heredia" "de Hijar"
+	"de Jaso" "Jimï¿½nez de Rada" Jimeno "de Landï¿½var" Navarro
+	Palafox "Pï¿½rez de Zabalza" "de Salazar" "de Uribe" "de Ursï¿½a"
+	"de Yanguas" "de Zï¿½rate"
 }
 
 ship_names = {
-	Atlántida "Conde de Evreux" "Conde de Foix" "Conde de Guenduláin" "Conde de Lerín"
-	"Don Jimeno" "Duque de Armagnac" "Duque de Champaña"
-	"El Agramontés" "El Beaomontés" "El Bearnés" "El Cruzado Navarro" "El Montañés" "El Navarro" "El Salvador" "El Trobador" "El Viñador" "Emperador Hispánico" Europa
-	"Mar de Navarra" "Nuestra Sra de Leyre" "Príncipe de Viana"
-	"Reina Juana" "Rey Enrique" "Rey García" "Rey Sancho" "Reyno de Navarra" "Reyno de Pamplona"
-	"San Agustín" "San Andrés" "San Antonio" "San Carlos" "San Enrique" "San Esteban" "San Fermín" "San Francisco" "San Francisco Xabier" "San Gregorio" "San Juan" "San León" "San Miguel Arcángel" "San Raimundo" "San Virila"
-	"Santa Ana" "Santa Catalina" "Santa Juana" "Santa Leonor" "Santísima Trinidad" "Señor de Tudela"
+	Atlï¿½ntida "Conde de Evreux" "Conde de Foix" "Conde de Guendulï¿½in" "Conde de Lerï¿½n"
+	"Don Jimeno" "Duque de Armagnac" "Duque de Champaï¿½a"
+	"El Agramontï¿½s" "El Beaomontï¿½s" "El Bearnï¿½s" "El Cruzado Navarro" "El Montaï¿½ï¿½s" "El Navarro" "El Salvador" "El Trobador" "El Viï¿½ador" "Emperador Hispï¿½nico" Europa
+	"Mar de Navarra" "Nuestra Sra de Leyre" "Prï¿½ncipe de Viana"
+	"Reina Juana" "Rey Enrique" "Rey Garcï¿½a" "Rey Sancho" "Reyno de Navarra" "Reyno de Pamplona"
+	"San Agustï¿½n" "San Andrï¿½s" "San Antonio" "San Carlos" "San Enrique" "San Esteban" "San Fermï¿½n" "San Francisco" "San Francisco Xabier" "San Gregorio" "San Juan" "San Leï¿½n" "San Miguel Arcï¿½ngel" "San Raimundo" "San Virila"
+	"Santa Ana" "Santa Catalina" "Santa Juana" "Santa Leonor" "Santï¿½sima Trinidad" "Seï¿½or de Tudela"
 	Vasconia
 }
