@@ -1,1 +1,2 @@
-- extended_timeline_map\localisation\et_colonies* over to beyond typus - since we still use the colonial regions
+- on_country_released buffs (money, manpower, forced truce for some months so
+  they ally)

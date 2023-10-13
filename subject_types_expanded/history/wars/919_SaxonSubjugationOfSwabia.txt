@@ -1,0 +1,16 @@
+name = "Saxon Subjugation of Swabia"
+war_goal = {
+	type = superiority_force_medieval_vassal
+	casus_belli = cb_force_medieval_vassal_triggered_only
+}
+
+919.5.1 = {
+	add_attacker = SAX
+	add_defender = SWA
+}
+
+# Peace
+919.6.1 = {
+	rem_attacker = SAX
+	rem_defender = SWA
+}

@@ -1,0 +1,1 @@
+NDefines.NGame.MAX_ESTATE_COUNTRIES = 100

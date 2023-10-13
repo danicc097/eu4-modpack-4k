@@ -1,0 +1,1080 @@
+disallow_subject_from_annexing_subjects = {
+	category = subject_interactions
+
+	require_acceptance = no
+
+	is_visible = {
+		ai = no
+		FROM = {
+			is_subject_of = ROOT
+			NOT = { is_tributary_or_similar_subject = yes }
+			num_of_subjects = 1
+			NOT = { has_country_modifier = disallow_subject_from_annexing_subjects_modifier }
+		}
+	}
+
+	is_allowed = {
+		hidden_trigger = {
+			ai = no
+			FROM = {
+				is_subject_of = ROOT
+				NOT = { is_tributary_or_similar_subject = yes }
+				num_of_subjects = 1
+				NOT = { has_country_modifier = disallow_subject_from_annexing_subjects_modifier }
+			}
+		}
+		FROM = {
+			NOT = { liberty_desire = 50 }
+		}
+		FROM = {
+			has_opinion = {
+				who = ROOT
+				value = 50
+			}
+		}
+	}
+
+	on_accept = {
+		if = {
+			limit = {
+				ai = no
+				FROM = {
+					is_subject_of = ROOT
+					NOT = { is_tributary_or_similar_subject = yes }
+					num_of_subjects = 1
+					NOT = { has_country_modifier = disallow_subject_from_annexing_subjects_modifier }
+				}
+				FROM = {
+					NOT = { liberty_desire = 50 }
+				}
+				FROM = {
+					has_opinion = {
+						who = ROOT
+						value = 50
+					}
+				}
+			}
+			FROM = {
+				add_liberty_desire = 20
+				add_country_modifier = {
+					name = disallow_subject_from_annexing_subjects_modifier
+					duration = 7300
+				}
+				country_event = { id = subjects_expanded_general_events.1 }
+			}
+		}
+	}
+
+	ai_will_do = {
+		always = no
+	}
+}
+
+transfer_vassal_to_subject = {
+	category = subject_interactions
+
+	alert_index = 6
+	alert_tooltip = transfer_vassal_to_subject_alert_tooltip
+
+	require_acceptance = yes
+
+	is_visible = {
+		ai = no
+		is_free_or_tributary_trigger = yes
+		NOT = { has_country_flag = uses_transfer_vassal_to_subject }
+		FROM = {
+			is_subject_of = ROOT
+			OR = {
+				NOT = { is_tributary_or_similar_subject = yes }
+				is_subject_of_type = brother_kingdom
+				is_subject_of_type = sister_republic
+			}
+			is_subject_type_that_can_have_subjects = yes
+		}
+		any_subject_country = {
+			NOT = { tag = FROM }
+			is_neighbor_of = FROM
+			OR = {
+				is_subject_of_type = vassal
+				is_subject_of_type = client_vassal
+				is_subject_of_type = march
+				is_subject_of_type = client_march
+				is_subject_of_type = naval_march
+				is_subject_of_type = defensive_march
+				is_subject_of_type = agricultural_march
+				is_subject_of_type = religious_march
+			}
+		}
+	}
+
+	is_allowed = {
+		hidden_trigger = {
+			ai = no
+			is_free_or_tributary_trigger = yes
+			NOT = { has_country_flag = uses_transfer_vassal_to_subject }
+			FROM = {
+				is_subject_of = ROOT
+				OR = {
+					NOT = { is_tributary_or_similar_subject = yes }
+					is_subject_of_type = brother_kingdom
+					is_subject_of_type = sister_republic
+				}
+				is_subject_type_that_can_have_subjects = yes
+			}
+		}
+		is_at_war = no
+		FROM = {
+			is_at_war = no
+		}
+		FROM = {
+			NOT = { liberty_desire = 50 }
+		}
+		any_subject_country = {
+			NOT = { tag = FROM }
+			is_neighbor_of = FROM
+			OR = {
+				is_subject_of_type = vassal
+				is_subject_of_type = client_vassal
+				is_subject_of_type = march
+				is_subject_of_type = client_march
+				is_subject_of_type = naval_march
+				is_subject_of_type = defensive_march
+				is_subject_of_type = agricultural_march
+				is_subject_of_type = religious_march
+			}
+		}
+	}
+
+	on_accept = {
+		if = {
+			limit = {
+				ai = no
+				is_free_or_tributary_trigger = yes
+				NOT = { has_country_flag = uses_transfer_vassal_to_subject }
+				FROM = {
+					is_subject_of = ROOT
+					OR = {
+						NOT = { is_tributary_or_similar_subject = yes }
+						is_subject_of_type = brother_kingdom
+						is_subject_of_type = sister_republic
+					}
+					is_subject_type_that_can_have_subjects = yes
+				}
+				is_at_war = no
+				FROM = {
+					is_at_war = no
+				}
+				FROM = {
+					NOT = { liberty_desire = 50 }
+				}
+				any_subject_country = {
+					NOT = { tag = FROM }
+					is_neighbor_of = FROM
+					OR = {
+						is_subject_of_type = vassal
+						is_subject_of_type = client_vassal
+						is_subject_of_type = march
+						is_subject_of_type = client_march
+						is_subject_of_type = naval_march
+						is_subject_of_type = defensive_march
+						is_subject_of_type = agricultural_march
+						is_subject_of_type = religious_march
+					}
+				}
+			}
+			FROM = {
+				save_event_target_as = transfer_to_subject_target_overlord_target
+			}
+			set_country_flag = uses_transfer_vassal_to_subject
+			country_event = { id = subjects_expanded_general_events.2 }
+		}
+	}
+
+	on_decline = {
+	}
+
+	ai_acceptance = {
+		add_entry = {
+			name = SE_REASON_BASE_VALUE
+			export_to_variable = {
+				which = ai_value
+				value = 50
+			}
+		}
+	}
+
+	ai_will_do = {
+		always = no
+	}
+}
+
+release_subject_from_subject = {
+	category = subject_interactions
+
+	alert_index = 6
+	alert_tooltip = release_subject_from_subject_alert_tooltip
+
+	require_acceptance = yes
+
+	is_visible = {
+		ai = no
+		is_free_or_tributary_trigger = yes
+		NOT = { has_country_flag = uses_release_subject_from_subject }
+		FROM = {
+			is_subject_of = ROOT
+			NOT = { is_tributary_or_similar_subject = yes }
+			is_subject_type_that_can_have_subjects = yes
+			any_subject_country = {
+				OR = {
+					is_subject_of_type = tributary_state
+					is_subject_of_type = protectorate
+					is_subject_of_type = imperial_tributary_state
+					is_subject_of_type = papal_sanctuary_subject
+					is_subject_of_type = imperial_feud_subject
+					is_subject_of_type = trade_outpost
+				}
+			}
+		}
+	}
+
+	is_allowed = {
+		hidden_trigger = {
+			ai = no
+			is_free_or_tributary_trigger = yes
+			NOT = { has_country_flag = uses_release_subject_from_subject }
+			FROM = {
+				is_subject_of = ROOT
+				NOT = { is_tributary_or_similar_subject = yes }
+				is_subject_type_that_can_have_subjects = yes
+			}
+		}
+		is_at_war = no
+		FROM = {
+			is_at_war = no
+		}
+		FROM = {
+			NOT = { liberty_desire = 50 }
+		}
+		FROM = {
+			any_subject_country = {
+				OR = {
+					is_subject_of_type = tributary_state
+					is_subject_of_type = protectorate
+					is_subject_of_type = imperial_tributary_state
+					is_subject_of_type = papal_sanctuary_subject
+					is_subject_of_type = imperial_feud_subject
+					is_subject_of_type = trade_outpost
+				}
+			}
+		}
+	}
+
+	on_accept = {
+		if = {
+			limit = {
+				ai = no
+				is_free_or_tributary_trigger = yes
+				NOT = { has_country_flag = uses_release_subject_from_subject }
+				FROM = {
+					is_subject_of = ROOT
+					NOT = { is_tributary_or_similar_subject = yes }
+					is_subject_type_that_can_have_subjects = yes
+				}
+				is_at_war = no
+				FROM = {
+					is_at_war = no
+				}
+				FROM = {
+					NOT = { liberty_desire = 50 }
+				}
+				FROM = {
+					any_subject_country = {
+						OR = {
+							is_subject_of_type = tributary_state
+							is_subject_of_type = protectorate
+							is_subject_of_type = imperial_tributary_state
+							is_subject_of_type = papal_sanctuary_subject
+							is_subject_of_type = imperial_feud_subject
+							is_subject_of_type = trade_outpost
+						}
+					}
+				}
+			}
+			FROM = {
+				save_event_target_as = subject_to_force_release_subject_target
+			}
+			set_country_flag = uses_release_subject_from_subject
+			country_event = { id = subjects_expanded_general_events.5 }
+		}
+	}
+
+	on_decline = {
+	}
+
+	ai_acceptance = {
+		add_entry = {
+			name = SE_REASON_BASE_VALUE
+			export_to_variable = {
+				which = ai_value
+				value = 50
+			}
+		}
+		add_entry = {
+			name = FROM_LIBERTY_DESIRE_TOO_HIGH
+			limit = {
+				liberty_desire = 50
+			}
+			export_to_variable = {
+				which = ai_value
+				value = 1000
+			}
+			multiply_variable = { which = ai_value value = -1 }
+		}
+	}
+
+	ai_will_do = {
+		always = no
+	}
+}
+
+change_province_controls_to_subject = {
+	category = subject_interactions
+
+	require_acceptance = no
+
+	is_visible = {
+		overlord_of = FROM
+		OR = {
+			is_in_war = {
+				attackers = ROOT
+				attackers = FROM
+			}
+			is_in_war = {
+				defenders = ROOT
+				defenders = FROM
+			}
+		}
+	}
+
+	is_allowed = {
+		hidden_trigger = {
+			overlord_of = FROM
+			OR = {
+				is_in_war = {
+					attackers = ROOT
+					attackers = FROM
+				}
+				is_in_war = {
+					defenders = ROOT
+					defenders = FROM
+				}
+			}
+		}
+		custom_trigger_tooltip = {
+			tooltip = CHANGE_PROVINCE_CONTROLS_TO_SUBJECT_ANY_CONTROLLED_PROVINCE_CAN_BE_CHANGED_TO_SUBJECT_TT
+			any_war_enemy_country = {
+				OR = {
+					is_in_war = {
+						attackers = ROOT
+						attackers = FROM
+						defenders = THIS
+					}
+					is_in_war = {
+						defenders = ROOT
+						defenders = FROM
+						attackers = THIS
+					}
+				}
+				any_owned_province = {
+					controlled_by = ROOT
+					has_siege = no
+				}
+			}
+		}
+	}
+
+	on_accept = {
+		if = {
+			limit = {
+				overlord_of = FROM
+				OR = {
+					is_in_war = {
+						attackers = ROOT
+						attackers = FROM
+					}
+					is_in_war = {
+						defenders = ROOT
+						defenders = FROM
+					}
+				}
+				any_war_enemy_country = {
+					OR = {
+						is_in_war = {
+							attackers = ROOT
+							attackers = FROM
+							defenders = THIS
+						}
+						is_in_war = {
+							defenders = ROOT
+							defenders = FROM
+							attackers = THIS
+						}
+					}
+					any_owned_province = {
+						controlled_by = ROOT
+						has_siege = no
+					}
+				}
+			}
+			every_war_enemy_country = {
+				limit = {
+					OR = {
+						is_in_war = {
+							attackers = ROOT
+							attackers = FROM
+							defenders = THIS
+						}
+						is_in_war = {
+							defenders = ROOT
+							defenders = FROM
+							attackers = THIS
+						}
+					}
+					any_owned_province = {
+						controlled_by = ROOT
+						has_siege = no
+					}
+				}
+				every_owned_province = {
+					limit = {
+						controlled_by = ROOT
+						has_siege = no
+					}
+					change_controller = FROM
+				}
+			}
+		}
+	}
+
+	on_decline = {
+	}
+
+	ai_will_do = {
+		always = no
+	}
+}
+
+change_province_controls_to_subject_for_specific_region = {
+	category = subject_interactions
+
+	require_acceptance = no
+
+	is_visible = {
+		overlord_of = FROM
+		OR = {
+			is_in_war = {
+				attackers = ROOT
+				attackers = FROM
+			}
+			is_in_war = {
+				defenders = ROOT
+				defenders = FROM
+			}
+		}
+		NOT = { has_country_flag = uses_change_province_controls_to_subject_for_specific_region }
+	}
+
+	is_allowed = {
+		hidden_trigger = {
+			overlord_of = FROM
+			OR = {
+				is_in_war = {
+					attackers = ROOT
+					attackers = FROM
+				}
+				is_in_war = {
+					defenders = ROOT
+					defenders = FROM
+				}
+			}
+			NOT = { has_country_flag = uses_change_province_controls_to_subject_for_specific_region }
+		}
+		custom_trigger_tooltip = {
+			tooltip = CHANGE_PROVINCE_CONTROLS_TO_SUBJECT_ANY_CONTROLLED_PROVINCE_CAN_BE_CHANGED_TO_SUBJECT_TT
+			any_war_enemy_country = {
+				OR = {
+					is_in_war = {
+						attackers = ROOT
+						attackers = FROM
+						defenders = THIS
+					}
+					is_in_war = {
+						defenders = ROOT
+						defenders = FROM
+						attackers = THIS
+					}
+				}
+				any_owned_province = {
+					controlled_by = ROOT
+					has_siege = no
+				}
+			}
+		}
+	}
+
+	on_accept = {
+		if = {
+			limit = {
+				overlord_of = FROM
+				OR = {
+					is_in_war = {
+						attackers = ROOT
+						attackers = FROM
+					}
+					is_in_war = {
+						defenders = ROOT
+						defenders = FROM
+					}
+				}
+				any_war_enemy_country = {
+					OR = {
+						is_in_war = {
+							attackers = ROOT
+							attackers = FROM
+							defenders = THIS
+						}
+						is_in_war = {
+							defenders = ROOT
+							defenders = FROM
+							attackers = THIS
+						}
+					}
+					any_owned_province = {
+						controlled_by = ROOT
+						has_siege = no
+					}
+				}
+			}
+			FROM = {
+				save_event_target_as = change_province_controls_to_subject_for_specific_region_target
+			}
+			set_country_flag = uses_change_province_controls_to_subject_for_specific_region
+			country_event = { id = subjects_expanded_general_events.8 }
+		}
+	}
+
+	on_decline = {
+	}
+
+	ai_will_do = {
+		always = no
+	}
+}
+
+change_province_controls_from_subject = {
+	category = subject_interactions
+
+	alert_index = 46
+	alert_tooltip = change_province_controls_from_subject_alert_tooltip
+
+	require_acceptance = yes
+
+	is_visible = {
+		overlord_of = FROM
+		OR = {
+			is_in_war = {
+				attackers = ROOT
+				attackers = FROM
+			}
+			is_in_war = {
+				defenders = ROOT
+				defenders = FROM
+			}
+		}
+	}
+
+	is_allowed = {
+		hidden_trigger = {
+			overlord_of = FROM
+			OR = {
+				is_in_war = {
+					attackers = ROOT
+					attackers = FROM
+				}
+				is_in_war = {
+					defenders = ROOT
+					defenders = FROM
+				}
+			}
+		}
+		custom_trigger_tooltip = {
+			tooltip = CHANGE_PROVINCE_CONTROLS_FROM_SUBJECT_ANY_CONTROLLED_PROVINCE_CAN_BE_CHANGED_TO_US_TT
+			any_war_enemy_country = {
+				OR = {
+					is_in_war = {
+						attackers = ROOT
+						attackers = FROM
+						defenders = THIS
+					}
+					is_in_war = {
+						defenders = ROOT
+						defenders = FROM
+						attackers = THIS
+					}
+				}
+				any_owned_province = {
+					controlled_by = FROM
+					has_siege = no
+				}
+			}
+		}
+	}
+
+	on_accept = {
+		if = {
+			limit = {
+				overlord_of = FROM
+				OR = {
+					is_in_war = {
+						attackers = ROOT
+						attackers = FROM
+					}
+					is_in_war = {
+						defenders = ROOT
+						defenders = FROM
+					}
+				}
+				any_war_enemy_country = {
+					OR = {
+						is_in_war = {
+							attackers = ROOT
+							attackers = FROM
+							defenders = THIS
+						}
+						is_in_war = {
+							defenders = ROOT
+							defenders = FROM
+							attackers = THIS
+						}
+					}
+					any_owned_province = {
+						controlled_by = FROM
+						has_siege = no
+					}
+				}
+			}
+			every_war_enemy_country = {
+				limit = {
+					OR = {
+						is_in_war = {
+							attackers = ROOT
+							attackers = FROM
+							defenders = THIS
+						}
+						is_in_war = {
+							defenders = ROOT
+							defenders = FROM
+							attackers = THIS
+						}
+					}
+					any_owned_province = {
+						controlled_by = FROM
+						has_siege = no
+					}
+				}
+				every_owned_province = {
+					limit = {
+						controlled_by = FROM
+						has_siege = no
+					}
+					change_controller = ROOT
+				}
+			}
+		}
+	}
+
+	on_decline = {
+	}
+
+	ai_acceptance = {
+		add_entry = {
+			name = SE_REASON_BASE_VALUE
+			export_to_variable = {
+				which = ai_value
+				value = 50
+			}
+		}
+		add_entry = {
+			name = FROM_LIBERTY_DESIRE_TOO_HIGH
+			limit = {
+				liberty_desire = 50
+			}
+			export_to_variable = {
+				which = ai_value
+				value = 1000
+			}
+			multiply_variable = { which = ai_value value = -1 }
+		}
+	}
+
+	ai_will_do = {
+		always = no
+	}
+}
+
+return_subject_to_vassal = {
+	category = influence
+
+	require_acceptance = no
+
+	is_visible = {
+		FROM = {
+			is_subject_of = ROOT
+			NOT = { is_subject_of_type = daimyo_vassal }
+			OR = {
+				is_similar_vassal_subject = yes
+				AND = {
+					is_similar_march_subject = yes
+					NOT = { is_different_march_subject = yes }
+				}
+			}
+		}
+	}
+
+	is_allowed = {
+		hidden_trigger = {
+			FROM = {
+				is_subject_of = ROOT
+				NOT = { is_subject_of_type = daimyo_vassal }
+				OR = {
+					is_similar_vassal_subject = yes
+					AND = {
+						is_similar_march_subject = yes
+						NOT = { is_different_march_subject = yes }
+					}
+				}
+			}
+		}
+		prestige = 0
+		if = {
+			limit = {
+				OR = {
+					NOT = { religion = nahuatl }
+					is_religion_reformed = yes
+				}
+				FROM = {
+					is_subject_of_type = nahuatl_vassal
+				}
+			}
+			FROM = {
+				NOT = { liberty_desire = 90 }
+			}
+		}
+		else = {
+			FROM = {
+				NOT = { liberty_desire = 50 }
+			}
+		}
+		FROM = {
+			has_opinion = {
+				who = ROOT
+				value = 100
+			}
+		}
+		is_at_war = no
+		FROM = {
+			is_at_war = no
+		}
+	}
+
+	on_accept = {
+		if = {
+			limit = {
+				FROM = {
+					is_subject_of = ROOT
+					NOT = { is_subject_of_type = daimyo_vassal }
+					OR = {
+						is_similar_vassal_subject = yes
+						AND = {
+							is_similar_march_subject = yes
+							NOT = { is_different_march_subject = yes }
+						}
+					}
+				}
+				prestige = 0
+				if = {
+					limit = {
+						OR = {
+							NOT = { religion = nahuatl }
+							is_religion_reformed = yes
+						}
+						FROM = {
+							is_subject_of_type = nahuatl_vassal
+						}
+					}
+					FROM = {
+						NOT = { liberty_desire = 90 }
+					}
+				}
+				else = {
+					FROM = {
+						NOT = { liberty_desire = 50 }
+					}
+				}
+				FROM = {
+					has_opinion = {
+						who = ROOT
+						value = 100
+					}
+				}
+				is_at_war = no
+				FROM = {
+					is_at_war = no
+				}
+			}
+			FROM = {
+				add_opinion = {
+					who = ROOT
+					modifier = returned_to_vassal
+				}
+				grant_independence = yes
+			}
+			vassalize = FROM
+			add_prestige = -10
+			FROM = {
+				add_liberty_desire = 25
+			}
+		}
+	}
+
+	ai_will_do = {
+		NOT = { truce_with = FROM }
+		OR = {
+			AND = {
+				OR = {
+					is_year = 1700
+					current_age = age_of_absolutism
+					NOT = { religion = catholic }
+				}
+				FROM = {
+					OR = {
+						ROOT = { NOT = { religion = catholic } }
+						NOT = { liberty_desire = 33 }
+					}
+					is_subject_of_type = crusader_state_vassal
+				}
+			}
+			AND = {
+				OR = {
+					NOT = { religion = nahuatl }
+					is_religion_reformed = yes
+				}
+				FROM = {
+					is_subject_of_type = nahuatl_vassal
+				}
+			}
+			AND = {
+				europe = {
+					type = all
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				FROM = {
+					is_subject_of_type = muslim_tributary_vassal
+				}
+			}
+			FROM = {
+				is_subject_of_type = pagan_chiefdom
+				OR = {
+					AND = {
+						liberty_desire = 70
+						years_in_vassalage_under = {
+							who = ROOT
+							years = 5
+							all_subject_country = yes
+						}
+					}
+					NOT = {
+						any_neighbor_country = {
+							is_subject = no
+							NOT = { tag = ROOT }
+							OR = {
+								is_great_power = yes
+								total_development = 300
+								is_rival = ROOT
+								is_enemy = ROOT
+							}
+						}
+					}
+				}
+			}
+			FROM = {
+				is_subject_of_type = palatinate_vassal
+				is_elector = no
+			}
+			FROM = {
+				is_lesser_in_union = no
+				liberty_desire = 100
+				years_in_vassalage_under = {
+					who = ROOT
+					years = 25
+					all_subject_country = yes
+				}
+			}
+			FROM = {
+				is_lesser_in_union = yes
+				liberty_desire = 100
+				years_in_vassalage_under = {
+					who = ROOT
+					years = 60
+					all_subject_country = yes
+				}
+			}
+		}
+	}
+}
+
+make_custom_march_subject_to_march = {
+	category = influence
+
+	require_acceptance = no
+
+	is_visible = {
+		ai = no
+		FROM = {
+			is_subject_of = ROOT
+			is_different_march_subject = yes
+		}
+	}
+
+	is_allowed = {
+		hidden_trigger = {
+			FROM = {
+				is_subject_of = ROOT
+				is_different_march_subject = yes
+			}
+		}
+		is_at_war = no
+		FROM = {
+			is_at_war = no
+		}
+	}
+
+	on_accept = {
+		if = {
+			limit = {
+				FROM = {
+					is_subject_of = ROOT
+					is_different_march_subject = yes
+				}
+				is_at_war = no
+				FROM = {
+					is_at_war = no
+				}
+			}
+			FROM = {
+				grant_independence = yes
+			}
+			create_subject = {
+				subject = FROM
+				subject_type = march
+			}
+		}
+	}
+
+	ai_will_do = {
+		always = no
+	}
+}
+
+revoke_custom_march_subject = {
+	category = influence
+
+	require_acceptance = no
+
+	is_visible = {
+		FROM = {
+			is_subject_of = ROOT
+			is_different_march_subject = yes
+		}
+	}
+
+	is_allowed = {
+		hidden_trigger = {
+			FROM = {
+				is_subject_of = ROOT
+				is_different_march_subject = yes
+			}
+		}
+		is_at_war = no
+		FROM = {
+			is_at_war = no
+		}
+	}
+
+	on_accept = {
+		if = {
+			limit = {
+				FROM = {
+					is_subject_of = ROOT
+					is_different_march_subject = yes
+				}
+				is_at_war = no
+				FROM = {
+					is_at_war = no
+				}
+			}
+			if = {
+				limit = {
+					NOT = { full_idea_group = diplomatic_ideas }
+				}
+				add_stability = -1
+			}
+			FROM = {
+				add_opinion = {
+					who = ROOT
+					modifier = broke_march
+				}
+				grant_independence = yes
+			}
+			vassalize = FROM
+		}
+	}
+
+	ai_will_do = {
+		NOT = { truce_with = FROM }
+		FROM = {
+			OR = {
+				development_of_overlord_fraction = 0.3
+				num_of_owned_provinces_with = {
+					value = 10
+					is_permanent_claim = ROOT
+				}
+				AND = {
+					liberty_desire = 100
+					years_in_vassalage_under = {
+						who = ROOT
+						years = 25
+						all_subject_country = yes
+					}
+				}
+				NOT = {
+					any_neighbor_country = {
+						is_subject = no
+						NOT = { tag = ROOT }
+						OR = {
+							is_great_power = yes
+							total_development = 300
+							is_rival = ROOT
+							is_enemy = ROOT
+							army_strength = { who = ROOT value = 2.5 }
+						}
+					}
+				}
+				AND = {
+					is_subject_of_type = religious_march
+					religious_unity = 0.95
+				}
+			}
+		}
+	}
+}

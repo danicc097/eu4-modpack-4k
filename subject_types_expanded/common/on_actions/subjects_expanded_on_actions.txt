@@ -1,0 +1,13 @@
+# country : no heir in theocracy
+on_heir_needed_theocracy = {
+	if = {
+		limit = {
+			is_lesser_in_union = no
+			NOT = { is_subject_of_type = sister_republic }
+		}
+		country_event = { id = theocracy.1 }
+	}
+	events = {
+		flavor_sca.2
+	}
+}

@@ -1,0 +1,247 @@
+establish_real_union_subject = {
+	category = influence
+
+	require_acceptance = no
+
+	is_visible = {
+		can_create_subject_type = {
+			subject = FROM
+			subject_type = real_union_subject
+		}
+	}
+
+	is_allowed = {
+		can_create_subject_type = {
+			subject = FROM
+			subject_type = real_union_subject
+		}
+		NOT = { truce_with = FROM }
+		is_at_war = no
+		FROM = { is_at_war = no }
+		FROM = { NOT = { liberty_desire = 50 } }
+	}
+
+	on_accept = {
+		if = {
+			limit = {
+				can_create_subject_type = {
+					subject = FROM
+					subject_type = real_union_subject
+				}
+				NOT = { truce_with = FROM }
+				is_at_war = no
+				FROM = { is_at_war = no }
+				FROM = { NOT = { liberty_desire = 50 } }
+			}
+			create_subject = {
+				subject = FROM
+				subject_type = real_union_subject
+			}
+			FROM = {
+				set_country_flag = recolored_real_union_subject
+				set_country_flag = recolored_real_union_subject_@ROOT
+				change_country_color = { country = ROOT }
+			}
+		}
+	}
+
+	ai_will_do = {
+		always = no
+	}
+}
+
+return_real_union_subject_to_personal_union = {
+	category = influence
+
+	require_acceptance = no
+
+	is_visible = {
+		FROM = {
+			is_subject_of = ROOT
+			is_subject_of_type = real_union_subject
+		}
+	}
+
+	is_allowed = {
+		hidden_trigger = {
+			FROM = {
+				is_subject_of = ROOT
+				is_subject_of_type = real_union_subject
+			}
+		}
+		is_at_war = no
+		FROM = {
+			is_at_war = no
+		}
+		FROM = {
+			years_in_vassalage_under = {
+				who = ROOT
+				years = 10
+				all_subject_country = yes
+			}
+		}
+	}
+
+	on_accept = {
+		if = {
+			limit = {
+				hidden_trigger = {
+					FROM = {
+						is_subject_of = ROOT
+						is_subject_of_type = real_union_subject
+					}
+				}
+				is_at_war = no
+				FROM = {
+					is_at_war = no
+				}
+				FROM = {
+					years_in_vassalage_under = {
+						who = ROOT
+						years = 10
+						all_subject_country = yes
+					}
+				}
+			}
+			FROM = {
+				add_opinion = {
+					who = ROOT
+					modifier = returned_to_vassal
+				}
+				grant_independence = yes
+				clr_country_flag = recolored_real_union_subject
+				clr_country_flag = recolored_real_union_subject_@ROOT
+				restore_country_color = yes
+			}
+			create_union = FROM
+			add_prestige = -10
+			FROM = {
+				add_liberty_desire = 25
+			}
+		}
+	}
+
+	ai_will_do = {
+		always = no
+	}
+}
+
+change_real_union_subject_color_rule = {
+	category = subject_interactions
+
+	require_acceptance = no
+
+	is_visible = {
+		FROM = {
+			is_subject_of = ROOT
+			is_subject_of_type = real_union_subject
+		}
+	}
+
+	is_allowed = {
+		hidden_trigger = {
+			FROM = {
+				is_subject_of = ROOT
+				is_subject_of_type = real_union_subject
+			}
+		}
+	}
+
+	on_accept = {
+		if = {
+			limit = {
+				FROM = {
+					is_subject_of = ROOT
+					is_subject_of_type = real_union_subject
+				}
+			}
+			if = {
+				limit = {
+					FROM = {
+						has_country_flag = real_union_changed_color_back
+					}
+				}
+				FROM = {
+					clr_country_flag = real_union_changed_color_back
+					set_country_flag = recolored_real_union_subject
+					set_country_flag = recolored_real_union_subject_@ROOT
+					change_country_color = { country = ROOT }
+				}
+			}
+			else = {
+				FROM = {
+					set_country_flag = real_union_changed_color_back
+					clr_country_flag = recolored_real_union_subject_@ROOT
+					clr_country_flag = recolored_real_union_subject
+					restore_country_color = yes
+				}
+			}
+		}
+	}
+
+	ai_will_do = {
+		always = no
+	}
+}
+
+cancel_real_union_subject = {
+	category = influence
+
+	require_acceptance = no
+
+	is_visible = {
+		NOT = { has_dlc = "Rights of Man" }
+		FROM = {
+			is_subject_of = ROOT
+			is_subject_of_type = real_union_subject
+		}
+	}
+
+	is_allowed = {
+		hidden_trigger = {
+			NOT = { has_dlc = "Rights of Man" }
+			FROM = {
+				is_subject_of = ROOT
+				is_subject_of_type = real_union_subject
+			}
+		}
+		NOT = { truce_with = FROM }
+		prestige = 0
+	}
+
+	on_accept = {
+		if = {
+			limit = {
+				NOT = { has_dlc = "Rights of Man" }
+				FROM = {
+					is_subject_of = ROOT
+					is_subject_of_type = real_union_subject
+				}
+				NOT = { truce_with = FROM }
+				prestige = 0
+			}
+			FROM = {
+				if = {
+					limit = {
+						NOT = { liberty_desire = 50 }
+					}
+					add_opinion = {
+						who = ROOT
+						modifier = vassal_abandoned
+					}
+				}
+				grant_independence = yes
+				add_truce_with = ROOT
+				clr_country_flag = recolored_real_union_subject
+				clr_country_flag = recolored_real_union_subject_@ROOT
+				restore_country_color = yes
+			}
+			add_truce_with = FROM
+			add_prestige = -25
+		}
+	}
+
+	ai_will_do = {
+		always = no
+	}
+}

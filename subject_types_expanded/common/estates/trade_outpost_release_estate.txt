@@ -1,0 +1,43 @@
+trade_outpost_release_estate = {
+	icon = 4
+
+	color = { 200 150 150 }
+
+	# Used for when declaring independence
+	independence_government = republic
+	starting_reform = merchants_reform
+	independence_tech_group = western
+
+	province_independence_weight = {
+		factor = 1
+		modifier = {
+			factor = 0
+			NOT = { has_province_flag = release_trade_outpost_here_@ROOT }
+		}
+	}
+
+	# If true, country will get estate
+	trigger = {
+		has_country_flag = is_releasing_trade_outpost
+	}
+
+	# These scale with loyalty & power
+	country_modifier_happy = {
+	}
+	country_modifier_neutral = {
+	}
+	country_modifier_angry = {
+	}
+
+	land_ownership_modifier = {
+	}
+
+	# Influence modifiers
+	base_influence = 0
+
+	agendas = {
+	}
+
+	privileges = {
+	}
+}

@@ -1,0 +1,154 @@
+establish_exarchate_subject = {
+	category = influence
+
+	require_acceptance = no
+
+	is_visible = {
+		can_create_subject_type = {
+			subject = FROM
+			subject_type = exarchate_subject
+		}
+		FROM = {
+			capital_scope = {
+				region_for_scope_province = {
+					type = all
+					OR = {
+						is_empty = yes
+						is_wasteland = yes
+						is_capital = no
+						owner = {
+							OR = {
+								NOT = { is_subject_of = ROOT }
+								NOT = { is_subject_of_type = exarchate_subject }
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	is_allowed = {
+		can_create_subject_type = {
+			subject = FROM
+			subject_type = exarchate_subject
+		}
+		hidden_trigger = {
+			FROM = {
+				capital_scope = {
+					region_for_scope_province = {
+						type = all
+						OR = {
+							is_empty = yes
+							is_wasteland = yes
+							is_capital = no
+							owner = {
+								OR = {
+									NOT = { is_subject_of = ROOT }
+									NOT = { is_subject_of_type = exarchate_subject }
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		is_at_war = no
+		FROM = { is_at_war = no }
+		FROM = {
+			NOT = { liberty_desire = 50 }
+		}
+	}
+
+	on_accept = {
+		if = {
+			limit = {
+				can_create_subject_type = {
+					subject = FROM
+					subject_type = exarchate_subject
+				}
+				FROM = {
+					capital_scope = {
+						region_for_scope_province = {
+							type = all
+							OR = {
+								is_empty = yes
+								is_wasteland = yes
+								is_capital = no
+								owner = {
+									OR = {
+										NOT = { is_subject_of = ROOT }
+										NOT = { is_subject_of_type = exarchate_subject }
+									}
+								}
+							}
+						}
+					}
+				}
+				is_at_war = no
+				FROM = { is_at_war = no }
+				FROM = {
+					NOT = { liberty_desire = 50 }
+				}
+			}
+			create_subject = {
+				subject = FROM
+				subject_type = exarchate_subject
+			}
+		}
+	}
+
+	ai_will_do = {
+		num_of_cities = 10
+		NOT = {
+			can_create_subject_type = {
+				subject = FROM
+				subject_type = crusader_state_vassal
+			}
+		}
+		NOT = {
+			calc_true_if = {
+				all_subject_country = {
+					is_subject_of_type = exarchate_subject
+				}
+				amount = 3
+			}
+		}
+		FROM = {
+			capital_scope = {
+				OR = {
+					continent = asia
+					continent = europe
+				}
+				NOT = { region = italy_region }
+			}
+			NOT = { religious_unity = 0.7 }
+			NOT = {
+				num_of_owned_provinces_with = {
+					value = 10
+					is_permanent_claim = ROOT
+				}
+			}
+			any_neighbor_country = {
+				OR = {
+					is_rival = ROOT
+					is_enemy = ROOT
+				}
+				NOT = { religion_group = ROOT }
+			}
+		}
+		variable_arithmetic_trigger = {
+			export_to_variable = {
+				which = our_provinces
+				value = trigger_value:num_of_cities
+			}
+			export_to_variable = {
+				which = their_provinces
+				value = trigger_value:num_of_cities
+				who = FROM
+			}
+			multiply_variable = { which = their_provinces value = 2 }
+			check_variable = { which = our_provinces which = their_provinces }
+		}
+	}
+}

@@ -1,0 +1,1553 @@
+defined_text = {
+    name = GetIfCancelProtectorateGivesStabHit
+	random = no
+
+	text = {
+        localisation_key = string_cancel_protectorate_no_stab_hit
+        trigger = {
+			full_idea_group = diplomatic_ideas
+        }
+    }
+	text = {
+        localisation_key = string_cancel_protectorate_stab_hit
+        trigger = {
+			NOT = { full_idea_group = diplomatic_ideas }
+        }
+    }
+}
+
+defined_text = {
+    name = GetIncreaseColonialAutonomyDesc
+	random = no
+
+	text = {
+        localisation_key = string_increase_colonial_autonomy_colony
+        trigger = {
+			is_colonial_subject_type = yes
+        }
+    }
+	text = {
+        localisation_key = string_increase_colonial_autonomy_dominion
+        trigger = {
+			always = yes
+        }
+    }
+}
+
+defined_text = {
+    name = GetDecreaseColonialAutonomyDesc
+	random = no
+
+	text = {
+        localisation_key = string_decrease_colonial_autonomy_dominion
+        trigger = {
+			is_dominion_or_similar_subject = yes
+        }
+    }
+	text = {
+        localisation_key = string_decrease_colonial_autonomy_autonomous_dominion
+        trigger = {
+			always = yes
+        }
+    }
+}
+
+defined_text = {
+    name = GetIfEstablishCrusaderStateCostsPapalInfluence
+	random = no
+
+	text = {
+        localisation_key = string_establish_crusader_state_costs_papal_influence
+        trigger = {
+			NOT = { tag = PAP }
+        }
+    }
+	text = {
+        localisation_key = ""
+        trigger = {
+			tag = PAP
+        }
+    }
+}
+
+defined_text = {
+    name = GetIfEstablishVoivodeshipReducesStabilityAndPrestige
+	random = no
+
+	text = {
+        localisation_key = string_establish_voivodeship_reduces_stability_and_prestige
+        trigger = {
+			NOT = {
+				OR = {
+					culture_group = FROM
+					accepted_culture = FROM
+					FROM = {
+						accepted_culture = ROOT
+					}
+				}
+			}
+        }
+    }
+	text = {
+        localisation_key = ""
+        trigger = {
+			always = yes
+        }
+    }
+}
+
+defined_text = {
+    name = GetIfDemoteToVassalGivesStabHit
+	random = no
+
+	text = {
+        localisation_key = string_demote_to_vassal_stab_hit
+        trigger = {
+			NOT = { full_idea_group = diplomatic_ideas }
+        }
+    }
+	text = {
+        localisation_key = ""
+        trigger = {
+			always = yes
+        }
+    }
+}
+
+defined_text = {
+    name = GetCreatedADNameIndia
+	random = no
+
+	text = {
+        localisation_key = string_created_ad_name_india_1
+        trigger = {
+			OR = {
+				culture_group = british
+				tag = GBR
+				tag = ENG
+			}
+			NOT = { exists = DI1 }
+        }
+    }
+	text = {
+        localisation_key = string_created_ad_name_india_2
+        trigger = {
+			OR = {
+				culture_group = germanic
+				tag = GER
+				tag = PRU
+			}
+			NOT = { exists = DI2 }
+        }
+    }
+	text = {
+        localisation_key = string_created_ad_name_india_3
+        trigger = {
+			OR = {
+				culture_group = iberian
+				tag = SPA
+				tag = POR
+				tag = CAS
+				tag = ARA
+			}
+			NOT = { exists = DI3 }
+        }
+    }
+	text = {
+        localisation_key = string_created_ad_name_india_4
+        trigger = {
+			OR = {
+				culture_group = french
+				tag = FRA
+				tag = FR2
+				tag = BRI
+				tag = BUR
+			}
+			NOT = { exists = DI4 }
+        }
+    }
+	text = {
+        localisation_key = string_created_ad_name_india_5
+        trigger = {
+			OR = {
+				tag = PAP
+				religion_group = christian
+			}
+			NOT = { exists = DI5 }
+        }
+    }
+	text = {
+        localisation_key = string_created_ad_name_india_6
+        trigger = {
+			religion_group = muslim
+			NOT = { exists = DI6 }
+        }
+    }
+	text = {
+        localisation_key = string_created_ad_name_india_7
+        trigger = {
+			NOT = { exists = DI7 }
+        }
+    }
+	text = {
+        localisation_key = string_created_ad_name_india_8
+        trigger = {
+			NOT = { exists = DI8 }
+        }
+    }
+
+	text = {
+        localisation_key = string_created_ad_name_india_9
+        trigger = {
+			NOT = { exists = DI9 }
+        }
+    }
+}
+
+defined_text = {
+    name = GetCreatedADNameWestAfrica
+	random = no
+
+	text = {
+        localisation_key = string_created_ad_name_west_africa_1
+        trigger = {
+			OR = {
+				culture_group = british
+				tag = GBR
+				tag = ENG
+			}
+			NOT = { exists = DW1 }
+        }
+    }
+	text = {
+        localisation_key = string_created_ad_name_west_africa_2
+        trigger = {
+			OR = {
+				culture_group = germanic
+				tag = GER
+				tag = PRU
+			}
+			NOT = { exists = DW2 }
+        }
+    }
+	text = {
+        localisation_key = string_created_ad_name_west_africa_3
+        trigger = {
+			OR = {
+				culture_group = iberian
+				tag = SPA
+				tag = POR
+				tag = CAS
+				tag = ARA
+			}
+			NOT = { exists = DW3 }
+        }
+    }
+	text = {
+        localisation_key = string_created_ad_name_west_africa_4
+        trigger = {
+			OR = {
+				culture_group = french
+				tag = FRA
+				tag = FR2
+				tag = BRI
+				tag = BUR
+			}
+			NOT = { exists = DW4 }
+        }
+    }
+	text = {
+        localisation_key = string_created_ad_name_west_africa_5
+        trigger = {
+			OR = {
+				tag = PAP
+				religion_group = christian
+			}
+			NOT = { exists = DW5 }
+        }
+    }
+	text = {
+        localisation_key = string_created_ad_name_west_africa_6
+        trigger = {
+			religion_group = muslim
+			NOT = { exists = DW6 }
+        }
+    }
+	text = {
+        localisation_key = string_created_ad_name_west_africa_7
+        trigger = {
+			NOT = { exists = DW7 }
+        }
+    }
+}
+
+defined_text = {
+    name = GetCreatedADNameSouthAfrica
+	random = no
+
+	text = {
+        localisation_key = string_created_ad_name_south_africa_1
+        trigger = {
+			OR = {
+				culture_group = british
+				tag = GBR
+				tag = ENG
+			}
+			NOT = { exists = DS1 }
+        }
+    }
+	text = {
+        localisation_key = string_created_ad_name_south_africa_2
+        trigger = {
+			OR = {
+				culture_group = germanic
+				tag = GER
+				tag = PRU
+			}
+			NOT = { exists = DS2 }
+        }
+    }
+	text = {
+        localisation_key = string_created_ad_name_south_africa_3
+        trigger = {
+			OR = {
+				culture_group = iberian
+				tag = SPA
+				tag = POR
+				tag = CAS
+				tag = ARA
+			}
+			NOT = { exists = DS3 }
+        }
+    }
+	text = {
+        localisation_key = string_created_ad_name_south_africa_4
+        trigger = {
+			OR = {
+				culture_group = french
+				tag = FRA
+				tag = FR2
+				tag = BRI
+				tag = BUR
+			}
+			NOT = { exists = DS4 }
+        }
+    }
+	text = {
+        localisation_key = string_created_ad_name_south_africa_5
+        trigger = {
+			OR = {
+				tag = PAP
+				religion_group = christian
+			}
+			NOT = { exists = DS5 }
+        }
+    }
+	text = {
+        localisation_key = string_created_ad_name_south_africa_6
+        trigger = {
+			religion_group = muslim
+			NOT = { exists = DS6 }
+        }
+    }
+	text = {
+        localisation_key = string_created_ad_name_south_africa_7
+        trigger = {
+			NOT = { exists = DS7 }
+        }
+    }
+}
+
+defined_text = {
+    name = GetCreatedADNameEastAfrica
+	random = no
+
+	text = {
+        localisation_key = string_created_ad_name_east_africa_1
+        trigger = {
+			OR = {
+				culture_group = british
+				tag = GBR
+				tag = ENG
+			}
+			NOT = { exists = DA1 }
+        }
+    }
+	text = {
+        localisation_key = string_created_ad_name_east_africa_2
+        trigger = {
+			OR = {
+				culture_group = germanic
+				tag = GER
+				tag = PRU
+			}
+			NOT = { exists = DA2 }
+        }
+    }
+	text = {
+        localisation_key = string_created_ad_name_east_africa_3
+        trigger = {
+			OR = {
+				culture_group = iberian
+				tag = SPA
+				tag = POR
+				tag = CAS
+				tag = ARA
+			}
+			NOT = { exists = DA3 }
+        }
+    }
+	text = {
+        localisation_key = string_created_ad_name_east_africa_4
+        trigger = {
+			OR = {
+				culture_group = french
+				tag = FRA
+				tag = FR2
+				tag = BRI
+				tag = BUR
+			}
+			NOT = { exists = DA4 }
+        }
+    }
+	text = {
+        localisation_key = string_created_ad_name_east_africa_5
+        trigger = {
+			OR = {
+				tag = PAP
+				religion_group = christian
+			}
+			NOT = { exists = DA5 }
+        }
+    }
+	text = {
+        localisation_key = string_created_ad_name_east_africa_6
+        trigger = {
+			religion_group = muslim
+			NOT = { exists = DA6 }
+        }
+    }
+	text = {
+        localisation_key = string_created_ad_name_east_africa_7
+        trigger = {
+			NOT = { exists = DA7 }
+        }
+    }
+}
+
+defined_text = {
+    name = GetCreatedADNameIndochina
+	random = no
+
+	text = {
+        localisation_key = string_created_ad_name_indochina_1
+        trigger = {
+			OR = {
+				culture_group = british
+				tag = GBR
+				tag = ENG
+			}
+			NOT = { exists = DC1 }
+        }
+    }
+	text = {
+        localisation_key = string_created_ad_name_indochina_2
+        trigger = {
+			OR = {
+				culture_group = germanic
+				tag = GER
+				tag = PRU
+			}
+			NOT = { exists = DC2 }
+        }
+    }
+	text = {
+        localisation_key = string_created_ad_name_indochina_3
+        trigger = {
+			OR = {
+				culture_group = iberian
+				tag = SPA
+				tag = POR
+				tag = CAS
+				tag = ARA
+			}
+			NOT = { exists = DC3 }
+        }
+    }
+	text = {
+        localisation_key = string_created_ad_name_indochina_4
+        trigger = {
+			OR = {
+				culture_group = french
+				tag = FRA
+				tag = FR2
+				tag = BRI
+				tag = BUR
+			}
+			NOT = { exists = DC4 }
+        }
+    }
+	text = {
+        localisation_key = string_created_ad_name_indochina_5
+        trigger = {
+			OR = {
+				tag = PAP
+				religion_group = christian
+			}
+			NOT = { exists = DC5 }
+        }
+    }
+	text = {
+        localisation_key = string_created_ad_name_indochina_6
+        trigger = {
+			religion_group = muslim
+			NOT = { exists = DC6 }
+        }
+    }
+	text = {
+        localisation_key = string_created_ad_name_indochina_7
+        trigger = {
+			NOT = { exists = DC7 }
+        }
+    }
+}
+
+defined_text = {
+    name = GetCreatedADNameEastIndies
+	random = no
+
+	text = {
+        localisation_key = string_created_ad_name_east_indies_1
+        trigger = {
+			OR = {
+				culture_group = british
+				tag = GBR
+				tag = ENG
+			}
+			NOT = { exists = DE1 }
+        }
+    }
+	text = {
+        localisation_key = string_created_ad_name_east_indies_2
+        trigger = {
+			OR = {
+				culture_group = germanic
+				tag = GER
+				tag = PRU
+			}
+			OR = {
+				AND = {
+					NOT = { tag = NED }
+					NOT = { tag = HOL }
+					NOT = { primary_culture = dutch }
+				}
+				exists = DE7
+			}
+			NOT = { exists = DE2 }
+        }
+    }
+	text = {
+        localisation_key = string_created_ad_name_east_indies_3
+        trigger = {
+			OR = {
+				culture_group = iberian
+				tag = SPA
+				tag = POR
+				tag = CAS
+				tag = ARA
+			}
+			NOT = { exists = DE3 }
+        }
+    }
+	text = {
+        localisation_key = string_created_ad_name_east_indies_4
+        trigger = {
+			OR = {
+				culture_group = french
+				tag = FRA
+				tag = FR2
+				tag = BRI
+				tag = BUR
+			}
+			NOT = { exists = DE4 }
+        }
+    }
+	text = {
+        localisation_key = string_created_ad_name_east_indies_5
+        trigger = {
+			OR = {
+				tag = PAP
+				religion_group = christian
+			}
+			OR = {
+				AND = {
+					NOT = { tag = NED }
+					NOT = { tag = HOL }
+					NOT = { primary_culture = dutch }
+				}
+				exists = DE7
+			}
+			NOT = { exists = DE5 }
+        }
+    }
+	text = {
+        localisation_key = string_created_ad_name_east_indies_6
+        trigger = {
+			religion_group = muslim
+			OR = {
+				AND = {
+					NOT = { tag = NED }
+					NOT = { tag = HOL }
+					NOT = { primary_culture = dutch }
+				}
+				exists = DE7
+			}
+			NOT = { exists = DE6 }
+        }
+    }
+	text = {
+        localisation_key = string_created_ad_name_east_indies_7
+        trigger = {
+			OR = {
+				tag = NED
+				tag = HOL
+				primary_culture = dutch
+			}
+			NOT = { exists = DE7 }
+        }
+    }
+	text = {
+        localisation_key = string_created_ad_name_east_indies_8
+        trigger = {
+			NOT = { exists = DE8 }
+        }
+    }
+
+	text = {
+        localisation_key = string_created_ad_name_east_indies_9
+        trigger = {
+			NOT = { exists = DE9 }
+        }
+    }
+}
+
+defined_text = {
+    name = GetCreatedADNamePhilippines
+	random = no
+
+	text = {
+        localisation_key = string_created_ad_name_philippines_1
+        trigger = {
+			OR = {
+				culture_group = british
+				tag = GBR
+				tag = ENG
+			}
+			NOT = { exists = DE1 }
+        }
+    }
+	text = {
+        localisation_key = string_created_ad_name_philippines_2
+        trigger = {
+			OR = {
+				culture_group = germanic
+				tag = GER
+				tag = PRU
+			}
+			NOT = { exists = DE2 }
+        }
+    }
+	text = {
+        localisation_key = string_created_ad_name_philippines_3
+        trigger = {
+			OR = {
+				culture_group = iberian
+				tag = SPA
+				tag = POR
+				tag = CAS
+				tag = ARA
+			}
+			OR = {
+				AND = {
+					NOT = { tag = SPA }
+					NOT = { tag = CAS }
+					NOT = { primary_culture = castillian }
+				}
+				exists = DE7
+			}
+			NOT = { exists = DE3 }
+        }
+    }
+	text = {
+        localisation_key = string_created_ad_name_philippines_4
+        trigger = {
+			OR = {
+				culture_group = french
+				tag = FRA
+				tag = FR2
+				tag = BRI
+				tag = BUR
+			}
+			NOT = { exists = DE4 }
+        }
+    }
+	text = {
+        localisation_key = string_created_ad_name_philippines_5
+        trigger = {
+			OR = {
+				tag = PAP
+				religion_group = christian
+			}
+			OR = {
+				AND = {
+					NOT = { tag = SPA }
+					NOT = { tag = CAS }
+					NOT = { primary_culture = castillian }
+				}
+				exists = DE7
+			}
+			NOT = { exists = DE5 }
+        }
+    }
+	text = {
+        localisation_key = string_created_ad_name_philippines_6
+        trigger = {
+			religion_group = muslim
+			OR = {
+				AND = {
+					NOT = { tag = SPA }
+					NOT = { tag = CAS }
+					NOT = { primary_culture = castillian }
+				}
+				exists = DE7
+			}
+			NOT = { exists = DE6 }
+        }
+    }
+	text = {
+        localisation_key = string_created_ad_name_philippines_7
+        trigger = {
+			OR = {
+				tag = SPA
+				tag = CAS
+				primary_culture = castillian
+			}
+			NOT = { exists = DE7 }
+        }
+    }
+	text = {
+        localisation_key = string_created_ad_name_philippines_8
+        trigger = {
+			NOT = { exists = DE8 }
+        }
+    }
+
+	text = {
+        localisation_key = string_created_ad_name_philippines_9
+        trigger = {
+			NOT = { exists = DE9 }
+        }
+    }
+}
+
+defined_text = {
+    name = GetFirstEastIndiesTradeCompanyRegionWeCede
+	random = no
+
+	text = {
+        localisation_key = string_moluccas_trade_company_region
+        trigger = {
+			trade_company_moluccas = {
+				owned_by = PREV
+			}
+        }
+    }
+	text = {
+        localisation_key = string_no_moluccas_trade_company_region
+        trigger = {
+			always = yes
+        }
+    }
+}
+
+defined_text = {
+    name = GetFirstEastIndiesTradeCompanyRegionWeCedeComma
+	random = no
+
+	text = {
+        localisation_key = string_trade_company_list_comma
+        trigger = {
+			trade_company_indonesia = {
+				owned_by = PREV
+			}
+        }
+    }
+	text = {
+        localisation_key = string_trade_company_list_no_comma
+        trigger = {
+			always = yes
+        }
+    }
+}
+
+defined_text = {
+    name = GetSecondEastIndiesTradeCompanyRegionWeCede
+	random = no
+
+	text = {
+        localisation_key = string_indonesian_trade_company_region
+        trigger = {
+			trade_company_indonesia = {
+				owned_by = PREV
+			}
+        }
+    }
+	text = {
+        localisation_key = string_no_indonesian_trade_company_region
+        trigger = {
+			always = yes
+        }
+    }
+}
+
+defined_text = {
+    name = GetEastIndiesTradeCompanyRegionsSgPl
+	random = no
+
+	text = {
+        localisation_key = string_trade_company_region_pl
+        trigger = {
+			trade_company_moluccas = {
+				owned_by = ROOT
+			}
+			trade_company_indonesia = {
+				owned_by = ROOT
+			}
+        }
+    }
+	text = {
+        localisation_key = string_trade_company_region_sg
+        trigger = {
+			always = yes
+        }
+    }
+}
+
+defined_text = {
+    name = GetFirstIndochinaTradeCompanyRegionWeCede
+	random = no
+
+	text = {
+        localisation_key = string_indochina_trade_company_region
+        trigger = {
+			trade_company_indochina = {
+				owned_by = PREV
+			}
+        }
+    }
+	text = {
+        localisation_key = string_no_indochina_trade_company_region
+        trigger = {
+			always = yes
+        }
+    }
+}
+
+defined_text = {
+    name = GetFirstIndochinaTradeCompanyRegionWeCedeComma
+	random = no
+
+	text = {
+        localisation_key = string_trade_company_list_comma
+        trigger = {
+			OR = {
+				trade_company_burma = {
+					owned_by = PREV
+					NOT = { superregion = india_superregion }
+				}
+				trade_company_east_india = {
+					owned_by = PREV
+					NOT = { superregion = india_superregion }
+				}
+			}
+        }
+    }
+	text = {
+        localisation_key = string_trade_company_list_no_comma
+        trigger = {
+			always = yes
+        }
+    }
+}
+
+defined_text = {
+    name = GetSecondIndochinaTradeCompanyRegionWeCede
+	random = no
+
+	text = {
+        localisation_key = string_burma_trade_company_region
+        trigger = {
+			trade_company_burma = {
+				owned_by = PREV
+				NOT = { superregion = india_superregion }
+			}
+        }
+    }
+	text = {
+        localisation_key = string_no_burma_trade_company_region
+        trigger = {
+			always = yes
+        }
+    }
+}
+
+defined_text = {
+    name = GetSecondIndochinaTradeCompanyRegionWeCedeComma
+	random = no
+
+	text = {
+        localisation_key = string_trade_company_list_comma
+        trigger = {
+			trade_company_east_india = {
+				owned_by = PREV
+				NOT = { superregion = india_superregion }
+			}
+        }
+    }
+	text = {
+        localisation_key = string_trade_company_list_no_comma
+        trigger = {
+			always = yes
+        }
+    }
+}
+
+defined_text = {
+    name = GetThirdIndochinaTradeCompanyRegionWeCede
+	random = no
+
+	text = {
+        localisation_key = string_east_india_trade_company_region
+        trigger = {
+			trade_company_east_india = {
+				owned_by = PREV
+				NOT = { superregion = india_superregion }
+			}
+        }
+    }
+	text = {
+        localisation_key = string_no_east_india_trade_company_region
+        trigger = {
+			always = yes
+        }
+    }
+}
+
+defined_text = {
+    name = GetIndochinaTradeCompanyRegionsSgPl
+	random = no
+
+	text = {
+        localisation_key = string_trade_company_region_pl
+        trigger = {
+			trade_company_indochina = {
+				owned_by = ROOT
+			}
+			trade_company_burma = {
+				owned_by = ROOT
+			}
+        }
+    }
+	text = {
+        localisation_key = string_trade_company_region_sg
+        trigger = {
+			always = yes
+        }
+    }
+}
+
+defined_text = {
+    name = GetFirstWestAfricanTradeCompanyRegionWeCede
+	random = no
+
+	text = {
+        localisation_key = string_west_africa_trade_company_region
+        trigger = {
+			trade_company_west_africa = {
+				owned_by = PREV
+			}
+        }
+    }
+	text = {
+        localisation_key = string_no_west_africa_trade_company_region
+        trigger = {
+			always = yes
+        }
+    }
+}
+
+defined_text = {
+    name = GetFirstWestAfricanTradeCompanyRegionWeCedeComma
+	random = no
+
+	text = {
+        localisation_key = string_trade_company_list_comma
+        trigger = {
+			OR = {
+				trade_company_timbuktu = {
+					owned_by = PREV
+				}
+				trade_company_katsina = {
+					owned_by = PREV
+				}
+				trade_company_kongo = {
+					owned_by = PREV
+				}
+			}
+        }
+    }
+	text = {
+        localisation_key = string_trade_company_list_no_comma
+        trigger = {
+			always = yes
+        }
+    }
+}
+
+defined_text = {
+    name = GetSecondWestAfricanTradeCompanyRegionWeCede
+	random = no
+
+	text = {
+        localisation_key = string_timbuktu_trade_company_region
+        trigger = {
+			trade_company_timbuktu = {
+				owned_by = PREV
+			}
+        }
+    }
+	text = {
+        localisation_key = string_no_timbuktu_trade_company_region
+        trigger = {
+			always = yes
+        }
+    }
+}
+
+defined_text = {
+    name = GetSecondWestAfricanTradeCompanyRegionWeCedeComma
+	random = no
+
+	text = {
+        localisation_key = string_trade_company_list_comma
+        trigger = {
+			OR = {
+				trade_company_katsina = {
+					owned_by = PREV
+				}
+				trade_company_kongo = {
+					owned_by = PREV
+				}
+			}
+        }
+    }
+	text = {
+        localisation_key = string_trade_company_list_no_comma
+        trigger = {
+			always = yes
+        }
+    }
+}
+
+defined_text = {
+    name = GetThirdWestAfricanTradeCompanyRegionWeCede
+	random = no
+
+	text = {
+        localisation_key = string_katsina_trade_company_region
+        trigger = {
+			trade_company_katsina = {
+				owned_by = PREV
+			}
+        }
+    }
+	text = {
+        localisation_key = string_no_katsina_trade_company_region
+        trigger = {
+			always = yes
+        }
+    }
+}
+
+defined_text = {
+    name = GetThirdWestAfricanTradeCompanyRegionWeCedeComma
+	random = no
+
+	text = {
+        localisation_key = string_trade_company_list_comma
+        trigger = {
+			trade_company_kongo = {
+				owned_by = PREV
+			}
+        }
+    }
+	text = {
+        localisation_key = string_trade_company_list_no_comma
+        trigger = {
+			always = yes
+        }
+    }
+}
+
+defined_text = {
+    name = GetFourthWestAfricanTradeCompanyRegionWeCede
+	random = no
+
+	text = {
+        localisation_key = string_kongo_trade_company_region
+        trigger = {
+			trade_company_kongo = {
+				owned_by = PREV
+			}
+        }
+    }
+	text = {
+        localisation_key = string_no_kongo_trade_company_region
+        trigger = {
+			always = yes
+        }
+    }
+}
+
+defined_text = {
+    name = GetWestAfricanTradeCompanyRegionsSgPl
+	random = no
+
+	text = {
+        localisation_key = string_trade_company_region_sg
+        trigger = {
+			OR = {
+				AND = {
+					trade_company_west_africa = {
+						owned_by = ROOT
+					}
+					trade_company_timbuktu = {
+						type = all
+						NOT = { owned_by = ROOT }
+					}
+					trade_company_katsina = {
+						type = all
+						NOT = { owned_by = ROOT }
+					}
+					trade_company_kongo = {
+						type = all
+						NOT = { owned_by = ROOT }
+					}
+				}
+				AND = {
+					trade_company_west_africa = {
+						type = all
+						NOT = { owned_by = ROOT }
+					}
+					trade_company_timbuktu = {
+						owned_by = ROOT
+					}
+					trade_company_katsina = {
+						type = all
+						NOT = { owned_by = ROOT }
+					}
+					trade_company_kongo = {
+						type = all
+						NOT = { owned_by = ROOT }
+					}
+				}
+				AND = {
+					trade_company_west_africa = {
+						type = all
+						NOT = { owned_by = ROOT }
+					}
+					trade_company_timbuktu = {
+						type = all
+						NOT = { owned_by = ROOT }
+					}
+					trade_company_katsina = {
+						owned_by = ROOT
+					}
+					trade_company_kongo = {
+						type = all
+						NOT = { owned_by = ROOT }
+					}
+				}
+				AND = {
+					trade_company_west_africa = {
+						type = all
+						NOT = { owned_by = ROOT }
+					}
+					trade_company_timbuktu = {
+						type = all
+						NOT = { owned_by = ROOT }
+					}
+					trade_company_katsina = {
+						type = all
+						NOT = { owned_by = ROOT }
+					}
+					trade_company_kongo = {
+						owned_by = ROOT
+					}
+				}
+			}
+        }
+    }
+	text = {
+        localisation_key = string_trade_company_region_pl
+        trigger = {
+			always = yes
+        }
+    }
+}
+
+defined_text = {
+    name = GetFirstEastAfricanTradeCompanyRegionWeCede
+	random = no
+
+	text = {
+        localisation_key = string_east_africa_trade_company_region
+        trigger = {
+			trade_company_east_africa = {
+				owned_by = PREV
+			}
+        }
+    }
+	text = {
+        localisation_key = string_no_east_africa_trade_company_region
+        trigger = {
+			always = yes
+        }
+    }
+}
+
+defined_text = {
+    name = GetFirstEastAfricanTradeCompanyRegionWeCedeComma
+	random = no
+
+	text = {
+        localisation_key = string_trade_company_list_comma
+        trigger = {
+			OR = {
+				trade_company_zambezi = {
+					owned_by = PREV
+				}
+				trade_company_great_lakes = {
+					owned_by = PREV
+				}
+				trade_company_ethiopia = {
+					owned_by = PREV
+				}
+				trade_company_gulf_of_aden = {
+					continent = africa
+					owned_by = PREV
+				}
+			}
+        }
+    }
+	text = {
+        localisation_key = string_trade_company_list_no_comma
+        trigger = {
+			always = yes
+        }
+    }
+}
+
+defined_text = {
+    name = GetSecondEastAfricanTradeCompanyRegionWeCede
+	random = no
+
+	text = {
+        localisation_key = string_zambezi_trade_company_region
+        trigger = {
+			trade_company_zambezi = {
+				owned_by = PREV
+			}
+        }
+    }
+	text = {
+        localisation_key = string_no_zambezi_trade_company_region
+        trigger = {
+			always = yes
+        }
+    }
+}
+
+defined_text = {
+    name = GetSecondEastAfricanTradeCompanyRegionWeCedeComma
+	random = no
+
+	text = {
+        localisation_key = string_trade_company_list_comma
+        trigger = {
+			OR = {
+				trade_company_great_lakes = {
+					owned_by = PREV
+				}
+				trade_company_ethiopia = {
+					owned_by = PREV
+				}
+				trade_company_gulf_of_aden = {
+					continent = africa
+					owned_by = PREV
+				}
+			}
+        }
+    }
+	text = {
+        localisation_key = string_trade_company_list_no_comma
+        trigger = {
+			always = yes
+        }
+    }
+}
+
+defined_text = {
+    name = GetThirdEastAfricanTradeCompanyRegionWeCede
+	random = no
+
+	text = {
+        localisation_key = string_great_lakes_trade_company_region
+        trigger = {
+			trade_company_great_lakes = {
+				owned_by = PREV
+			}
+        }
+    }
+	text = {
+        localisation_key = string_no_great_lakes_trade_company_region
+        trigger = {
+			always = yes
+        }
+    }
+}
+
+defined_text = {
+    name = GetThirdEastAfricanTradeCompanyRegionWeCedeComma
+	random = no
+
+	text = {
+        localisation_key = string_trade_company_list_comma
+        trigger = {
+			OR = {
+				trade_company_ethiopia = {
+					owned_by = PREV
+				}
+				trade_company_gulf_of_aden = {
+					continent = africa
+					owned_by = PREV
+				}
+			}
+        }
+    }
+	text = {
+        localisation_key = string_trade_company_list_no_comma
+        trigger = {
+			always = yes
+        }
+    }
+}
+
+defined_text = {
+    name = GetFourthEastAfricanTradeCompanyRegionWeCede
+	random = no
+
+	text = {
+        localisation_key = string_ethiopia_trade_company_region
+        trigger = {
+			trade_company_ethiopia = {
+				owned_by = PREV
+			}
+        }
+    }
+	text = {
+        localisation_key = string_no_ethiopia_trade_company_region
+        trigger = {
+			always = yes
+        }
+    }
+}
+
+defined_text = {
+    name = GetFourthEastAfricanTradeCompanyRegionWeCedeComma
+	random = no
+
+	text = {
+        localisation_key = string_trade_company_list_comma
+        trigger = {
+			trade_company_gulf_of_aden = {
+				continent = africa
+				owned_by = PREV
+			}
+        }
+    }
+	text = {
+        localisation_key = string_trade_company_list_no_comma
+        trigger = {
+			always = yes
+        }
+    }
+}
+
+defined_text = {
+    name = GetFifthEastAfricanTradeCompanyRegionWeCede
+	random = no
+
+	text = {
+        localisation_key = string_gulf_of_aden_trade_company_region
+        trigger = {
+			trade_company_gulf_of_aden = {
+				continent = africa
+				owned_by = PREV
+			}
+        }
+    }
+	text = {
+        localisation_key = string_no_gulf_of_aden_trade_company_region
+        trigger = {
+			always = yes
+        }
+    }
+}
+
+defined_text = {
+    name = GetEastAfricanTradeCompanyRegionsSgPl
+	random = no
+
+	text = {
+        localisation_key = string_trade_company_region_sg
+        trigger = {
+			OR = {
+				AND = {
+					trade_company_east_africa = {
+						owned_by = ROOT
+					}
+					trade_company_zambezi = {
+						type = all
+						NOT = { owned_by = ROOT }
+					}
+					trade_company_great_lakes = {
+						type = all
+						NOT = { owned_by = ROOT }
+					}
+					trade_company_ethiopia = {
+						type = all
+						NOT = { owned_by = ROOT }
+					}
+					trade_company_gulf_of_aden = {
+						type = all
+						OR = {
+							NOT = { owned_by = ROOT }
+							NOT = { continent = africa }
+						}
+					}
+				}
+				AND = {
+					trade_company_east_africa = {
+						type = all
+						NOT = { owned_by = ROOT }
+					}
+					trade_company_zambezi = {
+						owned_by = ROOT
+					}
+					trade_company_great_lakes = {
+						type = all
+						NOT = { owned_by = ROOT }
+					}
+					trade_company_ethiopia = {
+						type = all
+						NOT = { owned_by = ROOT }
+					}
+					trade_company_gulf_of_aden = {
+						type = all
+						OR = {
+							NOT = { owned_by = ROOT }
+							NOT = { continent = africa }
+						}
+					}
+				}
+				AND = {
+					trade_company_east_africa = {
+						type = all
+						NOT = { owned_by = ROOT }
+					}
+					trade_company_zambezi = {
+						type = all
+						NOT = { owned_by = ROOT }
+					}
+					trade_company_great_lakes = {
+						owned_by = ROOT
+					}
+					trade_company_ethiopia = {
+						type = all
+						NOT = { owned_by = ROOT }
+					}
+					trade_company_gulf_of_aden = {
+						type = all
+						OR = {
+							NOT = { owned_by = ROOT }
+							NOT = { continent = africa }
+						}
+					}
+				}
+				AND = {
+					trade_company_east_africa = {
+						type = all
+						NOT = { owned_by = ROOT }
+					}
+					trade_company_zambezi = {
+						type = all
+						NOT = { owned_by = ROOT }
+					}
+					trade_company_great_lakes = {
+						type = all
+						NOT = { owned_by = ROOT }
+					}
+					trade_company_ethiopia = {
+						owned_by = ROOT
+					}
+					trade_company_gulf_of_aden = {
+						type = all
+						OR = {
+							NOT = { owned_by = ROOT }
+							NOT = { continent = africa }
+						}
+					}
+				}
+				AND = {
+					trade_company_east_africa = {
+						type = all
+						NOT = { owned_by = ROOT }
+					}
+					trade_company_zambezi = {
+						type = all
+						NOT = { owned_by = ROOT }
+					}
+					trade_company_great_lakes = {
+						type = all
+						NOT = { owned_by = ROOT }
+					}
+					trade_company_ethiopia = {
+						type = all
+						NOT = { owned_by = ROOT }
+					}
+					trade_company_gulf_of_aden = {
+						owned_by = ROOT
+						continent = africa
+					}
+				}
+			}
+        }
+    }
+	text = {
+        localisation_key = string_trade_company_region_pl
+        trigger = {
+			always = yes
+        }
+    }
+}

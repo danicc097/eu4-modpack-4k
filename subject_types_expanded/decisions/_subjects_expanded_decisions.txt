@@ -1,0 +1,19 @@
+country_decisions = {
+	subjects_expanded_info_decision = {
+		color = { 35 206 255 }
+		potential = {
+			ai = no
+			NOT = { has_country_flag = used_subjects_expanded_info_decision }
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			set_country_flag = used_subjects_expanded_info_decision
+			country_event = { id = subjects_expanded_events.4 }
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}

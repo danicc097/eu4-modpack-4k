@@ -1,0 +1,37 @@
+has_total_development_fraction_of = {
+	variable_arithmetic_trigger = {
+		export_to_variable = {
+			which = this_dev
+			value = trigger_value:total_development
+		}
+		export_to_variable = {
+			which = their_dev
+			value = trigger_value:total_development
+			who = $who$
+		}
+		divide_variable = { which = this_dev which = their_dev }
+		check_variable = { which = this_dev value = $value$ }
+	}
+}
+
+has_disabled_colonial_nation_spawning = {
+	[[is_province]
+		if = {
+			limit = {
+				always = $is_province$
+			}
+			colonial_region = $colonial_region$
+		}
+	]
+	$who$ = {
+		has_country_flag = no_colonial_nations_in_$colonial_region$
+		NOT = {
+			any_subject_country = {
+				is_colonial_nation = yes
+				capital_scope = {
+					colonial_region = $colonial_region$
+				}
+			}
+		}
+	}
+}

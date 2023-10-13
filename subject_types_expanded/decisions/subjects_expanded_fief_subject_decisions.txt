@@ -1,0 +1,62 @@
+country_decisions = {
+	se_ai_decision_call_fief_subject_to_arms = {
+		potential = {
+			ai = yes
+			has_subject_of_type = fief_subject
+			is_at_war = yes
+			OR = {
+				is_in_war = {
+					attacker_leader = ROOT
+				}
+				is_in_war = {
+					defender_leader = ROOT
+				}
+			}
+			NOT = { war_score = -10 }
+			NOT = {
+				is_in_war = {
+					attacker_leader = ENG
+					defender_leader = ROOT
+					casus_belli = cb_hundred_years_war
+				}
+			}
+			any_subject_country = {
+				is_subject_of_type = fief_subject
+				is_at_war = no
+				army_size = 5
+				OR = {
+					NOT = { liberty_desire = 30 }
+					ROOT = {
+						NOT = { war_score = -30 }
+					}
+				}
+			}
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			every_subject_country = {
+				limit = {
+					is_subject_of_type = fief_subject
+					is_at_war = no
+					army_size = 5
+					OR = {
+						NOT = { liberty_desire = 30 }
+						ROOT = {
+							NOT = { war_score = -30 }
+						}
+					}
+				}
+				add_liberty_desire = 25
+				join_all_defensive_wars_of = ROOT
+				join_all_offensive_wars_of = ROOT
+				country_event = { id = subjects_expanded_fief_subject_events.2 }
+			}
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		ai_importance = 100
+	}
+}

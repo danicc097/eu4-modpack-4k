@@ -1,0 +1,82 @@
+viking_settlement_demand_raid_loot = {
+	category = subject_interactions
+
+	require_acceptance = no
+
+	is_visible = {
+		can_be_overlord = viking_settlement
+		FROM = {
+			is_subject_of = ROOT
+			is_subject_of_type = viking_settlement
+		}
+	}
+
+	is_allowed = {
+		hidden_trigger = {
+			can_be_overlord = viking_settlement
+			FROM = {
+				is_subject_of = ROOT
+				is_subject_of_type = viking_settlement
+				NOT = { has_country_flag = viking_settlement_demanding_raid_loot }
+			}
+		}
+		is_at_war = no
+		FROM = { is_at_war = no }
+		FROM = { NOT = { liberty_desire = 50 } }
+		FROM = { years_of_income = 0.5 }
+		FROM = { sailors_percentage = 0.1 }
+		FROM = {
+			has_opinion = {
+				who = ROOT
+				value = 0
+			}
+		}
+	}
+
+	on_accept = {
+		if = {
+			limit = {
+				can_be_overlord = viking_settlement
+				FROM = {
+					is_subject_of = ROOT
+					is_subject_of_type = viking_settlement
+					NOT = { has_country_flag = viking_settlement_demanding_raid_loot }
+				}
+				is_at_war = no
+				FROM = { is_at_war = no }
+				FROM = { NOT = { liberty_desire = 50 } }
+				FROM = { years_of_income = 0.5 }
+				FROM = { sailors_percentage = 0.1 }
+				FROM = {
+					has_opinion = {
+						who = ROOT
+						value = 0
+					}
+				}
+			}
+			FROM = {
+				country_event = { id = subjects_expanded_viking_settlement_events.4 }
+			}
+		}
+	}
+
+	ai_will_do = {
+		NOT = { had_recent_war = 2 }
+		OR = {
+			AND = {
+				NOT = { treasury = 10000 }
+				NOT = { years_of_income = 2 }
+			}
+			NOT = { sailors_percentage = 0.1 }
+		}
+		FROM = {
+			has_opinion = {
+				who = ROOT
+				value = 50
+			}
+			years_of_income = 1
+			sailors_percentage = 0.2
+			NOT = { liberty_desire = 30 }
+		}
+	}
+}

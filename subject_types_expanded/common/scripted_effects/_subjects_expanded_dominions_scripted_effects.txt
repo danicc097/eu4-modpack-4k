@@ -1,0 +1,6822 @@
+rename_dominion_accordingly_to_overlord = {
+	hidden_effect = {
+		restore_country_name = yes
+		clr_country_flag = renamed_dominion_accordingly_to_free
+		every_country = {
+			limit = {
+				ROOT = {
+					has_country_flag = renamed_dominion_accordingly_to_@PREV
+				}
+			}
+			ROOT = {
+				clr_country_flag = renamed_dominion_accordingly_to_@PREV
+			}
+		}
+	}
+	if = {
+		limit = {
+			is_subject = no
+		}
+		override_country_name = FREE_DOMINION_$dominion_region$
+		set_country_flag = renamed_dominion_accordingly_to_free
+	}
+	else_if = {
+		limit = {
+			overlord = {
+				country_has_custom_name_for_dominions = yes
+			}
+			OR = {
+				NOT = { tag = DE7 }
+				overlord = {
+					NOT = { tag = NED }
+					NOT = { tag = HOL }
+				}
+			}
+			OR = {
+				NOT = { tag = DI1 }
+				overlord = {
+					NOT = { tag = GBR }
+					NOT = { tag = ENG }
+				}
+			}
+		}
+		hidden_effect = {
+			overlord = {
+				ROOT = {
+					set_country_flag = renamed_dominion_accordingly_to_@PREV
+				}
+			}
+		}
+		# Vanilla Tags
+		if = {
+			limit = {
+				overlord = {
+					tag = AAC
+				}
+			}
+			override_country_name = AAC_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = ABB
+				}
+			}
+			override_country_name = ABB_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = ABE
+				}
+			}
+			override_country_name = ABE_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = ACH
+				}
+			}
+			override_country_name = ACH_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = ADA
+				}
+			}
+			override_country_name = ADA_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = ADE
+				}
+			}
+			override_country_name = ADE_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = ADU
+				}
+			}
+			override_country_name = ADU_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = AFA
+				}
+			}
+			override_country_name = AFA_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = AFG
+				}
+			}
+			override_country_name = AFG_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = AHM
+				}
+			}
+			override_country_name = AHM_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = AIR
+				}
+			}
+			override_country_name = AIR_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = AJU
+				}
+			}
+			override_country_name = AJU_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = AKK
+				}
+			}
+			override_country_name = AKK_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = AKM
+				}
+			}
+			override_country_name = AKM_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = AKT
+				}
+			}
+			override_country_name = AKT_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = ALA
+				}
+			}
+			override_country_name = ALA_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = ALB
+				}
+			}
+			override_country_name = ALB_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = ALE
+				}
+			}
+			override_country_name = ALE_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = ALG
+				}
+			}
+			override_country_name = ALG_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = ALH
+				}
+			}
+			override_country_name = ALH_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = ALO
+				}
+			}
+			override_country_name = ALO_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = ALS
+				}
+			}
+			override_country_name = ALS_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = AMA
+				}
+			}
+			override_country_name = AMA_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = AMG
+				}
+			}
+			override_country_name = AMG_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = ANH
+				}
+			}
+			override_country_name = ANH_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = ANN
+				}
+			}
+			override_country_name = ANN_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = ANS
+				}
+			}
+			override_country_name = ANS_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = ANT
+				}
+			}
+			override_country_name = ANT_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = ANU
+				}
+			}
+			override_country_name = ANU_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = ANZ
+				}
+			}
+			override_country_name = ANZ_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = APA
+				}
+			}
+			override_country_name = APA_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = AQU
+				}
+			}
+			override_country_name = AQU_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = ARA
+				}
+			}
+			override_country_name = ARA_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = ARB
+				}
+			}
+			override_country_name = ARB_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = ARD
+				}
+			}
+			override_country_name = ARD_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = ARK
+				}
+			}
+			override_country_name = ARK_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = ARL
+				}
+			}
+			override_country_name = ARL_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = ARM
+				}
+			}
+			override_country_name = ARM_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = ARP
+				}
+			}
+			override_country_name = ARP_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = ARW
+				}
+			}
+			override_country_name = ARW_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = ASA
+				}
+			}
+			override_country_name = ASA_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = ASH
+				}
+			}
+			override_country_name = ASH_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = ASI
+				}
+			}
+			override_country_name = ASI_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = ASK
+				}
+			}
+			override_country_name = ASK_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = ASS
+				}
+			}
+			override_country_name = ASS_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = AST
+				}
+			}
+			override_country_name = AST_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = ASU
+				}
+			}
+			override_country_name = ASU_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = ATH
+				}
+			}
+			override_country_name = ATH_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = ATJ
+				}
+			}
+			override_country_name = ATJ_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = AUG
+				}
+			}
+			override_country_name = AUG_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = AUS
+				}
+			}
+			override_country_name = AUS_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = AUV
+				}
+			}
+			override_country_name = AUV_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = AVA
+				}
+			}
+			override_country_name = AVA_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = AVI
+				}
+			}
+			override_country_name = AVI_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = AVR
+				}
+			}
+			override_country_name = AVR_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = AYD
+				}
+			}
+			override_country_name = AYD_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = AYU
+				}
+			}
+			override_country_name = AYU_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = AZT
+				}
+			}
+			override_country_name = AZT_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = BAD
+				}
+			}
+			override_country_name = BAD_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = BAH
+				}
+			}
+			override_country_name = BAH_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = BAL
+				}
+			}
+			override_country_name = BAL_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = BAM
+				}
+			}
+			override_country_name = BAM_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = BAN
+				}
+			}
+			override_country_name = BAN_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = BAR
+				}
+			}
+			override_country_name = BAR_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = BAV
+				}
+			}
+			override_country_name = BAV_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = BDA
+				}
+			}
+			override_country_name = BDA_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = BEI
+				}
+			}
+			override_country_name = BEI_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = BEJ
+				}
+			}
+			override_country_name = BEJ_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = BEN
+				}
+			}
+			override_country_name = BEN_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = BER
+				}
+			}
+			override_country_name = BER_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = BGA
+				}
+			}
+			override_country_name = BGA_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = BGL
+				}
+			}
+			override_country_name = BGL_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = BHA
+				}
+			}
+			override_country_name = BHA_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = BHT
+				}
+			}
+			override_country_name = BHT_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = BHU
+				}
+			}
+			override_country_name = BHU_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = BIJ
+				}
+			}
+			override_country_name = BIJ_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = BLA
+				}
+			}
+			override_country_name = BLA_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = BLG
+				}
+			}
+			override_country_name = BLG_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = BLI
+				}
+			}
+			override_country_name = BLI_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = BLM
+				}
+			}
+			override_country_name = BLM_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = BLO
+				}
+			}
+			override_country_name = BLO_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = BND
+				}
+			}
+			override_country_name = BND_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = BNG
+				}
+			}
+			override_country_name = BNG_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = BNJ
+				}
+			}
+			override_country_name = BNJ_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = BNY
+				}
+			}
+			override_country_name = BNY_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = BOH
+				}
+			}
+			override_country_name = BOH_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = BON
+				}
+			}
+			override_country_name = BON_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = BOS
+				}
+			}
+			override_country_name = BOS_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = BOU
+				}
+			}
+			override_country_name = BOU_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = BPI
+				}
+			}
+			override_country_name = BPI_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = BPR
+				}
+			}
+			override_country_name = BPR_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = BRA
+				}
+			}
+			override_country_name = BRA_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = BRB
+				}
+			}
+			override_country_name = BRB_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = BRE
+				}
+			}
+			override_country_name = BRE_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = BRG
+				}
+			}
+			override_country_name = BRG_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = BRI
+				}
+			}
+			override_country_name = BRI_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = BRR
+				}
+			}
+			override_country_name = BRR_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = BRT
+				}
+			}
+			override_country_name = BRT_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = BRU
+				}
+			}
+			override_country_name = BRU_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = BRZ
+				}
+			}
+			override_country_name = BRZ_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = BSG
+				}
+			}
+			override_country_name = BSG_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = BSH
+				}
+			}
+			override_country_name = BSH_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = BSR
+				}
+			}
+			override_country_name = BSR_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = BST
+				}
+			}
+			override_country_name = BST_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = BTI
+				}
+			}
+			override_country_name = BTI_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = BTL
+				}
+			}
+			override_country_name = BTL_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = BTN
+				}
+			}
+			override_country_name = BTN_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = BTS
+				}
+			}
+			override_country_name = BTS_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = BTU
+				}
+			}
+			override_country_name = BTU_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = BUG
+				}
+			}
+			override_country_name = BUG_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = BUK
+				}
+			}
+			override_country_name = BUK_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = BUL
+				}
+			}
+			override_country_name = BUL_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = BUR
+				}
+			}
+			override_country_name = BUR_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = BUU
+				}
+			}
+			override_country_name = BUU_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = BYT
+				}
+			}
+			override_country_name = BYT_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = BYZ
+				}
+			}
+			override_country_name = BYZ_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = CAB
+				}
+			}
+			override_country_name = CAB_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = CAD
+				}
+			}
+			override_country_name = CAD_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = CAL
+				}
+			}
+			override_country_name = CAL_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = CAM
+				}
+			}
+			override_country_name = CAM_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = CAN
+				}
+			}
+			override_country_name = CAN_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = CAS
+				}
+			}
+			override_country_name = CAS_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = CAT
+				}
+			}
+			override_country_name = CAT_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = CBA
+				}
+			}
+			override_country_name = CBA_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = CCM
+				}
+			}
+			override_country_name = CCM_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = CCQ
+				}
+			}
+			override_country_name = CCQ_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = CDL
+				}
+			}
+			override_country_name = CDL_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = CEB
+				}
+			}
+			override_country_name = CEB_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = CEP
+				}
+			}
+			override_country_name = CEP_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = CEY
+				}
+			}
+			override_country_name = CEY_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = CGS
+				}
+			}
+			override_country_name = CGS_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = CHA
+				}
+			}
+			override_country_name = CHA_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = CHC
+				}
+			}
+			override_country_name = CHC_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = CHD
+				}
+			}
+			override_country_name = CHD_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = CHE
+				}
+			}
+			override_country_name = CHE_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = CHG
+				}
+			}
+			override_country_name = CHG_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = CHH
+				}
+			}
+			override_country_name = CHH_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = CHI
+				}
+			}
+			override_country_name = CHI_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = CHK
+				}
+			}
+			override_country_name = CHK_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = CHL
+				}
+			}
+			override_country_name = CHL_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = CHM
+				}
+			}
+			override_country_name = CHM_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = CHO
+				}
+			}
+			override_country_name = CHO_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = CHP
+				}
+			}
+			override_country_name = CHP_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = CHR
+				}
+			}
+			override_country_name = CHR_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = CHT
+				}
+			}
+			override_country_name = CHT_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = CHU
+				}
+			}
+			override_country_name = CHU_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = CHV
+				}
+			}
+			override_country_name = CHV_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = CHY
+				}
+			}
+			override_country_name = CHY_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = CIR
+				}
+			}
+			override_country_name = CIR_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = CJA
+				}
+			}
+			override_country_name = CJA_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = CKW
+				}
+			}
+			override_country_name = CKW_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = CLA
+				}
+			}
+			override_country_name = CLA_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = CLB
+				}
+			}
+			override_country_name = CLB_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = CLI
+				}
+			}
+			override_country_name = CLI_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = CLM
+				}
+			}
+			override_country_name = CLM_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = CMI
+				}
+			}
+			override_country_name = CMI_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = CMP
+				}
+			}
+			override_country_name = CMP_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = CND
+				}
+			}
+			override_country_name = CND_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = CNK
+				}
+			}
+			override_country_name = CNK_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = CNN
+				}
+			}
+			override_country_name = CNN_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = CNP
+				}
+			}
+			override_country_name = CNP_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = COB
+				}
+			}
+			override_country_name = COB_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = COC
+				}
+			}
+			override_country_name = COC_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = COI
+				}
+			}
+			override_country_name = COI_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = COL
+				}
+			}
+			override_country_name = COL_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = COM
+				}
+			}
+			override_country_name = COM_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = COR
+				}
+			}
+			override_country_name = COR_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = CRA
+				}
+			}
+			override_country_name = CRA_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = CRB
+				}
+			}
+			override_country_name = CRB_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = CRE
+				}
+			}
+			override_country_name = CRE_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = CRI
+				}
+			}
+			override_country_name = CRI_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = CRN
+				}
+			}
+			override_country_name = CRN_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = CRO
+				}
+			}
+			override_country_name = CRO_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = CRT
+				}
+			}
+			override_country_name = CRT_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = CSC
+				}
+			}
+			override_country_name = CSC_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = CSH
+				}
+			}
+			override_country_name = CSH_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = CSK
+				}
+			}
+			override_country_name = CSK_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = CSU
+				}
+			}
+			override_country_name = CSU_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = CTM
+				}
+			}
+			override_country_name = CTM_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = CUA
+				}
+			}
+			override_country_name = CUA_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = CUB
+				}
+			}
+			override_country_name = CUB_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = CXI
+				}
+			}
+			override_country_name = CXI_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = CYA
+				}
+			}
+			override_country_name = CYA_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = CYI
+				}
+			}
+			override_country_name = CYI_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = CYP
+				}
+			}
+			override_country_name = CYP_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = CZH
+				}
+			}
+			override_country_name = CZH_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = DAH
+				}
+			}
+			override_country_name = DAH_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = DAI
+				}
+			}
+			override_country_name = DAI_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = DAL
+				}
+			}
+			override_country_name = DAL_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = DAM
+				}
+			}
+			override_country_name = DAM_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = DAN
+				}
+			}
+			override_country_name = DAN_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = DAR
+				}
+			}
+			override_country_name = DAR_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = DAU
+				}
+			}
+			override_country_name = DAU_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = DAW
+				}
+			}
+			override_country_name = DAW_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = DEC
+				}
+			}
+			override_country_name = DEC_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = DGB
+				}
+			}
+			override_country_name = DGB_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = DGL
+				}
+			}
+			override_country_name = DGL_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = DHU
+				}
+			}
+			override_country_name = DHU_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = DLH
+				}
+			}
+			override_country_name = DLH_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = DMK
+				}
+			}
+			override_country_name = DMK_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = DMS
+				}
+			}
+			override_country_name = DMS_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = DNG
+				}
+			}
+			override_country_name = DNG_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = DNZ
+				}
+			}
+			override_country_name = DNZ_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = DTE
+				}
+			}
+			override_country_name = DTE_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = DTI
+				}
+			}
+			override_country_name = DTI_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = DTT
+				}
+			}
+			override_country_name = DTT_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = DUL
+				}
+			}
+			override_country_name = DUL_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = DWT
+				}
+			}
+			override_country_name = DWT_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = EFR
+				}
+			}
+			override_country_name = EFR_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = EGY
+				}
+			}
+			override_country_name = EGY_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = EJZ
+				}
+			}
+			override_country_name = EJZ_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = ENA
+				}
+			}
+			override_country_name = ENA_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = ENG
+				}
+			}
+			override_country_name = ENG_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = EPI
+				}
+			}
+			override_country_name = EPI_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = ERE
+				}
+			}
+			override_country_name = ERE_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = EST
+				}
+			}
+			override_country_name = EST_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = ETH
+				}
+			}
+			override_country_name = ETH_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = ETR
+				}
+			}
+			override_country_name = ETR_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = FAD
+				}
+			}
+			override_country_name = FAD_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = FEO
+				}
+			}
+			override_country_name = FEO_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = FER
+				}
+			}
+			override_country_name = FER_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = FEZ
+				}
+			}
+			override_country_name = FEZ_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = FIN
+				}
+			}
+			override_country_name = FIN_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = FKN
+				}
+			}
+			override_country_name = FKN_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = FLA
+				}
+			}
+			override_country_name = FLA_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = FLO
+				}
+			}
+			override_country_name = FLO_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = FLY
+				}
+			}
+			override_country_name = FLY_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = FOI
+				}
+			}
+			override_country_name = FOI_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = FOX
+				}
+			}
+			override_country_name = FOX_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = FRA
+				}
+			}
+			override_country_name = FRA_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = FRI
+				}
+			}
+			override_country_name = FRI_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = FRM
+				}
+			}
+			override_country_name = FRM_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = FRN
+				}
+			}
+			override_country_name = FRN_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = FRS
+				}
+			}
+			override_country_name = FRS_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = FUL
+				}
+			}
+			override_country_name = FUL_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = FZA
+				}
+			}
+			override_country_name = FZA_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = GAL
+				}
+			}
+			override_country_name = GAL_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = GAM
+				}
+			}
+			override_country_name = GAM_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = GAZ
+				}
+			}
+			override_country_name = GAZ_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = GBR
+				}
+			}
+			override_country_name = GBR_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = GDW
+				}
+			}
+			override_country_name = GDW_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = GEL
+				}
+			}
+			override_country_name = GEL_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = GEN
+				}
+			}
+			override_country_name = GEN_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = GEO
+				}
+			}
+			override_country_name = GEO_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = GER
+				}
+			}
+			override_country_name = GER_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = GHD
+				}
+			}
+			override_country_name = GHD_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = GHR
+				}
+			}
+			override_country_name = GHR_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = GLE
+				}
+			}
+			override_country_name = GLE_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = GLG
+				}
+			}
+			override_country_name = GLG_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = GLH
+				}
+			}
+			override_country_name = GLH_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = GNG
+				}
+			}
+			override_country_name = GNG_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = GNV
+				}
+			}
+			override_country_name = GNV_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = GOC
+				}
+			}
+			override_country_name = GOC_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = GOL
+				}
+			}
+			override_country_name = GOL_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = GOS
+				}
+			}
+			override_country_name = GOS_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = GOT
+				}
+			}
+			override_country_name = GOT_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = GRA
+				}
+			}
+			override_country_name = GRA_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = GRE
+				}
+			}
+			override_country_name = GRE_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = GRJ
+				}
+			}
+			override_country_name = GRJ_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = GRK
+				}
+			}
+			override_country_name = GRK_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = GRM
+				}
+			}
+			override_country_name = GRM_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = GUA
+				}
+			}
+			override_country_name = GUA_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = GUG
+				}
+			}
+			override_country_name = GUG_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = GUJ
+				}
+			}
+			override_country_name = GUJ_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = GUY
+				}
+			}
+			override_country_name = GUY_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = GWA
+				}
+			}
+			override_country_name = GWA_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = HAB
+				}
+			}
+			override_country_name = HAB_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = HAD
+				}
+			}
+			override_country_name = HAD_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = HAI
+				}
+			}
+			override_country_name = HAI_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = HAM
+				}
+			}
+			override_country_name = HAM_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = HAN
+				}
+			}
+			override_country_name = HAN_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = HAR
+				}
+			}
+			override_country_name = HAR_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = HAT
+				}
+			}
+			override_country_name = HAT_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = HAU
+				}
+			}
+			override_country_name = HAU_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = HDA
+				}
+			}
+			override_country_name = HDA_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = HDR
+				}
+			}
+			override_country_name = HDR_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = HDY
+				}
+			}
+			override_country_name = HDY_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = HED
+				}
+			}
+			override_country_name = HED_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = HES
+				}
+			}
+			override_country_name = HES_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = HIN
+				}
+			}
+			override_country_name = HIN_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = HJA
+				}
+			}
+			override_country_name = HJA_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = HJO
+				}
+			}
+			override_country_name = HJO_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = HLR
+				}
+			}
+			override_country_name = HLR_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = HMI
+				}
+			}
+			override_country_name = HMI_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = HOB
+				}
+			}
+			override_country_name = HOB_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = HOD
+				}
+			}
+			override_country_name = HOD_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = HOL
+				}
+			}
+			override_country_name = HOL_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = HRZ
+				}
+			}
+			override_country_name = HRZ_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = HSA
+				}
+			}
+			override_country_name = HSA_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = HSC
+				}
+			}
+			override_country_name = HSC_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = HSE
+				}
+			}
+			override_country_name = HSE_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = HSI
+				}
+			}
+			override_country_name = HSI_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = HSK
+				}
+			}
+			override_country_name = HSK_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = HSN
+				}
+			}
+			override_country_name = HSN_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = HST
+				}
+			}
+			override_country_name = HST_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = HTK
+				}
+			}
+			override_country_name = HTK_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = HUA
+				}
+			}
+			override_country_name = HUA_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = HUN
+				}
+			}
+			override_country_name = HUN_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = HUR
+				}
+			}
+			override_country_name = HUR_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = ICE
+				}
+			}
+			override_country_name = ICE_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = ICM
+				}
+			}
+			override_country_name = ICM_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = IDR
+				}
+			}
+			override_country_name = IDR_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = IKE
+				}
+			}
+			override_country_name = IKE_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = ILI
+				}
+			}
+			override_country_name = ILI_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = ILK
+				}
+			}
+			override_country_name = ILK_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = ILL
+				}
+			}
+			override_country_name = ILL_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = IME
+				}
+			}
+			override_country_name = IME_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = IMG
+				}
+			}
+			override_country_name = IMG_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = INC
+				}
+			}
+			override_country_name = INC_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = ING
+				}
+			}
+			override_country_name = ING_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = IRE
+				}
+			}
+			override_country_name = IRE_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = IRO
+				}
+			}
+			override_country_name = IRO_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = IRQ
+				}
+			}
+			override_country_name = IRQ_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = ISF
+				}
+			}
+			override_country_name = ISF_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = ISK
+				}
+			}
+			override_country_name = ISK_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = ITA
+				}
+			}
+			override_country_name = ITA_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = ITO
+				}
+			}
+			override_country_name = ITO_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = ITZ
+				}
+			}
+			override_country_name = ITZ_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = JAI
+				}
+			}
+			override_country_name = JAI_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = JAJ
+				}
+			}
+			override_country_name = JAJ_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = JAN
+				}
+			}
+			override_country_name = JAN_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = JAP
+				}
+			}
+			override_country_name = JAP_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = JFN
+				}
+			}
+			override_country_name = JFN_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = JGD
+				}
+			}
+			override_country_name = JGD_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = JIM
+				}
+			}
+			override_country_name = JIM_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = JIN
+				}
+			}
+			override_country_name = JIN_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = JJI
+				}
+			}
+			override_country_name = JJI_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = JLV
+				}
+			}
+			override_country_name = JLV_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = JML
+				}
+			}
+			override_country_name = JML_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = JNN
+				}
+			}
+			override_country_name = JNN_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = JNP
+				}
+			}
+			override_country_name = JNP_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = JOH
+				}
+			}
+			override_country_name = JOH_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = JOL
+				}
+			}
+			override_country_name = JOL_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = JPR
+				}
+			}
+			override_country_name = JPR_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = JSL
+				}
+			}
+			override_country_name = JSL_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = KAC
+				}
+			}
+			override_country_name = KAC_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = KAF
+				}
+			}
+			override_country_name = KAF_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = KAL
+				}
+			}
+			override_country_name = KAL_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = KAM
+				}
+			}
+			override_country_name = KAM_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = KAN
+				}
+			}
+			override_country_name = KAN_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = KAQ
+				}
+			}
+			override_country_name = KAQ_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = KAR
+				}
+			}
+			override_country_name = KAR_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = KAS
+				}
+			}
+			override_country_name = KAS_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = KAT
+				}
+			}
+			override_country_name = KAT_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = KAZ
+				}
+			}
+			override_country_name = KAZ_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = KBA
+				}
+			}
+			override_country_name = KBA_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = KBO
+				}
+			}
+			override_country_name = KBO_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = KBU
+				}
+			}
+			override_country_name = KBU_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = KED
+				}
+			}
+			override_country_name = KED_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = KER
+				}
+			}
+			override_country_name = KER_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = KGR
+				}
+			}
+			override_country_name = KGR_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = KHA
+				}
+			}
+			override_country_name = KHA_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = KHD
+				}
+			}
+			override_country_name = KHD_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = KHI
+				}
+			}
+			override_country_name = KHI_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = KHM
+				}
+			}
+			override_country_name = KHM_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = KHO
+				}
+			}
+			override_country_name = KHO_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = KIC
+				}
+			}
+			override_country_name = KIC_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = KID
+				}
+			}
+			override_country_name = KID_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = KIE
+				}
+			}
+			override_country_name = KIE_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = KIK
+				}
+			}
+			override_country_name = KIK_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = KIO
+				}
+			}
+			override_country_name = KIO_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = KJH
+				}
+			}
+			override_country_name = KJH_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = KKC
+				}
+			}
+			override_country_name = KKC_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = KLD
+				}
+			}
+			override_country_name = KLD_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = KLE
+				}
+			}
+			override_country_name = KLE_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = KLH
+				}
+			}
+			override_country_name = KLH_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = KLK
+				}
+			}
+			override_country_name = KLK_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = KLM
+				}
+			}
+			override_country_name = KLM_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = KLN
+				}
+			}
+			override_country_name = KLN_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = KLP
+				}
+			}
+			override_country_name = KLP_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = KLT
+				}
+			}
+			override_country_name = KLT_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = KMC
+				}
+			}
+			override_country_name = KMC_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = KMN
+				}
+			}
+			override_country_name = KMN_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = KMT
+				}
+			}
+			override_country_name = KMT_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = KND
+				}
+			}
+			override_country_name = KND_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = KNG
+				}
+			}
+			override_country_name = KNG_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = KNI
+				}
+			}
+			override_country_name = KNI_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = KNO
+				}
+			}
+			override_country_name = KNO_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = KNZ
+				}
+			}
+			override_country_name = KNZ_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = KOC
+				}
+			}
+			override_country_name = KOC_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = KOI
+				}
+			}
+			override_country_name = KOI_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = KOJ
+				}
+			}
+			override_country_name = KOJ_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = KOK
+				}
+			}
+			override_country_name = KOK_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = KOL
+				}
+			}
+			override_country_name = KOL_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = KON
+				}
+			}
+			override_country_name = KON_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = KOR
+				}
+			}
+			override_country_name = KOR_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = KRA
+				}
+			}
+			override_country_name = KRA_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = KRC
+				}
+			}
+			override_country_name = KRC_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = KRK
+				}
+			}
+			override_country_name = KRK_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = KRL
+				}
+			}
+			override_country_name = KRL_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = KRM
+				}
+			}
+			override_country_name = KRM_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = KRW
+				}
+			}
+			override_country_name = KRW_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = KRY
+				}
+			}
+			override_country_name = KRY_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = KSD
+				}
+			}
+			override_country_name = KSD_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = KSH
+				}
+			}
+			override_country_name = KSH_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = KSJ
+				}
+			}
+			override_country_name = KSJ_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = KTB
+				}
+			}
+			override_country_name = KTB_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = KTS
+				}
+			}
+			override_country_name = KTS_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = KTU
+				}
+			}
+			override_country_name = KTU_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = KUB
+				}
+			}
+			override_country_name = KUB_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = KUR
+				}
+			}
+			override_country_name = KUR_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = KUT
+				}
+			}
+			override_country_name = KUT_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = KZB
+				}
+			}
+			override_country_name = KZB_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = KZH
+				}
+			}
+			override_country_name = KZH_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = LAC
+				}
+			}
+			override_country_name = LAC_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = LAN
+				}
+			}
+			override_country_name = LAN_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = LAP
+				}
+			}
+			override_country_name = LAP_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = LAU
+				}
+			}
+			override_country_name = LAU_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = LBV
+				}
+			}
+			override_country_name = LBV_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = LDK
+				}
+			}
+			override_country_name = LDK_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = LDU
+				}
+			}
+			override_country_name = LDU_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = LEB
+				}
+			}
+			override_country_name = LEB_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = LEI
+				}
+			}
+			override_country_name = LEI_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = LEN
+				}
+			}
+			override_country_name = LEN_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = LFA
+				}
+			}
+			override_country_name = LFA_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = LIB
+				}
+			}
+			override_country_name = LIB_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = LIE
+				}
+			}
+			override_country_name = LIE_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = LIG
+				}
+			}
+			override_country_name = LIG_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = LIP
+				}
+			}
+			override_country_name = LIP_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = LIT
+				}
+			}
+			override_country_name = LIT_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = LIV
+				}
+			}
+			override_country_name = LIV_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = LNA
+				}
+			}
+			override_country_name = LNA_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = LND
+				}
+			}
+			override_country_name = LND_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = LNG
+				}
+			}
+			override_country_name = LNG_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = LNO
+				}
+			}
+			override_country_name = LNO_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = LOA
+				}
+			}
+			override_country_name = LOA_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = LOI
+				}
+			}
+			override_country_name = LOI_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = LON
+				}
+			}
+			override_country_name = LON_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = LOR
+				}
+			}
+			override_country_name = LOR_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = LOT
+				}
+			}
+			override_country_name = LOT_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = LOU
+				}
+			}
+			override_country_name = LOU_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = LPP
+				}
+			}
+			override_country_name = LPP_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = LRI
+				}
+			}
+			override_country_name = LRI_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = LUA
+				}
+			}
+			override_country_name = LUA_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = LUB
+				}
+			}
+			override_country_name = LUB_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = LUC
+				}
+			}
+			override_country_name = LUC_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = LUN
+				}
+			}
+			override_country_name = LUN_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = LUW
+				}
+			}
+			override_country_name = LUW_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = LUX
+				}
+			}
+			override_country_name = LUX_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = LVA
+				}
+			}
+			override_country_name = LVA_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = LWA
+				}
+			}
+			override_country_name = LWA_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = LXA
+				}
+			}
+			override_country_name = LXA_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = MAB
+				}
+			}
+			override_country_name = MAB_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = MAD
+				}
+			}
+			set_country_flag = region_$dominion_region$
+			if = {
+				limit = {
+					has_country_flag = region_EAST_AFRICA
+				}
+				override_country_name = MAD__DOMINION_$dominion_region$
+			}
+			else = {
+				override_country_name = MAD_DOMINION_$dominion_region$
+			}
+			clr_country_flag = region_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = MAE
+				}
+			}
+			override_country_name = MAE_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = MAG
+				}
+			}
+			override_country_name = MAG_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = MAH
+				}
+			}
+			override_country_name = MAH_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = MAI
+				}
+			}
+			override_country_name = MAI_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = MAJ
+				}
+			}
+			override_country_name = MAJ_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = MAK
+				}
+			}
+			override_country_name = MAK_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = MAL
+				}
+			}
+			override_country_name = MAL_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = MAM
+				}
+			}
+			override_country_name = MAM_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = MAN
+				}
+			}
+			override_country_name = MAN_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = MAR
+				}
+			}
+			override_country_name = MAR_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = MAS
+				}
+			}
+			override_country_name = MAS_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = MAT
+				}
+			}
+			override_country_name = MAT_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = MAW
+				}
+			}
+			override_country_name = MAW_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = MAY
+				}
+			}
+			override_country_name = MAY_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = MAZ
+				}
+			}
+			override_country_name = MAZ_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = MBA
+				}
+			}
+			override_country_name = MBA_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = MBL
+				}
+			}
+			override_country_name = MBL_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = MBZ
+				}
+			}
+			override_country_name = MBZ_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = MCA
+				}
+			}
+			override_country_name = MCA_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = MCH
+				}
+			}
+			override_country_name = MCH_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = MCM
+				}
+			}
+			override_country_name = MCM_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = MDA
+				}
+			}
+			override_country_name = MDA_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = MDI
+				}
+			}
+			override_country_name = MDI_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = MED
+				}
+			}
+			override_country_name = MED_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = MEI
+				}
+			}
+			override_country_name = MEI_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = MEM
+				}
+			}
+			override_country_name = MEM_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = MEN
+				}
+			}
+			override_country_name = MEN_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = MER
+				}
+			}
+			override_country_name = MER_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = MEW
+				}
+			}
+			override_country_name = MEW_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = MEX
+				}
+			}
+			override_country_name = MEX_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = MFA
+				}
+			}
+			override_country_name = MFA_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = MFL
+				}
+			}
+			override_country_name = MFL_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = MFY
+				}
+			}
+			override_country_name = MFY_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = MGD
+				}
+			}
+			override_country_name = MGD_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = MGE
+				}
+			}
+			override_country_name = MGE_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = MGR
+				}
+			}
+			override_country_name = MGR_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = MHR
+				}
+			}
+			override_country_name = MHR_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = MHX
+				}
+			}
+			override_country_name = MHX_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = MIK
+				}
+			}
+			override_country_name = MIK_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = MIN
+				}
+			}
+			override_country_name = MIN_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = MIR
+				}
+			}
+			override_country_name = MIR_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = MIS
+				}
+			}
+			override_country_name = MIS_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = MIX
+				}
+			}
+			override_country_name = MIX_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = MJE
+				}
+			}
+			override_country_name = MJE_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = MJO
+				}
+			}
+			override_country_name = MJO_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = MJZ
+				}
+			}
+			override_country_name = MJZ_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = MKA
+				}
+			}
+			override_country_name = MKA_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = MKL
+				}
+			}
+			override_country_name = MKL_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = MKP
+				}
+			}
+			override_country_name = MKP_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = MKS
+				}
+			}
+			override_country_name = MKS_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = MKU
+				}
+			}
+			override_country_name = MKU_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = MLB
+				}
+			}
+			override_country_name = MLB_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = MLC
+				}
+			}
+			override_country_name = MLC_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = MLH
+				}
+			}
+			override_country_name = MLH_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = MLI
+				}
+			}
+			override_country_name = MLI_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = MLK
+				}
+			}
+			override_country_name = MLK_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = MLO
+				}
+			}
+			override_country_name = MLO_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = MLW
+				}
+			}
+			override_country_name = MLW_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = MMA
+				}
+			}
+			override_country_name = MMA_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = MMI
+				}
+			}
+			override_country_name = MMI_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = MNA
+				}
+			}
+			override_country_name = MNA_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = MNG
+				}
+			}
+			override_country_name = MNG_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = MNI
+				}
+			}
+			override_country_name = MNI_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = MNS
+				}
+			}
+			override_country_name = MNS_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = MOD
+				}
+			}
+			override_country_name = MOD_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = MOE
+				}
+			}
+			override_country_name = MOE_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = MOL
+				}
+			}
+			override_country_name = MOL_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = MON
+				}
+			}
+			override_country_name = MON_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = MOR
+				}
+			}
+			override_country_name = MOR_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = MOS
+				}
+			}
+			override_country_name = MOS_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = MPA
+				}
+			}
+			override_country_name = MPA_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = MPC
+				}
+			}
+			override_country_name = MPC_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = MPH
+				}
+			}
+			override_country_name = MPH_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = MRA
+				}
+			}
+			override_country_name = MRA_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = MRE
+				}
+			}
+			override_country_name = MRE_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = MRI
+				}
+			}
+			override_country_name = MRI_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = MRK
+				}
+			}
+			override_country_name = MRK_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = MSA
+				}
+			}
+			override_country_name = MSA_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = MSC
+				}
+			}
+			override_country_name = MSC_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = MSI
+				}
+			}
+			override_country_name = MSI_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = MSY
+				}
+			}
+			override_country_name = MSY_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = MTH
+				}
+			}
+			override_country_name = MTH_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = MTR
+				}
+			}
+			override_country_name = MTR_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = MUG
+				}
+			}
+			override_country_name = MUG_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = MUL
+				}
+			}
+			override_country_name = MUL_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = MUN
+				}
+			}
+			override_country_name = MUN_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = MVA
+				}
+			}
+			override_country_name = MVA_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = MYA
+				}
+			}
+			override_country_name = MYA_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = MYR
+				}
+			}
+			override_country_name = MYR_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = MYS
+				}
+			}
+			override_country_name = MYS_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = MZB
+				}
+			}
+			override_country_name = MZB_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = NAG
+				}
+			}
+			override_country_name = NAG_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = NAH
+				}
+			}
+			override_country_name = NAH_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = NAJ
+				}
+			}
+			override_country_name = NAJ_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = NAP
+				}
+			}
+			override_country_name = NAP_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = NAV
+				}
+			}
+			override_country_name = NAV_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = NAX
+				}
+			}
+			override_country_name = NAX_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = NDO
+				}
+			}
+			override_country_name = NDO_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = NED
+				}
+			}
+			override_country_name = NED_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = NEV
+				}
+			}
+			override_country_name = NEV_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = NGA
+				}
+			}
+			override_country_name = NGA_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = NGP
+				}
+			}
+			override_country_name = NGP_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = NHX
+				}
+			}
+			override_country_name = NHX_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = NJR
+				}
+			}
+			override_country_name = NJR_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = NKO
+				}
+			}
+			override_country_name = NKO_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = NNG
+				}
+			}
+			override_country_name = NNG_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = NOG
+				}
+			}
+			override_country_name = NOG_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = NOL
+				}
+			}
+			override_country_name = NOL_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = NOR
+				}
+			}
+			override_country_name = NOR_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = NOV
+				}
+			}
+			override_country_name = NOV_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = NPL
+				}
+			}
+			override_country_name = NPL_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = NRM
+				}
+			}
+			override_country_name = NRM_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = NSA
+				}
+			}
+			override_country_name = NSA_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = NSS
+				}
+			}
+			override_country_name = NSS_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = NUB
+				}
+			}
+			override_country_name = NUB_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = NUM
+				}
+			}
+			override_country_name = NUM_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = NUP
+				}
+			}
+			override_country_name = NUP_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = NVK
+				}
+			}
+			override_country_name = NVK_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = NVR
+				}
+			}
+			override_country_name = NVR_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = NZH
+				}
+			}
+			override_country_name = NZH_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = NZL
+				}
+			}
+			override_country_name = NZL_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = ODA
+				}
+			}
+			override_country_name = ODA_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = ODH
+				}
+			}
+			override_country_name = ODH_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = OGS
+				}
+			}
+			override_country_name = OGS_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = OIR
+				}
+			}
+			override_country_name = OIR_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = OJI
+				}
+			}
+			override_country_name = OJI_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = OKA
+				}
+			}
+			override_country_name = OKA_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = OLD
+				}
+			}
+			override_country_name = OLD_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = OMA
+				}
+			}
+			override_country_name = OMA_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = OPL
+				}
+			}
+			override_country_name = OPL_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = ORD
+				}
+			}
+			override_country_name = ORD_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = ORI
+				}
+			}
+			override_country_name = ORI_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = ORL
+				}
+			}
+			override_country_name = ORL_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = ORM
+				}
+			}
+			override_country_name = ORM_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = OSA
+				}
+			}
+			override_country_name = OSA_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = OSN
+				}
+			}
+			override_country_name = OSN_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = OTM
+				}
+			}
+			override_country_name = OTM_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = OTO
+				}
+			}
+			override_country_name = OTO_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = OTT
+				}
+			}
+			override_country_name = OTT_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = OUC
+				}
+			}
+			override_country_name = OUC_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = OYO
+				}
+			}
+			override_country_name = OYO_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = PAD
+				}
+			}
+			override_country_name = PAD_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = PAL
+				}
+			}
+			override_country_name = PAL_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = PAN
+				}
+			}
+			override_country_name = PAN_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = PAP
+				}
+			}
+			override_country_name = PAP_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = PAR
+				}
+			}
+			override_country_name = PAR_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = PAT
+				}
+			}
+			override_country_name = PAT_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = PAW
+				}
+			}
+			override_country_name = PAW_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = PCJ
+				}
+			}
+			override_country_name = PCJ_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = PDV
+				}
+			}
+			override_country_name = PDV_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = PEG
+				}
+			}
+			override_country_name = PEG_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = PEQ
+				}
+			}
+			override_country_name = PEQ_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = PER
+				}
+			}
+			override_country_name = PER_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = PEU
+				}
+			}
+			override_country_name = PEU_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = PGA
+				}
+			}
+			override_country_name = PGA_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = PGR
+				}
+			}
+			override_country_name = PGR_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = PGS
+				}
+			}
+			override_country_name = PGS_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = PHA
+				}
+			}
+			override_country_name = PHA_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = PIC
+				}
+			}
+			override_country_name = PIC_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = PIM
+				}
+			}
+			override_country_name = PIM_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = PIS
+				}
+			}
+			override_country_name = PIS_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = PLB
+				}
+			}
+			override_country_name = PLB_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = PLC
+				}
+			}
+			override_country_name = PLC_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = PLT
+				}
+			}
+			override_country_name = PLT_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = POL
+				}
+			}
+			override_country_name = POL_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = POM
+				}
+			}
+			override_country_name = POM_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = POR
+				}
+			}
+			override_country_name = POR_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = POT
+				}
+			}
+			override_country_name = POT_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = POW
+				}
+			}
+			override_country_name = POW_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = PRB
+				}
+			}
+			override_country_name = PRB_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = PRD
+				}
+			}
+			override_country_name = PRD_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = PRG
+				}
+			}
+			override_country_name = PRG_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = PRK
+				}
+			}
+			override_country_name = PRK_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = PRM
+				}
+			}
+			override_country_name = PRM_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = PRO
+				}
+			}
+			override_country_name = PRO_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = PRU
+				}
+			}
+			override_country_name = PRU_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = PRY
+				}
+			}
+			override_country_name = PRY_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = PSA
+				}
+			}
+			override_country_name = PSA_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = PSK
+				}
+			}
+			override_country_name = PSK_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = PSS
+				}
+			}
+			override_country_name = PSS_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = PTA
+				}
+			}
+			override_country_name = PTA_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = PTE
+				}
+			}
+			override_country_name = PTE_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = PTG
+				}
+			}
+			override_country_name = PTG_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = PTL
+				}
+			}
+			override_country_name = PTL_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = PTT
+				}
+			}
+			override_country_name = PTT_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = PUE
+				}
+			}
+			override_country_name = PUE_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = PUN
+				}
+			}
+			override_country_name = PUN_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = QAR
+				}
+			}
+			override_country_name = QAR_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = QAS
+				}
+			}
+			override_country_name = QAS_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = QIC
+				}
+			}
+			override_country_name = QIC_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = QIN
+				}
+			}
+			override_country_name = QIN_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = QNG
+				}
+			}
+			override_country_name = QNG_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = QOM
+				}
+			}
+			override_country_name = QOM_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = QTO
+				}
+			}
+			override_country_name = QTO_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = QUE
+				}
+			}
+			override_country_name = QUE_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = RAG
+				}
+			}
+			override_country_name = RAG_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = RAM
+				}
+			}
+			override_country_name = RAM_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = RAS
+				}
+			}
+			override_country_name = RAS_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = REG
+				}
+			}
+			override_country_name = REG_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = RFR
+				}
+			}
+			override_country_name = RFR_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = RIG
+				}
+			}
+			override_country_name = RIG_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = RJK
+				}
+			}
+			override_country_name = RJK_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = RJP
+				}
+			}
+			override_country_name = RJP_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = RMN
+				}
+			}
+			override_country_name = RMN_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = RMP
+				}
+			}
+			override_country_name = RMP_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = ROM
+				}
+			}
+			override_country_name = ROM_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = ROT
+				}
+			}
+			override_country_name = ROT_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = RSO
+				}
+			}
+			override_country_name = RSO_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = RTT
+				}
+			}
+			override_country_name = RTT_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = RUG
+				}
+			}
+			override_country_name = RUG_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = RUM
+				}
+			}
+			override_country_name = RUM_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = RUP
+				}
+			}
+			override_country_name = RUP_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = RUS
+				}
+			}
+			override_country_name = RUS_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = RVA
+				}
+			}
+			override_country_name = RVA_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = RWA
+				}
+			}
+			override_country_name = RWA_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = RYA
+				}
+			}
+			override_country_name = RYA_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = RYU
+				}
+			}
+			override_country_name = RYU_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = RZW
+				}
+			}
+			override_country_name = RZW_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = SAK
+				}
+			}
+			override_country_name = SAK_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = SAL
+				}
+			}
+			override_country_name = SAL_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = SAR
+				}
+			}
+			override_country_name = SAR_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = SAV
+				}
+			}
+			override_country_name = SAV_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = SAX
+				}
+			}
+			override_country_name = SAX_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = SBA
+				}
+			}
+			override_country_name = SBA_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = SBP
+				}
+			}
+			override_country_name = SBP_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = SCA
+				}
+			}
+			override_country_name = SCA_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = SCO
+				}
+			}
+			override_country_name = SCO_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = SDY
+				}
+			}
+			override_country_name = SDY_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = SER
+				}
+			}
+			override_country_name = SER_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = SFA
+				}
+			}
+			override_country_name = SFA_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = SHA
+				}
+			}
+			override_country_name = SHA_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = SHL
+				}
+			}
+			override_country_name = SHL_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = SHM
+				}
+			}
+			override_country_name = SHM_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = SHN
+				}
+			}
+			override_country_name = SHN_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = SHO
+				}
+			}
+			override_country_name = SHO_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = SHR
+				}
+			}
+			override_country_name = SHR_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = SHU
+				}
+			}
+			override_country_name = SHU_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = SHY
+				}
+			}
+			override_country_name = SHY_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = SIB
+				}
+			}
+			override_country_name = SIB_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = SIC
+				}
+			}
+			override_country_name = SIC_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = SIE
+				}
+			}
+			override_country_name = SIE_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = SIL
+				}
+			}
+			override_country_name = SIL_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = SIO
+				}
+			}
+			override_country_name = SIO_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = SIS
+				}
+			}
+			override_country_name = SIS_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = SKA
+				}
+			}
+			override_country_name = SKA_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = SKK
+				}
+			}
+			override_country_name = SKK_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = SLE
+				}
+			}
+			override_country_name = SLE_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = SLN
+				}
+			}
+			override_country_name = SLN_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = SLO
+				}
+			}
+			override_country_name = SLO_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = SLZ
+				}
+			}
+			override_country_name = SLZ_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = SME
+				}
+			}
+			override_country_name = SME_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = SMI
+				}
+			}
+			override_country_name = SMI_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = SMO
+				}
+			}
+			override_country_name = SMO_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = SMZ
+				}
+			}
+			override_country_name = SMZ_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = SNA
+				}
+			}
+			override_country_name = SNA_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = SND
+				}
+			}
+			override_country_name = SND_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = SOA
+				}
+			}
+			override_country_name = SOA_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = SOF
+				}
+			}
+			override_country_name = SOF_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = SOK
+				}
+			}
+			override_country_name = SOK_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = SOL
+				}
+			}
+			override_country_name = SOL_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = SON
+				}
+			}
+			override_country_name = SON_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = SOO
+				}
+			}
+			override_country_name = SOO_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = SOR
+				}
+			}
+			override_country_name = SOR_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = SOS
+				}
+			}
+			override_country_name = SOS_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = SPA
+				}
+			}
+			override_country_name = SPA_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = SPI
+				}
+			}
+			override_country_name = SPI_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = SPL
+				}
+			}
+			override_country_name = SPL_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = SRG
+				}
+			}
+			override_country_name = SRG_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = SRH
+				}
+			}
+			override_country_name = SRH_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = SRM
+				}
+			}
+			override_country_name = SRM_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = SRU
+				}
+			}
+			override_country_name = SRU_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = SRV
+				}
+			}
+			override_country_name = SRV_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = SST
+				}
+			}
+			override_country_name = SST_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = STE
+				}
+			}
+			override_country_name = STE_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = STK
+				}
+			}
+			override_country_name = STK_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = STY
+				}
+			}
+			override_country_name = STY_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = SUK
+				}
+			}
+			override_country_name = SUK_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = SUL
+				}
+			}
+			override_country_name = SUL_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = SUN
+				}
+			}
+			override_country_name = SUN_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = SUS
+				}
+			}
+			override_country_name = SUS_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = SWA
+				}
+			}
+			override_country_name = SWA_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = SWE
+				}
+			}
+			override_country_name = SWE_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = SWI
+				}
+			}
+			override_country_name = SWI_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = SYG
+				}
+			}
+			override_country_name = SYG_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = SYO
+				}
+			}
+			override_country_name = SYO_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = SYR
+				}
+			}
+			override_country_name = SYR_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = SZO
+				}
+			}
+			override_country_name = SZO_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = TAB
+				}
+			}
+			override_country_name = TAB_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = TAI
+				}
+			}
+			override_country_name = TAI_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = TAR
+				}
+			}
+			override_country_name = TAR_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = TAU
+				}
+			}
+			override_country_name = TAU_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = TBK
+				}
+			}
+			override_country_name = TBK_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = TBR
+				}
+			}
+			override_country_name = TBR_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = TDO
+				}
+			}
+			override_country_name = TDO_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = TEO
+				}
+			}
+			override_country_name = TEO_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = TER
+				}
+			}
+			override_country_name = TER_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = TET
+				}
+			}
+			override_country_name = TET_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = TEU
+				}
+			}
+			override_country_name = TEU_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = TEX
+				}
+			}
+			override_country_name = TEX_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = TFL
+				}
+			}
+			override_country_name = TFL_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = TGT
+				}
+			}
+			override_country_name = TGT_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = THU
+				}
+			}
+			override_country_name = THU_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = TIB
+				}
+			}
+			override_country_name = TIB_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = TID
+				}
+			}
+			override_country_name = TID_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = TIM
+				}
+			}
+			override_country_name = TIM_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = TIR
+				}
+			}
+			override_country_name = TIR_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = TKD
+				}
+			}
+			override_country_name = TKD_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = TKG
+				}
+			}
+			override_country_name = TKG_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = TKI
+				}
+			}
+			override_country_name = TKI_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = TLA
+				}
+			}
+			override_country_name = TLA_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = TLC
+				}
+			}
+			override_country_name = TLC_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = TLG
+				}
+			}
+			override_country_name = TLG_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = TLX
+				}
+			}
+			override_country_name = TLX_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = TMB
+				}
+			}
+			override_country_name = TMB_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = TNG
+				}
+			}
+			override_country_name = TNG_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = TNJ
+				}
+			}
+			override_country_name = TNJ_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = TNT
+				}
+			}
+			override_country_name = TNT_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = TOK
+				}
+			}
+			override_country_name = TOK_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = TON
+				}
+			}
+			override_country_name = TON_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = TOR
+				}
+			}
+			override_country_name = TOR_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = TOT
+				}
+			}
+			override_country_name = TOT_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = TOU
+				}
+			}
+			override_country_name = TOU_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = TPA
+				}
+			}
+			override_country_name = TPA_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = TPQ
+				}
+			}
+			override_country_name = TPQ_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = TPR
+				}
+			}
+			override_country_name = TPR_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = TRA
+				}
+			}
+			override_country_name = TRA_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = TRE
+				}
+			}
+			override_country_name = TRE_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = TRI
+				}
+			}
+			override_country_name = TRI_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = TRP
+				}
+			}
+			override_country_name = TRP_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = TRS
+				}
+			}
+			override_country_name = TRS_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = TRT
+				}
+			}
+			override_country_name = TRT_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = TRY
+				}
+			}
+			override_country_name = TRY_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = TTI
+				}
+			}
+			override_country_name = TTI_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = TTL
+				}
+			}
+			override_country_name = TTL_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = TTS
+				}
+			}
+			override_country_name = TTS_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = TUA
+				}
+			}
+			override_country_name = TUA_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = TUN
+				}
+			}
+			override_country_name = TUN_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = TUR
+				}
+			}
+			override_country_name = TUR_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = TUS
+				}
+			}
+			override_country_name = TUS_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = TVE
+				}
+			}
+			override_country_name = TVE_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = TYO
+				}
+			}
+			override_country_name = TYO_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = TYR
+				}
+			}
+			override_country_name = TYR_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = UBH
+				}
+			}
+			override_country_name = UBH_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = UBV
+				}
+			}
+			override_country_name = UBV_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = UES
+				}
+			}
+			override_country_name = UES_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = UKR
+				}
+			}
+			override_country_name = UKR_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = ULM
+				}
+			}
+			override_country_name = ULM_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = ULS
+				}
+			}
+			override_country_name = ULS_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = URB
+				}
+			}
+			override_country_name = URB_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = USA
+				}
+			}
+			override_country_name = USA_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = UTN
+				}
+			}
+			override_country_name = UTN_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = UTR
+				}
+			}
+			override_country_name = UTR_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = UTS
+				}
+			}
+			override_country_name = UTS_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = VAL
+				}
+			}
+			override_country_name = VAL_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = VEN
+				}
+			}
+			override_country_name = VEN_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = VER
+				}
+			}
+			override_country_name = VER_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = VIE
+				}
+			}
+			override_country_name = VIE_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = VIJ
+				}
+			}
+			override_country_name = VIJ_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = VND
+				}
+			}
+			override_country_name = VND_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = VNZ
+				}
+			}
+			override_country_name = VNZ_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = VOL
+				}
+			}
+			override_country_name = VOL_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = VRM
+				}
+			}
+			override_country_name = VRM_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = VRN
+				}
+			}
+			override_country_name = VRN_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = WAL
+				}
+			}
+			override_country_name = WAL_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = WAR
+				}
+			}
+			override_country_name = WAR_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = WBG
+				}
+			}
+			override_country_name = WBG_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = WCR
+				}
+			}
+			override_country_name = WCR_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = WES
+				}
+			}
+			override_country_name = WES_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = WIC
+				}
+			}
+			override_country_name = WIC_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = WKA
+				}
+			}
+			override_country_name = WKA_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = WLS
+				}
+			}
+			override_country_name = WLS_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = WLY
+				}
+			}
+			override_country_name = WLY_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = WOL
+				}
+			}
+			override_country_name = WOL_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = WSI
+				}
+			}
+			override_country_name = WSI_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = WUR
+				}
+			}
+			override_country_name = WUR_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = WUU
+				}
+			}
+			override_country_name = WUU_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = XAL
+				}
+			}
+			override_country_name = XAL_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = XIU
+				}
+			}
+			override_country_name = XIU_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = YAK
+				}
+			}
+			override_country_name = YAK_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = YAN
+				}
+			}
+			override_country_name = YAN_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = YAO
+				}
+			}
+			override_country_name = YAO_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = YAQ
+				}
+			}
+			override_country_name = YAQ_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = YAR
+				}
+			}
+			override_country_name = YAR_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = YAS
+				}
+			}
+			override_country_name = YAS_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = YAT
+				}
+			}
+			override_country_name = YAT_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = YEM
+				}
+			}
+			override_country_name = YEM_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = YKT
+				}
+			}
+			override_country_name = YKT_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = YMN
+				}
+			}
+			override_country_name = YMN_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = YOK
+				}
+			}
+			override_country_name = YOK_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = YOR
+				}
+			}
+			override_country_name = YOR_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = YUA
+				}
+			}
+			override_country_name = YUA_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = YUE
+				}
+			}
+			override_country_name = YUE_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = YZD
+				}
+			}
+			override_country_name = YZD_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = ZAF
+				}
+			}
+			override_country_name = ZAF_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = ZAN
+				}
+			}
+			override_country_name = ZAN_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = ZAP
+				}
+			}
+			override_country_name = ZAP_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = ZAZ
+				}
+			}
+			override_country_name = ZAZ_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = ZIM
+				}
+			}
+			override_country_name = ZIM_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = ZNI
+				}
+			}
+			override_country_name = ZNI_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = ZUN
+				}
+			}
+			override_country_name = ZUN_DOMINION_$dominion_region$
+		}
+		else_if = {
+			limit = {
+				overlord = {
+					tag = ZZZ
+				}
+			}
+			override_country_name = ZZZ_DOMINION_$dominion_region$
+		}
+	}
+}
