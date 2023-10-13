@@ -1,4 +1,41 @@
 can_colonize_province = {
+
+	# For Subjects Expanded:
+	condition = {
+		tooltip = NATIVE_RESERVE_CANNOT_COLONIZE_PROVINCE_WITH_OTHER_CULTURE
+		potential = {
+			FROM = {
+				is_subject_of_type = native_reserve
+			}
+		}
+		allow = {
+			culture = FROM
+		}
+	}
+	condition = {
+		tooltip = TRADE_OUTPOST_CANNOT_COLONIZE
+		potential = {
+			FROM = {
+				is_subject_of_type = trade_outpost
+			}
+		}
+		allow = {
+			always = no
+		}
+	}
+	condition = {
+		tooltip = TRADE_COMPANY_DOMINION_CANNOT_COLONIZE_IN_NON_TRADE_COMPANY_REGION
+		potential = {
+			FROM = {
+				is_any_trade_company_region_dominion_subject = yes
+			}
+		}
+		allow = {
+			is_node_in_trade_company_region = yes
+		}
+	}
+
+  # historic colonization mod
 	condition = {
 		tooltip = "colonial_expansion_limit_tooltip"
 		potential = {
