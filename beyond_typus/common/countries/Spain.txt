@@ -2,7 +2,7 @@
 
 graphical_culture = westerngfx
 
-color = { 252  233  58 }
+color = { 242  213  94 }
 
 historical_council = harsh
 
