@@ -22,7 +22,7 @@ objectTypes = {
 		animation = { id = "idle"	type = "muslim_barque_idle" }
 		animation = { id = "walk"	type = "muslim_barque_walk" }
 		animation = { id = "attack"	type = "muslim_barque_attack"}
-		scale = 0.6			#BTAddOn changed from 1.5
+		scale = 1.5
 	}
 
 	pdxmesh = {
@@ -32,7 +32,7 @@ objectTypes = {
 		animation = { id = "idle"	type = "muslim_caravel_idle" }
 		animation = { id = "walk"	type = "muslim_caravel_walk" }
 		animation = { id = "attack"	type = "muslim_caravel_attack"}
-		scale = 0.68			#BTAddOn changed from 1.5
+		scale = 1.5
 	}
 	
 	pdxmesh = {
@@ -42,7 +42,7 @@ objectTypes = {
 		animation = { id = "idle"	type = "muslim_early_frigate_idle" }
 		animation = { id = "walk"	type = "muslim_early_frigate_walk" }
 		animation = { id = "attack" type = "muslim_early_frigate_attack"}
-		scale = 0.70			#BTAddOn changed from 1.4
+		scale = 1.4
 	}
 	
 
@@ -61,7 +61,7 @@ objectTypes = {
 		animation = { id = "idle"	type = "muslim_galley_idle" }
 		animation = { id = "walk"	type = "muslim_galley_walk" }
 		animation = { id = "attack"	type = "muslim_galley_attack"}
-		scale = 0.68			#BTAddOn changed from 1.5
+		scale = 1.5
 	}
 	
 	pdxmesh = {
@@ -71,7 +71,7 @@ objectTypes = {
 		animation = { id = "idle"	type = "muslim_war_galley_idle" }
 		animation = { id = "walk"	type = "muslim_war_galley_walk" }
 		animation = { id = "attack"	type = "muslim_war_galley_attack"}
-		scale = 0.80			#BTAddOn changed from 1.6
+		scale = 1.6
 	}
 	
 	pdxmesh = {
@@ -81,7 +81,7 @@ objectTypes = {
 		animation = { id = "idle"	type = "muslim_galleass_idle" }
 		animation = { id = "walk"	type = "muslim_galleass_walk" }
 		animation = { id = "attack"	type = "muslim_galleass_attack"}
-		scale = 0.83			#BTAddOn changed from 1.5
+		scale = 1.5
 	}
 
 	###########################################################################
@@ -97,7 +97,7 @@ objectTypes = {
 		animation = { id = "idle"	type = "muslim_early_carrack_idle" }
 		animation = { id = "walk"	type = "muslim_early_carrack_walk" }
 		animation = { id = "attack"	type = "muslim_early_carrack_attack"}
-		scale = 0.83			#BTAddOn changed from 1.5
+		scale = 1.5
 	}	
 	
 	pdxmesh = {
@@ -108,7 +108,7 @@ objectTypes = {
 		animation = { id = "walk"	type = "muslim_carrack_walk" }
 		animation = { id = "attack"	type = "muslim_carrack_attack"}
 
-		scale = 0.90			#BTAddOn changed from 1.5
+		scale = 1.5
 	}		
 	pdxmesh = {
 		name = "muslim_galleon"
@@ -117,7 +117,7 @@ objectTypes = {
 		animation = { id = "idle"	type = "muslim_galleon_idle" }
 		animation = { id = "walk"	type = "muslim_galleon_walk" }
 		animation = { id = "attack"	type = "muslim_galleon_attack"}
-		scale = 1.04			#BTAddOn changed from 1.6
+		scale = 1.6
 	}
 	
 	
@@ -134,7 +134,7 @@ objectTypes = {
 		animation = { id = "idle"	type = "muslim_cog_idle" }
 		animation = { id = "walk"	type = "muslim_cog_walk" }
 		animation = { id = "attack"	type = "muslim_cog_attack" }
-		scale = 0.75			#BTAddOn changed from 1.5
+		scale = 1.5
 	}		
 
 	pdxmesh = {
@@ -144,7 +144,7 @@ objectTypes = {
 		animation = { id = "attack"	type = "muslim_flute_attack" }
 		animation = { id = "idle"	type = "muslim_flute_idle" }
 		animation = { id = "walk"	type = "muslim_flute_walk" }
-		scale = 0.83			#BTAddOn changed from 1.5
+		scale = 1.5
 		
 	}
 	
@@ -155,7 +155,7 @@ objectTypes = {
 		animation = { id = "attack"	type = "muslim_brig_attack" }
 		animation = { id = "idle"	type = "muslim_brig_idle" }
 		animation = { id = "walk"	type = "muslim_brig_walk" }
-		scale = 0.90			#BTAddOn changed from 1.5
+		scale = 1.5
 	}
 	
 }

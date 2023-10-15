@@ -14,7 +14,7 @@ objectTypes = {
 		animation = { id = "horse_walk"		type = "cavalry_rider_moving_animation" }				
 		animation = { id = "horse_retreat"	type = "cavalry_rider_moving_animation" }				
 		
-		scale = 0.35			#BTAddOn changing all unit sizes from scale 0.5 to scale 0.35
+		scale = 0.35
 		
 	}
 	pdxmesh = {
@@ -32,7 +32,7 @@ objectTypes = {
 		animation = { id = "horse_walk"		type = "cavalry_rider_moving_animation" }				
 		animation = { id = "horse_retreat"	type = "cavalry_rider_moving_animation" }				
 		
-		scale = 0.35			#BTAddOn changing all unit sizes from scale 0.5 to scale 0.35
+		scale = 0.35
 		
 	}
 pdxmesh = {
@@ -50,7 +50,7 @@ pdxmesh = {
 		animation = { id = "horse_walk"		type = "cavalry_rider_moving_animation" }				
 		animation = { id = "horse_retreat"	type = "cavalry_rider_moving_animation" }				
 		
-		scale = 0.35			#BTAddOn changing all unit sizes from scale 0.5 to scale 0.35
+		scale = 0.35
 		
 	}	
 	pdxmesh = {
@@ -68,7 +68,7 @@ pdxmesh = {
 		animation = { id = "horse_walk"		type = "cavalry_rider_moving_animation" }				
 		animation = { id = "horse_retreat"	type = "cavalry_rider_moving_animation" }				
 		
-		scale = 0.35			#BTAddOn changing all unit sizes from scale 0.5 to scale 0.35
+		scale = 0.35
 		
 	}
 	pdxmesh = {
@@ -86,7 +86,7 @@ pdxmesh = {
 		animation = { id = "horse_walk"		type = "cavalry_rider_moving_animation" }				
 		animation = { id = "horse_retreat"	type = "cavalry_rider_moving_animation" }				
 		
-		scale = 0.35			#BTAddOn changing all unit sizes from scale 0.5 to scale 0.35
+		scale = 0.35
 		
 	}
 	pdxmesh = {
@@ -104,7 +104,7 @@ pdxmesh = {
 		animation = { id = "horse_walk"		type = "cavalry_rider_moving_animation" }				
 		animation = { id = "horse_retreat"	type = "cavalry_rider_moving_animation" }				
 		
-		scale = 0.35			#BTAddOn changing all unit sizes from scale 0.5 to scale 0.35
+		scale = 0.35
 		
 	}		
 	pdxmesh = {
@@ -122,7 +122,7 @@ pdxmesh = {
 		animation = { id = "horse_walk"		type = "cavalry_rider_moving_animation" }				
 		animation = { id = "horse_retreat"	type = "cavalry_rider_moving_animation" }				
 		
-		scale = 0.35			#BTAddOn changing all unit sizes from scale 0.5 to scale 0.35
+		scale = 0.35
 		
 	}		
 		pdxmesh = {
@@ -140,7 +140,7 @@ pdxmesh = {
 		animation = { id = "horse_walk"		type = "cavalry_rider_moving_animation" }				
 		animation = { id = "horse_retreat"	type = "cavalry_rider_moving_animation" }				
 		
-		scale = 0.35			#BTAddOn changing all unit sizes from scale 0.5 to scale 0.35
+		scale = 0.35
 		
 	}	
 		pdxmesh = {
@@ -158,7 +158,7 @@ pdxmesh = {
 		animation = { id = "horse_walk"		type = "cavalry_rider_moving_animation" }				
 		animation = { id = "horse_retreat"	type = "cavalry_rider_moving_animation" }				
 		
-		scale = 0.35			#BTAddOn changing all unit sizes from scale 0.5 to scale 0.35
+		scale = 0.35
 		
 	}	
 	pdxmesh = {
@@ -176,7 +176,7 @@ pdxmesh = {
 		animation = { id = "horse_walk"		type = "cavalry_rider_moving_animation" }				
 		animation = { id = "horse_retreat"	type = "cavalry_rider_moving_animation" }				
 		
-		scale = 0.35			#BTAddOn changing all unit sizes from scale 0.5 to scale 0.35
+		scale = 0.35
 		
 	}	
 	pdxmesh = {
@@ -194,7 +194,7 @@ pdxmesh = {
 		animation = { id = "horse_walk"		type = "cavalry_rider_moving_animation" }				
 		animation = { id = "horse_retreat"	type = "cavalry_rider_moving_animation" }				
 		
-		scale = 0.35			#BTAddOn changing all unit sizes from scale 0.5 to scale 0.35
+		scale = 0.35
 		
 	}	
 	
@@ -203,56 +203,56 @@ pdxmesh = {
 		name = "hwarup_BUR_01_spear_mesh"
 		file = "gfx/models/Units/hwarup_BUR_01_spear.mesh"
 					
-		scale = 0.35			#BTAddOn changing all unit sizes from scale 0.5 to scale 0.35
+		scale = 0.35
 		
 	}
 		pdxmesh = {
 		name = "hwarup_PRO_01_spear_mesh"
 		file = "gfx/models/Units/hwarup_PRO_01_spear.mesh"
 					
-		scale = 0.35			#BTAddOn changing all unit sizes from scale 0.5 to scale 0.35
+		scale = 0.35
 		
 	}
 		pdxmesh = {
 		name = "hwarup_FRA_01_spear_mesh"
 		file = "gfx/models/Units/hwarup_FRA_01_spear.mesh"
 					
-		scale = 0.35			#BTAddOn changing all unit sizes from scale 0.5 to scale 0.35
+		scale = 0.35
 		
 	}
 	pdxmesh = {
 		name = "hwarup_BRI_01_spear_mesh"
 		file = "gfx/models/Units/hwarup_BRI_01_spear.mesh"
 					
-		scale = 0.35			#BTAddOn changing all unit sizes from scale 0.5 to scale 0.35
+		scale = 0.35
 		
 	}
 	pdxmesh = {
 		name = "hwarup_ORL_01_spear_mesh"
 		file = "gfx/models/Units/hwarup_ORL_01_spear.mesh"
 					
-		scale = 0.42			#BTAddOn changing all unit sizes from scale 0.6 to scale 0.42
+		scale = 0.35
 		
 	}
 		pdxmesh = {
 		name = "hwarup_SCO_01_spear_mesh"
 		file = "gfx/models/Units/hwarup_SCO_01_spear.mesh"
 					
-		scale = 0.35			#BTAddOn changing all unit sizes from scale 0.5 to scale 0.35
+		scale = 0.35
 		
 	}
 		pdxmesh = {
 		name = "hwarup_ENG_01_spear_mesh"
 		file = "gfx/models/Units/hwarup_ENG_01_spear.mesh"
 					
-		scale = 0.35			#BTAddOn changing all unit sizes from scale 0.5 to scale 0.35
+		scale = 0.35
 		
 	}
 		pdxmesh = {
 		name = "hwarup_AMG_01_spear_mesh"
 		file = "gfx/models/Units/hwarup_AMG_01_spear.mesh"
 					
-		scale = 0.35			#BTAddOn changing all unit sizes from scale 0.5 to scale 0.35
+		scale = 0.35
 		
 	}
 	

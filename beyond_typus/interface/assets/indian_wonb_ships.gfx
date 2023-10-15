@@ -13,7 +13,7 @@ objectTypes = {
 		animation = { id = "idle"	type = "indian_heavy_1_idle_animation" }
 		animation = { id = "walk"	type = "indian_heavy_1_walk_animation" }
 		animation = { id = "attack"	type = "indian_heavy_1_attack_animation"}
-		scale = 0.82			#BTAddOn changed from 1.5
+		scale = 1.5
 	}
 	
 		pdxmesh = {
@@ -23,7 +23,7 @@ objectTypes = {
 		animation = { id = "idle"	type = "indian_heavy_2_idle_animation" }
 		animation = { id = "walk"	type = "indian_heavy_2_walk_animation" }
 		animation = { id = "attack"	type = "indian_heavy_2_attack_animation"}
-		scale = 0.90			#BTAddOn changed from 1.5
+		scale = 1.5
 	}
 	
 	
@@ -34,7 +34,7 @@ objectTypes = {
 		animation = { id = "idle"	type = "indian_heavy_3_idle_animation" }
 		animation = { id = "walk"	type = "indian_heavy_3_walk_animation" }
 		animation = { id = "attack"	type = "indian_heavy_3_attack_animation"}
-		scale = 1.0			#BTAddOn changed from 1.5
+		scale = 1.5
 	}
 	
 
@@ -51,7 +51,7 @@ objectTypes = {
 		animation = { id = "idle"	type = "indian_light_1_idle_animation" }
 		animation = { id = "walk"	type = "indian_light_1_walk_animation" }
 		animation = { id = "attack"	type = "indian_light_1_attack_animation"}
-		scale = 0.60			#BTAddOn changed from 1.5
+		scale = 1.5
 	}
 	
 		pdxmesh = {
@@ -61,7 +61,7 @@ objectTypes = {
 		animation = { id = "idle"	type = "indian_light_2_idle_animation" }
 		animation = { id = "walk"	type = "indian_light_2_walk_animation" }
 		animation = { id = "attack"	type = "indian_light_2_attack_animation"}
-		scale = 0.68			#BTAddOn changed from 1.5
+		scale = 1.5
 	}
 	
 	
@@ -72,7 +72,7 @@ objectTypes = {
 		animation = { id = "idle"	type = "indian_light_3_idle_animation" }
 		animation = { id = "walk"	type = "indian_light_3_walk_animation" }
 		animation = { id = "attack"	type = "indian_light_3_attack_animation"}
-		scale = 0.75			#BTAddOn changed from 1.5
+		scale = 1.5
 	}	
 	
 	
@@ -95,7 +95,7 @@ objectTypes = {
 		animation = { id = "idle"	type = "indian_transport_1_idle_animation" }
 		animation = { id = "walk"	type = "indian_transport_1_walk_animation" }
 		animation = { id = "attack"	type = "indian_transport_1_attack_animation"}
-		scale = 0.95			#BTAddOn changed from 1.5
+		scale = 1.5
 	}
 	
 	pdxmesh = {
@@ -105,7 +105,7 @@ objectTypes = {
 		animation = { id = "idle"	type = "indian_transport_2_idle_animation" }
 		animation = { id = "walk"	type = "indian_transport_2_walk_animation" }
 		animation = { id = "attack"	type = "indian_transport_2_attack_animation"}
-		scale = 1.05			#BTAddOn changed from 1.5
+		scale = 1.5
 	}
 
 		pdxmesh = {
@@ -115,7 +115,7 @@ objectTypes = {
 		animation = { id = "idle"	type = "indian_transport_3_idle_animation" }
 		animation = { id = "walk"	type = "indian_transport_3_walk_animation" }
 		animation = { id = "attack"	type = "indian_transport_3_attack_animation"}
-		scale = 1.15			#BTAddOn changed from 1.5
+		scale = 1.5
 	}
 
 	###########################################################################
@@ -131,7 +131,7 @@ objectTypes = {
 		animation = { id = "idle"	type = "indian_galley_1_idle_animation" }
 		animation = { id = "walk"	type = "indian_galley_1_walk_animation" }
 		animation = { id = "attack"	type = "indian_galley_1_attack_animation"}
-		scale = 0.67			#BTAddOn changed from 1.5
+		scale = 1.5
 	}
 
 	pdxmesh = {
@@ -141,7 +141,7 @@ objectTypes = {
 		animation = { id = "idle"	type = "indian_galley_2_idle_animation" }
 		animation = { id = "walk"	type = "indian_galley_2_walk_animation" }
 		animation = { id = "attack"	type = "indian_galley_2_attack_animation"}
-		scale = 0.75			#BTAddOn changed from 1.5
+		scale = 1.5
 	}
 
 
@@ -153,7 +153,7 @@ objectTypes = {
 		animation = { id = "idle"	type = "indian_galley_3_idle_animation" }
 		animation = { id = "walk"	type = "indian_galley_3_walk_animation" }
 		animation = { id = "attack"	type = "indian_galley_3_attack_animation"}
-		scale = 0.83			#BTAddOn changed from 1.5
+		scale = 1.5
 	}
 
 

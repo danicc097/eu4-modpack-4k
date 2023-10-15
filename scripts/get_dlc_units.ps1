@@ -2,8 +2,8 @@ $sourceDirectory = "C:\Games\Europa Universalis IV\dlc"
 $tempPath = "D:\Downloads\temp_unit_pack_extraction"
 $destinationDirectory = "D:\Downloads\extracted_unit_packs"
 
-rm -rf $tempPath
-rm -rf $destinationDirectory
+Remove-Item -Recurse -Force $tempPath
+Remove-Item -Recurse -Force $destinationDirectory
 mkdir $tempPath
 mkdir $destinationDirectory
 
@@ -29,10 +29,12 @@ foreach ($folder in $folders) {
 }
 
 $gfxFiles = Get-ChildItem -Path $tempPath -File -Recurse -Filter *.gfx
-rm -r $tempPath
 foreach ($gfxFile in $gfxFiles) {
+  # change new scale accordingly
+  (Get-Content -Path $gfxFile.FullName) | ForEach-Object { $_ -replace 'scale = 0\.[0-9]+', 'scale = 0.35' } | Set-Content -Path $gfxFile.FullName
+
   $destinationPath = Join-Path -Path $destinationDirectory -ChildPath $gfxFile.Name
-  Write-Host "gfxFile.FullName" $gfxFile.FullName
-  Write-Host $destinationPath
+  Write-Host "gfxFile.FullName: $($gfxFile.FullName)"
+  Write-Host "Destination Path: $destinationPath"
   Move-Item -Path $gfxFile.FullName -Destination $destinationPath -Force
 }
