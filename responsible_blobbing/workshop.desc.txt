@@ -1,0 +1,93 @@
+[i]"Power tends to corrupt and absolute power corrupts absolutely."
+-- Lord Acton, 1887.[/i]
+
+[h1]Responsible Blobbing[/h1]
+[h3]Scope Change Note[/h3]
+
+The mod has been overhauled to detach *size* of a country (which is now completely irrelevant), from its governing capacity usage. 
+
+All bonuses and maluses have been reworked to apply to agile states (with low govcap usage) and overburdened states (with high or over govcap usage).
+
+Military maluses have been ditched entirely. If you want military changes, see Responsible Warfare mod.
+
+It is my hope that with these changes the AI can hangle large countries that gain inherent govcap bonuses (such as China or Russia), and I will attempt to tweak the mod in the future.
+
+[h2]A Victoria II Clamp Mod[/h2]
+
+For map connoisseurs among the Europa Universalis IV community, who gaze at ungodly blobs with disgust, and secretly wonder how their Victoria II converted games will even be playable once there are but seven megablobs around in 1821, I proudly present this mod.
+
+Made by carefully picking the best bits of Malevolence's [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1241672807]The Course Of Empire[/url], as well as Shockbent's [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1902187347]continuation[/url] of the same mod family, but also from some fresh and dangerously [i]revolutionary[/i] ideas.
+
+[h3]Goals of this mod[/h3]
+A simple goal can be put in but a single sentence: "Make Vic2 conversions realistic". 
+[list]
+[*] Reduce blobs - the horrendous tumors, 
+[*] Allow countries to keep other countries in check, 
+[*] No silent and meek peasants who accept their foreign and heathen overlords for 400 years without ever rebelling (except that one time),
+[*] Harder and more difficult internal management as country gains weight,
+[*] Bonuses to minor and forgotten countries so they can expand a more easily.
+[/list]
+
+So, how do we achieve this? Enter, Corruption.
+
+[h3]Corruption is the Enemy of Civilization[/h3]
+Woe to the Paradox Game Director, who shall be unnamed, when he introduced territory corruption. The deadly enemy of blobbing - preventing the stout player from painting countless continents in his own color. If only..
+
+[i]Wait. What? 
+...
+But, that's what we need![/i]
+
+This mod introduces the deadly concept of government corruption as a primary tool to keep countries in check. Coupled with much higher government costs for territories, and overall reduced governing capacity, countries overstepping their blobbing capacity will find themselves in a corruption nightmare.
+
+Overextension is a deadly generator of corruption. So is being over governing capacity. So is, you know, being [b]large[/b].
+
+[h3]"Features" (rather, penalties)[/h3]
+[list]
+[*] Territories, trade companies are more expensive to maintain (halved govcap bonuses).
+[*] Core territory is more expensive to maintain (+50%).
+[*] Trade companies now reduce unrest.
+[*] Default non-accepted culture unrest is higher (8 instead of 2).
+[*] This is negated in colonial nations and trade companies (-5 unrest) as they'd shatter otherwise.
+[*] Cultures are more resistant to conversion.
+[*] Corruption does [b]not[/b] reduce unrest, but reverse, it increases unrest.
+[*] Governing capacity is reduced, and as time goes by, the reduction increases. Fight it with buildings and tech. (-10% malus for all govcap per age, up to -40% in Age of Revolutions)
+[*] Overextension causes double corruption (1/year for 100%).
+[*] Over governing capacity grants 0.5/year corruption as well for 100%.
+[*] Agile states get bonuses to economy, and these modifiers slowly reverse as countries grow.
+[*] Overburdened countries are inherently corrupt and [b]will[/b] have to fight corruption if they wish to expand further.
+[*] Woefully corrupt states get the benefit of Country Collapse Disaster.
+[*] Subject Colonial Nations have 50% more increased Liberty Desire from development.
+[*] On the other hand, various vassal types and especially client states have significantly reduced liberty desire from dev.
+[/list]
+
+[h3]But Why?[/h3]
+None of this will stop the player, and this was never the goal. 
+[olist]
+[*] Players looking to blob will simply not use this mod. [b]That's perfectly acceptable.[/b]
+[*] Players looking to stay small, expand within their home region, and grab some colonies (and a slice of China), probably won't be hampered by this mod.
+[*] Players looking to roleplay historically won't notice this mod exists.
+[/olist]
+
+However, AI is dumb. It'll expand as hard as it can. 
+This mod will clamp their efforts, and hopefully, by 1821, the world will still be a diverse, varied place, with plenty of interesting countries and lot of room for expansion, unification, and industrial domination.
+
+[h3]Victoria 2 Conversion?[/h3]
+Yes. For those out of the loop:
+[list]
+[*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2241203093]CK3 to EU4[/url]
+[*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2061437373]CK2 to EU4[/url]
+[*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=392447667]EU4 to Vic2[/url]
+[*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2922675519]EU4 to Vic3[/url]
+[*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=733122837]Vic2 to HoI4[/url]
+[/list]
+
+[h3]See also:[/h3]
+[list]
+[*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2387400670]Responsible Warfare[/url], a cautionary tale of scarcity and ruin.
+[/list]
+
+[h3]Is this mod compatible with...?[/h3]
+Not a clue! If it is, cool, if it isn't, oh well. The mod is [i]very[/i] light and alters only precious few bits needed to work, so it should be compatible with a vast majority of mods - and for this reason I can't make it compatible with anything that it already isn't. Why don't you try yourself and see?
+
+[h3]For modders: Terms of Sharing or Altering[/h3]
+You are free to publish a variant of this mod, incorporate it into your work, change, alter, reduce, expand it in any way you wish, provided you credit me and include a link to this mod.

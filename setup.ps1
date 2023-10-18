@@ -29,6 +29,7 @@ New-Item -ItemType Junction -Path $ModDir -Target (Get-Location).Path
 Write-Host "Mod folder $ModDir updated. Please update dlc_load.json to:"
 #     "mod/beyond_typus.mod",
 #     "mod/beyond_typus_orbis.mod",
+# TODO: responsible_blobbing unbalanced with beyond typus and xorme ai, actually worsens it
 Write-Host '
 "enabled_mods": [
     "mod/extended_timeline_map.mod",

@@ -1,0 +1,18 @@
+namespace = RB_DISASTER
+
+country_event = {
+	id = RB_DISASTER.1
+	is_triggered_only = yes
+	picture = ANGRY_MOB_eventPicture
+	title = "RB_EVT1_NAME"
+	desc = "RB_EVT1_DESC"
+
+	immediate = {
+		hidden_effect = {
+			add_stability = -1
+		}
+	}
+	option = {
+		name = "RB_DISASTER_OK"
+	}
+}

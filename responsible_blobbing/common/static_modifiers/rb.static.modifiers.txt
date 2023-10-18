@@ -1,0 +1,133 @@
+in_capital_state = {
+	local_institution_spread = 0.05
+	local_state_maintenance_modifier = -0.5
+	local_governing_cost = -2.5				# RB: Up from -1.0 since capital states can't be centralized so this nails it at always 1% cost.
+}
+
+core = {
+	local_tax_modifier = 0.75
+	local_manpower_modifier = 0.75
+	local_sailors_modifier = 0.75
+	local_governing_cost = 0.5				# RB: We're hardasses. Added from 0.
+}
+
+# Not touching non_core as those cause overextension anyway.
+
+colonial_core = {
+	local_tax_modifier = 0.75
+	local_manpower_modifier = 0.75
+	local_sailors_modifier = 0.75
+	local_missionary_strength = -0.02
+	min_local_autonomy = 50
+	local_governing_cost = -0.25			# RB: Up from -0.5
+}
+
+# Territories are far more costly for the few benefits they provide.
+
+territory_core = {
+	local_tax_modifier = 0.75
+	local_manpower_modifier = 0.75
+	local_sailors_modifier = 0.75
+	local_missionary_strength = -0.02
+	min_local_autonomy = 90
+	local_governing_cost = -0.5			# RB: up from -0.75!
+}
+
+territory_non_core = {
+	local_missionary_strength = -0.02
+	min_local_autonomy = 90
+	local_governing_cost = -0.5		# RB: up from -0.75!
+}
+
+# Trade companies cost the same as vanilla, and benefit from additional -5 unrest stability.
+# Idea is to incentivise trade companies as those on conversion to Vic3 separate into standalone countries.
+
+in_trade_company = {
+	province_trade_power_modifier = 1
+	naval_forcelimit = 0.5
+	local_missionary_strength = -0.2
+	local_institution_spread = 0.10
+	local_governing_cost = 0.25
+	local_unrest = -5					# RB: added incentive to trade up provinces.
+}
+
+# Different cultures need to be far more rowdy to match historical revolts.
+
+non_accepted_culture = {
+	local_tax_modifier = -0.33
+	local_missionary_strength = -0.02
+	local_manpower_modifier = -0.33
+	local_sailors_modifier = -0.2
+	local_unrest = 8					# RB Higher unrest, from 2.
+}
+
+# Corruption does NOT lower unrest - it INCREASES it!
+
+corruption = {
+	global_spy_defence = -0.25
+	spy_offence = -0.50
+	all_power_cost = 1.0
+	min_autonomy = 50
+	global_unrest = 20					# RB: Uno reverse from -20.
+	imperial_mandate = -1
+	brahmins_hindu_loyalty_modifier = 0.1
+	brahmins_muslim_loyalty_modifier = 0.1
+	brahmins_other_loyalty_modifier = 0.1
+	church_loyalty_modifier = 0.1
+	maratha_loyalty_modifier = 0.1
+	nobles_loyalty_modifier = 0.1
+	burghers_loyalty_modifier = 0.1
+	vaisyas_loyalty_modifier = 0.1
+	cossacks_loyalty_modifier = 0.1
+	nomadic_tribes_loyalty_modifier = 0.1
+	dhimmi_loyalty_modifier = 0.1
+	jains_loyalty_modifier = 0.1
+	rajput_loyalty_modifier = 0.1
+	janissaries_loyalty_modifier = 0.1
+	eunuchs_loyalty_modifier = 0.1
+	monthly_heir_claim_increase = 0.025
+	monthly_russian_modernization = -1
+	monthly_ottoman_decadence = 10
+}
+
+# We can reduce double the amount (but it will cost double)
+root_out_corruption = {
+	yearly_corruption = -2.0
+}
+
+# Double corruption from overextension, double unrest.
+over_extension = {
+	global_foreign_trade_power = -1.0
+	stability_cost_modifier = 0.5
+	mercenary_cost = 0.5
+	diplomatic_reputation = -2
+	improve_relation_modifier = -0.5
+	global_unrest = 10						# RB: doubled
+	bureaucrats_influence = 0.5
+	mr_guilds_influence = 0.5
+	yearly_corruption = 1.0 #doubled
+	ottoman_decadence_gain_modifier = 0.5 	# RB: doubled
+}
+
+# Flat corruption from over capacity.
+over_governing_capacity_modifier = {
+	stability_cost_modifier = 1.0
+	ae_impact = 0.5
+	improve_relation_modifier = -0.5
+	advisor_cost = 1.0
+	monthly_militarized_society = -1
+	monthly_prussian_militarized_society_1 = -1
+	monthly_prussian_militarized_society_2 = -1
+	monthly_prussian_militarized_society_3 = -1
+	administrative_efficiency = -0.5
+	monthly_ottoman_decadence = 2
+	yearly_corruption = 0.5					# RB: Added here.
+}
+
+# Make centralization easier since we increased base core governing cost to +50%
+centralize_state = {
+	statewide_governing_cost = -0.34	# up from -0.2
+	local_prosperity_growth = 0.25
+	local_state_maintenance_modifier = -0.2
+	picture = "centralize_state"
+}

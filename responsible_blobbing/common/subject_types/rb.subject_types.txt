@@ -1,0 +1,39 @@
+vassal = {
+	liberty_desire_development_ratio = 0.15 # from 0.25
+}
+
+march = {
+	liberty_desire_development_ratio = 0.15 # from 0.25
+}
+
+daimyo_vassal = {
+	liberty_desire_development_ratio = 0.15 # from 0.25
+}
+
+appanage = {
+	liberty_desire_development_ratio = 0.15 # from 0.25
+}
+
+client_vassal = {
+	liberty_desire_development_ratio = 0.05 # from 0.25
+}
+
+client_march = {
+	liberty_desire_development_ratio = 0.05 # from 0.25
+}
+
+colony = {
+	liberty_desire_development_ratio = 0.15 # from 0.1
+}
+
+crown_colony = {
+	liberty_desire_development_ratio = 0.15 # from 0.1
+}
+
+private_enterprise = {
+	liberty_desire_development_ratio = 0.15 # from 0.1
+}
+
+self_governing_colony = {
+	liberty_desire_development_ratio = 0.15 # from 0.1
+}

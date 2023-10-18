@@ -1,0 +1,123 @@
+rb_country_collapse = {
+	potential = {
+		governing_capacity_percentage = 0.95
+		corruption = 15
+	}
+
+	can_start={	
+		governing_capacity_percentage = 1.2
+		corruption = 50
+	}
+
+	can_stop = {
+		OR = {
+			NOT = { corruption = 30 }
+			NOT = {	governing_capacity_percentage = 0.95 }
+		}
+	}
+
+	progress = {
+		modifier = {
+			factor = 0.1
+			NOT = {stability = 3}
+		}
+		modifier = {
+			factor = -0.1
+			stability = 3
+		}
+		modifier = {
+			factor = 0.5
+			NOT = {stability = 0}
+		}
+		modifier = {
+			factor = 0.25
+			NOT = {prestige = 0}
+		}
+		modifier = {
+			factor = 1.0
+			overextension_percentage = 0.25
+		}
+		modifier = {
+			factor = 5.0
+			overextension_percentage = 0.50
+		}
+		modifier = {
+			factor = 1
+			num_of_rebel_controlled_provinces = 1
+		}
+		modifier = {
+			factor = 1
+			num_of_rebel_controlled_provinces = 10
+		}
+		modifier = {
+			factor = 0.1
+			num_of_powerful_estates = 1
+		}
+		modifier = {
+			factor = 0.1
+			num_of_loans = 1
+		}
+		modifier = {
+			factor = 1
+			num_of_loans = 10
+		}
+		modifier = {
+			factor = 5
+			num_of_loans = 30
+		}
+		modifier = {
+			factor = 1.0
+			corruption = 55
+		}
+		modifier = {
+			factor = 3.0
+			corruption = 60
+		}
+		modifier = {
+			factor = 5.0
+			corruption = 70
+		}
+		modifier = {
+			factor = 0.1
+			inflation = 10
+		}	
+	}
+
+	can_end={
+		AND = {
+			NOT = { corruption = 30 }
+			NOT = { governing_capacity_percentage = 0.8 }
+		}
+	}
+
+	modifier = {
+		discipline = -0.5
+		land_morale = -0.5
+		defensiveness = -0.5
+		siege_ability = -0.5
+		land_forcelimit_modifier=-0.5
+		naval_forcelimit_modifier = -0.5
+		global_unrest = 20
+		stability_cost_modifier = 0.5
+		global_tax_modifier = -0.5
+		diplomatic_reputation = -5.0
+		trade_efficiency = -0.5
+		production_efficiency = -0.5
+		global_manpower_modifier = -0.5
+		manpower_recovery_speed = -0.5
+		prestige = -1.0
+		yearly_corruption = 1.0
+		technology_cost = 0.5
+		global_institution_spread = -0.5
+		ae_impact = 3.0
+	}
+	
+	on_monthly = {
+			events = {
+			}
+			random_events = { 
+				800 = 0
+				100 = RB_DISASTER.1
+			}
+	}
+}

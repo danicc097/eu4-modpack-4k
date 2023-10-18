@@ -1,0 +1,218 @@
+RB_MicroState = {
+	potential = {
+		governing_capacity_percentage = 0
+		NOT = { governing_capacity_percentage = 0.3 }
+	}
+	trigger = {
+		governing_capacity_percentage = 0
+		NOT = { governing_capacity_percentage = 0.1 }
+	}
+	
+	ae_impact = -0.2
+
+	global_tax_modifier = 0.2
+	trade_efficiency = 0.2
+	development_cost = -0.2
+	build_cost = -0.2
+	yearly_corruption = -0.2
+
+	technology_cost = -0.25
+	global_institution_spread = 0.25
+
+	culture_conversion_cost = -0.2
+	promote_culture_cost = -0.2
+
+	global_unrest = -3.0
+	stability_cost_modifier = -0.25
+}
+
+RB_AgileState = {
+	potential = {
+		governing_capacity_percentage = 0
+		NOT = { governing_capacity_percentage = 0.5 }
+	}
+	trigger = {
+		governing_capacity_percentage = 0.1
+		NOT = { governing_capacity_percentage = 0.3 }
+	}
+	
+	ae_impact = -0.1
+
+	global_tax_modifier = 0.1
+	trade_efficiency = 0.1
+	development_cost = -0.1
+	build_cost = -0.1
+	yearly_corruption = -0.1
+
+	technology_cost = -0.1
+	global_institution_spread = 0.15
+
+	culture_conversion_cost = -0.1
+	promote_culture_cost = -0.1
+
+	global_unrest = -2.0
+	stability_cost_modifier = -0.1
+}
+
+RB_GrowingState = {
+	potential = {
+		governing_capacity_percentage = 0.1
+		NOT = { governing_capacity_percentage = 0.75 }
+	}
+	trigger = {
+		governing_capacity_percentage = 0.3
+		NOT = { governing_capacity_percentage = 0.5 }
+	}
+	
+	ae_impact = -0.05
+
+	development_cost = -0.05
+	build_cost = -0.05
+	yearly_corruption = -0.05
+
+	technology_cost = -0.05
+	global_institution_spread = 0.05
+
+	global_unrest = -1.0
+}
+
+RB_DevelopedState = {
+	potential = {
+		governing_capacity_percentage = 0.5
+	}
+	trigger = {
+		governing_capacity_percentage = 0.75
+		NOT = { governing_capacity_percentage = 0.95 }
+	}
+
+	production_efficiency = 0.05
+
+	ae_impact = 0.15
+	
+	development_cost = 0.1
+	build_cost = 0.1
+	yearly_corruption = 0.05
+
+	technology_cost = 0.05
+	global_institution_spread = -0.1
+
+	culture_conversion_cost = 0.25
+	promote_culture_cost = 0.25
+
+	global_unrest = 2.0
+	stability_cost_modifier = 0.15
+}
+
+RB_BrimmingState = {
+	potential = {
+		governing_capacity_percentage = 0.75
+	}
+	trigger = {
+		governing_capacity_percentage = 0.95
+	}
+
+	ae_impact = 0.25
+	
+	global_tax_modifier = -0.1
+	production_efficiency = 0.1
+	trade_efficiency = -0.1
+	development_cost = 0.25
+	build_cost = 0.25
+	yearly_corruption = 0.15
+
+	technology_cost = 0.25
+	global_institution_spread = -0.25
+
+	culture_conversion_cost = 0.5
+	promote_culture_cost = 0.5
+
+	global_unrest = 4.0
+	stability_cost_modifier = 0.35
+}
+
+RB_CorruptState = {
+	potential = {
+		corruption = 5
+	}
+	trigger = {
+		corruption = 30
+	}
+
+	land_morale = -0.1
+	naval_morale = -0.1
+	defensiveness = -0.1
+	siege_ability = -0.1
+
+	ae_impact = 0.25
+	diplomatic_reputation = -1.0
+	administrative_efficiency = -0.2
+	yearly_corruption = 0.5
+
+	global_tax_modifier = -0.25
+	production_efficiency = -0.25 
+	trade_efficiency = -0.25
+	development_cost = 0.5
+	build_cost = 0.5
+
+	technology_cost = 0.5
+	global_institution_spread = -0.25 
+
+	prestige_decay = 0.2
+	culture_conversion_cost = 0.75
+	promote_culture_cost = 0.75
+
+	global_unrest = 8.0
+	stability_cost_modifier = 0.75 
+}
+
+RB_ClampDiscovery = {
+	potential = {
+		current_age = age_of_discovery
+	}
+	trigger = {
+		current_age = age_of_discovery
+	}
+	governing_capacity_modifier = -0.10
+}
+
+RB_ClampReformation = {
+	potential = {
+		current_age = age_of_reformation
+	}
+	trigger = {
+		current_age = age_of_reformation
+	}
+	governing_capacity_modifier = -0.20
+}
+
+RB_ClampAbsolutism = {
+	potential = {
+		current_age = age_of_absolutism
+	}
+	trigger = {
+		current_age = age_of_absolutism
+	}
+	governing_capacity_modifier = -0.30
+}
+
+RB_ClampRevolutions = {
+	potential = {
+		current_age = age_of_revolutions
+	}
+	trigger = {
+		current_age = age_of_revolutions
+	}
+	governing_capacity_modifier = -0.40
+}
+
+RB_MissionToCivilize = {
+	potential = {
+		is_colonial_nation = yes
+	}
+	trigger = {
+		is_colonial_nation = yes
+	}
+	global_unrest = -7.0 # Let's keep Mexico from imploding.
+	governing_capacity_modifier = 0.5 # They need a large boost.
+}
+
