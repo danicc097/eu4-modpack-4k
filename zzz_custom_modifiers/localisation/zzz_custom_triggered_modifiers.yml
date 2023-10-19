@@ -1,0 +1,4 @@
+﻿l_english:
+ reduce_early_blobbing: "Modifiers to reduce early blobbing"
+ reduce_early_blobbing_desc: "Active until 1500."
+ reduce_early_blobbing_title: "Early blobbing reduction"

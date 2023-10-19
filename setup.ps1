@@ -44,6 +44,7 @@ Write-Host '
     "mod/governments_expanded_4k.mod",
     "mod/peace_treaties_expanded_4k.mod",
     "mod/advisor_types_expanded_4k.mod",
+    "mod/zzz_custom_modifiers.mod",
     "mod/xorme_ai.mod"
   ],
 '

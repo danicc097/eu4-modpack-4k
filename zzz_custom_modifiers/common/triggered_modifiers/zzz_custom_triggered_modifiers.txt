@@ -1,0 +1,15 @@
+reduce_early_blobbing = {
+    name = "reduce_early_blobbing"
+    title = "reduce_early_blobbing_title"
+    desc = "reduce_early_blobbing_desc"
+
+    # Whether the triggered modifier is active
+    trigger = {
+      NOT = { is_year = 1510 }
+    }
+
+    ae_impact = 0.5 #vassalizing now creates a huge coalition on countries with more than one province
+    administrative_efficiency = -0.2
+	  province_warscore_cost = 1.0
+
+}
