@@ -27,7 +27,7 @@ crown_colony = {
 	allow_settlement_growth = yes
 	enforce_culture = yes
 
-	seize_territory = yes
+	seize_territory = yes #FIXME: instantly annexed back to CN
 
 	# Modifiers:
 	modifier_overlord = clear

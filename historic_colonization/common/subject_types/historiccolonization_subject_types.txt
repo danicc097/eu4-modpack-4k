@@ -1,1 +1,1 @@
-#subjects expanded already allows to seize colonial nation provinces
+#subjects expanded already allows to ~seize~ return colonial nation provinces to proper colonial nation, but not seizing.
