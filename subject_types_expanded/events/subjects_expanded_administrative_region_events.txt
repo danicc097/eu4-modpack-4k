@@ -217,6 +217,7 @@ country_event = {
 	trigger = {
 		any_subject_country = {
 			is_subject_of_type = administrative_region
+			NOT = { government = republic }
 			NOT = { government = monarchy }
 			NOT = { government = theocracy }
 		}

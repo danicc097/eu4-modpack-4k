@@ -786,7 +786,9 @@ is_possible_subject_of_subject_type_administrative_region = {
 	is_neighbor_of = PREV
 	OR = {
 		government = monarchy
+    #monarch point boost should be nerfed and gov type changed always to republic
 		government = theocracy
+    government = republic
 	}
 	capital_scope = {
 		development = 25

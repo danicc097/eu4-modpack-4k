@@ -393,7 +393,7 @@
  subjects_expanded_administrative_region_events3.EVTOPT1: "How dare they do that..."
 
  subjects_expanded_administrative_region_events.EVTNAME4: "Administrative Region demoted to a vassal"
- subjects_expanded_administrative_region_events.EVTDESC4: "Our Administrative Region has stopped being a monarchy or theocracy and thus was demoted to a normal vassal again."
+ subjects_expanded_administrative_region_events.EVTDESC4: "Our Administrative Region has stopped being a monarchy, republic or theocracy and thus was demoted to a normal vassal again."
  subjects_expanded_administrative_region_events4.EVTOPT1: "That's a shame."
 
  subjects_expanded_viking_settlement_events.EVTNAME2: "The Viking Heritage"
