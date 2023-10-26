@@ -13,3 +13,28 @@ reduce_early_blobbing = {
 	  province_warscore_cost = 1.0
 
 }
+
+genoa_buff = {
+    name = "genoa_buff"
+    title = "genoa_buff_title"
+    desc = "genoa_buff_desc"
+
+    trigger = {
+      tag = GEN
+    }
+
+    administrative_efficiency = +0.2
+    production_efficiency = 0.5
+
+    ship_trade_power_modifier = 0.2
+    ship_trade_power = 2
+    flagship_durability = 2
+    trade_power_in_fleet_modifier = 2
+
+    naval_forcelimit_modifier = 0.4
+
+    naval_forcelimit = 40
+    naval_maintenance_modifier = -0.1
+
+    global_tax_modifier = 1
+}

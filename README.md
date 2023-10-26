@@ -4,7 +4,7 @@
 
 ![GitHub repo size](https://img.shields.io/github/repo-size/danicc097/eu4-modpack-4k)
 
-Europa Universalis IV opinionated modpack with adhoc 4k compatibility patches. All
+Europa Universalis IV opinionated modpack with adhoc 4k compatibility patches and custom modifiers. Recommended use with `hard` difficulty. All
 original mod credits go to their respective owners:
 
 - [Advisor Types Expanded](https://steamcommunity.com/sharedfiles/filedetails/?id=2737385499)

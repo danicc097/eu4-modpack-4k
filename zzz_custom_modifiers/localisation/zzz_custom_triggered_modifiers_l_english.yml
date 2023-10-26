@@ -2,3 +2,6 @@
  reduce_early_blobbing: "Modifiers to reduce early blobbing"
  reduce_early_blobbing_desc: "Active until 1500."
  reduce_early_blobbing_title: "Early blobbing reduction"
+ genoa_buff: "Genoa buff"
+ genoa_buff_desc: "Help for weak BT Genoa"
+ genoa_buff_title: "Genoa buff"
