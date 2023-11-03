@@ -31,10 +31,11 @@ genoa_buff = {
     flagship_durability = 2
     trade_power_in_fleet_modifier = 2
 
-    naval_forcelimit_modifier = 0.4
+    naval_forcelimit_modifier = 0.3
 
-    naval_forcelimit = 40
-    naval_maintenance_modifier = -0.1
+    naval_forcelimit = 20 #early game buff
+    naval_maintenance_modifier = -0.05
 
     global_tax_modifier = 1
 }
+
