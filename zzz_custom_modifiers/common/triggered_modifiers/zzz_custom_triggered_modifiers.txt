@@ -33,8 +33,9 @@ genoa_buff = {
 
     naval_forcelimit_modifier = 0.4
 
-    naval_forcelimit = 40
-    naval_maintenance_modifier = -0.1
+    naval_forcelimit = 20
+    naval_maintenance_modifier = -0.05
 
     global_tax_modifier = 1
 }
+
