@@ -3752,6 +3752,7 @@ dom_cas_missions_5 = {
 				OR = {
 					treasurer = 3
 					master_of_mint = 3
+          ate_advisor_first_minister = 3
           ate_advisor_feudal_tax_collector = 3
           ate_advisor_great_administrator = 3
           ate_advisor_gold_digger = 3
