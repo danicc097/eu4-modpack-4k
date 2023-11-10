@@ -5,7 +5,7 @@ reduce_early_blobbing = {
 
     # Whether the triggered modifier is active
     trigger = {
-      NOT = { is_year = 1500 }
+      NOT = { is_year = 1499 }
     }
 
     ae_impact = 0.5 #vassalizing now creates a huge coalition on countries with more than one province
