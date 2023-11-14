@@ -8,9 +8,9 @@ reduce_early_blobbing = {
       NOT = { is_year = 1499 }
     }
 
-    ae_impact = 0.5 #vassalizing now creates a huge coalition on countries with more than one province
+    ae_impact = 0.2
     administrative_efficiency = -0.2
-	province_warscore_cost = 1.5 #dont let france take half of aragon in a single war
+	  province_warscore_cost = 2.0 #dont let france take half of aragon in a single war
 
 }
 
