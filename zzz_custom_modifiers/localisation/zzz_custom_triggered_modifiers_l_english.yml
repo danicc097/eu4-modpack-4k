@@ -5,3 +5,6 @@
  genoa_buff: "Genoa buff"
  genoa_buff_desc: "Help for weak BT Genoa"
  genoa_buff_title: "Genoa buff"
+ styria_buff: "Styria buff"
+ styria_buff_desc: "Help for weak BT Styria until 1500"
+ styria_buff_title: "Styria buff"
