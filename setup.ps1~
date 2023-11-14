@@ -3,8 +3,6 @@ param (
   [string]$ModDir
 )
 
-$ErrorActionPreference = 'Stop'
-
 $modBackupDir = "${ModDir}_backup"
 
 $confirmation = Read-Host "This will move the current mod folder to $modBackupDir. Continue? (Y/N)"
@@ -17,6 +15,8 @@ if (Test-Path -Path $modBackupDir) {
 
   if ($confirmation -eq "Y" -or $confirmation -eq "y") {
     Remove-Item -Path $modBackupDir -Force -Recurse
+    Move-Item $ModDir $modBackupDir
+    Write-Host "The mod backup folder has been updated."
   }
   else {
     Write-Host "Operation canceled. The mod backup folder has not been updated."
@@ -24,12 +24,12 @@ if (Test-Path -Path $modBackupDir) {
   }
 }
 
-Move-Item $ModDir $modBackupDir
 New-Item -ItemType Junction -Path $ModDir -Target (Get-Location).Path
 
 Write-Host "Mod folder $ModDir updated. Please update dlc_load.json to:"
 #     "mod/beyond_typus.mod",
 #     "mod/beyond_typus_orbis.mod",
+
 Write-Host '
 "enabled_mods": [
     "mod/extended_timeline_map.mod",
@@ -47,7 +47,5 @@ Write-Host '
     "mod/zzz_custom_modifiers.mod",
     "mod/xorme_ai.mod"
   ],
-
-NOTE: If you want to use the beyond typus map, replace "extended_timeline*" mods with beyond_typus and beyond_typus_orbis
 '
 Write-Host "To revert changes, delete $ModDir and rename the backup dir."
