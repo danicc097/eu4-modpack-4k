@@ -4,9 +4,11 @@ establish_administrative_region = {
 	require_acceptance = no
 
 	is_visible = {
-		can_create_subject_type = {
-			subject = FROM
-			subject_type = administrative_region
+	  FROM = {
+			is_subject_of = ROOT
+			NOT = {
+        is_subject_of_type = administrative_region
+      }
 		}
 	}
 
