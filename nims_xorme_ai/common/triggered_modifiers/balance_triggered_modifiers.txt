@@ -1,0 +1,20 @@
+#this file aims to fix version-related major unhistorical outcome
+ai_religious_war_cooldown =
+{
+	potential =
+	{
+		is_ai = yes
+		has_country_modifier = balance_religious_war_cooldown
+		NOT = {is_year = 1600}
+	}
+	trigger = 
+	{
+		is_ai = yes
+		has_country_modifier = balance_religious_war_cooldown
+		NOT = {is_year = 1600}
+		is_league_leader = yes
+		is_emperor = no
+	}
+
+	can_not_declare_war = yes
+}

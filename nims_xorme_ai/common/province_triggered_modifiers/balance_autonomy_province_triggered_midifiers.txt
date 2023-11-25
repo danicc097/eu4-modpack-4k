@@ -1,0 +1,120 @@
+exclave_autonomy = 
+{
+    trigger = 
+    {
+        is_in_capital_area = no
+        is_state = yes
+    }
+
+    local_autonomy = 0.1
+    local_unrest = 3
+
+    on_activation = {}
+    on_deactivation = {}
+}
+
+feudalism_autonomy = 
+{
+    potential = 
+    {
+        current_age = age_of_feudalism
+    }
+
+    trigger = 
+    {
+        NOT = 
+        {
+            any_province_in_state =
+            {
+                is_capital_of = owner
+            }
+        }
+        is_state = yes
+        NOT = { local_autonomy = 90 }
+    }
+
+    min_local_autonomy = 30
+    local_autonomy = 0.2
+
+    on_activation = {}
+    on_deactivation = {}
+}
+
+discovery_autonomy = 
+{
+    potential = 
+    {
+        current_age = age_of_discovery
+    }
+
+    trigger = 
+    {
+        NOT = 
+        {
+            any_province_in_state =
+            {
+                is_capital_of = owner
+            }
+        }
+        is_state = yes
+        NOT = { local_autonomy = 80 }
+    }
+
+    min_local_autonomy = 20
+    local_autonomy = 0.15
+
+    on_activation = {}
+    on_deactivation = {}
+}
+
+reformation_autonomy = 
+{
+    potential = 
+    {
+        current_age = age_of_reformation
+    }
+
+    trigger = 
+    {
+        NOT = 
+        {
+            any_province_in_state =
+            {
+                is_capital_of = owner
+            }
+        }
+        is_state = yes
+        NOT = { local_autonomy = 70 }
+    }
+
+    min_local_autonomy = 10
+    local_autonomy = 0.1
+
+    on_activation = {}
+    on_deactivation = {}
+}
+
+absolutism_autonomy = 
+{
+    potential = 
+    {
+        current_age = age_of_absolutism
+    }
+
+    trigger = 
+    {
+        NOT = 
+        {
+            any_province_in_state =
+            {
+                is_capital_of = owner
+            }
+        }
+        is_state = yes
+        NOT = { local_autonomy = 60 }
+    }
+    local_autonomy = 0.05
+
+    on_activation = {}
+    on_deactivation = {}
+}

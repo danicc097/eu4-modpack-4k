@@ -1,0 +1,7 @@
+tbop_AE_check = {
+	has_opinion_modifier = {
+		who = FROM
+		modifier = aggressive_expansion
+		value = $VALUE$
+	}
+}

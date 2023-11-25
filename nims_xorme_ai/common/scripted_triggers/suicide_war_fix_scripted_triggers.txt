@@ -1,0 +1,999 @@
+attacker_offensive_no_cb_war_trigger =
+{
+	is_in_war = 
+	{
+    	attacker_leader = $attacker$
+	}
+
+	#not every other known cbs, since there isn't a no_cb cb
+	NOT = 
+	{
+		is_in_war = 
+		{
+    		attacker_leader = $attacker$
+    		casus_belli = cb_war_on_empire
+		}
+		is_in_war = 
+		{
+    		attacker_leader = $attacker$
+    		casus_belli = cb_restore_personal_union
+		}
+		is_in_war = 
+		{
+    		attacker_leader = $attacker$
+    		casus_belli = cb_hundred_years_war
+		}
+		is_in_war = 
+		{
+    		attacker_leader = $attacker$
+    		casus_belli = cb_defection
+		}
+		is_in_war = 
+		{
+    		attacker_leader = $attacker$
+    		casus_belli = cb_loan_cancelled
+		}
+		is_in_war = 
+		{
+    		attacker_leader = $attacker$
+    		casus_belli = cb_spy_discovered
+		}
+		is_in_war = 
+		{
+    		attacker_leader = $attacker$
+    		casus_belli = cb_disloyal_vassal
+		}
+		is_in_war = 
+		{
+    		attacker_leader = $attacker$
+    		casus_belli = cb_hre_attacked
+		}
+		is_in_war = 
+		{
+    		attacker_leader = $attacker$
+    		casus_belli = cb_insult
+		}
+		is_in_war = 
+		{
+    		attacker_leader = $attacker$
+    		casus_belli = cb_dishonored_call
+		}
+		is_in_war = 
+		{
+    		attacker_leader = $attacker$
+    		casus_belli = cb_vassalize_mission
+		}
+		is_in_war = 
+		{
+    		attacker_leader = $attacker$
+    		casus_belli = cb_fabricated_claims
+		}
+		is_in_war = 
+		{
+    		attacker_leader = $attacker$
+    		casus_belli = cb_religious_conformance
+		}
+		is_in_war = 
+		{
+    		attacker_leader = $attacker$
+    		casus_belli = cb_border_war
+		}
+		is_in_war = 
+		{
+    		attacker_leader = $attacker$
+    		casus_belli = cb_trade_war_triggered
+		}
+		is_in_war = 
+		{
+    		attacker_leader = $attacker$
+    		casus_belli = cb_trade_conflict
+		}
+		is_in_war = 
+		{
+    		attacker_leader = $attacker$
+    		casus_belli = cb_trade_league_conflict
+		}
+		is_in_war = 
+		{
+    		attacker_leader = $attacker$
+    		casus_belli = cb_trade_conflict_triggered
+		}
+		is_in_war = 
+		{
+    		attacker_leader = $attacker$
+    		casus_belli = cb_annex
+		}
+		is_in_war = 
+		{
+    		attacker_leader = $attacker$
+    		casus_belli = cb_change_government
+		}
+		is_in_war = 
+		{
+    		attacker_leader = $attacker$
+    		casus_belli = cb_change_government_great_peasants_war
+		}
+		is_in_war = 
+		{
+    		attacker_leader = $attacker$
+    		casus_belli = cb_peasants_war_for_peasants
+		}
+		is_in_war = 
+		{
+    		attacker_leader = $attacker$
+    		casus_belli = cb_humiliate
+		}
+		is_in_war = 
+		{
+    		attacker_leader = $attacker$
+    		casus_belli = cb_conquest
+		}
+		is_in_war = 
+		{
+    		attacker_leader = $attacker$
+    		casus_belli = cb_core
+		}
+		is_in_war = 
+		{
+    		attacker_leader = $attacker$
+    		casus_belli = cb_independence_war
+		}
+		is_in_war = 
+		{
+    		attacker_leader = $attacker$
+    		casus_belli = cb_triggered_independence_war
+		}
+		is_in_war = 
+		{
+    		attacker_leader = $attacker$
+    		casus_belli = cb_nationalist
+		}
+		is_in_war = 
+		{
+    		attacker_leader = $attacker$
+    		casus_belli = cb_imperial
+		}
+		is_in_war = 
+		{
+    		attacker_leader = $attacker$
+    		casus_belli = cb_hegemon
+		}
+		is_in_war = 
+		{
+    		attacker_leader = $attacker$
+    		casus_belli = cb_war_against_the_world
+		}
+		is_in_war = 
+		{
+    		attacker_leader = $attacker$
+    		casus_belli = cb_daimyo_annex
+		}
+		is_in_war = 
+		{
+    		attacker_leader = $attacker$
+    		casus_belli = cb_independent_daimyo_annex
+		}
+		is_in_war = 
+		{
+    		attacker_leader = $attacker$
+    		casus_belli = cb_shogun_annex
+		}
+		is_in_war = 
+		{
+    		attacker_leader = $attacker$
+    		casus_belli = cb_sengoku
+		}
+		is_in_war = 
+		{
+    		attacker_leader = $attacker$
+    		casus_belli = cb_revolutionary
+		}
+		is_in_war = 
+		{
+    		attacker_leader = $attacker$
+    		casus_belli = cb_colonial
+		}
+		is_in_war = 
+		{
+    		attacker_leader = $attacker$
+    		casus_belli = cb_liberation
+		}
+		is_in_war = 
+		{
+    		attacker_leader = $attacker$
+    		casus_belli = cb_crusade
+		}
+		is_in_war = 
+		{
+    		attacker_leader = $attacker$
+    		casus_belli = cb_crusade_pheasants
+		}
+		is_in_war = 
+		{
+    		attacker_leader = $attacker$
+    		casus_belli = cb_defender_of_the_faith
+		}
+		is_in_war = 
+		{
+    		attacker_leader = $attacker$
+    		casus_belli = cb_heretic
+		}
+		is_in_war = 
+		{
+    		attacker_leader = $attacker$
+    		casus_belli = cb_external_perfectionism
+		}
+		is_in_war = 
+		{
+    		attacker_leader = $attacker$
+    		casus_belli = cb_excommunication
+		}
+		is_in_war = 
+		{
+    		attacker_leader = $attacker$
+    		casus_belli = cb_trade_war
+		}
+		is_in_war = 
+		{
+    		attacker_leader = $attacker$
+    		casus_belli = cb_trade_league_dispute
+		}
+		is_in_war = 
+		{
+    		attacker_leader = $attacker$
+    		casus_belli = cb_imperial_ban
+		}
+		is_in_war = 
+		{
+    		attacker_leader = $attacker$
+    		casus_belli = cb_imperial_ban_incident
+		}
+		is_in_war = 
+		{
+    		attacker_leader = $attacker$
+    		casus_belli = cb_liberate_elector
+		}
+		is_in_war = 
+		{
+    		attacker_leader = $attacker$
+    		casus_belli = cb_super_badboy
+		}
+		is_in_war = 
+		{
+    		attacker_leader = $attacker$
+    		casus_belli = cb_claim_throne
+		}
+		is_in_war = 
+		{
+    		attacker_leader = $attacker$
+    		casus_belli = cb_horde_vs_civ
+		}
+		is_in_war = 
+		{
+    		attacker_leader = $attacker$
+    		casus_belli = cb_tribal_feud
+		}
+		is_in_war = 
+		{
+    		attacker_leader = $attacker$
+    		casus_belli = cb_revoke_electorate
+		}
+		is_in_war = 
+		{
+    		attacker_leader = $attacker$
+    		casus_belli = cb_privateers
+		}
+		is_in_war = 
+		{
+    		attacker_leader = $attacker$
+    		casus_belli = cb_support_rebels
+		}
+		is_in_war = 
+		{
+    		attacker_leader = $attacker$
+    		casus_belli = cb_crush_the_revolution
+		}
+		is_in_war = 
+		{
+    		attacker_leader = $attacker$
+    		casus_belli = cb_spread_the_revolution
+		}
+		is_in_war = 
+		{
+    		attacker_leader = $attacker$
+    		casus_belli = cb_annex_the_revolution
+		}
+		is_in_war = 
+		{
+    		attacker_leader = $attacker$
+    		casus_belli = cb_religious_league
+		}
+		is_in_war = 
+		{
+    		attacker_leader = $attacker$
+    		casus_belli = cb_flower_wars
+		}
+		is_in_war = 
+		{
+    		attacker_leader = $attacker$
+    		casus_belli = cb_maya_expansion
+		}
+		is_in_war = 
+		{
+    		attacker_leader = $attacker$
+    		casus_belli = cb_humiliate_rotw
+		}
+		is_in_war = 
+		{
+    		attacker_leader = $attacker$
+    		casus_belli = cb_chinese_unification
+		}
+		is_in_war = 
+		{
+    		attacker_leader = $attacker$
+    		casus_belli = cb_take_mandate
+		}
+		is_in_war = 
+		{
+    		attacker_leader = $attacker$
+    		casus_belli = cb_forced_break_alliance
+		}
+		is_in_war = 
+		{
+    		attacker_leader = $attacker$
+    		casus_belli = cb_force_tributary
+		}
+		is_in_war = 
+		{
+    		attacker_leader = $attacker$
+    		casus_belli = cb_force_tributary_mission
+		}
+		is_in_war = 
+		{
+    		attacker_leader = $attacker$
+    		casus_belli = cb_hundred_years_union
+		}
+		is_in_war = 
+		{
+    		attacker_leader = $attacker$
+    		casus_belli = cb_force_join_hre
+		}
+
+
+
+		is_in_war = 
+		{
+    		attacker_leader = $attacker$
+    		casus_belli = cb_reintegrate_into_hre
+		}
+		is_in_war = 
+		{
+    		attacker_leader = $attacker$
+    		casus_belli = cb_imperial_realm_war
+		}
+		is_in_war = 
+		{
+    		attacker_leader = $attacker$
+    		casus_belli = cb_world_crusade
+		}
+		is_in_war = 
+		{
+    		attacker_leader = $attacker$
+    		casus_belli = cb_war_against_heresy
+		}
+		is_in_war = 
+		{
+    		attacker_leader = $attacker$
+    		casus_belli = cb_vassalize_majapahit
+		}
+
+
+
+		is_in_war = 
+		{
+    		attacker_leader = $attacker$
+    		casus_belli = cb_vassalize_malacca
+		}
+		is_in_war = 
+		{
+    		attacker_leader = $attacker$
+    		casus_belli = cb_sword_of_islam
+		}
+		is_in_war = 
+		{
+    		attacker_leader = $attacker$
+    		casus_belli = cb_force_migration
+		}
+		is_in_war = 
+		{
+    		attacker_leader = $attacker$
+    		casus_belli = cb_native_american_tribal_feud
+		}
+		is_in_war = 
+		{
+    		attacker_leader = $attacker$
+    		casus_belli = cb_push_back_colonizers
+		}
+
+
+		is_in_war = 
+		{
+    		attacker_leader = $attacker$
+    		casus_belli = cb_claim_norwegian_throne
+		}
+		is_in_war = 
+		{
+    		attacker_leader = $attacker$
+    		casus_belli = cb_enforce_electorate_right
+		}
+		is_in_war = 
+		{
+    		attacker_leader = $attacker$
+    		casus_belli = cb_unite_balkans
+		}
+		is_in_war = 
+		{
+    		attacker_leader = $attacker$
+    		casus_belli = cb_ottoman_subjugation_war
+		}
+		is_in_war = 
+		{
+    		attacker_leader = $attacker$
+    		casus_belli = cb_disloyal_eyalet
+		}
+		is_in_war = 
+		{
+    		attacker_leader = $attacker$
+    		casus_belli = cb_ottoman_invasion
+		}
+		is_in_war = 
+		{
+    		attacker_leader = $attacker$
+    		casus_belli = conquer_china_cb
+		}
+	}
+}
+
+attacker_offensive_no_cb_war_with_defender_trigger =
+{
+	is_in_war = 
+	{
+    	attacker_leader = $attacker$
+    	defender_leader = $defender$
+	}
+
+	#not every other known cbs, since there isn't a no_cb cb
+	NOT = 
+	{
+		is_in_war = 
+		{
+    		attacker_leader = $attacker$
+    		defender_leader = $defender$
+    		casus_belli = cb_war_on_empire
+		}
+		is_in_war = 
+		{
+    		attacker_leader = $attacker$
+    		defender_leader = $defender$
+    		casus_belli = cb_restore_personal_union
+		}
+		is_in_war = 
+		{
+    		attacker_leader = $attacker$
+    		defender_leader = $defender$
+    		casus_belli = cb_hundred_years_war
+		}
+		is_in_war = 
+		{
+    		attacker_leader = $attacker$
+    		defender_leader = $defender$
+    		casus_belli = cb_defection
+		}
+		is_in_war = 
+		{
+    		attacker_leader = $attacker$
+    		defender_leader = $defender$
+    		casus_belli = cb_loan_cancelled
+		}
+		is_in_war = 
+		{
+    		attacker_leader = $attacker$
+    		defender_leader = $defender$
+    		casus_belli = cb_spy_discovered
+		}
+		is_in_war = 
+		{
+    		attacker_leader = $attacker$
+    		defender_leader = $defender$
+    		casus_belli = cb_disloyal_vassal
+		}
+		is_in_war = 
+		{
+    		attacker_leader = $attacker$
+    		defender_leader = $defender$
+    		casus_belli = cb_hre_attacked
+		}
+		is_in_war = 
+		{
+    		attacker_leader = $attacker$
+    		defender_leader = $defender$
+    		casus_belli = cb_insult
+		}
+		is_in_war = 
+		{
+    		attacker_leader = $attacker$
+    		defender_leader = $defender$
+    		casus_belli = cb_dishonored_call
+		}
+		is_in_war = 
+		{
+    		attacker_leader = $attacker$
+    		defender_leader = $defender$
+    		casus_belli = cb_vassalize_mission
+		}
+		is_in_war = 
+		{
+    		attacker_leader = $attacker$
+    		defender_leader = $defender$
+    		casus_belli = cb_fabricated_claims
+		}
+		is_in_war = 
+		{
+    		attacker_leader = $attacker$
+    		defender_leader = $defender$
+    		casus_belli = cb_religious_conformance
+		}
+		is_in_war = 
+		{
+    		attacker_leader = $attacker$
+    		defender_leader = $defender$
+    		casus_belli = cb_border_war
+		}
+		is_in_war = 
+		{
+    		attacker_leader = $attacker$
+    		defender_leader = $defender$
+    		casus_belli = cb_trade_war_triggered
+		}
+		is_in_war = 
+		{
+    		attacker_leader = $attacker$
+    		defender_leader = $defender$
+    		casus_belli = cb_trade_conflict
+		}
+		is_in_war = 
+		{
+    		attacker_leader = $attacker$
+    		defender_leader = $defender$
+    		casus_belli = cb_trade_league_conflict
+		}
+		is_in_war = 
+		{
+    		attacker_leader = $attacker$
+    		defender_leader = $defender$
+    		casus_belli = cb_trade_conflict_triggered
+		}
+		is_in_war = 
+		{
+    		attacker_leader = $attacker$
+    		defender_leader = $defender$
+    		casus_belli = cb_annex
+		}
+		is_in_war = 
+		{
+    		attacker_leader = $attacker$
+    		defender_leader = $defender$
+    		casus_belli = cb_change_government
+		}
+		is_in_war = 
+		{
+    		attacker_leader = $attacker$
+    		defender_leader = $defender$
+    		casus_belli = cb_change_government_great_peasants_war
+		}
+		is_in_war = 
+		{
+    		attacker_leader = $attacker$
+    		defender_leader = $defender$
+    		casus_belli = cb_peasants_war_for_peasants
+		}
+		is_in_war = 
+		{
+    		attacker_leader = $attacker$
+    		defender_leader = $defender$
+    		casus_belli = cb_humiliate
+		}
+		is_in_war = 
+		{
+    		attacker_leader = $attacker$
+    		defender_leader = $defender$
+    		casus_belli = cb_conquest
+		}
+		is_in_war = 
+		{
+    		attacker_leader = $attacker$
+    		defender_leader = $defender$
+    		casus_belli = cb_core
+		}
+		is_in_war = 
+		{
+    		attacker_leader = $attacker$
+    		defender_leader = $defender$
+    		casus_belli = cb_independence_war
+		}
+		is_in_war = 
+		{
+    		attacker_leader = $attacker$
+    		defender_leader = $defender$
+    		casus_belli = cb_triggered_independence_war
+		}
+		is_in_war = 
+		{
+    		attacker_leader = $attacker$
+    		defender_leader = $defender$
+    		casus_belli = cb_nationalist
+		}
+		is_in_war = 
+		{
+    		attacker_leader = $attacker$
+    		defender_leader = $defender$
+    		casus_belli = cb_imperial
+		}
+		is_in_war = 
+		{
+    		attacker_leader = $attacker$
+    		defender_leader = $defender$
+    		casus_belli = cb_hegemon
+		}
+		is_in_war = 
+		{
+    		attacker_leader = $attacker$
+    		defender_leader = $defender$
+    		casus_belli = cb_war_against_the_world
+		}
+		is_in_war = 
+		{
+    		attacker_leader = $attacker$
+    		defender_leader = $defender$
+    		casus_belli = cb_daimyo_annex
+		}
+		is_in_war = 
+		{
+    		attacker_leader = $attacker$
+    		defender_leader = $defender$
+    		casus_belli = cb_independent_daimyo_annex
+		}
+		is_in_war = 
+		{
+    		attacker_leader = $attacker$
+    		defender_leader = $defender$
+    		casus_belli = cb_shogun_annex
+		}
+		is_in_war = 
+		{
+    		attacker_leader = $attacker$
+    		defender_leader = $defender$
+    		casus_belli = cb_sengoku
+		}
+		is_in_war = 
+		{
+    		attacker_leader = $attacker$
+    		defender_leader = $defender$
+    		casus_belli = cb_revolutionary
+		}
+		is_in_war = 
+		{
+    		attacker_leader = $attacker$
+    		defender_leader = $defender$
+    		casus_belli = cb_colonial
+		}
+		is_in_war = 
+		{
+    		attacker_leader = $attacker$
+    		defender_leader = $defender$
+    		casus_belli = cb_liberation
+		}
+		is_in_war = 
+		{
+    		attacker_leader = $attacker$
+    		defender_leader = $defender$
+    		casus_belli = cb_crusade
+		}
+		is_in_war = 
+		{
+    		attacker_leader = $attacker$
+    		defender_leader = $defender$
+    		casus_belli = cb_crusade_pheasants
+		}
+		is_in_war = 
+		{
+    		attacker_leader = $attacker$
+    		defender_leader = $defender$
+    		casus_belli = cb_defender_of_the_faith
+		}
+		is_in_war = 
+		{
+    		attacker_leader = $attacker$
+    		defender_leader = $defender$
+    		casus_belli = cb_heretic
+		}
+		is_in_war = 
+		{
+    		attacker_leader = $attacker$
+    		defender_leader = $defender$
+    		casus_belli = cb_external_perfectionism
+		}
+		is_in_war = 
+		{
+    		attacker_leader = $attacker$
+    		defender_leader = $defender$
+    		casus_belli = cb_excommunication
+		}
+		is_in_war = 
+		{
+    		attacker_leader = $attacker$
+    		defender_leader = $defender$
+    		casus_belli = cb_trade_war
+		}
+		is_in_war = 
+		{
+    		attacker_leader = $attacker$
+    		defender_leader = $defender$
+    		casus_belli = cb_trade_league_dispute
+		}
+		is_in_war = 
+		{
+    		attacker_leader = $attacker$
+    		defender_leader = $defender$
+    		casus_belli = cb_imperial_ban
+		}
+		is_in_war = 
+		{
+    		attacker_leader = $attacker$
+    		defender_leader = $defender$
+    		casus_belli = cb_imperial_ban_incident
+		}
+		is_in_war = 
+		{
+    		attacker_leader = $attacker$
+    		defender_leader = $defender$
+    		casus_belli = cb_liberate_elector
+		}
+		is_in_war = 
+		{
+    		attacker_leader = $attacker$
+    		defender_leader = $defender$
+    		casus_belli = cb_super_badboy
+		}
+		is_in_war = 
+		{
+    		attacker_leader = $attacker$
+    		defender_leader = $defender$
+    		casus_belli = cb_claim_throne
+		}
+		is_in_war = 
+		{
+    		attacker_leader = $attacker$
+    		defender_leader = $defender$
+    		casus_belli = cb_horde_vs_civ
+		}
+		is_in_war = 
+		{
+    		attacker_leader = $attacker$
+    		defender_leader = $defender$
+    		casus_belli = cb_tribal_feud
+		}
+		is_in_war = 
+		{
+    		attacker_leader = $attacker$
+    		defender_leader = $defender$
+    		casus_belli = cb_revoke_electorate
+		}
+		is_in_war = 
+		{
+    		attacker_leader = $attacker$
+    		defender_leader = $defender$
+    		casus_belli = cb_privateers
+		}
+		is_in_war = 
+		{
+    		attacker_leader = $attacker$
+    		defender_leader = $defender$
+    		casus_belli = cb_support_rebels
+		}
+		is_in_war = 
+		{
+    		attacker_leader = $attacker$
+    		defender_leader = $defender$
+    		casus_belli = cb_crush_the_revolution
+		}
+		is_in_war = 
+		{
+    		attacker_leader = $attacker$
+    		defender_leader = $defender$
+    		casus_belli = cb_spread_the_revolution
+		}
+		is_in_war = 
+		{
+    		attacker_leader = $attacker$
+    		defender_leader = $defender$
+    		casus_belli = cb_annex_the_revolution
+		}
+		is_in_war = 
+		{
+    		attacker_leader = $attacker$
+    		defender_leader = $defender$
+    		casus_belli = cb_religious_league
+		}
+		is_in_war = 
+		{
+    		attacker_leader = $attacker$
+    		defender_leader = $defender$
+    		casus_belli = cb_flower_wars
+		}
+		is_in_war = 
+		{
+    		attacker_leader = $attacker$
+    		defender_leader = $defender$
+    		casus_belli = cb_maya_expansion
+		}
+		is_in_war = 
+		{
+    		attacker_leader = $attacker$
+    		defender_leader = $defender$
+    		casus_belli = cb_humiliate_rotw
+		}
+		is_in_war = 
+		{
+    		attacker_leader = $attacker$
+    		defender_leader = $defender$
+    		casus_belli = cb_chinese_unification
+		}
+		is_in_war = 
+		{
+    		attacker_leader = $attacker$
+    		defender_leader = $defender$
+    		casus_belli = cb_take_mandate
+		}
+		is_in_war = 
+		{
+    		attacker_leader = $attacker$
+    		defender_leader = $defender$
+    		casus_belli = cb_forced_break_alliance
+		}
+		is_in_war = 
+		{
+    		attacker_leader = $attacker$
+    		defender_leader = $defender$
+    		casus_belli = cb_force_tributary
+		}
+		is_in_war = 
+		{
+    		attacker_leader = $attacker$
+    		defender_leader = $defender$
+    		casus_belli = cb_force_tributary_mission
+		}
+		is_in_war = 
+		{
+    		attacker_leader = $attacker$
+    		defender_leader = $defender$
+    		casus_belli = cb_hundred_years_union
+		}
+		is_in_war = 
+		{
+    		attacker_leader = $attacker$
+    		defender_leader = $defender$
+    		casus_belli = cb_force_join_hre
+		}
+
+
+
+		is_in_war = 
+		{
+    		attacker_leader = $attacker$
+    		defender_leader = $defender$
+    		casus_belli = cb_reintegrate_into_hre
+		}
+		is_in_war = 
+		{
+    		attacker_leader = $attacker$
+    		defender_leader = $defender$
+    		casus_belli = cb_imperial_realm_war
+		}
+		is_in_war = 
+		{
+    		attacker_leader = $attacker$
+    		defender_leader = $defender$
+    		casus_belli = cb_world_crusade
+		}
+		is_in_war = 
+		{
+    		attacker_leader = $attacker$
+    		defender_leader = $defender$
+    		casus_belli = cb_war_against_heresy
+		}
+		is_in_war = 
+		{
+    		attacker_leader = $attacker$
+    		defender_leader = $defender$
+    		casus_belli = cb_vassalize_majapahit
+		}
+
+
+
+		is_in_war = 
+		{
+    		attacker_leader = $attacker$
+    		defender_leader = $defender$
+    		casus_belli = cb_vassalize_malacca
+		}
+		is_in_war = 
+		{
+    		attacker_leader = $attacker$
+    		defender_leader = $defender$
+    		casus_belli = cb_sword_of_islam
+		}
+		is_in_war = 
+		{
+    		attacker_leader = $attacker$
+    		defender_leader = $defender$
+    		casus_belli = cb_force_migration
+		}
+		is_in_war = 
+		{
+    		attacker_leader = $attacker$
+    		defender_leader = $defender$
+    		casus_belli = cb_native_american_tribal_feud
+		}
+		is_in_war = 
+		{
+    		attacker_leader = $attacker$
+    		defender_leader = $defender$
+    		casus_belli = cb_push_back_colonizers
+		}
+
+
+		is_in_war = 
+		{
+    		attacker_leader = $attacker$
+    		defender_leader = $defender$
+    		casus_belli = cb_claim_norwegian_throne
+		}
+		is_in_war = 
+		{
+    		attacker_leader = $attacker$
+    		defender_leader = $defender$
+    		casus_belli = cb_enforce_electorate_right
+		}
+		is_in_war = 
+		{
+    		attacker_leader = $attacker$
+    		defender_leader = $defender$
+    		casus_belli = cb_unite_balkans
+		}
+		is_in_war = 
+		{
+    		attacker_leader = $attacker$
+    		defender_leader = $defender$
+    		casus_belli = cb_ottoman_subjugation_war
+		}
+		is_in_war = 
+		{
+    		attacker_leader = $attacker$
+    		defender_leader = $defender$
+    		casus_belli = cb_disloyal_eyalet
+		}
+		is_in_war = 
+		{
+    		attacker_leader = $attacker$
+    		defender_leader = $defender$
+    		casus_belli = cb_ottoman_invasion
+		}
+		is_in_war = 
+		{
+    		attacker_leader = $attacker$
+    		defender_leader = $defender$
+    		casus_belli = conquer_china_cb
+		}
+	}
+}

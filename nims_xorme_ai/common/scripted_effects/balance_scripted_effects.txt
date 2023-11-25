@@ -1,0 +1,200 @@
+xorme_ai_alliance_initialization_effect = {
+	#HISTORICAL FRIEND = ALLIANCE
+	if = {
+		limit = {
+			num_of_free_diplomatic_relations = 1
+			any_known_country = {
+				historical_friend_with = ROOT
+				num_of_free_diplomatic_relations = 1
+				ai = yes
+				xorme_ai_is_valid_for_alliance_trigger = yes
+			}
+		}
+		every_known_country = {
+			limit = {
+				historical_friend_with = ROOT
+				num_of_free_diplomatic_relations = 1
+				ai = yes
+				xorme_ai_is_valid_for_alliance_trigger = yes
+			}
+			create_alliance = ROOT
+		}
+	}
+	#SPECIAL
+	if = {
+		limit = {
+			exists = MAM
+			exists = MDA
+			MDA = {
+				ai = yes
+				guaranteed_by = MAM
+			}
+			MAM = {
+				ai = yes
+				is_great_power = yes
+			}
+		}
+		MAM = {
+			set_ai_attitude = {
+				attitude = attitude_friendly
+				who = MDA
+			}
+			vassalize = MDA
+			create_marriage	= MDA
+		}
+	}
+	if = {
+		limit = {
+			exists = TUR
+			exists = CRI
+			TUR = {
+				ai = yes
+				NOT = { is_enemy = CRI }
+			}
+			CRI = {
+				ai = yes
+			}
+		}
+		CRI = {
+			set_ai_attitude = {
+				attitude = attitude_friendly
+				who = TUR
+			}
+		}
+		TUR = {
+			set_ai_attitude = {
+				attitude = attitude_friendly
+				who = CRI
+			}
+			create_alliance = CRI
+			create_marriage	= CRI
+		}
+	}
+	if = {
+		limit = {
+			exists = TUR
+			exists = RAM
+			TUR = {
+				ai = yes
+				NOT = { is_enemy = RAM }
+			}
+			RAM = {
+				ai = yes
+			}
+		}
+		RAM = {
+			set_ai_attitude = {
+				attitude = attitude_friendly
+				who = TUR
+			}
+		}
+		TUR = {
+			set_ai_attitude = {
+				attitude = attitude_friendly
+				who = RAM
+			}
+			create_alliance = RAM
+			create_marriage	= RAM
+		}
+	}
+
+	#EMPEROR - ELECTOR = ALLIANCE
+	if = {
+		limit = {
+			is_emperor = yes
+			num_of_free_diplomatic_relations = 2
+			any_elector = {
+				num_of_free_diplomatic_relations = 1
+				ai = yes
+				xorme_ai_is_valid_for_alliance_trigger = yes
+			}
+		}
+		every_elector = {
+			limit = {
+				total_development = 35
+				num_of_free_diplomatic_relations = 1
+				ai = yes
+				xorme_ai_is_valid_for_alliance_trigger = yes
+			}
+			create_alliance = ROOT
+		}
+	}
+	#GREAT POWER - NOT WEAK NATION = ALLIANCE
+	if = {
+		limit = {
+			is_great_power = yes
+			num_of_free_diplomatic_relations = 1
+			any_known_country = {
+				army_strength = {
+					who = ROOT
+					value = 0.45
+				}
+				NOT = {
+					border_distance = {
+						who = ROOT
+						distance = 175
+					}
+				}
+				border_distance = {
+					who = ROOT
+					distance = 50
+				}
+				religion_group = ROOT
+				num_of_free_diplomatic_relations = 1
+				ai = yes
+				xorme_ai_is_valid_for_alliance_trigger = yes
+			}
+		}
+		random_known_country = {
+			limit = {
+				army_strength = {
+					who = ROOT
+					value = 0.45
+				}
+				NOT = {
+					border_distance = {
+						who = ROOT
+						distance = 175
+					}
+				}
+				border_distance = {
+					who = ROOT
+					distance = 55
+				}
+				NOT = { is_emperor = yes }
+				NOT = { is_elector = yes }
+				religion_group = ROOT
+				num_of_free_diplomatic_relations = 1
+				ai = yes
+				xorme_ai_is_valid_for_alliance_trigger = yes
+			}
+			create_alliance = ROOT
+		}
+	}
+	if = {
+		limit = {
+			OR = {
+				is_great_power = yes
+				total_development = 165
+			}
+		}
+		every_neighbor_country = {
+			limit = {
+				ai = yes
+				NOT = { total_development = 105 }
+				NOT = { is_subject_of = ROOT }
+				NOT = { alliance_with = ROOT }
+				NOT = { historical_friend_with = ROOT }
+				NOT = { tag = PAP }
+			}
+			add_opinion = {
+				who = ROOT
+				modifier = xorme_ai_conq_box
+			}
+			reverse_add_opinion = {
+				who = ROOT
+				modifier = xorme_ai_conq_box
+			}
+		}
+	}
+}

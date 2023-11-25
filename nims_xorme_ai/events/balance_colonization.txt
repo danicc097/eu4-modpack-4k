@@ -1,0 +1,61 @@
+namespace = balance_colonization
+
+country_event = {
+	id = balance_colonization.1
+	title = "NONE"
+	desc = "NONE"
+
+	hidden = yes
+
+	trigger = {
+		NOT = { has_global_flag = balance_colonization_initialised }
+	}
+
+	mean_time_to_happen = { days = 1 }
+
+	immediate = 
+	{
+		set_global_flag = balance_colonization_initialised
+		every_province = {
+			limit = {
+				OR = {
+					region = central_africa_region
+					region = kongo_region
+					region = east_africa_region
+					region = guinea_region
+					region = niger_region
+					region = sahel_region
+					region = south_africa_region
+				}
+				NOT = {
+					trade_company_region = trade_company_west_africa
+					trade_company_region = trade_company_south_africa
+					trade_company_region = trade_company_east_africa
+				}
+				has_port = no
+			}
+			add_permanent_province_modifier = {
+				name = african_disease_modifier
+				duration = -1
+			}
+		}
+
+		every_province = 
+		{
+			limit = 
+			{
+				colonial_region = colonial_australia
+			}
+			add_permanent_province_modifier = 
+			{
+				name = neglected_area
+				duration = -1
+			}
+		}
+	}
+
+	option = {
+		name = "NONE"
+		ai_chance = { factor = 100 }
+	}
+}

@@ -1,0 +1,54 @@
+milaccess = 
+{
+    condition = 
+    {
+		potential = 
+        {
+            always = yes
+		}
+		allow = 
+        {
+            is_free_or_tributary_trigger = yes
+
+            FROM = 
+            {   
+                OR = 
+                {
+                    alliance_with = ROOT
+                    has_opinion = 
+                    {
+                        who = ROOT
+                        value = 75
+                    }
+                }
+            }   
+		}
+	}
+}
+
+offermilaccess = 
+{
+    condition = 
+    {
+		potential = 
+        {
+            always = yes
+		}
+		allow = 
+        {
+            is_free_or_tributary_trigger = yes
+            FROM = 
+            {
+                OR = 
+                {
+                    alliance_with = ROOT
+                    has_opinion = 
+                    {
+                        who = ROOT
+                        value = 50
+                    }
+                }
+            }
+		}
+	}
+}

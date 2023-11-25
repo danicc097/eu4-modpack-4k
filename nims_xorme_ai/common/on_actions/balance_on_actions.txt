@@ -1,0 +1,56 @@
+# ROOT = Overlord, FROM = Minor
+on_dependency_gained = {
+	if = {
+		limit = {
+			FROM = {
+				has_government_attribute = has_dutch_election
+			}
+		}
+		ROOT = {
+			country_event = {
+				id = dutch_republic.31
+			}# States General falls under a PU
+		}
+	}
+	if = {
+		limit = {
+			FROM = {
+				tag = AVE
+				government_rank = 1
+			}
+		}
+		FROM = {
+			country_event = {
+				id = flavor_gbr.20
+			}
+		}
+	}
+	if = {
+		limit = {
+			FROM = {
+				is_in_war = { defender_leader = FROM }
+			}
+		}
+		every_known_country =
+		{
+			limit = 
+			{
+				is_in_war = 
+				{
+					attacker_leader = THIS
+					defender_leader = FROM
+				}
+			}
+			set_country_flag = target_changed_suicide_war_checking_flag
+			if =
+			{
+				limit = 
+				{
+					alliance_with = ROOT
+				}
+				white_peace = FROM
+				clr_country_flag = target_changed_suicide_war_checking_flag
+			}
+		}
+	}
+}

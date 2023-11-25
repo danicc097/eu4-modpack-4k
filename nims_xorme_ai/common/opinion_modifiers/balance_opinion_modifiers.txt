@@ -1,0 +1,11 @@
+untrustworthy_human_player = 
+{
+	opinion = -25
+	yearly_decay = 1
+}
+
+trustworthy_ai_ally = 
+{
+	opinion = 200
+	yearly_decay = 20
+}

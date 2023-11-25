@@ -1,0 +1,163 @@
+tbop_evaluate_threat = {
+	# -variables
+	# tbop_threat: base threat
+	# tbop_fl: our fl
+	# tbop_rival_fl: rival fl
+	# tbop_fdev_ratio_percent: base threat modifier
+	
+	# tbop_ev_threat: actual threat
+	# tbop_ev_modifier: modifier
+	# tbop_ev_opinion: opinion
+	# tbop_ev_distance: distance
+	
+	# -flags
+	# tbop_muslim_mod
+	# tbop_indian_mod
+	# tbop_mandate_mod
+	# tbop_small_mod
+
+	category = relation
+
+	alert_index = 40
+	alert_tooltip = add_to_sphere_of_influence
+
+	require_acceptance = no # Whether the recipient gets an option to decline
+
+	is_visible = {
+		always = yes
+	}
+	is_allowed = {
+		custom_trigger_tooltip = {
+			tooltip = tbop_outside_threat_range
+			
+			OR = {
+				AND = {
+					check_variable = { which = tbop_development value = 450 }
+					NOT = { border_distance = { who = FROM distance = 400 } }
+				}
+				AND = {
+					check_variable = { which = tbop_development value = 150 }
+					NOT = { border_distance = { who = FROM distance = 100 } }
+				}
+				AND = {
+					check_variable = { which = tbop_development value = 50 }
+					NOT = { border_distance = { who = FROM distance = 25 } }
+				}
+			}
+		}
+	}
+	on_accept = {
+		#get threat value
+		set_variable = { which = tbop_ev_threat value = 0 }
+		change_variable = { which = tbop_ev_threat which = tbop_threat }
+
+		#get ae
+		set_variable = { which = tbop_current_AE value = 0 }
+		get_AE = yes
+
+		
+		if = {
+			limit = { FROM = { NOT = { is_rival = ROOT } } }
+			
+			set_country_flag = tbop_not_rival
+			
+			#divide_variable = { which = tbop_ev_threat value = 2 }
+			multiply_variable = { which = tbop_ev_threat value = 0.75 }
+			
+			set_variable = { which = tbop_no_rival_threat value = 0 }
+			change_variable = { which = tbop_no_rival_threat which = tbop_ev_threat }
+			
+			set_variable = { which = tbop_ev_modifier value = 1 } #total modifier
+			
+			export_to_variable = { #opinion is from +25% at -200 to -25% at +200
+				which = tbop_ev_opinion
+				value = opinion
+				who = FROM
+			}
+			# set_variable = { which = temp value = 0 }
+			# change_variable = { which = temp which = FROM }
+			# set_variable = { which = tbop_ev_opinion value = 0 }
+			# change_variable = { which = tbop_ev_opinion which = temp }
+			divide_variable = { which = tbop_ev_opinion value = 800 }
+			
+			export_to_variable = { #distance is up to -50% at 400
+				which = tbop_ev_distance
+				value = border_distance
+				who = FROM
+			}
+			divide_variable = { which = tbop_ev_distance value = 800 }
+			subtract_variable = { which = tbop_ev_modifier which = tbop_ev_opinion } # 1 - opinion
+			subtract_variable = { which = tbop_ev_modifier which = tbop_ev_distance } # - distance
+			
+			
+			#conditions for christian, hindu, muslim and chinaware
+			# if = {
+				# limit = {
+					# religion_group = christian
+					# ROOT = { NOT = { religion_group = christian } }
+				# }
+				# change_variable = { which = tbop_dist_op_modifier value = 0.25 }
+			# }
+			if = {
+				limit = {
+					religion = FROM
+					religion_group = muslim 
+					government_rank = 3 
+				}
+				change_variable = { which = tbop_ev_modifier value = -0.5 }
+				set_country_flag = tbop_muslim_mod
+			}
+			if = {
+				limit = { FROM = { religion_group = dharmic } }
+				change_variable = { which = tbop_ev_modifier value = -0.5 }
+				set_country_flag = tbop_indian_mod
+			}
+			if = {
+				limit = {
+					FROM = { religion_group = eastern }
+					is_emperor_of_china = yes
+				}
+				change_variable = { which = tbop_ev_modifier value = -0.5 }
+				set_country_flag = tbop_mandate_mod
+			}
+			
+			#if >2x FROM's FLs, -100%
+			FROM = {
+				set_variable = { which = temp value = 0 }
+				change_variable = { which = temp which = tbop_fl }
+			}
+			set_variable = { which = temp value = 0 }
+			change_variable = { which = temp which = FROM }			
+			divide_variable = { which = temp value = 2 }
+			if = {
+				limit = { NOT = { check_variable = { which = tbop_fl which = temp } } }
+				change_variable = { which = tbop_ev_modifier which = -1 }
+				#set_variable = { which = tbop_dist_op_modifier value = 0 }
+				set_country_flag = tbop_small_mod
+			}
+			
+			
+			multiply_variable = { which = tbop_ev_threat which = tbop_ev_modifier }
+			
+			change_variable = { which = tbop_ev_modifier value = -1 }	
+			multiply_variable = { which = tbop_ev_modifier value = 100 }
+			multiply_variable = { which = tbop_ev_opinion value = -100 }
+			multiply_variable = { which = tbop_ev_distance value = -100 }
+		}
+		else = {
+			multiply_variable = { which = tbop_ev_threat value = 1.25 }
+		}
+	
+		country_event = {
+			id = tbop.03
+		}
+	}
+	on_decline =
+	{
+		
+	}
+
+	ai_will_do = { # this is a trigger
+		always = no
+	}
+}

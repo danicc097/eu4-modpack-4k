@@ -1,0 +1,40 @@
+namespace = balance_initialize
+
+country_event = 
+{
+	id = balance_initialize.1
+	title = "NONE"
+	picture = "NONE"
+	desc = "NONE"
+
+	hidden = yes
+	fire_only_once = yes
+
+	trigger = 
+	{
+		has_game_started = yes
+	}
+
+	immediate = 
+	{
+		every_country = 
+		{
+			add_country_modifier = 
+			{ 
+			    name = balance_initialize_war_cooldown
+			    duration = 730
+			}
+		}
+		every_country = 
+		{
+			limit =
+			{
+				ai = yes
+			}
+			add_years_of_income = 0.5  #fix the ai delete army bug 
+		}
+	}
+
+	option = {}
+}
+

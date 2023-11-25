@@ -1,0 +1,45 @@
+namespace = tbop_test
+
+country_event = { 
+	
+	id = tbop_test.01
+	
+	hidden = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		export_to_variable = {
+			which = tbop_test
+			value = trigger_value:absolutism
+			who = ROOT	
+		}
+		
+	}
+	
+	option = {	
+		custom_tooltip = tbop_test99
+		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = { 
+	
+	id = tbop_test.02
+	
+	hidden = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		FROM = {
+			add_treasury = 10000
+		}
+		
+	}
+	
+	option = {	
+		custom_tooltip = tbop_test99
+		ai_chance = { factor = 100 }
+	}
+}

@@ -1,0 +1,559 @@
+namespace = tbop
+
+country_event = { 
+	#tbop_threat: base threat from this country to others ((tbop_fl / sum(tbop_rival_fl) * 25 * tbop_threat_modifier)
+	#tbop_threat_modifier: modifiers to the base value (1 + tbop_fdev_ratio)
+
+	#tbop_fl: FL of the country and its non colonial subjects
+	#tbop_rival_fl: FL of all rivals and its non colonial subjects
+	#tbop_twice_fl: 2x tbop_fl, determining the maximum size for someone to feel threatened
+	
+	#tbop_development: development, discounted heathen TC of the country and its non colonial subjects
+	#tbop_foreign_dev: foreign development, discounted heathen TC of the country and its non colonial subjects
+	#tbop_fdev_ratio: foreign dev ratio (tbop_foreign_dev / tbop_development)
+	#tbop_fdev_ratio_percent: foreign dev in % (tbop_fdev_ratio * 100)
+	
+	#tbop_threat_limit: value used for AI to not be expansionist anymore (unused)
+	
+	id = tbop.01
+	
+	hidden = yes
+	
+	trigger = {
+		OR = {
+			AND = {	
+				is_month = 1 
+				NOT = { is_month = 2 } 
+				NOT = { has_country_flag = tbop_tick }
+			}
+			NOT = { has_country_flag = tbop_set }
+		}
+	}
+	
+	mean_time_to_happen = { 
+		days = 0		
+	}
+	
+	immediate = {
+		set_country_flag = tbop_tick
+		
+		#country development and FL
+		set_variable = {
+			which = tbop_development 
+			value = 0
+		}
+		set_variable = {
+			which = tbop_foreign_dev 
+			value = 0
+		}
+		export_to_variable = {
+			which = tbop_fl
+			value = land_forcelimit
+			who = ROOT	
+		}
+		
+		#add development and foreing dev
+		every_owned_province = {
+			limit = {
+				OR = {
+					NOT = { is_owned_by_trade_company = yes }
+					religion_group = ROOT
+				}
+			}
+			
+			export_to_variable = {
+				which = tbop_development
+				value = development
+			}
+			
+			if = {
+				limit = { culture_group = owner }
+				
+				set_variable = {
+					which = tbop_foreign_dev 
+					value = 0
+				}
+			}
+			else = {
+				export_to_variable = {
+					which = tbop_foreign_dev
+					value = development
+				}
+			}
+			
+			ROOT = {
+				change_variable = {
+					which = tbop_development 
+					which = PREV
+				}
+				
+				change_variable = {
+					which = tbop_foreign_dev 
+					which = PREV
+				}
+			}
+		}
+		
+		#add non colonial or tributary subject dev
+		every_country = {
+			limit = {
+				is_subject_of = ROOT
+				NOT = { is_subject_of_type = colony }
+				NOT = { is_subject_of_type = tributary_state }
+				has_country_flag = tbop_set
+			}
+			
+			ROOT = {
+				change_variable = {
+					which = tbop_development 
+					which = PREV
+				}
+				
+				change_variable = {
+					which = tbop_foreign_dev 
+					which = PREV
+				}
+				
+				change_variable = {
+					which = tbop_fl
+					which = PREV
+				}
+			}
+		}
+		
+		set_country_flag = tbop_set
+		
+		#rivals development
+		set_variable = {
+			which = tbop_rival_fl
+			value = 0
+		}
+
+		tbop_rival_calculation = yes
+
+		if = 
+		{
+			#enemy conbined is too weak (less than ours)
+			limit = 
+			{
+				check_variable = 
+				{
+					which = tbop_fl
+					which = tbop_rival_fl
+				}
+			}
+			#set its enemy's fl to ours
+			change_variable = 
+			{
+				which = tbop_rival_fl
+				which = tbop_fl
+			}
+		}
+		
+		#calculate foreign development ratio
+		set_variable = { which = tbop_fdev_ratio value = 0 }
+		change_variable = { which = tbop_fdev_ratio which = tbop_foreign_dev }
+		divide_variable = { which = tbop_fdev_ratio which = tbop_development }
+		
+		#calculate foreign development %
+		set_variable = { which = tbop_fdev_ratio_percent value = 0 }
+		change_variable = { which = tbop_fdev_ratio_percent which = tbop_fdev_ratio }
+		multiply_variable = { which = tbop_fdev_ratio_percent value = 100 }
+		
+		#calculate threat modifier from foreign development
+		set_variable = { which = tbop_threat_modifier value = 1 }
+		change_variable = { which = tbop_threat_modifier which = tbop_fdev_ratio }
+		
+		#calculate threat
+		set_variable = { which = tbop_threat value = 0 }
+		if = {
+			limit = {
+				check_variable = { which = tbop_rival_fl value = 1 }
+			}
+			
+			change_variable = { which = tbop_threat which = tbop_fl }
+			divide_variable = { which = tbop_threat which = tbop_rival_fl }
+			multiply_variable = { which = tbop_threat value = 25 }
+			multiply_variable = { which = tbop_threat which = tbop_threat_modifier }
+		}
+		
+		#set 2x FL for AE calculation
+		set_variable = { which = tbop_twice_fl value = 0 }
+		change_variable = { which = tbop_twice_fl which = tbop_fl }
+		
+		if = {
+			limit = {
+				check_variable = { which = tbop_threat value = 1 }
+			}
+			
+			tbop_AE_from_threat = yes
+			
+		}
+	}
+	
+	option = {	
+		custom_tooltip = tbop_test2
+		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = { 
+	
+	id = tbop.02
+	
+	hidden = yes
+	
+	is_triggered_only = yes
+	
+	mean_time_to_happen = { 
+		days = 0		
+	}
+	
+	immediate = {
+		#get a value for AE
+		set_variable = { which = tbop_current_AE value = 0 }
+		get_AE = yes
+		# multiply_variable = { which = tbop_current_AE value = -1 }
+		
+		#get threat value
+		set_variable = { which = tbop_actual_threat value = 0 }
+		change_variable = { which = tbop_actual_threat which = FROM }
+		
+		if = {
+			limit = { NOT = { is_rival = FROM } }
+			
+			#divide_variable = { which = tbop_actual_threat value = 2 }
+			multiply_variable = { which = tbop_actual_threat value = 0.75 }
+			
+			set_variable = { which = tbop_dist_op_modifier value = 1 } #total modifier
+			FROM = {
+				export_to_variable = { #opinion is from +25% at -200 to -25% at +200
+					which = temp
+					value = opinion
+					who = ROOT
+				}
+			}
+			set_variable = { which = tbop_opinion value = 0 }
+			set_variable = { which = temp value = 0 }
+			change_variable = { which = temp which = FROM }
+			change_variable = { which = tbop_opinion which = temp }
+			#change_variable = { which = tbop_opinion which = tbop_current_AE }
+			divide_variable = { which = tbop_opinion value = 800 }
+			export_to_variable = { #distance is up to -50% at 300
+				which = tbop_distance
+				value = border_distance
+				who = FROM
+			}
+			divide_variable = { which = tbop_distance value = 600 }
+			subtract_variable = { which = tbop_dist_op_modifier which = tbop_opinion } # 1 - opinion
+			subtract_variable = { which = tbop_dist_op_modifier which = tbop_distance } # - distance
+			
+			
+			#conditions for christian, hindu, muslim and chinaware
+			# if = {
+				# limit = {
+					# religion_group = christian
+					# ROOT = { NOT = { religion_group = christian } }
+				# }
+				# change_variable = { which = tbop_dist_op_modifier value = 0.25 }
+			# }
+			if = {
+				limit = {
+					religion = FROM
+					FROM = { 
+						religion_group = muslim 
+						government_rank = 3
+					} 
+				}
+				change_variable = { which = tbop_dist_op_modifier value = -0.5 }
+			}
+			if = {
+				limit = { religion_group = dharmic }
+				change_variable = { which = tbop_dist_op_modifier value = -0.5 }
+			}
+			if = {
+				limit = {
+					religion_group = eastern
+					ROOT = { is_emperor_of_china = yes } 
+				}
+				change_variable = { which = tbop_dist_op_modifier value = -0.5 }
+			}
+			
+			#if >2x FROM's FLs, multiply by (this_fl / from_fl)
+			FROM = {
+				set_variable = { which = temp value = 0 }
+				change_variable = { which = temp which = tbop_fl }
+			}
+			set_variable = { which = temp value = 0 }
+			change_variable = { which = temp which = FROM }			
+			multiply_variable = { which = temp value = 2 }
+			if = {
+				limit = { NOT = { check_variable = { which = temp which = tbop_fl } } }
+				change_variable = { which = tbop_dist_op_modifier which = -1 }
+				#set_variable = { which = tbop_dist_op_modifier value = 0 }
+			}
+			
+			if = 
+			{
+				limit = 
+				{
+					NOT = { check_variable = { which = tbop_dist_op_modifier value = 0} }
+				}
+				set_variable = { which = tbop_dist_op_modifier value = 0 }
+			}
+			
+			multiply_variable = { which = tbop_actual_threat which = tbop_dist_op_modifier }
+		}
+		else = {
+			multiply_variable = { which = tbop_actual_threat value = 1.25 }
+		}
+		
+		set_variable = 
+		{
+			which = tbop_ctr
+			which = tbop_actual_threat
+		}
+
+		subtract_variable = 
+		{
+			which = tbop_ctr
+			which = tbop_current_AE
+		}
+
+		if =
+		{
+			limit = 
+			{
+				check_variable = { which = tbop_ctr value = 1 }
+				NOT = {check_variable = { which = tbop_ctr value = 2 }}
+			}
+			add_aggressive_expansion = 
+			{
+				who = FROM
+				value = 1
+				apply_calc = no
+			}
+		}
+		else_if =
+		{
+			limit = 
+			{
+				check_variable = { which = tbop_ctr value = 2 }
+				NOT = {check_variable = { which = tbop_ctr value = 3 }}
+			}
+			add_aggressive_expansion = 
+			{
+				who = FROM
+				value = 2
+				apply_calc = no
+			}
+		}
+		else_if =
+		{
+			limit = 
+			{
+				check_variable = { which = tbop_ctr value = 3 }
+				NOT = {check_variable = { which = tbop_ctr value = 4 }}
+			}
+			add_aggressive_expansion = 
+			{
+				who = FROM
+				value = 3
+				apply_calc = no
+			}
+		}
+		else_if =
+		{
+			limit = 
+			{
+				check_variable = { which = tbop_ctr value = 4 }
+				NOT = {check_variable = { which = tbop_ctr value = 5 }}
+			}
+			add_aggressive_expansion = 
+			{
+				who = FROM
+				value = 4
+				apply_calc = no
+			}
+		}
+		else_if =
+		{
+			limit = 
+			{
+				check_variable = { which = tbop_ctr value = 5 }
+				NOT = {check_variable = { which = tbop_ctr value = 6 }}
+			}
+			add_aggressive_expansion = 
+			{
+				who = FROM
+				value = 5
+				apply_calc = no
+			}
+		}
+		else_if =
+		{
+			limit = 
+			{
+				check_variable = { which = tbop_ctr value = 6 }
+				NOT = {check_variable = { which = tbop_ctr value = 7 }}
+			}
+			add_aggressive_expansion = 
+			{
+				who = FROM
+				value = 6
+				apply_calc = no
+			}
+		}
+		else_if =
+		{
+			limit = 
+			{
+				check_variable = { which = tbop_ctr value = 7 }
+				NOT = {check_variable = { which = tbop_ctr value = 8 }}
+			}
+			add_aggressive_expansion = 
+			{
+				who = FROM
+				value = 7
+				apply_calc = no
+			}
+		}
+		else_if =
+		{
+			limit = 
+			{
+				check_variable = { which = tbop_ctr value = 8 }
+				NOT = {check_variable = { which = tbop_ctr value = 9 }}
+			}
+			add_aggressive_expansion = 
+			{
+				who = FROM
+				value = 8
+				apply_calc = no
+			}
+		}
+		else_if =
+		{
+			limit = 
+			{
+				check_variable = { which = tbop_ctr value = 9 }
+				NOT = {check_variable = { which = tbop_ctr value = 10 }}
+			}
+			add_aggressive_expansion = 
+			{
+				who = FROM
+				value = 9
+				apply_calc = no
+			}
+		}
+		else_if =
+		{
+			limit = 
+			{
+				check_variable = { which = tbop_ctr value = 10 }
+			}
+			add_aggressive_expansion = 
+			{
+				who = FROM
+				value = 10
+				apply_calc = no
+			}
+		}
+
+		FROM = { 
+			divide_variable = { which = tbop_twice_fl value = 2 } 
+		}
+	}		
+	
+	option = {	
+		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = { 
+	
+	id = tbop.03
+	title = tbop.03.t
+	desc = tbop.03.d
+	picture = GOOD_WITH_MONARCH_eventPicture
+	
+	is_triggered_only = yes
+	
+	mean_time_to_happen = { 
+		days = 0		
+	}
+	
+	option = {	
+		name = tbop.03.a
+		
+		#custom_tooltip = tbop_current_AE #"Your current AE towards this country: §g§!\n"
+		custom_tooltip = tbop_ev_threat #"Total Threat: §g§!\n"
+		
+		custom_tooltip = tbop_ev_calc #"§gThreat sets the minimum value for Aggresstive Expansion with this nation.\nIt is calculated from the ratio of our complete Force Limit and our Rival's complete Force Limits combined (being 25 at 1:1).\nThat value is modified by the percentage of foreign development within our nation or our non tributary nor colonial subjects.\nComplete Force Limit is the value form that nation and its non tributary nor colonial subjects combined.§!"
+		custom_tooltip = tbop_threat #"Base Threat: §g§!\nFrom:"
+		custom_tooltip = tbop_fl #"-Our Force Limit: §g§!"
+		custom_tooltip = tbop_rival_fl #"-Our Rival's Force Limit: §g§!"
+		custom_tooltip = tbop_fdev_ratio_percent #"-Modified by §g§! from foreign development\n"
+		
+		if = {
+			limit = { has_country_flag = tbop_not_rival }
+		
+			custom_tooltip = tbop_ev_modifier #"Since this nation is not our rival, the base value is firstly multiplied by 75% to §g§! and further modified by §g§! from:"
+			custom_tooltip = tbop_ev_opinion #"-Opinion: §g§!"
+			custom_tooltip = tbop_ev_distance #"-Border Distance: §g§!"
+			
+			if = {
+				limit = { has_country_flag = tbop_muslim_mod }
+				custom_tooltip = tbop_muslim_mod #"-We are a Muslim Empire of same faith: §G-50%§!"
+			}
+			if = {
+				limit = { has_country_flag = tbop_indian_mod }
+				custom_tooltip = tbop_indian_mod #"-They follow a Dharmic Religion: §G-50%§!"
+			}
+			if = {
+				limit = { has_country_flag = tbop_mandate_mod }
+				custom_tooltip = tbop_mandate_mod #"-We are The Emperor of China and their faith respect it: §G-50%§!"
+			}
+			if = {
+				limit = { has_country_flag = tbop_small_mod }
+				custom_tooltip = tbop_small_mod #"-We are too weak: §G-100%§!"
+			}
+		}
+		else = {
+			custom_tooltip = tbop_ev_rival
+		}
+		
+		clr_country_flag = tbop_not_rival
+		clr_country_flag = tbop_muslim_mod
+		clr_country_flag = tbop_indian_mod
+		clr_country_flag = tbop_mandate_mod
+		clr_country_flag = tbop_small_mod
+		
+		
+		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = { 
+	
+	id = tbop.99
+	
+	hidden = yes
+	
+	trigger = {
+		is_month = 2
+		has_country_flag = tbop_tick
+	}
+	
+	mean_time_to_happen = { 
+		days = 0
+	}
+	
+	immediate = {
+		clr_country_flag = tbop_tick
+	}		
+	
+	option = {	
+		ai_chance = { factor = 100 }
+	}
+}

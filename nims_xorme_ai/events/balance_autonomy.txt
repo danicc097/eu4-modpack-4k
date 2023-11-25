@@ -1,0 +1,224 @@
+namespace = balance_autonomy
+
+country_event = 
+{
+	id = balance_autonomy.0
+	title = "NONE"
+	picture = "NONE"
+	desc = "NONE"
+
+	hidden = yes
+	fire_only_once = yes
+
+	trigger = 
+	{
+		has_game_started = yes
+	}
+
+	immediate = 
+	{
+		every_province = 
+		{
+			if = 
+			{
+				limit = 
+				{
+			        NOT = 
+			        {
+			            any_province_in_state =
+			            {
+			                is_capital_of = owner
+			            }
+			        }
+			        is_state = yes
+				}
+
+				if = 
+				{
+					limit = 
+					{
+						current_age = age_of_feudalism
+						NOT = { local_autonomy = 30 }
+					}
+					set_local_autonomy = 30
+				}
+
+				else_if = 
+				{
+					limit = 
+					{
+						current_age = age_of_discovery
+						NOT = { local_autonomy = 20 }
+					}
+					set_local_autonomy = 20
+				}
+
+				else_if = 
+				{
+					limit = 
+					{
+						current_age = age_of_reformation
+						NOT = { local_autonomy = 10 }
+					}
+					set_local_autonomy = 10
+				}
+			}
+		}
+	}
+	option = {}
+}
+
+country_event = 
+{
+	id = balance_autonomy.1
+	title = "NONE"
+	picture = "NONE"
+	desc = "NONE"
+
+	hidden = yes
+	fire_only_once = yes
+
+	trigger = 
+	{
+		current_age = age_of_feudalism
+	}
+
+	immediate = 
+	{
+		every_province = 
+		{
+			add_province_triggered_modifier = feudalism_autonomy
+		}
+	}
+	option = {}
+}
+
+
+country_event = 
+{
+	id = balance_autonomy.2
+	title = "NONE"
+	picture = "NONE"
+	desc = "NONE"
+
+	hidden = yes
+	fire_only_once = yes
+
+	trigger = 
+	{
+		current_age = age_of_discovery
+	}
+
+	immediate = 
+	{
+		every_province = 
+		{
+			remove_province_triggered_modifier = feudalism_autonomy
+			add_province_triggered_modifier = discovery_autonomy
+		}
+	}
+	option = {}
+}
+
+country_event = 
+{
+	id = balance_autonomy.3
+	title = "NONE"
+	picture = "NONE"
+	desc = "NONE"
+
+	hidden = yes
+	fire_only_once = yes
+
+	trigger = 
+	{
+		current_age = age_of_reformation
+	}
+
+	immediate = 
+	{
+		every_province = 
+		{
+
+			remove_province_triggered_modifier = discovery_autonomy
+			add_province_triggered_modifier = reformation_autonomy
+		}
+	}
+	option = {}
+}
+
+country_event = 
+{
+	id = balance_autonomy.4
+	title = "NONE"
+	picture = "NONE"
+	desc = "NONE"
+
+	hidden = yes
+	fire_only_once = yes
+
+	trigger = 
+	{
+		current_age = age_of_absolutism
+	}
+
+	immediate = 
+	{
+		every_province = 
+		{
+			remove_province_triggered_modifier = reformation_autonomy
+			add_province_triggered_modifier = absolutism_autonomy
+		}
+	}
+	option = {}
+}
+
+country_event = 
+{
+	id = balance_autonomy.5
+	title = "NONE"
+	picture = "NONE"
+	desc = "NONE"
+
+	hidden = yes
+	fire_only_once = yes
+
+	trigger = 
+	{
+		current_age = age_of_revolutions
+	}
+
+	immediate = 
+	{
+		every_province = 
+		{
+			remove_province_triggered_modifier = absolutism_autonomy
+		}
+	}
+	option = {}
+}
+
+country_event = 
+{
+	id = balance_autonomy.6
+	title = "NONE"
+	picture = "NONE"
+	desc = "NONE"
+
+	hidden = yes
+	fire_only_once = yes
+
+	trigger = 
+	{
+		has_game_started = yes
+	}
+
+	immediate = 
+	{
+		every_province = 
+		{
+			add_province_triggered_modifier = exclave_autonomy
+		}
+	}
+	option = {}
+}

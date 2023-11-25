@@ -1,0 +1,56 @@
+﻿l_english: 
+ tbop_test: "[This.tbop_current_AE.GetValue]§!\n[This.tbop_actual_threat.GetValue]§!\n"
+ tbop_test2: "[Root.tbop_threat.GetValue]§!\n"
+ tbop_test99: "[Root.tbop_test.GetValue]§!\n"
+ 
+ evaluate_threat_title:0 "Evaluate Threat"
+ evaluate_threat_desc:0 "§gYour Threat Value sets a minimum Aggressive Expansion you can have with this country.\n That base value is given by the ratio of your force limit over the sum of your enemies' force limits (you get 50 threat at 200% of their firce limit combined). \nThat value is modified by the percentage of non trade company development that isn't from your culture group (foreign), doubling your threat at 100%.\nFurthermore, if the country is not your enemy, the threat value will also be modified by:\n-Opinion: from -25% to +25%\n-Border Distance: up to -50%\n-Muslims with Muslim Empires: -50%\n-Dharmic Religions: -50%\n-Eastern Religions with Emperor of China: -50%§!"
+ 
+ tib_evaluate_threat_entry:0 "Total Threat"
+ 
+ tbop_evaluate_threat_title:0 "Evaluate Threat"
+ tbop_evaluate_threat_desc:0 "Send a diplomat to assess our threat value with this country."
+ tbop_evaluate_threat_tooltip:0 "Send a diplomat to assess our threat value with this country"
+ tbop_outside_threat_range:0 "Outside of Threat Range"
+ 
+ tbop.03.t:0 "Threat Evaluation"
+ tbop.03.d:0 "Our diplomats have reached to their foreign counterparts to assess their perception of the current balance of powers involving our country."
+ tbop.03.a:0 "Well Done."
+ tbop_current_AE:0 "Your current AE towards this country: §Y[Root.tbop_current_AE.GetValue]§!\n"
+ tbop_ev_threat:0 "Total Threat: §Y[Root.tbop_ev_threat.GetValue]§!\n"
+ 
+ tbop_ev_calc:0 "§gThreat sets the minimum value for Aggresstive Expansion with this nation.\nIt is calculated from the ratio of our complete Force Limit and our enemies' complete Force Limits combined (being 25 at 1:1).\nThat value is modified by the percentage of foreign culture group development within our nation or our non tributary nor colonial subjects (heathen Trade Company provinces do not count).\nComplete Force Limit is the value from that nation and its non tributary nor colonial subjects combined.§!"
+ tbop_threat:0 "Base Threat: §Y[Root.tbop_threat.GetValue]§!\nFrom:"
+ tbop_fl:0 "-Our Force Limit: §Y[Root.tbop_fl.GetValue]§!"
+ tbop_rival_fl:0 "-Our Rival's Force Limits Combined (If rival's force limits combined is smaller than ourselves FL, use ours FL to calculate.): §Y[Root.tbop_rival_fl.GetValue]§!"
+ tbop_fdev_ratio_percent:0 "-Modified by §Y[Root.tbop_fdev_ratio_percent.GetValue]%§! from foreign culture group development percentage in this country\n"
+ 
+ tbop_ev_modifier:0 "Since this nation is not our enemy, the base value is firstly multiplied by 75% to §Y[Root.tbop_no_rival_threat.GetValue]%§! and further modified by §Y[Root.tbop_ev_modifier.GetValue]%§! from:"
+ tbop_ev_opinion:0 "-Opinion: §Y[Root.tbop_ev_opinion.GetValue]%§!"
+ tbop_ev_distance:0 "-Border Distance: §Y[Root.tbop_ev_distance.GetValue]%§!"
+ 
+ tbop_muslim_mod:0 "-We are a Muslim Empire of same faith: §G-50%§!"
+ tbop_indian_mod:0 "-They follow a Dharmic Religion: §G-50%§!"
+ tbop_mandate_mod:0 "-We are The Emperor of China and their faith respect it: §G-50%§!"
+ tbop_small_mod:0 "-We are too weak: §G-100%§!"
+ 
+ tbop_ev_rival:0 "Since this nation is our enemy, the base value is further modified by §R+25%%§!"
+ 
+ are_a_coalition_target:0 "Is a Coalition Target"
+		# -variables
+		# tbop_threat: base threat
+		# tbop_fl: our fl
+		# tbop_rival_fl: rival fl
+		# tbop_fdev_ratio_percent: base threat modifier
+		
+		# tbop_ev_threat: actual threat
+		# tbop_ev_modifier: modifier
+		# tbop_ev_opinion: opinion
+		# tbop_ev_distance: distance
+		
+		# -flags
+		# tbop_not_rival
+		# tbop_muslim_mod
+		# tbop_indian_mod
+		# tbop_mandate_mod
+		# tbop_small_mod

@@ -1,0 +1,83 @@
+#natives
+native_development_restriction = {
+	trigger = {
+		ROOT = {
+			government = native
+		}
+	}
+	development_cost = 2.0
+}
+
+#tribals
+tribal_development_restriction = {
+	trigger = {
+		ROOT = {
+			government = tribal
+		}
+	}
+	development_cost = 2.0
+}
+
+#minors
+minor_development_restriction_1 = {
+	potential = {
+		ROOT = {
+			NOT = { government = native }
+			NOT = { government = tribal }
+		}
+	}
+	trigger = {
+		AND = {
+			NOT = { total_development = 100 }
+			NOT = { num_of_cities = 6 }
+		}
+	}
+	development_cost = 2.0
+}
+
+minor_development_restriction_2 = {
+	potential = {
+		ROOT = {
+			NOT = { government = native }
+			NOT = { government = tribal }
+		}
+	}
+	trigger = {
+		NOT = 
+		{
+			AND = 
+			{
+				NOT = { total_development = 100 }
+				NOT = { num_of_cities = 6 }
+			}
+		}
+		AND = {
+			NOT = { total_development = 200 }
+			NOT = { num_of_cities = 12 }
+		}
+	}
+	development_cost = 1.0
+}
+
+minor_development_restriction_3 = {
+	potential = {
+		ROOT = {
+			NOT = { government = native }
+			NOT = { government = tribal }
+		}
+	}
+	trigger = {
+		NOT = 
+		{
+			AND = 
+			{
+				NOT = { total_development = 200 }
+				NOT = { num_of_cities = 12 }
+			}
+		}
+		AND = {
+			NOT = { total_development = 300 }
+			NOT = { num_of_cities = 18 }
+		}
+	}
+	development_cost = 0.5

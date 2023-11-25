@@ -1,0 +1,98 @@
+#Extra Initial Hostile Against Player (for slower player warmup. give ais some time!)
+namespace = initial_relation
+country_event = 
+{
+	id = initial_relation.1
+	title = "NONE"
+	picture = "NONE"
+	desc = "NONE"
+
+	hidden = yes
+	fire_only_once = yes
+
+	trigger = 
+	{
+		has_game_started = yes
+		ai = no
+	}
+
+	immediate = 
+	{
+		every_known_country = 
+		{
+			limit = {
+				ai = yes
+				NOT = { is_subject_of = ROOT }
+				NOT = { historical_friend_with = ROOT }
+			}
+			add_opinion = {
+				who = ROOT
+				modifier = untrustworthy_human_player
+			}
+		}
+	}
+
+	option = {}
+}
+
+country_event = 
+{
+	id = initial_relation.2
+	title = "NONE"
+	picture = "NONE"
+	desc = "NONE"
+
+	hidden = yes
+	fire_only_once = yes
+
+	trigger = 
+	{
+		has_game_started = yes
+		has_global_flag = xorme_ai_initialization_happened
+	}
+
+	immediate = 
+	{
+		every_country = 
+		{
+			limit = { ai = yes }
+			country_event = 
+			{
+				id = initial_relation.3
+			}
+		}
+	}
+
+	option = {}
+}
+
+country_event = 
+{
+	id = initial_relation.3
+	title = "NONE"
+	picture = "NONE"
+	desc = "NONE"
+
+	hidden = yes
+	is_triggered_only = yes
+
+	immediate = 
+	{
+		every_known_country = 
+		{
+			limit = 
+			{
+				alliance_with = ROOT
+				ai = yes
+			}
+			add_opinion = 
+			{
+    			who = ROOT
+    			modifier = trustworthy_ai_ally
+			}
+		}
+	}
+
+	option = {}
+}
+

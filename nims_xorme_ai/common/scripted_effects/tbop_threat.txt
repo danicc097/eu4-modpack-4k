@@ -1,0 +1,631 @@
+tbop_rival_calculation = {
+	every_country = { #random_country
+		limit = {
+			is_rival = ROOT
+			# NOT = { has_country_flag = checked_by@ROOT }
+			has_country_flag = tbop_set
+		}
+		
+		set_variable = {
+			which = temp
+			value = 0
+		}
+		change_variable = {
+			which = temp
+			which = tbop_fl
+		}
+		
+		PREV = {
+			set_variable = {
+				which = temp
+				value = 0
+			}
+			change_variable = {
+				which = temp
+				which = PREV
+			}
+			
+			change_variable = { #new section
+				which = tbop_rival_fl
+				which = temp
+			}
+		}
+		# set_country_flag = checked_by@ROOT
+	}
+	
+	random_country = {
+		limit = {
+			is_rival = ROOT
+			# NOT = { has_country_flag = checked_by@ROOT }
+			NOT = { has_country_flag = tbop_set }
+		}
+		
+		PREV = {
+			set_variable = {
+				which = tbop_rival_fl
+				value = 0
+			}
+		}
+	}
+}
+
+tbop_AE_from_threat = {
+
+	if = {
+		limit = { check_variable = { which = tbop_development value = 300 } }
+		
+		tbop_AE_distribution = { DIST = 320 }
+	}
+	else_if = {
+		limit = { check_variable = { which = tbop_development value = 150 } }
+		
+		tbop_AE_distribution = { DIST = 80 }
+	}
+	else_if = {
+		limit = { check_variable = { which = tbop_development value = 75 } }
+		
+		tbop_AE_distribution = { DIST = 20 }
+	}
+	else = {		
+		tbop_AE_distribution = { DIST = 0 }
+	}
+}
+
+tbop_AE_distribution = {
+	# multiply_variable = { which = tbop_twice_fl value = 2 }
+	
+	set_variable = { which = tbop_actual_threat value = 0 }
+	change_variable = { which = tbop_actual_threat which = tbop_threat }
+	set_variable = { which = ai_value value = 0 }
+	change_variable = { which = ai_value which = tbop_threat }
+
+	every_country = {
+		limit = {
+			# not its subject
+			NOT = { is_subject_of = ROOT }
+			knows_country = ROOT
+			OR = {
+				is_rival = ROOT
+				#threat only reaches within a certain range
+				NOT = {
+						border_distance = {
+							who = ROOT
+							distance = $DIST$
+					}
+				}
+			}
+		}
+		
+		country_event = {
+			id = tbop.02
+		}
+	}
+}
+
+get_AE = { 
+	if = {
+		limit = { NOT = { has_opinion_modifier = { who = FROM modifier = aggressive_expansion } } }
+		set_variable = { which = tbop_current_AE value =  0  }
+	}
+	else_if = {
+		limit = { tbop_AE_check = { VALUE =  -10  } }
+		if = {
+			limit = { tbop_AE_check = { VALUE =  -1  } }
+			set_variable = { which = tbop_current_AE value =  1  }
+		}
+		else_if = {
+			limit = { tbop_AE_check = { VALUE =  -2  } }
+			set_variable = { which = tbop_current_AE value =  2  }
+		}
+		else_if = {
+			limit = { tbop_AE_check = { VALUE =  -3  } }
+			set_variable = { which = tbop_current_AE value =  3  }
+		}
+		else_if = {
+			limit = { tbop_AE_check = { VALUE =  -4  } }
+			set_variable = { which = tbop_current_AE value =  4  }
+		}
+		else_if = {
+			limit = { tbop_AE_check = { VALUE =  -5  } }
+			set_variable = { which = tbop_current_AE value =  5  }
+		}
+		else_if = {
+			limit = { tbop_AE_check = { VALUE =  -6  } }
+			set_variable = { which = tbop_current_AE value =  6  }
+		}
+		else_if = {
+			limit = { tbop_AE_check = { VALUE =  -7  } }
+			set_variable = { which = tbop_current_AE value =  7  }
+		}
+		else_if = {
+			limit = { tbop_AE_check = { VALUE =  -8  } }
+			set_variable = { which = tbop_current_AE value =  8  }
+		}
+		else_if = {
+			limit = { tbop_AE_check = { VALUE =  -9  } }
+			set_variable = { which = tbop_current_AE value =  9  }
+		}
+		else = {
+			set_variable = { which = tbop_current_AE value =  10  }
+		}
+	}
+	else_if = {
+		limit = { tbop_AE_check = { VALUE =  -20  } }
+		if = {
+			limit = { tbop_AE_check = { VALUE =  -11  } }
+			set_variable = { which = tbop_current_AE value =  11  }
+		}
+		else_if = {
+			limit = { tbop_AE_check = { VALUE =  -12  } }
+			set_variable = { which = tbop_current_AE value =  12  }
+		}
+		else_if = {
+			limit = { tbop_AE_check = { VALUE =  -13  } }
+			set_variable = { which = tbop_current_AE value =  13  }
+		}
+		else_if = {
+			limit = { tbop_AE_check = { VALUE =  -14  } }
+			set_variable = { which = tbop_current_AE value =  14  }
+		}
+		else_if = {
+			limit = { tbop_AE_check = { VALUE =  -15  } }
+			set_variable = { which = tbop_current_AE value =  15  }
+		}
+		else_if = {
+			limit = { tbop_AE_check = { VALUE =  -16  } }
+			set_variable = { which = tbop_current_AE value =  16  }
+		}
+		else_if = {
+			limit = { tbop_AE_check = { VALUE =  -17  } }
+			set_variable = { which = tbop_current_AE value =  17  }
+		}
+		else_if = {
+			limit = { tbop_AE_check = { VALUE =  -18  } }
+			set_variable = { which = tbop_current_AE value =  18  }
+		}
+		else_if = {
+			limit = { tbop_AE_check = { VALUE =  -19  } }
+			set_variable = { which = tbop_current_AE value =  19  }
+		}
+		else = {
+			set_variable = { which = tbop_current_AE value =  20  }
+		}
+	}
+	else_if = {
+		limit = { tbop_AE_check = { VALUE =  -30  } }
+		if = {
+			limit = { tbop_AE_check = { VALUE =  -21  } }
+			set_variable = { which = tbop_current_AE value =  21  }
+		}
+		else_if = {
+			limit = { tbop_AE_check = { VALUE =  -22  } }
+			set_variable = { which = tbop_current_AE value =  22  }
+		}
+		else_if = {
+			limit = { tbop_AE_check = { VALUE =  -23  } }
+			set_variable = { which = tbop_current_AE value =  23  }
+		}
+		else_if = {
+			limit = { tbop_AE_check = { VALUE =  -24  } }
+			set_variable = { which = tbop_current_AE value =  24  }
+		}
+		else_if = {
+			limit = { tbop_AE_check = { VALUE =  -25  } }
+			set_variable = { which = tbop_current_AE value =  25  }
+		}
+		else_if = {
+			limit = { tbop_AE_check = { VALUE =  -26  } }
+			set_variable = { which = tbop_current_AE value =  26  }
+		}
+		else_if = {
+			limit = { tbop_AE_check = { VALUE =  -27  } }
+			set_variable = { which = tbop_current_AE value =  27  }
+		}
+		else_if = {
+			limit = { tbop_AE_check = { VALUE =  -28  } }
+			set_variable = { which = tbop_current_AE value =  28  }
+		}
+		else_if = {
+			limit = { tbop_AE_check = { VALUE =  -29  } }
+			set_variable = { which = tbop_current_AE value =  29  }
+		}
+		else = {
+			set_variable = { which = tbop_current_AE value =  30  }
+		}
+	}
+	else_if = {
+		limit = { tbop_AE_check = { VALUE =  -40  } }
+		if = {
+			limit = { tbop_AE_check = { VALUE =  -31  } }
+			set_variable = { which = tbop_current_AE value =  31  }
+		}
+		else_if = {
+			limit = { tbop_AE_check = { VALUE =  -32  } }
+			set_variable = { which = tbop_current_AE value =  32  }
+		}
+		else_if = {
+			limit = { tbop_AE_check = { VALUE =  -33  } }
+			set_variable = { which = tbop_current_AE value =  33  }
+		}
+		else_if = {
+			limit = { tbop_AE_check = { VALUE =  -34  } }
+			set_variable = { which = tbop_current_AE value =  34  }
+		}
+		else_if = {
+			limit = { tbop_AE_check = { VALUE =  -35  } }
+			set_variable = { which = tbop_current_AE value =  35  }
+		}
+		else_if = {
+			limit = { tbop_AE_check = { VALUE =  -36  } }
+			set_variable = { which = tbop_current_AE value =  36  }
+		}
+		else_if = {
+			limit = { tbop_AE_check = { VALUE =  -37  } }
+			set_variable = { which = tbop_current_AE value =  37  }
+		}
+		else_if = {
+			limit = { tbop_AE_check = { VALUE =  -38  } }
+			set_variable = { which = tbop_current_AE value =  38  }
+		}
+		else_if = {
+			limit = { tbop_AE_check = { VALUE =  -39  } }
+			set_variable = { which = tbop_current_AE value =  39  }
+		}
+		else = {
+			set_variable = { which = tbop_current_AE value =  40  }
+		}
+	}
+	else_if = {
+		limit = { tbop_AE_check = { VALUE =  -50  } }
+		if = {
+			limit = { tbop_AE_check = { VALUE =  -41  } }
+			set_variable = { which = tbop_current_AE value =  41  }
+		}
+		else_if = {
+			limit = { tbop_AE_check = { VALUE =  -42  } }
+			set_variable = { which = tbop_current_AE value =  42  }
+		}
+		else_if = {
+			limit = { tbop_AE_check = { VALUE =  -43  } }
+			set_variable = { which = tbop_current_AE value =  43  }
+		}
+		else_if = {
+			limit = { tbop_AE_check = { VALUE =  -44  } }
+			set_variable = { which = tbop_current_AE value =  44  }
+		}
+		else_if = {
+			limit = { tbop_AE_check = { VALUE =  -45  } }
+			set_variable = { which = tbop_current_AE value =  45  }
+		}
+		else_if = {
+			limit = { tbop_AE_check = { VALUE =  -46  } }
+			set_variable = { which = tbop_current_AE value =  46  }
+		}
+		else_if = {
+			limit = { tbop_AE_check = { VALUE =  -47  } }
+			set_variable = { which = tbop_current_AE value =  47  }
+		}
+		else_if = {
+			limit = { tbop_AE_check = { VALUE =  -48  } }
+			set_variable = { which = tbop_current_AE value =  48  }
+		}
+		else_if = {
+			limit = { tbop_AE_check = { VALUE =  -49  } }
+			set_variable = { which = tbop_current_AE value =  49  }
+		}
+		else = {
+			set_variable = { which = tbop_current_AE value =  50  }
+		}
+	}
+	else_if = {
+		limit = { tbop_AE_check = { VALUE =  -60  } }
+		if = {
+			limit = { tbop_AE_check = { VALUE =  -51  } }
+			set_variable = { which = tbop_current_AE value =  51  }
+		}
+		else_if = {
+			limit = { tbop_AE_check = { VALUE =  -52  } }
+			set_variable = { which = tbop_current_AE value =  52  }
+		}
+		else_if = {
+			limit = { tbop_AE_check = { VALUE =  -53  } }
+			set_variable = { which = tbop_current_AE value =  53  }
+		}
+		else_if = {
+			limit = { tbop_AE_check = { VALUE =  -54  } }
+			set_variable = { which = tbop_current_AE value =  54  }
+		}
+		else_if = {
+			limit = { tbop_AE_check = { VALUE =  -55  } }
+			set_variable = { which = tbop_current_AE value =  55  }
+		}
+		else_if = {
+			limit = { tbop_AE_check = { VALUE =  -56  } }
+			set_variable = { which = tbop_current_AE value =  56  }
+		}
+		else_if = {
+			limit = { tbop_AE_check = { VALUE =  -57  } }
+			set_variable = { which = tbop_current_AE value =  57  }
+		}
+		else_if = {
+			limit = { tbop_AE_check = { VALUE =  -58  } }
+			set_variable = { which = tbop_current_AE value =  58  }
+		}
+		else_if = {
+			limit = { tbop_AE_check = { VALUE =  -59  } }
+			set_variable = { which = tbop_current_AE value =  59  }
+		}
+		else = {
+			set_variable = { which = tbop_current_AE value =  60  }
+		}
+	}
+	else_if = {
+		limit = { tbop_AE_check = { VALUE =  -70  } }
+		if = {
+			limit = { tbop_AE_check = { VALUE =  -61  } }
+			set_variable = { which = tbop_current_AE value =  61  }
+		}
+		else_if = {
+			limit = { tbop_AE_check = { VALUE =  -62  } }
+			set_variable = { which = tbop_current_AE value =  62  }
+		}
+		else_if = {
+			limit = { tbop_AE_check = { VALUE =  -63  } }
+			set_variable = { which = tbop_current_AE value =  63  }
+		}
+		else_if = {
+			limit = { tbop_AE_check = { VALUE =  -64  } }
+			set_variable = { which = tbop_current_AE value =  64  }
+		}
+		else_if = {
+			limit = { tbop_AE_check = { VALUE =  -65  } }
+			set_variable = { which = tbop_current_AE value =  65  }
+		}
+		else_if = {
+			limit = { tbop_AE_check = { VALUE =  -66  } }
+			set_variable = { which = tbop_current_AE value =  66  }
+		}
+		else_if = {
+			limit = { tbop_AE_check = { VALUE =  -67  } }
+			set_variable = { which = tbop_current_AE value =  67  }
+		}
+		else_if = {
+			limit = { tbop_AE_check = { VALUE =  -68  } }
+			set_variable = { which = tbop_current_AE value =  68  }
+		}
+		else_if = {
+			limit = { tbop_AE_check = { VALUE =  -69  } }
+			set_variable = { which = tbop_current_AE value =  69  }
+		}
+		else = {
+			set_variable = { which = tbop_current_AE value =  70  }
+		}
+	}
+	else_if = {
+		limit = { tbop_AE_check = { VALUE =  -80  } }
+		if = {
+			limit = { tbop_AE_check = { VALUE =  -71  } }
+			set_variable = { which = tbop_current_AE value =  71  }
+		}
+		else_if = {
+			limit = { tbop_AE_check = { VALUE =  -72  } }
+			set_variable = { which = tbop_current_AE value =  72  }
+		}
+		else_if = {
+			limit = { tbop_AE_check = { VALUE =  -73  } }
+			set_variable = { which = tbop_current_AE value =  73  }
+		}
+		else_if = {
+			limit = { tbop_AE_check = { VALUE =  -74  } }
+			set_variable = { which = tbop_current_AE value =  74  }
+		}
+		else_if = {
+			limit = { tbop_AE_check = { VALUE =  -75  } }
+			set_variable = { which = tbop_current_AE value =  75  }
+		}
+		else_if = {
+			limit = { tbop_AE_check = { VALUE =  -76  } }
+			set_variable = { which = tbop_current_AE value =  76  }
+		}
+		else_if = {
+			limit = { tbop_AE_check = { VALUE =  -77  } }
+			set_variable = { which = tbop_current_AE value =  77  }
+		}
+		else_if = {
+			limit = { tbop_AE_check = { VALUE =  -78  } }
+			set_variable = { which = tbop_current_AE value =  78  }
+		}
+		else_if = {
+			limit = { tbop_AE_check = { VALUE =  -79  } }
+			set_variable = { which = tbop_current_AE value =  79  }
+		}
+		else = {
+			set_variable = { which = tbop_current_AE value =  80  }
+		}
+	}
+	else_if = {
+		limit = { tbop_AE_check = { VALUE =  -90  } }
+		if = {
+			limit = { tbop_AE_check = { VALUE =  -81  } }
+			set_variable = { which = tbop_current_AE value =  81  }
+		}
+		else_if = {
+			limit = { tbop_AE_check = { VALUE =  -82  } }
+			set_variable = { which = tbop_current_AE value =  82  }
+		}
+		else_if = {
+			limit = { tbop_AE_check = { VALUE =  -83  } }
+			set_variable = { which = tbop_current_AE value =  83  }
+		}
+		else_if = {
+			limit = { tbop_AE_check = { VALUE =  -84  } }
+			set_variable = { which = tbop_current_AE value =  84  }
+		}
+		else_if = {
+			limit = { tbop_AE_check = { VALUE =  -85  } }
+			set_variable = { which = tbop_current_AE value =  85  }
+		}
+		else_if = {
+			limit = { tbop_AE_check = { VALUE =  -86  } }
+			set_variable = { which = tbop_current_AE value =  86  }
+		}
+		else_if = {
+			limit = { tbop_AE_check = { VALUE =  -87  } }
+			set_variable = { which = tbop_current_AE value =  87  }
+		}
+		else_if = {
+			limit = { tbop_AE_check = { VALUE =  -88  } }
+			set_variable = { which = tbop_current_AE value =  88  }
+		}
+		else_if = {
+			limit = { tbop_AE_check = { VALUE =  -89  } }
+			set_variable = { which = tbop_current_AE value =  89  }
+		}
+		else = {
+			set_variable = { which = tbop_current_AE value =  90  }
+		}
+	}
+	else = {
+		if = {
+			limit = { tbop_AE_check = { VALUE =  -91  } }
+			set_variable = { which = tbop_current_AE value =  91  }
+		}
+		else_if = {
+			limit = { tbop_AE_check = { VALUE =  -92  } }
+			set_variable = { which = tbop_current_AE value =  92  }
+		}
+		else_if = {
+			limit = { tbop_AE_check = { VALUE =  -93  } }
+			set_variable = { which = tbop_current_AE value =  93  }
+		}
+		else_if = {
+			limit = { tbop_AE_check = { VALUE =  -94  } }
+			set_variable = { which = tbop_current_AE value =  94  }
+		}
+		else_if = {
+			limit = { tbop_AE_check = { VALUE =  -95  } }
+			set_variable = { which = tbop_current_AE value =  95  }
+		}
+		else_if = {
+			limit = { tbop_AE_check = { VALUE =  -96  } }
+			set_variable = { which = tbop_current_AE value =  96  }
+		}
+		else_if = {
+			limit = { tbop_AE_check = { VALUE =  -97  } }
+			set_variable = { which = tbop_current_AE value =  97  }
+		}
+		else_if = {
+			limit = { tbop_AE_check = { VALUE =  -98  } }
+			set_variable = { which = tbop_current_AE value =  98  }
+		}
+		else_if = {
+			limit = { tbop_AE_check = { VALUE =  -99  } }
+			set_variable = { which = tbop_current_AE value =  99  }
+		}
+		else = {
+			set_variable = { which = tbop_current_AE value =  100  }
+		}
+	}
+}
+
+give_AE = {
+	if = {
+		limit = { check_variable = { which = tbop_actual_threat which = tbop_current_AE } }
+		if = {
+			limit = { check_variable = { which = tbop_actual_threat which = tbop_current_AE } } 
+			add_opinion = {
+				who = FROM
+				modifier = aggressive_expansion
+			}
+			change_variable = { which = tbop_current_AE value = 1 }
+		}
+		if = {
+			limit = { check_variable = { which = tbop_actual_threat which = tbop_current_AE } } 
+			add_opinion = {
+				who = FROM
+				modifier = aggressive_expansion
+			}
+			change_variable = { which = tbop_current_AE value = 1 }
+		}
+		if = {
+			limit = { check_variable = { which = tbop_actual_threat which = tbop_current_AE } }
+			add_opinion = {
+				who = FROM
+				modifier = aggressive_expansion
+			}
+			change_variable = { which = tbop_current_AE value = 1 }
+		}
+		if = {
+			limit = { check_variable = { which = tbop_actual_threat which = tbop_current_AE } } 
+			add_opinion = {
+				who = FROM
+				modifier = aggressive_expansion
+			}
+			change_variable = { which = tbop_current_AE value = 1 }
+		}
+		if = {
+			limit = { check_variable = { which = tbop_actual_threat which = tbop_current_AE } } 
+			add_opinion = {
+				who = FROM
+				modifier = aggressive_expansion
+			}
+			change_variable = { which = tbop_current_AE value = 1 }
+		}
+		if = {
+			limit = { check_variable = { which = tbop_actual_threat which = tbop_current_AE } } 
+			add_opinion = {
+				who = FROM
+				modifier = aggressive_expansion
+			}
+			change_variable = { which = tbop_current_AE value = 1 }
+		}
+		if = {
+			limit = { check_variable = { which = tbop_actual_threat which = tbop_current_AE } } 
+			add_opinion = {
+				who = FROM
+				modifier = aggressive_expansion
+			}
+			change_variable = { which = tbop_current_AE value = 1 }
+		}
+		if = {
+			limit = { check_variable = { which = tbop_actual_threat which = tbop_current_AE } } 
+			add_opinion = {
+				who = FROM
+				modifier = aggressive_expansion
+			}
+			change_variable = { which = tbop_current_AE value = 1 }
+		}
+		if = {
+			limit = { check_variable = { which = tbop_actual_threat which = tbop_current_AE } } 
+			add_opinion = {
+				who = FROM
+				modifier = aggressive_expansion
+			}
+			change_variable = { which = tbop_current_AE value = 1 }
+		}
+		if = {
+			limit = { check_variable = { which = tbop_actual_threat which = tbop_current_AE } } 
+			add_opinion = {
+				who = FROM
+				modifier = aggressive_expansion
+			}
+			change_variable = { which = tbop_current_AE value = 1 }
+		}
+	}
+}	
+
+
+
+# our base threat value: 
+ # this is a proportional value, having a FL equivalent to 1.5x that of our biggest rival's means 50 base threat, 
+ # before applying modifiers
+ # -from: our FL:
+ # -our biggest rival's FL:
+# this value is further modified by the percentage of our foreign development 
+ # -currently at x%
+
+# if not rival
+ # -
+ 
+
+

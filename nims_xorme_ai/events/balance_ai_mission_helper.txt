@@ -1,0 +1,146 @@
+#small tweaks that help the ai fullfill their mission trees without changing the gameplay/randomness too much
+# maybe more in the future
+
+namespace = balance_ai_mission_helper
+
+#Spain Portugal colonisaion
+country_event = 
+{
+	id = balance_ai_mission_helper.1
+	title = "NONE"
+	desc = "NONE"
+	picture = "NONE"
+
+	hidden = yes
+	fire_only_once = yes
+
+	trigger = 
+	{
+		OR = 
+		{
+			tag = CAS
+			tag = SPA
+		}
+		ai = yes
+		has_idea_group = exploration_ideas
+	}
+
+	immediate = 
+	{
+		if =
+		{
+			limit =
+			{
+				NOT = 
+				{
+					any_country =
+					{
+						owns = 4565
+					}
+				}
+			}
+			4565 = 
+			{
+				create_colony = 10
+			}
+		}
+	}
+
+	option = 
+	{
+
+	}
+}
+
+country_event = 
+{
+	id = balance_ai_mission_helper.2
+	title = "NONE"
+	desc = "NONE"
+	picture = "NONE"
+
+	hidden = yes
+	fire_only_once = yes
+
+	trigger = 
+	{
+		tag = POR
+		ai = yes
+		has_idea_group = exploration_ideas
+	}
+
+	immediate = 
+	{
+		if =
+		{
+			limit =
+			{
+				NOT = 
+				{
+					any_country =
+					{
+						owns = 1111
+					}
+				}
+			}
+			1111 = 
+			{
+				create_colony = 10
+			}
+		}
+	}
+
+	option = 
+	{
+
+	}
+}
+
+country_event = 
+{
+	id = balance_ai_mission_helper.3
+	title = "NONE"
+	desc = "NONE"
+	picture = "NONE"
+
+	hidden = yes
+	fire_only_once = yes
+
+	trigger = 
+	{
+		OR = 
+		{
+			tag = CAS
+			tag = SPA
+		}
+		ai = yes
+		mission_completed = gc_cas_spa_caribbean_discovery
+		has_idea_group = exploration_ideas
+	}
+
+	immediate = 
+	{
+		if =
+		{
+			limit =
+			{
+				NOT = 
+				{
+					any_country =
+					{
+						owns = 482
+					}
+				}
+			}
+			482 = 
+			{
+				create_colony = 10
+			}
+		}
+	}
+
+	option = 
+	{
+
+	}
+}

@@ -1,0 +1,36 @@
+namespace = balance_religious_war_cool_down
+
+country_event = 
+{
+	id = balance_religious_war_cool_down.1
+	title = "NONE"
+	picture = "NONE"
+	desc = "NONE"
+
+	hidden = yes
+	fire_only_once = yes
+
+	trigger = 
+	{
+		hre_leagues_enabled = yes
+	}
+
+	immediate = 
+	{
+		every_country = 
+		{
+			limit =
+			{
+				ai = yes
+			}
+			add_country_modifier = 
+			{ 
+			    name = balance_religious_war_cooldown
+			    duration = 3000
+			}
+		}
+	}
+
+	option = {}
+}
+

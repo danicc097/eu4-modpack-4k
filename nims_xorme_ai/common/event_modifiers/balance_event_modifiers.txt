@@ -1,0 +1,25 @@
+balance_initialize_war_cooldown = 
+{
+	can_not_declare_war = yes
+}
+
+balance_religious_war_cooldown = 
+{
+	
+}
+
+##### Province Modifier #####
+
+african_disease_modifier = 
+{
+	local_colonial_growth = -120
+	supply_limit_modifier = -0.75
+	max_attrition = 5
+	local_hostile_attrition = 5
+	local_hostile_movement_speed = -0.5
+}
+
+neglected_area = 
+{
+	local_colonial_growth = -120
+}
