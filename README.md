@@ -1,5 +1,7 @@
 # eu4-modpack-4k
 
+**Tested on v1.35.6**
+
 **EXPERIMENTAL**
 
 ![GitHub repo size](https://img.shields.io/github/repo-size/danicc097/eu4-modpack-4k)
