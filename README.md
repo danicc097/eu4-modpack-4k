@@ -4,6 +4,8 @@
 
 **EXPERIMENTAL**
 
+2K edition for v1.37.*: [repo](https://github.com/danicc097/euiv-modpack-2k)
+
 ![GitHub repo size](https://img.shields.io/github/repo-size/danicc097/eu4-modpack-4k)
 
 Europa Universalis IV opinionated modpack with adhoc 4k compatibility patches and custom modifiers. Recommended use with `hard` difficulty. All
@@ -56,6 +58,7 @@ content).
 
 Alternative links:
   - https://catalogue.smods.ru/
+  - https://mods.paradoxplaza.com/
 
 
 ## 4K settings
