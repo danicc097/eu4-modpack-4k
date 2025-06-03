@@ -4,7 +4,9 @@
 
 **EXPERIMENTAL**
 
-2K edition for v1.37.*: [repo](https://github.com/danicc097/euiv-modpack-2k)
+To use on a non-4k screen you may increase resolution in your OS manually (beyond typus not migrated to 2K UI yet)
+
+2K edition for v1.37.* (Voltaire's Nightmare - Extended timeline): [repo](https://github.com/danicc097/euiv-modpack-2k)
 
 ![GitHub repo size](https://img.shields.io/github/repo-size/danicc097/eu4-modpack-4k)
 
