@@ -4,8 +4,8 @@ guiTypes = {
 		name = "great_project_entry"
 		backGround=""
 		position = { x=0 y=0 }
-		size = { x=550 y=310 }
-		moveable = 0
+		size = { x=250 y=310 }
+		moveable = 1
 		dontRender = ""
 		horizontalBorder= ""
 		verticalBorder= ""
@@ -59,7 +59,7 @@ guiTypes = {
 			{
 				name ="great_project_cancel"
 				quadTextureSprite = "GFX_alerticon_dismiss_always"
-				position = { x = 220 y = 10 }
+				position = { x = 190 y = 10 }
 			}
 
 			iconType =
@@ -80,7 +80,7 @@ guiTypes = {
 		guiButtonType =
 		{
 			name ="build_upgrade_button"
-			position = { x= 390 y = 14 }
+			position = { x= 190 y = 14 }
 			quadTextureSprite ="GFX_great_project_level_icon_upgrade_build"
 			tooltip = ""
 			tooltipText =""
@@ -92,7 +92,7 @@ guiTypes = {
 		guiButtonType =
 		{
 			name ="use_money_to_boost_button"
-			position = { x= 390 y = 84 }
+			position = { x= 190 y = 84 }
 			quadTextureSprite ="GFX_great_project_level_icon_upgrade_money"
 			tooltip = ""
 			tooltipText =""
@@ -104,7 +104,7 @@ guiTypes = {
 		guiButtonType =
 		{
 			name ="use_manpower_to_boost_button"
-			position = { x= 390 y = 154 }
+			position = { x= 190 y = 154 }
 			quadTextureSprite ="GFX_great_project_level_icon_upgrade_manpower"
 			tooltip = ""
 			tooltipText =""
