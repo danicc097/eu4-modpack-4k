@@ -13,5 +13,5 @@ dependencies={
 }
 picture="thumbnail.png"
 supported_version="1.35.*.*"
-path="D:/Documents/Paradox Interactive/Europa Universalis IV/mod/extended_timeline_map_orbis_4k_patch"
+path="mod/extended_timeline_map_orbis_4k_patch"
 remote_file_id="extended_timeline_map_orbis_4k_patch"

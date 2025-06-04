@@ -37,5 +37,5 @@ dependencies={
 name="Proper 4K UI Project"
 picture="thumbnail.png"
 supported_version="1.35.*"
-path="D:/Documents/Paradox Interactive/Europa Universalis IV/mod/proper_4k_ui_project"
+path="mod/proper_4k_ui_project"
 remote_file_id="2860690691"
