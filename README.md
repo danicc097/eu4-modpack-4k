@@ -1,5 +1,9 @@
 # eu4-modpack-4k
 
+# 2k version
+
+alerticons.dds probably broken in 2k screen
+
 **Tested on v1.35.6**
 
 **EXPERIMENTAL**
