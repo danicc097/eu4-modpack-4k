@@ -1,0 +1,18 @@
+{
+  "disabled_dlcs": [],
+  "enabled_mods": [
+    "mod/beyond_typus.mod",
+    "mod/beyond_typus_orbis.mod",
+    "mod/proper_4k_ui_project.mod",
+    "mod/harder-colonization.mod",
+    "mod/flavors_and_events_expanded_4k.mod",
+    "mod/historic_colonization.mod",
+    "mod/subject_types_expanded.mod",
+    "mod/great_monuments_expanded_4k.mod",
+    "mod/governments_expanded_4k.mod",
+    "mod/peace_treaties_expanded_4k.mod",
+    "mod/advisor_types_expanded_4k.mod",
+    "mod/zzz_custom_modifiers.mod",
+    "mod/xorme_ai.mod"
+  ]
+}
